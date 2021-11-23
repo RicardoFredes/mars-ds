@@ -10,45 +10,44 @@ export default {
   argTypes: {
     variant: {
       options: Variants,
-      control: { type: 'select' },
+      control: { type: 'radio' },
     },
     size: {
       options: Sizes,
-      control: { type: 'select' },
+      control: { type: 'radio' },
     },
   },
 } as ComponentMeta<typeof Button>
 
 const Template: ComponentStory<typeof Button> = args => <Button {...args} />
 
-export const Primary = Template.bind({})
-Primary.args = {
+const PrimaryArgs = {
   variant: Variants.Primary,
   size: Sizes.Medium,
   children: 'Primary Button',
   disabled: false,
 }
 
+export const Primary = Template.bind({})
+Primary.args = PrimaryArgs
+
 export const Secondary = Template.bind({})
 Secondary.args = {
+  ...PrimaryArgs,
   variant: Variants.Secondary,
-  size: Sizes.Medium,
   children: 'Secondary Button',
-  disabled: false,
 }
 
 export const Neutral = Template.bind({})
 Neutral.args = {
+  ...PrimaryArgs,
   variant: Variants.Neutral,
-  size: Sizes.Medium,
   children: 'Neutral Button',
-  disabled: false,
 }
 
 export const Text = Template.bind({})
 Text.args = {
+  ...PrimaryArgs,
   variant: Variants.Text,
-  size: Sizes.Medium,
   children: 'Text Button',
-  disabled: false,
 }

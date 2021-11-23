@@ -1,0 +1,22 @@
+.input-group {
+  height: 56px;
+  border: 1px solid $color-action-states-disabled;
+  border-radius: $border-radius-sm;
+  padding: $spacing-lg;
+
+  position:relative;
+
+  &__title {
+    position: absolute;
+    top:0;
+    left:16px;
+    transform:translate(0,-50%);
+    padding:$spacing-xs;
+    background:white;
+  }
+
+  &__input {
+    border: 0;
+    color: $color-grey-600;
+  }
+}

@@ -1,7 +1,8 @@
-import React from 'react'
-import classNames from 'classnames'
-import { ButtonProps } from './button.types'
-import { Sizes, Variants } from '../../types'
+import { MouseEvent } from "react";
+import classNames from "classnames";
+
+import { Variants } from "../../types";
+import { ButtonProps, ButtonSizes } from "./button.types";
 
 const Button = ({
   as,
@@ -10,25 +11,26 @@ const Button = ({
   label,
   onClick,
   variant = Variants.Primary,
-  size = Sizes.Medium,
+  size = ButtonSizes.Medium,
   ...props
 }: ButtonProps) => {
-  const ButtonTag = as || props.href ? HTMLLink : HTMLButton
-  const handleClick = event => {
-    if (props.disabled) return
-    onClick?.(event)
-  }
+  // TODO: Change link type when we have a proper link (with Next.js support) component
+  const ButtonTag = as || props.href ? HTMLLink : HTMLButton;
+  const handleClick = (event: MouseEvent<HTMLButtonElement | HTMLLinkElement>) => {
+    if (props.disabled) return;
+    onClick?.(event);
+  };
 
-  const cn = classNames('btn', `btn_${variant}`, `btn_${size}`, className)
+  const cn = classNames("btn", `btn_${variant}`, `btn_${size}`, className);
 
   return (
     <ButtonTag className={cn} onClick={handleClick} {...props}>
       {label || children}
     </ButtonTag>
-  )
-}
+  );
+};
 
-const HTMLLink = props => <a {...props} />
-const HTMLButton = props => <button {...props} />
+const HTMLLink = (props) => <a {...props} />;
+const HTMLButton = (props) => <button {...props} />;
 
-export default Button
+export default Button;

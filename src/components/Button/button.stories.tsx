@@ -1,54 +1,52 @@
-import React from 'react'
-import { ComponentStory, ComponentMeta } from '@storybook/react'
-
-import Button from './button.component'
-import { Sizes, Variants } from '../../types'
+import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Variants } from "../../types";
+import Button from "./button.component";
+import { ButtonSizes } from "./button.types";
 
 export default {
-  title: 'Components/Button',
+  title: "Components/Button",
   component: Button,
   argTypes: {
     variant: {
       options: Variants,
-      control: { type: 'select' },
+      control: { type: "select" },
     },
     size: {
-      options: Sizes,
-      control: { type: 'select' },
+      options: ButtonSizes,
+      control: { type: "select" },
     },
   },
-} as ComponentMeta<typeof Button>
+} as ComponentMeta<typeof Button>;
 
-const Template: ComponentStory<typeof Button> = args => <Button {...args} />
+const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-export const Primary = Template.bind({})
-Primary.args = {
+const PrimaryArgs = {
   variant: Variants.Primary,
-  size: Sizes.Medium,
-  children: 'Primary Button',
+  size: ButtonSizes.Medium,
+  children: "Primary Button",
   disabled: false,
-}
+};
 
-export const Secondary = Template.bind({})
+export const Primary = Template.bind({});
+Primary.args = PrimaryArgs;
+
+export const Secondary = Template.bind({});
 Secondary.args = {
+  ...PrimaryArgs,
   variant: Variants.Secondary,
-  size: Sizes.Medium,
-  children: 'Secondary Button',
-  disabled: false,
-}
+  children: "Secondary Button",
+};
 
-export const Neutral = Template.bind({})
+export const Neutral = Template.bind({});
 Neutral.args = {
+  ...PrimaryArgs,
   variant: Variants.Neutral,
-  size: Sizes.Medium,
-  children: 'Neutral Button',
-  disabled: false,
-}
+  children: "Neutral Button",
+};
 
-export const Text = Template.bind({})
+export const Text = Template.bind({});
 Text.args = {
+  ...PrimaryArgs,
   variant: Variants.Text,
-  size: Sizes.Medium,
-  children: 'Text Button',
-  disabled: false,
-}
+  children: "Text Button",
+};

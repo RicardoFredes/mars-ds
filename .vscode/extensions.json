@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "mgmcdermott.vscode-language-babel",
+    "kamikillerto.vscode-colorize",
+    "dbaeumer.vscode-eslint",
+    "orta.vscode-jest",
+    "editorconfig.editorconfig",
+    "esbenp.prettier-vscode"
+  ]
+}

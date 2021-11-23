@@ -1,0 +1,162 @@
+// :root {
+//   --spacing-rectangle-1: 12px;
+//   --spacing-rectangle-2: 24px;
+//   --spacing-rectangle-3: 48px;
+//   --spacing-rectangle-4: 64px;
+//   --spacing-rectangle-5: 96px;
+//   --spacing-rectangle-6: 144px;
+//   --spacing-l: 64px;
+//   --spacing-m: 24px;
+//   --spacing-s: 16px;
+//   --spacing-xl: 72px;
+//   --spacing-xm: 32px;
+//   --spacing-xs: 12px;
+//   --spacing-xxl: 96px;
+//   --spacing-xxm: 48px;
+//   --spacing-xxs: 8px;
+//   --spacing-xxxl: 128px;
+//   --spacing-xxxm: 56px;
+//   --spacing-xxxs: 4px;
+//   --spacing-xxxxl: 144px;
+// }
+// :root {
+//   --heading-sm: 24px;
+//   --subtitle-sm: 24px;
+// }
+
+$color-divider: rgba(145, 158, 171, 0.24);
+$color-button-input: rgba(145, 158, 171, 0.32);
+
+$color-primary-lighter: rgba(254, 230, 216, 1);
+$color-primary-light: rgba(249, 160, 142, 1);
+$color-primary-main: rgba(237, 67, 67, 1);
+$color-primary-dark: rgba(171, 33, 58, 1);
+$color-primary-darker: rgba(112, 12, 46, 1);
+
+$color-info-lighter: rgba(208, 242, 255, 1);
+$color-info-light: rgba(116, 202, 255, 1);
+$color-info-main: rgba(24, 144, 255, 1);
+$color-info-dark: rgba(12, 83, 183, 1);
+$color-info-darker: rgba(4, 41, 122, 1);
+
+$color-success-lighter: rgba(233, 252, 212, 1);
+$color-success-light: rgba(170, 242, 127, 1);
+$color-success-main: rgba(84, 214, 44, 1);
+$color-success-dark: rgba(34, 154, 22, 1);
+$color-success-darker: rgba(8, 102, 13, 1);
+
+$color-warning-lighter: rgba(255, 247, 205, 1);
+$color-warning-light: rgba(255, 225, 106, 1);
+$color-warning-main: rgba(255, 193, 7, 1);
+$color-warning-dark: rgba(183, 129, 3, 1);
+$color-warning-darker: rgba(122, 79, 1, 1);
+
+$color-error-lighter: rgba(254, 224, 216, 1);
+$color-error-light: rgba(253, 141, 140, 1);
+$color-error-main: rgba(249, 64, 98, 1);
+$color-error-dark: rgba(179, 32, 87, 1);
+$color-error-darker: rgba(120, 12, 72, 1);
+
+$color-grey-100: rgba(249, 250, 251, 1);
+$color-grey-200: rgba(244, 246, 248, 1);
+$color-grey-300: rgba(223, 227, 232, 1);
+$color-grey-400: rgba(196, 205, 213, 1);
+$color-grey-500: rgba(145, 158, 171, 1);
+$color-grey-600: rgba(99, 115, 129, 1);
+$color-grey-700: rgba(69, 79, 91, 1);
+$color-grey-800: rgba(33, 43, 54, 1);
+$color-grey-900: rgba(22, 28, 36, 1);
+
+$color-common-white: rgba(255, 255, 255, 1);
+$color-common-black: rgba(0, 0, 0, 1);
+
+$color-transparent-primary-8: rgba(237, 67, 67, 0.08);
+$color-transparent-primary-12: rgba(237, 67, 67, 0.12);
+$color-transparent-primary-16: rgba(237, 67, 67, 0.16);
+$color-transparent-primary-24: rgba(237, 67, 67, 0.24);
+$color-transparent-primary-32: rgba(237, 67, 67, 0.32);
+$color-transparent-primary-48: rgba(237, 67, 67, 0.48);
+
+$color-transparent-info-8: rgba(24, 144, 255, 0.08);
+$color-transparent-info-12: rgba(24, 144, 255, 0.12);
+$color-transparent-info-16: rgba(24, 144, 255, 0.16);
+$color-transparent-info-24: rgba(24, 144, 255, 0.24);
+$color-transparent-info-32: rgba(24, 144, 255, 0.32);
+$color-transparent-info-48: rgba(24, 144, 255, 0.48);
+
+$color-transparent-success-8: rgba(84, 214, 44, 0.08);
+$color-transparent-success-12: rgba(84, 214, 44, 0.12);
+$color-transparent-success-16: rgba(84, 214, 44, 0.16);
+$color-transparent-success-24: rgba(84, 214, 44, 0.24);
+$color-transparent-success-32: rgba(84, 214, 44, 0.32);
+$color-transparent-success-48: rgba(84, 214, 44, 0.48);
+
+$color-transparent-warning-8: rgba(255, 193, 7, 0.08);
+$color-transparent-warning-12: rgba(255, 193, 7, 0.12);
+$color-transparent-warning-16: rgba(255, 193, 7, 0.16);
+$color-transparent-warning-24: rgba(255, 193, 7, 0.24);
+$color-transparent-warning-32: rgba(255, 193, 7, 0.32);
+$color-transparent-warning-48: rgba(255, 193, 7, 0.48);
+
+$color-transparent-error-8: rgba(249, 64, 98, 0.08);
+$color-transparent-error-12: rgba(249, 64, 98, 0.12);
+$color-transparent-error-16: rgba(249, 64, 98, 0.16);
+$color-transparent-error-24: rgba(249, 64, 98, 0.24);
+$color-transparent-error-32: rgba(249, 64, 98, 0.32);
+$color-transparent-error-48: rgba(249, 64, 98, 0.48);
+
+$color-transparent-grey-8: rgba(145, 158, 171, 0.08);
+$color-transparent-grey-12: rgba(145, 158, 171, 0.12);
+$color-transparent-grey-16: rgba(145, 158, 171, 0.16);
+$color-transparent-grey-24: rgba(145, 158, 171, 0.24);
+$color-transparent-grey-32: rgba(145, 158, 171, 0.32);
+$color-transparent-grey-48: rgba(145, 158, 171, 0.48);
+$color-transparent-white-48: rgba(255, 255, 255, 0.48);
+$color-transparent-black-48: rgba(0, 0, 0, 0.48);
+
+$color-transparent-subjects-matematica-16: rgba(218, 112, 5, 0.16);
+$color-transparent-subjects-matematica-80: rgba(218, 112, 5, 0.8);
+$color-transparent-subjects-natureza-16: rgba(124, 154, 45, 0.16);
+$color-transparent-subjects-natureza-80: rgba(124, 154, 45, 0.8);
+$color-transparent-subjects-humanas-16: rgba(80, 160, 210, 0.16);
+$color-transparent-subjects-humanas-80: rgba(80, 160, 210, 0.8);
+$color-transparent-subjects-linguagens-16: rgba(130, 90, 150, 0.16);
+$color-transparent-subjects-linguagens-80: rgba(130, 90, 150, 0.8);
+$color-transparent-subjects-redacao-16: rgba(210, 155, 0, 0.16);
+$color-transparent-subjects-redacao-80: rgba(210, 155, 0, 0.8);
+$color-transparent-subjects-medicina-16: rgba(85, 168, 169, 0.16);
+$color-transparent-subjects-medicina-80: rgba(85, 168, 169, 0.8);
+
+$color-text-color-text-primary: rgba(33, 43, 54, 1);
+$color-text-color-text-secondary: rgba(99, 115, 129, 1);
+$color-text-color-text-disabled: rgba(145, 158, 171, 1);
+
+$color-background-default: rgba(255, 255, 255, 1);
+$color-background-neutral: rgba(244, 246, 248, 1);
+
+$color-background-overlay-dark: rgba(22, 28, 36, 0.72);
+
+$color-action-states-active: rgba(99, 115, 129, 1);
+$color-action-states-hover: rgba(145, 158, 171, 0.08);
+$color-action-states-selected: rgba(145, 158, 171, 0.16);
+$color-action-states-disabled: rgba(145, 158, 171, 0.8);
+$color-action-states-disabled-background: rgba(145, 158, 171, 0.24);
+$color-action-states-focus: rgba(145, 158, 171, 0.24);
+
+$color-subjects-matematica-main: rgba(218, 112, 5, 1);
+$color-subjects-matematica-dark: rgba(187, 86, 3, 1);
+
+$color-subjects-natureza-main: rgba(124, 154, 45, 1);
+$color-subjects-natureza-dark: rgba(76, 116, 37, 1);
+
+$color-subjects-humanas-main: rgba(80, 160, 210, 1);
+$color-subjects-humanas-dark: rgba(20, 133, 163, 1);
+
+$color-subjects-linguagens-main: rgba(130, 90, 150, 1);
+$color-subjects-linguagens-dark: rgba(112, 60, 135, 1);
+
+$color-subjects-redacao-main: rgba(210, 155, 0, 1);
+$color-subjects-redacao-dark: rgba(202, 139, 15, 1);
+
+$color-subjects-medicina-main: rgba(85, 168, 169, 1);
+$color-subjects-medicina-dark: rgba(46, 107, 107, 1);

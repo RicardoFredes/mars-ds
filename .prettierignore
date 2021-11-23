@@ -1,0 +1,4 @@
+# only format TypeScript files
+*
+!**/*.ts
+!**/*.tsx

@@ -1,21 +1,15 @@
-$color-primary: #ed4343;
-$color-primary-active: #AB213A;
-$color-disabled: #919EAB3D;
-$color-inverse: white;
-$text-primary: #212B36;
-$text-disabled: #919EABCC;
-
 .btn {
   appearance: none;
-  font-family: Roboto, Arial, sans-serif;
+  font-family: $font-family-main;
   font-weight: 700;
-  
+
   cursor: pointer;
   display: inline-flex;
   border: 1px solid transparent;
+  background-color: transparent;
   box-sizing: border-box;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: $border-radius-sm;
   font-size: 15px;
   align-items: center;
   padding: 11px 22px;
@@ -23,53 +17,45 @@ $text-disabled: #919EABCC;
   &:disabled {
     cursor: inherit;
   }
-  
+
   &_primary {
-    background-color: $color-primary;
-    color: $color-inverse;
+    background-color: $color-primary-main;
+    color: $color-background-default;
     &:active {
-      background-color: $color-primary-active;
+      background-color: $color-primary-dark;
     }
     &:disabled {
-      background-color: $color-disabled;
-      color: $text-disabled;
+      background-color: $color-action-states-disabled-background;
+      color: $color-action-states-disabled;
     }
   }
 
   &_secondary {
-    background-color: $color-inverse;
-    color: $color-primary;
-    border-color: $color-primary;
+    background-color: $color-background-default;
+    color: $color-primary-main;
+    border-color: $color-primary-main;
     &:active {
-      background-color: #ED43433D;
+      background-color: $color-primary-lighter;
     }
     &:disabled {
-      color: $text-disabled;
-      border-color: $color-disabled;
+      color: $color-action-states-disabled;
+      border-color: $color-action-states-disabled-background;
     }
   }
 
-  &_neutral {
-    background-color: $color-inverse;
-    color: $text-primary;
-    border-color: $color-disabled;
-    &:active {
-      background-color: $color-disabled;
-    }
-    &:disabled {
-      color: $text-disabled;
-    }
-  }
-
+  &_neutral,
   &_text {
-    background-color: $color-inverse;
-    color: $text-primary;
+    color: $color-text-color-text-primary;
     &:active {
-      background-color: $color-disabled;
+      background-color: $color-transparent-grey-12;
     }
     &:disabled {
-      color: $text-disabled;
+      color: $color-action-states-disabled;
     }
+  }
+  &_neutral {
+    background-color: $color-background-default;
+    border-color: $color-action-states-disabled-background;
   }
 
   &_small {

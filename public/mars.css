@@ -1,5 +1,50 @@
 .btn {
-  color: black; }
-  .btn span {
-    font-weight: bold;
-    color: blue; }
+  appearance: none;
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 15px;
+  align-items: center;
+  padding: 11px 22px; }
+  .btn:disabled {
+    cursor: inherit; }
+  .btn_primary {
+    background-color: #ed4343;
+    color: white; }
+    .btn_primary:active {
+      background-color: #AB213A; }
+    .btn_primary:disabled {
+      background-color: #919EAB3D;
+      color: #919EABCC; }
+  .btn_secondary {
+    background-color: white;
+    color: #ed4343;
+    border-color: #ed4343; }
+    .btn_secondary:active {
+      background-color: #ED43433D; }
+    .btn_secondary:disabled {
+      color: #919EABCC;
+      border-color: #919EAB3D; }
+  .btn_neutral {
+    background-color: white;
+    color: #212B36;
+    border-color: #919EAB3D; }
+    .btn_neutral:active {
+      background-color: #919EAB3D; }
+    .btn_neutral:disabled {
+      color: #919EABCC; }
+  .btn_text {
+    background-color: white;
+    color: #212B36; }
+    .btn_text:active {
+      background-color: #919EAB3D; }
+    .btn_text:disabled {
+      color: #919EABCC; }
+  .btn_small {
+    font-size: 14px;
+    padding: 6px 16px; }

@@ -1,7 +1,79 @@
+$color-primary: #ed4343;
+$color-primary-active: #AB213A;
+$color-disabled: #919EAB3D;
+$color-inverse: white;
+$text-primary: #212B36;
+$text-disabled: #919EABCC;
+
 .btn {
-  color: black;
-  span {
-    font-weight: bold;
-    color: blue;
+  appearance: none;
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 700;
+  
+  cursor: pointer;
+  display: inline-flex;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 15px;
+  align-items: center;
+  padding: 11px 22px;
+
+  &:disabled {
+    cursor: inherit;
+  }
+  
+  &_primary {
+    background-color: $color-primary;
+    color: $color-inverse;
+    &:active {
+      background-color: $color-primary-active;
+    }
+    &:disabled {
+      background-color: $color-disabled;
+      color: $text-disabled;
+    }
+  }
+
+  &_secondary {
+    background-color: $color-inverse;
+    color: $color-primary;
+    border-color: $color-primary;
+    &:active {
+      background-color: #ED43433D;
+    }
+    &:disabled {
+      color: $text-disabled;
+      border-color: $color-disabled;
+    }
+  }
+
+  &_neutral {
+    background-color: $color-inverse;
+    color: $text-primary;
+    border-color: $color-disabled;
+    &:active {
+      background-color: $color-disabled;
+    }
+    &:disabled {
+      color: $text-disabled;
+    }
+  }
+
+  &_text {
+    background-color: $color-inverse;
+    color: $text-primary;
+    &:active {
+      background-color: $color-disabled;
+    }
+    &:disabled {
+      color: $text-disabled;
+    }
+  }
+
+  &_small {
+    font-size: 14px;
+    padding: 6px 16px;
   }
 }

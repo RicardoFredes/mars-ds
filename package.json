@@ -12,7 +12,9 @@
     "css": "node-sass src/styles/index.scss public/mars.css",
     "css:watch": "npm run css && node-sass src/styles/index.scss -w public/mars.css",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "lint": "prettier --write \"{src,__tests__}/**/*.{ts,tsx,js}\"",
+    "lint:check": "prettier --check \"{src,__tests__}/**/*.{ts,tsx,js}\""
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",

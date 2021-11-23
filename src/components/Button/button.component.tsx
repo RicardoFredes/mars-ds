@@ -13,20 +13,22 @@ const Button = ({
   size = Sizes.Medium,
   ...props
 }: ButtonProps) => {
-  
   const ButtonTag = as || props.href ? HTMLLink : HTMLButton
-  const handleClick = (event) => {
+  const handleClick = event => {
     if (props.disabled) return
     onClick?.(event)
   }
 
   const cn = classNames('btn', `btn_${variant}`, `btn_${size}`, className)
-  
-  return <ButtonTag className={cn} onClick={handleClick} {...props}>{label || children}</ButtonTag>
+
+  return (
+    <ButtonTag className={cn} onClick={handleClick} {...props}>
+      {label || children}
+    </ButtonTag>
+  )
 }
 
 const HTMLLink = props => <a {...props} />
 const HTMLButton = props => <button {...props} />
-
 
 export default Button

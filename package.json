@@ -2,7 +2,7 @@
   "name": "mars",
   "version": "0.0.0-alpha.0",
   "description": "Mars is the Me Salva! uikit inspired on Material Design",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": "git@github.com:mesalva/mars.git",
   "author": "mesalva",
   "license": "MIT",
@@ -31,5 +31,10 @@
     "react-dom": "^17.0.2",
     "typescript": "^4.5.2"
   },
-  "dependencies": {}
+  "peerDependencies": {
+    "classnames": "^2.3.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "typescript": "^4.5.2"
+  }
 }

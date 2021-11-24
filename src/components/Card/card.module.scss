@@ -1,11 +1,20 @@
 .card {
   background-color: $color-background-default;
   padding: 24px;
+  border-radius: 16px;
 
   &__title {
     font-family: $font-family-main;
   }
-  &--elevation-one {
-    box-shadow: $shadow-one;
+  &--elevation {
+    &-low {
+      box-shadow: $shadow-low;
+    }
+    &-medium {
+      box-shadow: $shadow-medium;
+    }
+    &-high {
+      box-shadow: $shadow-high;
+    }
   }
 }

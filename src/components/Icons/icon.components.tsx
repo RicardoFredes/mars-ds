@@ -2,13 +2,13 @@ import { Sizes } from "../../types";
 import { IconProps } from "./icon.types";
 import icons from "./lib";
 
-const Icon = ({ name, size = Sizes.Medium, color = 'black', ...props }: IconProps) => {
+const Icon = ({ name, size = Sizes.Medium, ...props }: IconProps) => {
   const Component = icons[name];
   if (!Component) return null;
   const sizeValue = getSize(size)
   return (
     <span {...props}>
-      <Component height={sizeValue} width={sizeValue} color={color} />
+      <Component height={sizeValue} width={sizeValue} />
     </span>
   );
 };

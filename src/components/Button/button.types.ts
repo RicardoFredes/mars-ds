@@ -1,3 +1,4 @@
+export { Variants } from "../../types";
 import { Variants } from "../../types";
 
 export enum ButtonSizes {

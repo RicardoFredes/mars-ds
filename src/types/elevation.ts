@@ -1,4 +1,5 @@
 export enum Elevations {
-  Zero = "zero",
-  One = "one",
+  Low = "low",
+  Medium = "medium",
+  High = "high",
 }

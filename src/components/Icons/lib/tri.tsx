@@ -1,6 +1,6 @@
 import { IconLibProps } from "../icon.types";
 
-const IconTri = ({ height = 24, width = 24, color }: IconLibProps) => {
+const IconTri = ({ height = 24, width = 24 }: IconLibProps) => {
   return (
     <svg
       width={width}
@@ -11,13 +11,13 @@ const IconTri = ({ height = 24, width = 24, color }: IconLibProps) => {
     >
       <path
         d="M3.17643 7.71133H0.658142V6H7.89301V7.71133H5.37472V14.0001H3.17643V7.71133Z"
-        fill={color}
+        fill="currentColor"
       />
       <path
         d="M12.1549 11.8575H10.8053V14.0001H8.60704V6H12.2523C13.3561 6 14.2326 6.26435 14.8819 6.79305C15.5312 7.31248 15.8558 8.03133 15.8558 8.9496C15.8558 9.53396 15.7121 10.0441 15.4245 10.4801C15.1463 10.9067 14.7474 11.2406 14.228 11.4818L16.0089 14.0001H13.6436L12.1549 11.8575ZM13.6436 8.9496C13.6436 8.55076 13.5138 8.24467 13.2541 8.03133C12.9943 7.81799 12.6094 7.71133 12.0993 7.71133H10.8053V10.1879H12.0993C12.6094 10.1879 12.9943 10.0812 13.2541 9.86787C13.5138 9.65454 13.6436 9.34845 13.6436 8.9496Z"
-        fill={color}
+        fill="currentColor"
       />
-      <path d="M17.1436 6H19.3418V14.0001H17.1436V6Z" fill={color} />
+      <path d="M17.1436 6H19.3418V14.0001H17.1436V6Z" fill="currentColor" />
     </svg>
   );
 };

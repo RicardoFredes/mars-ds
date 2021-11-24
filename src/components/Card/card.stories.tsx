@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { Elevations } from "../../types";
+import { Elevations } from "./card.types";
 import Card from "./card.component";
 
 export default {
@@ -7,23 +7,38 @@ export default {
   component: Card,
   argTypes: {
     elevation: {
-      options: Elevations,
-      control: { type: "radio" },
+      options: { Default: undefined, ...Elevations },
+      control: { type: 'select' },
     },
   },
 } as ComponentMeta<typeof Card>;
 
-const Template: ComponentStory<typeof Card> = (args) => <Card {...args} />;
+const Template: ComponentStory<typeof Card> = (args) => (
+  <div style={{ padding: 50, background: '#f1f1f1' }}>
+    <Card {...args} />
+  </div>
+);
 
-export const ElevationZero = Template.bind({});
-ElevationZero.args = {
-  elevation: Elevations.Zero,
-  children: "Card without elevation",
-  title: "Teste?",
+export const Default = Template.bind({});
+Default.args = {
+  elevation: undefined,
+  children: "Card default",
 };
 
-export const ElevationOne = Template.bind({});
-ElevationOne.args = {
-  elevation: Elevations.One,
-  children: "Card with elevation One",
+export const Low = Template.bind({});
+Low.args = {
+  elevation: Elevations.Low,
+  children: "Card with low elevation",
+};
+
+export const Medium = Template.bind({});
+Medium.args = {
+  elevation: Elevations.Medium,
+  children: "Card with medium elevation",
+};
+
+export const High = Template.bind({});
+High.args = {
+  elevation: Elevations.High,
+  children: "Card with high elevation",
 };

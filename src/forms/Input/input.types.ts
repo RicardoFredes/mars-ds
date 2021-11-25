@@ -1,3 +1,4 @@
 export interface InputProps extends React.HTMLProps<HTMLInputElement> {
-  title:string;
+  label: string;
+  error?: string | boolean
 }

@@ -10,10 +10,22 @@ export default {
 
 const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />;
 
-export const Inactive = Template.bind({});
-Inactive.args = {
-  placeholder: "Input",
-  name: "Input x",
+const DefaultArgs = {
+  placeholder: "Digite o seu nome",
+  name: "title",
   type: "text",
-  title:"Título"
+  label: "Nome",
+  disabled: false,
+  error: '',
+  defaultValue: ''
+};
+
+export const Default = Template.bind({});
+Default.args = DefaultArgs;
+
+export const Error = Template.bind({});
+Error.args = {
+  ...DefaultArgs,
+  error: 'O nome deve ter mais de três letras',
+  defaultValue: 'Abc'
 };

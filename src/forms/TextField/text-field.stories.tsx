@@ -1,4 +1,5 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { useState } from "react";
 import TextField from "./text-field.component";
 
 export default {
@@ -8,10 +9,20 @@ export default {
   },
 } as ComponentMeta<typeof TextField>;
 
-const Template: ComponentStory<typeof TextField> = (args) => <TextField {...args} />;
+const Template: ComponentStory<typeof TextField> = (args) => {
+  const [error, setError] = useState(args.error)
+
+  const onBlur = event => {
+    const {value} = event.target
+    if (value.length === 0) setError('O preenchimento do nome é obrigatório')
+    else if (value.length <= 3) setError('O nome deve ter mais de três letras')
+    else setError('')
+  }
+
+  return <TextField {...args} error={error} onBlur={onBlur} />
+};
 
 const DefaultArgs = {
-  placeholder: "Digite o seu nome",
   name: "title",
   type: "text",
   label: "Nome",
@@ -52,3 +63,10 @@ RightIcon.args = {
     name: 'me-salva-mini'
   },
 };
+
+export const Info = Template.bind({})
+Info.args = {
+  ...DefaultArgs,
+  label: 'Nome completo',
+  info: "Digite o nome conforme o que consta na sua carteira de identidade",
+}

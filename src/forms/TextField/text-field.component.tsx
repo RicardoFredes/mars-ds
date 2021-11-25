@@ -5,7 +5,7 @@ import Icon from '../../components/Icon/icon.component'
 
 const hash = `field-${(Math.random() * 1000000).toFixed(0)}`
 
-const TextField = ({ className, placeholder, type, name, label, id, disabled, error, sucess, onBlur, onFocus, onChange, rightIconButton, leftIconButton, value = "", ...props }: TextFieldProps) => {
+const TextField = ({ className, info, type, name, label, id, disabled, error, sucess, onBlur, onFocus, onChange, rightIconButton, leftIconButton, value = "", ...props }: TextFieldProps) => {
   if (!id) id = name || hash
   const [isFocused, setIsFocused] = useState(false);
   const [conputedValue, setComputedValue] = useState(String(value))
@@ -50,7 +50,7 @@ const TextField = ({ className, placeholder, type, name, label, id, disabled, er
       <fieldset className="field__fieldset">
         <div className="field__content">
           {leftIconButton && <TextFieldIconButton classNameField="field__icon field__icon-left" {...leftIconButton} />}
-          <input id={id} className="field__input" type={type} placeholder={ placeholder || " " } name={name} onBlur={handleBlur} onFocus={handleFocus} onChange={handleChange} disabled={disabled} {...props} value={conputedValue} />
+          <input id={id} className="field__input" type={type} onBlur={handleBlur} onFocus={handleFocus} onChange={handleChange} disabled={disabled} {...props} value={conputedValue} />
           {rightIconButton && <TextFieldIconButton classNameField="field__icon field__icon-right" {...rightIconButton} />}
           {error && <TextFieldIconButton classNameField="field__icon field__icon-right" name="alert-circle" />}
           {isSuccess && <TextFieldIconButton classNameField="field__icon field__icon-right" name="checkmark-circle" />}
@@ -58,7 +58,7 @@ const TextField = ({ className, placeholder, type, name, label, id, disabled, er
         <label htmlFor={id} className="field__label">{labelText}</label>
         <legend className="field__legend">{labelText}</legend>
       </fieldset>
-      {(error || placeholder) && <div className="field__help">{error || placeholder}</div>}
+      {(error || info) && <div className="field__help">{error || info}</div>}
     </div>
   );
 };

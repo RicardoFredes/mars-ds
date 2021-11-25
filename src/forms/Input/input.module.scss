@@ -1,22 +1,41 @@
-.input-group {
-  height: 56px;
-  border: 1px solid $color-action-states-disabled;
-  border-radius: $border-radius-sm;
-  padding: $spacing-lg;
-
-  position:relative;
-
-  &__title {
-    position: absolute;
-    top:0;
-    left:16px;
-    transform:translate(0,-50%);
-    padding:$spacing-xs;
-    background:white;
+.field {
+  position: relative;
+  font-family: $font-family-main;
+  &__fieldset {
+    border: 1px solid #637381;
+    border-radius: 8px;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    height: 56px;
   }
-
+  &__legend {
+    visibility: hidden;
+    height: 0;
+    display: none;
+  }
   &__input {
-    border: 0;
-    color: $color-grey-600;
+    padding: 0 8px;
+    width: 100%;
+    border: none;
+    &:not(:placeholder-shown),
+    &:focus {
+      outline: none;
+      ~ .field__legend {
+        display: inherit;
+      }
+      ~ .field__label {
+        transform: translate(-1px, -120%) scale(0.8);
+      }
+    }
+    &::placeholder {
+      color: transparent;
+    }
+  }
+  &__label {
+    transition: all ease 0.15s;
+    position: absolute;
+    margin-left: 8px;
+    transform-origin: left center;
   }
 }

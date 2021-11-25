@@ -12,8 +12,8 @@ const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />;
 
 export const Inactive = Template.bind({});
 Inactive.args = {
-  placeholder: "Input",
-  name: "Input x",
+  placeholder: "Digite o seu nome",
+  name: "title",
   type: "text",
-  title:"Título"
+  label: "Nome"
 };

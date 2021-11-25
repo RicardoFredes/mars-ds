@@ -6,6 +6,7 @@ export interface TextFieldProps extends React.HTMLProps<HTMLInputElement> {
   error?: string | boolean
   sucess?: boolean
   info?: string
+  mask?: string | string[]
   rightIconButton?: IconProps
   leftIconButton?: IconProps
 }

@@ -34,20 +34,6 @@ const DefaultArgs = {
 export const Default = Template.bind({});
 Default.args = DefaultArgs;
 
-export const Error = Template.bind({});
-Error.args = {
-  ...DefaultArgs,
-  error: 'O nome deve ter mais de três letras',
-  value: 'Abc',
-};
-
-export const Sucess = Template.bind({});
-Sucess.args = {
-  ...DefaultArgs,
-  sucess: true,
-  value: 'Ricardo Fredes',
-};
-
 export const LeftIcon = Template.bind({});
 LeftIcon.args = {
   ...DefaultArgs,
@@ -64,9 +50,31 @@ RightIcon.args = {
   },
 };
 
+export const Error = Template.bind({});
+Error.args = {
+  ...DefaultArgs,
+  error: 'O nome deve ter mais de três letras',
+  value: 'Abc',
+};
+
+export const Sucess = Template.bind({});
+Sucess.args = {
+  ...DefaultArgs,
+  sucess: true,
+  value: 'Ricardo Fredes',
+};
+
 export const Info = Template.bind({})
 Info.args = {
   ...DefaultArgs,
   label: 'Nome completo',
   info: "Digite o nome conforme o que consta na sua carteira de identidade",
+}
+
+export const MaskPattern: ComponentStory<typeof TextField> = (args) => <TextField {...args} />
+MaskPattern.args = {
+  ...DefaultArgs,
+  label: 'Telefone',
+  mask: ["(99) 9999-9999", "(99) 99999-9999"],
+  info: 'O telefone deve conter 10 ou 11 dígitos'
 }

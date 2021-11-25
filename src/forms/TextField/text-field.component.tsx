@@ -1,20 +1,29 @@
 import { useEffect, useState } from "react";
 import classNames from "classnames";
+import { masker } from "../../services/masker";
 import { TextFieldProps, IconProps } from "./text-field.types";
 import Icon from '../../components/Icon/icon.component'
+import { generateHash } from "../../services/hash";
 
-const hash = `field-${(Math.random() * 1000000).toFixed(0)}`
 
-const TextField = ({ className, info, type, name, label, id, disabled, error, sucess, onBlur, onFocus, onChange, rightIconButton, leftIconButton, value = "", ...props }: TextFieldProps) => {
-  if (!id) id = name || hash
+const TextField = ({ className, info, type, name, label, id, mask, disabled, error, sucess, onBlur, onFocus, onChange, rightIconButton, leftIconButton, value = "", ...props }: TextFieldProps) => {
+  if (!id) id = name || generateHash('field')
+
   const [isFocused, setIsFocused] = useState(false);
-  const [conputedValue, setComputedValue] = useState(String(value))
+  const [computedValue, setComputedValue] = useState('')
+
+  const setValue = (newValue) => {
+    const str = String(newValue)
+    if (!mask) return setComputedValue(str)
+    const maskedValue = masker(newValue, mask)
+    setComputedValue(maskedValue)
+  }
 
   useEffect(() => {
-    setComputedValue(String(value))
+    setValue(value)
   }, [value])
 
-  const isFilled = conputedValue.length > 0
+  const isFilled = computedValue.length > 0
   const isSuccess = isFilled && !error && sucess
 
   const cn = classNames("field", className, [
@@ -39,7 +48,7 @@ const TextField = ({ className, info, type, name, label, id, disabled, error, su
 
   const handleChange = (event) => {
     const { value } = event.target
-    setComputedValue(value)
+    setValue(value)
     onChange?.(event)
   }
 
@@ -50,7 +59,7 @@ const TextField = ({ className, info, type, name, label, id, disabled, error, su
       <fieldset className="field__fieldset">
         <div className="field__content">
           {leftIconButton && <TextFieldIconButton classNameField="field__icon field__icon-left" {...leftIconButton} />}
-          <input id={id} className="field__input" type={type} onBlur={handleBlur} onFocus={handleFocus} onChange={handleChange} disabled={disabled} {...props} value={conputedValue} />
+          <input id={id} className="field__input" type={type} onBlur={handleBlur} onFocus={handleFocus} onChange={handleChange} disabled={disabled} {...props} value={computedValue} />
           {rightIconButton && <TextFieldIconButton classNameField="field__icon field__icon-right" {...rightIconButton} />}
           {error && <TextFieldIconButton classNameField="field__icon field__icon-right" name="alert-circle" />}
           {isSuccess && <TextFieldIconButton classNameField="field__icon field__icon-right" name="checkmark-circle" />}

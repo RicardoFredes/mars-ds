@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { Sizes } from "../../types";
-import Icon from "./icon.components";
+import Icon from "./icon.component";
 import icons from "./lib";
 
 export default {

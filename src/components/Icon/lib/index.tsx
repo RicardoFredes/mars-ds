@@ -4,8 +4,10 @@ import eye from "./eye";
 import eyeOff from "./eye-off";
 import ppi from './ppi'
 import tri from './tri'
+import alertCircle from "./alert-circle";
 
 const icons = {
+  'alert-circle': alertCircle,
   'checkmark-circle': checkmarkCircle,
   'eye-off': eyeOff,
   eye,

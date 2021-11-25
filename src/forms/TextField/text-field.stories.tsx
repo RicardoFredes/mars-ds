@@ -17,7 +17,7 @@ const DefaultArgs = {
   label: "Nome",
   disabled: false,
   error: '',
-  defaultValue: ''
+  value: '',
 };
 
 export const Default = Template.bind({});
@@ -27,5 +27,28 @@ export const Error = Template.bind({});
 Error.args = {
   ...DefaultArgs,
   error: 'O nome deve ter mais de três letras',
-  defaultValue: 'Abc'
+  value: 'Abc',
+};
+
+export const Sucess = Template.bind({});
+Sucess.args = {
+  ...DefaultArgs,
+  sucess: true,
+  value: 'Ricardo Fredes',
+};
+
+export const LeftIcon = Template.bind({});
+LeftIcon.args = {
+  ...DefaultArgs,
+  leftIconButton: {
+    name: 'me-salva-mini'
+  },
+};
+
+export const RightIcon = Template.bind({});
+RightIcon.args = {
+  ...DefaultArgs,
+  rightIconButton: {
+    name: 'me-salva-mini'
+  },
 };

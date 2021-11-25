@@ -12,6 +12,11 @@
     align-items: center;
     height: 56px;
   }
+  &:hover {
+    .field__fieldset {
+      border-color: $color-text-color-text-primary;
+    }
+  }
   &__legend {
     visibility: hidden;
     height: 0;
@@ -22,7 +27,9 @@
   &__input {
     padding: 0 4px;
     width: 100%;
+    height: 100%;
     border: none;
+    background-color: transparent;
     color: $color-text-color-text-primary;
     font-weight: 400;
     &:not(:placeholder-shown),
@@ -36,7 +43,7 @@
       }
     }
     &:focus {
-      ~.field__label {
+      ~ .field__label {
         color: $color-info-main;
       }
     }
@@ -49,15 +56,52 @@
     position: absolute;
     left: 20px;
     transform-origin: left center;
+    z-index: -1;
   }
-  &--is-focused {
-    .field {
-      &__fieldset {
-        border-color: $color-info-main;
-        border-width: 2px;
+  &__help {
+    font-size: 12px;
+    padding: 8px 16px;
+    color: $color-text-color-text-primary;
+  }
+  &, 
+  &:hover {
+    &.field {
+      &--is-focused {
+        .field {
+          &__fieldset {
+            border-color: $color-info-main;
+            border-width: 2px;
+          }
+          &__input {
+            margin-left: -1px;
+          }
+        }
       }
-      &__input {
-        margin-left: -1px;
+      &--is-disabled {
+        .field {
+          &__label {
+            color: $color-text-color-text-disabled;
+          }
+          &__fieldset {
+            border-color: $color-action-states-disabled;
+          }
+        }
+      }
+      &--has-error,
+      &--is-focused.field--has-error {
+        .field {
+          &__help,
+          &__label {
+            color: $color-error-main;
+          }
+          &__fieldset {
+            border-color: $color-error-main;
+            border-width: 2px;
+          }
+          &__input {
+            margin-left: -1px;
+          }
+        }
       }
     }
   }

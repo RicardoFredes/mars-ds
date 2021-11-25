@@ -15,5 +15,8 @@ Default.args = {
   placeholder: "Digite o seu nome",
   name: "title",
   type: "text",
-  label: "Nome"
+  label: "Nome",
+  disabled: false,
+  error: '',
+  defaultValue: ''
 };

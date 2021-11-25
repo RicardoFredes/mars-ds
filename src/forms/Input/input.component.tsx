@@ -5,10 +5,10 @@ import { InputProps } from "./input.types";
 
 const hash = `field-${(Math.random() * 1000000).toFixed(0)}`
 
-const Input = ({ className, placeholder, type, name, label, id, onBlur, onFocus, ...props }: InputProps) => {
+const Input = ({ className, placeholder, type, name, label, id, disabled, error, onBlur, onFocus, ...props }: InputProps) => {
   if (!id) id = name || hash
   const [isFocused, setIsFocused] = useState(false);
-  const cn = classNames("field", className, { 'field--is-focused': isFocused });
+  const cn = classNames("field", className, [{ 'field--is-focused': isFocused }, { 'field--is-disabled': disabled }, {'field--has-error': error } ]);
 
   const handleFocus = (event) => {
     setIsFocused(true)
@@ -23,10 +23,11 @@ const Input = ({ className, placeholder, type, name, label, id, onBlur, onFocus,
   return (
     <div className={cn}>
       <fieldset className="field__fieldset">
-        <input id={id} className="field__input" type={type} placeholder={placeholder || label} name={name} onBlur={handleBlur} onFocus={handleFocus} {...props} />
+        <input id={id} className="field__input" type={type} placeholder={ placeholder || " " } name={name} onBlur={handleBlur} onFocus={handleFocus} disabled={disabled} {...props} />
         <label htmlFor={id} className="field__label">{label}</label>
         <legend className="field__legend">{label}</legend>
       </fieldset>
+      {(error || placeholder) && <div className="field__help">{error || placeholder}</div>}
     </div>
   );
 };

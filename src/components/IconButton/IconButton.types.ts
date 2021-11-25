@@ -5,7 +5,8 @@ export enum IconButtonSizes {
     Medium = "medium",
   }
   
-  export interface IconButton extends Omit<React.HTMLProps<HTMLButtonElement | HTMLLinkElement>, "as" | "size"> {
+  export interface IconButtonProps extends Omit<React.HTMLProps<HTMLButtonElement | HTMLLinkElement>, "as" | "size"> {
+    as?: JSX.Element;
     variant?: Variants;
     labelIconButton?: string;
     size?: IconButtonSizes;

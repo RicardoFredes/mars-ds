@@ -20,12 +20,14 @@ const Input = ({ className, placeholder, type, name, label, id, disabled, error,
     onBlur?.(event)
   }
 
+  const labelText = error ? `${label}*` : label
+
   return (
     <div className={cn}>
       <fieldset className="field__fieldset">
         <input id={id} className="field__input" type={type} placeholder={ placeholder || " " } name={name} onBlur={handleBlur} onFocus={handleFocus} disabled={disabled} {...props} />
-        <label htmlFor={id} className="field__label">{label}</label>
-        <legend className="field__legend">{label}</legend>
+        <label htmlFor={id} className="field__label">{labelText}</label>
+        <legend className="field__legend">{labelText}</legend>
       </fieldset>
       {(error || placeholder) && <div className="field__help">{error || placeholder}</div>}
     </div>

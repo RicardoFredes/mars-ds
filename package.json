@@ -13,8 +13,8 @@
     "css:watch": "npm run css && node-sass src/styles/index.scss -w public/mars.css",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "lint": "eslint --cache --ext ts,tsx src/",
-    "lint:fix": "eslint --cache --fix --ext ts,tsx src/"
+    "lint": "prettier --write \"{src,__tests__}/**/*.{ts,tsx,js,scss}\"",
+    "lint:check": "prettier --check \"{src,__tests__}/**/*.{ts,tsx,js,scss}\""
   },
   "dependencies": {
     "classnames": "^2.3.1"

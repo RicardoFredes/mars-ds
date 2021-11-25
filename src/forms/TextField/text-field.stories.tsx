@@ -1,14 +1,14 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import Input from "./input.component";
+import TextField from "./text-field.component";
 
 export default {
-  title: "Components/Input",
-  component: Input,
+  title: "Form/TextField",
+  component: TextField,
   argTypes: {
   },
-} as ComponentMeta<typeof Input>;
+} as ComponentMeta<typeof TextField>;
 
-const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />;
+const Template: ComponentStory<typeof TextField> = (args) => <TextField {...args} />;
 
 const DefaultArgs = {
   placeholder: "Digite o seu nome",

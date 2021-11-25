@@ -1,11 +1,11 @@
 import classNames from "classnames";
 import { useState } from "react";
 
-import { InputProps } from "./input.types";
+import { TextFieldProps } from "./text-field.types";
 
 const hash = `field-${(Math.random() * 1000000).toFixed(0)}`
 
-const Input = ({ className, placeholder, type, name, label, id, disabled, error, onBlur, onFocus, ...props }: InputProps) => {
+const TextField = ({ className, placeholder, type, name, label, id, disabled, error, onBlur, onFocus, ...props }: TextFieldProps) => {
   if (!id) id = name || hash
   const [isFocused, setIsFocused] = useState(false);
   const cn = classNames("field", className, [{ 'field--is-focused': isFocused }, { 'field--is-disabled': disabled }, {'field--has-error': error } ]);
@@ -34,4 +34,4 @@ const Input = ({ className, placeholder, type, name, label, id, disabled, error,
   );
 };
 
-export default Input;
+export default TextField;

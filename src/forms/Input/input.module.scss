@@ -1,10 +1,13 @@
 .field {
   position: relative;
   font-family: $font-family-main;
+  font-weight: 400;
+  font-size: 16px;
+  color: $color-text-color-text-secondary;
   &__fieldset {
     border: 1px solid #637381;
     border-radius: 8px;
-    padding: 0 8px;
+    padding: 0 12px;
     display: flex;
     align-items: center;
     height: 56px;
@@ -13,19 +16,28 @@
     visibility: hidden;
     height: 0;
     display: none;
+    font-size: 12px;
+    padding-right: 4px;
   }
   &__input {
-    padding: 0 8px;
+    padding: 0 4px;
     width: 100%;
     border: none;
+    color: $color-text-color-text-primary;
+    font-weight: 400;
     &:not(:placeholder-shown),
     &:focus {
       outline: none;
       ~ .field__legend {
-        display: inherit;
+        display: inline-block;
       }
       ~ .field__label {
-        transform: translate(-1px, -120%) scale(0.8);
+        transform: translate(-1px, -110%) scale(0.75);
+      }
+    }
+    &:focus {
+      ~.field__label {
+        color: $color-info-main;
       }
     }
     &::placeholder {
@@ -35,7 +47,18 @@
   &__label {
     transition: all ease 0.15s;
     position: absolute;
-    margin-left: 8px;
+    left: 20px;
     transform-origin: left center;
+  }
+  &--is-focused {
+    .field {
+      &__fieldset {
+        border-color: $color-info-main;
+        border-width: 2px;
+      }
+      &__input {
+        margin-left: -1px;
+      }
+    }
   }
 }

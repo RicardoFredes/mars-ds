@@ -9,7 +9,7 @@ import Icon from "@/components/Icon/icon.component";
 import { generateHash } from "@/services/hash";
 import { masker } from "@/services/masker";
 
-const TextField = ({ className, info, type, name, label, id, mask, disabled, error, sucess, onBlur, onFocus, onChange, rightIconButton, leftIconButton, value = "", ...props }: TextFieldProps) => {
+const TextField = ({ className, info, type, name, label, id, mask, disabled, error, success, onBlur, onFocus, onChange, rightIconButton, leftIconButton, value = "", ...props }: TextFieldProps) => {
   if (!id) id = name || generateHash('field')
 
   const [isFocused, setIsFocused] = useState(false);
@@ -27,7 +27,7 @@ const TextField = ({ className, info, type, name, label, id, mask, disabled, err
   }, [setValue, value])
 
   const isFilled = computedValue.length > 0
-  const isSuccess = isFilled && !error && sucess
+  const isSuccess = isFilled && !error && success
 
   const cn = classNames("field", className, [
     { 'field--is-focused': isFocused },

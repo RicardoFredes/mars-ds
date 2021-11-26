@@ -5,7 +5,7 @@ import checkmarkCircle from "./checkmark-circle";
 import eye from "./eye";
 import eyeOff from "./eye-off";
 import mesalvaMini from "./me-salva-mini";
-import ppi from "./ppi";
+import ppl from "./ppl";
 import tri from "./tri";
 
 const icons: {
@@ -16,7 +16,7 @@ const icons: {
   'eye-off': eyeOff,
   eye,
   'me-salva-mini': mesalvaMini,
-  ppi,
+  ppl,
   tri
 };
 

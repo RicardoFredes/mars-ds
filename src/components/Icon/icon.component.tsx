@@ -1,14 +1,16 @@
 import type { IconProps } from "./icon.types";
 
+import classNames from "classnames";
 import { Sizes } from "@/types";
 import icons from "./lib";
 
-const Icon = ({ name, size = Sizes.Medium, ...props }: IconProps) => {
+const Icon = ({ name, size = Sizes.Medium, className, ...props }: IconProps) => {
   const Component = icons[name];
   if (!Component) return null;
   const sizeValue = getSize(size)
+  const cn = classNames('icon', className)
   return (
-    <span {...props}>
+    <span {...props} className={cn}>
       <Component height={sizeValue} width={sizeValue} />
     </span>
   );

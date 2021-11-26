@@ -1,9 +1,8 @@
 import type { MouseEvent } from "react";
+import type { ButtonProps } from "./button.types";
+import { Variants, Sizes } from "@/types";
 
 import classNames from "classnames";
-
-import { Variants } from "@/types";
-import { ButtonProps, ButtonSizes } from "./button.types";
 
 const Button = ({
   as,
@@ -11,12 +10,14 @@ const Button = ({
   className,
   label,
   onClick,
+  type="button",
   variant = Variants.Primary,
-  size = ButtonSizes.Medium,
+  size = Sizes.Medium,
   ...props
 }: ButtonProps) => {
   // TODO: Change link type when we have a proper link (with Next.js support) component
-  const ButtonTag = as || props.href ? HTMLLink : HTMLButton;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const ButtonTag: any = as || props.href ? 'a' : 'button';
   const handleClick = (event: MouseEvent<HTMLButtonElement | HTMLLinkElement>) => {
     if (props.disabled) return;
     onClick?.(event);
@@ -25,16 +26,10 @@ const Button = ({
   const cn = classNames("btn", `btn_${variant}`, `btn_${size}`, className);
 
   return (
-    <ButtonTag className={cn} onClick={handleClick} {...props}>
+    <ButtonTag className={cn} onClick={handleClick}  type={type} {...props}>
       {label || children}
     </ButtonTag>
   );
 };
-
-// @ts-expect-error Missing type on props
-// eslint-disable-next-line jsx-a11y/anchor-has-content
-const HTMLLink = (props) => <a {...props} />;
-// @ts-expect-error Missing type on props
-const HTMLButton = (props) => <button {...props} />;
 
 export default Button;

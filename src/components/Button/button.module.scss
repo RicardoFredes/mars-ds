@@ -2,7 +2,7 @@
   appearance: none;
   font-family: $font-family-main;
   font-weight: 700;
-  
+
   cursor: pointer;
   display: inline-flex;
   border: 1px solid transparent;
@@ -14,6 +14,7 @@
   align-items: center;
   justify-content: center;
   padding: 11px 22px;
+  transition: background-color ease 0.2s;
 
   &--disabled,
   &:disabled {
@@ -24,7 +25,7 @@
   &_primary {
     background-color: $color-primary-main;
     color: $color-background-default;
-    &:active {
+    &:hover {
       background-color: $color-primary-dark;
     }
     &:disabled {
@@ -37,7 +38,7 @@
     background-color: $color-background-default;
     color: $color-primary-main;
     border-color: $color-primary-main;
-    &:active {
+    &:hover {
       background-color: $color-primary-lighter;
     }
     &:disabled {
@@ -49,7 +50,7 @@
   &_neutral,
   &_text {
     color: $color-text-color-text-primary;
-    &:active {
+    &:hover {
       background-color: $color-transparent-grey-12;
     }
     &:disabled {
@@ -64,5 +65,20 @@
   &_small {
     font-size: 14px;
     padding: 6px 16px;
+  }
+
+  &:active {
+    background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0icmdiYSgyNTUsIDI1NSwgMjU1LCAwLjUpIiBkPSJNMTIsMkExMCwxMCAwIDAsMCAyLDEyQTEwLDEwIDAgMCwwIDEyLDIyQTEwLDEwIDAgMCwwIDIyLDEyQTEwLDEwIDAgMCwwIDEyLDJaIiAvPjwvc3ZnPg==");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-size: 0;
+    animation: ripple 0.3s ease;
+  }
+}
+
+@keyframes ripple {
+  to {
+    background-size: 120%;
   }
 }

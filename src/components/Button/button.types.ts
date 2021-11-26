@@ -1,14 +1,10 @@
 import type { Variants } from "@/types";
-
-export enum ButtonSizes {
-  Small = "small",
-  Medium = "medium",
-}
+import type { Sizes } from "@/types";
 
 export interface ButtonProps
   extends Omit<React.HTMLProps<HTMLButtonElement | HTMLLinkElement>, "as" | "size"> {
-  as?: JSX.Element;
+  as?: JSX.Element | string;
   variant?: Variants;
   label?: string;
-  size?: ButtonSizes;
+  size?: Sizes;
 }

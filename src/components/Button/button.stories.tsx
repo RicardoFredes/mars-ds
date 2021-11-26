@@ -1,8 +1,7 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import { Variants } from "@/types";
+import { Variants, Sizes } from "@/types";
 import Button from "./button.component";
-import { ButtonSizes } from "./button.types";
 
 export default {
   title: "Components/Button",
@@ -13,7 +12,7 @@ export default {
       control: { type: "select" },
     },
     size: {
-      options: ButtonSizes,
+      options: Sizes,
       control: { type: "select" },
     },
   },
@@ -23,7 +22,7 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 const PrimaryArgs = {
   variant: Variants.Primary,
-  size: ButtonSizes.Medium,
+  size: Sizes.Medium,
   children: "Primary Button",
   disabled: false,
 };

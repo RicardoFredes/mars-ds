@@ -2,7 +2,7 @@
   appearance: none;
   font-family: $font-family-main;
   font-weight: 700;
-
+  
   cursor: pointer;
   display: inline-flex;
   border: 1px solid transparent;
@@ -12,6 +12,7 @@
   border-radius: $border-radius-sm;
   font-size: 15px;
   align-items: center;
+  justify-content: center;
   padding: 11px 22px;
 
   &:disabled {

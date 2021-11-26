@@ -18,7 +18,7 @@ const IconButton = ({
     ...props
 }: IconButtonProps) => {
     const IconButtonTag = as || props.href ? HTMLLink : HTMLButton;
-    const handleClick = (event: MouseEvent<HTMLButtonElement | HTMLLinkElement>) => {
+    const handleClick = (event: MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
         if (props.disabled) return;
         onClick?.(event);
       };

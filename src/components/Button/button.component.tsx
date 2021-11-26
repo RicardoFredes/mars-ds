@@ -1,4 +1,4 @@
-import type { MouseEvent } from "react";
+import { MouseEvent, useState } from "react";
 import type { ButtonProps } from "./button.types";
 import { Variants, Sizes } from "@/types";
 
@@ -15,11 +15,15 @@ const Button = ({
   size = Sizes.Medium,
   ...props
 }: ButtonProps) => {
+  const [isPressed, setIsPressed] = useState(false);
+
   // TODO: Change link type when we have a proper link (with Next.js support) component
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const ButtonTag: any = as || props.href ? "a" : "button";
   const handleClick = (event: MouseEvent<HTMLButtonElement | HTMLLinkElement>) => {
     if (props.disabled) return;
+    setIsPressed(true);
+    setTimeout(() => setIsPressed(false), 250);
     onClick?.(event);
   };
 
@@ -27,7 +31,7 @@ const Button = ({
     "btn",
     `btn_${variant}`,
     `btn_${size}`,
-    { "btn--disabled": props.disabled },
+    [{ "btn--is-disabled": props.disabled }, { "btn--is-pressed": isPressed }],
     className
   );
 

@@ -15,8 +15,10 @@
   justify-content: center;
   padding: 11px 22px;
 
+  &--disabled,
   &:disabled {
     cursor: inherit;
+    pointer-events: none;
   }
 
   &_primary {

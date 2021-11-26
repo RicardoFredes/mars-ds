@@ -10,11 +10,11 @@ export default {
   component: Icon,
   argTypes: {
     color: {
-      control: { type: 'color' }
+      control: { type: "color" },
     },
     name: {
       options: Object.keys(icons),
-      control: {type: 'select'}
+      control: { type: "select" },
     },
     size: {
       options: Sizes,
@@ -23,10 +23,12 @@ export default {
   },
 } as ComponentMeta<typeof Icon>;
 
-const Template: ComponentStory<typeof Icon> = ({ color, ...args }: IconProps) => <Icon style={{ color }} {...args} />;
+const Template: ComponentStory<typeof Icon> = ({ color, ...args }: IconProps) => (
+  <Icon style={{ color }} {...args} />
+);
 
 export const Default = Template.bind({});
 Default.args = {
   name: "me-salva-mini",
-  size: Sizes.Medium
+  size: Sizes.Medium,
 };

@@ -7,8 +7,8 @@ import icons from "./lib";
 const Icon = ({ name, size = Sizes.Medium, className, ...props }: IconProps) => {
   const Component = icons[name];
   if (!Component) return null;
-  const sizeValue = getSize(size)
-  const cn = classNames('icon', className)
+  const sizeValue = getSize(size);
+  const cn = classNames("icon", className);
   return (
     <span {...props} className={cn}>
       <Component height={sizeValue} width={sizeValue} />
@@ -24,7 +24,7 @@ const getSize = (size: Sizes) => {
       return 16;
     case Sizes.Medium:
     default:
-      return 24
+      return 24;
   }
 };
 

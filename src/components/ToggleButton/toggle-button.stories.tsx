@@ -13,7 +13,7 @@ export default {
     },
     iconName: {
       options: Object.keys(icons),
-      control: {type: 'select'}
+      control: { type: "select" },
     },
   },
 } as ComponentMeta<typeof ToggleButton>;
@@ -21,15 +21,15 @@ export default {
 const Template: ComponentStory<typeof ToggleButton> = (args) => <ToggleButton {...args} />;
 
 const DefaultArgs = {
-  iconName: 'me-salva-mini',
+  iconName: "me-salva-mini",
   size: Sizes.Medium,
-}
+};
 
-export const Default = Template.bind({})
-Default.args = DefaultArgs
+export const Default = Template.bind({});
+Default.args = DefaultArgs;
 
-export const Small = Template.bind({})
-Small.args = { 
+export const Small = Template.bind({});
+Small.args = {
   ...DefaultArgs,
   size: Sizes.Small,
-}
+};

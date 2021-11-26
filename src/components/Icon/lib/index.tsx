@@ -11,13 +11,13 @@ import tri from "./tri";
 const icons: {
   [key: string]: (props: IconLibProps) => JSX.Element;
 } = {
-  'alert-circle': alertCircle,
-  'checkmark-circle': checkmarkCircle,
-  'eye-off': eyeOff,
+  "alert-circle": alertCircle,
+  "checkmark-circle": checkmarkCircle,
+  "eye-off": eyeOff,
   eye,
-  'me-salva-mini': mesalvaMini,
+  "me-salva-mini": mesalvaMini,
   ppl,
-  tri
+  tri,
 };
 
 export default icons;

@@ -10,13 +10,13 @@ export default {
     elevation: {
       // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       options: { Default: undefined, ...Elevations },
-      control: { type: 'select' },
+      control: { type: "select" },
     },
   },
 } as ComponentMeta<typeof Card>;
 
 const Template: ComponentStory<typeof Card> = (args) => (
-  <div style={{ padding: 50, background: '#f1f1f1' }}>
+  <div style={{ padding: 50, background: "#f1f1f1" }}>
     <Card {...args} />
   </div>
 );

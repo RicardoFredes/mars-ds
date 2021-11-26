@@ -23,7 +23,7 @@ const Button = ({
     onClick?.(event);
   };
 
-  const cn = classNames("btn", `btn_${variant}`, `btn_${size}`, className);
+  const cn = classNames("btn", `btn_${variant}`, `btn_${size}`, { 'btn--disabled': props.disabled }, className);
 
   return (
     <ButtonTag className={cn} onClick={handleClick}  type={type} {...props}>

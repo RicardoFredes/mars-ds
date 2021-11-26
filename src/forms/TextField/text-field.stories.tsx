@@ -1,5 +1,8 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import type { ComponentMeta, ComponentStory } from "@storybook/react";
+import type { FocusEvent } from "react";
+
 import { useState } from "react";
+
 import TextField from "./text-field.component";
 
 export default {
@@ -10,9 +13,9 @@ export default {
 } as ComponentMeta<typeof TextField>;
 
 const Template: ComponentStory<typeof TextField> = (args) => {
-  const [error, setError] = useState(args.error)
+  const [error, setError] = useState(args.error || false)
 
-  const onBlur = event => {
+  const onBlur = (event: FocusEvent<HTMLInputElement, Element>) => {
     const {value} = event.target
     if (value.length === 0) setError('O preenchimento do nome é obrigatório')
     else if (value.length <= 3) setError('O nome deve ter mais de três letras')

@@ -1,5 +1,6 @@
-import { Sizes } from "../../types";
-import { IconProps } from "./icon.types";
+import type { IconProps } from "./icon.types";
+
+import { Sizes } from "@/types";
 import icons from "./lib";
 
 const Icon = ({ name, size = Sizes.Medium, ...props }: IconProps) => {

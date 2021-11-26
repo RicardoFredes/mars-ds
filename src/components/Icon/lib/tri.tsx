@@ -1,4 +1,4 @@
-import { IconLibProps } from "../icon.types";
+import type { IconLibProps } from "../icon.types";
 
 const IconTri = ({ height = 24, width = 24 }: IconLibProps) => {
   return (

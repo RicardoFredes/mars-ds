@@ -1,5 +1,4 @@
-export { Variants } from "../../types";
-import { Variants } from "../../types";
+import type { Variants } from "@/types";
 
 export enum ButtonSizes {
   Small = "small",

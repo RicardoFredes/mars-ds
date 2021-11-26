@@ -1,10 +1,13 @@
-import { useEffect, useState } from "react";
-import classNames from "classnames";
-import { masker } from "../../services/masker";
-import { TextFieldProps, IconProps } from "./text-field.types";
-import Icon from '../../components/Icon/icon.component'
-import { generateHash } from "../../services/hash";
+import type { IconProps } from "@/components/Icon/icon.types";
+import type { FocusEvent, FormEvent } from "react";
+import type { TextFieldProps } from "./text-field.types";
 
+import { useCallback, useEffect, useState } from "react";
+import classNames from "classnames";
+
+import Icon from "@/components/Icon/icon.component";
+import { generateHash } from "@/services/hash";
+import { masker } from "@/services/masker";
 
 const TextField = ({ className, info, type, name, label, id, mask, disabled, error, sucess, onBlur, onFocus, onChange, rightIconButton, leftIconButton, value = "", ...props }: TextFieldProps) => {
   if (!id) id = name || generateHash('field')
@@ -12,16 +15,16 @@ const TextField = ({ className, info, type, name, label, id, mask, disabled, err
   const [isFocused, setIsFocused] = useState(false);
   const [computedValue, setComputedValue] = useState('')
 
-  const setValue = (newValue) => {
+  const setValue = useCallback((newValue) => {
     const str = String(newValue)
     if (!mask) return setComputedValue(str)
-    const maskedValue = masker(newValue, mask)
+    const maskedValue = masker(str, mask)
     setComputedValue(maskedValue)
-  }
+  }, [mask])
 
   useEffect(() => {
     setValue(value)
-  }, [value])
+  }, [setValue, value])
 
   const isFilled = computedValue.length > 0
   const isSuccess = isFilled && !error && sucess
@@ -36,18 +39,18 @@ const TextField = ({ className, info, type, name, label, id, mask, disabled, err
     { 'field--has-right-icon': rightIconButton },
   ]);
 
-  const handleFocus = (event) => {
+  const handleFocus = (event: FocusEvent<HTMLInputElement, Element>) => {
     setIsFocused(true)
     onFocus?.(event)
   }
 
-  const handleBlur = (event) => {
+  const handleBlur = (event: FocusEvent<HTMLInputElement, Element>) => {
     setIsFocused(false)
     onBlur?.(event)
   }
 
-  const handleChange = (event) => {
-    const { value } = event.target
+  const handleChange = (event: FormEvent<HTMLInputElement>) => {
+    const { value } = event.target as HTMLInputElement
     setValue(value)
     onChange?.(event)
   }

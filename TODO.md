@@ -2,6 +2,7 @@
 
 ---
 
-- [x] Add the README.md file in the root of your project.
-- [ ] My next todo...
-- [ ] Another todo...
+- [ ] Configurar testes
+- [ ] Melhorar a config do `postcss` dentro da config do `rollup`
+- [ ] Preencher campo `paths` no `tsconfig.json`
+- [ ] Adicionar suporte ao tipo de botão `Link`, do pacote `next/link`

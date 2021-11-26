@@ -35,7 +35,7 @@ yarn-error.log*
 *.code-workspace
 
 # Jetbrains Intellij
-.idea
+.idea/*
 
 # Generated files
 .idea/**/contentModel.xml

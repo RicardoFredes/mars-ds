@@ -1,5 +1,6 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { Elevations } from "./card.types";
+import type { ComponentMeta, ComponentStory } from "@storybook/react";
+
+import { Elevations } from "@/types";
 import Card from "./card.component";
 
 export default {
@@ -7,6 +8,7 @@ export default {
   component: Card,
   argTypes: {
     elevation: {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       options: { Default: undefined, ...Elevations },
       control: { type: 'select' },
     },
@@ -21,6 +23,7 @@ const Template: ComponentStory<typeof Card> = (args) => (
 
 export const Default = Template.bind({});
 Default.args = {
+  // @ts-expect-error Need to create a default type to Elevations
   elevation: undefined,
   children: "Card default",
 };

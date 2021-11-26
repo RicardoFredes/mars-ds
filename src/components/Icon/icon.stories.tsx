@@ -1,5 +1,7 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { Sizes } from "../../types";
+import type { IconProps } from "@/components/Icon/icon.types";
+import type { ComponentMeta, ComponentStory } from "@storybook/react";
+
+import { Sizes } from "@/types";
 import Icon from "./icon.component";
 import icons from "./lib";
 
@@ -21,7 +23,7 @@ export default {
   },
 } as ComponentMeta<typeof Icon>;
 
-const Template: ComponentStory<typeof Icon> = ({ color, ...args }) => <Icon style={{ color }} {...args} />;
+const Template: ComponentStory<typeof Icon> = ({ color, ...args }: IconProps) => <Icon style={{ color }} {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

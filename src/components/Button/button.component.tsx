@@ -1,7 +1,8 @@
-import { MouseEvent } from "react";
+import type { MouseEvent } from "react";
+
 import classNames from "classnames";
 
-import { Variants } from "../../types";
+import { Variants } from "@/types";
 import { ButtonProps, ButtonSizes } from "./button.types";
 
 const Button = ({
@@ -30,7 +31,10 @@ const Button = ({
   );
 };
 
+// @ts-expect-error Missing type on props
+// eslint-disable-next-line jsx-a11y/anchor-has-content
 const HTMLLink = (props) => <a {...props} />;
+// @ts-expect-error Missing type on props
 const HTMLButton = (props) => <button {...props} />;
 
 export default Button;

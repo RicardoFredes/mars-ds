@@ -1,12 +1,16 @@
-import mesalvaMini from "./me-salva-mini";
-import checkmarkCircle from "./checkmark-circle"
+import type { IconLibProps } from "@/components/Icon/icon.types";
+
+import alertCircle from "./alert-circle";
+import checkmarkCircle from "./checkmark-circle";
 import eye from "./eye";
 import eyeOff from "./eye-off";
-import ppi from './ppi'
-import tri from './tri'
-import alertCircle from "./alert-circle";
+import mesalvaMini from "./me-salva-mini";
+import ppi from "./ppi";
+import tri from "./tri";
 
-const icons = {
+const icons: {
+  [key: string]: (props: IconLibProps) => JSX.Element;
+} = {
   'alert-circle': alertCircle,
   'checkmark-circle': checkmarkCircle,
   'eye-off': eyeOff,

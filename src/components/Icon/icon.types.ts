@@ -1,4 +1,4 @@
-import { Sizes } from "../../types";
+import type { Sizes } from "@/types";
 
 export interface IconLibProps {
   height?: string | number;

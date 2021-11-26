@@ -103,12 +103,15 @@
       }
       &--is-disabled {
         .field {
+          &__icon,
+          &__input,
           &__label {
             color: $color-text-color-text-disabled;
           }
           &__fieldset {
             border-color: $color-action-states-disabled;
           }
+          
         }
       }
       &--has-error,

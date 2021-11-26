@@ -1,4 +1,4 @@
-import { MouseEvent } from "react";
+import type { MouseEvent } from "react";
 import classNames from "classnames";
 
 import { Variants } from "../../types";
@@ -32,7 +32,9 @@ const IconButton = ({
     );
 }
 
+// @ts-expect-error Missing type on props
 const HTMLLink = (props) => <a {...props} />;
+// @ts-expect-error Missing type on props
 const HTMLButton = (props) => <button {...props} />;
 
 export default IconButton;

@@ -2,14 +2,16 @@
   "name": "@mesalva/mars",
   "version": "0.0.0-alpha.0",
   "description": "Mars is the Me Salva! uikit inspired on Material Design",
-  "repository": "git@github.com:mesalva/mars.git",
-  "author": "mesalva",
-  "license": "MIT",
-  "main": "dist/index.cjs",
-  "module": "dist/index.mjs",
+  "repository": "github:mesalva/mars",
+  "author": "Me Salva! Devs <devs@mesalva.com>",
+  "license": "UNLICENSED",
   "types": "dist/index.d.ts",
+  "main": "dist/index.cjs",
   "files": [
-    "dist"
+    "dist/**/*",
+    "public/**/*",
+    "CHANGELOG.md",
+    "README.md"
   ],
   "engines": {
     "node": ">= 14",
@@ -21,8 +23,7 @@
     "build": "rollup -c",
     "storybook": "yarn build && start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "lint": "eslint --cache --ext ts,tsx src",
-    "lint:check": "yarn lint --fix"
+    "lint": "eslint --cache --ext ts,tsx src"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.1",

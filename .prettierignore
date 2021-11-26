@@ -1,5 +1,0 @@
-# only format JavaScript and TypeScript files
-*
-!**/*.js
-!**/*.ts
-!**/*.tsx

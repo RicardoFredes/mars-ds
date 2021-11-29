@@ -78,6 +78,7 @@ const TextField = ({
 
   const labelText = error ? `${label}*` : label;
   const helpText = error || info;
+  const statusIconName = error ? "alert-circle" : isSuccess ? "checkmark-circle" : undefined;
 
   return (
     <div className={cn}>
@@ -97,9 +98,8 @@ const TextField = ({
             {...props}
             value={computedValue}
           />
+          {statusIconName && <IconButtonPosition name={statusIconName} />}
           {rightIconButton && <IconButtonPosition {...rightIconButton} />}
-          {error && <IconButtonPosition name="alert-circle" />}
-          {isSuccess && <IconButtonPosition name="checkmark-circle" />}
         </div>
         <label htmlFor={computedId} className="field__label">
           {labelText}

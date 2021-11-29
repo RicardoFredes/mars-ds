@@ -1,6 +1,7 @@
 import type { IconLibProps } from "@/components/Icon/icon.types";
 
 import alertCircle from "./alert-circle";
+import bankSlip from "./bank-slip";
 import checkmarkCircle from "./checkmark-circle";
 import creditCard from "./credit-card";
 import eye from "./eye";
@@ -17,6 +18,7 @@ const icons: {
   [key: string]: (props: IconLibProps) => JSX.Element;
 } = {
   "alert-circle": alertCircle,
+  bankSlip,
   "checkmark-circle": checkmarkCircle,
   "credit-card": creditCard,
   "eye-off": eyeOff,

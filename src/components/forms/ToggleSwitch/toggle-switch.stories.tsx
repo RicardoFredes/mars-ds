@@ -12,5 +12,7 @@ const Template: ComponentStory<typeof ToggleSwitch> = (args) => <ToggleSwitch {.
 export const Default = Template.bind({});
 Default.args = {
   label: "Ativar as notificações de redações",
-  defaultChecked: true
+  defaultChecked: true,
+  disabled: false,
+  id: "toggle-switch"
 };

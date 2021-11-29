@@ -60,10 +60,22 @@
       }
     }
   }
-  
-  &:hover {
+  &:not(.toggle-switch--is-disabled):hover {
     .toggle-switch__thumb:before {
       transform: scale(1);
+    }
+  }
+  &--is-disabled {
+    .toggle-switch {
+      &__container {
+        cursor: inherit;
+      }
+      &__track {
+        background-color: $color-action-states-disabled-background;
+      }
+      &__thumb {
+        background-color: $color-grey-400;
+      }
     }
   }
 }

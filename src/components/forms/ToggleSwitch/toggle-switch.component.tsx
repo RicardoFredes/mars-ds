@@ -3,10 +3,25 @@ import classNames from "classnames";
 import Text from "../../typographic/Text/text.component";
 import { TextSizes } from "@/components/typographic/Text/text.types";
 
-const ToggleSwitch = ({ className, defaultChecked = false, id, label, name, ...props }: any) => {
+const ToggleSwitch = ({
+  className,
+  defaultChecked = false,
+  disabled,
+  id,
+  label,
+  name,
+  ...props
+}: any) => {
   const [checked, setChecked] = useState(defaultChecked);
 
-  const cn = classNames("toggle-switch", className, { "toggle-switch--is-checked": checked });
+  const cn = classNames("toggle-switch", className, [
+    { "toggle-switch--is-checked": checked },
+    { "toggle-switch--is-disabled": disabled },
+  ]);
+
+  const handleChange = () => {
+    if (!disabled) setChecked(!checked)
+  }
 
   return (
     <div className={cn} {...props}>
@@ -21,10 +36,11 @@ const ToggleSwitch = ({ className, defaultChecked = false, id, label, name, ...p
         </span>
         <input
           id={id}
+          disabled={disabled}
           type="checkbox"
           className="toggle-switch__checkbox"
           name={name}
-          onChange={() => setChecked(!checked)}
+          onChange={handleChange}
           defaultChecked={defaultChecked}
         />
       </label>

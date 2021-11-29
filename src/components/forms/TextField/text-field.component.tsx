@@ -134,7 +134,7 @@ const TextFieldIconButton = ({
   name,
   ...props
 }: IconProps & { classNameField: string }) => {
-  const cn = classNames(classNameField, className);
+  const cn = classNames(classNameField, className, { "field__icon--has-action" : props.onClick });
   return <Icon name={name} className={cn} {...props} />;
 };
 

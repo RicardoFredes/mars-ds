@@ -29,6 +29,9 @@
   }
   &__icon {
     padding: $spacing-xs;
+    &--has-action {
+      cursor: pointer;
+    }
   }
   &__legend {
     visibility: hidden;
@@ -110,6 +113,11 @@
           }
           &__fieldset {
             border-color: $color-action-states-disabled;
+          }
+          &__icon {
+            &--has-action {
+              cursor: inherit;
+            }
           }
         }
       }

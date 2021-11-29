@@ -23,6 +23,9 @@ const DefaultArgs = {
   size: TextSizes.Medium,
 };
 
+export const Default = Template.bind({});
+Default.args = DefaultArgs;
+
 export const Small = Template.bind({});
 Small.args = {
   ...DefaultArgs,

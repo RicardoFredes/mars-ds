@@ -29,6 +29,9 @@ const DefaultArgs = {
   size: HeadingSizes.Medium,
 };
 
+export const Default = Template.bind({});
+Default.args = DefaultArgs;
+
 export const XSmall = Template.bind({});
 XSmall.args = {
   ...DefaultArgs,

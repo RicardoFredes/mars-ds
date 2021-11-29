@@ -28,8 +28,7 @@ const TextField = ({
   value = "",
   ...props
 }: TextFieldProps) => {
-  if (!id) id = name || generateHash("field");
-
+  const [computedId] = useState(id || name || generateHash("field"));
   const [isFocused, setIsFocused] = useState(false);
   const [computedValue, setComputedValue] = useState("");
 
@@ -89,7 +88,7 @@ const TextField = ({
             />
           )}
           <input
-            id={id}
+            id={computedId}
             className="field__input"
             type={type}
             onBlur={handleBlur}
@@ -118,7 +117,7 @@ const TextField = ({
             />
           )}
         </div>
-        <label htmlFor={id} className="field__label">
+        <label htmlFor={computedId} className="field__label">
           {labelText}
         </label>
         <legend className="field__legend">{labelText}</legend>
@@ -134,7 +133,7 @@ const TextFieldIconButton = ({
   name,
   ...props
 }: IconProps & { classNameField: string }) => {
-  const cn = classNames(classNameField, className, { "field__icon--has-action" : props.onClick });
+  const cn = classNames(classNameField, className, { "field__icon--has-action": props.onClick });
   return <Icon name={name} className={cn} {...props} />;
 };
 

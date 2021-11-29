@@ -8,6 +8,7 @@ export { default as ToggleButton } from "./components/ToggleButton/toggle-button
 
 export { default as PasswordField } from "./components/forms/PasswordField/password-field.component";
 export { default as TextField } from "./components/forms/TextField/text-field.component";
+export { default as ToggleSwitch } from "./components/forms/ToggleSwitch/toggle-switch.component";
 
 export { default as Heading } from "./components/typographic/Heading/heading.component";
 export { default as Text } from "./components/typographic/Text/text.component";

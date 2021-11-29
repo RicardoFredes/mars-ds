@@ -2,6 +2,7 @@ import type { IconLibProps } from "@/components/Icon/icon.types";
 
 import alertCircle from "./alert-circle";
 import checkmarkCircle from "./checkmark-circle";
+import creditCard from "./credit-card";
 import eye from "./eye";
 import eyeOff from "./eye-off";
 import facebook from "./facebook";
@@ -17,6 +18,7 @@ const icons: {
 } = {
   "alert-circle": alertCircle,
   "checkmark-circle": checkmarkCircle,
+  "credit-card": creditCard,
   "eye-off": eyeOff,
   eye,
   facebook,

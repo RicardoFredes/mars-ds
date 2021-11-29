@@ -7,6 +7,8 @@ import eyeOff from "./eye-off";
 import mesalvaMini from "./me-salva-mini";
 import ppl from "./ppl";
 import tri from "./tri";
+import info from './info'
+import shield from './shield'
 
 const icons: {
   [key: string]: (props: IconLibProps) => JSX.Element;
@@ -15,8 +17,10 @@ const icons: {
   "checkmark-circle": checkmarkCircle,
   "eye-off": eyeOff,
   eye,
+  info,
   "me-salva-mini": mesalvaMini,
   ppl,
+  shield,
   tri,
 };
 

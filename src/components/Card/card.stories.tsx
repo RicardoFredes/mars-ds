@@ -4,6 +4,7 @@ import { Elevations } from "@/types";
 import Card from "./card.component";
 import Text from "../typographic/Text/text.component";
 import Heading from "../typographic/Heading/heading.component";
+import { HeadingSizes } from "../typographic/Heading/heading.types";
 
 export default {
   title: "Components/Card",
@@ -20,7 +21,7 @@ export default {
 const Template: ComponentStory<typeof Card> = ({ children, title, ...args }) => (
   <div style={{ padding: 50, background: "#f1f1f1" }}>
     <Card {...args}>
-      <Heading>{title}</Heading>
+      <Heading size={HeadingSizes.Small}>{title}</Heading>
       <Text>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco

@@ -1,9 +1,12 @@
 import type React from "react";
 
 export enum HeadingSizes {
-  Medium = "medium",
-  Large = "large",
-  ExtraLarge = "extra-large",
+  XSmalll = "xs",
+  Small = "s",
+  Medium = "m",
+  Large = "l",
+  XLarge = "xl",
+  XXLarge = "xxl",
 }
 
 export interface HeadingProps extends Omit<React.HTMLProps<HTMLElement>, "as" | "size"> {

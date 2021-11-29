@@ -10,7 +10,7 @@ const Heading = ({
   ...props
 }: HeadingProps) => {
   const HeadingTag = as || `h${level}`;
-  const cn = classNames("heading", `heading_${size}`, className);
+  const cn = classNames("heading", `heading--size-${size}`, className);
   return (
     <HeadingTag className={cn} {...props}>
       {children}

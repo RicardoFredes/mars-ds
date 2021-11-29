@@ -22,7 +22,7 @@
     pointer-events: none;
   }
 
-  &_primary {
+  &--variant-primary {
     background-color: $color-primary-main;
     color: $color-background-default;
     &:hover {
@@ -34,7 +34,7 @@
     }
   }
 
-  &_secondary {
+  &--variant-secondary {
     background-color: $color-background-default;
     color: $color-primary-main;
     border-color: $color-primary-main;
@@ -47,8 +47,8 @@
     }
   }
 
-  &_neutral,
-  &_text {
+  &--variant-neutral,
+  &--variant-text {
     color: $color-text-color-text-primary;
     &:hover {
       background-color: $color-transparent-grey-12;
@@ -57,12 +57,12 @@
       color: $color-action-states-disabled;
     }
   }
-  &_neutral {
+  &--variant-neutral {
     background-color: $color-background-default;
     border-color: $color-action-states-disabled-background;
   }
 
-  &_small {
+  &--size-s {
     font-size: 14px;
     padding: 6px 16px;
   }

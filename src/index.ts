@@ -11,4 +11,4 @@ export { default as TextField } from "./components/forms/TextField/text-field.co
 
 export { default as Heading } from "./components/typographic/Heading/heading.component";
 export { default as Text } from "./components/typographic/Text/text.component";
-
+export { default as Subtitle } from "./components/typographic/Subtitle/subtitle.component";

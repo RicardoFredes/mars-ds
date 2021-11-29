@@ -9,8 +9,10 @@ export enum HeadingSizes {
   XXLarge = "xxl",
 }
 
+export type HeadingLevels = number | "1" | "2" | "3" | "4" | "5" | "6";
+
 export interface HeadingProps extends Omit<React.HTMLProps<HTMLElement>, "as" | "size"> {
   as?: any;
-  level?: number | "1" | "2" | "3" | "4" | "5" | "6";
+  level?: HeadingLevels
   size?: HeadingSizes;
 }

@@ -29,7 +29,7 @@ Default.args = DefaultArgs;
 export const Small = Template.bind({});
 Small.args = {
   ...DefaultArgs,
-  size: TextSizes.Small
+  size: TextSizes.Small,
 };
 
 export const Medium = Template.bind({});

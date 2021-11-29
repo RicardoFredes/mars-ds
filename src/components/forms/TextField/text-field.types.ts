@@ -9,3 +9,8 @@ export interface TextFieldProps extends React.HTMLProps<HTMLInputElement> {
   rightIconButton?: IconProps;
   leftIconButton?: IconProps;
 }
+
+export enum IconPosition {
+  Left = "left",
+  Right = "right",
+}

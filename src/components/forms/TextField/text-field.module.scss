@@ -6,7 +6,7 @@
   color: $color-text-color-text-secondary;
   &__fieldset {
     border: 1px solid #637381;
-    border-radius: 8px;
+    border-radius: $border-radius-sm;
     padding: 0 12px;
     display: flex;
     align-items: center;
@@ -28,17 +28,17 @@
     margin-right: 2px;
   }
   &__icon {
-    padding: 4px;
+    padding: $spacing-xs;
   }
   &__legend {
     visibility: hidden;
     height: 0;
     display: none;
     font-size: 12px;
-    padding-right: 4px;
+    padding-right: $spacing-xs;
   }
   &__input {
-    padding: 0 4px;
+    padding: 0 $spacing-xs;
     width: 100%;
     height: 100%;
     border: none;
@@ -61,18 +61,18 @@
   }
   &__help {
     font-size: 12px;
-    padding: 4px 16px;
+    padding: $spacing-xs $spacing-lg;
     color: $color-text-color-text-primary;
   }
   &--has-left-icon {
     .field__icon-left {
-      margin-right: 4px;
+      margin-right: $spacing-xs;
     }
     .field__label {
       transform: translateX(32px);
     }
   }
-  &, 
+  &,
   &:hover {
     &.field {
       &--is-filled,
@@ -111,7 +111,6 @@
           &__fieldset {
             border-color: $color-action-states-disabled;
           }
-          
         }
       }
       &--has-error,

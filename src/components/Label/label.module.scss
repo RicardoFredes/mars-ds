@@ -1,0 +1,102 @@
+.label {
+  padding: 1px $spacing-sm;
+  border-radius: $border-radius-xs;
+  font-family: $font-family-main;
+  font-weight: 700;
+
+  &--ghost {
+    &-default {
+      background: $color-transparent-grey-16;
+      color: $color-text-color-text-secondary;
+    }
+
+    &-primary {
+      background: $color-transparent-primary-16;
+      color: $color-primary-dark;
+    }
+
+    &-info {
+      background: $color-transparent-info-16;
+      color: $color-info-dark;
+    }
+
+    &-success {
+      background: $color-transparent-success-16;
+      color: $color-success-dark;
+    }
+
+    &-warning {
+      background: $color-transparent-warning-16;
+      color: $color-warning-dark;
+    }
+
+    &-error {
+      background: $color-transparent-error-16;
+      color: $color-error-dark;
+    }
+  }
+
+  &--solid {
+    &-default {
+      background: $color-grey-300;
+      color: $color-text-color-text-primary;
+    }
+
+    &-primary {
+      background: $color-primary-main;
+      color: $color-common-white;
+    }
+
+    &-info {
+      background: $color-info-main;
+      color: $color-common-white;
+    }
+
+    &-success {
+      background: $color-success-main;
+      color: $color-text-color-text-primary;
+    }
+
+    &-warning {
+      background: $color-warning-main;
+      color: $color-text-color-text-primary;
+    }
+
+    &-error {
+      background: $color-error-main;
+      color: $color-common-white;
+    }
+  }
+
+  &--subject {
+    &-redacao {
+      background: $color-transparent-subjects-redacao-16;
+      color: $color-subjects-redacao-dark;
+    }
+
+    &-medicina {
+      background: $color-transparent-subjects-medicina-16;
+      color: $color-subjects-medicina-dark;
+    }
+
+    &-linguagens {
+      background: $color-transparent-subjects-linguagens-16;
+      color: $color-subjects-linguagens-dark;
+    }
+
+    &-humanas {
+      background: $color-transparent-subjects-humanas-16;
+      color: $color-subjects-humanas-dark;
+    }
+
+    &-natureza {
+      background: $color-transparent-subjects-natureza-16;
+      color: $color-subjects-natureza-dark;
+    }
+
+    &-matematica {
+      background: $color-transparent-subjects-matematica-16;
+      color: $color-subjects-matematica-dark;
+    }
+  }
+}

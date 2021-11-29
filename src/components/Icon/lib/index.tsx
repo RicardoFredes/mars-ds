@@ -9,6 +9,7 @@ import eyeOff from "./eye-off";
 import facebook from "./facebook";
 import google from "./google";
 import mesalvaMini from "./me-salva-mini";
+import pix from "./pix";
 import ppl from "./ppl";
 import tri from "./tri";
 import info from "./info";
@@ -27,6 +28,7 @@ const icons: {
   google,
   info,
   "me-salva-mini": mesalvaMini,
+  pix,
   ppl,
   shield,
   tri,

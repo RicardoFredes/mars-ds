@@ -4,6 +4,7 @@ import alertCircle from "./alert-circle";
 import checkmarkCircle from "./checkmark-circle";
 import eye from "./eye";
 import eyeOff from "./eye-off";
+import facebook from "./facebook";
 import google from "./google";
 import mesalvaMini from "./me-salva-mini";
 import ppl from "./ppl";
@@ -18,6 +19,7 @@ const icons: {
   "checkmark-circle": checkmarkCircle,
   "eye-off": eyeOff,
   eye,
+  facebook,
   google,
   info,
   "me-salva-mini": mesalvaMini,

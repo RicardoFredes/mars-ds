@@ -10,8 +10,8 @@ import google from "./google";
 import mesalvaMini from "./me-salva-mini";
 import ppl from "./ppl";
 import tri from "./tri";
-import info from './info'
-import shield from './shield'
+import info from "./info";
+import shield from "./shield";
 
 const icons: {
   [key: string]: (props: IconLibProps) => JSX.Element;

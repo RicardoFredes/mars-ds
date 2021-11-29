@@ -1,0 +1,32 @@
+.heading {
+  font-family: $font-family-main;
+  font-size: 2rem;
+  line-height: 1.5em;
+  font-weight: 800;
+  color: $color-text-color-text-primary;
+  &--size {
+    &-xs {
+      font-size: 1.125rem;
+    }
+    &-s {
+      font-size: 1.25rem;
+    }
+    &-m {
+      font-size: 1.5rem;
+    }
+    &-l {
+      font-size: 2rem;
+    }
+    &-xl {
+      font-size: 3rem;
+      line-height: 1.3em;
+      font-weight: 600;
+
+    }
+    &-xxl {
+      font-size: 4rem;
+      line-height: 1.25em;
+      font-weight: 600;
+    }
+  }
+}

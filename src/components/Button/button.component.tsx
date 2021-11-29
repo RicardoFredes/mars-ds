@@ -29,8 +29,8 @@ const Button = ({
 
   const cn = classNames(
     "btn",
-    `btn_${variant}`,
-    `btn_${size}`,
+    `btn--variant-${variant}`,
+    `btn--size-${size}`,
     [{ "btn--is-disabled": props.disabled }, { "btn--is-pressed": isPressed }],
     className
   );

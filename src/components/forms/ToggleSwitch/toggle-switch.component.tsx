@@ -35,7 +35,7 @@ const ToggleSwitch = ({
           <span className="toggle-switch__thumb" />
         </span>
         <input
-          id={id}
+          id={id || name}
           disabled={disabled}
           type="checkbox"
           className="toggle-switch__checkbox"

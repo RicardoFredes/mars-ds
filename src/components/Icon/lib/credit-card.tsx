@@ -1,6 +1,6 @@
 import type { IconLibProps } from "../icon.types";
 
-const CreditCardIcon = ({ height = 24, width = 24 }: IconLibProps) => {
+const IconCreditCard = ({ height = 24, width = 24 }: IconLibProps) => {
   return (
     <svg
       width={width}
@@ -19,4 +19,4 @@ const CreditCardIcon = ({ height = 24, width = 24 }: IconLibProps) => {
   );
 };
 
-export default CreditCardIcon;
+export default IconCreditCard;

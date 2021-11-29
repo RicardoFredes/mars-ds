@@ -1,6 +1,6 @@
 import type { IconLibProps } from "../icon.types";
 
-const GoogleIcon = ({ height = 24, width = 24 }: IconLibProps) => {
+const IconGoogle = ({ height = 24, width = 24 }: IconLibProps) => {
   return (
     <svg
       width={width}
@@ -37,4 +37,4 @@ const GoogleIcon = ({ height = 24, width = 24 }: IconLibProps) => {
   );
 };
 
-export default GoogleIcon;
+export default IconGoogle;

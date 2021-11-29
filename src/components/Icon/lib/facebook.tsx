@@ -1,6 +1,6 @@
 import type { IconLibProps } from "../icon.types";
 
-const FacebookIcon = ({ height = 24, width = 24 }: IconLibProps) => {
+const IconFacebook = ({ height = 24, width = 24 }: IconLibProps) => {
   return (
     <svg
       width={width}
@@ -19,4 +19,4 @@ const FacebookIcon = ({ height = 24, width = 24 }: IconLibProps) => {
   );
 };
 
-export default FacebookIcon;
+export default IconFacebook;

@@ -1,6 +1,6 @@
 import type { IconLibProps } from "../icon.types";
 
-const BankSlipIcon = ({ height = 24, width = 24 }: IconLibProps) => {
+const IconBankSlip = ({ height = 24, width = 24 }: IconLibProps) => {
   return (
     <svg
       width={width}
@@ -19,4 +19,4 @@ const BankSlipIcon = ({ height = 24, width = 24 }: IconLibProps) => {
   );
 };
 
-export default BankSlipIcon;
+export default IconBankSlip;

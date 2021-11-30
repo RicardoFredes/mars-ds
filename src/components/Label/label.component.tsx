@@ -8,7 +8,7 @@ const Label = ({
   children,
   ...props
 }: LabelProps) => {
-  const cn = classNames("label", `label--${theme}`, `label--${theme}-${variant}`);
+  const cn = classNames("label", `label--${theme}`, `label--${theme}-${variant}`, className);
   return (
     <span className={cn} {...props}>
       {children}

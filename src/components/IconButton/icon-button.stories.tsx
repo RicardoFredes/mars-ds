@@ -1,5 +1,5 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import { Sizes, VariantsEnum } from "@/types";
+import { SizesEnum, VariantsEnum } from "@/types";
 import IconButton from "./icon-button.component";
 
 export default {
@@ -11,7 +11,7 @@ export default {
       control: { type: "select" },
     },
     size: {
-      options: Sizes,
+      options: SizesEnum,
       control: { type: "select" },
     },
   },
@@ -21,7 +21,7 @@ const Template: ComponentStory<typeof IconButton> = (args) => <IconButton {...ar
 
 const PrimaryArgs = {
   variant: VariantsEnum.Primary,
-  size: Sizes.Medium,
+  size: SizesEnum.Medium,
   children: "Primary Button",
   disabled: false,
   iconName: "me-salva-mini",

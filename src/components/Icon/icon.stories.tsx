@@ -1,7 +1,7 @@
 import type { IconProps } from "@/components/Icon/icon.types";
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import { Sizes } from "@/types";
+import { SizesEnum } from "@/types";
 import Icon from "./icon.component";
 import icons from "./lib";
 
@@ -17,7 +17,7 @@ export default {
       control: { type: "select" },
     },
     size: {
-      options: Sizes,
+      options: SizesEnum,
       control: { type: "radio" },
     },
   },
@@ -30,5 +30,5 @@ const Template: ComponentStory<typeof Icon> = ({ color, ...args }: IconProps) =>
 export const Default = Template.bind({});
 Default.args = {
   name: "me-salva-mini",
-  size: Sizes.Medium,
+  size: SizesEnum.Medium,
 };

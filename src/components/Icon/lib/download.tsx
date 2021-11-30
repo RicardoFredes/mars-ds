@@ -1,6 +1,6 @@
 import type { IconLibProps } from "../icon.types";
 
-const Icon = ({ height = 24, width = 24 }: IconLibProps) => {
+const IconDownload = ({ height = 24, width = 24 }: IconLibProps) => {
   return (
     <svg
       width={width}
@@ -56,4 +56,4 @@ const Icon = ({ height = 24, width = 24 }: IconLibProps) => {
   );
 };
 
-export default Icon;
+export default IconDownload;

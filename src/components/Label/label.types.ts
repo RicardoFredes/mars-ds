@@ -1,5 +1,3 @@
-import type { ReactNode } from "react";
-
 export interface LabelProps extends React.HTMLProps<HTMLSpanElement> {
   theme: LabelTheme;
   variant: LabelVariants | LabelSubjectVariants;

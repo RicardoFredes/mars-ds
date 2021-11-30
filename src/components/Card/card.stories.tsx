@@ -18,7 +18,7 @@ export default {
   },
 } as ComponentMeta<typeof Card>;
 
-const Template: ComponentStory<typeof Card> = ({ children, title, ...args }) => (
+const Template: ComponentStory<typeof Card> = ({ title, ...args }) => (
   <div style={{ padding: 50, background: "#f1f1f1" }}>
     <Card {...args}>
       <Heading size={HeadingSizes.Small}>{title}</Heading>

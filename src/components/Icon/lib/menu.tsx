@@ -14,7 +14,7 @@ const IconMenu = ({ height = 24, width = 24 }: IconLibProps) => {
         fill="currentColor"
       />
 
-    <path
+      <path
         d="M20.05 16H3.95C3.42533 16 3 16.4253 3 16.95V17.05C3 17.5747 3.42533 18 3.95 18H20.05C20.5747 18 21 17.5747 21 17.05V16.95C21 16.4253 20.5747 16 20.05 16Z"
         fill="currentColor"
       />
@@ -22,7 +22,7 @@ const IconMenu = ({ height = 24, width = 24 }: IconLibProps) => {
       <path
         d="M20.05 6H3.95C3.42533 6 3 6.42533 3 6.95V7.05C3 7.57467 3.42533 8 3.95 8H20.05C20.5747 8 21 7.57467 21 7.05V6.95C21 6.42533 20.5747 6 20.05 6Z"
         fill="currentColor"
-      />            
+      />
     </svg>
   );
 };

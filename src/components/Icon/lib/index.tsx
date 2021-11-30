@@ -27,7 +27,7 @@ import facebook from "./facebook";
 import file from "./file";
 import fileText from "./file-text";
 import google from "./google";
-import grid from"./grid";
+import grid from "./grid";
 import mastercard from "./mastercard";
 import menu from "./menu";
 import minusSquare from "./minus-square";
@@ -69,7 +69,7 @@ const icons: {
   "chevron-down": chevronDown,
   "chevron-left": chevronLeft,
   "chevron-right": chevronRight,
-  "chevron-up": chevronUp, 
+  "chevron-up": chevronUp,
   clock,
   "done-all": doneAll,
   download,

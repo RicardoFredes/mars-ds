@@ -10,5 +10,5 @@ const Template: ComponentStory<typeof Caption> = (args) => <Caption {...args} />
 
 export const Default = Template.bind({});
 Default.args = {
-  children: "Caption"
+  children: "Caption",
 };

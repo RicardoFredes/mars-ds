@@ -24,8 +24,7 @@
     "build": "rollup -c",
     "storybook": "yarn build && start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "lint": "eslint --cache --ext ts,tsx src",
-    "lint:fix": "eslint --cache --ext ts,tsx src --fix"
+    "lint": "eslint --cache --ext ts,tsx src"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.1",

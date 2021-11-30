@@ -7,7 +7,7 @@
   "license": "UNLICENSED",
   "types": "dist/index.d.ts",
   "main": "dist/index.cjs",
-  "module": "dist/index.js",
+  "module": "dist/index.mjs",
   "files": [
     "dist/**/*",
     "public/**/*",
@@ -43,6 +43,7 @@
     "@types/vanilla-masker": "^1.2.1",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
+    "@zerollup/ts-transform-paths": "^1.7.18",
     "classnames": "^2.3.1",
     "eslint": "^8.3.0",
     "eslint-config-prettier": "^8.3.0",
@@ -66,6 +67,7 @@
     "sass": "^1.43.5",
     "tsconfig-paths-webpack-plugin": "^3.5.2",
     "tslib": "^2.3.1",
+    "ttypescript": "^1.5.13",
     "typescript": "^4.5.2",
     "vanilla-masker": "^1.2.0"
   },

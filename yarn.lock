@@ -2257,13 +2257,13 @@
   resolved "https://registry.yarnpkg.com/@trysound/sax/-/sax-0.2.0.tgz#cccaab758af56761eb7bf37af6f03f326dd798ad"
   integrity sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==
 
-"@ts-type/package-dts@^1.0.53":
-  version "1.0.53"
-  resolved "https://registry.yarnpkg.com/@ts-type/package-dts/-/package-dts-1.0.53.tgz#bb577e93e7f3deb0910479550014728f4bfd36a8"
-  integrity sha512-P8bMcjqaUsaBbXOCxBtzT4/pvhQSHTMc91WrpErVfB52zpNRVw2evOYWMe6q3c087+wpvITB7HtppYDnQe1RwA==
+"@ts-type/package-dts@^1.0.54":
+  version "1.0.54"
+  resolved "https://registry.yarnpkg.com/@ts-type/package-dts/-/package-dts-1.0.54.tgz#c6bcf02464bb4bfb4bfdd1bd12c400458082af75"
+  integrity sha512-lJWJBVfPCbPBdSWM3PGkooYl9p273n7A1nXB93vyHQIO+LWVXFi70ajj5GdgLU0cs+pwjdCE+1RoK/1EfC6a/A==
   dependencies:
     "@types/semver" "^7.3.9"
-    ts-type "^1.2.40"
+    ts-type "^2.0.3"
 
 "@types/braces@*":
   version "3.0.1"
@@ -2794,14 +2794,28 @@
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
 "@yarn-tool/resolve-package@^1.0.36":
-  version "1.0.38"
-  resolved "https://registry.yarnpkg.com/@yarn-tool/resolve-package/-/resolve-package-1.0.38.tgz#9e1a7ada87016826a67ffb576c8d39aca525c076"
-  integrity sha512-WmYM/Znh/vPQw7PBfbH2PmZSrzCF0AfGMfpA4z3SbNa2UUcdpqq9yD9pYKcHY1FP3yjMB7KwcVD8mhojROXCQQ==
+  version "1.0.39"
+  resolved "https://registry.yarnpkg.com/@yarn-tool/resolve-package/-/resolve-package-1.0.39.tgz#73705894d0116b9533f2149fde3dce880789e27c"
+  integrity sha512-Muv+aW1tcyPhkwG4db3fP/KjknzJMidykLbrwEdU0fI0C6DFzBehhLLu9Z/rIO26OoJWqprxyR27w+SgNXNOoQ==
   dependencies:
-    "@ts-type/package-dts" "^1.0.53"
+    "@ts-type/package-dts" "^1.0.54"
     pkg-dir "< 6 >= 5"
     tslib "^2.3.1"
     upath2 "^3.1.10"
+
+"@zerollup/ts-helpers@^1.7.18":
+  version "1.7.18"
+  resolved "https://registry.yarnpkg.com/@zerollup/ts-helpers/-/ts-helpers-1.7.18.tgz#747177f6d5abc06c3a0f5dffe7362d365cf0391d"
+  integrity sha512-S9zN+y+i5yN/evfWquzSO3lubqPXIsPQf6p9OiPMpRxDx/0totPLF39XoRw48Dav5dSvbIE8D2eAPpXXJxvKwg==
+  dependencies:
+    resolve "^1.12.0"
+
+"@zerollup/ts-transform-paths@^1.7.18":
+  version "1.7.18"
+  resolved "https://registry.yarnpkg.com/@zerollup/ts-transform-paths/-/ts-transform-paths-1.7.18.tgz#72f705c66690879e51d53c73dc76c4e2518a8c50"
+  integrity sha512-YPVUxvWQVzRx1OBN0Pmkd58+R9FcfUJuwTaPUSoi5rKxuXMtxevTXdfi0w5mEaIH8b0DfL+wg0wFDHiJE+S2zA==
+  dependencies:
+    "@zerollup/ts-helpers" "^1.7.18"
 
 accepts@~1.3.5, accepts@~1.3.7:
   version "1.3.7"
@@ -9546,7 +9560,7 @@ resolve-url@^0.2.1:
   resolved "https://registry.yarnpkg.com/resolve-url/-/resolve-url-0.2.1.tgz#2c637fe77c893afd2a663fe21aa9080068e2052a"
   integrity sha1-LGN/53yJOv0qZj/iGqkIAGjiBSo=
 
-resolve@1.20.0, resolve@^1.10.0, resolve@^1.12.0, resolve@^1.14.2, resolve@^1.17.0, resolve@^1.19.0, resolve@^1.3.2:
+resolve@1.20.0, resolve@>=1.9.0, resolve@^1.10.0, resolve@^1.12.0, resolve@^1.14.2, resolve@^1.17.0, resolve@^1.19.0, resolve@^1.3.2:
   version "1.20.0"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.20.0.tgz#629a013fb3f70755d6f0b7935cc1c2c5378b1975"
   integrity sha512-wENBPt4ySzg4ybFQW2TT1zMQucPK95HSh/nq2CFTZVOGut2+pQvSsgtda4d26YrYcr067wjbmzOG8byDPBX63A==
@@ -10595,12 +10609,12 @@ ts-pnp@^1.1.6:
   resolved "https://registry.yarnpkg.com/ts-pnp/-/ts-pnp-1.2.0.tgz#a500ad084b0798f1c3071af391e65912c86bca92"
   integrity sha512-csd+vJOb/gkzvcCHgTGSChYpy5f1/XKNsmvBGO4JXS+z1v2HobugDz4s1IeFXM3wZB44uczs+eazB5Q/ccdhQw==
 
-ts-type@^1.2.40:
-  version "1.2.40"
-  resolved "https://registry.yarnpkg.com/ts-type/-/ts-type-1.2.40.tgz#db3ceb95281567fe72591b9a904488e85c5b74fe"
-  integrity sha512-Ux5e7Frys5pX7w8gYchEd0KfhG1H5puXOQC8yOBgMJ1aEwDSypeHLwxIUpKjecni1IGwtLI3JrxCVZaQO9JKmw==
+ts-type@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/ts-type/-/ts-type-2.0.3.tgz#1e9002dcf8d5052e27e77a8f6c9565030c4bd3c3"
+  integrity sha512-Cc2kgkUwmCK/h2m/sVbr2piqOGE+Hs4qAgJ7CiI4OSMJFWorE6f6yoisjSBE5izGb2/VZnHSN2CcOQR6/Yfazw==
   dependencies:
-    tslib "^2.3.0"
+    tslib "^2.3.1"
     typedarray-dts "^1.0.0"
 
 tsconfig-paths-webpack-plugin@^3.5.2:
@@ -10648,6 +10662,13 @@ tty-browserify@0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/tty-browserify/-/tty-browserify-0.0.0.tgz#a157ba402da24e9bf957f9aa69d524eed42901a6"
   integrity sha1-oVe6QC2iTpv5V/mqadUk7tQpAaY=
+
+ttypescript@^1.5.13:
+  version "1.5.13"
+  resolved "https://registry.yarnpkg.com/ttypescript/-/ttypescript-1.5.13.tgz#c3bcb760599fe49157d30c5d5895a0023cbb7f30"
+  integrity sha512-KT/RBfGGlVJFqEI8cVvI3nMsmYcFvPSZh8bU0qX+pAwbi7/ABmYkzn7l/K8skw0xmYjVCoyaV6WLsBQxdadybQ==
+  dependencies:
+    resolve ">=1.9.0"
 
 type-check@^0.4.0, type-check@~0.4.0:
   version "0.4.0"

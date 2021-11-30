@@ -1,6 +1,6 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import { Variants, Sizes } from "@/types";
+import { Sizes, VariantsEnum } from "@/types";
 import Button from "./button.component";
 
 export default {
@@ -8,7 +8,7 @@ export default {
   component: Button,
   argTypes: {
     variant: {
-      options: Variants,
+      options: VariantsEnum,
       control: { type: "select" },
     },
     size: {
@@ -21,7 +21,7 @@ export default {
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 const PrimaryArgs = {
-  variant: Variants.Primary,
+  variant: VariantsEnum.Primary,
   size: Sizes.Medium,
   children: "Primary Button",
   disabled: false,
@@ -33,20 +33,20 @@ Primary.args = PrimaryArgs;
 export const Secondary = Template.bind({});
 Secondary.args = {
   ...PrimaryArgs,
-  variant: Variants.Secondary,
+  variant: VariantsEnum.Secondary,
   children: "Secondary Button",
 };
 
 export const Neutral = Template.bind({});
 Neutral.args = {
   ...PrimaryArgs,
-  variant: Variants.Neutral,
+  variant: VariantsEnum.Neutral,
   children: "Neutral Button",
 };
 
 export const Text = Template.bind({});
 Text.args = {
   ...PrimaryArgs,
-  variant: Variants.Text,
+  variant: VariantsEnum.Text,
   children: "Text Button",
 };

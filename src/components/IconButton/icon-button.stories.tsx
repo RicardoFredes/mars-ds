@@ -1,5 +1,5 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import { Sizes, Variants } from "@/types";
+import { Sizes, VariantsEnum } from "@/types";
 import IconButton from "./icon-button.component";
 
 export default {
@@ -7,7 +7,7 @@ export default {
   component: IconButton,
   argTypes: {
     variant: {
-      options: Variants,
+      options: VariantsEnum,
       control: { type: "select" },
     },
     size: {
@@ -20,7 +20,7 @@ export default {
 const Template: ComponentStory<typeof IconButton> = (args) => <IconButton {...args} />;
 
 const PrimaryArgs = {
-  variant: Variants.Primary,
+  variant: VariantsEnum.Primary,
   size: Sizes.Medium,
   children: "Primary Button",
   disabled: false,
@@ -34,19 +34,19 @@ export const Secondary = Template.bind({});
 Secondary.args = {
   ...PrimaryArgs,
   children: "Secondary Button",
-  variant: Variants.Secondary,
+  variant: VariantsEnum.Secondary,
 };
 
 export const Neutral = Template.bind({});
 Neutral.args = {
   ...PrimaryArgs,
   children: "Neutral Button",
-  variant: Variants.Neutral,
+  variant: VariantsEnum.Neutral,
 };
 
 export const Text = Template.bind({});
 Text.args = {
   ...PrimaryArgs,
   children: "Text Button",
-  variant: Variants.Text,
+  variant: VariantsEnum.Text,
 };

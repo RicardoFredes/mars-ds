@@ -1,6 +1,6 @@
-import { MouseEvent, useState } from "react";
+import { useState, MouseEvent } from "react";
 import type { ButtonProps } from "./button.types";
-import { Variants, Sizes } from "@/types";
+import { Sizes, VariantsEnum } from "@/types";
 
 import classNames from "classnames";
 import Link from "../Link/link.component";
@@ -12,7 +12,7 @@ const Button = ({
   label,
   onClick,
   type = "button",
-  variant = Variants.Primary,
+  variant = VariantsEnum.Primary,
   size = Sizes.Medium,
   ...props
 }: ButtonProps) => {

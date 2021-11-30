@@ -3,6 +3,7 @@ import type { ButtonProps } from "./button.types";
 import { Variants, Sizes } from "@/types";
 
 import classNames from "classnames";
+import Link from "../Link/link.component";
 
 const Button = ({
   as,
@@ -19,7 +20,7 @@ const Button = ({
 
   // TODO: Change link type when we have a proper link (with Next.js support) component
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const ButtonTag: any = as || props.href ? "a" : "button";
+  const Component: any = as || props.href ? Link : "button";
   const handleClick = (event: MouseEvent<HTMLButtonElement | HTMLLinkElement>) => {
     if (props.disabled) return;
     setIsPressed(true);
@@ -36,9 +37,9 @@ const Button = ({
   );
 
   return (
-    <ButtonTag className={cn} onClick={handleClick} type={type} {...props}>
+    <Component className={cn} onClick={handleClick} type={type} {...props}>
       {label || children}
-    </ButtonTag>
+    </Component>
   );
 };
 

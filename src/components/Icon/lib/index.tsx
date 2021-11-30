@@ -2,6 +2,7 @@ import type { IconLibProps } from "@/components/Icon/icon.types";
 
 import apple from "./apple";
 import alertCircle from "./alert-circle";
+import alert from "./alert";
 import arrowBack from "./arrow-back";
 import attach2 from "./attach-2";
 import bankSlip from "./bank-slip";
@@ -10,6 +11,7 @@ import checkmarkSquare2 from "./checkmark-square-2";
 import chevronLeft from "./chevron-left";
 import chevronRight from "./chevron-right";
 import chevronUp from "./chevron-up";
+import clock from "./clock";
 import copy from "./copy";
 import close from "./close";
 import creditCard from "./credit-card";
@@ -33,6 +35,8 @@ import moreHorizontal from "./more-horizontal";
 import pix from "./pix";
 import ppl from "./ppl";
 import print from "./print";
+import radioButtonOff from "./radio-button-off";
+import radioButtonOn from "./radio-button-on";
 import tri from "./tri";
 import info from "./info";
 import layers from "./layers";
@@ -51,6 +55,7 @@ const icons: {
 } = {
   apple,
   "alert-circle": alertCircle,
+  alert,
   "arrow-back": arrowBack,
   "attach-2": attach2,
   "bank-slip": bankSlip,
@@ -63,6 +68,7 @@ const icons: {
   "chevron-left": chevronLeft,
   "chevron-right": chevronRight,
   "chevron-up": chevronUp, 
+  clock,
   "done-all": doneAll,
   download,
   "eye-off": eyeOff,
@@ -86,6 +92,8 @@ const icons: {
   pix,
   ppl,
   print,
+  "radio-button-off": radioButtonOff,
+  "radio-button-on": radioButtonOn,
   search,
   shield,
   "shopping-cart": shoppingCart,

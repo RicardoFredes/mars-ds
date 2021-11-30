@@ -22,9 +22,11 @@
   "scripts": {
     "dev": "rollup -c -w",
     "build": "rollup -c",
+    "test": "echo test",
     "storybook": "yarn build && start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "lint": "eslint --cache --ext ts,tsx src"
+    "lint": "eslint --cache --ext ts,tsx src",
+    "lint:fix": "yarn lint -- --fix"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.1",

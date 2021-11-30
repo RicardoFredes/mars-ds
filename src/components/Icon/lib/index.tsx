@@ -6,6 +6,7 @@ import arrowBack from "./arrow-back";
 import attach2 from "./attach-2";
 import bankSlip from "./bank-slip";
 import checkmarkCircle from "./checkmark-circle";
+import checkmarkSquare2 from "./checkmark-square-2";
 import chevronLeft from "./chevron-left";
 import chevronRight from "./chevron-right";
 import chevronUp from "./chevron-up";
@@ -26,6 +27,7 @@ import google from "./google";
 import grid from"./grid";
 import mastercard from "./mastercard";
 import menu from "./menu";
+import minusSquare from "./minus-square";
 import mesalvaMini from "./me-salva-mini";
 import moreHorizontal from "./more-horizontal";
 import pix from "./pix";
@@ -33,8 +35,14 @@ import ppl from "./ppl";
 import print from "./print";
 import tri from "./tri";
 import info from "./info";
+import layers from "./layers";
+import list from "./list";
 import search from "./search";
 import shield from "./shield";
+import shoppingCart from "./shopping-cart";
+import square from "./square";
+import star from "./star";
+import video from "./video";
 import visa from "./visa";
 import chevronDown from "./chevron-down";
 
@@ -47,6 +55,7 @@ const icons: {
   "attach-2": attach2,
   bankSlip,
   "checkmark-circle": checkmarkCircle,
+  "checkmark-square-2": checkmarkSquare2,
   copy,
   close,
   "credit-card": creditCard,
@@ -67,8 +76,11 @@ const icons: {
   google,
   grid,
   info,
+  layers,
+  list,
   mastercard,
   menu,
+  "minus-square": minusSquare,
   "me-salva-mini": mesalvaMini,
   "more-horizontal": moreHorizontal,
   pix,
@@ -76,7 +88,11 @@ const icons: {
   print,
   search,
   shield,
+  "shopping-cart": shoppingCart,
+  square,
+  star,
   tri,
+  video,
   visa,
 };
 

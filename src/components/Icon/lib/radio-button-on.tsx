@@ -17,8 +17,6 @@ const IconRadioButtonOn = ({ height = 24, width = 24 }: IconLibProps) => {
       />
 
       <path
-        fillRule="evenodd"
-        clipRule="evenodd"
         d="M12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7V7Z"
         fill="currentColor"
       />

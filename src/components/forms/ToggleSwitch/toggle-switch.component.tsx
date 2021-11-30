@@ -20,8 +20,8 @@ const ToggleSwitch = ({
   ]);
 
   const handleChange = () => {
-    if (!disabled) setChecked(!checked)
-  }
+    if (!disabled) setChecked(!checked);
+  };
 
   return (
     <div className={cn} {...props}>

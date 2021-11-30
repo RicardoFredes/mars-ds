@@ -18,6 +18,9 @@ module.exports = {
     "plugin:react-hooks/recommended",
     "plugin:prettier/recommended",
   ],
+  rules: {
+    "linebreak-style": 0,
+  },
   settings: {
     react: {
       version: "detect",

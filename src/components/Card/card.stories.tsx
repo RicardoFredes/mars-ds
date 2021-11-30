@@ -1,6 +1,6 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import { Elevations } from "@/types";
+import { ElevationEnum } from "@/types";
 import Card from "./card.component";
 import Text from "../typographic/Text/text.component";
 import Heading from "../typographic/Heading/heading.component";
@@ -12,7 +12,7 @@ export default {
   argTypes: {
     elevation: {
       // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-      options: { Default: undefined, ...Elevations },
+      options: { Default: undefined, ...ElevationEnum },
       control: { type: "select" },
     },
   },
@@ -42,18 +42,18 @@ Default.args = {
 
 export const Low = Template.bind({});
 Low.args = {
-  elevation: Elevations.Low,
+  elevation: ElevationEnum.Low,
   title: "Card with low elevation",
 };
 
 export const Medium = Template.bind({});
 Medium.args = {
-  elevation: Elevations.Medium,
+  elevation: ElevationEnum.Medium,
   title: "Card with medium elevation",
 };
 
 export const High = Template.bind({});
 High.args = {
-  elevation: Elevations.High,
+  elevation: ElevationEnum.High,
   title: "Card with high elevation",
 };

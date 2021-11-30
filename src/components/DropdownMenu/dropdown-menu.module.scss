@@ -1,0 +1,23 @@
+.dropdown-menu {
+  &.card {
+    padding: 8px 0;
+    max-height: 65vh;
+    min-height: calc((2 * 48px) + 16px);
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    color: $color-text-color-text-primary;
+    padding: 16px;
+    height: 48px;
+    cursor: pointer;
+    &:hover {
+      background-color: $color-transparent-grey-12;
+    }
+  }
+  &__icon {
+    margin-right: 16px;
+  }
+}

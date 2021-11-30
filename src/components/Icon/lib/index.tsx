@@ -53,7 +53,7 @@ const icons: {
   "alert-circle": alertCircle,
   "arrow-back": arrowBack,
   "attach-2": attach2,
-  bankSlip,
+  "bank-slip": bankSlip,
   "checkmark-circle": checkmarkCircle,
   "checkmark-square-2": checkmarkSquare2,
   copy,

@@ -16,7 +16,7 @@ const IconDownload = ({ height = 24, width = 24 }: IconLibProps) => {
       width="16" 
       height="2" 
       rx="1" 
-      fill="#212B36"
+      fill="currentColor"
     />
 
     <rect 
@@ -26,7 +26,7 @@ const IconDownload = ({ height = 24, width = 24 }: IconLibProps) => {
       height="2" 
       rx="1" 
       transform="rotate(-90 4 20)" 
-      fill="#212B36"
+      fill="currentColor"
     />
 
     <rect 
@@ -36,7 +36,7 @@ const IconDownload = ({ height = 24, width = 24 }: IconLibProps) => {
       height="2" 
       rx="1" 
       transform="rotate(-90 18 20)" 
-      fill="#212B36"
+      fill="currentColor"
     />
 
       <path

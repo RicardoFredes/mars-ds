@@ -1,0 +1,62 @@
+.stepper {
+  display: flex;
+  align-items: center;
+  .steps {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 42px;
+    gap: $spacing-sm;
+
+    &__separator {
+      width: 64px;
+      height: 1px;
+      background: $color-divider;
+      margin: 0 8px;
+      margin-top: -30px;
+    }
+
+    &__index {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 24px;
+      height: 24px;
+
+      border: 2px solid $color-primary-main;
+      border-radius: 50%;
+      background: $color-common-white;
+
+      &--is-active {
+        color: $color-primary-main;
+        font-weight: 500;
+      }
+
+      &--is-inactive {
+        background: $color-text-color-text-disabled;
+        color: $color-common-white;
+        border: 0;
+      }
+      &--is-done {
+        background: none;
+        border: none;
+        color: $color-primary-main;
+
+        .icon {
+          transform: scale(120%);
+        }
+      }
+    }
+
+    &__step {
+      color: $color-text-color-text-disabled;
+
+      &--is-active {
+        color: $color-text-color-text-primary;
+        font-weight: bold;
+      }
+    }
+  }
+}

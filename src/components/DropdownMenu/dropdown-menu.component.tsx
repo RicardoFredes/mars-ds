@@ -4,7 +4,7 @@ import classNames from "classnames";
 import Card from "../Card/card.component";
 import DropdownMenuItem from "./dropdown-menu-item.component";
 
-const DropdownMenu = ({ className, list = [], ...props }: DropdownMenuProps) => {
+const DropdownMenu = ({ className, list = [], children, ...props }: DropdownMenuProps) => {
   const cn = classNames("dropdown-menu", className);
   return (
     <Card className={cn} elevation={Elevations.High} {...props}>
@@ -13,6 +13,7 @@ const DropdownMenu = ({ className, list = [], ...props }: DropdownMenuProps) => 
           {label || children}
         </DropdownMenuItem>
       ))}
+      {children}
     </Card>
   );
 };

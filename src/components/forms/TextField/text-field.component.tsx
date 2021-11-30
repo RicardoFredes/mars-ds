@@ -27,6 +27,7 @@ const TextField = ({
   rightIconButton,
   leftIconButton,
   value = "",
+  dataKey,
   ...props
 }: TextFieldProps) => {
   const [computedId] = useState(id || name || generateHash("field"));
@@ -45,7 +46,7 @@ const TextField = ({
 
   useEffect(() => {
     setValue(value);
-  }, [setValue, value]);
+  }, [setValue, value, dataKey]);
 
   const isFilled = computedValue.length > 0;
   const isSuccess = isFilled && !error && success;
@@ -88,6 +89,7 @@ const TextField = ({
             <IconButtonPosition position={IconPosition.Left} {...leftIconButton} />
           )}
           <input
+            {...props}
             id={computedId}
             className="field__input"
             type={type}
@@ -95,7 +97,6 @@ const TextField = ({
             onFocus={handleFocus}
             onChange={handleChange}
             disabled={disabled}
-            {...props}
             value={computedValue}
           />
           {statusIconName && <IconButtonPosition name={statusIconName} />}

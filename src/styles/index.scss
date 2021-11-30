@@ -4,9 +4,16 @@
 
 @import "../components/Button/button.module.scss";
 @import "../components/Card/card.module.scss";
+@import "../components/DropdownMenu/dropdown-menu.module.scss";
 @import "../components/Icon/icon.module.scss";
 @import "../components/IconButton/icon-button.module.scss";
-@import "../forms/TextField/text-field.module.scss";
+@import "../components/Label/label.module.scss";
 @import "../components/ToggleButton/toggle-button.module.scss";
-@import "../components/Heading/heading.module.scss";
-@import "../components/Text/text.module.scss";
+
+@import "../components/forms/TextField/text-field.module.scss";
+@import "../components/forms/ToggleSwitch/toggle-switch.module.scss";
+
+@import "../components/typographic/Caption/caption.module.scss";
+@import "../components/typographic/Heading/heading.module.scss";
+@import "../components/typographic/Text/text.module.scss";
+@import "../components/typographic/Subtitle/subtitle.module.scss";

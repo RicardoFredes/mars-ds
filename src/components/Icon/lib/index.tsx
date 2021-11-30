@@ -19,6 +19,7 @@ import tri from "./tri";
 import info from "./info";
 import shield from "./shield";
 import visa from "./visa";
+import chevronDown from "./chevron-down";
 
 const icons: {
   [key: string]: (props: IconLibProps) => JSX.Element;
@@ -29,6 +30,7 @@ const icons: {
   "checkmark-circle": checkmarkCircle,
   copy,
   "credit-card": creditCard,
+  "chevron-down": chevronDown,
   "eye-off": eyeOff,
   eye,
   facebook,

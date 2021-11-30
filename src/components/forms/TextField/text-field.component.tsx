@@ -1,13 +1,14 @@
-import type { IconProps } from "@/components/Icon/icon.types";
 import type { FocusEvent, FormEvent } from "react";
-import type { TextFieldProps } from "./text-field.types";
+import type { IconProps } from "../../Icon/icon.types";
+import { IconPosition, TextFieldProps } from "./text-field.types";
 
 import { useCallback, useEffect, useState } from "react";
 import classNames from "classnames";
 
-import Icon from "@/components/Icon/icon.component";
 import { generateHash } from "@/services/hash";
 import { masker } from "@/services/masker";
+
+import TextFieldIconButton from "../common/text-field-icon-button.component";
 
 const TextField = ({
   className,
@@ -28,8 +29,7 @@ const TextField = ({
   value = "",
   ...props
 }: TextFieldProps) => {
-  if (!id) id = name || generateHash("field");
-
+  const [computedId] = useState(id || name || generateHash("field"));
   const [isFocused, setIsFocused] = useState(false);
   const [computedValue, setComputedValue] = useState("");
 
@@ -77,19 +77,18 @@ const TextField = ({
   };
 
   const labelText = error ? `${label}*` : label;
+  const helpText = error || info;
+  const statusIconName = error ? "alert-circle" : isSuccess ? "checkmark-circle" : undefined;
 
   return (
     <div className={cn}>
       <fieldset className="field__fieldset">
         <div className="field__content">
           {leftIconButton && (
-            <TextFieldIconButton
-              classNameField="field__icon field__icon-left"
-              {...leftIconButton}
-            />
+            <IconButtonPosition position={IconPosition.Left} {...leftIconButton} />
           )}
           <input
-            id={id}
+            id={computedId}
             className="field__input"
             type={type}
             onBlur={handleBlur}
@@ -99,43 +98,29 @@ const TextField = ({
             {...props}
             value={computedValue}
           />
-          {rightIconButton && (
-            <TextFieldIconButton
-              classNameField="field__icon field__icon-right"
-              {...rightIconButton}
-            />
-          )}
-          {error && (
-            <TextFieldIconButton
-              classNameField="field__icon field__icon-right"
-              name="alert-circle"
-            />
-          )}
-          {isSuccess && (
-            <TextFieldIconButton
-              classNameField="field__icon field__icon-right"
-              name="checkmark-circle"
-            />
-          )}
+          {statusIconName && <IconButtonPosition name={statusIconName} />}
+          {rightIconButton && <IconButtonPosition {...rightIconButton} />}
         </div>
-        <label htmlFor={id} className="field__label">
+        <label htmlFor={computedId} className="field__label">
           {labelText}
         </label>
         <legend className="field__legend">{labelText}</legend>
       </fieldset>
-      {(error || info) && <div className="field__help">{error || info}</div>}
+      {helpText && <div className="field__help">{helpText}</div>}
     </div>
   );
 };
 
-const TextFieldIconButton = ({
-  classNameField,
-  className,
+const IconButtonPosition = ({
+  position = IconPosition.Right,
   name,
   ...props
-}: IconProps & { classNameField: string }) => {
-  const cn = classNames(classNameField, className);
-  return <Icon name={name} className={cn} {...props} />;
+}: {
+  position?: IconPosition;
+} & IconProps) => {
+  return (
+    <TextFieldIconButton className={`field__icon field__icon-${position}`} name={name} {...props} />
+  );
 };
 
 export default TextField;

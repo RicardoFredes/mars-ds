@@ -20,7 +20,7 @@ module.exports = {
   ],
   rules: [
     {
-      "prettier/prettier": [
+      "prettier/prettier": [ // Don't remove prettier rules, because it's fixes the windows end line
         "error",
         {
           endOfLine: "auto",

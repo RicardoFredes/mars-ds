@@ -4,6 +4,7 @@ import type { CaptionProps } from "./caption.types";
 const Caption = ({ as, children, className, ...props }: CaptionProps) => {
   const SubtitleTag = as || "caption";
   const cn = classNames("caption", className);
+
   return (
     <SubtitleTag className={cn} {...props}>
       {children}

@@ -14,5 +14,5 @@ Default.args = {
   label: "Ativar as notificações de redações",
   defaultChecked: true,
   disabled: false,
-  id: "toggle-switch"
+  id: "toggle-switch",
 };

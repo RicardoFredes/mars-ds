@@ -18,16 +18,6 @@ module.exports = {
     "plugin:react-hooks/recommended",
     "plugin:prettier/recommended",
   ],
-  rules: [
-    {
-      "prettier/prettier": [ // Don't remove prettier rules, because it's fixes the windows end line
-        "error",
-        {
-          endOfLine: "auto",
-        },
-      ],
-    },
-  ],
   settings: {
     react: {
       version: "detect",

@@ -24,4 +24,3 @@ export const WithScroll = Template.bind({});
 WithScroll.args = {
   list: Array(10).fill({ label: "Item de Menu" }),
 };
-

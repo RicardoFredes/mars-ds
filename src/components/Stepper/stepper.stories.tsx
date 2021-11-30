@@ -17,8 +17,8 @@ export default {
 const Template: ComponentStory<typeof Stepper> = (args) => <Stepper {...args} />;
 
 const DefaultArgs = {
-  steps: ["Inicio", "Meio", "Fim"],
-  position: 1,
+  steps: ["Identificação", "Adicionais", "Pagamento", "Endereço", "Resumo"],
+  position: 2,
 };
 
 export const Default = Template.bind({});

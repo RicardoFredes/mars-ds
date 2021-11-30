@@ -10,7 +10,7 @@ const Subtitle = ({
   ...props
 }: SubtitleProps) => {
   const SubtitleTag = as || `h${level}`;
-  const cn = classNames("subtitle", `subtitle--size-${size}`, classNames);
+  const cn = classNames("subtitle", `subtitle--size-${size}`, className);
   return (
     <SubtitleTag className={cn} {...props}>
       {children}

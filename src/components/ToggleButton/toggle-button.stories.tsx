@@ -1,5 +1,5 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import { Sizes } from "@/types";
+import { SizesEnum } from "@/types";
 import icons from "../Icon/lib";
 import ToggleButton from "./toggle-button.component";
 
@@ -8,7 +8,7 @@ export default {
   component: ToggleButton,
   argTypes: {
     size: {
-      options: Sizes,
+      options: SizesEnum,
       control: { type: "select" },
     },
     iconName: {
@@ -22,7 +22,7 @@ const Template: ComponentStory<typeof ToggleButton> = (args) => <ToggleButton {.
 
 const DefaultArgs = {
   iconName: "me-salva-mini",
-  size: Sizes.Medium,
+  size: SizesEnum.Medium,
 };
 
 export const Default = Template.bind({});
@@ -31,5 +31,5 @@ Default.args = DefaultArgs;
 export const Small = Template.bind({});
 Small.args = {
   ...DefaultArgs,
-  size: Sizes.Small,
+  size: SizesEnum.Small,
 };

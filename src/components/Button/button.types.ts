@@ -1,5 +1,4 @@
-import type { Variants } from "@/types";
-import type { Sizes } from "@/types";
+import type { Sizes, Variants } from "@/types";
 
 export interface ButtonProps
   extends Omit<React.HTMLProps<HTMLButtonElement | HTMLLinkElement>, "as" | "size"> {

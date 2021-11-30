@@ -1,6 +1,6 @@
 "use strict";
-
 /** @type {import("eslint").Linter.Config} */
+
 module.exports = {
   root: true,
   env: {
@@ -17,6 +17,7 @@ module.exports = {
     "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
     "plugin:prettier/recommended",
+    "plugin:storybook/recommended",
   ],
   settings: {
     react: {

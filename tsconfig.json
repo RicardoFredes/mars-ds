@@ -31,12 +31,19 @@
     "sourceMap": true,                                       /* Create source map files for emitted JavaScript files. */
     "declarationDir": "./dist/types",                        /* Specify the output directory for generated declaration files. */
     "importHelpers": true,                                   /* Allow importing helper functions from tslib once per project, instead of including them per-file. */
-    "importsNotUsedAsValues": "error",                       /* Specify emit/checking behavior for imports that are only used for types */
     "mapRoot": "./dist",                                     /* Specify the location where debugger should locate map files instead of generated locations. */
     "sourceRoot": "./src",                                   /* Specify the root path for debuggers to find the reference source code. */
 
     /* JavaScript Support */
     "allowJs": true,                                         /* Allow JavaScript files to be a part of your program. Use the `checkJS` option to get errors from these files. */
+
+    /* Editor Support */
+    "plugins": [                                             /* List of language service plugins to run inside the editor. */
+      {
+        "transform": "@zerollup/ts-transform-paths",
+        "exclude": ["*"]
+      }
+    ],
 
     /* Interop Constraints */
     "esModuleInterop": true,                                 /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility. */
@@ -46,7 +53,7 @@
     /* Language and Environment */
     "jsx": "react-jsx",                                      /* Specify what JSX code is generated. */
     "lib": ["ESNext", "DOM", "DOM.Iterable"],                /* Specify a set of bundled library declaration files that describe the target runtime environment. */
-    "target": "ESNext",                                      /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    "target": "ES6",                                         /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
 
     /* Completeness */
     "skipLibCheck": true                                     /* Skip type checking all .d.ts files. */

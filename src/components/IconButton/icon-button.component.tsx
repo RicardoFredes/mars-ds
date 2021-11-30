@@ -2,10 +2,10 @@ import type { IconButtonProps } from "./icon-button.types";
 import classNames from "classnames";
 import Button from "../Button/button.component";
 import Icon from "../Icon/icon.component";
-import { Sizes } from "@/types";
+import { SizesEnum } from "@/types";
 
 const IconButton = ({ iconName, className, children, label, ...props }: IconButtonProps) => {
-  if (!props.size || props.size === Sizes.Large) props.size = Sizes.Medium;
+  if (!props.size || props.size === SizesEnum.Large) props.size = SizesEnum.Medium;
   const cn = classNames("icon-btn", className);
   return (
     <Button className={cn} {...props}>

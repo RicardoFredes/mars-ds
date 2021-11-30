@@ -18,24 +18,24 @@ const Stepper = ({ steps, position = 0 }: StepperProps) => {
               <Subtitle
                 as="span"
                 size="s"
-                className={classNames("steps--index", {
-                  "steps--index--is-active": isActive,
-                  "steps--index--is-inactive": isInactive,
-                  "steps--index--is-done": isDone,
+                className={classNames("steps__index", {
+                  "steps__index--is-active": isActive,
+                  "steps__index--is-inactive": isInactive,
+                  "steps__index--is-done": isDone,
                 })}
               >
                 {!isDone ? index + 1 : <Icon name="checkmark-circle" />}
               </Subtitle>
               <Text
-                className={classNames("steps--step", {
-                  "steps--step--is-active": isActive,
-                  "steps--step--is-inactive": isInactive,
+                className={classNames("steps__step", {
+                  "steps__step--is-active": isActive,
+                  "steps__step--is-inactive": isInactive,
                 })}
               >
                 {step}
               </Text>
             </div>
-            {index < steps.length - 1 && <span className="steps--separator"></span>}
+            {index < steps.length - 1 && <span className="steps__separator"></span>}
           </>
         );
       })}

@@ -31,6 +31,23 @@
     padding: $spacing-xs;
     &--has-action {
       cursor: pointer;
+      position: relative;
+      &:before {
+        content: "";
+        display: block;
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+        position: absolute;
+        background-color: $color-transparent-grey-8;
+        z-index: -1;
+        left: -4px;
+        transform: scale(0);
+        transition: transform ease 0.2s;
+      }
+      &:hover:before {
+        transform: scale(1);
+      }
     }
   }
   &__legend {

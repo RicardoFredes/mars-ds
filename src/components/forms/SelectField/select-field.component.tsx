@@ -12,6 +12,7 @@ import { generateHash } from "@/services/hash";
 import { mathQuery } from "@/services/compare";
 
 const emptyOption: SelectFieldOption = { label: "", value: undefined };
+const ITEM_CLASS_NAME = "select-field__options-item";
 
 const SelectField = ({
   options = [],
@@ -19,6 +20,7 @@ const SelectField = ({
   onClick,
   className,
   onSelect,
+  enableFilter = false,
   ...props
 }: SelectFieldProps) => {
   const [key, setKey] = useState(generateHash("key"));
@@ -27,16 +29,110 @@ const SelectField = ({
   const [query, setQuery] = useState("");
 
   const selectFieldRef = useRef(null);
+  const inputDisabled = !enableFilter;
+
+  const getInputElement = () => {
+    if (!selectFieldRef.current) return null;
+    return (selectFieldRef.current as HTMLDivElement)?.querySelector("input");
+  };
+
+  const addEventListener = () => {
+    window.addEventListener("click", close);
+    window.addEventListener("touchstart", close);
+    window.addEventListener("keydown", handleKeyDown);
+  };
+
+  const removeEventListener = () => {
+    window.removeEventListener("click", close);
+    window.removeEventListener("touchstart", close);
+    window.removeEventListener("keydown", handleKeyDown);
+  };
 
   const close = () => {
-    window.removeEventListener("click", close);
+    removeEventListener();
     setIsOpen(false);
     setQuery("");
     setKey(generateHash("key"));
   };
+
   const open = () => {
-    window.addEventListener("click", close);
+    if (isOpen) return;
+    addEventListener();
     setIsOpen(true);
+  };
+
+  const getElementOptionItems = () => {
+    const emptyResponse = {
+      elements: [],
+      activeElement: null,
+    };
+    if (!selectFieldRef.current) return emptyResponse;
+    const containerElement = selectFieldRef.current as HTMLDivElement;
+    if (!containerElement) return emptyResponse;
+    return {
+      elements: containerElement.querySelectorAll(`.${ITEM_CLASS_NAME}`),
+      activeElement: containerElement.querySelector(`.${ITEM_CLASS_NAME}:focus`),
+    };
+  };
+
+  const focusElement = ({ isDown = false, toLimit = false }) => {
+    const { elements, activeElement } = getElementOptionItems();
+
+    if (toLimit) {
+      const newPosition = isDown ? elements.length - 1 : 0;
+      (elements[newPosition] as HTMLElement).focus();
+      return;
+    }
+
+    let position = -1;
+    if (activeElement) {
+      for (const index in elements) {
+        if (elements[index] === activeElement) {
+          position = Number(index);
+          break;
+        }
+      }
+    }
+
+    isDown ? position++ : position--;
+    if (position >= elements.length) return;
+
+    const itemElement = elements[position];
+    if (itemElement) (itemElement as HTMLElement).focus();
+  };
+
+  const setElementOption = () => {
+    const { activeElement } = getElementOptionItems();
+    if (!activeElement) return close();
+    const value = activeElement.getAttribute("aria-valuetext");
+    const option = options.find((option) => option.value == value);
+    if (option) return handleSetOption(option);
+    return close();
+  };
+
+  const handleKeyDown = (event: KeyboardEvent) => {
+    const isOutsideInput = event.target !== getInputElement();
+    if (isOutsideInput || event.key === "Tab") event.preventDefault();
+    switch (event.key) {
+      case "Escape":
+        return close();
+      case "ArrowDown":
+        return focusElement({ isDown: true });
+      case "ArrowUp":
+        return focusElement({ isDown: false });
+      case "Tab":
+        return focusElement({ isDown: !event.shiftKey });
+      case "Enter":
+        return setElementOption();
+      case "Home":
+        if (isOutsideInput) return focusElement({ isDown: false, toLimit: true });
+        return;
+      case "End":
+        if (isOutsideInput) return focusElement({ isDown: true, toLimit: true });
+        return;
+      default:
+        return;
+    }
   };
 
   const handleClick = (event: MouseEvent<HTMLInputElement>) => {
@@ -55,22 +151,18 @@ const SelectField = ({
     close();
   };
 
-  const getInputElement = () => {
-    if (!selectFieldRef.current) return null;
-    const element = selectFieldRef.current as HTMLDivElement;
-    return element.querySelector("input") || null;
-  };
-
   const dropdownMenuList = options
     .map(({ label, value }) => ({
       label,
-      onClick: () => handleSetOption({ label, value }),
-      className: "select-field__options-item",
+      "onClick": () => handleSetOption({ label, value }),
+      "className": ITEM_CLASS_NAME,
+      "aria-valuetext": value,
     }))
     .filter(({ label }) => mathQuery(query, label));
 
   const rightIconButton = {
     name: "chevron-down",
+    className: "select-field__toggle-icon",
     onClick: () => {
       if (isOpen) return close();
       getInputElement()?.focus();
@@ -82,13 +174,18 @@ const SelectField = ({
     "select-field--is-open": isOpen,
   });
 
-  const handleClickToProtectArea = (e: MouseEvent<HTMLDivElement>) => e.stopPropagation();
+  const handleClickToProtectArea = (event: MouseEvent<HTMLDivElement>) => {
+    event.stopPropagation();
+    if (inputDisabled) open();
+  };
 
   return (
     <div className={cn} ref={selectFieldRef}>
       <div onClick={handleClickToProtectArea}>
         <TextField
           {...props}
+          className={classNames({ "field--is-focused": isOpen })}
+          inputDisabled={inputDisabled}
           dataKey={key}
           onClick={handleClick}
           onChange={handleChange}

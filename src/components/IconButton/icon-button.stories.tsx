@@ -3,7 +3,7 @@ import { SizesEnum, VariantsEnum } from "@/types";
 import IconButton from "./icon-button.component";
 
 export default {
-  title: "Components/IconButton",
+  title: "Components/Button/IconButton",
   component: IconButton,
   argTypes: {
     variant: {

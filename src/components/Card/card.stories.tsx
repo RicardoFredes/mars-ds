@@ -1,10 +1,11 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import { Elevations } from "@/types";
+import { ElevationEnum } from "@/types";
 import Card from "./card.component";
 import Text from "../typographic/Text/text.component";
 import Heading from "../typographic/Heading/heading.component";
 import { HeadingSizes } from "../typographic/Heading/heading.types";
+import type { CardProps } from "./card.types";
 
 export default {
   title: "Components/Card",
@@ -12,13 +13,13 @@ export default {
   argTypes: {
     elevation: {
       // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-      options: { Default: undefined, ...Elevations },
+      options: { Default: undefined, ...ElevationEnum },
       control: { type: "select" },
     },
   },
 } as ComponentMeta<typeof Card>;
 
-const Template: ComponentStory<typeof Card> = ({ title, ...args }) => (
+const Template: ComponentStory<typeof Card> = ({ title, ...args }: CardProps) => (
   <div style={{ padding: 50, background: "#f1f1f1" }}>
     <Card {...args}>
       <Heading size={HeadingSizes.Small}>{title}</Heading>
@@ -42,18 +43,18 @@ Default.args = {
 
 export const Low = Template.bind({});
 Low.args = {
-  elevation: Elevations.Low,
+  elevation: ElevationEnum.Low,
   title: "Card with low elevation",
 };
 
 export const Medium = Template.bind({});
 Medium.args = {
-  elevation: Elevations.Medium,
+  elevation: ElevationEnum.Medium,
   title: "Card with medium elevation",
 };
 
 export const High = Template.bind({});
 High.args = {
-  elevation: Elevations.High,
+  elevation: ElevationEnum.High,
   title: "Card with high elevation",
 };

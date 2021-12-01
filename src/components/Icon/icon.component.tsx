@@ -1,10 +1,10 @@
 import type { IconProps } from "./icon.types";
 
 import classNames from "classnames";
-import { Sizes } from "@/types";
+import { Sizes, SizesEnum } from "@/types";
 import icons from "./lib";
 
-const Icon = ({ name, size = Sizes.Medium, className, ...props }: IconProps) => {
+const Icon = ({ name, size = SizesEnum.Medium, className, ...props }: IconProps) => {
   const Component = icons[name];
   if (!Component) return null;
   const sizeValue = getSize(size);
@@ -18,11 +18,11 @@ const Icon = ({ name, size = Sizes.Medium, className, ...props }: IconProps) => 
 
 const getSize = (size: Sizes) => {
   switch (size) {
-    case Sizes.Large:
+    case SizesEnum.Large:
       return 32;
-    case Sizes.Small:
+    case SizesEnum.Small:
       return 16;
-    case Sizes.Medium:
+    case SizesEnum.Medium:
     default:
       return 24;
   }

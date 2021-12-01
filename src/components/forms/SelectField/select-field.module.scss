@@ -1,0 +1,23 @@
+.select-field {
+  position: relative;
+  &__options {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 56px;
+    &-fallback {
+      text-align: center;
+      padding: 16px;
+    }
+  }
+  &--is-open {
+    .select-field {
+      &__options {
+        display: block;
+      }
+      &__toggle-icon {
+        transform: scale(-1);
+      }
+    }
+  }
+}

@@ -12,6 +12,7 @@ import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import postcss from "rollup-plugin-postcss";
 import progress from "rollup-plugin-progress";
 import typescript from "rollup-plugin-typescript2";
+import ttypescript from "ttypescript";
 
 const packageJson = require("./package.json");
 const srcDir = path.resolve(__dirname, "src");
@@ -45,6 +46,7 @@ const options = {
     commonjs(),
     typescript({
       rollupCommonJSResolveHack: process.platform === "win32",
+      typescript: ttypescript,
     }),
     strip(),
     image(),

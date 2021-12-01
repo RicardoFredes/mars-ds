@@ -20,7 +20,7 @@ const SelectField = ({
   onClick,
   className,
   onSelect,
-  enableFilter = false,
+  enableFilter = true,
   ...props
 }: SelectFieldProps) => {
   const [key, setKey] = useState(generateHash("key"));

@@ -79,6 +79,8 @@ const SelectField = ({
     if (isOpen) handleSetIsAbove();
   }, [isOpen]);
 
+  useEffect(() => close, []);
+
   const getElementOptionItems = () => {
     const emptyResponse = {
       elements: [],

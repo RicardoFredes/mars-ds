@@ -133,6 +133,8 @@
           }
           &__icon {
             &--has-action {
+              color: $color-text-color-text-disabled;
+              pointer-events: none;
               cursor: inherit;
             }
           }

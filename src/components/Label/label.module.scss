@@ -2,7 +2,10 @@
   padding: 1px $spacing-sm;
   border-radius: $border-radius-xs;
   font-family: $font-family-main;
+  font-size: 0.75rem;
+  line-height: 1.7em;
   font-weight: 700;
+  display: inline-block;
 
   &--ghost {
     &-default {

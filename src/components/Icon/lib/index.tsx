@@ -7,7 +7,6 @@ import arrowBack from "./arrow-back";
 import attach2 from "./attach-2";
 import bankSlip from "./bank-slip";
 import checkmarkCircle from "./checkmark-circle";
-import checkmarkCircle2 from "./checkmark-circle-2";
 import checkmarkSquare2 from "./checkmark-square-2";
 import chevronLeft from "./chevron-left";
 import chevronRight from "./chevron-right";
@@ -50,6 +49,7 @@ import star from "./star";
 import video from "./video";
 import visa from "./visa";
 import chevronDown from "./chevron-down";
+import checkmark from "./checkmark";
 
 const icons: {
   [key: string]: (props: IconLibProps) => JSX.Element;
@@ -61,7 +61,7 @@ const icons: {
   "attach-2": attach2,
   "bank-slip": bankSlip,
   "checkmark-circle": checkmarkCircle,
-  "checkmark-circle-2": checkmarkCircle2,
+  checkmark,
   "checkmark-square-2": checkmarkSquare2,
   copy,
   close,

@@ -49,22 +49,27 @@ const SelectField = ({
   const addEventListener = () => {
     window.addEventListener("click", close);
     window.addEventListener("keydown", handleKeyDown);
+    window.addEventListener("popstate", close);
   };
 
   const removeEventListener = () => {
     window.removeEventListener("click", close);
     window.removeEventListener("keydown", handleKeyDown);
+    window.removeEventListener("popstate", close);
   };
 
   const close = () => {
+    if (isOpen) history.back();
     removeEventListener();
     setIsOpen(false);
     setQuery("");
     setKey(generateHash("key"));
+    getInputElement()?.blur();
   };
 
   const open = () => {
     if (isOpen) return;
+    window.history.pushState("select__field--is-openned", "select");
     addEventListener();
     setIsOpen(true);
   };

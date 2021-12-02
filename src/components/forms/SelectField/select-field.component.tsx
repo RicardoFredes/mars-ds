@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import type { SelectFieldOption, SelectFieldProps } from "./select-field.types";
 import classNames from "classnames";
-import { ChangeEvent, MouseEvent, useRef, useState } from "react";
+import { ChangeEvent, MouseEvent, useEffect, useRef, useState } from "react";
 
 import TextField from "../TextField/text-field.component";
 import DropdownMenu from "../../DropdownMenu/dropdown-menu.component";
@@ -23,8 +23,9 @@ const SelectField = ({
   enableFilter = true,
   ...props
 }: SelectFieldProps) => {
-  const [key, setKey] = useState(generateHash("key"));
+  const [isDropdownAbove, setIsDropdownAbove] = useState(false);
   const [option, setOption] = useState(defaultOption || emptyOption);
+  const [key, setKey] = useState(generateHash("key"));
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState("");
 
@@ -60,6 +61,23 @@ const SelectField = ({
     addEventListener();
     setIsOpen(true);
   };
+
+  const handleSetIsAbove = () => {
+    if (!selectFieldRef.current) return;
+    const containerBounding = (selectFieldRef.current as HTMLDivElement)
+      .querySelector(".select-field__options")
+      ?.getBoundingClientRect();
+    const containerHeight = containerBounding?.height || 0;
+    const containerTop = containerBounding?.top || 0;
+    const inputTop = getInputElement()?.getBoundingClientRect().top || 0;
+    const sum = containerHeight + inputTop;
+    const hasSpaceAbove = sum > window.innerHeight && containerTop > 0;
+    setIsDropdownAbove(hasSpaceAbove);
+  };
+
+  useEffect(() => {
+    if (isOpen) handleSetIsAbove();
+  }, [isOpen]);
 
   const getElementOptionItems = () => {
     const emptyResponse = {
@@ -170,9 +188,10 @@ const SelectField = ({
     },
   };
 
-  const cn = classNames("select-field", className, {
-    "select-field--is-open": isOpen,
-  });
+  const cn = classNames("select-field", className, [
+    { "select-field--is-open": isOpen },
+    { "select-field--is-dropdown-above": isDropdownAbove },
+  ]);
 
   const handleClickToProtectArea = (event: MouseEvent<HTMLDivElement>) => {
     event.stopPropagation();

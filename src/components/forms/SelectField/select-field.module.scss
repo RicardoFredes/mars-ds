@@ -4,10 +4,16 @@
     display: none;
     position: absolute;
     width: 100%;
-    top: 56px;
+    top: 64px;
     &-fallback {
       text-align: center;
       padding: 16px;
+    }
+  }
+  &--is-dropdown-above {
+    .select-field__options {
+      top: inherit;
+      bottom: 64px;
     }
   }
   &--is-open {

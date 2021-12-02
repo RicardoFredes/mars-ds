@@ -1,0 +1,37 @@
+.circleStepper {
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  width:52px;
+  height:52px;
+  
+  &__svg{
+    position:absolute;
+
+    &__innerCircle, &__outerCircle{
+      
+      stroke-width:5;
+      stroke-linecap: round;
+      fill:none;
+      stroke:$color-action-states-disabled-background;
+
+      transition: stroke-dashoffset ease 1s;
+    }
+
+    &__outerCircle {
+      stroke: $color-primary-main;
+      transform-origin: center;
+      transform: rotateZ(
+270deg);
+    }
+  }
+
+  &__number {
+    color:$color-primary-main;
+    font-family: $font-family-display;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.5em;
+  }
+}

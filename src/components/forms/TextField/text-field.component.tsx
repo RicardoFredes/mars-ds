@@ -28,6 +28,7 @@ const TextField = ({
   leftIconButton,
   value = "",
   dataKey,
+  inputDisabled,
   ...props
 }: TextFieldProps) => {
   const [computedId] = useState(id || name || generateHash("field"));
@@ -80,7 +81,6 @@ const TextField = ({
   const labelText = error ? `${label}*` : label;
   const helpText = error || info;
   const statusIconName = error ? "alert-circle" : isSuccess ? "checkmark-circle" : undefined;
-
   return (
     <div className={cn}>
       <fieldset className="field__fieldset">
@@ -96,7 +96,7 @@ const TextField = ({
             onBlur={handleBlur}
             onFocus={handleFocus}
             onChange={handleChange}
-            disabled={disabled}
+            disabled={inputDisabled || disabled}
             value={computedValue}
           />
           {statusIconName && <IconButtonPosition name={statusIconName} />}

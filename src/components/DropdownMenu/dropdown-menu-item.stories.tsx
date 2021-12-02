@@ -3,10 +3,14 @@ import icons from "../Icon/lib";
 import DropdownMenuItem from "./dropdown-menu-item.component";
 
 export default {
-  title: "Components/DropdownMenuItem",
+  title: "Components/DropdownMenu/DropdownMenuItem",
   component: DropdownMenuItem,
   argTypes: {
-    iconName: {
+    leftIconName: {
+      options: Object.keys(icons),
+      control: { type: "select" },
+    },
+    rightIconName: {
       options: Object.keys(icons),
       control: { type: "select" },
     },
@@ -20,8 +24,14 @@ Default.args = {
   children: "Item de Menu",
 };
 
-export const WithIcon = Template.bind({});
-WithIcon.args = {
+export const LeftIcon = Template.bind({});
+LeftIcon.args = {
   children: "Item de Menu",
-  iconName: "me-salva-mini",
+  leftIconName: "me-salva-mini",
+};
+
+export const RightIcon = Template.bind({});
+RightIcon.args = {
+  children: "Item de Menu",
+  rightIconName: "me-salva-mini",
 };

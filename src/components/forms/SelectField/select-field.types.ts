@@ -4,6 +4,7 @@ export interface SelectFieldProps extends Omit<TextFieldProps, "rightIconButton"
   options: SelectFieldOption[];
   defaultOption?: SelectFieldOption;
   onSelect?: (option: SelectFieldOption) => void;
+  enableFilter?: boolean;
 }
 
 export interface SelectFieldOption {

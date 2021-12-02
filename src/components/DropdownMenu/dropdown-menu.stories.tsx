@@ -15,12 +15,12 @@ Default.args = {
   list: Array(4).fill({ label: "Item de Menu" }),
 };
 
-export const WithIcon = Template.bind({});
-WithIcon.args = {
-  list: Array(4).fill({ label: "Item de Menu", iconName: "me-salva-mini" }),
+export const LeftIcon = Template.bind({});
+LeftIcon.args = {
+  list: Array(4).fill({ label: "Item de Menu", leftIconName: "me-salva-mini" }),
 };
 
-export const WithScroll = Template.bind({});
-WithScroll.args = {
+export const Scroller = Template.bind({});
+Scroller.args = {
   list: Array(10).fill({ label: "Item de Menu" }),
 };

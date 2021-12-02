@@ -1,19 +1,25 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 import SelectField from "./select-field.component";
+import { SelectFieldOption } from "./select-field.types";
 
 export default {
   title: "Form/SelectField",
   component: SelectField,
-  argTypes: {},
+  argTypes: {
+    defaultOption: {},
+  },
 } as ComponentMeta<typeof SelectField>;
 
 const Template: ComponentStory<typeof SelectField> = (args) => <SelectField {...args} />;
+
+const options = getCourses();
 
 export const Default = Template.bind({});
 Default.args = {
   label: "Modalidade de acesso",
   enableFilter: false,
   disabled: false,
+  onSelect: console.log,
   options: [
     { label: "Ampla Concorrência", value: 1 },
     { label: "Candidato Afrodescendente, Indígena ou Transsexual", value: 2 },
@@ -24,9 +30,19 @@ Default.args = {
 };
 
 export const Filter = Template.bind({});
-Filter.args = { disabled: false, enableFilter: true, options: getCourses(), label: "Cursos" };
+Filter.args = { disabled: false, enableFilter: true, options, label: "Cursos" };
 
-function getCourses() {
+export const OptionSected = Template.bind({});
+OptionSected.args = {
+  disabled: false,
+  enableFilter: true,
+  options,
+  label: "Cursos",
+  defaultOption: { label: "Design de Produto", value: 27 },
+  onSelect: console.log,
+};
+
+function getCourses(): SelectFieldOption[] {
   return [
     "Administração",
     "Administração Pública e Social",

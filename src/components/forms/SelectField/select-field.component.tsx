@@ -24,10 +24,19 @@ const SelectField = ({
   ...props
 }: SelectFieldProps) => {
   const [isDropdownAbove, setIsDropdownAbove] = useState(false);
-  const [option, setOption] = useState(defaultOption || emptyOption);
+  const [option, setOption] = useState(emptyOption);
   const [key, setKey] = useState(generateHash("key"));
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState("");
+
+  useEffect(() => {
+    if (defaultOption) {
+      const option = options.find(
+        ({ value, label }) => defaultOption.label === label && defaultOption.value === value
+      );
+      if (option) setOption(option);
+    }
+  }, [defaultOption, options]);
 
   const selectFieldRef = useRef(null);
   const inputDisabled = !enableFilter;

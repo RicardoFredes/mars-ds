@@ -39,13 +39,11 @@ const SelectField = ({
 
   const addEventListener = () => {
     window.addEventListener("click", close);
-    window.addEventListener("touchstart", close);
     window.addEventListener("keydown", handleKeyDown);
   };
 
   const removeEventListener = () => {
     window.removeEventListener("click", close);
-    window.removeEventListener("touchstart", close);
     window.removeEventListener("keydown", handleKeyDown);
   };
 
@@ -216,7 +214,11 @@ const SelectField = ({
         />
       </div>
       {isOpen && (
-        <DropdownMenu list={dropdownMenuList} className="select-field__options">
+        <DropdownMenu
+          list={dropdownMenuList}
+          className="select-field__options"
+          onClick={(event) => event.stopPropagation()}
+        >
           {dropdownMenuList.length === 0 && (
             <Text className="select-field__options-fallback">Nenhum item encontrado</Text>
           )}

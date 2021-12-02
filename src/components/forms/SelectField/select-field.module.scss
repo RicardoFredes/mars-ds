@@ -41,5 +41,26 @@
         transform: scale(-1);
       }
     }
+    &.select-field--has-filter {
+      @media (max-width: 959px) {
+        .select-field__options {
+          top: calc(72px + 8px);
+          .dropdown-menu.card {
+            height: calc(100vh - 16px - 72px);
+          }
+        }
+        .field__content {
+          position: fixed;
+          height: 72px;
+          width: 100vw;
+          padding: 0 16px;
+          z-index: 101;
+          top: 0;
+          left: 0;
+          background-color: $color-background-default;
+          box-shadow: $shadow-high;
+        }
+      }
+    }
   }
 }

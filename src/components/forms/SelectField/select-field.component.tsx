@@ -193,6 +193,7 @@ const SelectField = ({
   const cn = classNames("select-field", className, [
     { "select-field--is-open": isOpen },
     { "select-field--is-dropdown-above": isDropdownAbove },
+    { "select-field--has-filter": enableFilter },
   ]);
 
   const handleClickToProtectArea = (event: MouseEvent<HTMLDivElement>) => {

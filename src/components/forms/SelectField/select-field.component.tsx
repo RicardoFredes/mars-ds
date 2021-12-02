@@ -128,29 +128,24 @@ const SelectField = ({
     return close();
   };
 
+  const isOutsideInput = (element: HTMLElement) => {
+    const inputId = getInputElement()?.id;
+    return inputId !== element.id;
+  };
+
   const handleKeyDown = (event: KeyboardEvent) => {
-    const isOutsideInput = event.target !== getInputElement();
-    if (isOutsideInput || event.key === "Tab") event.preventDefault();
-    switch (event.key) {
-      case "Escape":
-        return close();
-      case "ArrowDown":
-        return focusElement({ isDown: true });
-      case "ArrowUp":
-        return focusElement({ isDown: false });
-      case "Tab":
-        return focusElement({ isDown: !event.shiftKey });
-      case "Enter":
-        return setElementOption();
-      case "Home":
-        if (isOutsideInput) return focusElement({ isDown: false, toLimit: true });
-        return;
-      case "End":
-        if (isOutsideInput) return focusElement({ isDown: true, toLimit: true });
-        return;
-      default:
-        return;
-    }
+    const isOutside = isOutsideInput(event.target as HTMLElement);
+    if (isOutside || event.key === "Tab") event.preventDefault();
+    const actions: Record<string, () => void> = {
+      Escape: close,
+      ArrowDown: () => focusElement({ isDown: true }),
+      ArrowUp: () => focusElement({ isDown: false }),
+      Tab: () => focusElement({ isDown: !event.shiftKey }),
+      Enter: setElementOption,
+      Home: () => isOutside && focusElement({ isDown: false, toLimit: true }),
+      End: () => isOutside && focusElement({ isDown: true, toLimit: true }),
+    };
+    actions[event.key]?.();
   };
 
   const handleClick = (event: MouseEvent<HTMLInputElement>) => {

@@ -1,6 +1,6 @@
 import type { IconLibProps } from "../icon.types";
 
-const IconAttach2 = ({ height = 24, width = 24 }: IconLibProps) => {
+const IconAttach = ({ height = 24, width = 24 }: IconLibProps) => {
   return (
     <svg
       width={width}
@@ -17,4 +17,4 @@ const IconAttach2 = ({ height = 24, width = 24 }: IconLibProps) => {
   );
 };
 
-export default IconAttach2;
+export default IconAttach;

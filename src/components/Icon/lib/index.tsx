@@ -4,7 +4,7 @@ import apple from "./apple";
 import alertCircle from "./alert-circle";
 import alert from "./alert";
 import arrowBack from "./arrow-back";
-import attach2 from "./attach-2";
+import attach from "./attach";
 import bankSlip from "./bank-slip";
 import checkmarkCircle from "./checkmark-circle";
 import checkmarkSquare2 from "./checkmark-square-2";
@@ -58,7 +58,7 @@ const icons: {
   "alert-circle": alertCircle,
   alert,
   "arrow-back": arrowBack,
-  "attach-2": attach2,
+  "attach": attach,
   "bank-slip": bankSlip,
   "checkmark-circle": checkmarkCircle,
   checkmark,

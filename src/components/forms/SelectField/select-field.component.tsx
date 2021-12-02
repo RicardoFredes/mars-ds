@@ -179,12 +179,18 @@ const SelectField = ({
   };
 
   const dropdownMenuList = options
-    .map(({ label, value }) => ({
-      label,
-      "onClick": () => handleSetOption({ label, value }),
-      "className": ITEM_CLASS_NAME,
-      "aria-valuetext": value,
-    }))
+    .map(({ label, value }) => {
+      const isSelected = value === option.value;
+      return {
+        label,
+        "rightIconName": isSelected ? "checkmark" : "",
+        "onClick": () => handleSetOption({ label, value }),
+        "className": classNames(ITEM_CLASS_NAME, {
+          [`${ITEM_CLASS_NAME}--is-selected`]: isSelected,
+        }),
+        "aria-valuetext": value,
+      };
+    })
     .filter(({ label }) => mathQuery(query, label));
 
   const rightIconButton = {

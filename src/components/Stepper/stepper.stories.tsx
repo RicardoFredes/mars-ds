@@ -8,7 +8,7 @@ export default {
     steps: {
       control: { type: "input" },
     },
-    currentPosition: {
+    position: {
       control: { type: "number" },
     },
   },
@@ -18,7 +18,7 @@ const Template: ComponentStory<typeof Stepper> = (args) => <Stepper {...args} />
 
 const DefaultArgs = {
   steps: ["Identificação", "Adicionais", "Pagamento", "Endereço", "Resumo"],
-  currentPosition: 3,
+  position: 3,
 };
 
 export const Default = Template.bind({});

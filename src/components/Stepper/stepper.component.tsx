@@ -6,18 +6,18 @@ import classNames from "classnames";
 import Icon from "../Icon/icon.component";
 import Subtitle from "../typographic/Subtitle/subtitle.component";
 
-const Stepper = ({ steps, currentPosition = 0 }: StepperProps) => {
+const Stepper = ({ steps, position = 0 }: StepperProps) => {
   return (
     <div className="stepper">
       {steps.map((label, index) => {
-        const position = index + 1;
-        const isActive = position === currentPosition;
-        const isDone = position < currentPosition;
+        const stepPosition = index + 1;
+        const isActive = stepPosition === position;
+        const isDone = stepPosition < position;
         return (
           <Subtitle
             size={SubtitlesSizes.Small}
             as="div"
-            key={position}
+            key={stepPosition}
             className={classNames("stepper__item", {
               "stepper__item--is-active": isActive,
               "stepper__item--is-done": isDone,
@@ -25,7 +25,7 @@ const Stepper = ({ steps, currentPosition = 0 }: StepperProps) => {
           >
             <div className="stepper__status">
               {!isDone ? (
-                <span className="stepper__status-position">{position}</span>
+                <span className="stepper__status-position">{stepPosition}</span>
               ) : (
                 <Icon className="stepper__status-icon" name="checkmark-circle" />
               )}

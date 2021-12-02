@@ -1,9 +1,8 @@
-import { Sizes } from "@/types";
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 import CircleStepper from "./circle-stepper.component";
 
 export default {
-  title: "Components/CircleStepper",
+  title: "Components/Stepper/CircleStepper",
   component: CircleStepper,
   argtypes: {
     totalSteps: {

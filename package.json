@@ -22,9 +22,11 @@
   "scripts": {
     "dev": "rollup -c -w",
     "build": "rollup -c",
+    "test": "echo test",
     "storybook": "yarn build && start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "lint": "eslint --cache --ext ts,tsx src"
+    "lint": "eslint --cache --ext ts,tsx src",
+    "lint:fix": "yarn lint -- --fix"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.1",
@@ -32,10 +34,10 @@
     "@rollup/plugin-node-resolve": "^13.0.6",
     "@rollup/plugin-strip": "^2.1.0",
     "@rollup/plugin-url": "^6.1.0",
-    "@storybook/addon-essentials": "^6.3.12",
-    "@storybook/addon-links": "^6.3.12",
-    "@storybook/react": "^6.3.12",
-    "@storybook/theming": "^6.4.0",
+    "@storybook/addon-essentials": "^6.4.1",
+    "@storybook/addon-links": "^6.4.1",
+    "@storybook/react": "^6.4.1",
+    "@storybook/theming": "^6.4.1",
     "@types/classnames": "^2.3.1",
     "@types/node": "^16.11.9",
     "@types/react": "^17.0.36",
@@ -51,6 +53,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.27.1",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-storybook": "^0.5.1",
     "postcss": "^8.4.1",
     "postcss-preset-env": "^7.0.1",
     "prettier": "^2.4.1",

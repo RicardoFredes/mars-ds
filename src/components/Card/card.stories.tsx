@@ -5,6 +5,7 @@ import Card from "./card.component";
 import Text from "../typographic/Text/text.component";
 import Heading from "../typographic/Heading/heading.component";
 import { HeadingSizes } from "../typographic/Heading/heading.types";
+import type { CardProps } from "./card.types";
 
 export default {
   title: "Components/Card",
@@ -18,7 +19,7 @@ export default {
   },
 } as ComponentMeta<typeof Card>;
 
-const Template: ComponentStory<typeof Card> = ({ title, ...args }) => (
+const Template: ComponentStory<typeof Card> = ({ title, ...args }: CardProps) => (
   <div style={{ padding: 50, background: "#f1f1f1" }}>
     <Card {...args}>
       <Heading size={HeadingSizes.Small}>{title}</Heading>

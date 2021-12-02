@@ -10,8 +10,6 @@ const IconMastercard = ({ height = 24, width = 24 }: IconLibProps) => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        fillRule="evenodd"
-        clipRule="evenodd"
         d="M7 19C10.866 19 14 15.866 14 12C14 8.13401 10.866 5 7 5C3.13401 5 0 8.13401 0 12C0 15.866 3.13401 19 7 19Z"
         fill="#EA001B"
       />

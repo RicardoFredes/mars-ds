@@ -32,6 +32,9 @@ export type { LabelProps } from "./components/Label/label.types";
 export { default as Link } from "./components/Link/link.component";
 export type { LinkProps } from "./components/Link/link.types";
 
+export { default as Logo } from "./components/Logo/logo.component";
+export type { LogoProps } from "./components/Logo/logo.types";
+
 export { default as Stepper } from "./components/Stepper/stepper.component";
 export type { StepperProps } from "./components/Stepper/stepper.types";
 

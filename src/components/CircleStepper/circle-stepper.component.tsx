@@ -1,7 +1,8 @@
-import classNames from "classnames";
-import type { CircleStepsProps } from "./circle-stepper.types";
+import type { CircleStepperProps } from "./circle-stepper.types";
 
-const CircleStepper = ({ position, totalSteps }: CircleStepsProps) => {
+import classNames from "classnames";
+
+const CircleStepper = ({ position, totalSteps }: CircleStepperProps) => {
   const cn = classNames("circleStepper");
   const getCurrentPosition = () => {
     if (position < 0) return 0;

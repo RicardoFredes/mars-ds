@@ -58,7 +58,7 @@
     "skipLibCheck": true                                     /* Skip type checking all .d.ts files. */
   },
   "include": [
-    "types/**/*.d.ts",
+    "src/**/*.d.ts",
     "src/**/*.ts",
     "src/**/*.tsx"
   ],

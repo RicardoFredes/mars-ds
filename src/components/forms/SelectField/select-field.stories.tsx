@@ -32,8 +32,8 @@ Default.args = {
 export const Filter = Template.bind({});
 Filter.args = { disabled: false, enableFilter: true, options, label: "Cursos" };
 
-export const OptionSected = Template.bind({});
-OptionSected.args = {
+export const OptionSelected = Template.bind({});
+OptionSelected.args = {
   disabled: false,
   enableFilter: true,
   options,

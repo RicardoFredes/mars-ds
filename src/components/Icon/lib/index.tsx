@@ -7,7 +7,7 @@ import arrowBack from "./arrow-back";
 import attach from "./attach";
 import bankSlip from "./bank-slip";
 import checkmarkCircle from "./checkmark-circle";
-import checkmarkSquare2 from "./checkmark-square-2";
+import checkmarkSquare from "./checkmark-square";
 import chevronLeft from "./chevron-left";
 import chevronRight from "./chevron-right";
 import chevronUp from "./chevron-up";
@@ -62,7 +62,7 @@ const icons: {
   "bank-slip": bankSlip,
   "checkmark-circle": checkmarkCircle,
   checkmark,
-  "checkmark-square-2": checkmarkSquare2,
+  "checkmark-square": checkmarkSquare,
   copy,
   close,
   "credit-card": creditCard,

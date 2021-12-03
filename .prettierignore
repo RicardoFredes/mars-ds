@@ -1,0 +1,5 @@
+# typescript config file
+tsconfig.json
+
+# compiled files
+dist/*

@@ -12,7 +12,7 @@ const CircleStepper = ({ position, totalSteps }: CircleStepperProps) => {
 
   const currentPosition = getCurrentPosition();
   return (
-    <div className="circleStepper">
+    <div className={cn}>
       <svg className="circleStepper__svg" viewBox="0 0 100 100" width="52" height="52">
         <circle
           className="circleStepper__svg__innerCircle"

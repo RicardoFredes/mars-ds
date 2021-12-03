@@ -2,10 +2,6 @@
   background-color: $color-background-default;
   padding: $spacing-xl;
   border-radius: $border-radius-lg;
-
-  &__title {
-    font-family: $font-family-main;
-  }
   &--elevation {
     &-low {
       box-shadow: $shadow-low;

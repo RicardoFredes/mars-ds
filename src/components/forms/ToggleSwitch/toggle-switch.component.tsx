@@ -2,6 +2,7 @@ import { useState } from "react";
 import classNames from "classnames";
 import Text from "../../typographic/Text/text.component";
 import { TextSizes } from "@/components/typographic/Text/text.types";
+import { ToggleSwitchProps } from "./toggle-switch.types";
 
 const ToggleSwitch = ({
   className,
@@ -11,7 +12,7 @@ const ToggleSwitch = ({
   label,
   name,
   ...props
-}: any) => {
+}: ToggleSwitchProps) => {
   const [checked, setChecked] = useState(defaultChecked);
 
   const cn = classNames("toggle-switch", className, [

@@ -1,6 +1,6 @@
 import type { IconLibProps } from "../icon.types";
 
-const IconCheckmarkSquare2 = ({ height = 24, width = 24 }: IconLibProps) => {
+const IconCheckmarkSquare = ({ height = 24, width = 24 }: IconLibProps) => {
   return (
     <svg
       width={width}
@@ -19,4 +19,4 @@ const IconCheckmarkSquare2 = ({ height = 24, width = 24 }: IconLibProps) => {
   );
 };
 
-export default IconCheckmarkSquare2;
+export default IconCheckmarkSquare;

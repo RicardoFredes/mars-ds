@@ -1,55 +1,59 @@
-import alert from "./alert";
-import alertCircle from "./alert-circle";
+import type { IconLibProps } from "@/components/Icon/icon.types";
+
 import apple from "./apple";
+import alertCircle from "./alert-circle";
+import alert from "./alert";
 import arrowBack from "./arrow-back";
 import attach from "./attach";
 import bankSlip from "./bank-slip";
-import checkmark from "./checkmark";
 import checkmarkCircle from "./checkmark-circle";
 import checkmarkSquare from "./checkmark-square";
-import chevronDown from "./chevron-down";
 import chevronLeft from "./chevron-left";
 import chevronRight from "./chevron-right";
 import chevronUp from "./chevron-up";
 import clock from "./clock";
-import close from "./close";
 import copy from "./copy";
+import close from "./close";
 import creditCard from "./credit-card";
 import doneAll from "./done-all";
 import download from "./download";
+import eye from "./eye";
+import eyeOff from "./eye-off";
 import edit from "./edit";
 import expand from "./expand";
 import externalLink from "./external-link";
-import eye from "./eye";
-import eyeOff from "./eye-off";
 import facebook from "./facebook";
 import file from "./file";
 import fileText from "./file-text";
 import google from "./google";
 import grid from "./grid";
-import info from "./info";
-import layers from "./layers";
-import list from "./list";
 import mastercard from "./mastercard";
-import mesalvaMini from "./me-salva-mini";
 import menu from "./menu";
 import minusSquare from "./minus-square";
+import mesalvaMini from "./me-salva-mini";
 import moreHorizontal from "./more-horizontal";
 import pix from "./pix";
 import ppl from "./ppl";
 import print from "./print";
 import radioButtonOff from "./radio-button-off";
 import radioButtonOn from "./radio-button-on";
+import tri from "./tri";
+import info from "./info";
+import layers from "./layers";
+import list from "./list";
 import search from "./search";
 import shield from "./shield";
 import shoppingCart from "./shopping-cart";
 import square from "./square";
 import star from "./star";
-import tri from "./tri";
 import video from "./video";
 import visa from "./visa";
+import chevronDown from "./chevron-down";
+import checkmark from "./checkmark";
 
-const icons = {
+const icons: {
+  [key: string]: (props: IconLibProps) => JSX.Element;
+} = {
   apple,
   "alert-circle": alertCircle,
   alert,

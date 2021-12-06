@@ -1,0 +1,13 @@
+.checkbox {
+  &__container {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    height: 40px;
+    cursor: pointer;
+  }
+  &__label {
+    display: inline-block;
+    margin: 0 11px 0 0;
+  }
+}

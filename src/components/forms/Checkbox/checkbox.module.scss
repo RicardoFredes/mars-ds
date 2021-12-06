@@ -2,8 +2,9 @@
   &__container {
     display: inline-flex;
     align-items: center;
-    user-select: none;
-    height: 40px;
+    cursor: pointer;
+  }
+  &__input {
     cursor: pointer;
   }
   &__label {

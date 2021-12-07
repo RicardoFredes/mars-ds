@@ -3,6 +3,7 @@ import classNames from "classnames";
 import Text from "../../typographic/Text/text.component";
 import { TextSizes } from "@/components/typographic/Text/text.types";
 import { CheckboxProps } from "./checkbox.types";
+import Icon from "@/components/Icon/icon.component";
 
 const Checkbox = ({
   className,
@@ -15,15 +16,21 @@ const Checkbox = ({
 }: CheckboxProps) => {
   const [checked, setChecked] = useState(defaultChecked);
 
-  const cn = classNames("checkbox", className);
+  const cn = classNames("checkbox", className, [
+    { "checkbox--is-checked": checked },
+    { "checkbox--is-disabled": disabled },
+  ]);
 
   const handleChange = () => {
     if (!disabled) setChecked(!checked);
   };
 
+  const iconName = checked ? "checkmark-square" : "square";
+
   return (
     <div className={cn} {...props}>
       <label className="checkbox__container">
+        <Icon className="checkbox__icon" name={iconName} />
         <input
           id={id || name}
           disabled={disabled}

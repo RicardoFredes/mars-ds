@@ -61,6 +61,8 @@ export type { TextFieldProps } from "./components/forms/TextField/text-field.typ
 export { default as ToggleSwitch } from "./components/forms/ToggleSwitch/toggle-switch.component";
 export type { ToggleSwitchProps } from "./components/forms/ToggleSwitch/toggle-switch.types";
 
+export { default as Checkbox } from "./components/forms/Checkbox/checkbox.component";
+
 /*
  * +------------+
  * + Typography +

@@ -9,10 +9,25 @@ export default {
 
 const Template: ComponentStory<typeof Checkbox> = (args) => <Checkbox {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
+const DefaultArgs = {
   label: "Concordo com os termos de uso",
   defaultChecked: false,
   disabled: false,
   id: "checkbox",
+};
+
+export const Default = Template.bind({});
+Default.args = DefaultArgs;
+
+export const Checked = Template.bind({});
+Checked.args = {
+  ...DefaultArgs,
+  defaultChecked: true,
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  ...DefaultArgs,
+  defaultChecked: true,
+  disabled: true,
 };

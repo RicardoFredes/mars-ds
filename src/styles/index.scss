@@ -1,6 +1,13 @@
-@import "./tokens/index.scss";
 @import "./reset.scss";
 @import "./fonts.scss";
+@import "./tokens/index.scss";
+
+// Prioritize import typographics styles to prevent overwrite the anothers component styles
+@import "../components/typographic/Caption/caption.module.scss";
+@import "../components/typographic/Heading/heading.module.scss";
+@import "../components/typographic/List/list.module.scss";
+@import "../components/typographic/Text/text.module.scss";
+@import "../components/typographic/Subtitle/subtitle.module.scss";
 
 @import "../components/Button/button.module.scss";
 @import "../components/Card/card.module.scss";
@@ -11,14 +18,10 @@
 @import "../components/ToggleButton/toggle-button.module.scss";
 @import "../components/CircleStepper/circle-stepper.module.scss";
 @import "../components/Stepper/stepper.module.scss";
+@import "../components/Logo/logo.module.scss";
 
-@import "../components/forms/TextField/text-field.module.scss";
-@import "../components/forms/SelectField/select-field.module.scss";
-@import "../components/forms/ToggleSwitch/toggle-switch.module.scss";
 @import "../components/forms/Checkbox/checkbox.module.scss";
-
-@import "../components/typographic/Caption/caption.module.scss";
-@import "../components/typographic/Heading/heading.module.scss";
-@import "../components/typographic/List/list.module.scss";
-@import "../components/typographic/Text/text.module.scss";
-@import "../components/typographic/Subtitle/subtitle.module.scss";
+@import "../components/forms/TextField/text-field.module.scss";
+@import "../components/forms/ToggleSwitch/toggle-switch.module.scss";
+@import "../components/forms/SelectField/select-field.module.scss";
+@import "../components/forms/Slider/slider.module.scss";

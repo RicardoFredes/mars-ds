@@ -36,7 +36,6 @@ const Template: ComponentStory<typeof Card> = ({ title, ...args }: CardProps) =>
 
 export const Default = Template.bind({});
 Default.args = {
-  // @ts-expect-error Need to create a default type to Elevations
   elevation: undefined,
   title: "Card default",
 };

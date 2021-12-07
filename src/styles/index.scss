@@ -1,6 +1,6 @@
-@import "./tokens/index.scss";
 @import "./reset.scss";
 @import "./fonts.scss";
+@import "./tokens/index.scss";
 
 // Prioritize import typographics styles to prevent overwrite the anothers component styles
 @import "../components/typographic/Caption/caption.module.scss";
@@ -18,6 +18,7 @@
 @import "../components/ToggleButton/toggle-button.module.scss";
 @import "../components/CircleStepper/circle-stepper.module.scss";
 @import "../components/Stepper/stepper.module.scss";
+@import "../components/Logo/logo.module.scss";
 
 
 @import "../components/forms/TextField/text-field.module.scss";

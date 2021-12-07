@@ -1,4 +1,4 @@
-export interface CircleStepsProps extends React.HTMLProps<HTMLElement> {
+export interface CircleStepperProps extends React.HTMLProps<HTMLElement> {
   totalSteps: number;
   position: number;
 }

@@ -1,6 +1,6 @@
-import type React from "react";
+import type { LinkProps } from "./link.types";
 
-const Link = ({ children, ...props }: React.HTMLProps<HTMLAnchorElement>) => {
+const Link = ({ children, ...props }: LinkProps) => {
   return <a {...props}>{children}</a>;
 };
 

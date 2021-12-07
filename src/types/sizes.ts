@@ -1,7 +1,9 @@
 export const SizesEnum = {
-  Small: "s",
-  Medium: "m",
-  Large: "l",
+  ExtraSmall: "xs",
+  Small: "sm",
+  Medium: "md",
+  Large: "lg",
+  ExtraLarge: "xl",
 } as const;
 
 export type Sizes = typeof SizesEnum[keyof typeof SizesEnum];

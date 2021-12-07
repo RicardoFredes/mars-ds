@@ -1,5 +1,6 @@
 import type { Elevation } from "@/types";
+import type { HTMLProps } from "react";
 
-export interface CardProps extends React.HTMLProps<HTMLDivElement> {
+export interface CardProps extends HTMLProps<HTMLDivElement> {
   elevation?: Elevation;
 }

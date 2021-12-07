@@ -1,6 +1,6 @@
-@import "./tokens/index.scss";
 @import "./reset.scss";
 @import "./fonts.scss";
+@import "./tokens/index.scss";
 
 @import "../components/Button/button.module.scss";
 @import "../components/Card/card.module.scss";
@@ -11,6 +11,7 @@
 @import "../components/ToggleButton/toggle-button.module.scss";
 @import "../components/CircleStepper/circle-stepper.module.scss";
 @import "../components/Stepper/stepper.module.scss";
+@import "../components/Logo/logo.module.scss";
 
 
 @import "../components/forms/TextField/text-field.module.scss";

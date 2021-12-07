@@ -1,8 +1,10 @@
+import type { ToggleSwitchProps } from "./toggle-switch.types";
+
 import { useState } from "react";
 import classNames from "classnames";
-import Text from "../../typographic/Text/text.component";
+
+import Text from "@/components/typographic/Text/text.component";
 import { TextSizes } from "@/components/typographic/Text/text.types";
-import { ToggleSwitchProps } from "./toggle-switch.types";
 
 const ToggleSwitch = ({
   className,

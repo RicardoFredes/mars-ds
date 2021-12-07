@@ -1,7 +1,8 @@
-import classNames from "classnames";
-import type { CircleStepsProps } from "./circle-stepper.types";
+import type { CircleStepperProps } from "./circle-stepper.types";
 
-const CircleStepper = ({ position, totalSteps }: CircleStepsProps) => {
+import classNames from "classnames";
+
+const CircleStepper = ({ position, totalSteps }: CircleStepperProps) => {
   const cn = classNames("circleStepper");
   const getCurrentPosition = () => {
     if (position < 0) return 0;
@@ -11,7 +12,7 @@ const CircleStepper = ({ position, totalSteps }: CircleStepsProps) => {
 
   const currentPosition = getCurrentPosition();
   return (
-    <div className="circleStepper">
+    <div className={cn}>
       <svg className="circleStepper__svg" viewBox="0 0 100 100" width="52" height="52">
         <circle
           className="circleStepper__svg__innerCircle"

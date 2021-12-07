@@ -12,7 +12,7 @@
   }
   &__label {
     display: inline-block;
-    margin: 0 0 0 11px;
+    margin: 0 0 0 8px;
   }
   &__icon {
     color: $color-text-color-text-primary;
@@ -52,6 +52,9 @@
       }
       &__icon {
         color: $color-grey-400;
+      }
+      &__label {
+        color: $color-text-color-text-disabled;
       }
     }
   }

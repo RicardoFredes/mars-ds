@@ -21,11 +21,12 @@
   "scripts": {
     "reindex": "node bin/reindex",
     "new-component": "node bin/new-component",
+    "start": "yarn storybook",
     "dev": "rollup -c -w",
-    "build": "rollup -c",
+    "build": "rollup -c && start-storybook -p PORT",
     "test": "echo test",
     "storybook": "yarn build && start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "storybook:build": "build-storybook",
     "lint": "eslint --cache --ext ts,tsx src",
     "lint:fix": "yarn lint -- --fix"
   },

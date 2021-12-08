@@ -3,8 +3,8 @@ Items marcados com (*) são obrigatórios
 -->
 
 ### Link da tarefa*
-[Título da tarefa]()
 <!-- 
+[Título da tarefa]()
 [Figma]()
 -->
 
@@ -29,10 +29,8 @@ Use esse espaço, caso necessário, para explicar o porquê de ter seguido com e
 Esse PR:
 - [ ] foi testado localmente
 - [ ] foi testado em ambiente de homologação
-
 - [ ] possui testes unitários
 - [ ] possui testes funcionais
-
 - [ ] foi testado por alguém da equipe (não dev)
 
 

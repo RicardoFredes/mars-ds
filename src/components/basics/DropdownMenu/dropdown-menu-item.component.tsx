@@ -1,8 +1,8 @@
 import type { DropdownMenuItemProps } from "./dropdown-menu-item.types";
 import classNames from "classnames";
-import Icon from "../Icon/icon.component";
-import Link from "../Link/link.component";
-import Text from "../typographic/Text/text.component";
+import Icon from "@/components/basics/Icon/icon.component";
+import Link from "@/components/basics/Link/link.component";
+import Text from "@/components/typographic/Text/text.component";
 
 const DropdownMenuItem = ({
   className,

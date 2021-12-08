@@ -1,4 +1,4 @@
-function snakeCaseToPascalCase(path) {
+function kebabCaseToPascalCase(path) {
   if (!path) return path;
   let a = path.replace(/(\.\/|\..*)/g, "");
   if (a.includes("/")) {
@@ -16,5 +16,5 @@ function snakeCaseToPascalCase(path) {
 }
 
 module.exports = {
-  snakeCaseToPascalCase,
+  kebabCaseToPascalCase,
 };

@@ -1,4 +1,4 @@
-import type { IconLibProps } from "@/components/Icon/icon.types";
+import type { IconLibProps } from "@/components/basics/Icon/icon.types";
 
 import apple from "./apple";
 import alertCircle from "./alert-circle";

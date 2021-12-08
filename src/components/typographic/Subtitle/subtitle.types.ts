@@ -1,4 +1,4 @@
-import type { HeadingProps } from "../Heading/heading.types";
+import type { HeadingProps } from "@/components/typographic/Heading/heading.types";
 
 export enum SubtitlesSizes {
   Medium = "m",

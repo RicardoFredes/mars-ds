@@ -4,9 +4,9 @@ import type { SelectFieldOption, SelectFieldProps } from "./select-field.types";
 import classNames from "classnames";
 import { ChangeEvent, MouseEvent, useEffect, useRef, useState } from "react";
 
-import TextField from "../TextField/text-field.component";
-import DropdownMenu from "../../DropdownMenu/dropdown-menu.component";
-import Text from "../../typographic/Text/text.component";
+import TextField from "@/components/forms/TextField/text-field.component";
+import DropdownMenu from "@/components/basics/DropdownMenu/dropdown-menu.component";
+import Text from "@/components/typographic/Text/text.component";
 
 import { generateHash } from "@/services/hash";
 import { mathQuery } from "@/services/compare";

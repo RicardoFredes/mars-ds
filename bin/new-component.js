@@ -10,7 +10,6 @@ const TEMPLATE_MAPPER = [
   [".module.scss", styleTemplate],
   [".stories.tsx", storiesTemplate],
   [".types.ts", typesTemplate],
-  ["index.ts", indexTemplate],
 ];
 
 const rl = readline.createInterface({
@@ -43,7 +42,12 @@ function initialQuestion() {
 }
 
 function finalQuestion(pathName) {
-  const components = TEMPLATE_MAPPER.reduce((acc, [ext]) => (acc += ` - ${pathName}${ext}\n`), "");
+  const snakeName = pathName.replace(/.*\//, "");
+  const componentName = kebabCaseToPascalCase(pathName);
+  const components = TEMPLATE_MAPPER.reduce(
+    (acc, [ext]) => (acc += ` - ${componentName}/${snakeName}${ext}\n`),
+    ""
+  );
   rl.question(
     `\nOs seguintes arquivos serão criados: \n\n${components}\n\n Confirmar a criação? [*/N]\n`,
     (letter) => {
@@ -71,6 +75,10 @@ function createNewComponent(pathName) {
     fs.writeFileSync(dest, content);
     console.log(`Done: create ${dest}`);
   }
+  const dest = `${PATH_COMPONENT}/${groupPath}${name}/index.ts`;
+  const content = indexTemplate(name, snakeName);
+  fs.writeFileSync(dest, content);
+  console.log(`Done: create ${dest}`);
 }
 
 function componentTemplate(name, pathName) {

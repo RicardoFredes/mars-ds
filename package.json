@@ -28,7 +28,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "lint": "eslint --cache --ext ts,tsx src",
-    "lint:fix": "yarn lint -- --fix"
+    "lint:fix": "yarn lint -- --fix",
+    "heroku-postbuild": "echo Skip build on Heroku"
   },
   "resolutions": {
     "webpack": "^5"

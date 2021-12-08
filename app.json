@@ -1,8 +1,11 @@
 {
   "name": "mars",
-  "description": "",
+  "description": "Next-gen UIKit built by Me Salva!",
   "scripts": {},
-  "env": {},
+  "env": {
+    "NPM_CONFIG_PRODUCTION": "false",
+    "YARN_PRODUCTION": "false"
+  },
   "formation": {
     "web": {
       "quantity": 1,
@@ -20,5 +23,6 @@
     {
       "url": "https://github.com/heroku/heroku-buildpack-static.git"
     }
-  ]
+  ],
+  "stack": "heroku-20"
 }

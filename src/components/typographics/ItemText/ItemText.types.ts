@@ -1,1 +1,3 @@
-export type ItemTextProps = React.HTMLProps<HTMLDivElement>;
+import type React from "react";
+
+export type ItemTextProps = React.HTMLProps<HTMLLIElement>;

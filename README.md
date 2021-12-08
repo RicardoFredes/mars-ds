@@ -6,8 +6,9 @@
 
 - [Sobre](#about)
 - [Ponta pé inicial](#getting_started)
-- [Usando](#usage)
-- [Contribuindo](./CONTRIBUTING.md)
+- [Como Usar](#usage)
+- [Contribuindo](#contributing)
+- [Créditos]($credits)
 
 ## Sobre <a name = "about"></a>
 
@@ -19,18 +20,46 @@ Aqui jás um overview de algumas decisões arquitetonicas e padrões do projeto.
 
 ### Pre-requisitos
 
-What things you need to install the software and how to install them.
+* Git
+* Node.js >= 14
+* NPM ou Yarn
 
 ### Instalação
 
-A step by step series of examples that tell you how to get a development env running.
+Instale as dependências do projeto utilizando o comando
+> $ npm install
 
-Say what the step will be
+ou
 
-And repeat
+> $ yarn install
 
-End with an example of getting some data out of the system or using it for a little demo.
+## Como Usar <a name = "usage"></a>
 
-## Usage <a name = "usage"></a>
+Para rodar o projeto utilize o comando
+> $ yarn dev
 
-Add notes about how to use the system.
+Para rodar o storybook utilize o comando
+> $ yarn storybook
+
+O ideal é que você utilize os 2 comandos anteriores de forma simultânea para que consiga ver as alterações do projeto em tempo real
+
+### Contribuindo <a name = "contributing"></a>
+
+Para contribuir com o projeto, primeiramente, baixe o projeto em sua máquina com o comando
+> $ git clone < link desse repositório >
+
+Instale as dependências com o comando
+> $ npm install
+
+ou 
+> $ yarn install
+
+Para metodologia de commits, o ideal é utilizar a convenção [Conventional Commits](www.conventionalcommits.org)
+
+Para organização de código, o ideal é utilizar a metodologia [BEM](https://en.bem.info/methodology/quick-start/)
+
+### Créditos <a name = "credits"></a>
+
+* [Conventional Commits](https://www.conventionalcommits.org)
+* [BEM](https://en.bem.info/methodology/quick-start/)
+* [MUI](https://mui.com/pt/getting-started/usage/)

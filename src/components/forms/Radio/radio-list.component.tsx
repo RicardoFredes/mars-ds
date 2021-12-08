@@ -1,15 +1,41 @@
+import { useState } from "react";
 import Radio from "./";
 import classNames from "classnames";
-import { RadioListProps } from "./radio.types";
+import type { RadioListProps } from "./radio.types";
+import { Option } from "@/types";
 
-const RadioList = ({ name, options, className, ...props }: RadioListProps) => {
+const emptyOption: Option = { value: undefined, label: undefined };
+
+const RadioList = ({
+  name,
+  options = [],
+  defaultOption = emptyOption,
+  className,
+  onSelect,
+  ...props
+}: RadioListProps) => {
+  const [checkedOption, setCheckedOption] = useState(defaultOption);
   const cn = classNames("radioList", className);
+  const handleSelectOption = (option: Option) => {
+    setCheckedOption(option);
+    onSelect?.(option);
+  };
+
   return (
     <div className={cn} {...props}>
-      {options &&
-        options.map(({ label, value }, key) => (
-          <Radio key={key} name={name} label={label} value={value} />
-        ))}
+      {options.map((option, key) => {
+        const isChecked = option.value === checkedOption.value;
+        return (
+          <Radio
+            {...option}
+            key={key}
+            name={name}
+            checked={isChecked}
+            className={classNames({ "radio--is-checked": isChecked })}
+            onClick={() => handleSelectOption(option)}
+          />
+        );
+      })}
     </div>
   );
 };

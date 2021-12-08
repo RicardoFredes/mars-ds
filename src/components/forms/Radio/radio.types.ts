@@ -1,1 +1,3 @@
-export type RadioProps = React.HTMLProps<HTMLDivElement>;
+export interface RadioProps extends React.HTMLProps<HTMLInputElement> {
+  label?: string;
+}

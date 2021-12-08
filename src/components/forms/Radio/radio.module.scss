@@ -1,5 +1,71 @@
 .radio {
-  background-color: red;
-  padding: 24px;
-  color: white;
+  &__container {
+    display: inline-flex;
+    align-items: center;
+    height: 40px;
+    color: $color-text-color-text-primary;
+    position: relative;
+    cursor: pointer;
+  }
+
+  &:not(.radio--is-disabled) {
+    .radio__container {
+      &:before {
+        content: "";
+        display: block;
+        width: 38px;
+        height: 38px;
+        position: absolute;
+        top: 0px;
+        left: -5px;
+        background-color: $color-transparent-grey-8;
+        border-radius: 50%;
+        transition: transform ease 0.2s;
+        transform: scale(0);
+      }
+
+      &:hover {
+        &:before {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+
+  &__icon {
+    padding: 0 10px 0 2px;
+    &--on {
+      display: none;
+      color: $color-info-main;
+    }
+    &--off {
+      display: inherit;
+    }
+  }
+
+  &__input:checked + .radio__icon--on {
+    display: inherit;
+
+    & + .radio__icon--off {
+      display: none;
+    }
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &--is-disabled {
+    .radio__icon {
+      &--off,
+      &--on {
+        color: $color-action-states-disabled;
+      }
+    }
+
+    .radio__label {
+      color: $color-text-color-text-disabled;
+      font-family: $font-family-display;
+    }
+  }
 }

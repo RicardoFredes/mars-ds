@@ -1,21 +1,6 @@
 .logo {
-  &__full {
-    &--primary {
-      color: $color-primary-main;
-    }
-
-    &--neutral {
-      color: $color-common-white;
-    }
-  }
-
-  &__short {
-    &--primary {
-      color: $color-primary-main;
-    }
-
-    &--neutral {
-      color: $color-common-white;
-    }
+  color: $color-primary-main;
+  &--neutral {
+    color: $color-common-white;
   }
 }

@@ -2,24 +2,24 @@ import type { LogoProps } from "./logo.types";
 
 import classNames from "classnames";
 
-import { ColorsEnum } from "@/types";
-import variants from "./variants";
+import { LogoNameEnums, LogoVariantsEnum } from "./logo.types";
+import variants from "./icons";
 
 const Logo = ({
-  variant = "full",
-  color = ColorsEnum.Primary,
-  width,
+  name = LogoNameEnums.Full,
+  variant = LogoVariantsEnum.Primary,
+  height,
   className,
   ...props
 }: LogoProps) => {
-  const Component = variants[variant];
+  const Component = variants[name];
   if (!Component) return null;
 
-  const cn = classNames("logo", `logo__${variant}`, `logo__${variant}--${color}`, className);
+  const cn = classNames("logo", `logo--${variant}`, `logo-${name}`, className);
 
   return (
     <span {...props} className={cn}>
-      <Component width={width} />
+      <Component height={height} />
     </span>
   );
 };

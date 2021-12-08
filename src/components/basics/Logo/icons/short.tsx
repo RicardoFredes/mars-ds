@@ -1,9 +1,9 @@
-import type { LogoVariantProps } from "../logo.types";
+import type { LogoIconProps } from "../logo.types";
 
-const LogoFull = ({ width = 128 }: LogoVariantProps) => {
+const LogoFull = ({ height = 128 }: LogoIconProps) => {
   return (
     <svg
-      width={width}
+      height={height}
       viewBox="0 0 128 128"
       preserveAspectRatio="xMinYMin slice"
       fill="none"

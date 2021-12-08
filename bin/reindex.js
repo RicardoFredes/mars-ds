@@ -3,6 +3,36 @@ const fs = require("fs");
 
 const COMPONENTS_FOLDER = "./src/components";
 const INDEX_FILE = "./src/index.ts";
+const STYLE_FILE = "./src/styles/index.scss";
+
+function main() {
+  const filesList = getFiles(COMPONENTS_FOLDER).map((path) => path.replace("/src", ""));
+
+  reindexComponents(filesList);
+  reindexStyles(filesList);
+
+  console.log("Success");
+}
+
+function reindexStyles(filesList) {
+  const scssImports = ["./reset.scss", "./fonts.scss", "./tokens/index.scss"].map(
+    (path) => `@import "${path}";`
+  );
+
+  const content = [].concat(...scssImports, "", ...getStylesFiles(filesList), "").join("\n");
+
+  fs.writeFileSync(STYLE_FILE, content);
+  console.log("Done: styles reindex");
+}
+
+function reindexComponents(filesList) {
+  const scssImport = `import "./styles/index.scss";`;
+
+  const content = [].concat(scssImport, ...getComponentsAndTypes(filesList), "").join("\n");
+
+  fs.writeFileSync(INDEX_FILE, content);
+  console.log("Done: components reindex");
+}
 
 function getFiles(dir, $files) {
   $files = $files || [];
@@ -18,11 +48,6 @@ function getFiles(dir, $files) {
   return $files;
 }
 
-function isGroup(name) {
-  const character = name[0];
-  return character == character.toLowerCase();
-}
-
 function getComponentNameFromPath(path) {
   return path
     .split("/")
@@ -34,21 +59,11 @@ function getComponentNameFromPath(path) {
 }
 
 function getComponentsAndTypes(list = []) {
-  let auxiliary = "";
-
   return list.reduce((acc, path) => {
     const componentName = getComponentNameFromPath(path);
 
     if (/component.tsx/.test(path)) {
-      const group = path.split("/")[2];
-
-      if (acc.length > 0) acc.push("");
-      else acc.push("// basic");
-
-      if (isGroup(group) && group != auxiliary) {
-        auxiliary = group;
-        acc.push(`// ${auxiliary}`);
-      }
+      acc.push("");
       acc.push(`export { default as ${componentName} } from "${path.replace(".tsx", "")}";`);
     } else if (/types.ts/.test(path)) {
       acc.push(`export type { ${componentName}Props } from "${path.replace(".ts", "")}";`);
@@ -58,15 +73,13 @@ function getComponentsAndTypes(list = []) {
   }, []);
 }
 
-function main() {
-  const scssImport = `import "./styles/index.scss";`;
-  const filesList = getFiles(COMPONENTS_FOLDER).map((path) => path.replace("/src", ""));
-
-  const content = [].concat(scssImport, "", ...getComponentsAndTypes(filesList), "").join("\n");
-
-  fs.writeFileSync(INDEX_FILE, content);
-
-  console.log("Success reindex");
+function getStylesFiles(list = []) {
+  return list.reduce((acc, path) => {
+    if (/module.scss/.test(path)) {
+      acc.push(`@import ".${path}";`);
+    }
+    return acc;
+  }, []);
 }
 
 main();

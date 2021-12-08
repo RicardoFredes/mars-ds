@@ -1,6 +1,5 @@
 import "./styles/index.scss";
 
-// basic
 export { default as Button } from "./components/Button/button.component";
 export type { ButtonProps } from "./components/Button/button.types";
 
@@ -16,7 +15,6 @@ export type { DropdownMenuItemProps } from "./components/DropdownMenu/dropdown-m
 export { default as DropdownMenu } from "./components/DropdownMenu/dropdown-menu.component";
 export type { DropdownMenuProps } from "./components/DropdownMenu/dropdown-menu.types";
 
-// forms
 export { default as Checkbox } from "./components/forms/Checkbox/checkbox.component";
 export type { CheckboxProps } from "./components/forms/Checkbox/checkbox.types";
 
@@ -61,7 +59,6 @@ export type { SubjectLabelProps } from "./components/SubjectLabel/subject-label.
 export { default as ToggleButton } from "./components/ToggleButton/toggle-button.component";
 export type { ToggleButtonProps } from "./components/ToggleButton/toggle-button.types";
 
-// typographic
 export { default as Caption } from "./components/typographic/Caption/caption.component";
 export type { CaptionProps } from "./components/typographic/Caption/caption.types";
 

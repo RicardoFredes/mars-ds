@@ -1,5 +1,6 @@
 # MARS
 
+[MARS](https://mars-design-system-production.herokuapp.com/)
 [Figma](https://www.figma.com/file/W48LS2jmdbpQ8l9h7FRgit/Me-Salva!-Design-System?node-id=822%3A22408)
 
 ## Tabela de conteúdos
@@ -35,13 +36,14 @@ ou
 
 ## Como Usar <a name = "usage"></a>
 
-Para rodar o projeto utilize o comando
+Para rodar o projeto juntamente com o storybook para ver as modificações em tempo real, execute o comando
 > $ yarn dev
 
-Para rodar o storybook utilize o comando
-> $ yarn storybook
+Para criar um novo componente utilize o comando
+> $ yarn new-component
 
-O ideal é que você utilize os 2 comandos anteriores de forma simultânea para que consiga ver as alterações do projeto em tempo real
+Para adicionar automaticamente os imports utilize o comando
+> $ yarn reindex
 
 ### Contribuindo <a name = "contributing"></a>
 

@@ -1,9 +1,9 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import Text from "./";
+import Text from ".";
 import { TextSizes } from "./text.types";
 
 export default {
-  title: "Typographic/Text",
+  title: "Typographics/Text",
   component: Text,
   argTypes: {
     size: {

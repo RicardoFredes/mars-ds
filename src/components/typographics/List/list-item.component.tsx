@@ -1,8 +1,8 @@
 import { ListItemProps } from "./list.types";
 import classNames from "classnames";
 import Icon from "@/components/basics/Icon";
-import Text from "@/components/typographic/Text";
-import { TextSizes } from "@/components/typographic/Text/text.types";
+import Text from "@/components/typographics/Text";
+import { TextSizes } from "@/components/typographics/Text/text.types";
 import { SizesEnum } from "@/types";
 
 const ListItem = ({ text, children, bullet = {}, className, ...props }: ListItemProps) => {

@@ -6,7 +6,7 @@ import { useState } from "react";
 import TextField from "./";
 
 export default {
-  title: "Form/TextField",
+  title: "Forms/TextField",
   component: TextField,
   argTypes: {},
 } as ComponentMeta<typeof TextField>;

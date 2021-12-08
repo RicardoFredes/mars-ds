@@ -1,7 +1,7 @@
 import { useState } from "react";
 import classNames from "classnames";
-import Text from "@/components/typographic/Text";
-import { TextSizes } from "@/components/typographic/Text/text.types";
+import Text from "@/components/typographics/Text";
+import { TextSizes } from "@/components/typographics/Text/text.types";
 import { CheckboxProps } from "./checkbox.types";
 import Icon from "@/components/basics/Icon";
 

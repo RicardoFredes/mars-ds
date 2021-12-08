@@ -5,7 +5,7 @@ import Slider from "./";
 const numberControl = { control: { type: "number" } };
 
 export default {
-  title: "Form/Slider",
+  title: "Forms/Slider",
   component: Slider,
   argTypes: {
     max: numberControl,

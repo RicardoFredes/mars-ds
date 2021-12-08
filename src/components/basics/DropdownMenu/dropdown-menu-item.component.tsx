@@ -2,7 +2,7 @@ import type { DropdownMenuItemProps } from "./dropdown-menu-item.types";
 import classNames from "classnames";
 import Icon from "@/components/basics/Icon/icon.component";
 import Link from "@/components/basics/Link/link.component";
-import Text from "@/components/typographic/Text/text.component";
+import Text from "@/components/typographics/Text/text.component";
 
 const DropdownMenuItem = ({
   className,

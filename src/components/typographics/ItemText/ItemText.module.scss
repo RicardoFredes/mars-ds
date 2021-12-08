@@ -1,5 +1,7 @@
-.ItemText {
-  background-color: red;
-  padding: 24px;
-  color: white;
+.item-text {
+  font-family: $font-family-main;
+  font-size: 1rem;
+  line-height: 1.5em;
+  font-weight: 500;
+  color: $color-text-color-text-primary;
 }

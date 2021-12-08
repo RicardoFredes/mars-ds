@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const fs = require("fs");
+const { snakeCaseToPascalCase } = require("./helpers/convertNames");
 
 const COMPONENTS_FOLDER = "./src/components";
 const INDEX_FILE = "./src/index.ts";
@@ -48,19 +49,9 @@ function getFiles(dir, $files) {
   return $files;
 }
 
-function getComponentNameFromPath(path) {
-  return path
-    .split("/")
-    .slice(-1)[0]
-    .replace(/\..*/g, "")
-    .split("-")
-    .map((part) => part[0].toUpperCase() + part.substring(1))
-    .join("");
-}
-
 function getComponentsAndTypes(list = []) {
   return list.reduce((acc, path) => {
-    const componentName = getComponentNameFromPath(path);
+    const componentName = snakeCaseToPascalCase(path);
 
     if (/component.tsx/.test(path)) {
       acc.push("");

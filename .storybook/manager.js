@@ -1,6 +1,7 @@
-import { addons } from '@storybook/addons';
-import marsTheme from './mars-theme';
+import { addons } from "@storybook/addons";
+
+import mars from "./theme";
 
 addons.setConfig({
-  theme: marsTheme,
+  theme: mars,
 });

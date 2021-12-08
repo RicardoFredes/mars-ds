@@ -1,8 +1,8 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import ItemText from "./";
+import ItemText from ".";
 
 export default {
-  title: "Components/ItemText",
+  title: "Typographics/ItemText",
   component: ItemText,
   argTypes: {},
 } as ComponentMeta<typeof ItemText>;
@@ -10,7 +10,7 @@ export default {
 const Template: ComponentStory<typeof ItemText> = (args) => <ItemText {...args} />;
 
 const DefaultArgs = {
-  children: "Não esqueça de atualizar o componente!",
+  children: "ItemText",
 };
 
 export const Default = Template.bind({});

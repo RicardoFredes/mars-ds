@@ -45,6 +45,8 @@ export type { CheckboxProps } from "./components/forms/Checkbox/checkbox.types";
 export { default as PasswordField } from "./components/forms/PasswordField/password-field.component";
 export type { PasswordFieldProps } from "./components/forms/PasswordField/password-field.types";
 
+export { default as RadioList } from "./components/forms/Radio/radio-list.component";
+
 export { default as Radio } from "./components/forms/Radio/radio.component";
 export type { RadioProps } from "./components/forms/Radio/radio.types";
 
@@ -67,6 +69,9 @@ export type { CaptionProps } from "./components/typographics/Caption/caption.typ
 
 export { default as Heading } from "./components/typographics/Heading/heading.component";
 export type { HeadingProps } from "./components/typographics/Heading/heading.types";
+
+export { default as ItemText } from "./components/typographics/ItemText/ItemText.component";
+export type { ItemTextProps } from "./components/typographics/ItemText/ItemText.types";
 
 export { default as ListItem } from "./components/typographics/List/list-item.component";
 

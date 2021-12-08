@@ -1,7 +1,7 @@
 # MARS
 
-[MARS](https://mars-design-system-production.herokuapp.com/)
-[Figma](https://www.figma.com/file/W48LS2jmdbpQ8l9h7FRgit/Me-Salva!-Design-System?node-id=822%3A22408)
+- [MARS](https://mars.mesalva.com/)
+- [Figma](https://www.figma.com/file/W48LS2jmdbpQ8l9h7FRgit/Me-Salva!-Design-System?node-id=822%3A22408)
 
 ## Tabela de conteúdos
 

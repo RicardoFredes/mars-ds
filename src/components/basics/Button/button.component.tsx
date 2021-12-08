@@ -3,7 +3,7 @@ import type { ButtonProps } from "./button.types";
 import { SizesEnum, VariantsEnum } from "@/types";
 
 import classNames from "classnames";
-import Link from "../Link/link.component";
+import Link from "@/components/basics/Link/link.component";
 
 const Button = ({
   as,

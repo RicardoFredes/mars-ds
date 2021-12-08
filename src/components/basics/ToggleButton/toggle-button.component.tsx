@@ -1,7 +1,7 @@
 import type { ToggleButtonProps } from "./toggle-button.types";
 
-import Icon from "../Icon/icon.component";
-import Button from "../Button/button.component";
+import Icon from "@/components/basics/Icon/icon.component";
+import Button from "@/components/basics/Button/button.component";
 import { SizesEnum, VariantsEnum } from "@/types";
 import classNames from "classnames";
 

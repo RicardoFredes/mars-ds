@@ -2,9 +2,9 @@ import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import { ElevationEnum } from "@/types";
 import Card from "./card.component";
-import Text from "../typographic/Text/text.component";
-import Heading from "../typographic/Heading/heading.component";
-import { HeadingSizes } from "../typographic/Heading/heading.types";
+import Text from "@/components/typographic/Text/text.component";
+import Heading from "@/components/typographic/Heading/heading.component";
+import { HeadingSizes } from "@/components/typographic/Heading/heading.types";
 import type { CardProps } from "./card.types";
 
 export default {

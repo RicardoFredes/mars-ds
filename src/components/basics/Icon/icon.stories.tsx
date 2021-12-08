@@ -1,11 +1,11 @@
-import type { IconProps } from "@/components/Icon/icon.types";
+import type { IconProps } from "@/components/basics/Icon/icon.types";
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import { SizesEnum } from "@/types";
 import Icon from "./icon.component";
 import Text from "@/components/typographic/Text/text.component";
 import icons from "./lib";
-import { TextSizes } from "../typographic/Text/text.types";
+import { TextSizes } from "@/components/typographic/Text/text.types";
 
 export default {
   title: "Components/Icon",

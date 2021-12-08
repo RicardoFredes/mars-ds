@@ -1,19 +1,43 @@
 import "./styles/index.scss";
 
-export { default as Button } from "./components/Button/button.component";
-export type { ButtonProps } from "./components/Button/button.types";
+export { default as Button } from "./components/basics/Button/button.component";
+export type { ButtonProps } from "./components/basics/Button/button.types";
 
-export { default as Card } from "./components/Card/card.component";
-export type { CardProps } from "./components/Card/card.types";
+export { default as Card } from "./components/basics/Card/card.component";
+export type { CardProps } from "./components/basics/Card/card.types";
 
-export { default as CircleStepper } from "./components/CircleStepper/circle-stepper.component";
-export type { CircleStepperProps } from "./components/CircleStepper/circle-stepper.types";
+export { default as CircleStepper } from "./components/basics/CircleStepper/circle-stepper.component";
+export type { CircleStepperProps } from "./components/basics/CircleStepper/circle-stepper.types";
 
-export { default as DropdownMenuItem } from "./components/DropdownMenu/dropdown-menu-item.component";
-export type { DropdownMenuItemProps } from "./components/DropdownMenu/dropdown-menu-item.types";
+export { default as DropdownMenuItem } from "./components/basics/DropdownMenu/dropdown-menu-item.component";
+export type { DropdownMenuItemProps } from "./components/basics/DropdownMenu/dropdown-menu-item.types";
 
-export { default as DropdownMenu } from "./components/DropdownMenu/dropdown-menu.component";
-export type { DropdownMenuProps } from "./components/DropdownMenu/dropdown-menu.types";
+export { default as DropdownMenu } from "./components/basics/DropdownMenu/dropdown-menu.component";
+export type { DropdownMenuProps } from "./components/basics/DropdownMenu/dropdown-menu.types";
+
+export { default as Icon } from "./components/basics/Icon/icon.component";
+export type { IconProps } from "./components/basics/Icon/icon.types";
+
+export { default as IconButton } from "./components/basics/IconButton/icon-button.component";
+export type { IconButtonProps } from "./components/basics/IconButton/icon-button.types";
+
+export { default as Label } from "./components/basics/Label/label.component";
+export type { LabelProps } from "./components/basics/Label/label.types";
+
+export { default as Link } from "./components/basics/Link/link.component";
+export type { LinkProps } from "./components/basics/Link/link.types";
+
+export { default as Logo } from "./components/basics/Logo/logo.component";
+export type { LogoProps } from "./components/basics/Logo/logo.types";
+
+export { default as Stepper } from "./components/basics/Stepper/stepper.component";
+export type { StepperProps } from "./components/basics/Stepper/stepper.types";
+
+export { default as SubjectLabel } from "./components/basics/SubjectLabel/subject-label.component";
+export type { SubjectLabelProps } from "./components/basics/SubjectLabel/subject-label.types";
+
+export { default as ToggleButton } from "./components/basics/ToggleButton/toggle-button.component";
+export type { ToggleButtonProps } from "./components/basics/ToggleButton/toggle-button.types";
 
 export { default as Checkbox } from "./components/forms/Checkbox/checkbox.component";
 export type { CheckboxProps } from "./components/forms/Checkbox/checkbox.types";
@@ -34,30 +58,6 @@ export type { TextFieldProps } from "./components/forms/TextField/text-field.typ
 
 export { default as ToggleSwitch } from "./components/forms/ToggleSwitch/toggle-switch.component";
 export type { ToggleSwitchProps } from "./components/forms/ToggleSwitch/toggle-switch.types";
-
-export { default as Icon } from "./components/Icon/icon.component";
-export type { IconProps } from "./components/Icon/icon.types";
-
-export { default as IconButton } from "./components/IconButton/icon-button.component";
-export type { IconButtonProps } from "./components/IconButton/icon-button.types";
-
-export { default as Label } from "./components/Label/label.component";
-export type { LabelProps } from "./components/Label/label.types";
-
-export { default as Link } from "./components/Link/link.component";
-export type { LinkProps } from "./components/Link/link.types";
-
-export { default as Logo } from "./components/Logo/logo.component";
-export type { LogoProps } from "./components/Logo/logo.types";
-
-export { default as Stepper } from "./components/Stepper/stepper.component";
-export type { StepperProps } from "./components/Stepper/stepper.types";
-
-export { default as SubjectLabel } from "./components/SubjectLabel/subject-label.component";
-export type { SubjectLabelProps } from "./components/SubjectLabel/subject-label.types";
-
-export { default as ToggleButton } from "./components/ToggleButton/toggle-button.component";
-export type { ToggleButtonProps } from "./components/ToggleButton/toggle-button.types";
 
 export { default as Caption } from "./components/typographic/Caption/caption.component";
 export type { CaptionProps } from "./components/typographic/Caption/caption.types";

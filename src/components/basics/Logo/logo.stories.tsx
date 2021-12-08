@@ -1,7 +1,7 @@
-import type { LogoProps } from "@/components/Logo/logo.types";
+import type { LogoProps } from "@/components/basics/Logo/logo.types";
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import { LogoColorsEnum } from "@/components/Logo/logo.types";
+import { LogoColorsEnum } from "@/components/basics/Logo/logo.types";
 import { SizesEnum } from "@/types";
 import Logo from "./logo.component";
 import variants from "./variants";

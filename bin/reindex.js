@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const fs = require("fs");
-const { snakeCaseToPascalCase } = require("./helpers/convertNames");
+const { kebabCaseToPascalCase } = require("./helpers/convertNames");
 
 const COMPONENTS_FOLDER = "./src/components";
 const INDEX_FILE = "./src/index.ts";
@@ -16,7 +16,7 @@ function main() {
 }
 
 function reindexStyles(filesList) {
-  const scssImports = ["./reset.scss", "./fonts.scss", "./tokens/index.scss"].map(
+  const scssImports = ["./tokens/index.scss", "./basics/index.scss"].map(
     (path) => `@import "${path}";`
   );
 
@@ -51,7 +51,7 @@ function getFiles(dir, $files) {
 
 function getComponentsAndTypes(list = []) {
   return list.reduce((acc, path) => {
-    const componentName = snakeCaseToPascalCase(path);
+    const componentName = kebabCaseToPascalCase(path);
 
     if (/component.tsx/.test(path)) {
       acc.push("");

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const readline = require("readline");
 const fs = require("fs-extra");
-const { snakeCaseToPascalCase } = require("./helpers/convertNames");
+const { kebabCaseToPascalCase } = require("./helpers/convertNames");
 
 const PATH_COMPONENT = "./src/components";
 
@@ -60,7 +60,7 @@ function finalQuestion(pathName) {
 
 function createNewComponent(pathName) {
   const snakeName = pathName.replace(/.*\//, "");
-  const name = snakeCaseToPascalCase(snakeName);
+  const name = kebabCaseToPascalCase(snakeName);
   const groupPath = pathName.replace(snakeName, "");
   const dir = `${PATH_COMPONENT}/${groupPath}${name}`;
   fs.ensureDirSync(dir);

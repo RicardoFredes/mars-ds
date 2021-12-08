@@ -1,4 +1,4 @@
-import type { IconProps } from "@/components/Icon/icon.types";
+import type { IconProps } from "@/components/basics/Icon/icon.types";
 
 export interface TextFieldProps extends React.HTMLProps<HTMLInputElement> {
   label: string;

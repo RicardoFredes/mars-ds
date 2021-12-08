@@ -2,7 +2,7 @@
 import type { DropdownMenuProps } from "./dropdown-menu.types";
 import { ElevationEnum } from "@/types";
 import classNames from "classnames";
-import Card from "../Card/card.component";
+import Card from "@/components/basics/Card/card.component";
 import DropdownMenuItem from "./dropdown-menu-item.component";
 
 const DropdownMenu = ({ className, list = [], children, ...props }: DropdownMenuProps) => {

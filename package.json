@@ -16,7 +16,6 @@
   ],
   "engines": {
     "node": ">= 14",
-    "npm": "please-use-yarn",
     "yarn": ">= 1.22 < 2"
   },
   "scripts": {

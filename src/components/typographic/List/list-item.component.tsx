@@ -1,7 +1,7 @@
 import { ListItemProps } from "./list.types";
 import classNames from "classnames";
-import Icon from "@/components/basics/Icon/icon.component";
-import Text from "@/components/typographic/Text/text.component";
+import Icon from "@/components/basics/Icon";
+import Text from "@/components/typographic/Text";
 import { TextSizes } from "@/components/typographic/Text/text.types";
 import { SizesEnum } from "@/types";
 

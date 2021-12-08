@@ -1,5 +1,5 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import List from "./list.component";
+import List from "./";
 import { ListItemProps } from "./list.types";
 
 const mockedData = [

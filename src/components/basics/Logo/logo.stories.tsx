@@ -3,7 +3,7 @@ import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import { LogoColorsEnum } from "@/components/basics/Logo/logo.types";
 import { SizesEnum } from "@/types";
-import Logo from "./logo.component";
+import Logo from "./";
 import variants from "./variants";
 
 export default {

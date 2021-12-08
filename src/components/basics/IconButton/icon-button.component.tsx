@@ -1,7 +1,7 @@
 import type { IconButtonProps } from "./icon-button.types";
 import classNames from "classnames";
-import Button from "@/components/basics/Button/button.component";
-import Icon from "@/components/basics/Icon/icon.component";
+import Button from "@/components/basics/Button";
+import Icon from "@/components/basics/Icon";
 import { SizesEnum } from "@/types";
 
 const IconButton = ({ iconName, className, children, label, ...props }: IconButtonProps) => {

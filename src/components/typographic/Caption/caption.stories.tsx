@@ -1,5 +1,5 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import Caption from "./caption.component";
+import Caption from "./";
 
 export default {
   title: "Typographic/Caption",

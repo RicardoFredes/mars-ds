@@ -42,8 +42,6 @@ export type { ToggleButtonProps } from "./components/basics/ToggleButton/toggle-
 export { default as Checkbox } from "./components/forms/Checkbox/checkbox.component";
 export type { CheckboxProps } from "./components/forms/Checkbox/checkbox.types";
 
-export { default as TextFieldIconButton } from "./components/forms/common/text-field-icon-button.component";
-
 export { default as PasswordField } from "./components/forms/PasswordField/password-field.component";
 export type { PasswordFieldProps } from "./components/forms/PasswordField/password-field.types";
 
@@ -55,6 +53,8 @@ export type { SliderProps } from "./components/forms/Slider/slider.types";
 
 export { default as TextField } from "./components/forms/TextField/text-field.component";
 export type { TextFieldProps } from "./components/forms/TextField/text-field.types";
+
+export { default as TextFieldIconButton } from "./components/forms/TextFieldIconButton/text-field-icon-button.component";
 
 export { default as ToggleSwitch } from "./components/forms/ToggleSwitch/toggle-switch.component";
 export type { ToggleSwitchProps } from "./components/forms/ToggleSwitch/toggle-switch.types";

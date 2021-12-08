@@ -1,7 +1,7 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 import { SizesEnum } from "@/types";
 import icons from "@/components/basics/Icon/lib";
-import ToggleButton from "./toggle-button.component";
+import ToggleButton from "./";
 
 export default {
   title: "Components/ToggleButton",

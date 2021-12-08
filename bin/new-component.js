@@ -10,6 +10,7 @@ const TEMPLATE_MAPPER = [
   [".module.scss", styleTemplate],
   [".stories.tsx", storiesTemplate],
   [".types.ts", typesTemplate],
+  ["index.ts", indexTemplate],
 ];
 
 const rl = readline.createInterface({
@@ -99,6 +100,12 @@ function styleTemplate(name, pathName) {
 `;
 }
 
+function indexTemplate(name, pathName) {
+  return `import ${name} from "./${pathName}.component";
+export default ${name};
+`;
+}
+
 function typesTemplate(name, pathName) {
   const typeName = `${name}Props`;
   return `export type ${typeName} = React.HTMLProps<HTMLDivElement>;
@@ -107,7 +114,7 @@ function typesTemplate(name, pathName) {
 
 function storiesTemplate(name, pathName) {
   return `import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import ${name} from "./${pathName}.component";
+import ${name} from "./";
 
 export default {
   title: "Components/${name}",

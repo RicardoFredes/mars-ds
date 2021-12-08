@@ -1,5 +1,5 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import Heading from "./heading.component";
+import Heading from "./";
 import { HeadingSizes } from "./heading.types";
 
 export default {

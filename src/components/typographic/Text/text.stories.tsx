@@ -1,5 +1,5 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import Text from "./text.component";
+import Text from "./";
 import { TextSizes } from "./text.types";
 
 export default {

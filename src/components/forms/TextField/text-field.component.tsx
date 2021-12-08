@@ -8,7 +8,7 @@ import classNames from "classnames";
 import { generateHash } from "@/services/hash";
 import { masker } from "@/services/masker";
 
-import TextFieldIconButton from "@/components/forms/common/text-field-icon-button.component";
+import TextFieldIconButton from "@/components/forms/TextFieldIconButton";
 
 const TextField = ({
   className,

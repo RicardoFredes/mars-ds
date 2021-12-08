@@ -1,7 +1,7 @@
 import { PasswordFieldType, PasswordIconName, PasswordFieldProps } from "./password-field.types";
 
 import { useState } from "react";
-import TextField from "@/components/forms/TextField/text-field.component";
+import TextField from "@/components/forms/TextField";
 
 const PasswordField = (props: PasswordFieldProps) => {
   const [type, setType] = useState(PasswordFieldType.Hidden);

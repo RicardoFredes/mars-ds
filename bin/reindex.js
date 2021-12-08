@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const fs = require("fs");
+const fs = require("fs-extra");
 const { kebabCaseToPascalCase } = require("./helpers/convertNames");
 
 const COMPONENTS_FOLDER = "./src/components";
@@ -11,6 +11,8 @@ function main() {
 
   reindexComponents(filesList);
   reindexStyles(filesList);
+
+  // generateIndexFiles(filesList);
 
   console.log("Success");
 }
@@ -47,6 +49,22 @@ function getFiles(dir, $files) {
     }
   }
   return $files;
+}
+
+function generateIndexFiles(list = []) {
+  for (const path of list) {
+    if (/index.ts/.test(path) || !/component.tsx/.test(path)) continue;
+    const componentName = kebabCaseToPascalCase(path);
+    const content = indexTemplate(componentName, path.replace(/.*\/(.*)\.tsx/, "$1"));
+    const dest = path.replace("./", "./src/").replace(/(.*\/).*/, "$1index.ts");
+    fs.writeFileSync(dest, content);
+  }
+}
+
+function indexTemplate(name, pathName) {
+  return `import ${name} from "./${pathName}";
+export default ${name};
+`;
 }
 
 function getComponentsAndTypes(list = []) {

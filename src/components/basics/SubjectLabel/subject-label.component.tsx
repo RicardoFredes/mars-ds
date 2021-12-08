@@ -1,4 +1,4 @@
-import Label from "@/components/basics/Label/label.component";
+import Label from "@/components/basics/Label";
 import { LabelTheme } from "@/components/basics/Label/label.types";
 import type { SubjectLabelProps } from "./subject-label.types";
 

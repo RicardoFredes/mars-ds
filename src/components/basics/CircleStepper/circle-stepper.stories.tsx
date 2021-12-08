@@ -1,5 +1,5 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import CircleStepper from "./circle-stepper.component";
+import CircleStepper from "./";
 
 export default {
   title: "Components/Stepper/CircleStepper",

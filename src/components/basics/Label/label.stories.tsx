@@ -1,5 +1,5 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import Label from "./label.component";
+import Label from "./";
 import { LabelTheme, LabelVariants } from "./label.types";
 
 enum LocalLabelTheme {

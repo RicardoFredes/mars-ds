@@ -1,7 +1,7 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import { SizesEnum, VariantsEnum } from "@/types";
-import Button from "./button.component";
+import Button from ".";
 
 export default {
   title: "Components/Button",

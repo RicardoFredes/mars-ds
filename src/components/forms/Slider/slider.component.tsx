@@ -1,4 +1,4 @@
-import Subtitle from "@/components/typographic/Subtitle/subtitle.component";
+import Subtitle from "@/components/typographic/Subtitle";
 import classNames from "classnames";
 import { ChangeEvent, useState } from "react";
 import { SliderProps } from "./slider.types";

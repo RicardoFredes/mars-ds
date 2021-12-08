@@ -1,41 +1,42 @@
 import type { LogoProps } from "@/components/basics/Logo/logo.types";
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import { LogoColorsEnum } from "@/components/basics/Logo/logo.types";
-import { SizesEnum } from "@/types";
+import { LogoNameEnums, LogoVariantsEnum } from "@/components/basics/Logo/logo.types";
 import Logo from "./";
-import variants from "./variants";
 
 export default {
   title: "Components/Logo",
   component: Logo,
   argTypes: {
-    variant: {
+    name: {
       description: "The variant of our logo",
       control: { type: "radio" },
-      options: Object.keys(variants),
-      defaultValue: "full",
+      options: LogoNameEnums,
+      defaultValue: LogoNameEnums.Full,
     },
-    color: {
+    variant: {
       description: "The color used for the logo, following our brand guidelines",
       control: { type: "radio" },
-      options: LogoColorsEnum,
-      defaultValue: LogoColorsEnum.Primary,
+      options: LogoVariantsEnum,
+      defaultValue: LogoVariantsEnum.Primary,
     },
-    size: {
+    height: {
       description: "The size of the logo",
-      control: { type: "radio" },
-      options: SizesEnum,
-      defaultValue: SizesEnum.Medium,
+      control: { type: "number" },
+      defaultValue: 40,
     },
   },
 } as ComponentMeta<typeof Logo>;
 
-const Template: ComponentStory<typeof Logo> = ({ ...args }: LogoProps) => <Logo {...args} />;
+const Template: ComponentStory<typeof Logo> = ({ ...args }: LogoProps) => (
+  <div
+    style={{
+      padding: 24,
+      backgroundColor: args.variant === LogoVariantsEnum.Neutral ? "gray" : undefined,
+    }}
+  >
+    <Logo {...args} />
+  </div>
+);
 
 export const Default = Template.bind({});
-Default.args = {
-  variant: "full",
-  color: LogoColorsEnum.Primary,
-  size: SizesEnum.Medium,
-};

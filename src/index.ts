@@ -45,6 +45,9 @@ export type { CheckboxProps } from "./components/forms/Checkbox/checkbox.types";
 export { default as PasswordField } from "./components/forms/PasswordField/password-field.component";
 export type { PasswordFieldProps } from "./components/forms/PasswordField/password-field.types";
 
+export { default as Radio } from "./components/forms/Radio/radio.component";
+export type { RadioProps } from "./components/forms/Radio/radio.types";
+
 export { default as SelectField } from "./components/forms/SelectField/select-field.component";
 export type { SelectFieldProps } from "./components/forms/SelectField/select-field.types";
 
@@ -59,19 +62,19 @@ export { default as TextFieldIconButton } from "./components/forms/TextFieldIcon
 export { default as ToggleSwitch } from "./components/forms/ToggleSwitch/toggle-switch.component";
 export type { ToggleSwitchProps } from "./components/forms/ToggleSwitch/toggle-switch.types";
 
-export { default as Caption } from "./components/typographic/Caption/caption.component";
-export type { CaptionProps } from "./components/typographic/Caption/caption.types";
+export { default as Caption } from "./components/typographics/Caption/caption.component";
+export type { CaptionProps } from "./components/typographics/Caption/caption.types";
 
-export { default as Heading } from "./components/typographic/Heading/heading.component";
-export type { HeadingProps } from "./components/typographic/Heading/heading.types";
+export { default as Heading } from "./components/typographics/Heading/heading.component";
+export type { HeadingProps } from "./components/typographics/Heading/heading.types";
 
-export { default as ListItem } from "./components/typographic/List/list-item.component";
+export { default as ListItem } from "./components/typographics/List/list-item.component";
 
-export { default as List } from "./components/typographic/List/list.component";
-export type { ListProps } from "./components/typographic/List/list.types";
+export { default as List } from "./components/typographics/List/list.component";
+export type { ListProps } from "./components/typographics/List/list.types";
 
-export { default as Subtitle } from "./components/typographic/Subtitle/subtitle.component";
-export type { SubtitleProps } from "./components/typographic/Subtitle/subtitle.types";
+export { default as Subtitle } from "./components/typographics/Subtitle/subtitle.component";
+export type { SubtitleProps } from "./components/typographics/Subtitle/subtitle.types";
 
-export { default as Text } from "./components/typographic/Text/text.component";
-export type { TextProps } from "./components/typographic/Text/text.types";
+export { default as Text } from "./components/typographics/Text/text.component";
+export type { TextProps } from "./components/typographics/Text/text.types";

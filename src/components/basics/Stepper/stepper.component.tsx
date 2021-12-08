@@ -1,10 +1,10 @@
 import type { StepperProps } from "./stepper.types";
-import { SubtitlesSizes } from "@/components/typographic/Subtitle/subtitle.types";
+import { SubtitlesSizes } from "@/components/typographics/Subtitle/subtitle.types";
 
 import classNames from "classnames";
 
 import Icon from "@/components/basics/Icon";
-import Subtitle from "@/components/typographic/Subtitle";
+import Subtitle from "@/components/typographics/Subtitle";
 
 const Stepper = ({ steps, position = 0 }: StepperProps) => {
   return (

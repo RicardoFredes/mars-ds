@@ -2,10 +2,10 @@ import type { IconProps } from "@/components/basics/Icon/icon.types";
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import { SizesEnum } from "@/types";
-import { TextSizes } from "@/components/typographic/Text/text.types";
+import { TextSizes } from "@/components/typographics/Text/text.types";
 
 import Icon from "./";
-import Text from "@/components/typographic/Text";
+import Text from "@/components/typographics/Text";
 import icons from "./lib";
 
 export default {

@@ -2,7 +2,7 @@ import type { ComponentMeta, ComponentStory } from "@storybook/react";
 import ToggleSwitch from "./";
 
 export default {
-  title: "Form/ToggleSwitch",
+  title: "Forms/ToggleSwitch",
   component: ToggleSwitch,
   argTypes: {},
 } as ComponentMeta<typeof ToggleSwitch>;

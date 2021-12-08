@@ -3,7 +3,7 @@ import SelectField from "./";
 import { SelectFieldOption } from "./select-field.types";
 
 export default {
-  title: "Form/SelectField",
+  title: "Forms/SelectField",
   component: SelectField,
   argTypes: {
     defaultOption: {},

@@ -2,7 +2,7 @@ import type { ComponentMeta, ComponentStory } from "@storybook/react";
 import PasswordField from "./";
 
 export default {
-  title: "Form/PasswordField",
+  title: "Forms/PasswordField",
   component: PasswordField,
   argTypes: {},
 } as ComponentMeta<typeof PasswordField>;

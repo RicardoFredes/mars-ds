@@ -1,5 +1,5 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import List from "./";
+import List from ".";
 import { ListItemProps } from "./list.types";
 
 const mockedData = [
@@ -15,7 +15,7 @@ const mockedData = [
 ];
 
 export default {
-  title: "Typographic/List",
+  title: "Typographics/List",
   component: List,
   argTypes: {},
 } as ComponentMeta<typeof List>;

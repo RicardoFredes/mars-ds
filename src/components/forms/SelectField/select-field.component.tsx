@@ -6,7 +6,7 @@ import { ChangeEvent, MouseEvent, useEffect, useRef, useState } from "react";
 
 import TextField from "@/components/forms/TextField";
 import DropdownMenu from "@/components/basics/DropdownMenu";
-import Text from "@/components/typographic/Text";
+import Text from "@/components/typographics/Text";
 
 import { generateHash } from "@/services/hash";
 import { mathQuery } from "@/services/compare";

@@ -5,8 +5,8 @@ export default {
   title: "Components/Stepper/CircleStepper",
   component: CircleStepper,
   argtypes: {
-    totalSteps: {
-      control: { type: "number" },
+    steps: {
+      control: { type: "array" },
     },
     position: {
       control: { type: "number" },
@@ -17,8 +17,8 @@ export default {
 const Template: ComponentStory<typeof CircleStepper> = (args) => <CircleStepper {...args} />;
 
 const DefaultArgs = {
-  totalSteps: 6,
-  position: 5,
+  steps: ["Identificação", "Adicionais", "Pagamento", "Endereço de Cobrança", "Resumo"],
+  position: 1,
 };
 
 export const Default = Template.bind({});

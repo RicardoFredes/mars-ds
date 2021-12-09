@@ -43,47 +43,4 @@ jobs:
           # merge commit, and it's easy to commit this by mistake. Enable this option
           # to also validate the commit message for one commit PRs.
           validateSingleCommit: true
-
-  application:
-    name: Build, lint and test on Node.js ${{ matrix.node }} and ${{ matrix.os }}
-
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        node: ["16.x"]
-        os: [ubuntu-latest]
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-
-      - uses: actions/cache@v2.1.6
-        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
-        with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-
-      - name: Use Node ${{ matrix.node }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node }}
-
-      - name: Install dependencies
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: yarn --pure-lockfile --non-interactive --no-progress
-
-      - name: Lint
-        run: yarn lint
-
-      - name: Test
-        run: yarn test --ci --coverage --maxWorkers=2
-
-      - name: Build
-        run: yarn build
+          

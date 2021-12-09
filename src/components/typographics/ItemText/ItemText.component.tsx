@@ -1,9 +1,9 @@
 import type { ItemTextProps } from "./ItemText.types";
 import classNames from "classnames";
 
-const ItemText = ({ className, children, ...props }: ItemTextProps) => {
+const ItemText = ({ as, className, children, ...props }: ItemTextProps) => {
   const cn = classNames("item-text", className);
-  const ItemTextTag = "li";
+  const ItemTextTag = as || "div";
 
   return (
     <ItemTextTag className={cn} {...props}>

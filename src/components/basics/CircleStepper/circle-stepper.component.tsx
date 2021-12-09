@@ -57,7 +57,6 @@ const CircleStepper = ({ position, steps }: StepperProps) => {
           {"/"}
           <span className="circleStepper__icon__totalSteps">{totalSteps}</span>
         </h2>
-
       </div>
     </div>
   );

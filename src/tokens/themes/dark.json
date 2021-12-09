@@ -1,0 +1,56 @@
+{
+  "action": {
+    "active": {
+      "value": "#919eab",
+      "type": "color"
+    },
+    "hover": {
+      "value": "#919eab14",
+      "type": "color"
+    },
+    "selected": {
+      "value": "#919eab29",
+      "type": "color"
+    },
+    "disabled": {
+      "value": "#919eabcc",
+      "type": "color"
+    },
+    "disabled-background": {
+      "value": "#919eab3d",
+      "type": "color"
+    },
+    "focus": {
+      "value": "#919eab3d",
+      "type": "color"
+    }
+  },
+  "text": {
+    "primary": {
+      "value": "#ffffff",
+      "type": "color"
+    },
+    "secondary": {
+      "value": "#919eab",
+      "type": "color"
+    },
+    "disabled": {
+      "value": "#637381",
+      "type": "color"
+    }
+  },
+  "background": {
+    "primary": {
+      "value": "#212b36",
+      "type": "color"
+    },
+    "secondary": {
+      "value": "#161c24",
+      "type": "color"
+    },
+    "neutral": {
+      "value": "#919eab29",
+      "type": "color"
+    }
+  }
+}

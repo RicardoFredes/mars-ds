@@ -70,6 +70,9 @@ export type { CaptionProps } from "./components/typographics/Caption/caption.typ
 export { default as Heading } from "./components/typographics/Heading/heading.component";
 export type { HeadingProps } from "./components/typographics/Heading/heading.types";
 
+export { default as ItemText } from "./components/typographics/ItemText/ItemText.component";
+export type { ItemTextProps } from "./components/typographics/ItemText/ItemText.types";
+
 export { default as ListItem } from "./components/typographics/List/list-item.component";
 
 export { default as List } from "./components/typographics/List/list.component";

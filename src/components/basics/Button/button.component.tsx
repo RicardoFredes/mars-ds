@@ -30,7 +30,7 @@ const Button = ({
 
   const cn = classNames(
     "btn",
-    `btn--variant-${variant}`,
+    `btn--${variant}`,
     `btn--size-${size}`,
     [{ "btn--is-disabled": props.disabled }, { "btn--is-pressed": isPressed }],
     className

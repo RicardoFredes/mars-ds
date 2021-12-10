@@ -19,7 +19,7 @@
     align-items: center;
     width: 34px;
     height: 14px;
-    background-color: $color-grey-500;
+    background-color: $color-neutral-main;
     border-radius: $border-radius-sm;
   }
   &__thumb {
@@ -28,9 +28,9 @@
     height: 20px;
     width: 20px;
     transition: transform ease 0.2s;
-    background-color: $color-grey-100;
+    background-color: $color-neutral-lighter;
     border-radius: 50%;
-    box-shadow: $shadow-low;
+    box-shadow: $shadow-elevation-100;
     &:before {
       content: "";
       display: block;
@@ -39,7 +39,7 @@
       position: absolute;
       top: -9px;
       left: -9px;
-      background-color: $color-transparent-grey-8;
+      background-color: $color-neutral-ghost;
       border-radius: 50%;
       transition: transform ease 0.2s;
       transform: scale(0);
@@ -52,7 +52,7 @@
         background-color: $color-info-main;
         transform: translateX(14px);
         &:before {
-          background-color: $color-transparent-info-8;
+          background-color: $color-info-ghost;
         }
       }
       &__track {
@@ -71,10 +71,10 @@
         cursor: inherit;
       }
       &__track {
-        background-color: $color-action-states-disabled-background;
+        background-color: $color-action-disabled-background;
       }
       &__thumb {
-        background-color: $color-grey-400;
+        background-color: $color-neutral-main;
       }
     }
   }

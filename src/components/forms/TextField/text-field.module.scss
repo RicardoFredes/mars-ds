@@ -1,9 +1,8 @@
 .field {
   position: relative;
-  font-family: $font-family-main;
   font-weight: 400;
   font-size: 16px;
-  color: $color-text-color-text-secondary;
+  color: $color-text-secondary;
   &__fieldset {
     border: 1px solid #637381;
     border-radius: $border-radius-sm;
@@ -14,7 +13,7 @@
   }
   &:hover {
     .field__fieldset {
-      border-color: $color-text-color-text-primary;
+      border-color: $color-text-primary;
     }
   }
   &__icon,
@@ -39,8 +38,7 @@
         width: 32px;
         border-radius: 50%;
         position: absolute;
-        background-color: $color-transparent-grey-8;
-        z-index: -1;
+        background-color: $color-neutral-ghost;
         left: -4px;
         transform: scale(0);
         transition: transform ease 0.2s;
@@ -63,7 +61,7 @@
     height: 100%;
     border: none;
     background-color: transparent;
-    color: $color-text-color-text-primary;
+    color: $color-text-primary;
     font-weight: 400;
     &:focus {
       outline: none;
@@ -77,12 +75,11 @@
     position: absolute;
     left: 20px;
     transform-origin: left center;
-    z-index: -1;
   }
   &__help {
     font-size: 12px;
     padding: $spacing-xs $spacing-lg;
-    color: $color-text-color-text-primary;
+    color: $color-text-primary;
   }
   &--has-left-icon {
     .field__icon-left {
@@ -102,7 +99,7 @@
             display: inline-block;
           }
           &__label {
-            transform: translate(-2px, -120%) scale(0.75);
+            transform: translate(-1px, -170%) scale(0.75);
           }
         }
       }
@@ -126,14 +123,14 @@
           &__icon,
           &__input,
           &__label {
-            color: $color-text-color-text-disabled;
+            color: $color-text-disabled;
           }
           &__fieldset {
-            border-color: $color-action-states-disabled;
+            border-color: $color-action-disabled;
           }
           &__icon {
             &--has-action {
-              color: $color-text-color-text-disabled;
+              color: $color-text-disabled;
               pointer-events: none;
               cursor: inherit;
             }

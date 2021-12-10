@@ -5,9 +5,10 @@
 @import "reset.scss";
 
 body {
-  font-family: $font-families-main;
+  font-family: $font-family-main;
   font-size: 16px;
   line-height: 1rem;
+  color: $color-text-primary;
 }
 
 @import "components.scss";

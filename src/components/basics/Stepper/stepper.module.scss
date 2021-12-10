@@ -9,8 +9,8 @@
     height: 24px;
     width: 24px;
     border: 2px solid transparent;
-    background-color: $color-text-color-text-disabled;
-    color: $color-common-white;
+    background-color: $color-text-disabled;
+    color: $color-background-primary;
     text-align: center;
     font-weight: 500;
     &-icon svg {
@@ -23,7 +23,7 @@
     position: absolute;
     top: 40px;
     text-align: center;
-    color: $color-text-color-text-disabled;
+    color: $color-text-disabled;
     font-weight: 300;
   }
   &__item {
@@ -50,7 +50,7 @@
         }
         &__label {
           font-weight: 500;
-          color: $color-text-color-text-primary;
+          color: $color-text-primary;
         }
       }
     }

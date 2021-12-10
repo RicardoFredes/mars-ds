@@ -1,16 +1,16 @@
 .card {
-  background-color: $color-background-default;
-  padding: $spacing-xl;
+  background-color: $color-background-primary;
+  padding: 24px;
   border-radius: $border-radius-lg;
   &--elevation {
     &-low {
-      box-shadow: $shadow-low;
+      box-shadow: $shadow-elevation-100;
     }
     &-medium {
-      box-shadow: $shadow-medium;
+      box-shadow: $shadow-elevation-300;
     }
     &-high {
-      box-shadow: $shadow-high;
+      box-shadow: $shadow-elevation-500;
     }
   }
 }

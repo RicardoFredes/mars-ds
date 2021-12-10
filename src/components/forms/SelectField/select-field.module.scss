@@ -11,7 +11,7 @@
     }
     &-item {
       &--is-selected {
-        background-color: $color-transparent-grey-8;
+        background-color: $color-neutral-ghost;
         .dropdown-menu__text {
           font-weight: 500;
         }
@@ -81,8 +81,8 @@
           z-index: 102;
           top: 0;
           left: 0;
-          background-color: $color-background-default;
-          box-shadow: $shadow-high;
+          background-color: $color-background-primary;
+          box-shadow: $shadow-elevation-500;
         }
       }
     }

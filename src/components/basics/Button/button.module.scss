@@ -1,4 +1,7 @@
 .btn {
+  $ripple25: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMjUpIiBkPSJNMTIsMkExMCwxMCAwIDAsMCAyLDEyQTEwLDEwIDAgMCwwIDEyLDIyQTEwLDEwIDAgMCwwIDIyLDEyQTEwLDEwIDAgMCwwIDEyLDJaIi8+PC9zdmc+");
+  $ripple50: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0icmdiYSgyNTUsIDI1NSwgMjU1LCAwLjUpIiBkPSJNMTIsMkExMCwxMCAwIDAsMCAyLDEyQTEwLDEwIDAgMCwwIDEyLDIyQTEwLDEwIDAgMCwwIDIyLDEyQTEwLDEwIDAgMCwwIDEyLDJaIiAvPjwvc3ZnPg==");
+
   appearance: none;
   font-family: $font-family-main;
   font-weight: 700;
@@ -10,7 +13,8 @@
   box-sizing: border-box;
   text-decoration: none;
   border-radius: $border-radius-sm;
-  font-size: 15px;
+  font-size: $font-size-cta;
+  line-height: 1.6em;
   align-items: center;
   justify-content: center;
   padding: 11px 22px;
@@ -22,63 +26,72 @@
     pointer-events: none;
   }
 
-  &--variant-primary {
+  &--primary {
     background-color: $color-primary-main;
-    color: $color-background-default;
+    color: $color-background-primary;
     &:hover {
       background-color: $color-primary-dark;
     }
     &:disabled {
-      background-color: $color-action-states-disabled-background;
-      color: $color-action-states-disabled;
+      background-color: $color-action-disabled-background;
+      color: $color-action-disabled;
     }
   }
 
-  &--variant-secondary {
-    background-color: $color-background-default;
+  &--secondary {
+    background-color: $color-background-primary;
     color: $color-primary-main;
     border-color: $color-primary-main;
     &:hover {
       background-color: $color-primary-lighter;
     }
     &:disabled {
-      color: $color-action-states-disabled;
-      border-color: $color-action-states-disabled-background;
+      color: $color-action-disabled;
+      border-color: $color-action-disabled-background;
     }
   }
 
-  &--variant-neutral,
-  &--variant-text {
-    color: $color-text-color-text-primary;
+  &--neutral,
+  &--text {
+    color: $color-text-primary;
     &:hover {
-      background-color: $color-transparent-grey-12;
+      background-color: $color-neutral-ghost;
     }
     &:disabled {
-      color: $color-action-states-disabled;
+      color: $color-action-disabled;
     }
   }
-  &--variant-neutral {
-    background-color: $color-background-default;
-    border-color: $color-action-states-disabled-background;
+  &--neutral {
+    background-color: $color-background-primary;
+    border-color: $color-action-disabled-background;
   }
 
   &--size-sm {
-    font-size: 14px;
-    padding: 6px 16px;
+    font-size: $font-size-xxs;
+    padding: 5px 16px;
+    min-height: 36px;
   }
 
   &--is-pressed {
-    background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0icmdiYSgyNTUsIDI1NSwgMjU1LCAwLjUpIiBkPSJNMTIsMkExMCwxMCAwIDAsMCAyLDEyQTEwLDEwIDAgMCwwIDEyLDIyQTEwLDEwIDAgMCwwIDIyLDEyQTEwLDEwIDAgMCwwIDEyLDJaIiAvPjwvc3ZnPg==");
+    background-image: $ripple50;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     background-size: 0;
     animation: ripple 0.3s ease;
   }
+
+  &--primary {
+    &.btn {
+      &--is-pressed {
+        background-image: $ripple25;
+      }
+    }
+  }
 }
 
 @keyframes ripple {
   to {
-    background-size: 120%;
+    background-size: 130%;
   }
 }

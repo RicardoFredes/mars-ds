@@ -3,18 +3,6 @@
     "value": "#919eab3d",
     "type": "color"
   },
-  "button": {
-    "value": "#919eab52",
-    "type": "color"
-  },
-  "black": {
-    "value": "#000000",
-    "type": "color"
-  },
-  "white": {
-    "value": "#ffffff",
-    "type": "color"
-  },
   "primary": {
     "lighter": {
       "value": "#fee6d8",
@@ -37,7 +25,7 @@
       "type": "color"
     },
     "ghost": {
-      "value": "white",
+      "value": "#ed434329",
       "type": "color"
     }
   },
@@ -63,7 +51,7 @@
       "type": "color"
     },
     "ghost": {
-      "value": "white",
+      "value": "#1890ff29",
       "type": "color"
     }
   },
@@ -89,7 +77,7 @@
       "type": "color"
     },
     "ghost": {
-      "value": "white",
+      "value": "#54d62c29",
       "type": "color"
     }
   },
@@ -115,7 +103,7 @@
       "type": "color"
     },
     "ghost": {
-      "value": "white",
+      "value": "#ffc10729",
       "type": "color"
     }
   },
@@ -141,67 +129,119 @@
       "type": "color"
     },
     "ghost": {
-      "value": "white",
+      "value": "#f9406229",
       "type": "color"
     }
   },
-  "grey": {
-    "100": {
-      "value": "#f9fafb",
-      "type": "color"
-    },
-    "200": {
+  "neutral": {
+    "lighter": {
       "value": "#f4f6f8",
       "type": "color"
     },
-    "300": {
+    "light": {
       "value": "#dfe3e8",
       "type": "color"
     },
-    "400": {
+    "main": {
       "value": "#c4cdd5",
       "type": "color"
     },
-    "500": {
+    "dark": {
       "value": "#919eab",
       "type": "color"
     },
-    "600": {
+    "darker": {
       "value": "#637381",
       "type": "color"
     },
-    "700": {
-      "value": "#454f5b",
-      "type": "color"
-    },
-    "800": {
-      "value": "#212b36",
-      "type": "color"
-    },
-    "900": {
-      "value": "#161c24",
+    "ghost": {
+      "value": "#919eab29",
       "type": "color"
     }
   },
-  "gradient": {
-    "primary": {
-      "value": "linear-gradient(45deg, #eda4a4 0%, #ed4343 100%)",
+  "matematica": {
+    "ghost": {
+      "value": "#da700529",
       "type": "color"
     },
-    "info": {
-      "value": "linear-gradient(45deg, #74caff 0%, #0c53b7 100%)",
+    "main": {
+      "value": "#da7005cc",
       "type": "color"
     },
-    "success": {
-      "value": "linear-gradient(45deg, #aaf27f 0%, #54d62c 100%)",
+    "dark": {
+      "value": "#BB5603",
+      "type": "color"
+    }
+  },
+  "natureza": {
+    "ghost": {
+      "value": "#7c9a2d29",
       "type": "color"
     },
-    "warning": {
-      "value": "linear-gradient(45deg, #ffe16a 0%, #de980f 100%)",
+    "main": {
+      "value": "#7c9a2dcc",
       "type": "color"
     },
-    "error": {
-      "value": "linear-gradient(45deg, #ff8db6 0%, #f94062 100%)",
+    "dark": {
+      "value": "#4C7425",
+      "type": "color"
+    }
+  },
+  "humanas": {
+    "ghost": {
+      "value": "#50a0d229",
+      "type": "color",
+      "description": "FEAC25"
+    },
+    "main": {
+      "value": "#50a0d2cc",
+      "type": "color"
+    },
+    "dark": {
+      "value": "#1485A3",
+      "type": "color"
+    }
+  },
+  "linguagens": {
+    "ghost": {
+      "value": "#825a9629",
+      "type": "color",
+      "description": "25C2FB"
+    },
+    "main": {
+      "value": "#825a96cc",
+      "type": "color"
+    },
+    "dark": {
+      "value": "#703C87",
+      "type": "color"
+    }
+  },
+  "redacao": {
+    "ghost": {
+      "value": "#d29b0029",
+      "type": "color"
+    },
+    "main": {
+      "value": "#d29b00cc",
+      "type": "color"
+    },
+    "dark": {
+      "value": "#CA8B0F",
+      "type": "color"
+    }
+  },
+  "medicina": {
+    "ghost": {
+      "value": "#55a8a929",
+      "type": "color"
+    },
+    "main": {
+      "value": "#55a8a9cc",
+      "type": "color"
+    },
+    "dark": {
+      "value": "#2E6B6B",
       "type": "color"
     }
   },
@@ -214,13 +254,17 @@
       "value": "#637381",
       "type": "color"
     },
+    "terciary": {
+      "value": "#ffffff",
+      "type": "color"
+    },
     "disabled": {
       "value": "#919eab",
       "type": "color"
     },
     "overline": {
       "fontFamily": {
-        "value": "{fontFamilies.main}"
+        "value": "{font-family.main}"
       },
       "fontWeight": {
         "value": "{fontWeights.main.bold}"
@@ -246,7 +290,7 @@
     },
     "label": {
       "fontFamily": {
-        "value": "{fontFamilies.main}"
+        "value": "{font-family.main}"
       },
       "fontWeight": {
         "value": "{fontWeights.main.bold}"
@@ -272,7 +316,7 @@
     },
     "list": {
       "fontFamily": {
-        "value": "{fontFamilies.acent}"
+        "value": "{font-family.acent}"
       },
       "fontWeight": {
         "value": "{fontWeights.acent.bold}"
@@ -298,7 +342,7 @@
     },
     "test": {
       "fontFamily": {
-        "value": "{fontFamilies.main}"
+        "value": "{font-family.main}"
       },
       "fontWeight": {
         "value": "{fontWeights.main.regular}"
@@ -324,7 +368,7 @@
     },
     "caption": {
       "fontFamily": {
-        "value": "{fontFamilies.main}"
+        "value": "{font-family.main}"
       },
       "fontWeight": {
         "value": "{fontWeights.main.regular}"
@@ -351,7 +395,7 @@
     "display": {
       "lg": {
         "fontFamily": {
-          "value": "{fontFamilies.acent}"
+          "value": "{font-family.acent}"
         },
         "fontWeight": {
           "value": "{fontWeights.acent.semibold}"
@@ -377,7 +421,7 @@
       },
       "md": {
         "fontFamily": {
-          "value": "{fontFamilies.acent}"
+          "value": "{font-family.acent}"
         },
         "fontWeight": {
           "value": "{fontWeights.acent.semibold}"
@@ -405,7 +449,7 @@
     "heading": {
       "lg": {
         "fontFamily": {
-          "value": "{fontFamilies.acent}"
+          "value": "{font-family.acent}"
         },
         "fontWeight": {
           "value": "{fontWeights.acent.extrabold}"
@@ -431,7 +475,7 @@
       },
       "md": {
         "fontFamily": {
-          "value": "{fontFamilies.acent}"
+          "value": "{font-family.acent}"
         },
         "fontWeight": {
           "value": "{fontWeights.acent.extrabold}"
@@ -457,7 +501,7 @@
       },
       "sm": {
         "fontFamily": {
-          "value": "{fontFamilies.acent}"
+          "value": "{font-family.acent}"
         },
         "fontWeight": {
           "value": "{fontWeights.acent.extrabold}"
@@ -483,7 +527,7 @@
       },
       "xs": {
         "fontFamily": {
-          "value": "{fontFamilies.acent}"
+          "value": "{font-family.acent}"
         },
         "fontWeight": {
           "value": "{fontWeights.acent.extrabold}"
@@ -511,7 +555,7 @@
     "subtitle": {
       "md": {
         "fontFamily": {
-          "value": "{fontFamilies.main}"
+          "value": "{font-family.main}"
         },
         "fontWeight": {
           "value": "{fontWeights.main.medium}"
@@ -537,7 +581,7 @@
       },
       "sm": {
         "fontFamily": {
-          "value": "{fontFamilies.main}"
+          "value": "{font-family.main}"
         },
         "fontWeight": {
           "value": "{fontWeights.main.medium}"
@@ -565,7 +609,7 @@
     "body": {
       "md": {
         "fontFamily": {
-          "value": "{fontFamilies.main}"
+          "value": "{font-family.main}"
         },
         "fontWeight": {
           "value": "{fontWeights.main.regular}"
@@ -591,7 +635,7 @@
       },
       "sm": {
         "fontFamily": {
-          "value": "{fontFamilies.main}"
+          "value": "{font-family.main}"
         },
         "fontWeight": {
           "value": "{fontWeights.main.regular}"
@@ -619,7 +663,7 @@
     "cta": {
       "lg": {
         "fontFamily": {
-          "value": "{fontFamilies.main}"
+          "value": "{font-family.main}"
         },
         "fontWeight": {
           "value": "{fontWeights.main.bold}"
@@ -645,7 +689,7 @@
       },
       "md": {
         "fontFamily": {
-          "value": "{fontFamilies.main}"
+          "value": "{font-family.main}"
         },
         "fontWeight": {
           "value": "{fontWeights.main.bold}"
@@ -713,69 +757,7 @@
       "type": "color"
     }
   },
-  "subjects": {
-    "matematica": {
-      "main": {
-        "value": "#da7005",
-        "type": "color"
-      },
-      "dark": {
-        "value": "#bb5603",
-        "type": "color"
-      }
-    },
-    "natureza": {
-      "main": {
-        "value": "#7c9a2d",
-        "type": "color"
-      },
-      "dark": {
-        "value": "#4c7425",
-        "type": "color"
-      }
-    },
-    "humanas": {
-      "main": {
-        "value": "#50a0d2",
-        "type": "color"
-      },
-      "dark": {
-        "value": "#1485a3",
-        "type": "color"
-      }
-    },
-    "linguagens": {
-      "main": {
-        "value": "#825a96",
-        "type": "color"
-      },
-      "dark": {
-        "value": "#703c87",
-        "type": "color"
-      }
-    },
-    "redacao": {
-      "main": {
-        "value": "#d29b00",
-        "type": "color"
-      },
-      "dark": {
-        "value": "#ca8b0f",
-        "type": "color"
-      }
-    },
-    "medicina": {
-      "main": {
-        "value": "#55a8a9",
-        "type": "color"
-      },
-      "dark": {
-        "value": "#2e6b6b",
-        "type": "color"
-      }
-    }
-  },
-  "fontFamilies": {
+  "font-family": {
     "main": {
       "value": "Roboto",
       "type": "fontFamilies"

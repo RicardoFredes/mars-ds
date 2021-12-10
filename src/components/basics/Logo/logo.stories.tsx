@@ -28,15 +28,6 @@ export default {
   },
 } as ComponentMeta<typeof Logo>;
 
-const Template: ComponentStory<typeof Logo> = ({ ...args }: LogoProps) => (
-  <div
-    style={{
-      padding: 24,
-      backgroundColor: args.variant === LogoVariantsEnum.Neutral ? "gray" : undefined,
-    }}
-  >
-    <Logo {...args} />
-  </div>
-);
+const Template: ComponentStory<typeof Logo> = ({ ...args }: LogoProps) => <Logo {...args} />;
 
 export const Default = Template.bind({});

@@ -1,7 +1,6 @@
 .label {
   padding: 1px $spacing-sm;
   border-radius: $border-radius-xs;
-  font-family: $font-family-main;
   font-size: 0.75rem;
   line-height: 1.7em;
   font-weight: 700;
@@ -9,97 +8,97 @@
 
   &--ghost {
     &-default {
-      background: $color-transparent-grey-16;
-      color: $color-text-color-text-secondary;
+      background: $color-neutral-ghost;
+      color: $color-text-secondary;
     }
 
     &-primary {
-      background: $color-transparent-primary-16;
+      background: $color-primary-ghost;
       color: $color-primary-dark;
     }
 
     &-info {
-      background: $color-transparent-info-16;
+      background: $color-info-ghost;
       color: $color-info-dark;
     }
 
     &-success {
-      background: $color-transparent-success-16;
+      background: $color-success-ghost;
       color: $color-success-dark;
     }
 
     &-warning {
-      background: $color-transparent-warning-16;
+      background: $color-warning-ghost;
       color: $color-warning-dark;
     }
 
     &-error {
-      background: $color-transparent-error-16;
+      background: $color-error-ghost;
       color: $color-error-dark;
     }
   }
 
   &--solid {
     &-default {
-      background: $color-grey-300;
-      color: $color-text-color-text-primary;
+      background: $color-neutral-light;
+      color: $color-text-primary;
     }
 
     &-primary {
       background: $color-primary-main;
-      color: $color-common-white;
+      color: $color-text-terciary;
     }
 
     &-info {
       background: $color-info-main;
-      color: $color-common-white;
+      color: $color-text-terciary;
     }
 
     &-success {
       background: $color-success-main;
-      color: $color-text-color-text-primary;
+      color: $color-text-primary;
     }
 
     &-warning {
       background: $color-warning-main;
-      color: $color-text-color-text-primary;
+      color: $color-text-primary;
     }
 
     &-error {
       background: $color-error-main;
-      color: $color-common-white;
+      color: $color-text-terciary;
     }
   }
 
   &--subject {
     &-redacao {
-      background: $color-transparent-subjects-redacao-16;
-      color: $color-subjects-redacao-dark;
+      background: $color-redacao-ghost;
+      color: $color-redacao-dark;
     }
 
     &-medicina {
-      background: $color-transparent-subjects-medicina-16;
-      color: $color-subjects-medicina-dark;
+      background: $color-medicina-ghost;
+      color: $color-medicina-dark;
     }
 
     &-linguagens {
-      background: $color-transparent-subjects-linguagens-16;
-      color: $color-subjects-linguagens-dark;
+      background: $color-linguagens-ghost;
+      color: $color-linguagens-dark;
     }
 
     &-humanas {
-      background: $color-transparent-subjects-humanas-16;
-      color: $color-subjects-humanas-dark;
+      background: $color-humanas-ghost;
+      color: $color-humanas-dark;
     }
 
     &-natureza {
-      background: $color-transparent-subjects-natureza-16;
-      color: $color-subjects-natureza-dark;
+      background: $color-natureza-ghost;
+      color: $color-natureza-dark;
     }
 
     &-matematica {
-      background: $color-transparent-subjects-matematica-16;
-      color: $color-subjects-matematica-dark;
+      background: $color-matematica-ghost;
+      color: $color-matematica-dark;
     }
   }
 }

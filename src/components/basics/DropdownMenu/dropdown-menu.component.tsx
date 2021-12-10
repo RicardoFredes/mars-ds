@@ -8,7 +8,7 @@ import DropdownMenuItem from "./dropdown-menu-item.component";
 const DropdownMenu = ({ className, list = [], children, ...props }: DropdownMenuProps) => {
   const cn = classNames("dropdown-menu", className);
   return (
-    <Card className={cn} elevation={ElevationEnum.High} {...props}>
+    <Card className={cn} elevation={ElevationEnum.Medium} {...props}>
       <ul>
         {list.map(({ label, children, ...itemProps }, key) => (
           <li key={key}>

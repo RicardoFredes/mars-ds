@@ -15,7 +15,7 @@
     margin: 0 0 0 8px;
   }
   &__icon {
-    color: $color-text-color-text-primary;
+    color: $color-text-primary;
     &:before {
       content: "";
       display: block;
@@ -23,7 +23,7 @@
       height: 40px;
       position: absolute;
       left: -8px;
-      background-color: $color-transparent-grey-8;
+      background-color: $color-neutral-ghost;
       border-radius: 50%;
       transition: transform ease 0.2s;
       transform: scale(0);
@@ -35,7 +35,7 @@
       &__icon {
         color: $color-info-main;
         &:before {
-          background-color: $color-transparent-info-8;
+          background-color: $color-info-ghost;
         }
       }
     }
@@ -51,10 +51,10 @@
         cursor: inherit;
       }
       &__icon {
-        color: $color-grey-400;
+        color: $color-neutral-main;
       }
       &__label {
-        color: $color-text-color-text-disabled;
+        color: $color-text-disabled;
       }
     }
   }

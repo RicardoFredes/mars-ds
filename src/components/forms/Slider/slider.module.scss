@@ -11,9 +11,9 @@
     background: linear-gradient(
       90deg,
       $color-primary-dark var(--progress-percentage),
-      $color-action-states-disabled-background var(--progress-percentage)
+      $color-action-disabled-background var(--progress-percentage)
     );
-    box-shadow: $shadow-medium;
+    // box-shadow: $shadow-elevation-100;
 
     &::-webkit-slider-thumb {
       -webkit-appearance: none;
@@ -21,15 +21,19 @@
       height: 16px;
       background: $color-primary-dark;
       border-radius: 50%;
-      border: 2px solid $color-common-white;
-      box-shadow: $shadow-medium;
+      border: 2px solid $color-background-primary;
+      box-shadow: $shadow-elevation-100;
       cursor: pointer;
     }
   }
 
   &__value {
+    display: block;
     color: $color-primary-dark;
-    font-family: $font-family-display;
-    font-weight: bold;
+    font-family: $font-family-acent;
+    font-weight: 700;
+    line-height: 1.5em;
+    margin-top: 4px;
+    font-size: 1rem;
   }
 }

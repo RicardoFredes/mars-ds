@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const fs = require("fs-extra");
-const { kebabCaseToPascalCase } = require("./helpers/convertNames");
+const { kebabCaseToPascalCase } = require("./helpers/convert-names");
 
 const COMPONENTS_FOLDER = "./src/components";
 const INDEX_FILE = "./src/index.ts";
-const STYLE_FILE = "./src/styles/index.scss";
+const STYLE_FILE = "./src/styles/components.scss";
 
 function main() {
   const filesList = getFiles(COMPONENTS_FOLDER).map((path) => path.replace("/src", ""));
@@ -18,11 +18,7 @@ function main() {
 }
 
 function reindexStyles(filesList) {
-  const scssImports = ["./tokens/index.scss", "./basics/index.scss"].map(
-    (path) => `@import "${path}";`
-  );
-
-  const content = [].concat(...scssImports, "", ...getStylesFiles(filesList), "").join("\n");
+  const content = [].concat(...getStylesFiles(filesList), "").join("\n");
 
   fs.writeFileSync(STYLE_FILE, content);
   console.log("Done: styles reindex");
@@ -51,21 +47,21 @@ function getFiles(dir, $files) {
   return $files;
 }
 
-function generateIndexFiles(list = []) {
-  for (const path of list) {
-    if (/index.ts/.test(path) || !/component.tsx/.test(path)) continue;
-    const componentName = kebabCaseToPascalCase(path);
-    const content = indexTemplate(componentName, path.replace(/.*\/(.*)\.tsx/, "$1"));
-    const dest = path.replace("./", "./src/").replace(/(.*\/).*/, "$1index.ts");
-    fs.writeFileSync(dest, content);
-  }
-}
+// function generateIndexFiles(list = []) {
+//   for (const path of list) {
+//     if (/index.ts/.test(path) || !/component.tsx/.test(path)) continue;
+//     const componentName = kebabCaseToPascalCase(path);
+//     const content = indexTemplate(componentName, path.replace(/.*\/(.*)\.tsx/, "$1"));
+//     const dest = path.replace("./", "./src/").replace(/(.*\/).*/, "$1index.ts");
+//     fs.writeFileSync(dest, content);
+//   }
+// }
 
-function indexTemplate(name, pathName) {
-  return `import ${name} from "./${pathName}";
-export default ${name};
-`;
-}
+// function indexTemplate(name, pathName) {
+//   return `import ${name} from "./${pathName}";
+// export default ${name};
+// `;
+// }
 
 function getComponentsAndTypes(list = []) {
   return list.reduce((acc, path) => {

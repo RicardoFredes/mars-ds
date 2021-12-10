@@ -15,6 +15,17 @@ function kebabCaseToPascalCase(path) {
     .join("");
 }
 
+function camelCaseToKebabCase(name) {
+  const isUppercase = (c) => /[A-Z]/.test(c);
+  let result = "";
+  for (const c of name) {
+    if (isUppercase(c)) result += `-${c.toLowerCase()}`;
+    else result += c;
+  }
+  return result;
+}
+
 module.exports = {
   kebabCaseToPascalCase,
+  camelCaseToKebabCase,
 };

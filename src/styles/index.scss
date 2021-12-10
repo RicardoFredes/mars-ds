@@ -1,24 +1,13 @@
-@import "./tokens/index.scss";
-@import "./basics/index.scss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-@import "../components/basics/Button/button.module.scss";
-@import "../components/basics/Card/card.module.scss";
-@import "../components/basics/CircleStepper/circle-stepper.module.scss";
-@import "../components/basics/DropdownMenu/dropdown-menu.module.scss";
-@import "../components/basics/Icon/icon.module.scss";
-@import "../components/basics/IconButton/icon-button.module.scss";
-@import "../components/basics/Label/label.module.scss";
-@import "../components/basics/Logo/logo.module.scss";
-@import "../components/basics/Stepper/stepper.module.scss";
-@import "../components/basics/ToggleButton/toggle-button.module.scss";
-@import "../components/forms/Checkbox/checkbox.module.scss";
-@import "../components/forms/Radio/radio.module.scss";
-@import "../components/forms/SelectField/select-field.module.scss";
-@import "../components/forms/Slider/slider.module.scss";
-@import "../components/forms/TextField/text-field.module.scss";
-@import "../components/forms/ToggleSwitch/toggle-switch.module.scss";
-@import "../components/typographics/Caption/caption.module.scss";
-@import "../components/typographics/Heading/heading.module.scss";
-@import "../components/typographics/List/list.module.scss";
-@import "../components/typographics/Subtitle/subtitle.module.scss";
-@import "../components/typographics/Text/text.module.scss";
+@import "../tokens/scss/index.scss";
+@import "reset.scss";
+
+body {
+  font-family: $font-families-main;
+  font-size: 16px;
+  line-height: 1rem;
+}
+
+@import "components.scss";

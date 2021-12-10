@@ -35,9 +35,12 @@ main();
 
 function saveScss(css, scss, tokenName, isBase = false) {
   if (isBase) {
-    saveFile(BASE_PATH, `scss/index.scss`, `${scss.join("\n")}\n`);
+    const themeImports = Object.values(TOKENS)
+      .map((name) => `@import "./${name}.scss";`)
+      .join("\n");
+    saveFile(BASE_PATH, `scss/index.scss`, `${scss.join("\n")}\n\n${themeImports}\n`);
   }
-  const cssVariables = css.join(`  \n`);
+  const cssVariables = css.map((a) => `  ${a}`).join(`\n`);
   saveFile(BASE_PATH, `scss/${tokenName}.scss`, `:root {\n${cssVariables}\n}\n`);
 }
 
@@ -104,7 +107,7 @@ function tokensExtractor(token, name = "") {
 
 function valueExtractor(name, { value, type }) {
   if (!value) return { name, value };
-  if (type === TOKEN_TYPES.COLOR) return { name, value };
+  if (type === TOKEN_TYPES.COLOR) return { name: `color-${name}`, value };
   if (type === TOKEN_TYPES.SHADOW) return { name, value: getShadowValue(value) };
   if (type === TOKEN_TYPES.FONT_FAMILY) return { name, value };
   if (type === TOKEN_TYPES.FONT_SIZE) return { name, value: getValueUnit(value) };

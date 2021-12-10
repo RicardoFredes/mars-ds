@@ -35,6 +35,10 @@
     "darker": {
       "value": "#700c2e",
       "type": "color"
+    },
+    "ghost": {
+      "value": "white",
+      "type": "color"
     }
   },
   "info": {
@@ -56,6 +60,10 @@
     },
     "darker": {
       "value": "#04297a",
+      "type": "color"
+    },
+    "ghost": {
+      "value": "white",
       "type": "color"
     }
   },
@@ -79,6 +87,10 @@
     "darker": {
       "value": "#08660d",
       "type": "color"
+    },
+    "ghost": {
+      "value": "white",
+      "type": "color"
     }
   },
   "warning": {
@@ -101,6 +113,10 @@
     "darker": {
       "value": "#7a4f01",
       "type": "color"
+    },
+    "ghost": {
+      "value": "white",
+      "type": "color"
     }
   },
   "error": {
@@ -122,6 +138,10 @@
     },
     "darker": {
       "value": "#780c48",
+      "type": "color"
+    },
+    "ghost": {
+      "value": "white",
       "type": "color"
     }
   },
@@ -161,240 +181,6 @@
     "900": {
       "value": "#161c24",
       "type": "color"
-    }
-  },
-  "transparent": {
-    "primary": {
-      "8%": {
-        "value": "#ed434314",
-        "type": "color"
-      },
-      "12%": {
-        "value": "#ed43431f",
-        "type": "color"
-      },
-      "16%": {
-        "value": "#ed434329",
-        "type": "color"
-      },
-      "24%": {
-        "value": "#ed43433d",
-        "type": "color"
-      },
-      "32%": {
-        "value": "#ed434352",
-        "type": "color"
-      },
-      "48%": {
-        "value": "#ed43437a",
-        "type": "color"
-      }
-    },
-    "info": {
-      "8%": {
-        "value": "#1890ff14",
-        "type": "color"
-      },
-      "12%": {
-        "value": "#1890ff1f",
-        "type": "color"
-      },
-      "16%": {
-        "value": "#1890ff29",
-        "type": "color"
-      },
-      "24%": {
-        "value": "#1890ff3d",
-        "type": "color"
-      },
-      "32%": {
-        "value": "#1890ff52",
-        "type": "color"
-      },
-      "48%": {
-        "value": "#1890ff7a",
-        "type": "color"
-      }
-    },
-    "success": {
-      "8%": {
-        "value": "#54d62c14",
-        "type": "color"
-      },
-      "12%": {
-        "value": "#54d62c1f",
-        "type": "color"
-      },
-      "16%": {
-        "value": "#54d62c29",
-        "type": "color"
-      },
-      "24%": {
-        "value": "#54d62c3d",
-        "type": "color"
-      },
-      "32%": {
-        "value": "#54d62c52",
-        "type": "color"
-      },
-      "48%": {
-        "value": "#54d62c7a",
-        "type": "color"
-      }
-    },
-    "warning": {
-      "8%": {
-        "value": "#ffc10714",
-        "type": "color"
-      },
-      "12%": {
-        "value": "#ffc1071f",
-        "type": "color"
-      },
-      "16%": {
-        "value": "#ffc10729",
-        "type": "color"
-      },
-      "24%": {
-        "value": "#ffc1073d",
-        "type": "color"
-      },
-      "32%": {
-        "value": "#ffc10752",
-        "type": "color"
-      },
-      "48%": {
-        "value": "#ffc1077a",
-        "type": "color"
-      }
-    },
-    "error": {
-      "8%": {
-        "value": "#f9406214",
-        "type": "color"
-      },
-      "12%": {
-        "value": "#f940621f",
-        "type": "color"
-      },
-      "16%": {
-        "value": "#f9406229",
-        "type": "color"
-      },
-      "24%": {
-        "value": "#f940623d",
-        "type": "color"
-      },
-      "32%": {
-        "value": "#f9406252",
-        "type": "color"
-      },
-      "48%": {
-        "value": "#f940627a",
-        "type": "color"
-      }
-    },
-    "grey": {
-      "8%": {
-        "value": "#919eab14",
-        "type": "color"
-      },
-      "12%": {
-        "value": "#919eab1f",
-        "type": "color"
-      },
-      "16%": {
-        "value": "#919eab29",
-        "type": "color"
-      },
-      "24%": {
-        "value": "#919eab3d",
-        "type": "color"
-      },
-      "32%": {
-        "value": "#919eab52",
-        "type": "color"
-      },
-      "48%": {
-        "value": "#919eab7a",
-        "type": "color"
-      }
-    },
-    "white": {
-      "48%": {
-        "value": "#ffffff7a",
-        "type": "color"
-      }
-    },
-    "black": {
-      "48%": {
-        "value": "#0000007a",
-        "type": "color"
-      }
-    },
-    "subjects": {
-      "matematica": {
-        "16%": {
-          "value": "#da700529",
-          "type": "color"
-        },
-        "80%": {
-          "value": "#da7005cc",
-          "type": "color"
-        }
-      },
-      "natureza": {
-        "16%": {
-          "value": "#7c9a2d29",
-          "type": "color"
-        },
-        "80%": {
-          "value": "#7c9a2dcc",
-          "type": "color"
-        }
-      },
-      "humanas": {
-        "16%": {
-          "value": "#50a0d229",
-          "type": "color",
-          "description": "FEAC25"
-        },
-        "80%": {
-          "value": "#50a0d2cc",
-          "type": "color"
-        }
-      },
-      "linguagens": {
-        "16%": {
-          "value": "#825a9629",
-          "type": "color",
-          "description": "25C2FB"
-        },
-        "80%": {
-          "value": "#825a96cc",
-          "type": "color"
-        }
-      },
-      "redacao": {
-        "16%": {
-          "value": "#d29b0029",
-          "type": "color"
-        },
-        "80%": {
-          "value": "#d29b00cc",
-          "type": "color"
-        }
-      },
-      "medicina": {
-        "16%": {
-          "value": "#55a8a929",
-          "type": "color"
-        },
-        "80%": {
-          "value": "#55a8a9cc",
-          "type": "color"
-        }
-      }
     }
   },
   "gradient": {
@@ -1127,24 +913,20 @@
     }
   },
   "spacing": {
-    "scale": {
-      "value": "4",
-      "type": "spacing"
-    },
     "xs": {
       "value": "4",
       "type": "spacing"
     },
     "sm": {
-      "value": "{spacing.scale} + 4",
+      "value": "8",
       "type": "spacing"
     },
     "md": {
-      "value": "{spacing.scale} + {spacing.sm}",
+      "value": "12",
       "type": "spacing"
     },
     "lg": {
-      "value": "{spacing.scale} + {spacing.md}",
+      "value": "16",
       "type": "spacing"
     }
   },

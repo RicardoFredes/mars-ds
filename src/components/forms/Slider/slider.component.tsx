@@ -1,4 +1,3 @@
-import Subtitle from "@/components/typographics/Subtitle";
 import classNames from "classnames";
 import { ChangeEvent, useState } from "react";
 import { SliderProps } from "./slider.types";
@@ -56,9 +55,7 @@ const Slider = ({
         step={step}
         style={computedStyle}
       />
-      <Subtitle className="slider__value" as="span">
-        {formatter(value)}
-      </Subtitle>
+      <span className="slider__value">{formatter(value)}</span>
     </div>
   );
 };

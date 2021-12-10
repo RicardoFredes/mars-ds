@@ -13,7 +13,7 @@
       $color-primary-dark var(--progress-percentage),
       $color-action-disabled-background var(--progress-percentage)
     );
-    box-shadow: $shadow-elevation-100;
+    // box-shadow: $shadow-elevation-100;
 
     &::-webkit-slider-thumb {
       -webkit-appearance: none;
@@ -28,8 +28,12 @@
   }
 
   &__value {
+    display: block;
     color: $color-primary-dark;
     font-family: $font-family-acent;
     font-weight: 700;
+    line-height: 1.5em;
+    margin-top: 4px;
+    font-size: 1rem;
   }
 }

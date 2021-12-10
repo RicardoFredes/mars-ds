@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const readline = require("readline");
 const fs = require("fs-extra");
-const { kebabCaseToPascalCase } = require("./helpers/convertNames");
+const { kebabCaseToPascalCase } = require("./helpers/convert-names");
 
 const PATH_COMPONENT = "./src/components";
 

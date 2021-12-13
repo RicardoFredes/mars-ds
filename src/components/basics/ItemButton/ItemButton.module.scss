@@ -1,0 +1,28 @@
+.item-button {
+  padding: $spacing-lg;
+  border: 1px solid $color-divider;
+  border-radius: $border-radius-sm;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  width: 100%;
+
+  &__main {
+    display: flex;
+    &-texts {
+      text-align: left;
+      padding: 0 18px;
+      justify-content: center;
+      flex-direction: column;
+      color: $color-text-primary;
+      &__title {
+        font-weight: 700;
+        font-size: $font-size-cta;
+      }
+      &__caption {
+        color: $color-text-secondary;
+      }
+    }
+  }
+}

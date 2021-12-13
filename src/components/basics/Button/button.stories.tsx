@@ -1,6 +1,5 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-
-import { SizesEnum, VariantsEnum } from "@/types";
+import { ButtonSizesEnum, ButtonVariantsEnum } from "./button.types";
 import Button from ".";
 
 export default {
@@ -8,11 +7,11 @@ export default {
   component: Button,
   argTypes: {
     variant: {
-      options: VariantsEnum,
+      options: ButtonVariantsEnum,
       control: { type: "select" },
     },
     size: {
-      options: SizesEnum,
+      options: ButtonSizesEnum,
       control: { type: "select" },
     },
   },
@@ -20,33 +19,42 @@ export default {
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-const PrimaryArgs = {
-  variant: VariantsEnum.Primary,
-  size: SizesEnum.Medium,
-  children: "Primary Button",
+const TemplateList: ComponentStory<typeof Button> = (args) => {
+  const variants = Object.values(ButtonVariantsEnum);
+  return (
+    <div>
+      {variants.map((variant, key) => (
+        <Button key={key} {...args} variant={variant} style={{ marginBottom: 16, marginRight: 16 }}>
+          {variant} button
+        </Button>
+      ))}
+    </div>
+  );
+};
+
+const DefaultArgs = {
+  variant: ButtonVariantsEnum.Primary,
+  size: ButtonSizesEnum.Medium,
+  children: "Quero ser aprovado!",
   disabled: false,
 };
 
-export const Primary = Template.bind({});
-Primary.args = PrimaryArgs;
+export const Default = Template.bind({});
+Default.args = DefaultArgs;
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  ...PrimaryArgs,
-  variant: VariantsEnum.Secondary,
-  children: "Secondary Button",
+export const MediumSize = TemplateList.bind({});
+MediumSize.args = {
+  ...DefaultArgs,
 };
 
-export const Neutral = Template.bind({});
-Neutral.args = {
-  ...PrimaryArgs,
-  variant: VariantsEnum.Neutral,
-  children: "Neutral Button",
+export const SmallSize = TemplateList.bind({});
+SmallSize.args = {
+  ...DefaultArgs,
+  size: ButtonSizesEnum.Small,
 };
 
-export const Text = Template.bind({});
-Text.args = {
-  ...PrimaryArgs,
-  variant: VariantsEnum.Text,
-  children: "Text Button",
+export const Disabled = TemplateList.bind({});
+Disabled.args = {
+  ...DefaultArgs,
+  disabled: true,
 };

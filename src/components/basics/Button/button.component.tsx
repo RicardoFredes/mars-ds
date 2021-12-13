@@ -1,6 +1,5 @@
 import { useState, MouseEvent } from "react";
-import type { ButtonProps } from "./button.types";
-import { SizesEnum, VariantsEnum } from "@/types";
+import { ButtonProps, ButtonSizesEnum, ButtonVariantsEnum } from "./button.types";
 
 import classNames from "classnames";
 import Link from "@/components/basics/Link/link.component";
@@ -12,8 +11,8 @@ const Button = ({
   label,
   onClick,
   type = "button",
-  variant = VariantsEnum.Primary,
-  size = SizesEnum.Medium,
+  variant = ButtonVariantsEnum.Primary,
+  size = ButtonSizesEnum.Medium,
   ...props
 }: ButtonProps) => {
   const [isPressed, setIsPressed] = useState(false);

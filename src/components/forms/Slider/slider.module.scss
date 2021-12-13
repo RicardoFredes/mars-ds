@@ -13,8 +13,6 @@
       $color-primary-dark var(--progress-percentage),
       $color-action-disabled-background var(--progress-percentage)
     );
-    // box-shadow: $shadow-elevation-100;
-
     &::-webkit-slider-thumb {
       -webkit-appearance: none;
       width: 16px;

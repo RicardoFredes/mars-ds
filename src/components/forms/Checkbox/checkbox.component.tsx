@@ -30,7 +30,9 @@ const Checkbox = ({
   return (
     <div className={cn} {...props}>
       <label className="checkbox__container">
-        <Icon className="checkbox__icon" name={iconName} />
+        <div className="checkbox__icon">
+          <Icon name={iconName} />
+        </div>
         <input
           id={id || name}
           disabled={disabled}

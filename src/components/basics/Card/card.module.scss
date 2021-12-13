@@ -3,14 +3,23 @@
   padding: 24px;
   border-radius: $border-radius-lg;
   &--elevation {
-    &-low {
+    &-xl {
       box-shadow: $shadow-elevation-100;
     }
-    &-medium {
+    &-lw {
+      box-shadow: $shadow-elevation-200;
+    }
+    &-md {
       box-shadow: $shadow-elevation-300;
     }
-    &-high {
+    &-hg {
+      box-shadow: $shadow-elevation-400;
+    }
+    &-xh {
       box-shadow: $shadow-elevation-500;
+    }
+    &-xxh {
+      box-shadow: $shadow-elevation-600;
     }
   }
 }

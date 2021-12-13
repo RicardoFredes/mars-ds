@@ -30,9 +30,11 @@ const ItemButton = ({
         </div>
       </div>
 
-      <Label theme={labelTheme} variant={labelVariant}>
-        {label}
-      </Label>
+      {label && (
+        <Label theme={labelTheme} variant={labelVariant}>
+          {label}
+        </Label>
+      )}
     </div>
   );
 };

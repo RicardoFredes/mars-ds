@@ -1,6 +1,6 @@
-import type { ReactElement } from "react";
+import type { HTMLProps } from "react";
 
-export interface StepperProps extends ReactElement<HTMLElement> {
+export interface StepperProps extends HTMLProps<HTMLDivElement> {
   steps: Array<string>;
   position: number;
 }

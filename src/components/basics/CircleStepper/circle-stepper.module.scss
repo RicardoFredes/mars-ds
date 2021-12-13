@@ -1,4 +1,4 @@
-.circleStepper {
+.circle-stepper {
   $size: 52px;
   display: flex;
   width: 100%;
@@ -6,14 +6,14 @@
   justify-content: space-between;
 
   &__info {
-    &__title {
+    &-title {
       color: $color-text-primary;
     }
-    &__caption {
+    &-caption {
       display: inline-flex;
       color: $color-text-disabled;
 
-      &__nextPosition {
+      &__next-position {
         color: $color-text-secondary;
         font-weight: bold;
       }
@@ -31,8 +31,8 @@
     &__svg {
       position: absolute;
 
-      &__innerCircle,
-      &__outerCircle {
+      &-inner-circle,
+      &-outer-circle {
         stroke-width: 5;
         stroke-linecap: round;
         fill: none;
@@ -41,14 +41,14 @@
         transition: stroke-dashoffset ease 1s;
       }
 
-      &__outerCircle {
+      &-outer-circle {
         stroke: $color-primary-main;
         transform-origin: center;
         transform: rotateZ(270deg);
       }
     }
 
-    &__number {
+    &-number {
       color: $color-primary-main;
       font-family: $font-family-acent;
       font-weight: 700;

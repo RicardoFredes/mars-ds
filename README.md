@@ -1,7 +1,6 @@
 # Mars: design system <a href="#sobre"></a>
 
-<img style="margin-bottom: 24px; object-fit: cover; object-position: left -170px" height="150" width="100%" src="https://images.unsplash.com/photo-1573588028698-f4759befb09a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=20">
-
+![images_unsplash_com-photo-1573588028698-f4759befb09a](https://user-images.githubusercontent.com/29892001/145896670-23d7aef4-1ae5-44bf-8b8e-573c6e965b2f.png)
 
 ![License](https://img.shields.io/static/v1?label=Licence&message=MIT&color=yellow)
 ![Coverage](https://img.shields.io/static/v1?label=Coverage&message=0%&color=red)

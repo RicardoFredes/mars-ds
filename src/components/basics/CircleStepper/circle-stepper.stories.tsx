@@ -14,7 +14,9 @@ export default {
   },
 } as ComponentMeta<typeof CircleStepper>;
 
-const Template: ComponentStory<typeof CircleStepper> = (args) => <CircleStepper {...args} />;
+const Template: ComponentStory<typeof CircleStepper> = (args) => (
+  <CircleStepper style={{ maxWidth: 320 }} {...args} />
+);
 
 const DefaultArgs = {
   steps: ["Identificação", "Adicionais", "Pagamento", "Endereço de Cobrança", "Resumo"],

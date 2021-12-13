@@ -1,7 +1,24 @@
-import { themes } from "@storybook/theming";
-import mars from "./theme";
+import addons from '@storybook/addons';
+import * as themes from "./themes";
 
 import "../src/styles/index.scss";
+
+function isDarkMode() {
+  return parent.document.body.classList.contains('theme-dark');
+}
+
+const channel = addons.getChannel();
+let isDark = isDarkMode();
+
+channel.on('DARK_MODE', (dark) => {
+  if (isDark === dark) return;
+  
+  const iframe = parent.document.querySelector('#storybook-preview-iframe');
+  const { src } = iframe;
+
+  iframe.src = src;
+  isDark = dark;
+});
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -23,14 +40,17 @@ export const parameters = {
     },
   },
   darkMode: {
-    dark: { ...themes.dark, appBg: "black", appContentBg: "#919eab29" },
-    light: mars,
+    dark: themes.dark,
+    light: themes.light,
     darkClass: "theme-dark",
     lightClass: "theme-light",
     classTarget: "body",
-    backgrounds: {
-      default: "dark",
-    },
     stylePreview: true,
+    styleDocs: true,
   },
+  docs: {
+    get theme() {
+      return isDarkMode() ? themes.dark : themes.light;
+    },
+  }
 };

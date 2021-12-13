@@ -1,7 +1,7 @@
-import { create } from "@storybook/theming";
+import { create, themes } from "@storybook/theming";
 
 /** @type {import("@storybook/theming").Theme} */
-export default create({
+export const light = create({
   base: "light",
   colorPrimary: "rgba(237, 67, 67, 1)",
   colorSecondary: "rgba(24, 144, 255, 1)",
@@ -41,3 +41,5 @@ export default create({
   // Grid
   gridCellSize: 8,
 });
+
+export const dark = { ...themes.dark, appBg: "black", appContentBg: "#919eab29" };

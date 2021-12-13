@@ -1,10 +1,9 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import { ElevationEnum } from "@/types";
 import Card from "./";
 import Text from "@/components/typographics/Text";
 import Heading from "@/components/typographics/Heading";
-import { HeadingSizes } from "@/components/typographics/Heading/heading.types";
+import { HeadingSizesEnum } from "@/components/typographics/Heading/heading.types";
 import { CardElevationsEnum, CardProps } from "./card.types";
 
 export default {
@@ -21,7 +20,7 @@ export default {
 
 const Template: ComponentStory<typeof Card> = (args: CardProps) => (
   <Card {...args} style={{ maxWidth: 520 }}>
-    <Heading size={HeadingSizes.Small}>Card elevation: {args.elevation || "none"}</Heading>
+    <Heading size={HeadingSizesEnum.Small}>Card elevation: {args.elevation || "none"}</Heading>
     <Text>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
       labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco

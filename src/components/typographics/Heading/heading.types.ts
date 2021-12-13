@@ -1,13 +1,15 @@
 import type React from "react";
 
-export enum HeadingSizes {
-  XSmalll = "xs",
-  Small = "s",
-  Medium = "m",
-  Large = "l",
-  XLarge = "xl",
-  XXLarge = "xxl",
-}
+export const HeadingSizesEnum = {
+  XSmalll: "xs",
+  Small: "s",
+  Medium: "m",
+  Large: "l",
+  XLarge: "xl",
+  XXLarge: "xxl",
+} as const;
+
+export type HeadingSizes = typeof HeadingSizesEnum[keyof typeof HeadingSizesEnum];
 
 export type HeadingLevels = number | "1" | "2" | "3" | "4" | "5" | "6";
 

@@ -32,3 +32,12 @@ const DefaultArgs = {
 
 export const Default = Template.bind({});
 Default.args = DefaultArgs;
+
+export const NoLabel = Template.bind({});
+NoLabel.args = {
+  ...DefaultArgs,
+  label: "",
+  iconName: "google",
+  title: "Google Pay",
+  subtitle: "Até 12x de R$ 28,23",
+};

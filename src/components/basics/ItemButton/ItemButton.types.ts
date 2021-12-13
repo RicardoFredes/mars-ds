@@ -1,6 +1,7 @@
 import { LabelTheme, LabelVariants } from "../Label/label.types";
 
-export interface ItemButtonProps extends React.HTMLProps<HTMLDivElement> {
+export interface ItemButtonProps
+  extends Omit<React.HTMLProps<HTMLButtonElement | HTMLLinkElement>, "as"> {
   title: string;
   subtitle: string;
   label?: string;
@@ -8,4 +9,5 @@ export interface ItemButtonProps extends React.HTMLProps<HTMLDivElement> {
   labelVariant: LabelVariants;
   iconName: string;
   iconColor: string;
+  as?: JSX.Element | string;
 }

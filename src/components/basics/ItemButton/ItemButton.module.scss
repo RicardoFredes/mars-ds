@@ -1,15 +1,17 @@
 .item-button {
   padding: $spacing-lg;
-  color: white;
   border: 1px solid $color-divider;
   border-radius: $border-radius-sm;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: none;
+  width: 100%;
 
-  &__info {
+  &__main {
     display: flex;
-    &-lettering {
+    &-texts {
+      text-align: left;
       padding: 0 18px;
       justify-content: center;
       flex-direction: column;

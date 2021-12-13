@@ -8,7 +8,7 @@ export default create({
 
   // UI
   appBg: "rgba(244, 246, 248, 1)",
-  appContentBg: "rgba(255, 255, 255, 1)",
+  appContentBg: "#f4f6f8",
   appBorderColor: "rgba(145, 158, 171, 0.24)",
   appBorderRadius: 8,
 
@@ -39,5 +39,5 @@ export default create({
   // brandImage: "https://cdn-icons-png.flaticon.com/32/2530/2530892.png",
 
   // Grid
-  gridCellSize: 12,
+  gridCellSize: 8,
 });

@@ -5,7 +5,7 @@ import Card from "./";
 import Text from "@/components/typographics/Text";
 import Heading from "@/components/typographics/Heading";
 import { HeadingSizes } from "@/components/typographics/Heading/heading.types";
-import type { CardProps } from "./card.types";
+import { CardElevationsEnum, CardProps } from "./card.types";
 
 export default {
   title: "Components/Card",
@@ -13,15 +13,15 @@ export default {
   argTypes: {
     elevation: {
       // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-      options: { Default: undefined, ...ElevationEnum },
+      options: CardElevationsEnum,
       control: { type: "select" },
     },
   },
 } as ComponentMeta<typeof Card>;
 
-const Template: ComponentStory<typeof Card> = ({ title, ...args }: CardProps) => (
-  <Card {...args} style={{ maxWidth: 400 }}>
-    <Heading size={HeadingSizes.Small}>{title}</Heading>
+const Template: ComponentStory<typeof Card> = (args: CardProps) => (
+  <Card {...args} style={{ maxWidth: 520 }}>
+    <Heading size={HeadingSizes.Small}>Card elevation: {args.elevation || "none"}</Heading>
     <Text>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
       labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -33,25 +33,18 @@ const Template: ComponentStory<typeof Card> = ({ title, ...args }: CardProps) =>
 );
 
 export const Default = Template.bind({});
-Default.args = {
-  elevation: undefined,
-  title: "Card default",
+
+const TemplateList: ComponentStory<typeof Card> = (args: CardProps) => {
+  const elevations = Object.values(CardElevationsEnum);
+  return (
+    <div>
+      {elevations.map((elevation, key) => (
+        <div key={key} style={{ marginBottom: 32 }}>
+          <Template {...args} elevation={elevation} />
+        </div>
+      ))}
+    </div>
+  );
 };
 
-export const Low = Template.bind({});
-Low.args = {
-  elevation: ElevationEnum.Low,
-  title: "Card with low elevation",
-};
-
-export const Medium = Template.bind({});
-Medium.args = {
-  elevation: ElevationEnum.Medium,
-  title: "Card with medium elevation",
-};
-
-export const High = Template.bind({});
-High.args = {
-  elevation: ElevationEnum.High,
-  title: "Card with high elevation",
-};
+export const Elevations = TemplateList.bind({});

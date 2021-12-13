@@ -1,7 +1,10 @@
 export const ElevationEnum = {
-  Low: "low",
-  Medium: "medium",
-  High: "high",
+  XLow: "xl",
+  Low: "lw",
+  Medium: "md",
+  High: "hg",
+  XHigh: "xh",
+  XXHigh: "xxh",
 } as const;
 
 export type Elevation = typeof ElevationEnum[keyof typeof ElevationEnum];

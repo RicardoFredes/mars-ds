@@ -6,9 +6,10 @@ import classNames from "classnames";
 import Icon from "@/components/basics/Icon";
 import Subtitle from "@/components/typographics/Subtitle";
 
-const Stepper = ({ steps, position = 0 }: StepperProps) => {
+const Stepper = ({ steps, position = 0, className, ...props }: StepperProps) => {
+  const cn = classNames("stepper", className);
   return (
-    <div className="stepper">
+    <div className={cn} {...props}>
       {steps.map((label, index) => {
         const stepPosition = index + 1;
         const isActive = stepPosition === position;

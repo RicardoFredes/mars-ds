@@ -1,33 +1,59 @@
-.circleStepper {
+.circle-stepper {
   $size: 52px;
-
-  position: relative;
   display: flex;
-  justify-content: center;
+  width: 100%;
   align-items: center;
-  width: $size;
-  height: $size;
-  &__svg {
-    position: absolute;
-    &__innerCircle,
-    &__outerCircle {
-      stroke-width: 5;
-      stroke-linecap: round;
-      fill: none;
-      stroke: $color-action-disabled-background;
-      transition: stroke-dashoffset ease 1s;
+  justify-content: space-between;
+
+  &__info {
+    &-title {
+      color: $color-text-primary;
     }
-    &__outerCircle {
-      stroke: $color-primary-main;
-      transform-origin: center;
-      transform: rotateZ(270deg);
+    &-caption {
+      display: inline-flex;
+      color: $color-text-disabled;
+
+      &__next-position {
+        color: $color-text-secondary;
+        font-weight: bold;
+      }
     }
   }
-  &__number {
-    color: $color-primary-main;
-    font-family: $font-family-acent;
-    font-weight: 700;
-    font-size: 1rem;
-    line-height: 1.5em;
+
+  &__icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $size;
+    height: $size;
+
+    &__svg {
+      position: absolute;
+
+      &-inner-circle,
+      &-outer-circle {
+        stroke-width: 5;
+        stroke-linecap: round;
+        fill: none;
+        stroke: $color-action-disabled-background;
+
+        transition: stroke-dashoffset ease 1s;
+      }
+
+      &-outer-circle {
+        stroke: $color-primary-main;
+        transform-origin: center;
+        transform: rotateZ(270deg);
+      }
+    }
+
+    &-number {
+      color: $color-primary-main;
+      font-family: $font-family-acent;
+      font-weight: 700;
+      font-size: 1rem;
+      line-height: 1.5em;
+    }
   }
 }

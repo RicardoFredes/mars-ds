@@ -23,11 +23,11 @@
       height: 40px;
       position: absolute;
       left: -8px;
+      top: 0;
       background-color: $color-neutral-ghost;
       border-radius: 50%;
       transition: transform ease 0.2s;
       transform: scale(0);
-      z-index: -1;
     }
   }
   &--is-checked {

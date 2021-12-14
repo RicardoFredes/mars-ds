@@ -12,11 +12,11 @@
 - <a href="https://mars.mesalva.com/" target="_blank">Documentação do MARS - Storybook</a>
 - <a href="https://www.figma.com/file/W48LS2jmdbpQ8l9h7FRgit/Me-Salva!-Design-System?node-id=822%3A22408" target="_blank">Projeto visual - Figma</a>
 
-# Tabela de Conteudo: <a href="#tabela-de-conteudo"></a>
+# Tabela de Conteúdo: <a href="#tabela-de-conteudo"></a>
 
 <!--ts-->
    * [Sobre](#Sobre)
-   * [Tabela de Conteudo](#tabela-de-conteudo)
+   * [Tabela de Conteúdo](#tabela-de-conteudo)
    * [Instalação](#instalacao)
    * [Como usar](#como-usar)
       * [Pré-requisitos](#pre-requisitos)

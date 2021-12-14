@@ -1,6 +1,6 @@
 {
   "name": "@mesalva/mars",
-  "version": "0.0.0-development",
+  "version": "1.0.0-alpha.1",
   "description": "Mars is the Me Salva! uikit inspired on Material Design",
   "repository": "github:mesalva/mars",
   "author": "Me Salva! Devs <devs@mesalva.com>",
@@ -32,8 +32,7 @@
     "lint:fix": "yarn lint -- --fix",
     "prepublishOnly": "yarn build",
     "heroku-postbuild": "echo Skip build on Heroku",
-    "semantic-release": "semantic-release",
-    "prepare": "husky install"
+    "semantic-release": "semantic-release"
   },
   "resolutions": {
     "webpack": "^5"

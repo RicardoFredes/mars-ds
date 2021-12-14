@@ -33,7 +33,7 @@
   &--is-checked {
     .checkbox {
       &__icon {
-        color: $color-info-main;
+        color: $color-info-500;
         &:before {
           background-color: $color-info-ghost;
         }
@@ -51,7 +51,7 @@
         cursor: inherit;
       }
       &__icon {
-        color: $color-neutral-main;
+        color: $color-neutral-500;
       }
       &__label {
         color: $color-text-disabled;

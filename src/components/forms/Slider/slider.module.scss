@@ -10,14 +10,14 @@
     width: 100%;
     background: linear-gradient(
       90deg,
-      $color-primary-dark var(--progress-percentage),
+      $color-primary-700 var(--progress-percentage),
       $color-action-disabled-background var(--progress-percentage)
     );
     &::-webkit-slider-thumb {
       -webkit-appearance: none;
       width: 16px;
       height: 16px;
-      background: $color-primary-dark;
+      background: $color-primary-700;
       border-radius: 50%;
       border: 2px solid $color-background-primary;
       box-shadow: $shadow-elevation-100;
@@ -27,7 +27,7 @@
 
   &__value {
     display: block;
-    color: $color-primary-dark;
+    color: $color-primary-700;
     font-family: $font-family-acent;
     font-weight: 700;
     line-height: 1.5em;

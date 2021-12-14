@@ -10,9 +10,6 @@
   cursor: pointer;
   transition: background-color ease 0.2s;
   color: $color-text-primary;
-  &:focus {
-    border-color: $color-info-main;
-  }
   &:hover {
     background-color: $color-neutral-ghost;
   }

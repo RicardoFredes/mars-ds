@@ -3,6 +3,7 @@
 
 @import "../tokens/scss/index.scss";
 @import "reset.scss";
+@import "./utilities/index.scss";
 
 body {
   font-family: $font-family-main;

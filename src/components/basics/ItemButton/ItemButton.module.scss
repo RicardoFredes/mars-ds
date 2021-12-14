@@ -7,22 +7,27 @@
   justify-content: space-between;
   background: none;
   width: 100%;
-
-  &__main {
-    display: flex;
-    &-texts {
-      text-align: left;
-      padding: 0 18px;
-      justify-content: center;
-      flex-direction: column;
-      color: $color-text-primary;
-      &__title {
-        font-weight: 700;
-        font-size: $font-size-cta;
-      }
-      &__caption {
-        color: $color-text-secondary;
-      }
+  cursor: pointer;
+  transition: background-color ease 0.2s;
+  &:focus {
+    border-color: $color-info-main;
+  }
+  &:hover {
+    background-color: $color-neutral-ghost;
+  }
+  &__icon {
+    margin-right: 18px;
+    max-width: 48px;
+  }
+  &__texts {
+    color: $color-text-primary;
+    flex-grow: 1;
+    text-align: left;
+    &-title.subtitle {
+      font-weight: 700;
+    }
+    &-caption {
+      color: $color-text-secondary;
     }
   }
 }

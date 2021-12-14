@@ -21,7 +21,8 @@ const Template: ComponentStory<typeof ItemButton> = (args) => (
   <ItemButton style={{ maxWidth: 320 }} {...args} />
 );
 
-const DefaultArgs = {
+export const Default = Template.bind({});
+Default.args = {
   title: "Pix",
   subtitle: "R$ 297,90",
   label: "-15%",
@@ -30,14 +31,14 @@ const DefaultArgs = {
   labelVariant: LabelVariants.Success,
 };
 
-export const Default = Template.bind({});
-Default.args = DefaultArgs;
-
 export const NoLabel = Template.bind({});
 NoLabel.args = {
-  ...DefaultArgs,
-  label: "",
   iconName: "google",
   title: "Google Pay",
   subtitle: "Até 12x de R$ 28,23",
+};
+
+export const NoIcon = Template.bind({});
+NoIcon.args = {
+  title: "Biologia",
 };

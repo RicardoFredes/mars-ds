@@ -9,5 +9,5 @@ export interface ItemButtonProps
   labelVariant: LabelVariants;
   iconName: string;
   iconColor: string;
-  as?: JSX.Element | string;
+  as?: React.ElementType | string;
 }

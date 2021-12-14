@@ -17,9 +17,7 @@ const Button = ({
 }: ButtonProps) => {
   const [isPressed, setIsPressed] = useState(false);
 
-  // TODO: Change link type when we have a proper link (with Next.js support) component
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const Component: any = as || props.href ? Link : "button";
+  const Component: React.ElementType | string = as || props.href ? Link : "button";
   const handleClick = (event: MouseEvent<HTMLButtonElement | HTMLLinkElement>) => {
     if (props.disabled) return;
     setIsPressed(true);

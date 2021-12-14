@@ -12,7 +12,7 @@ const DropdownMenuItem = ({
   ...props
 }: DropdownMenuItemProps) => {
   const isLink = typeof props.onClick === "undefined" && typeof props.href === "string";
-  const Component: any = isLink ? Link : "div";
+  const Component: React.ElementType | string = isLink ? Link : "div";
   const cn = classNames("dropdown-menu__item", className);
   return (
     <Component className={cn} {...props}>

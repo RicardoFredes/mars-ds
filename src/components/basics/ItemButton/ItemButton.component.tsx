@@ -1,11 +1,11 @@
 import type { ItemButtonProps } from "./ItemButton.types";
 import classNames from "classnames";
-import Icon from "../Icon";
-import Label from "../Label";
-import Subtitle from "../../typographics/Subtitle";
-import Caption from "../../typographics/Caption";
 import Tokens from "@/tokens";
-import Link from "@/components/basics/Link/link.component";
+import Caption from "@/components/typographics/Caption";
+import Icon from "@/components/basics/Icon";
+import Subtitle from "@/components/typographics/Subtitle";
+import Label from "@/components/basics/Label";
+import Link from "@/components/basics/Link";
 
 const ItemButton = ({
   title,
@@ -22,24 +22,17 @@ const ItemButton = ({
 }: ItemButtonProps) => {
   const cn = classNames("item-button", className);
 
-  // TODO: Change link type when we have a proper link (with Next.js support) component
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const Component: any = as || props.href ? Link : "button";
+  const Component: React.ElementType | string = as || props.href ? Link : "button";
 
   return (
     <Component className={cn} {...props} type={type}>
-      <div className="item-button__main">
-        <Icon name={iconName} style={{ color: iconColor }} />
-        <div className="item-button__main-texts">
-          <Subtitle className="item-button__main-texts__title">{title}</Subtitle>
-          <Caption className="item-button__main-texts__caption" as="span">
-            {subtitle}
-          </Caption>
-        </div>
+      <Icon name={iconName} className="item-button__icon" style={{ color: iconColor }} />
+      <div className="item-button__texts">
+        <Subtitle className="item-button__texts-title">{title}</Subtitle>
+        {subtitle && <Caption className="item-button__texts-caption">{subtitle}</Caption>}
       </div>
-
       {label && (
-        <Label theme={labelTheme} variant={labelVariant}>
+        <Label className="item-button__label" theme={labelTheme} variant={labelVariant}>
           {label}
         </Label>
       )}

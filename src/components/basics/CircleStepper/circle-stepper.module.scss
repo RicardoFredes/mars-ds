@@ -42,14 +42,14 @@
       }
 
       &-outer-circle {
-        stroke: $color-primary-main;
+        stroke: $color-primary-500;
         transform-origin: center;
         transform: rotateZ(270deg);
       }
     }
 
     &-number {
-      color: $color-primary-main;
+      color: $color-primary-500;
       font-family: $font-family-acent;
       font-weight: 700;
       font-size: 1rem;

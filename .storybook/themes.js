@@ -42,4 +42,4 @@ export const light = create({
   gridCellSize: 8,
 });
 
-export const dark = { ...themes.dark, appBg: "black", appContentBg: "#919eab29" };
+export const dark = { ...themes.dark, appBg: "black", appContentBg: "#161c24" };

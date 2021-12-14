@@ -1,55 +1,226 @@
 {
-  "action": {
-    "active": {
-      "value": "#919eab",
-      "type": "color"
+  "color": {
+    "action": {
+      "active": {
+        "value": "#919eab",
+        "type": "color"
+      },
+      "hover": {
+        "value": "#919eab14",
+        "type": "color"
+      },
+      "selected": {
+        "value": "#919eab29",
+        "type": "color"
+      },
+      "disabled": {
+        "value": "#919eabcc",
+        "type": "color"
+      },
+      "disabled-background": {
+        "value": "#919eab3d",
+        "type": "color"
+      },
+      "focus": {
+        "value": "#919eab3d",
+        "type": "color"
+      }
     },
-    "hover": {
-      "value": "#919eab14",
-      "type": "color"
+    "text": {
+      "primary": {
+        "value": "#ffffff",
+        "type": "color"
+      },
+      "secondary": {
+        "value": "#919eab",
+        "type": "color"
+      },
+      "disabled": {
+        "value": "#637381",
+        "type": "color"
+      }
     },
-    "selected": {
-      "value": "#919eab29",
-      "type": "color"
+    "background": {
+      "primary": {
+        "value": "#212b36",
+        "type": "color"
+      },
+      "secondary": {
+        "value": "#161c24",
+        "type": "color"
+      },
+      "neutral": {
+        "value": "#919eab29",
+        "type": "color"
+      }
     },
-    "disabled": {
-      "value": "#919eabcc",
-      "type": "color"
-    },
-    "disabled-background": {
-      "value": "#919eab3d",
-      "type": "color"
-    },
-    "focus": {
-      "value": "#919eab3d",
-      "type": "color"
-    }
-  },
-  "text": {
     "primary": {
-      "value": "#ffffff",
-      "type": "color"
-    },
-    "secondary": {
-      "value": "#919eab",
-      "type": "color"
-    },
-    "disabled": {
-      "value": "#637381",
-      "type": "color"
-    }
-  },
-  "background": {
-    "primary": {
-      "value": "#212b36",
-      "type": "color"
-    },
-    "secondary": {
-      "value": "#161c24",
-      "type": "color"
+      "100": {
+        "value": "#700c2e",
+        "type": "color"
+      },
+      "300": {
+        "value": "#ab213a",
+        "type": "color"
+      },
+      "700": {
+        "value": "#f9a08e",
+        "type": "color"
+      },
+      "900": {
+        "value": "#fee6d8",
+        "type": "color"
+      }
     },
     "neutral": {
-      "value": "#919eab29",
+      "100": {
+        "value": "#637381",
+        "type": "color"
+      },
+      "300": {
+        "value": "#919eab",
+        "type": "color"
+      },
+      "700": {
+        "value": "#dfe3e8",
+        "type": "color"
+      },
+      "900": {
+        "value": "#f4f6f8",
+        "type": "color"
+      }
+    },
+
+    "info": {
+      "100": {
+        "value": "#04297a",
+        "type": "color"
+      },
+      "300": {
+        "value": "#0c53b7",
+        "type": "color"
+      },
+      "700": {
+        "value": "#74caff",
+        "type": "color"
+      },
+      "900": {
+        "value": "#d0f2ff",
+        "type": "color"
+      }
+    },
+    "success": {
+      "100": {
+        "value": "#08660d",
+        "type": "color"
+      },
+      "300": {
+        "value": "#229a16",
+        "type": "color"
+      },
+      "700": {
+        "value": "#aaf27f",
+        "type": "color"
+      },
+      "900": {
+        "value": "#e9fcd4",
+        "type": "color"
+      }
+    },
+    "warning": {
+      "100": {
+        "value": "#7a4f01",
+        "type": "color"
+      },
+      "300": {
+        "value": "#b78103",
+        "type": "color"
+      },
+      "700": {
+        "value": "#ffe16a",
+        "type": "color"
+      },
+      "900": {
+        "value": "#fff7cd",
+        "type": "color"
+      }
+    },
+    "error": {
+      "100": {
+        "value": "#780c48",
+        "type": "color"
+      },
+      "300": {
+        "value": "#b32057",
+        "type": "color"
+      },
+      "700": {
+        "value": "#fd8d8c",
+        "type": "color"
+      },
+      "900": {
+        "value": "#fee0d8",
+        "type": "color"
+      }
+    }
+  },
+  "matematica": {
+    "300": {
+      "value": "#bb5603",
+      "type": "color"
+    },
+    "700": {
+      "value": "#da7005cc",
+      "type": "color"
+    }
+  },
+  "natureza": {
+    "300": {
+      "value": "#4c7425",
+      "type": "color"
+    },
+    "700": {
+      "value": "#7c9a2dcc",
+      "type": "color"
+    }
+  },
+  "humanas": {
+    "300": {
+      "value": "#1485a3",
+      "type": "color"
+    },
+    "700": {
+      "value": "#50a0d2cc",
+      "type": "color"
+    }
+  },
+  "linguagens": {
+    "300": {
+      "value": "#703c87",
+      "type": "color"
+    },
+    "700": {
+      "value": "#825a96cc",
+      "type": "color"
+    }
+  },
+  "redacao": {
+    "300": {
+      "value": "#ca8b0f",
+      "type": "color"
+    },
+    "700": {
+      "value": "#d29b00cc",
+      "type": "color"
+    }
+  },
+  "medicina": {
+    "300": {
+      "value": "#2e6b6b",
+      "type": "color"
+    },
+    "700": {
+      "value": "#55a8a9cc",
       "type": "color"
     }
   }

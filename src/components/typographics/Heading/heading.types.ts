@@ -2,9 +2,9 @@ import type React from "react";
 
 export const HeadingSizesEnum = {
   XSmalll: "xs",
-  Small: "s",
-  Medium: "m",
-  Large: "l",
+  Small: "sm",
+  Medium: "mf",
+  Large: "lg",
   XLarge: "xl",
   XXLarge: "xxl",
 } as const;

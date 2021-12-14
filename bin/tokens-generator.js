@@ -114,9 +114,9 @@ function tokensExtractor(token, name = "") {
 
 function valueExtractor(name, { value, type }) {
   if (!value) return { name, value };
-  if (type === TOKEN_TYPES.COLOR) return { name: `color-${name}`, value };
-  if (type === TOKEN_TYPES.SHADOW) return { name: `shadow-${name}`, value: getShadowValue(value) };
-  if (type === TOKEN_TYPES.FONT_FAMILY) return { name: name.replace("amilies", "amily"), value };
+  if (type === TOKEN_TYPES.COLOR) return { name, value };
+  if (type === TOKEN_TYPES.SHADOW) return { name, value: getShadowValue(value) };
+  if (type === TOKEN_TYPES.FONT_FAMILY) return { name, value };
   if (type === TOKEN_TYPES.FONT_SIZE) return { name, value: getValueUnit(value) };
   if (type === TOKEN_TYPES.RADIUS) return { name, value: getValueUnit(value, true) };
   if (type === TOKEN_TYPES.SPACING) return { name, value: getValueUnit(value, true) };

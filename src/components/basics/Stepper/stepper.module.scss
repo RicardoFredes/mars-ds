@@ -44,8 +44,8 @@
     &--is-active {
       .stepper {
         &__status {
-          color: $color-primary-main;
-          border-color: $color-primary-main;
+          color: $color-primary-500;
+          border-color: $color-primary-500;
           background-color: transparent;
         }
         &__label {
@@ -58,9 +58,9 @@
       .stepper {
         &__status {
           background-color: transparent;
-          border-color: $color-primary-main;
+          border-color: $color-primary-500;
           &-icon {
-            color: $color-primary-main;
+            color: $color-primary-500;
           }
         }
       }

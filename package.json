@@ -30,6 +30,7 @@
     "build-storybook": "build-storybook",
     "lint": "eslint --cache .",
     "lint:fix": "yarn lint -- --fix",
+    "prepare": "husky install",
     "prepublishOnly": "yarn build",
     "heroku-postbuild": "echo Skip build on Heroku",
     "semantic-release": "semantic-release"
@@ -46,6 +47,7 @@
     "@rollup/plugin-strip": "^2.1.0",
     "@rollup/plugin-url": "^6.1.0",
     "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/exec": "^6.0.2",
     "@semantic-release/git": "^10.0.1",
     "@storybook/addon-a11y": "^6.4.8",
     "@storybook/addon-essentials": "^6.4.8",

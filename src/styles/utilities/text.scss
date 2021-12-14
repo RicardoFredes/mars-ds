@@ -1,0 +1,40 @@
+.text {
+  &-capitalize {
+    text-transform: capitalize;
+  }
+  &-lowercase {
+    text-transform: lowercase;
+  }
+  &-uppercase {
+    text-transform: uppercase;
+  }
+  &-left {
+    text-align: left;
+  }
+  &-right {
+    text-align: right;
+  }
+  &-center {
+    text-align: center;
+  }
+  &-bold {
+    font-weight: bold;
+  }
+  &-italic {
+    font-style: italic;
+  }
+  &-nowrap {
+    white-space: nowrap;
+  }
+  &-decoration {
+    &-underline {
+      text-decoration: underline;
+    }
+    &-none {
+      text-decoration: none;
+    }
+    &-line-through, &-delete {
+      text-decoration: line-through;
+    }
+  }
+}

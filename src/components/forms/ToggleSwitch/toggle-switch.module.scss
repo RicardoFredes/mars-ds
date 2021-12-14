@@ -18,7 +18,7 @@
     align-items: center;
     width: 34px;
     height: 14px;
-    background-color: $color-neutral-main;
+    background-color: $color-neutral-500;
     border-radius: $border-radius-sm;
   }
   &__thumb {
@@ -47,7 +47,7 @@
       height: 20px;
       width: 20px;
       transition: transform ease 0.2s;
-      background-color: $color-neutral-lighter;
+      background-color: $color-neutral-300;
       border-radius: 50%;
       box-shadow: $shadow-elevation-100;
     }
@@ -60,11 +60,11 @@
           background-color: $color-info-ghost;
         }
         &:after {
-          background-color: $color-info-main;
+          background-color: $color-info-500;
         }
       }
       &__track {
-        background-color: $color-info-light;
+        background-color: $color-info-300;
       }
     }
   }
@@ -82,7 +82,7 @@
         background-color: $color-action-disabled-background;
       }
       &__thumb {
-        background-color: $color-neutral-main;
+        background-color: $color-neutral-500;
       }
     }
   }

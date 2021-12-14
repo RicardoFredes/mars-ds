@@ -27,10 +27,10 @@
   }
 
   &--primary {
-    background-color: $color-primary-main;
-    color: $color-common-white;
+    background-color: $color-primary-500;
+    color: $color-white;
     &:hover {
-      background-color: $color-primary-dark;
+      background-color: $color-primary-700;
     }
     &:disabled {
       background-color: $color-action-disabled-background;
@@ -39,9 +39,8 @@
   }
 
   &--secondary {
-    color: $color-primary-main;
-    border-color: $color-primary-main;
-    background-color: $color-background-primary;
+    color: $color-primary-500;
+    border-color: $color-primary-500;
     &:hover {
       background-color: $color-primary-ghost;
     }
@@ -62,7 +61,10 @@
     }
   }
   &--neutral {
-    border-color: $color-action-disabled-background;
+    border-color: $color-neutral-500;
+    &:disabled {
+      border-color: $color-action-disabled-background;
+    }
   }
 
   &--size-sm {

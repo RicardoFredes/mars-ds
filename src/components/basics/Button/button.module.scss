@@ -28,7 +28,7 @@
 
   &--primary {
     background-color: $color-primary-main;
-    color: $color-background-primary;
+    color: $color-common-white;
     &:hover {
       background-color: $color-primary-dark;
     }
@@ -39,11 +39,11 @@
   }
 
   &--secondary {
-    background-color: $color-background-primary;
     color: $color-primary-main;
     border-color: $color-primary-main;
+    background-color: $color-background-primary;
     &:hover {
-      background-color: $color-primary-lighter;
+      background-color: $color-primary-ghost;
     }
     &:disabled {
       color: $color-action-disabled;
@@ -62,7 +62,6 @@
     }
   }
   &--neutral {
-    background-color: $color-background-primary;
     border-color: $color-action-disabled-background;
   }
 

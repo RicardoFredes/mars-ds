@@ -6,6 +6,7 @@ import { SizesEnum, VariantsEnum } from "@/types";
 import classNames from "classnames";
 
 const ToggleButton = ({ iconName, className, ...props }: ToggleButtonProps) => {
+  // @ts-expect-error FIXME: Figure out how to type this
   if (!props.size || props.size === SizesEnum.Large) props.size = SizesEnum.Medium;
   const cn = classNames("toggle-btn", className);
   return (

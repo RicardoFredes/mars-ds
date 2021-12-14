@@ -1,14 +1,14 @@
-import { create } from "@storybook/theming";
+import { create, themes } from "@storybook/theming";
 
 /** @type {import("@storybook/theming").Theme} */
-export default create({
+export const light = create({
   base: "light",
   colorPrimary: "rgba(237, 67, 67, 1)",
   colorSecondary: "rgba(24, 144, 255, 1)",
 
   // UI
   appBg: "rgba(244, 246, 248, 1)",
-  appContentBg: "rgba(255, 255, 255, 1)",
+  appContentBg: "#f4f6f8",
   appBorderColor: "rgba(145, 158, 171, 0.24)",
   appBorderRadius: 8,
 
@@ -39,5 +39,7 @@ export default create({
   // brandImage: "https://cdn-icons-png.flaticon.com/32/2530/2530892.png",
 
   // Grid
-  gridCellSize: 12,
+  gridCellSize: 8,
 });
+
+export const dark = { ...themes.dark, appBg: "black", appContentBg: "#919eab29" };

@@ -3,6 +3,16 @@
     "value": "#919eab3d",
     "type": "color"
   },
+  "common": {
+    "white": {
+      "value": "white",
+      "type": "color"
+    },
+    "black": {
+      "value": "black",
+      "type": "color"
+    }
+  },
   "primary": {
     "lighter": {
       "value": "#fee6d8",

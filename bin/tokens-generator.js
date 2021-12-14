@@ -40,8 +40,7 @@ function saveScss(css, scss, tokenName, isBase = false) {
       .join("\n");
     saveFile(BASE_PATH, `scss/index.scss`, `${scss.join("\n")}\n\n${themeImports}\n`);
   }
-  const cssVariables = css.map((a) => `  ${a}`).join(`\n`);
-  saveFile(BASE_PATH, `scss/${tokenName}.scss`, `:root {\n${cssVariables}\n}\n`);
+  saveFile(BASE_PATH, `scss/${tokenName}.scss`, css);
 }
 
 function saveIndex(json) {
@@ -81,8 +80,16 @@ function genScss(tokens, tokenName) {
 }
 
 function genCss(tokens, tokenName) {
-  const prefix = tokenName === "base" ? "" : `${tokenName}-`;
-  return tokens.map(({ name, value }) => `--${prefix}${name}: ${value};`);
+  const isBase = tokenName === "base";
+  const prefix = isBase ? "" : `${tokenName}-`;
+  const variables = tokens.map(({ name, value }) => `  --${prefix}${name}: ${value};`).join("\n");
+  const rootCss = `:root {\n${variables}\n}\n`;
+  if (isBase) return rootCss;
+  const themeVariables = tokens
+    .map(({ name }) => `  --${name}: var(--${prefix}${name});`)
+    .join("\n");
+  const theme = `.theme-${tokenName} {\n${themeVariables}\n}\n`;
+  return `${rootCss}\n${theme}`;
 }
 
 function genJslib(tokens) {

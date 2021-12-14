@@ -1,7 +1,5 @@
-import type { Sizes } from "@/types";
+import { ButtonProps } from "@/components/basics/Button/button.types";
 
-export interface ToggleButtonProps
-  extends Omit<React.HTMLProps<HTMLButtonElement>, "as" | "size" | "label"> {
+export interface ToggleButtonProps extends ButtonProps {
   iconName: string;
-  size?: Sizes;
 }

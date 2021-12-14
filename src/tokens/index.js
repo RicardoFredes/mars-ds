@@ -1,5 +1,7 @@
 module.exports = {
   ColorDivider: "var(--color-divider);",
+  ColorCommonWhite: "var(--color-common-white);",
+  ColorCommonBlack: "var(--color-common-black);",
   ColorPrimaryLighter: "var(--color-primary-lighter);",
   ColorPrimaryLight: "var(--color-primary-light);",
   ColorPrimaryMain: "var(--color-primary-main);",

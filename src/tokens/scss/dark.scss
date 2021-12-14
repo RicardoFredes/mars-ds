@@ -12,3 +12,18 @@
   --dark-color-background-secondary: #161c24;
   --dark-color-background-neutral: #919eab29;
 }
+
+.theme-dark {
+  --color-action-active: var(--dark-color-action-active);
+  --color-action-hover: var(--dark-color-action-hover);
+  --color-action-selected: var(--dark-color-action-selected);
+  --color-action-disabled: var(--dark-color-action-disabled);
+  --color-action-disabled-background: var(--dark-color-action-disabled-background);
+  --color-action-focus: var(--dark-color-action-focus);
+  --color-text-primary: var(--dark-color-text-primary);
+  --color-text-secondary: var(--dark-color-text-secondary);
+  --color-text-disabled: var(--dark-color-text-disabled);
+  --color-background-primary: var(--dark-color-background-primary);
+  --color-background-secondary: var(--dark-color-background-secondary);
+  --color-background-neutral: var(--dark-color-background-neutral);
+}

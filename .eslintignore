@@ -1,0 +1,9 @@
+# compiled files
+dist/
+storybook-static/
+
+# vscode user-specifig files
+.vscode/
+
+# Jetbrains Intellij-based IDEs
+.idea/

@@ -15,7 +15,7 @@ export type ButtonVariants = typeof ButtonVariantsEnum[keyof typeof ButtonVarian
 
 export interface ButtonProps
   extends Omit<React.HTMLProps<HTMLButtonElement | HTMLLinkElement>, "as" | "size"> {
-  as?: JSX.Element | string;
+  as?: React.ElementType | string;
   variant?: ButtonVariants;
   label?: string;
   size?: ButtonSizes;

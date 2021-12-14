@@ -2,7 +2,8 @@ name: CI
 
 on:
   push:
-    branches: [develop, main]
+    branches:
+      - master
 
 jobs:
   build:
@@ -11,8 +12,9 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        node: ['14.x']
+        node: ["14.x"]
         os: [ubuntu-latest]
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -30,7 +32,7 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - name: Use Node ${{ matrix.node }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node }}
 
@@ -44,3 +46,9 @@ jobs:
 
       - name: Build
         run: yarn build
+
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: yarn semantic-release

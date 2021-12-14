@@ -6,6 +6,6 @@ export enum TextSizes {
 }
 
 export interface TextProps extends Omit<React.HTMLProps<HTMLElement>, "as" | "size"> {
-  as?: any;
+  as?: React.ElementType | string;
   size?: TextSizes;
 }

@@ -1,4 +1,4 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# See https://help.github.com/articles/ignoring-files for more about ignoring files.
 
 # dependencies
 node_modules/*
@@ -9,7 +9,6 @@ pnpm-lock.yaml
 
 # compiled files
 dist/*
-public/*
 storybook-static/*
 
 # misc
@@ -18,6 +17,9 @@ storybook-static/*
 
 # eslint cache
 .eslintcache
+
+# output of 'npm pack'
+*.tgz
 
 # debug
 yarn-debug.log*
@@ -35,7 +37,7 @@ yarn-error.log*
 !.vscode/tasks.json
 *.code-workspace
 
-# Jetbrains Intellij
+# Jetbrains Intellij-based IDEs
 .idea/*
 
 # Generated files

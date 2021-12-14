@@ -2,7 +2,7 @@ import classNames from "classnames";
 import type { CaptionProps } from "./caption.types";
 
 const Caption = ({ as, children, className, ...props }: CaptionProps) => {
-  const SubtitleTag = as || "caption";
+  const SubtitleTag: React.ElementType | string = as || "caption";
   const cn = classNames("caption", className);
 
   return (

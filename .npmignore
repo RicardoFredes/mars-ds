@@ -1,0 +1,24 @@
+# See https://npm.github.io/publishing-pkgs-docs/publishing/the-npmignore-file for more about ignoring files.
+
+# storybook
+storybook-static/
+
+# misc
+*.pem
+
+# eslint cache
+.eslintcache
+
+# debug
+yarn-debug.log*
+yarn-error.log*
+
+# vscode user-specifig files
+.vscode/
+*.code-workspace
+
+# Jetbrains Intellij-based IDEs
+.idea/*
+
+# File-based project format
+*.iws

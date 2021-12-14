@@ -1,0 +1,33 @@
+.item-button {
+  padding: $spacing-lg;
+  border: 1px solid $color-divider;
+  border-radius: $border-radius-sm;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color ease 0.2s;
+  color: $color-text-primary;
+  &:focus {
+    border-color: $color-info-main;
+  }
+  &:hover {
+    background-color: $color-neutral-ghost;
+  }
+  &__icon {
+    margin-right: 18px;
+    max-width: 48px;
+  }
+  &__texts {
+    flex-grow: 1;
+    text-align: left;
+    &-title.subtitle {
+      font-weight: 700;
+    }
+    &-caption {
+      color: $color-text-secondary;
+    }
+  }
+}

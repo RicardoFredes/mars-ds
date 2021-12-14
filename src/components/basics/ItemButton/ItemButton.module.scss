@@ -9,6 +9,7 @@
   width: 100%;
   cursor: pointer;
   transition: background-color ease 0.2s;
+  color: $color-text-primary;
   &:focus {
     border-color: $color-info-main;
   }
@@ -20,7 +21,6 @@
     max-width: 48px;
   }
   &__texts {
-    color: $color-text-primary;
     flex-grow: 1;
     text-align: left;
     &-title.subtitle {

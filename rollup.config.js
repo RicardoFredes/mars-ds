@@ -1,5 +1,3 @@
-import path from "path";
-
 import commonjs from "@rollup/plugin-commonjs";
 import image from "@rollup/plugin-image";
 import resolve from "@rollup/plugin-node-resolve";
@@ -14,13 +12,13 @@ import progress from "rollup-plugin-progress";
 import typescript from "rollup-plugin-typescript2";
 import ttypescript from "ttypescript";
 
-const packageJson = require("./package.json");
-const srcDir = path.resolve(__dirname, "src");
-const destDir = path.resolve(__dirname, "dist");
+import packageJson from "./package.json";
+
+const destDir = packageJson.files[0];
 
 /** @type {Partial<import("rollup").RollupOptions>} */
 const options = {
-  input: `${srcDir}/index.ts`,
+  input: "./src/index.ts",
   output: [
     {
       file: packageJson.main,
@@ -41,7 +39,7 @@ const options = {
     // @ts-expect-error `rollup-plugin-peer-deps-external` doesn't include type definitions.
     peerDepsExternal(),
     resolve({
-      rootDir: srcDir,
+      rootDir: "./src",
     }),
     commonjs(),
     typescript({
@@ -61,11 +59,11 @@ const options = {
       plugins: [postcssPresetEnv()],
     }),
     copy({
-      flatten: false,
+      verbose: true,
       targets: [
         {
-          src: `${srcDir}/styles/tokens/**/*.scss`,
-          dest: `${destDir}/tokens`,
+          src: "./src/tokens",
+          dest: `${destDir}`,
         },
       ],
     }),

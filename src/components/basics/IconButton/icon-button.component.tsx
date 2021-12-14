@@ -6,6 +6,7 @@ import { SizesEnum } from "@/types";
 import classNames from "classnames";
 
 const IconButton = ({ iconName, className, children, label, ...props }: IconButtonProps) => {
+  // @ts-expect-error FIXME: Figure out how to type this
   if (!props.size || props.size === SizesEnum.Large) props.size = SizesEnum.Medium;
   const cn = classNames("icon-btn", className);
   return (

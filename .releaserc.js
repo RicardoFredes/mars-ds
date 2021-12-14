@@ -1,5 +1,3 @@
-"use strict";
-
 const conventionalCommitsOptions = {
   preset: "conventionalcommits",
   parserOpts: {
@@ -17,16 +15,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 /** @type {import("semantic-release").Config} */
 module.exports = {
-  branches: ["main"],
+  branches: ["main", { name: "alpha", prerelease: true }],
   plugins: [
     ["@semantic-release/commit-analyzer", { ...conventionalCommitsOptions }],
     ["@semantic-release/release-notes-generator", { ...conventionalCommitsOptions }],
     ["@semantic-release/changelog", { changelogTitle }],
+    [
+      "@semantic-release/exec",
+      {
+        prepare: "node ./bin/update-shields.js ${nextRelease.version}",
+      },
+    ],
     ["@semantic-release/npm", { tarballDir: "dist" }],
     [
       "@semantic-release/git",
       {
-        assets: ["package.json", "yarn.lock", "CHANGELOG.md"],
+        assets: ["package.json", "yarn.lock", "CHANGELOG.md", "README.md"],
         message:
           "release(version): Release ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
       },

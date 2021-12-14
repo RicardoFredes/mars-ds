@@ -1,32 +1,30 @@
-# Mars: design system <a href="#sobre"></a>
+# MARS Design System
 
 ![images_unsplash_com-photo-1573588028698-f4759befb09a](https://user-images.githubusercontent.com/29892001/145896670-23d7aef4-1ae5-44bf-8b8e-573c6e965b2f.png)
 
 ![License](https://img.shields.io/static/v1?label=Licence&message=MIT&color=yellow)
 ![Coverage](https://img.shields.io/static/v1?label=Coverage&message=0%&color=red)
 ![Build](https://img.shields.io/static/v1?label=Build&message=Success&color=lemon)
-![Version](https://img.shields.io/static/v1?label=Version&message=v0.0.0alpha.0&color=orange)
+![Version](https://img.shields.io/static/v1?label=Version&message=1.0.0.alpha-1&color=orange)
 
 **Mars** é a nossa biblioteca de design system feita em React.js. Essa lib os principais componentes para os projetos do Me Salva!.
 
-- <a href="https://mars.mesalva.com/" target="_blank">Documentação do MARS - Storybook</a>
-- <a href="https://www.figma.com/file/W48LS2jmdbpQ8l9h7FRgit/Me-Salva!-Design-System?node-id=822%3A22408" target="_blank">Projeto visual - Figma</a>
+- [Documentação do MARS - Storybook](https://mars.mesalva.com)
+- [Projeto visual - Figma](https://www.figma.com/file/W48LS2jmdbpQ8l9h7FRgit/Me-Salva!-Design-System?node-id=822%3A22408)
 
-# Tabela de Conteúdo: <a href="#tabela-de-conteudo"></a>
+# Tabela de Conteúdo
 
-<!--ts-->
-   * [Sobre](#Sobre)
-   * [Tabela de Conteúdo](#tabela-de-conteudo)
-   * [Instalação](#instalacao)
-   * [Como usar](#como-usar)
-      * [Pré-requisitos](#pre-requisitos)
-      * [Local files](#local-files)
-   * [Tests](#testes)
-   * [Publicação](#publicacao)
-   * [Tecnologias](#tecnologias)
-<!--te-->
+- [Sobre](#Sobre)
+- [Tabela de Conteúdo](#tabela-de-conteudo)
+- [Instalação](#instalacao)
+- [Como usar](#como-usar)
+  - [Pré-requisitos](#pre-requisitos)
+  - [Local files](#local-files)
+- [Tests](#testes)
+- [Publicação](#publicacao)
+- [Tecnologias](#tecnologias)
 
-# Instalação <a name="instalacao"></a>
+# Instalação
 
 Para rodar o projeto você precisa clonar a aplicação em usa máquina:
 
@@ -46,19 +44,23 @@ $ yarn storybook
 # A aplicação inciará na porta:6006 e abrirá automáticamente em <http://localhost:6006>
 ```
 
-# Como usar <a name="como-usar"></a>
+# Como usar
+
 Aqui jás um overview de algumas decisões arquitetonicas e padrões do projeto.
 
 ## Pre-requisitos
-* Git
-* Node.js >= 14
-* Yarn
+
+- Git
+- Node.js >= 14 <= 16 (Recomendado)
+- Yarn >= 1 <= 2
 
 Os seguintes padrões foram adotados e devem ser seguidos:
+
 - [Conventional Commits](https://www.conventionalcommits.org)
 - [BEM](https://en.bem.info/methodology/quick-start/)
 
 ## Local files
+
 O projeto está organizado da seguinte maneira:
 
 ```bash
@@ -82,6 +84,7 @@ O projeto está organizado da seguinte maneira:
 ```
 
 ## Como criar um novo componente
+
 Um componente dentro do projeto deve seguir extritamente a seguinte organização:
 
 ```bash
@@ -97,6 +100,7 @@ Um componente dentro do projeto deve seguir extritamente a seguinte organizaçã
 Além disso todos os componentes devem ser importados dentro do arquivo `src/index.ts`, assim como o arquivo `.scss` deve ser importado dentro do arquivo `src/styles/components.scss`.
 
 ### Muita coisa para lembrar né?
+
 Por isso foi criado um script para te ajudar nesse passo. Para isso basta ir para o terminar e digitar os seguintes comandos:
 
 ```bash
@@ -108,7 +112,7 @@ $ yarn new-component
 $ [diretorio-dentro-de-src]/[nome-do-component]
 
 # Confirmar a criação? [*/N]
-$ 
+$
 
 # Done: components reindex
 # Done: styles reindex
@@ -131,6 +135,7 @@ $ yarn reindex
 :warning: incompleto
 
 Os arquivos que geram os tokens são oriundos do Figma e são exportados no formato JSON. De modo geral existem três arquivos de temas dentro do diretório `src/tokens/jsons`:
+
 - base.json
 - dark.json
 - light.json
@@ -144,7 +149,7 @@ Após atualizar os tokens é necessário rodar o seguinte script no terminal:
 $ yarn tokens-generator
 ```
 
-# Testes <a name="tests"></a>
+# Testes
 
 :warning: Em construção
 
@@ -153,11 +158,11 @@ $ yarn tokens-generator
 $ yarn test
 ```
 
-# Publicação <a name="publicacao"></a>
+# Publicação
 
 :warning: Em construção
 
-# Tecnologias <a name="tecnologias"></a>
+# Tecnologias
 
 - [Jest](https://jestjs.io/pt-BR/)
 - [Node.js](https://nodejs.org/en/)

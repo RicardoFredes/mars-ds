@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable no-unused-vars */
 const readline = require("readline");
 const fs = require("fs-extra");
 const { kebabCaseToPascalCase } = require("./helpers/convert-names");

@@ -44,7 +44,9 @@ function saveScss(css, scss, tokenName, isBase = false) {
 }
 
 function saveIndex(json) {
-  const parsedJson = Object.entries(json).map(([name, value]) => `  ${name}: "${value}",`);
+  const parsedJson = Object.entries(json).map(
+    ([name, value]) => `  ${name}: "${value.replace(";", "")}",`
+  );
   saveFile(BASE_PATH, `index.js`, `module.exports = {\n${parsedJson.join("\n")}\n};\n`);
   saveFile(
     BASE_PATH,

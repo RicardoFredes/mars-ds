@@ -61,38 +61,38 @@ Os seguintes padrões foram adotados e devem ser seguidos:
 ## Local files
 O projeto está organizado da seguinte maneira:
 
-```js
+```bash
 📂src
- ┣ 📂components //contém os componentes organizados por grupos
+ ┣ 📂components # contém os componentes organizados por grupos
  ┃ ┣ 📂basics
  ┃ ┣ 📂forms
  ┃ ┣ 📂typographics
- ┣ 📂services //métodos e helpers
- ┣ 📂styles //estilos dos componentes e import de variáveis e tokens
+ ┣ 📂services # métodos e helpers
+ ┣ 📂styles # estilos dos componentes e import de variáveis e tokens
  ┃ ┣ 📜components.scss
  ┃ ┣ 📜index.scss
  ┃ ┗ 📜reset.scss
- ┣ 📂tokens //tokens do projeto
- ┃ ┣ 📂jsons //tokens exportado do Figma
+ ┣ 📂tokens # tokens do projeto
+ ┃ ┣ 📂jsons # tokens exportado do Figma
  ┃ ┣ 📂scss
  ┃ ┣ 📜index.js
- ┃ ┗ 📜index.ts //tokens em JS
- ┣ 📂types //tipo gerais usados nos componentes
- ┗ 📜index.ts //arquivo que exporta todos os componentes
+ ┃ ┗ 📜index.ts # tokens em JS
+ ┣ 📂types # tipo gerais usados nos componentes
+ ┗ 📜index.ts # arquivo que exporta todos os componentes
 ```
 
 ## Como criar um novo componente
 Um componente dentro do projeto deve seguir extritamente a seguinte organização:
 
-|nome|tipo de arquivo
-| -------- | -------- |
-|Button|o diretório deve seguir o padrão CamelCase|
-|Button/button.component.tsx|componente react|
-|Button/button.types.ts|exporta todos os tipos do componente|
-|Button/button.stories.tsx|contém a documentação do componente|
-|Button/button.module.scss|contém os estilos no padrão BEM|
-|Button/button.test.ts|teste unitário|
-|Button/index.ts|exporta o componente e os seus tipos|
+```bash
+📂 Button # diretório deve seguir o padrão CamelCase
+ ┣ 📜button.component.tsx # componente react
+ ┣ 📜button.types.ts # contém todos os tipos do componente
+ ┣ 📜button.test.ts # teste unitário
+ ┣ 📜button.stories.tsx # contém a documentação do componente
+ ┣ 📜button.module.scss # contém os estilos no padrão BEM
+ ┗ 📜index.ts # exporta o componente como default
+```
 
 Além disso todos os componentes devem ser importados dentro do arquivo `src/index.ts`, assim como o arquivo `.scss` deve ser importado dentro do arquivo `src/styles/components.scss`.
 

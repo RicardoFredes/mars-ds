@@ -1,3 +1,5 @@
-import type { HTMLProps } from "react";
+import React from "react";
 
-export type LinkProps = HTMLProps<HTMLAnchorElement>;
+export interface LinkProps extends Omit<React.HTMLProps<HTMLAnchorElement>, "as"> {
+  as?: React.ElementType | string;
+}

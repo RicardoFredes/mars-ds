@@ -1,6 +1,7 @@
 .link {
-  color: $color-info-700;
+  color: $color-primary-500;
   cursor: pointer;
+  text-decoration: none;
   &:hover {
     text-decoration: underline;
   }

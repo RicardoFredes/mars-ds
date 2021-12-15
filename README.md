@@ -14,17 +14,39 @@
 
 # Tabela de Conteúdo
 
-- [Sobre](#Sobre)
+- [Sobre](#sobre)
 - [Tabela de Conteúdo](#tabela-de-conteudo)
-- [Instalação](#instalacao)
 - [Como usar](#como-usar)
+- [Instalação](#instalacao)
   - [Pré-requisitos](#pre-requisitos)
-  - [Local files](#local-files)
-- [Tests](#testes)
+  - [Organização dos arquivos](#organizacao-dos-arquivos)
+- [Testes](#testes)
 - [Publicação](#publicacao)
 - [Tecnologias](#tecnologias)
 
-# Instalação
+# Como usar <a name="como-usar"></a>
+
+Para adicionar o Mars aos projetos, rode o seguinte comando:
+
+```bash
+$ yarn add @mesalva/mars
+```
+
+Importando um componente e usando um Tokens:
+
+```tsx
+import { Button, ButtonSizesEnum, Tokens } from "@mesalva/mars";
+
+const MyExample = () => (
+  <div style={{ backgroundColor: Tokens.ColorBackgroundNeutral }}>
+    <Button size={ButtonSizesEnum.Small}>Comece agora!</Button>
+  </div>
+);
+
+export default MyExample;
+```
+
+# Instalação <a name="instalacao"></a>
 
 Para rodar o projeto você precisa clonar a aplicação em usa máquina:
 
@@ -44,11 +66,7 @@ $ yarn storybook
 # A aplicação inciará na porta:6006 e abrirá automáticamente em <http://localhost:6006>
 ```
 
-# Como usar
-
-Aqui jás um overview de algumas decisões arquitetonicas e padrões do projeto.
-
-## Pre-requisitos
+## Pre-requisitos <a name="pre-requisitos"></a>
 
 - Git
 - Node.js >= 14 <= 16 (Recomendado)
@@ -59,7 +77,7 @@ Os seguintes padrões foram adotados e devem ser seguidos:
 - [Conventional Commits](https://www.conventionalcommits.org)
 - [BEM](https://en.bem.info/methodology/quick-start/)
 
-## Local files
+## Organização dos arquivos <a name="organizacao-dos-arquivos"></a>
 
 O projeto está organizado da seguinte maneira:
 
@@ -149,7 +167,7 @@ Após atualizar os tokens é necessário rodar o seguinte script no terminal:
 $ yarn tokens-generator
 ```
 
-# Testes
+# Testes <a name="testes"></a>
 
 :warning: Em construção
 
@@ -158,11 +176,11 @@ $ yarn tokens-generator
 $ yarn test
 ```
 
-# Publicação
+# Publicação # Testes <a name="publicacao"></a>
 
 :warning: Em construção
 
-# Tecnologias
+# Tecnologias <a name="tecnologias"></a>
 
 - [Jest](https://jestjs.io/pt-BR/)
 - [Node.js](https://nodejs.org/en/)

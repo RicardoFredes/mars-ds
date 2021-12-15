@@ -1,10 +1,10 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import Heading from ".";
-import { HeadingSizes } from "./heading.types";
+import Display from ".";
+import { DisplaySizes } from "./display.types";
 
 export default {
-  title: "Typographics/Heading",
-  component: Heading,
+  title: "Typographics/Display",
+  component: Display,
   argTypes: {
     level: {
       options: [1, 2, 3, 4, 5, 6],
@@ -13,32 +13,32 @@ export default {
       },
     },
     size: {
-      options: HeadingSizes,
+      options: DisplaySizes,
       control: {
         type: "select",
       },
     },
   },
-} as ComponentMeta<typeof Heading>;
+} as ComponentMeta<typeof Display>;
 
-const Template: ComponentStory<typeof Heading> = (args) => <Heading {...args} />;
+const Template: ComponentStory<typeof Display> = (args) => <Display {...args} />;
 
 const DefaultArgs = {
   level: 1,
-  children: "Heading",
-  size: HeadingSizes.Medium,
+  children: "Display",
+  size: DisplaySizes.Medium,
 };
 
 export const Default = Template.bind({});
 Default.args = DefaultArgs;
 
-const TemplateList: ComponentStory<typeof Heading> = (args) => {
-  const sizes = Object.values(HeadingSizes).reverse();
+const TemplateList: ComponentStory<typeof Display> = (args) => {
+  const sizes = Object.values(DisplaySizes).reverse();
   return (
     <div>
       {sizes.map((size, index) => (
         <Template key={size} size={size} style={{ marginBottom: 24 }} {...args}>
-          h{index + 1} - Heading {size}
+          h{index + 1} - Display {size}
         </Template>
       ))}
     </div>

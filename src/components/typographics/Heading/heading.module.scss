@@ -1,4 +1,5 @@
 .heading {
+  $factor: 3.25vw;
   font-family: $font-family-acent;
   font-size: 2rem;
   line-height: 1.5em;
@@ -6,26 +7,28 @@
   &--size {
     &-xs {
       font-size: 1.125rem;
+      @media (min-width: $breakpoint-lg) {
+        font-size: 1.2rem;
+      }
     }
     &-sm {
       font-size: 1.25rem;
+      @media (min-width: $breakpoint-lg) {
+        font-size: 1.35rem;
+      }
     }
     &-md {
       font-size: 1.5rem;
+      @media (min-width: $breakpoint-lg) {
+        font-size: 1.6rem;
+      }
     }
     &-lg {
-      font-size: 2rem;
-    }
-    &-xl {
-      font-size: 3rem;
-      line-height: 1.3em;
-      font-weight: 600;
-
-    }
-    &-xxl {
-      font-size: 4rem;
-      line-height: 1.25em;
-      font-weight: 600;
+      font-size: 1.6rem;
+      font-size: clamp(1.6rem, $factor, 2rem);
+      @media (min-width: $breakpoint-lg) {
+        font-size: 2rem;
+      }
     }
   }
 }

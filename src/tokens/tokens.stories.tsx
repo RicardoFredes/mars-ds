@@ -13,12 +13,13 @@ export default {
   },
 };
 
-export const Default = ({ showCSS }) => (
+export const Default = ({ showCSS }: { showCSS: boolean }) => (
   <div>
     <Subtitle>Tokens das cores</Subtitle>
     <br />
     {colors.map((name) => {
-      const tokenCss = Tokens[name].replace(/var\((.*)\).*/, "$1");
+      const tokenValue = (Tokens as Record<string, string>)[name] as string;
+      const tokenCss = name.replace(/var\((.*)\).*/, "$1");
       return (
         <div key={name} className="flex align-items-center" style={{ marginBottom: 24 }}>
           <div
@@ -26,7 +27,7 @@ export const Default = ({ showCSS }) => (
               width: 96,
               height: 48,
               marginRight: 16,
-              background: Tokens[name],
+              background: tokenValue,
               borderRadius: 16,
               border: `1px solid ${Tokens.ColorNeutralGhost}`,
             }}

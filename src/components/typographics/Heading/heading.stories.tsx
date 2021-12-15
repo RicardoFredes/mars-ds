@@ -36,9 +36,9 @@ const TemplateList: ComponentStory<typeof Heading> = (args) => {
   const sizes = Object.values(HeadingSizes).reverse();
   return (
     <div>
-      {sizes.map((size) => (
+      {sizes.map((size, index) => (
         <Template key={size} size={size} style={{ marginBottom: 24 }} {...args}>
-          Heading size: {size}
+          h{index + 1} - Heading {size}
         </Template>
       ))}
     </div>

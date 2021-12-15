@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.4](https://github.com/mesalva/mars/compare/v1.0.0-alpha.3...v1.0.0-alpha.4) (2021-12-15)
+
+
+### Features
+
+* add display component ([7ac5979](https://github.com/mesalva/mars/commit/7ac5979dd6a0623a217551aa24ff9d01191631a1))
+* add display typographic component ([280da1b](https://github.com/mesalva/mars/commit/280da1bb963718172654c4b98d4f0c3791809202))
+
 ## [1.0.0-alpha.3](https://github.com/mesalva/mars/compare/v1.0.0-alpha.2...v1.0.0-alpha.3) (2021-12-15)
 
 

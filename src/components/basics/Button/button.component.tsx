@@ -2,12 +2,14 @@ import { useState, MouseEvent } from "react";
 import { ButtonProps, ButtonSizesEnum, ButtonVariantsEnum } from "./button.types";
 
 import classNames from "classnames";
+import Icon from "@/components/basics/Icon";
 import Link from "@/components/basics/Link/link.component";
 
 const Button = ({
   as,
   children,
   className,
+  iconName,
   label,
   onClick,
   type = "button",
@@ -33,9 +35,12 @@ const Button = ({
     className
   );
 
+  const text = label || children;
+
   return (
     <Component className={cn} onClick={handleClick} type={type} {...props}>
-      {label || children}
+      {iconName && <Icon className="btn__icon" name={iconName} size={size} />}
+      {text && <span className="btn__content">{text}</span>}
     </Component>
   );
 };

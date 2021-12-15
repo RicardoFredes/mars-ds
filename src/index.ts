@@ -18,9 +18,6 @@ export type { DropdownMenuProps } from "./components/basics/DropdownMenu/dropdow
 export { default as Icon } from "./components/basics/Icon/icon.component";
 export type { IconProps } from "./components/basics/Icon/icon.types";
 
-export { default as IconButton } from "./components/basics/IconButton/icon-button.component";
-export type { IconButtonProps } from "./components/basics/IconButton/icon-button.types";
-
 export { default as ItemButton } from "./components/basics/ItemButton/ItemButton.component";
 export type { ItemButtonProps } from "./components/basics/ItemButton/ItemButton.types";
 

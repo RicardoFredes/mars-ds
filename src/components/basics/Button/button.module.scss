@@ -20,6 +20,10 @@
   padding: 11px 22px;
   transition: background-color ease 0.2s;
 
+  &__icon {
+    margin-right: 8px;
+  }
+
   &--is-disabled,
   &:disabled {
     cursor: inherit;

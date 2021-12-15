@@ -1,5 +1,6 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 import { ButtonSizesEnum, ButtonVariantsEnum } from "./button.types";
+import icons from "@/components/basics/Icon/lib";
 import Button from ".";
 
 export default {
@@ -12,6 +13,10 @@ export default {
     },
     size: {
       options: ButtonSizesEnum,
+      control: { type: "select" },
+    },
+    name: {
+      options: Object.keys(icons),
       control: { type: "select" },
     },
   },
@@ -57,4 +62,17 @@ export const Disabled = TemplateList.bind({});
 Disabled.args = {
   ...DefaultArgs,
   disabled: true,
+};
+
+export const Icon = TemplateList.bind({});
+Icon.args = {
+  ...DefaultArgs,
+  iconName: "me-salva-mini",
+};
+
+export const IconSmallSize = TemplateList.bind({});
+IconSmallSize.args = {
+  ...DefaultArgs,
+  iconName: "me-salva-mini",
+  size: ButtonSizesEnum.Small,
 };

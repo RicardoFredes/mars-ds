@@ -11,7 +11,6 @@ export default {
   component: Card,
   argTypes: {
     elevation: {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       options: CardElevations,
       control: { type: "select" },
     },

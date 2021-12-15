@@ -19,4 +19,5 @@ export interface ButtonProps
   variant?: ButtonVariants;
   label?: string;
   size?: ButtonSizes;
+  iconName?: string;
 }

@@ -23,7 +23,7 @@ module.exports = {
     [
       "@semantic-release/exec",
       {
-        prepare: "node ./bin/update-shields.js ${nextRelease.version}",
+        prepareCmd: "node ./bin/update-shields.js ${nextRelease.version}",
       },
     ],
     ["@semantic-release/npm", { tarballDir: "dist" }],

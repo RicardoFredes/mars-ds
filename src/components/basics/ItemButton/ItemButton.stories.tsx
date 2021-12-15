@@ -1,6 +1,6 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 import icons from "../Icon/lib";
-import { LabelTheme, LabelVariants } from "../Label/label.types";
+import { LabelThemes, LabelVariants } from "../Label/label.types";
 import ItemButton from "./";
 
 export default {
@@ -12,7 +12,7 @@ export default {
     iconName: { options: Object.keys(icons), control: { type: "select" } },
     label: { control: { type: "text" } },
     labelVariant: { options: LabelVariants, control: { type: "select" } },
-    labelTheme: { options: LabelTheme, control: { type: "select" } },
+    labelTheme: { options: LabelThemes, control: { type: "select" } },
     iconColor: { control: { type: "color" } },
   },
 } as ComponentMeta<typeof ItemButton>;
@@ -27,7 +27,7 @@ Default.args = {
   subtitle: "R$ 297,90",
   label: "-15%",
   iconName: "pix",
-  labelTheme: LabelTheme.Ghost,
+  labelTheme: LabelThemes.Ghost,
   labelVariant: LabelVariants.Success,
 };
 

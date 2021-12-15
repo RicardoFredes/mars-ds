@@ -1,11 +1,14 @@
 import type React from "react";
+import { Sizes } from "@/types";
 
-export enum TextSizes {
-  Small = "s",
-  Medium = "m",
-}
+const { Small, Medium } = Sizes;
+
+export const TextSizes = {
+  Small,
+  Medium,
+} as const;
 
 export interface TextProps extends Omit<React.HTMLProps<HTMLElement>, "as" | "size"> {
   as?: React.ElementType | string;
-  size?: TextSizes;
+  size?: typeof TextSizes[keyof typeof TextSizes];
 }

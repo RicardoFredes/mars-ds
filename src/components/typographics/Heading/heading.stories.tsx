@@ -1,6 +1,6 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 import Heading from ".";
-import { HeadingSizesEnum } from "./heading.types";
+import { HeadingSizes } from "./heading.types";
 
 export default {
   title: "Typographics/Heading",
@@ -13,7 +13,7 @@ export default {
       },
     },
     size: {
-      options: HeadingSizesEnum,
+      options: HeadingSizes,
       control: {
         type: "select",
       },
@@ -26,14 +26,14 @@ const Template: ComponentStory<typeof Heading> = (args) => <Heading {...args} />
 const DefaultArgs = {
   level: 1,
   children: "Heading",
-  size: HeadingSizesEnum.Medium,
+  size: HeadingSizes.Medium,
 };
 
 export const Default = Template.bind({});
 Default.args = DefaultArgs;
 
 const TemplateList: ComponentStory<typeof Heading> = (args) => {
-  const sizes = Object.values(HeadingSizesEnum).reverse();
+  const sizes = Object.values(HeadingSizes).reverse();
   return (
     <div>
       {sizes.map((size) => (

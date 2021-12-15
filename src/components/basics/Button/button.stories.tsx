@@ -1,5 +1,5 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import { ButtonSizesEnum, ButtonVariantsEnum } from "./button.types";
+import { ButtonSizes, ButtonVariants } from "./button.types";
 import icons from "@/components/basics/Icon/lib";
 import Button from ".";
 
@@ -8,11 +8,11 @@ export default {
   component: Button,
   argTypes: {
     variant: {
-      options: ButtonVariantsEnum,
+      options: ButtonVariants,
       control: { type: "select" },
     },
     size: {
-      options: ButtonSizesEnum,
+      options: ButtonSizes,
       control: { type: "select" },
     },
     name: {
@@ -25,7 +25,7 @@ export default {
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 const TemplateList: ComponentStory<typeof Button> = (args) => {
-  const variants = Object.values(ButtonVariantsEnum);
+  const variants = Object.values(ButtonVariants);
   return (
     <div>
       {variants.map((variant, key) => (
@@ -38,8 +38,8 @@ const TemplateList: ComponentStory<typeof Button> = (args) => {
 };
 
 const DefaultArgs = {
-  variant: ButtonVariantsEnum.Primary,
-  size: ButtonSizesEnum.Medium,
+  variant: ButtonVariants.Primary,
+  size: ButtonSizes.Medium,
   children: "Quero ser aprovado!",
   disabled: false,
 };
@@ -55,7 +55,7 @@ MediumSize.args = {
 export const SmallSize = TemplateList.bind({});
 SmallSize.args = {
   ...DefaultArgs,
-  size: ButtonSizesEnum.Small,
+  size: ButtonSizes.Small,
 };
 
 export const Disabled = TemplateList.bind({});
@@ -74,5 +74,5 @@ export const IconSmallSize = TemplateList.bind({});
 IconSmallSize.args = {
   ...DefaultArgs,
   iconName: "me-salva-mini",
-  size: ButtonSizesEnum.Small,
+  size: ButtonSizes.Small,
 };

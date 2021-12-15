@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import { StepperProps } from "../Stepper/stepper.types";
-import { HeadingSizesEnum } from "@/components/typographics/Heading/heading.types";
+import { HeadingSizes } from "@/components/typographics/Heading/heading.types";
 import Heading from "@/components/typographics/Heading";
 import Caption from "@/components/typographics/Caption";
 import Text from "@/components/typographics/Text";
@@ -18,7 +18,7 @@ const CircleStepper = ({ position, steps, className, ...props }: StepperProps) =
   return (
     <div className={cn} {...props}>
       <div className="circle-stepper__info">
-        <Heading size={HeadingSizesEnum.Small} className="circle-stepper__info-title">
+        <Heading size={HeadingSizes.Small} className="circle-stepper__info-title">
           {steps[position - 1]}
         </Heading>
         {position < steps.length && position > 0 && (

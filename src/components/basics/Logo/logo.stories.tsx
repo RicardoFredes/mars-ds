@@ -1,7 +1,7 @@
 import type { LogoProps } from "@/components/basics/Logo/logo.types";
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import { LogoNameEnums, LogoVariantsEnum } from "@/components/basics/Logo/logo.types";
+import { LogoNames, LogoVariants } from "@/components/basics/Logo/logo.types";
 import Logo from "./";
 
 export default {
@@ -11,14 +11,14 @@ export default {
     name: {
       description: "The variant of our logo",
       control: { type: "radio" },
-      options: LogoNameEnums,
-      defaultValue: LogoNameEnums.Full,
+      options: LogoNames,
+      defaultValue: LogoNames.Full,
     },
     variant: {
       description: "The color used for the logo, following our brand guidelines",
       control: { type: "radio" },
-      options: LogoVariantsEnum,
-      defaultValue: LogoVariantsEnum.Primary,
+      options: LogoVariants,
+      defaultValue: LogoVariants.Primary,
     },
     height: {
       description: "The size of the logo",

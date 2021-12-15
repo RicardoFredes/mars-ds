@@ -191,7 +191,7 @@ const SelectField = ({
         "aria-valuetext": value,
       };
     })
-    .filter(({ label }) => mathQuery(query, label));
+    .filter(({ label }) => label && mathQuery(query, label));
 
   const rightIconButton = {
     name: "chevron-down",

@@ -1,9 +1,9 @@
 export interface LabelProps extends React.HTMLProps<HTMLSpanElement> {
-  theme: LabelTheme;
+  theme: LabelThemes;
   variant: LabelVariants | LabelSubjectVariants;
 }
 
-export enum LabelTheme {
+export enum LabelThemes {
   Ghost = "ghost",
   Subject = "subject",
   Solid = "solid",

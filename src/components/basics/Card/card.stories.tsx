@@ -3,16 +3,15 @@ import type { ComponentMeta, ComponentStory } from "@storybook/react";
 import Card from "./";
 import Text from "@/components/typographics/Text";
 import Heading from "@/components/typographics/Heading";
-import { HeadingSizesEnum } from "@/components/typographics/Heading/heading.types";
-import { CardElevationsEnum, CardProps } from "./card.types";
+import { HeadingSizes } from "@/components/typographics/Heading/heading.types";
+import { CardElevations, CardProps } from "./card.types";
 
 export default {
   title: "Components/Card",
   component: Card,
   argTypes: {
     elevation: {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-      options: CardElevationsEnum,
+      options: CardElevations,
       control: { type: "select" },
     },
   },
@@ -20,7 +19,7 @@ export default {
 
 const Template: ComponentStory<typeof Card> = (args: CardProps) => (
   <Card {...args} style={{ maxWidth: 520 }}>
-    <Heading size={HeadingSizesEnum.Small}>Card elevation: {args.elevation || "none"}</Heading>
+    <Heading size={HeadingSizes.Small}>Card elevation: {args.elevation || "none"}</Heading>
     <Text>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
       labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -34,7 +33,7 @@ const Template: ComponentStory<typeof Card> = (args: CardProps) => (
 export const Default = Template.bind({});
 
 const TemplateList: ComponentStory<typeof Card> = (args: CardProps) => {
-  const elevations = Object.values(CardElevationsEnum);
+  const elevations = Object.values(CardElevations);
   return (
     <div>
       {elevations.map((elevation, key) => (

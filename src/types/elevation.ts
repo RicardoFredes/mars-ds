@@ -1,4 +1,4 @@
-export const ElevationEnum = {
+export const Elevations = {
   XLow: "xl",
   Low: "lw",
   Medium: "md",
@@ -6,5 +6,3 @@ export const ElevationEnum = {
   XHigh: "xh",
   XXHigh: "xxh",
 } as const;
-
-export type Elevation = typeof ElevationEnum[keyof typeof ElevationEnum];

@@ -1,9 +1,9 @@
-export const SizesEnum = {
-  ExtraSmall: "xs",
+export const Sizes = {
+  XXSmalll: "xxs",
+  XSmall: "xs",
   Small: "sm",
   Medium: "md",
   Large: "lg",
-  ExtraLarge: "xl",
+  XLarge: "xl",
+  XXLarge: "xxl",
 } as const;
-
-export type Sizes = typeof SizesEnum[keyof typeof SizesEnum];

@@ -2,12 +2,12 @@ import type { LogoProps } from "./logo.types";
 
 import classNames from "classnames";
 
-import { LogoNameEnums, LogoVariantsEnum } from "./logo.types";
+import { LogoNames, LogoVariants } from "./logo.types";
 import variants from "./icons";
 
 const Logo = ({
-  name = LogoNameEnums.Full,
-  variant = LogoVariantsEnum.Primary,
+  name = LogoNames.Full,
+  variant = LogoVariants.Primary,
   height,
   className,
   ...props

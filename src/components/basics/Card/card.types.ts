@@ -1,12 +1,11 @@
-import { ElevationEnum } from "@/types";
+import { Elevations } from "@/types";
 import type { HTMLProps } from "react";
 
-export const CardElevationsEnum = {
+export const CardElevations = {
   Default: "none",
-  ...ElevationEnum,
+  ...Elevations,
 };
-export type CardElevations = typeof CardElevationsEnum[keyof typeof CardElevationsEnum];
 
 export interface CardProps extends HTMLProps<HTMLDivElement> {
-  elevation?: CardElevations;
+  elevation?: typeof CardElevations[keyof typeof CardElevations];
 }

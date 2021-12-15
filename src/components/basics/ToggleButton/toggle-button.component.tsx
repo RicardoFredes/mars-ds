@@ -1,19 +1,12 @@
 import type { ToggleButtonProps } from "./toggle-button.types";
 
-import Icon from "@/components/basics/Icon";
 import Button from "@/components/basics/Button";
-import { SizesEnum, VariantsEnum } from "@/types";
 import classNames from "classnames";
+import { ButtonVariants } from "../Button/button.types";
 
-const ToggleButton = ({ iconName, className, ...props }: ToggleButtonProps) => {
-  // @ts-expect-error FIXME: Figure out how to type this
-  if (!props.size || props.size === SizesEnum.Large) props.size = SizesEnum.Medium;
+const ToggleButton = ({ className, ...props }: ToggleButtonProps) => {
   const cn = classNames("toggle-btn", className);
-  return (
-    <Button variant={VariantsEnum.Neutral} className={cn} {...props}>
-      <Icon name={iconName} size={props.size} />
-    </Button>
-  );
+  return <Button variant={ButtonVariants.Neutral} className={cn} {...props} />;
 };
 
 export default ToggleButton;

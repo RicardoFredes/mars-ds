@@ -1,6 +1,6 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 import Label from "./";
-import { LabelTheme, LabelVariants } from "./label.types";
+import { LabelThemes, LabelVariants } from "./label.types";
 
 enum LocalLabelTheme {
   Ghost = "ghost",
@@ -25,7 +25,7 @@ const Template: ComponentStory<typeof Label> = (args) => <Label {...args} />;
 
 const DefaultArgs = {
   variant: LabelVariants.Default,
-  theme: LabelTheme.Ghost,
+  theme: LabelThemes.Ghost,
   children: "Label",
 };
 

@@ -68,6 +68,9 @@ export type { ToggleSwitchProps } from "./components/forms/ToggleSwitch/toggle-s
 export { default as Caption } from "./components/typographics/Caption/caption.component";
 export type { CaptionProps } from "./components/typographics/Caption/caption.types";
 
+export { default as Display } from "./components/typographics/Display/display.component";
+export type { DisplayProps } from "./components/typographics/Display/display.types";
+
 export { default as Heading } from "./components/typographics/Heading/heading.component";
 export type { HeadingProps } from "./components/typographics/Heading/heading.types";
 

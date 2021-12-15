@@ -1,18 +1,14 @@
-name: CI
+name: Release
 
 on:
   push:
     branches:
-      - main
+      - alpha
 
 jobs:
-  build:
-    name: Build and test on Node.js ${{ matrix.node }} and ${{ matrix.os }}
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        node: ["14.x"]
-        os: [ubuntu-latest]
+  release:
+    name: Release
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
@@ -30,10 +26,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
 
-      - name: Use Node ${{ matrix.node }}
+      - name: Use Node.js 16
         uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.node }}
+          node-version: 16
 
       - name: Install dependencies
         env:
@@ -45,3 +41,9 @@ jobs:
 
       - name: Build
         run: yarn build
+
+      - name: Release
+        run: yarn semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

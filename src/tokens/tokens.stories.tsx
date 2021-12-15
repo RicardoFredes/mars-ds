@@ -2,6 +2,8 @@ import Tokens from ".";
 import Caption from "@/components/typographics/Caption";
 import Subtitle from "@/components/typographics/Subtitle";
 
+type TokenKeys = keyof typeof Tokens;
+
 const colors = Object.entries(Tokens)
   .map(([name]) => name)
   .filter((name) => /color/i.test(name));
@@ -13,12 +15,16 @@ export default {
   },
 };
 
+const getTokenValue = (name: TokenKeys) => {
+  return Tokens[name];
+};
+
 export const Default = ({ showCSS }: { showCSS: boolean }) => (
   <div>
     <Subtitle>Tokens das cores</Subtitle>
     <br />
     {colors.map((name) => {
-      const tokenValue = (Tokens as Record<string, string>)[name] as string;
+      const tokenValue = getTokenValue(name as TokenKeys);
       const tokenCss = name.replace(/var\((.*)\).*/, "$1");
       return (
         <div key={name} className="flex align-items-center" style={{ marginBottom: 24 }}>

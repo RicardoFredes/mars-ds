@@ -1,0 +1,15 @@
+.display {
+  $factor: 3.25vw;
+  font-family: $font-family-acent;
+  font-size: 1.8rem;
+  font-size: clamp(1.8rem, $factor, 3rem);
+  line-height: 1.3em;
+  font-weight: 600;
+  &--size {
+    &-lg {
+      font-size: 2rem;
+      font-size: clamp(2rem, $factor, 4rem);
+      line-height: 1.25em;
+    }
+  }
+}

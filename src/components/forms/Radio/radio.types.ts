@@ -1,12 +1,17 @@
-import { Option } from "@/types";
+export type RadioOption = {
+  value?: string;
+  label?: string;
+};
+
+export type RadioOptions = RadioOption[];
 
 export interface RadioProps extends React.HTMLProps<HTMLInputElement> {
   label?: string;
 }
 
 export interface RadioListProps extends Omit<React.HTMLProps<HTMLDivElement>, "onSelect"> {
-  options: Option[];
+  options: RadioOptions;
   name: string;
-  defaultOption?: Option;
-  onSelect?: (option: Option) => void;
+  defaultOption?: RadioOption;
+  onSelect?: (option: RadioOption) => void;
 }

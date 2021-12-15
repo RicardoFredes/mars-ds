@@ -1,20 +1,20 @@
 import type React from "react";
+import { Sizes } from "@/types";
 
-export const HeadingSizesEnum = {
-  XSmalll: "xs",
-  Small: "sm",
-  Medium: "mf",
-  Large: "lg",
-  XLarge: "xl",
-  XXLarge: "xxl",
+const { XSmall, Small, Medium, Large, XLarge, XXLarge } = Sizes;
+export const HeadingSizes = {
+  XSmall,
+  Small,
+  Medium,
+  Large,
+  XLarge,
+  XXLarge,
 } as const;
-
-export type HeadingSizes = typeof HeadingSizesEnum[keyof typeof HeadingSizesEnum];
 
 export type HeadingLevels = number | "1" | "2" | "3" | "4" | "5" | "6";
 
 export interface HeadingProps extends Omit<React.HTMLProps<HTMLElement>, "as" | "size"> {
   as?: React.ElementType | string;
   level?: HeadingLevels;
-  size?: HeadingSizes;
+  size?: typeof HeadingSizes[keyof typeof HeadingSizes];
 }

@@ -1,9 +1,9 @@
 import classNames from "classnames";
-import { LabelProps, LabelTheme, LabelVariants } from "./label.types";
+import { LabelProps, LabelThemes, LabelVariants } from "./label.types";
 
 const Label = ({
   className,
-  theme = LabelTheme.Solid,
+  theme = LabelThemes.Solid,
   variant = LabelVariants.Primary,
   children,
   ...props

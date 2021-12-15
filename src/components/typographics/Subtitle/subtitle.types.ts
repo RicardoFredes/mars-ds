@@ -1,10 +1,13 @@
 import type { HeadingProps } from "@/components/typographics/Heading/heading.types";
+import { Sizes } from "@/types";
 
-export enum SubtitlesSizes {
-  Medium = "md",
-  Small = "sm",
-}
+const { Small, Medium } = Sizes;
+
+export const SubtitlesSizes = {
+  Medium,
+  Small,
+} as const;
 
 export interface SubtitleProps extends Omit<HeadingProps, "size"> {
-  size?: SubtitlesSizes;
+  size?: typeof SubtitlesSizes[keyof typeof SubtitlesSizes];
 }

@@ -1,4 +1,4 @@
-import { HeadingProps, HeadingSizesEnum } from "./heading.types";
+import { HeadingProps, HeadingSizes } from "./heading.types";
 import classNames from "classnames";
 
 const Heading = ({
@@ -6,7 +6,7 @@ const Heading = ({
   children,
   className,
   level = 1,
-  size = HeadingSizesEnum.Medium,
+  size = HeadingSizes.Medium,
   ...props
 }: HeadingProps) => {
   const HeadingTag = as || `h${level}`;

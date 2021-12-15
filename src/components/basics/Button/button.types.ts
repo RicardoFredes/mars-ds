@@ -1,23 +1,19 @@
-import { SizesEnum, VariantsEnum } from "@/types";
+import { Sizes, Variants } from "@/types";
 
-const { Small, Medium } = SizesEnum;
+const { Small, Medium } = Sizes;
 
-export const ButtonSizesEnum = {
+export const ButtonSizes = {
   Medium,
   Small,
 } as const;
 
-export const ButtonVariantsEnum = VariantsEnum;
-
-export type ButtonSizes = typeof ButtonSizesEnum[keyof typeof ButtonSizesEnum];
-
-export type ButtonVariants = typeof ButtonVariantsEnum[keyof typeof ButtonVariantsEnum];
+export const ButtonVariants = Variants;
 
 export interface ButtonProps
   extends Omit<React.HTMLProps<HTMLButtonElement | HTMLLinkElement>, "as" | "size"> {
   as?: React.ElementType | string;
-  variant?: ButtonVariants;
+  variant?: typeof ButtonVariants[keyof typeof ButtonVariants];
   label?: string;
-  size?: ButtonSizes;
+  size?: typeof ButtonSizes[keyof typeof ButtonSizes];
   iconName?: string;
 }

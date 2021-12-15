@@ -27,7 +27,9 @@ function reindexStyles(filesList) {
 function reindexComponents(filesList) {
   const scssImport = `import "./styles/index.scss";`;
 
-  const content = [].concat(scssImport, ...getComponentsAndTypes(filesList), "").join("\n");
+  const tokensImport = `export { default as Tokens } from "./tokens";`;
+
+  const content = [].concat(scssImport, tokensImport, ...getComponentsAndTypes(filesList), "").join("\n");
 
   fs.writeFileSync(INDEX_FILE, content);
   console.log("Done: components reindex");

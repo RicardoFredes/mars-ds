@@ -1,4 +1,5 @@
 import "./styles/index.scss";
+export { default as Tokens } from "./tokens";
 
 export { default as Button } from "./components/basics/Button/button.component";
 export type { ButtonProps } from "./components/basics/Button/button.types";

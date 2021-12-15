@@ -1,13 +1,12 @@
 import type { TextFieldProps } from "@/components/forms/TextField/text-field.types";
+import { Option } from "@/types";
 
 export interface SelectFieldProps extends Omit<TextFieldProps, "rightIconButton" | "onSelect"> {
-  options: SelectFieldOption[];
+  options: SelectFieldOptions;
   defaultOption?: SelectFieldOption;
   onSelect?: (option: SelectFieldOption) => void;
   enableFilter?: boolean;
 }
 
-export interface SelectFieldOption {
-  label: string;
-  value?: any;
-}
+export type SelectFieldOption = Option;
+export type SelectFieldOptions = SelectFieldOption[];

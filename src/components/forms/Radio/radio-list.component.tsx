@@ -1,10 +1,9 @@
 import { useState } from "react";
 import Radio from "./";
 import classNames from "classnames";
-import type { RadioListProps } from "./radio.types";
-import { Option } from "@/types";
+import type { RadioListProps, RadioOption } from "./radio.types";
 
-const emptyOption: Option = { value: undefined, label: undefined };
+const emptyOption: RadioOption = { value: undefined, label: undefined };
 
 const RadioList = ({
   name,
@@ -16,7 +15,7 @@ const RadioList = ({
 }: RadioListProps) => {
   const [checkedOption, setCheckedOption] = useState(defaultOption);
   const cn = classNames("radioList", className);
-  const handleSelectOption = (option: Option) => {
+  const handleSelectOption = (option: RadioOption) => {
     setCheckedOption(option);
     onSelect?.(option);
   };

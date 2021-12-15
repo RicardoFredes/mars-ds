@@ -9,4 +9,4 @@ export interface SelectFieldProps extends Omit<TextFieldProps, "rightIconButton"
 }
 
 export type SelectFieldOption = Option;
-export type SelectFieldOptions = Option[];
+export type SelectFieldOptions = SelectFieldOption[];

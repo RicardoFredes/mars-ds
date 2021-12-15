@@ -1,7 +1,9 @@
-import { Option } from "@/types";
+export type RadioOption = {
+  value?: string;
+  label?: string;
+};
 
-export type RadioOption = Option;
-export type RadioOptions = Option[];
+export type RadioOptions = RadioOption[];
 
 export interface RadioProps extends React.HTMLProps<HTMLInputElement> {
   label?: string;

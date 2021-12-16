@@ -30,7 +30,7 @@
     "build-storybook": "build-storybook",
     "lint": "eslint .",
     "lint:fix": "yarn lint -- --fix",
-    "postinstall": "husky install",
+    "prepare": "husky install",
     "prepublishOnly": "yarn build",
     "heroku-postbuild": "echo Skip build on Heroku",
     "semantic-release": "semantic-release"

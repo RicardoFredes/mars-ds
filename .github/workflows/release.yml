@@ -31,10 +31,13 @@ jobs:
         with:
           node-version: 16
 
+      - name: Disable post-install scripts
+        run: npm set-script prepare ""
+
       - name: Install dependencies
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: yarn --pure-lockfile --non-interactive --no-progress --ignore-scripts
+        run: yarn --pure-lockfile --non-interactive --no-progress
 
       - name: Test
         run: yarn test --ci --coverage --maxWorkers=2

@@ -47,6 +47,7 @@ jobs:
   application:
     name: Build, lint and test on Node.js ${{ matrix.node }} and ${{ matrix.os }}
 
+    needs: [pr]
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -76,7 +77,7 @@ jobs:
       - name: Install dependencies
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: yarn --pure-lockfile --non-interactive --no-progress --ignore-scripts
+        run: yarn --pure-lockfile --non-interactive --no-progress
 
       - name: Lint
         run: yarn lint

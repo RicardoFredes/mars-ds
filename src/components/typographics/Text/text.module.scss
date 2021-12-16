@@ -8,4 +8,8 @@ p,
       font-size: 0.875em;
     }
   }
+  + p,
+  + .text {
+    margin-top: 1em;
+  }
 }

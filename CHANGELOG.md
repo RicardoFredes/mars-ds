@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.6](https://github.com/mesalva/mars/compare/v1.0.0-alpha.5...v1.0.0-alpha.6) (2021-12-17)
+
+
+### Bug Fixes
+
+* **new-component:** use async await ([155f6be](https://github.com/mesalva/mars/commit/155f6be7f3dca82aaa4787e4a5af74e46940c721))
+
 ## [1.0.0-alpha.5](https://github.com/mesalva/mars/compare/v1.0.0-alpha.4...v1.0.0-alpha.5) (2021-12-16)
 
 

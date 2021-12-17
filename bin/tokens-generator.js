@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
 const fs = require("fs-extra");
 const { saveFile } = require("./helpers/files");
 const { kebabCaseToPascalCase, camelCaseToKebabCase } = require("./helpers/convert-names");
@@ -48,7 +47,6 @@ function saveIndex(json) {
   const parsedJson = Object.entries(json).map(
     ([name, value]) => `  ${name}: "${value.replace(";", "")}",`
   );
-  // saveFile(BASE_PATH, `index.js`, `module.exports = {\n${parsedJson.join("\n")}\n};\n`);
   saveFile(
     BASE_PATH,
     `index.ts`,

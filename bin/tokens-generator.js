@@ -35,10 +35,11 @@ main();
 
 function saveScss(css, scss, tokenName, isBase = false) {
   if (isBase) {
-    const themeImports = Object.values(TOKENS)
-      .map((name) => `@import "./${name}.scss";`)
-      .join("\n");
-    saveFile(BASE_PATH, `scss/index.scss`, `${scss.join("\n")}\n\n${themeImports}\n`);
+    const VARIABLES = "variables";
+    const allImports = Object.values(TOKENS).concat(VARIABLES);
+    const themeImports = allImports.map((name) => `@import "./${name}.scss";`).join("\n");
+    saveFile(BASE_PATH, `scss/${VARIABLES}.scss`, scss.join("\n"));
+    saveFile(BASE_PATH, `scss/index.scss`, `${themeImports}\n`);
   }
   saveFile(BASE_PATH, `scss/${tokenName}.scss`, css);
 }

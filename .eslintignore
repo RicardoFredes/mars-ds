@@ -1,6 +1,7 @@
 # compiled files
 dist/
 storybook-static/
+bin/
 
 # vscode user-specifig files
 .vscode/

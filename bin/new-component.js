@@ -19,48 +19,42 @@ const rl = readline.createInterface({
 
 function main() {
   const componentName = process.argv[2];
-  if (componentName) finalQuestion(componentName);
-  else initialQuestion();
-  console.log("Success");
-  console.log("Considere rodar o seguinte comando agora:");
-  console.log("yarn reindex");
+  if (componentName) return finalQuestion(componentName);
+  return initialQuestion();
 }
 
-function initialQuestion() {
-  rl.question(
-    "Qual o nome do componente? \nexemplos: button-icon, card, forms/text-field\n",
-    (pathName) => {
-      if (!pathName) {
-        console.log("O component precisa ter um nome");
-        console.log("O processo foi cancelado");
-        rl.close();
-        return process.exit(0);
-      }
-      finalQuestion(pathName);
-    }
-  );
+async function question(text) {
+  return new Promise((resolve) => rl.question(text, resolve));
 }
 
-function finalQuestion(pathName) {
+async function initialQuestion() {
+  const text = "Qual o nome do componente? \nexemplos: button-icon, card, forms/text-field\n";
+  return question(text).then((pathName) => {
+    if (pathName) return finalQuestion(pathName);
+    console.log("O component precisa ter um nome");
+    console.log("O processo foi cancelado");
+    process.exit(0);
+  });
+}
+
+async function finalQuestion(pathName) {
   const snakeName = pathName.replace(/.*\//, "");
   const componentName = kebabCaseToPascalCase(pathName);
   const components = TEMPLATE_MAPPER.reduce(
     (acc, [ext]) => (acc += ` - ${componentName}/${snakeName}${ext}\n`),
     ""
   );
-  rl.question(
-    `\nOs seguintes arquivos serão criados: \n\n${components}\n\n Confirmar a criação? [*/N]\n`,
-    (letter) => {
-      if (letter !== "N") {
-        createNewComponent(pathName);
-        console.log(`o componente ${pathName} foi criado com sucesso`);
-      } else {
-        console.log("O processo foi cancelado");
-        return process.exit(0);
-      }
-      rl.close();
+  const text = `\nOs seguintes arquivos serão criados: \n\n${components}\n\n Confirmar a criação? [*/N]\n`;
+  return question(text).then(letter => {
+    if (letter === "N") {
+      console.log("O processo foi cancelado");
+      return process.exit(0);
     }
-  );
+    createNewComponent(pathName);
+    console.log(`o componente ${pathName} foi criado com sucesso`);
+    require("./reindex");
+    return process.exit(0);
+  });
 }
 
 function createNewComponent(pathName) {

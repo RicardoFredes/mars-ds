@@ -12,9 +12,8 @@ function main() {
   reindexComponents(filesList);
   reindexStyles(filesList);
 
-  // generateIndexFiles(filesList);
-
   console.log("Success");
+  process.exit(0);
 }
 
 function reindexStyles(filesList) {
@@ -29,7 +28,9 @@ function reindexComponents(filesList) {
 
   const tokensImport = `export { default as Tokens } from "./tokens";`;
 
-  const content = [].concat(scssImport, tokensImport, ...getComponentsAndTypes(filesList), "").join("\n");
+  const content = []
+    .concat(scssImport, tokensImport, ...getComponentsAndTypes(filesList), "")
+    .join("\n");
 
   fs.writeFileSync(INDEX_FILE, content);
   console.log("Done: components reindex");
@@ -49,22 +50,6 @@ function getFiles(dir, $files) {
   return $files;
 }
 
-// function generateIndexFiles(list = []) {
-//   for (const path of list) {
-//     if (/index.ts/.test(path) || !/component.tsx/.test(path)) continue;
-//     const componentName = kebabCaseToPascalCase(path);
-//     const content = indexTemplate(componentName, path.replace(/.*\/(.*)\.tsx/, "$1"));
-//     const dest = path.replace("./", "./src/").replace(/(.*\/).*/, "$1index.ts");
-//     fs.writeFileSync(dest, content);
-//   }
-// }
-
-// function indexTemplate(name, pathName) {
-//   return `import ${name} from "./${pathName}";
-// export default ${name};
-// `;
-// }
-
 function getComponentsAndTypes(list = []) {
   return list.reduce((acc, path) => {
     const componentName = kebabCaseToPascalCase(path);
@@ -73,7 +58,7 @@ function getComponentsAndTypes(list = []) {
       acc.push("");
       acc.push(`export { default as ${componentName} } from "${path.replace(".tsx", "")}";`);
     } else if (/types.ts/.test(path)) {
-      acc.push(`export type { ${componentName}Props } from "${path.replace(".ts", "")}";`);
+      acc.push(`export * from "${path.replace(".ts", "")}";`);
     }
 
     return acc;

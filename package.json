@@ -20,7 +20,7 @@
   },
   "scripts": {
     "reindex": "node bin/reindex",
-    "new-component": "node bin/new-component && yarn reindex",
+    "new-component": "node bin/new-component",
     "tokens-generator": "node bin/tokens-generator",
     "start": "yarn storybook",
     "dev": "yarn storybook",

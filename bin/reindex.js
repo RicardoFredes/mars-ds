@@ -1,4 +1,9 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
+const warningDontChangeFile = `/**
+ * WARNING!
+ * Do not change this file,
+ * because it is automatically generated
+ */\n`;
+
 const fs = require("fs-extra");
 const { kebabCaseToPascalCase } = require("./helpers/convert-names");
 
@@ -17,7 +22,7 @@ function main() {
 }
 
 function reindexStyles(filesList) {
-  const content = [].concat(...getStylesFiles(filesList), "").join("\n");
+  const content = [].concat(warningDontChangeFile, ...getStylesFiles(filesList), "").join("\n");
 
   fs.writeFileSync(STYLE_FILE, content);
   console.log("Done: styles reindex");
@@ -29,7 +34,13 @@ function reindexComponents(filesList) {
   const tokensImport = `export { default as Tokens } from "./tokens";`;
 
   const content = []
-    .concat(scssImport, tokensImport, ...getComponentsAndTypes(filesList), "")
+    .concat(
+      warningDontChangeFile,
+      scssImport,
+      tokensImport,
+      ...getComponentsAndTypes(filesList),
+      ""
+    )
     .join("\n");
 
   fs.writeFileSync(INDEX_FILE, content);

@@ -169,11 +169,19 @@ $ yarn tokens-generator
 
 # Testes <a name="testes"></a>
 
-:warning: Em construção
+Os testes da aplicação usam o [RTL (React Testing Library)](https://testing-library.com/docs/react-testing-library), que trabalham em conjunto com o [Jest](https://jestjs.io/pt-BR/) e o [React Test Utils](https://reactjs.org/docs/test-utils.html).
+
+Os arquivos de testes unitários devem seguir a extensão `.spec.ts`, enquanto os testes funcionais de componentes devem seguir a seguinte extensão `.test.tsx`.
 
 ```bash
 # Rodando os testes
 $ yarn test
+
+# Rodando os testes com watch
+$ yarn test:watch
+
+# Rodando os testes com coverage
+$ yarn test:coverage
 ```
 
 # Publicação # Testes <a name="publicacao"></a>
@@ -185,6 +193,7 @@ $ yarn test
 - [Jest](https://jestjs.io/pt-BR/)
 - [Node.js](https://nodejs.org/en/)
 - [React](https://pt-br.reactjs.org/)
+- [RTL (React Testing Library)](https://testing-library.com/docs/react-testing-library)
 - [Sass](https://sass-lang.com/)
 - [Storybook](https://storybook.js.org/)
 - [TypeScript](https://www.typescriptlang.org/)

@@ -1,5 +1,5 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import Card from "../Card";
+import { Text } from "@/index";
 import Accordion from "./";
 
 export default {
@@ -15,22 +15,12 @@ const Template: ComponentStory<typeof Accordion> = (args) => (
 const DefaultArgs = {
   title: "Título",
   children: (
-    <>
-      <p> Aqui pode ser colocado qualquer informação </p>
-      <img height={320} src="https://via.placeholder.com/450x320" alt="texto" />
-    </>
+    <Text>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eligendi ratione quos numquam!
+      Qui quos id reiciendis eum rerum laboriosam?
+    </Text>
   ),
 };
 
 export const Default = Template.bind({});
 Default.args = DefaultArgs;
-
-export const WithCard: ComponentStory<typeof Accordion> = (args) => (
-  <Card style={{ maxWidth: 320 }}>
-    <Accordion {...args} />
-  </Card>
-);
-WithCard.args = {
-  ...DefaultArgs,
-  title: "With Card",
-};

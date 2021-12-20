@@ -1,1 +1,3 @@
-export type AccordionProps = React.HTMLProps<HTMLDivElement>;
+export interface AccordionProps extends React.HTMLProps<HTMLDivElement> {
+  title?: string;
+}

@@ -96,6 +96,7 @@ const Tokens = {
   SpacingSm: "var(--spacing-sm)",
   SpacingMd: "var(--spacing-md)",
   SpacingLg: "var(--spacing-lg)",
+  SpacingXl: "var(--spacing-xl)",
   GapSm1: "var(--gap-sm-1)",
   GapSm2: "var(--gap-sm-2)",
   GapSm3: "var(--gap-sm-3)",

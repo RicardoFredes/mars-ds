@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 const readline = require("readline");
 const fs = require("fs-extra");
 const { kebabCaseToPascalCase } = require("./helpers/convert-names");
@@ -45,7 +44,7 @@ async function finalQuestion(pathName) {
     ""
   );
   const text = `\nOs seguintes arquivos serão criados: \n\n${components}\n\n Confirmar a criação? [*/N]\n`;
-  return question(text).then(letter => {
+  return question(text).then((letter) => {
     if (letter === "N") {
       console.log("O processo foi cancelado");
       return process.exit(0);

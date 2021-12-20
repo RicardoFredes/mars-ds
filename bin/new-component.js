@@ -9,6 +9,7 @@ const TEMPLATE_MAPPER = [
   [".module.scss", styleTemplate],
   [".stories.tsx", storiesTemplate],
   [".types.ts", typesTemplate],
+  [".test.tsx", testTemplate],
 ];
 
 const rl = readline.createInterface({
@@ -111,6 +112,22 @@ function typesTemplate(name, pathName) {
   const typeName = `${name}Props`;
   return `export type ${typeName} = React.HTMLProps<HTMLDivElement>;
 `;
+}
+
+function testTemplate(name, pathName) {
+  const typeName = `${name}Props`;
+  return `import ${name} from ".";
+import { ${typeName} } from "./${pathName}.types";
+
+const makeSut = (props?: ${typeName}) => <${name} {...props} />;
+
+describe("<${name}>", () => {
+  it("should render component", () => {
+    const wrapper = makeSut();
+    expect(wrapper).toBeTruthy();
+  });
+});
+`
 }
 
 function storiesTemplate(name, pathName) {

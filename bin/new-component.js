@@ -77,7 +77,7 @@ function createNewComponent(pathName) {
 
 function componentTemplate(name, pathName) {
   const typeName = `${name}Props`;
-  return `import type { ${typeName} } from "./${pathName}.types";
+  return `import { ${typeName} } from "./${pathName}.types";
 import classNames from "classnames";
 
 const ${name} = ({ className, children, ...props }: ${typeName}) => {

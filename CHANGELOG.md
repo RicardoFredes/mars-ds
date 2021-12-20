@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.7](https://github.com/mesalva/mars/compare/v1.0.0-alpha.6...v1.0.0-alpha.7) (2021-12-20)
+
+
+### Features
+
+* add avatar ([a1fa1a1](https://github.com/mesalva/mars/commit/a1fa1a13441ee2bd94a00122fb366435bc7d10ec))
+* add avatar component ([47232e0](https://github.com/mesalva/mars/commit/47232e0c6338aaf39ee9008909de28e503ec7669))
+* add avatar component with scafold files ([42f3db6](https://github.com/mesalva/mars/commit/42f3db60140971f567678d6ccd34d6e86c7a06ac))
+
 ## [1.0.0-alpha.6](https://github.com/mesalva/mars/compare/v1.0.0-alpha.5...v1.0.0-alpha.6) (2021-12-17)
 
 

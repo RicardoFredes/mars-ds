@@ -1,0 +1,41 @@
+.avatar {
+  $size: 40px;
+  width: $size;
+  height: $size;
+  background-color: $color-neutral-300;
+  color: $color-neutral-900;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__initials.item-text {
+    font-size: 1rem;
+  }
+  &--size {
+    &-xs {
+      $size: 24px;
+      width: $size;
+      height: $size;
+      .avatar__initials.item-text {
+        font-size: 0.8125rem;
+      }
+    }
+    &-sm {
+      $size: 32px;
+      width: $size;
+      height: $size;
+    }
+    &-lg {
+      $size: 48px;
+      width: $size;
+      height: $size;
+    }
+    &-xl {
+      $size: 64px;
+      width: $size;
+      height: $size;
+    }
+  }
+}

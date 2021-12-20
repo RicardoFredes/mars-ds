@@ -1,5 +1,4 @@
 .accordion {
-  overflow: hidden;
   color: $color-text-primary;
   &__header {
     padding: 0;
@@ -15,11 +14,31 @@
       align-items: center;
       justify-content: space-between;
       &__icon-toggle {
-        transition: transform ease 0.2s;
+        position: relative;
+        color: $color-text-primary;
+        &:before {
+          content: "";
+          display: block;
+          width: 40px;
+          height: 40px;
+          position: absolute;
+          left: -8px;
+          top: -8px;
+          background-color: $color-neutral-ghost;
+          border-radius: 50%;
+          transition: transform ease 0.2s;
+          transform: scale(0);
+        }
+      }
+    }
+    &:hover {
+      .accordion__header-container__icon-toggle::before {
+        transform: scale(1);
       }
     }
   }
   &__content {
+    overflow: hidden;
     transition: height ease 0.2s;
   }
 

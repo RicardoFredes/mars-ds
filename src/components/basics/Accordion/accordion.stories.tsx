@@ -1,5 +1,5 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import { Text } from "@/index";
+import Text from "@/components/typographics/Text";
 import Accordion from "./";
 
 export default {
@@ -13,11 +13,13 @@ const Template: ComponentStory<typeof Accordion> = (args) => (
 );
 
 const DefaultArgs = {
-  title: "Título",
+  title: "Quando começam as aulas?",
   children: (
     <Text>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eligendi ratione quos numquam!
-      Qui quos id reiciendis eum rerum laboriosam?
+      Você pode começar a estudar assim que adquirir o seu plano, uma vez que terá acesso
+      imediatamente após a aprovação da sua compra. Lembre que o quanto antes você começar a
+      estudar, mais tempo terá para cobrir o conteúdo cobrado na prova, fazer exercícios e revisar a
+      matéria.
     </Text>
   ),
 };

@@ -23,7 +23,7 @@ const makeSut = (props?: ButtonProps) =>
     </Button>
   );
 
-describe("Button", () => {
+describe("<Button>", () => {
   it("should render component with default props", () => {
     const { getByTestId, getByText } = makeSut();
     const button = getByTestId(buttonDataTestId);

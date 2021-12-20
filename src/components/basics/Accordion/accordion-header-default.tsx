@@ -1,4 +1,6 @@
-import { Heading, HeadingSizes, Icon } from "@/index";
+import { HeadingSizes } from "@/components/typographics/Heading/heading.types";
+import Heading from "@/components/typographics/Heading";
+import Icon from "@/components/basics/Icon";
 
 const AccordionHeaderDefault = ({ title }: { title?: string }) => {
   return (
@@ -8,7 +10,7 @@ const AccordionHeaderDefault = ({ title }: { title?: string }) => {
           {title}
         </Heading>
       )}
-      <Icon className="accordion__header-container__icon-toggle" name={"chevron-down"} />
+      <Icon className="accordion__header-container__icon-toggle" name="chevron-down" />
     </div>
   );
 };

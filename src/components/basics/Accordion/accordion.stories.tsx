@@ -1,4 +1,5 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
+import Card from "../Card";
 import Accordion from "./";
 
 export default {
@@ -23,3 +24,13 @@ const DefaultArgs = {
 
 export const Default = Template.bind({});
 Default.args = DefaultArgs;
+
+export const WithCard: ComponentStory<typeof Accordion> = (args) => (
+  <Card style={{ maxWidth: 320 }}>
+    <Accordion {...args} />
+  </Card>
+);
+WithCard.args = {
+  ...DefaultArgs,
+  title: "With Card",
+};

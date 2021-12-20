@@ -1,13 +1,11 @@
 import { AccordionProps } from "./accordion.types";
-import { HeadingSizes } from "@/components/typographics/Heading/heading.types";
 
 import { useEffect, useRef, useState } from "react";
 import classNames from "classnames";
 
-import Heading from "@/components/typographics/Heading";
-import Icon from "@/components/basics/Icon";
+import AccordionHeaderDefault from "./accordion-header-default";
 
-const Accordion = ({ className, title, children, ...props }: AccordionProps) => {
+const Accordion = ({ className, title, children, headerComponent, ...props }: AccordionProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const contentRef = useRef<HTMLDivElement | null>(null);
   const cn = classNames("accordion", className, { "accordion--is-open": isOpen });
@@ -22,25 +20,16 @@ const Accordion = ({ className, title, children, ...props }: AccordionProps) => 
     }
   }, [isOpen]);
 
+  const HeaderComponent = headerComponent || AccordionHeaderDefault;
+
   return (
     <div className={cn} {...props}>
       <button className="accordion__header" onClick={toggleIsOpen} type="button">
-        {title && <AccordionHeaderDefault title={title} />}
+        <HeaderComponent title={title} />
       </button>
       <div className="accordion__content" ref={contentRef}>
-        {children}
+        <div className="accordion__content-container">{children}</div>
       </div>
-    </div>
-  );
-};
-
-const AccordionHeaderDefault = ({ title }: { title: string }) => {
-  return (
-    <div className="accordion__header-container">
-      <Heading size={HeadingSizes.XSmall} className="accordion-header__title">
-        {title}
-      </Heading>
-      <Icon className="accordion__header-container__icon-toggle" name={"chevron-down"} />
     </div>
   );
 };

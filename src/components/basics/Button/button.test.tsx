@@ -1,4 +1,4 @@
-import { IconProps } from "../Icon/icon.types";
+import { IconProps } from "@/components/basics/Icon/icon.types";
 jest.mock("@/components/basics/Icon", () => {
   const MockIcon = ({ className, name, size }: IconProps) => (
     <i data-testid="icon" className={className} data-size={size}>
@@ -23,7 +23,7 @@ const makeSut = (props?: ButtonProps) =>
     </Button>
   );
 
-describe("Button", () => {
+describe("<Button>", () => {
   it("should render component with default props", () => {
     const { getByTestId, getByText } = makeSut();
     const button = getByTestId(buttonDataTestId);

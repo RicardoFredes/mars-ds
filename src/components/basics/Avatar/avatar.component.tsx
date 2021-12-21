@@ -2,6 +2,7 @@ import { AvatarProps, AvatarSizes } from "./avatar.types";
 import classNames from "classnames";
 import { useMemo } from "react";
 import { ItemText } from "@/index";
+import { getInitialsByFullName } from "@/services/names-parser";
 
 const Avatar = ({
   className,
@@ -13,7 +14,7 @@ const Avatar = ({
   ...props
 }: AvatarProps) => {
   const cn = classNames("avatar", className, `avatar--size-${size}`);
-  const initials = useMemo(() => getLettersByName(name) || "?", [name]);
+  const initials = useMemo(() => getInitialsByFullName(name) || "?", [name]);
   const styleComputed = useMemo(
     () => ({ ...style, backgroundImage: thumbnail && `url(${thumbnail})` }),
     [thumbnail, style]
@@ -27,19 +28,3 @@ const Avatar = ({
 };
 
 export default Avatar;
-
-export const getLettersByName = (name?: string) => {
-  if (!name) return "";
-  const getLetter = (letter?: string) => letter?.toLocaleUpperCase() || "";
-  let result = getLetter(name[0]);
-  let getNext = false;
-  for (let i = 1; result.length < 2 && i < name.length; i++) {
-    const letter = name[i] || "";
-    if (letter === " ") {
-      getNext = true;
-      continue;
-    }
-    if (getNext) result += getLetter(letter);
-  }
-  return result;
-};

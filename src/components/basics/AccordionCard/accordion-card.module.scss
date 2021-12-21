@@ -1,0 +1,14 @@
+.accordion-card {
+  &.card {
+    padding: 0;
+  }
+  .accordion {
+    &__header {
+      padding: $spacing-xl;
+    }
+    &__content-container {
+      padding: $spacing-xl;
+      padding-top: 0;
+    }
+  }
+}

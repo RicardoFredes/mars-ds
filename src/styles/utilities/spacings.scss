@@ -1,0 +1,109 @@
+@mixin getSpacing($attribute, $top: null, $right: null, $bottom: null, $left: null) {
+  #{$attribute}-top: $top;
+  #{$attribute}-right: $right;
+  #{$attribute}-bottom: $bottom;
+  #{$attribute}-left: $left;
+}
+
+@mixin spacingGenerator($attribute, $prefix, $sizes) {
+  @each $name, $size in $sizes {
+    .#{$prefix}-#{$name} {
+      @include getSpacing($attribute, $size, $size, $size, $size);
+    }
+    .#{$prefix}t-#{$name} {
+      @include getSpacing($attribute, $top: $size);
+    }
+    .#{$prefix}b-#{$name} {
+      @include getSpacing($attribute, $bottom: $size);
+    }
+    .#{$prefix}l-#{$name} {
+      @include getSpacing($attribute, $left: $size);
+    }
+    .#{$prefix}r-#{$name} {
+      @include getSpacing($attribute, $right: $size);
+    }
+    .#{$prefix}x-#{$name} {
+      @include getSpacing($attribute, $left: $size, $right: $size);
+    }
+    .#{$prefix}y-#{$name} {
+      @include getSpacing($attribute, $top: $size, $bottom: $size);
+    }
+  }
+}
+
+@mixin gapGenerator($sizes) {
+  @each $name, $size in $sizes {
+    .gap-#{$name} {
+      gap: $size;
+      margin-right: $size;
+    }
+  }
+}
+
+/*
+ * Margins and Paddings with "x" values variations by media queries
+ */
+
+$sm-sizes: (
+  1x: $gap-sm-1,
+  2x: $gap-sm-2,
+  3x: $gap-sm-3,
+  4x: $gap-sm-4,
+);
+$md-sizes: (
+  1x: $gap-md-1,
+  2x: $gap-md-2,
+  3x: $gap-md-3,
+  4x: $gap-md-4,
+);
+$lg-sizes: (
+  1x: $gap-lg-1,
+  2x: $gap-lg-2,
+  3x: $gap-lg-3,
+  4x: $gap-lg-4,
+);
+
+@include spacingGenerator(padding, p, $sm-sizes);
+@include spacingGenerator(margin, m, $sm-sizes);
+
+@media (min-width: $breakpoint-md) {
+  @include spacingGenerator(padding, p, $md-sizes);
+  @include spacingGenerator(margin, m, $md-sizes);
+}
+
+@media (min-width: $breakpoint-lg) {
+  @include spacingGenerator(padding, p, $lg-sizes);
+  @include spacingGenerator(margin, m, $lg-sizes);
+}
+
+/*
+ * Margins and Paddings with absolute values
+ */
+
+$sizes: (
+  none: 0,
+  xs: $spacing-xs,
+  sm: $spacing-sm,
+  md: $spacing-md,
+  lg: $spacing-lg,
+  xl: $spacing-xl,
+);
+
+@include spacingGenerator(padding, p, $sizes);
+@include spacingGenerator(margin, m, $sizes);
+
+/*
+ * Gaps for Flex and Grid
+ */
+
+@include gapGenerator($sizes);
+
+@include gapGenerator($sm-sizes);
+
+@media (min-width: $breakpoint-md) {
+  @include gapGenerator($md-sizes);
+}
+
+@media (min-width: $breakpoint-lg) {
+  @include gapGenerator($lg-sizes);
+}

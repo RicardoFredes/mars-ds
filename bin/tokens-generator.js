@@ -35,8 +35,10 @@ main();
 function saveScss(css, scss, tokenName, isBase = false) {
   if (isBase) {
     const VARIABLES = "variables";
-    const allImports = Object.values(TOKENS).concat(VARIABLES);
+    const BREAKPOINTS = "breakpoints";
+    const allImports = Object.values(TOKENS).concat(VARIABLES, BREAKPOINTS);
     const themeImports = allImports.map((name) => `@import "./${name}.scss";`).join("\n");
+
     saveFile(BASE_PATH, `scss/${VARIABLES}.scss`, scss.join("\n"));
     saveFile(BASE_PATH, `scss/index.scss`, `${themeImports}\n`);
   }
@@ -93,7 +95,7 @@ function genCss(tokens, tokenName) {
   return `${rootCss}\n${theme}`;
 }
 
-function genJslib(tokens) {
+function genJslib(tokens, _tokenName) {
   return tokens.reduce((acc, { name }) => {
     acc[kebabCaseToPascalCase(name)] = `var(--${name});`;
     return acc;

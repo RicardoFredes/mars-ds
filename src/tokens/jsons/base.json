@@ -928,20 +928,6 @@
       "type": "borderRadius"
     }
   },
-  "breakpoint": {
-    "sm": {
-      "value": "600",
-      "type": "spacing"
-    },
-    "md": {
-      "value": "900",
-      "type": "spacing"
-    },
-    "lg": {
-      "value": "1200",
-      "type": "spacing"
-    }
-  },
   "spacing": {
     "xs": {
       "value": "4",

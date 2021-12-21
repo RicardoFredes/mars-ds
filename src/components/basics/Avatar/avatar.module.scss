@@ -1,6 +1,6 @@
 .avatar {
   $size: 40px;
-  width: $size;
+  min-width: $size;
   height: $size;
   background-color: $color-neutral-300;
   color: $color-neutral-900;
@@ -16,7 +16,7 @@
   &--size {
     &-xs {
       $size: 24px;
-      width: $size;
+      min-width: $size;
       height: $size;
       .avatar__initials.item-text {
         font-size: 0.8125rem;
@@ -24,17 +24,17 @@
     }
     &-sm {
       $size: 32px;
-      width: $size;
+      min-width: $size;
       height: $size;
     }
     &-lg {
       $size: 48px;
-      width: $size;
+      min-width: $size;
       height: $size;
     }
     &-xl {
       $size: 64px;
-      width: $size;
+      min-width: $size;
       height: $size;
     }
   }

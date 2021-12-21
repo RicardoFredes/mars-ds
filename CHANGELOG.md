@@ -5,6 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.8](https://github.com/mesalva/mars/compare/v1.0.0-alpha.7...v1.0.0-alpha.8) (2021-12-21)
+
+
+### Features
+
+* **accordion:** add elevation prop ([b45a1c8](https://github.com/mesalva/mars/commit/b45a1c80103d97591fc63817c24ff96a900b1b82))
+* add accordion card ([03b41cb](https://github.com/mesalva/mars/commit/03b41cbba9d6699a7133aec4a76d14b30e8dd4d3))
+* add accordion component ([aa04a74](https://github.com/mesalva/mars/commit/aa04a74a92fcaef983564f74f37e13f472c74156))
+* add accordion scafold ([94a45dc](https://github.com/mesalva/mars/commit/94a45dc4cbd4d09ee63bd9ad3bcd5e0d650386f0))
+* add basic accordion component ([80901cf](https://github.com/mesalva/mars/commit/80901cfb1eae9fa1042771de7652649c4e139c89))
+* add breakpoint sizes ([ca13c19](https://github.com/mesalva/mars/commit/ca13c19c6af0cfc07093c5a6e295ab25bc7b6db8))
+* add css spacing utilities ([c09522e](https://github.com/mesalva/mars/commit/c09522eeda19f437471f4bca1e49fee29ac6f55b))
+* add spacing xl ([b324649](https://github.com/mesalva/mars/commit/b324649b77e3cd93cacc63a137bab902af66b9ab))
+* add spacings css classes ([a891261](https://github.com/mesalva/mars/commit/a8912618ba4ba2ec4c773294fe829b3b2e6a6a45))
+* add stories for spacings ([dbd06f6](https://github.com/mesalva/mars/commit/dbd06f61d5887d62f980bd4d9b4c5e48dd0a6239))
+
+
+### Bug Fixes
+
+* **new-component:** test scafold ([79c0724](https://github.com/mesalva/mars/commit/79c0724a34ebb0aedc3d81dda28fc4b7a3ee0743))
+
 ## [1.0.0-alpha.7](https://github.com/mesalva/mars/compare/v1.0.0-alpha.6...v1.0.0-alpha.7) (2021-12-20)
 
 

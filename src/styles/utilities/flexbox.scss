@@ -18,6 +18,12 @@
   &-fit {
     flex-shrink: 1;
   }
+  &-wrap {
+    flex-wrap: wrap;
+  }
+  &-wrap-reverse {
+    flex-wrap: wrap-reverse;
+  }
 }
 
 .justify-content {

@@ -958,6 +958,10 @@
     "lg": {
       "value": "16",
       "type": "spacing"
+    },
+    "xl": {
+      "value": "24",
+      "type": "spacing"
     }
   },
   "gap": {

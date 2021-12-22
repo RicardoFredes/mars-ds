@@ -169,6 +169,8 @@ $ yarn tokens-generator
 
 # Testes <a name="testes"></a>
 
+## Testes unitários e funcionais
+
 Os testes da aplicação usam o [RTL (React Testing Library)](https://testing-library.com/docs/react-testing-library), que trabalham em conjunto com o [Jest](https://jestjs.io/pt-BR/) e o [React Test Utils](https://reactjs.org/docs/test-utils.html).
 
 Os arquivos de testes unitários devem seguir a extensão `.spec.ts`, enquanto os testes funcionais de componentes devem seguir a seguinte extensão `.test.tsx`.
@@ -184,13 +186,54 @@ $ yarn test:watch
 $ yarn test:coverage
 ```
 
-# Publicação # Testes <a name="publicacao"></a>
+## Testes re regressão visual
+
+Para fazer a regressão visual a aplicação usa o [Loki](https://loki.js.org/), que faz um teste de comparação entre imagens.
+
+Antes de rodar os testes é necessário rodar a aplicação:
+
+```bash
+# Rodando a aplicação antes dos testes
+$ yarn storybook
+```
+
+Em outro terminal rode os testes ou, em caso de alteração visual em algum componente, faça a atualização das imagens de referência.
+
+```bash
+# Rodando os testes
+$ yarn test:visual
+
+# Atualizando as imagens de referência
+$ yarn test:visual:update
+```
+
+```bash
+📂.loki # diretório do loki
+ ┣ 📂current # imagens geradas durante o teste
+ ┣ 📂difference # imagens geradas para os testes que falharam
+ ┗ 📂reference # imagens de referência
+```
+
+Esses testes são demorados e a seguinte mensagem de erro pode aparecer, mas isso não quer dizer que o teste não está rodando, apenas espere o processo ser concluído:
+
+![image](https://user-images.githubusercontent.com/29892001/147114242-60cbe3a4-9249-4cc5-89d7-453d4a5a0428.png)
+
+### Referências
+
+- https://github.com/mapbox/pixelmatch
+- https://github.com/gemini-testing/looks-same
+
+# Publicação <a name="publicacao"></a>
 
 :warning: Em construção
+
+A publicação do projeto está sendo feita em alpha toda a vez que um PR é mesclado no branch `alpha`.
+A geração de tags e publicação é realizado com base no semantic realease.
 
 # Tecnologias <a name="tecnologias"></a>
 
 - [Jest](https://jestjs.io/pt-BR/)
+- [Loki](https://loki.js.org/)
 - [Node.js](https://nodejs.org/en/)
 - [React](https://pt-br.reactjs.org/)
 - [RTL (React Testing Library)](https://testing-library.com/docs/react-testing-library)

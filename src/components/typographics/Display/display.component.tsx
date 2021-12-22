@@ -1,4 +1,4 @@
-import { DisplayProps, DisplaySizes } from "./display.types";
+import { DisplayProps, DisplaySizes } from ".";
 import classNames from "classnames";
 
 const Display = ({

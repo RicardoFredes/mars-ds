@@ -15,6 +15,7 @@ function main() {
   const filesList = getFiles(COMPONENTS_FOLDER).map((path) => path.replace("/src", ""));
 
   reindexComponents(filesList);
+  reindexRoot(filesList);
   reindexStyles(filesList);
 
   console.log("Success");
@@ -29,6 +30,29 @@ function reindexStyles(filesList) {
 }
 
 function reindexComponents(filesList) {
+  const list = filesList.reduce((acc, file) => {
+    if (/component\.tsx/.test(file)) {
+      const dir = file.replace(/(.*)\/.*/, "$1");
+      const name = file.replace(/(.*)\/(.*)\.component.*/, "$2");
+      if (!acc.find((a) => a === dir)) acc.push([name, dir]);
+    }
+    return acc;
+  }, []);
+
+  console.log("Run: components reindex");
+
+  for (const file of list) {
+    const [kebabName, dir] = file;
+    const pascalName = kebabCaseToPascalCase(kebabName);
+    const content = `${warningDontChangeFile}\nimport ${pascalName} from "./${kebabName}.component";\nexport default ${pascalName};\nexport * from "./${kebabName}.types";\n`;
+    const pathDir = `${dir.replace("./components", COMPONENTS_FOLDER)}/index.ts`;
+    fs.writeFileSync(pathDir, content);
+    console.log(`  > ${pascalName}`);
+  }
+  console.log("Done: components reindex");
+}
+
+function reindexRoot(filesList) {
   const scssImport = `import "./styles/index.scss";`;
 
   const tokensImport = `export { default as Tokens } from "./tokens";`;
@@ -44,7 +68,7 @@ function reindexComponents(filesList) {
     .join("\n");
 
   fs.writeFileSync(INDEX_FILE, content);
-  console.log("Done: components reindex");
+  console.log("Done: root reindex");
 }
 
 function getFiles(dir, $files) {
@@ -65,10 +89,10 @@ function getComponentsAndTypes(list = []) {
   return list.reduce((acc, path) => {
     const componentName = kebabCaseToPascalCase(path);
 
-    if (/component.tsx/.test(path)) {
+    if (/component\.tsx/.test(path)) {
       acc.push("");
       acc.push(`export { default as ${componentName} } from "${path.replace(".tsx", "")}";`);
-    } else if (/types.ts/.test(path)) {
+    } else if (/types\.ts/.test(path)) {
       acc.push(`export * from "${path.replace(".ts", "")}";`);
     }
 

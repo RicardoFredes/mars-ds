@@ -1,4 +1,4 @@
-import { AccordionCardElevations, AccordionCardProps } from "./accordion-card.types";
+import { AccordionCardElevations, AccordionCardProps } from "./";
 import classNames from "classnames";
 import Accordion from "@/components/basics/Accordion";
 import Card from "@/components/basics/Card";

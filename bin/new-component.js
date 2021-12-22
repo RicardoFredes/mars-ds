@@ -69,10 +69,6 @@ function createNewComponent(pathName) {
     fs.writeFileSync(dest, content);
     console.log(`Done: create ${dest}`);
   }
-  const dest = `${PATH_COMPONENT}/${groupPath}${name}/index.ts`;
-  const content = indexTemplate(name, snakeName);
-  fs.writeFileSync(dest, content);
-  console.log(`Done: create ${dest}`);
 }
 
 function componentTemplate(name, pathName) {
@@ -99,12 +95,6 @@ function styleTemplate(name, pathName) {
   padding: 24px;
   color: white;
 }
-`;
-}
-
-function indexTemplate(name, pathName) {
-  return `import ${name} from "./${pathName}.component";
-export default ${name};
 `;
 }
 

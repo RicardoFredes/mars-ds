@@ -1,5 +1,5 @@
 import { useState, MouseEvent } from "react";
-import { ButtonProps, ButtonSizes, ButtonVariants } from "./button.types";
+import { ButtonProps, ButtonSizes, ButtonVariants } from "./";
 
 import classNames from "classnames";
 import Icon from "@/components/basics/Icon";

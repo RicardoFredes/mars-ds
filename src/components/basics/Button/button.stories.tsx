@@ -1,7 +1,6 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import { ButtonSizes, ButtonVariants } from "./button.types";
 import icons from "@/components/basics/Icon/lib";
-import Button from ".";
+import Button, { ButtonSizes, ButtonVariants } from ".";
 
 export default {
   title: "Components/Button",

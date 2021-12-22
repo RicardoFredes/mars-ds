@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import type { SelectFieldOption, SelectFieldProps } from "./select-field.types";
+import { SelectFieldOption, SelectFieldProps } from ".";
 import classNames from "classnames";
 import { ChangeEvent, MouseEvent, useEffect, useRef, useState } from "react";
 
@@ -72,6 +72,7 @@ const SelectField = ({
     window.history.pushState("select__field--is-openned", "select");
     addEventListener();
     setIsOpen(true);
+    handleSetIsAbove();
   };
 
   const handleSetIsAbove = () => {
@@ -87,10 +88,7 @@ const SelectField = ({
     setIsDropdownAbove(hasSpaceAbove);
   };
 
-  useEffect(() => {
-    if (isOpen) handleSetIsAbove();
-  }, [isOpen]);
-
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => close, []);
 
   const getElementOptionItems = () => {

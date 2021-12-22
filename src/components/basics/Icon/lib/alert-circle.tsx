@@ -1,4 +1,4 @@
-import type { IconLibProps } from "../icon.types";
+import { IconLibProps } from "../";
 
 const IconAlertCircle = ({ height = 24, width = 24 }: IconLibProps) => {
   return (

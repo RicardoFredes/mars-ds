@@ -1,12 +1,12 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import Card from "./";
-import Heading from "@/components/typographics/Heading";
-import { HeadingSizes } from "@/components/typographics/Heading/heading.types";
-import { CardElevations, CardProps } from "./card.types";
-import { TextSizes } from "@/components/typographics/Text/text.types";
-import { Button, Caption, Subtitle, Text } from "@/index";
 import Tokens from "@/tokens";
+import Card, { CardElevations, CardProps } from "./";
+import Heading, { HeadingSizes } from "@/components/typographics/Heading";
+import Text, { TextSizes } from "@/components/typographics/Text/";
+import Subtitle from "@/components/typographics/Subtitle/";
+import Caption from "@/components/typographics/Caption/";
+import Button from "@/components/basics/Button";
 
 export default {
   title: "Components/Card",

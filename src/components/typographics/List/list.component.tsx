@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import ListItem from "./list-item.component";
-import { ListProps } from "./list.types";
+import { ListProps } from "./";
 
 const List = ({ className, defaultBullet, list = [], children, ...props }: ListProps) => {
   const cn = classNames("list", className);

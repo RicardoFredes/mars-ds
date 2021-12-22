@@ -1,6 +1,5 @@
-import { PasswordFieldType, PasswordIconName, PasswordFieldProps } from "./password-field.types";
-
 import { useState } from "react";
+import { PasswordFieldType, PasswordIconName, PasswordFieldProps } from ".";
 import TextField from "@/components/forms/TextField";
 
 const PasswordField = (props: PasswordFieldProps) => {

@@ -1,5 +1,5 @@
 export type RadioOption = {
-  value?: string;
+  value?: string | number;
   label?: string;
 };
 

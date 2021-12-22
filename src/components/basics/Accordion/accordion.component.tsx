@@ -1,4 +1,4 @@
-import { AccordionProps } from "./accordion.types";
+import { AccordionProps } from "./";
 
 import { useEffect, useRef, useState } from "react";
 import classNames from "classnames";

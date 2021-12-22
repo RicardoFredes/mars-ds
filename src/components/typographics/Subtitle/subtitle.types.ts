@@ -1,4 +1,4 @@
-import type { HeadingProps } from "@/components/typographics/Heading/heading.types";
+import { HeadingProps } from "@/components/typographics/Heading";
 import { Sizes } from "@/types";
 
 const { Small, Medium } = Sizes;

@@ -7,16 +7,9 @@
     "ignoreCaret": true
   },
   "pixelmatch": {
-    "threshold": 0.75
+    "threshold": 0.5
   },
   "configurations": {
-    "chrome.laptop": {
-      "target": "chrome.app",
-      "width": 1366,
-      "height": 768,
-      "deviceScaleFactor": 1,
-      "mobile": false
-    },
     "chrome.iphone7": {
       "target": "chrome.app",
       "preset": "iPhone 7"

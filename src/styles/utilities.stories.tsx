@@ -81,9 +81,11 @@ const getVariations = (prefix: string, sizes: string[] = xSizes, list: string[] 
     return sizes.map((s) => `.${prefix}${v}-${s}`);
   });
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const ClassList = ({ list = [] }: { list: any[] }) => (
   <div>
     <Subtitle className="mb-sm">Classes:</Subtitle>
+    {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
     {list.map((group: any[], key) => (
       <Text key={key} size={TextSizes.Small}>
         {group.map((p, key2) => (
@@ -101,6 +103,7 @@ const List = ({
   sizes = xSizes,
 }: {
   title: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   list: any[];
   Spacing?: typeof PaddingSpacing;
   sizes?: string[];

@@ -1,4 +1,4 @@
-name: CI Visual Regression Testing
+name: CI
 
 on:
   pull_request:
@@ -13,7 +13,7 @@ on:
 
 jobs:
   build:
-    name: Build and visual test on Node.js ${{ matrix.node }} and ${{ matrix.os }}
+    name: Visual Regression Testing
     runs-on: ${{ matrix.os }}
     if: ${{ !github.event.pull_request.draft }}
     strategy:

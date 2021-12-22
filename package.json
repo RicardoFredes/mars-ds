@@ -30,6 +30,7 @@
     "test:coverage": "yarn test --coverage",
     "test:visual": "yarn loki test",
     "test:visual:update": "yarn loki update",
+    "test:visual:ci": "build-storybook && loki --requireReference --reactUri file:./storybook-static",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "lint": "eslint .",

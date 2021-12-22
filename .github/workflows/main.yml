@@ -13,7 +13,7 @@ on:
 
 jobs:
   build:
-    name: Build and test on Node.js ${{ matrix.node }} and ${{ matrix.os }}
+    name: Build and Test
     runs-on: ${{ matrix.os }}
     if: ${{ !github.event.pull_request.draft }}
     strategy:

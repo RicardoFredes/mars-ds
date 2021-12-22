@@ -72,6 +72,7 @@ const SelectField = ({
     window.history.pushState("select__field--is-openned", "select");
     addEventListener();
     setIsOpen(true);
+    handleSetIsAbove();
   };
 
   const handleSetIsAbove = () => {
@@ -87,10 +88,7 @@ const SelectField = ({
     setIsDropdownAbove(hasSpaceAbove);
   };
 
-  useEffect(() => {
-    if (isOpen) handleSetIsAbove();
-  }, [isOpen]);
-
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => close, []);
 
   const getElementOptionItems = () => {

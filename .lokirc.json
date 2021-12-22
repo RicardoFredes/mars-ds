@@ -7,7 +7,7 @@
     "ignoreCaret": true
   },
   "pixelmatch": {
-    "threshold": 0.825
+    "threshold": 0.82
   },
   "configurations": {
     "chrome.laptop": {

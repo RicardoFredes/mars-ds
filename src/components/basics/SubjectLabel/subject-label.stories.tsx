@@ -1,6 +1,6 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import SubjectLabel from "./";
-import { LabelSubjectVariants } from "@/components/basics/Label/label.types";
+import SubjectLabel from ".";
+import { LabelSubjectVariants } from "@/components/basics/Label";
 
 export default {
   title: "Components/SubjectLabel",

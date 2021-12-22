@@ -1,8 +1,7 @@
 import Icon from "@/components/basics/Icon";
-import Text from "@/components/typographics/Text";
-import { TextSizes } from "@/components/typographics/Text/text.types";
+import Text, { TextSizes } from "@/components/typographics/Text";
 import classNames from "classnames";
-import type { RadioProps } from "./radio.types";
+import { RadioProps } from "./";
 
 const Radio = ({ name, label, id, className, ...props }: RadioProps) => {
   const cn = classNames("radio", className, { "radio--is-disabled": props.disabled });

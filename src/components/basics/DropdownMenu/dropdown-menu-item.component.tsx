@@ -1,4 +1,4 @@
-import type { DropdownMenuItemProps } from "./dropdown-menu-item.types";
+import { DropdownMenuItemProps } from "./dropdown-menu-item.types";
 import classNames from "classnames";
 import Icon from "@/components/basics/Icon/icon.component";
 import Link from "@/components/basics/Link/link.component";

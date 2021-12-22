@@ -1,6 +1,5 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import Subtitle from ".";
-import { SubtitlesSizes } from "./subtitle.types";
+import Subtitle, { SubtitlesSizes } from ".";
 
 export default {
   title: "Typographics/Subtitle",

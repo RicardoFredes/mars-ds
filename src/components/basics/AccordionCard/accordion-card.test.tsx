@@ -1,6 +1,5 @@
 import { render } from "@testing-library/react";
-import AccordionCard from ".";
-import { AccordionCardElevations, AccordionCardProps } from "./accordion-card.types";
+import AccordionCard, { AccordionCardElevations, AccordionCardProps } from ".";
 
 const PROPS = {
   TITLE: "any_title",

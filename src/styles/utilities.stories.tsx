@@ -1,8 +1,7 @@
 import Tokens from "@/tokens";
 import Caption from "@/components/typographics/Caption";
 import Subtitle from "@/components/typographics/Subtitle";
-import Text from "@/components/typographics/Text";
-import { TextSizes } from "@/components/typographics/Text/text.types";
+import Text, { TextSizes } from "@/components/typographics/Text";
 
 export default {
   title: "Utilities/Spacings",

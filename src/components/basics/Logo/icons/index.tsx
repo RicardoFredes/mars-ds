@@ -1,4 +1,4 @@
-import type { LogoIconProps } from "../logo.types";
+import type { LogoIconProps } from "..";
 
 import full from "./full";
 import short from "./short";

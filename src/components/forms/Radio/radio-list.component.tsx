@@ -1,7 +1,6 @@
 import { useState } from "react";
-import Radio from "./";
 import classNames from "classnames";
-import type { RadioListProps, RadioOption } from "./radio.types";
+import Radio, { RadioListProps, RadioOption } from "./";
 
 const emptyOption: RadioOption = { value: undefined, label: undefined };
 

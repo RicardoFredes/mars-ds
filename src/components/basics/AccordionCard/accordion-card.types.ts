@@ -1,5 +1,5 @@
-import { CardElevations } from "@/components/basics/Card/card.types";
-import { AccordionProps } from "@/components/basics/Accordion/accordion.types";
+import { CardElevations } from "@/components/basics/Card";
+import { AccordionProps } from "@/components/basics/Accordion";
 
 export const AccordionCardElevations = { ...CardElevations };
 

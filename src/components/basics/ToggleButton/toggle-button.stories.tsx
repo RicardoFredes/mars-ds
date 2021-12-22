@@ -1,5 +1,5 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import { ButtonSizes } from "../Button/button.types";
+import { ButtonSizes } from "@/components/basics/Button";
 
 import icons from "@/components/basics/Icon/lib";
 import ToggleButton from "./";

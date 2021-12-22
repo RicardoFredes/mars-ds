@@ -1,4 +1,4 @@
-import type { LinkProps } from "./link.types";
+import { LinkProps } from ".";
 import classNames from "classnames";
 
 const Link = ({ as, className, children, ...props }: LinkProps) => {

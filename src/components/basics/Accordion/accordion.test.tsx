@@ -4,8 +4,7 @@ jest.mock("@/components/basics/Icon", () => {
 });
 
 import { fireEvent, render } from "@testing-library/react";
-import Accordion from "./accordion.component";
-import { AccordionProps } from "./accordion.types";
+import Accordion, { AccordionProps } from "./";
 
 const PROPS = {
   TITLE: "any_title",

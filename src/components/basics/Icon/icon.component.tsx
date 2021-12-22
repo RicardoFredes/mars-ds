@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { IconProps, IconSizes } from "./icon.types";
+import { IconProps, IconSizes } from "./";
 import icons from "./lib";
 
 const Icon = ({ name, size = IconSizes.Medium, className, ...props }: IconProps) => {

@@ -1,6 +1,5 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import List from ".";
-import { ListItemProps } from "./list.types";
+import List, { ListItemProps } from ".";
 
 const mockedData = [
   ["4 correções de redação padrão ao mês", true],

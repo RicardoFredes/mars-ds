@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import type { CaptionProps } from "./caption.types";
+import { CaptionProps } from ".";
 
 const Caption = ({ as, children, className, ...props }: CaptionProps) => {
   const SubtitleTag: React.ElementType | string = as || "caption";

@@ -1,8 +1,5 @@
-import type { LogoProps } from "@/components/basics/Logo/logo.types";
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-
-import { LogoNames, LogoVariants } from "@/components/basics/Logo/logo.types";
-import Logo from "./";
+import Logo, { LogoNames, LogoProps, LogoVariants } from "./";
 
 export default {
   title: "Components/Logo",

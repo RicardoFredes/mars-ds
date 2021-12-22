@@ -1,7 +1,6 @@
 import classNames from "classnames";
-import { StepperProps } from "../Stepper/stepper.types";
-import { HeadingSizes } from "@/components/typographics/Heading/heading.types";
-import Heading from "@/components/typographics/Heading";
+import { StepperProps } from "@/components/basics/Stepper";
+import Heading, { HeadingSizes } from "@/components/typographics/Heading";
 import Caption from "@/components/typographics/Caption";
 import Text from "@/components/typographics/Text";
 

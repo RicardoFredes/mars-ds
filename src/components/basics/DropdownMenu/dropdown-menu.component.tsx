@@ -1,9 +1,7 @@
-/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
-import type { DropdownMenuProps } from "./dropdown-menu.types";
+import { DropdownMenuProps } from "./";
 import classNames from "classnames";
-import Card from "@/components/basics/Card/card.component";
+import Card, { CardElevations } from "@/components/basics/Card";
 import DropdownMenuItem from "./dropdown-menu-item.component";
-import { CardElevations } from "@/components/basics/Card/card.types";
 
 const DropdownMenu = ({ className, list = [], children, ...props }: DropdownMenuProps) => {
   const cn = classNames("dropdown-menu", className);

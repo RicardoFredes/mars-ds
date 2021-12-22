@@ -34,4 +34,4 @@ export const Default = Template.bind({});
 Default.args = DefaultArgs;
 
 export const Checked = Template.bind({});
-Checked.args = { ...DefaultArgs, defaultOption: OPTIONS[1] };
+Checked.args = { ...DefaultArgs, name: "radios-checked", defaultOption: OPTIONS[1] };

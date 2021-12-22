@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { TextProps, TextSizes } from "./text.types";
+import { TextProps, TextSizes } from ".";
 
 const Text = ({ as, children, className, size = TextSizes.Medium, ...props }: TextProps) => {
   const cn = classNames("text", `text--size-${size}`, className);

@@ -1,6 +1,6 @@
-import type { FocusEvent, FormEvent } from "react";
-import type { IconProps } from "@/components/basics/Icon/icon.types";
-import { IconPosition, TextFieldProps } from "./text-field.types";
+import { FocusEvent, FormEvent } from "react";
+import { IconProps } from "@/components/basics/Icon";
+import { IconPosition, TextFieldProps } from "./";
 
 import { useCallback, useEffect, useState } from "react";
 import classNames from "classnames";

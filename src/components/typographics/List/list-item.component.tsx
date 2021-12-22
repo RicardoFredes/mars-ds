@@ -1,13 +1,11 @@
-import { ListItemProps } from "./list.types";
+import { ListItemProps } from ".";
 import classNames from "classnames";
-import Icon from "@/components/basics/Icon";
-import Text from "@/components/typographics/Text";
-import { TextSizes } from "@/components/typographics/Text/text.types";
-import { Sizes } from "@/types";
+import Icon, { IconSizes } from "@/components/basics/Icon";
+import Text, { TextSizes } from "@/components/typographics/Text";
 
 const ListItem = ({ text, children, bullet = {}, className, ...props }: ListItemProps) => {
   const cn = classNames("list-item", className);
-  const icon = { name: "", size: Sizes.Small, ...bullet };
+  const icon = { name: "", size: IconSizes.Small, ...bullet };
   return (
     <li className={cn} {...props}>
       <Icon {...icon} className={classNames(bullet.className, "list-item__bullet")} />

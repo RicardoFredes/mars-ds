@@ -1,4 +1,4 @@
-import type { ItemTextProps } from "./ItemText.types";
+import { ItemTextProps } from ".";
 import classNames from "classnames";
 
 const ItemText = ({ as, className, children, ...props }: ItemTextProps) => {

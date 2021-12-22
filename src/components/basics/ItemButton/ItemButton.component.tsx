@@ -1,4 +1,4 @@
-import type { ItemButtonProps } from "./ItemButton.types";
+import type { ItemButtonProps } from "./";
 import classNames from "classnames";
 import Tokens from "@/tokens";
 import Caption from "@/components/typographics/Caption";

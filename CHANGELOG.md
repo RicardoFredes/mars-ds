@@ -5,6 +5,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.10](https://github.com/mesalva/mars/compare/v1.0.0-alpha.9...v1.0.0-alpha.10) (2021-12-22)
+
+
+### Features
+
+* create (move) breakpoints.scss ([#60](https://github.com/mesalva/mars/issues/60)) ([aa33cc5](https://github.com/mesalva/mars/commit/aa33cc5424702b569be9033496892772c2242492))
+* **reindex:** add reindex components ([2f1b96f](https://github.com/mesalva/mars/commit/2f1b96f3e437f99de24e63ab4382ce7e35ee4de0))
+
+
+### Bug Fixes
+
+* radio types ([72ee827](https://github.com/mesalva/mars/commit/72ee827f85def6a9382e406aaf9954b58af94131))
+
+## [1.0.0-alpha.9](https://github.com/mesalva/mars/compare/v1.0.0-alpha.8...v1.0.0-alpha.9) (2021-12-21)
+
+
+### Features
+
+* create (move) breakpoints.scss ([#60](https://github.com/mesalva/mars/issues/60)) ([df36725](https://github.com/mesalva/mars/commit/df36725458c0c1df7e66b55c939ef505f6bc6344))
+
 ## [1.0.0-alpha.8](https://github.com/mesalva/mars/compare/v1.0.0-alpha.7...v1.0.0-alpha.8) (2021-12-21)
 
 

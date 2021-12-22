@@ -1,4 +1,4 @@
-import { IconProps } from "@/components/basics/Icon/icon.types";
+import { IconProps } from "@/components/basics/Icon";
 import React from "react";
 
 export interface ListProps extends Omit<React.HTMLProps<HTMLUListElement>, "list"> {

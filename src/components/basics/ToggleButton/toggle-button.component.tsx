@@ -1,8 +1,6 @@
-import type { ToggleButtonProps } from "./toggle-button.types";
-
-import Button from "@/components/basics/Button";
+import { ToggleButtonProps } from ".";
+import Button, { ButtonVariants } from "@/components/basics/Button";
 import classNames from "classnames";
-import { ButtonVariants } from "../Button/button.types";
 
 const ToggleButton = ({ className, ...props }: ToggleButtonProps) => {
   const cn = classNames("toggle-btn", className);

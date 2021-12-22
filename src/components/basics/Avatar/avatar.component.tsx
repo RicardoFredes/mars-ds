@@ -1,6 +1,5 @@
 import { useMemo } from "react";
 import classNames from "classnames";
-
 import { AvatarProps, AvatarSizes } from "./";
 import ItemText from "@/components/typographics/ItemText";
 import { getInitialsByFullName } from "@/services/names-parser";

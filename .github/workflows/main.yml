@@ -7,9 +7,6 @@ on:
       - reopened
       - synchronize
       - ready_for_review
-  push:
-    branches:
-      - main
 
 jobs:
   build:
@@ -46,6 +43,9 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: yarn --pure-lockfile --non-interactive --no-progress
+
+      - name: Lint
+        run: yarn lint
 
       - name: Test
         run: yarn test --ci --coverage --maxWorkers=2

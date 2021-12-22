@@ -34,12 +34,12 @@ export const light = create({
   inputBorderRadius: 8,
 
   // Branding
-  brandTitle: "🪐 Mars",
+  brandTitle: "Mars | Me Salva! Design System",
   brandUrl: "https://github.com/mesalva/mars",
-  // brandImage: "https://cdn-icons-png.flaticon.com/32/2530/2530892.png",
+  brandImage: "https://user-images.githubusercontent.com/29892001/147158290-0af5b26e-fa73-45a1-8e6f-44a1a56fad01.png",
 
   // Grid
   gridCellSize: 8,
 });
 
-export const dark = { ...themes.dark, appBg: "black", appContentBg: "#161c24" };
+export const dark = { ...light, ...themes.dark, appBg: "black", appContentBg: "#161c24" };

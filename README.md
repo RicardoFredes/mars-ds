@@ -1,6 +1,6 @@
-# MARS Design System
+# Me Salva! MARS | Design System
 
-![images_unsplash_com-photo-1573588028698-f4759befb09a](https://user-images.githubusercontent.com/29892001/145896670-23d7aef4-1ae5-44bf-8b8e-573c6e965b2f.png)
+![Me Salva! Mars](https://user-images.githubusercontent.com/29892001/147158290-0af5b26e-fa73-45a1-8e6f-44a1a56fad01.png)
 
 ![License](https://img.shields.io/static/v1?label=Licence&message=MIT&color=yellow)
 ![Coverage](https://img.shields.io/static/v1?label=Coverage&message=0%&color=red)
@@ -23,6 +23,8 @@
 - [Testes](#testes)
 - [Publicação](#publicacao)
 - [Tecnologias](#tecnologias)
+
+![images_unsplash_com-photo-1573588028698-f4759befb09a](https://user-images.githubusercontent.com/29892001/145896670-23d7aef4-1ae5-44bf-8b8e-573c6e965b2f.png)
 
 # Como usar <a name="como-usar"></a>
 
@@ -221,12 +223,15 @@ Esses testes são demorados e a seguinte mensagem de erro pode aparecer, mas iss
 ### Exemplo de teste visual com falha
 
 Imagem de referência:
+
 ![chrome_iphone7_Components_Button_Default](https://user-images.githubusercontent.com/29892001/147115992-9f9fcfb4-23d7-490c-bb47-e7156ccc150a.png)
 
 Simulação de componente com erros:
+
 ![chrome_iphone7_Components_Button_Default](https://user-images.githubusercontent.com/29892001/147126776-d1762a57-2614-4fcc-b60a-b9fea12d0796.png)
 
 Teste falhando e apresentando as diferenças:
+
 ![chrome_iphone7_Components_Button_Default](https://user-images.githubusercontent.com/29892001/147126714-9abfa301-658d-478e-ad34-a42376623118.png)
 
 ### Referências

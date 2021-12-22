@@ -31,6 +31,7 @@ Esse PR:
 - [ ] foi testado em ambiente de homologação
 - [ ] possui testes unitários
 - [ ] possui testes funcionais
+- [ ] possui testes visuais
 - [ ] foi testado por alguém da equipe (não dev)
 
 

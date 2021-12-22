@@ -1,19 +1,20 @@
-import addons from '@storybook/addons';
+import addons from "@storybook/addons";
 import * as themes from "./themes";
+import "loki/configure-react";
 
 import "../src/styles/index.scss";
 
 function isDarkMode() {
-  return parent.document.body.classList.contains('theme-dark');
+  return parent.document.body.classList.contains("theme-dark");
 }
 
 const channel = addons.getChannel();
 let isDark = isDarkMode();
 
-channel.on('DARK_MODE', (dark) => {
+channel.on("DARK_MODE", (dark) => {
   if (isDark === dark) return;
-  
-  const iframe = parent.document.querySelector('#storybook-preview-iframe');
+
+  const iframe = parent.document.querySelector("#storybook-preview-iframe");
   const { src } = iframe;
 
   iframe.src = src;
@@ -52,5 +53,5 @@ export const parameters = {
     get theme() {
       return isDarkMode() ? themes.dark : themes.light;
     },
-  }
+  },
 };

@@ -4,7 +4,9 @@ on:
   pull_request:
     types:
       - opened
+      - reopened
       - synchronize
+      - ready_for_review
   push:
     branches:
       - main
@@ -13,6 +15,7 @@ jobs:
   build:
     name: Build and test on Node.js ${{ matrix.node }} and ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
+    if: ${{ !github.event.pull_request.draft }}
     strategy:
       matrix:
         node: ["14.x"]

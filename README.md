@@ -218,6 +218,17 @@ Esses testes são demorados e a seguinte mensagem de erro pode aparecer, mas iss
 
 ![image](https://user-images.githubusercontent.com/29892001/147114242-60cbe3a4-9249-4cc5-89d7-453d4a5a0428.png)
 
+### Exemplo de teste visual com falha
+
+Imagem de referência:
+![chrome_iphone7_Components_Button_Default](https://user-images.githubusercontent.com/29892001/147115992-9f9fcfb4-23d7-490c-bb47-e7156ccc150a.png)
+
+Simulação de imagem atual:
+![chrome_iphone7_Components_Button_Default](https://user-images.githubusercontent.com/29892001/147115962-39f558bd-a749-48c3-bd25-e116d86d5cce.png)
+
+Teste encontrando as diferenças
+![chrome_iphone7_Components_Button_Default](https://user-images.githubusercontent.com/29892001/147116028-08f10040-716b-45de-a3de-86bd8296567d.png)
+
 ### Referências
 
 - https://github.com/mapbox/pixelmatch

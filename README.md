@@ -221,12 +221,15 @@ Esses testes são demorados e a seguinte mensagem de erro pode aparecer, mas iss
 ### Exemplo de teste visual com falha
 
 Imagem de referência:
+
 ![chrome_iphone7_Components_Button_Default](https://user-images.githubusercontent.com/29892001/147115992-9f9fcfb4-23d7-490c-bb47-e7156ccc150a.png)
 
 Simulação de componente com erros:
+
 ![chrome_iphone7_Components_Button_Default](https://user-images.githubusercontent.com/29892001/147126776-d1762a57-2614-4fcc-b60a-b9fea12d0796.png)
 
 Teste falhando e apresentando as diferenças:
+
 ![chrome_iphone7_Components_Button_Default](https://user-images.githubusercontent.com/29892001/147126714-9abfa301-658d-478e-ad34-a42376623118.png)
 
 ### Referências

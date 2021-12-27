@@ -1,7 +1,12 @@
-.link {
+a,
+.link{
   color: $color-primary-500;
   cursor: pointer;
   text-decoration: none;
+  &:visited {
+    text-decoration: none;
+    color: $color-primary-500;
+  }
   &:hover {
     text-decoration: underline;
   }

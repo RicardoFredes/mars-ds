@@ -244,7 +244,7 @@ Teste falhando e apresentando as diferenças:
 :warning: Em construção
 
 A publicação do projeto está sendo feita em alpha toda a vez que um PR é mesclado no branch `alpha`.
-A geração de tags e publicação é realizado com base no semantic realease.
+A geração de tags e publicação é realizado com base no semantic realease, assim como a atualização da documentação contendo a versão mais recente do modulo.
 
 # Tecnologias <a name="tecnologias"></a>
 

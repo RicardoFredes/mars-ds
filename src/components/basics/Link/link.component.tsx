@@ -19,7 +19,7 @@ const Link = ({ as, className, children, ...props }: LinkProps) => {
 export default Link;
 
 const shouldGetDefaultComponent = (as?: string | React.ElementType, href?: string) => {
-  return !as && href && /^http/.test(href);
+  return !as && href && !/^http/.test(href);
 };
 
 const getDefaultComponent = () => {

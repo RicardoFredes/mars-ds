@@ -13,6 +13,12 @@ export * from "./components/basics/Accordion/accordion.types";
 export { default as AccordionCard } from "./components/basics/AccordionCard/accordion-card.component";
 export * from "./components/basics/AccordionCard/accordion-card.types";
 
+export { default as AccordionLabel } from "./components/basics/AccordionLabel/accordion-label.component";
+export * from "./components/basics/AccordionLabel/accordion-label.types";
+
+export { default as AccordionStatus } from "./components/basics/AccordionStatus/accordion-status.component";
+export * from "./components/basics/AccordionStatus/accordion-status.types";
+
 export { default as Avatar } from "./components/basics/Avatar/avatar.component";
 export * from "./components/basics/Avatar/avatar.types";
 
@@ -76,6 +82,7 @@ export { default as TextField } from "./components/forms/TextField/text-field.co
 export * from "./components/forms/TextField/text-field.types";
 
 export { default as TextFieldIconButton } from "./components/forms/TextFieldIconButton/text-field-icon-button.component";
+export * from "./components/forms/TextFieldIconButton/text-field-icon-button.types";
 
 export { default as ToggleSwitch } from "./components/forms/ToggleSwitch/toggle-switch.component";
 export * from "./components/forms/ToggleSwitch/toggle-switch.types";

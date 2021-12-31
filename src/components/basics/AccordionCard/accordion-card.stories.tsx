@@ -30,3 +30,23 @@ const DefaultArgs = {
 
 export const Default = Template.bind({});
 Default.args = DefaultArgs;
+
+export const DefaultOpen = Template.bind({});
+DefaultOpen.args = {
+  ...DefaultArgs,
+  defaultOpen: true,
+};
+
+export const DefaultFooterChildren = Template.bind({});
+DefaultFooterChildren.args = {
+  ...DefaultArgs,
+  footerChildren: "Footer",
+};
+
+const FooterComponent = () => <Text style={{ color: "red" }}>Non Default Footer Children</Text>;
+
+export const NonDefaultFooterChildren = Template.bind({});
+NonDefaultFooterChildren.args = {
+  ...DefaultArgs,
+  footerComponent: FooterComponent,
+};

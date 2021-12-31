@@ -1,4 +1,6 @@
-import { FocusEvent, FormEvent } from "react";
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+import { FocusEvent, FormEvent, MouseEvent, useRef } from "react";
 import { IconProps } from "@/components/basics/Icon";
 import { IconPosition, TextFieldProps } from "./";
 
@@ -34,6 +36,8 @@ const TextField = ({
   const [computedId] = useState(id || name || generateHash("field"));
   const [isFocused, setIsFocused] = useState(false);
   const [computedValue, setComputedValue] = useState("");
+
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const setValue = useCallback(
     (newValue) => {
@@ -78,18 +82,23 @@ const TextField = ({
     onChange?.(event);
   };
 
+  const handleClick = () => {
+    inputRef.current?.focus();
+  };
+
   const labelText = error ? `${label}*` : label;
   const helpText = error || info;
   const statusIconName = error ? "alert-circle" : isSuccess ? "checkmark-circle" : undefined;
   return (
     <div className={cn}>
-      <fieldset className="field__fieldset">
+      <fieldset className="field__fieldset" onClick={handleClick}>
         <div className="field__content">
           {leftIconButton && (
             <IconButtonPosition position={IconPosition.Left} {...leftIconButton} />
           )}
           <input
             {...props}
+            ref={inputRef}
             id={computedId}
             className="field__input"
             type={type}
@@ -115,12 +124,23 @@ const TextField = ({
 const IconButtonPosition = ({
   position = IconPosition.Right,
   name,
+  onClick,
   ...props
 }: {
   position?: IconPosition;
 } & IconProps) => {
+  const handleClick = (event: MouseEvent<HTMLElement>) => {
+    event.stopPropagation();
+    onClick?.(event);
+  };
   return (
-    <TextFieldIconButton className={`field__icon field__icon-${position}`} name={name} {...props} />
+    <TextFieldIconButton
+      hasAction={!!onClick}
+      className={`field__icon field__icon-${position}`}
+      name={name}
+      onClick={handleClick}
+      {...props}
+    />
   );
 };
 

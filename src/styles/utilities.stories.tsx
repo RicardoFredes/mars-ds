@@ -134,7 +134,7 @@ export const Paddings = () => (
 );
 
 export const Margins = () => (
-  <List list={getVariations("m")} title="Margins" Spacing={MarginSpacing} />
+  <List list={getVariations("m", aSizes)} title="Margins" sizes={aSizes} Spacing={MarginSpacing} />
 );
 
 export const Gaps = () => (

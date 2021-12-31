@@ -5,7 +5,7 @@
 ![License](https://img.shields.io/static/v1?label=Licence&message=MIT&color=yellow)
 ![Coverage](https://img.shields.io/static/v1?label=Coverage&message=0%&color=red)
 ![Build](https://img.shields.io/static/v1?label=Build&message=Success&color=lemon)
-![Version](https://img.shields.io/static/v1?label=Version&message=1.0.0-alpha.11&color=orange)
+![Version](https://img.shields.io/static/v1?label=Version&message=1.0.0-alpha.13&color=orange)
 
 **Mars** é a nossa biblioteca de design system feita em React.js. Essa lib os principais componentes para os projetos do Me Salva!.
 
@@ -244,7 +244,7 @@ Teste falhando e apresentando as diferenças:
 :warning: Em construção
 
 A publicação do projeto está sendo feita em alpha toda a vez que um PR é mesclado no branch `alpha`.
-A geração de tags e publicação é realizado com base no semantic realease.
+A geração de tags e publicação é realizado com base no semantic realease, assim como a atualização da documentação contendo a versão mais recente do modulo.
 
 # Tecnologias <a name="tecnologias"></a>
 

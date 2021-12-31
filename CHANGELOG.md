@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.13](https://github.com/mesalva/mars/compare/v1.0.0-alpha.12...v1.0.0-alpha.13) (2021-12-28)
+
+
+### Bug Fixes
+
+* using next/link inside own Link component ([#72](https://github.com/mesalva/mars/issues/72)) ([c737e7f](https://github.com/mesalva/mars/commit/c737e7ffc800fae8351472cf4f0c920f7b39e711))
+
+## [1.0.0-alpha.12](https://github.com/mesalva/mars/compare/v1.0.0-alpha.11...v1.0.0-alpha.12) (2021-12-28)
+
+
+### Bug Fixes
+
+* margin stories ([#71](https://github.com/mesalva/mars/issues/71)) ([1b1d17e](https://github.com/mesalva/mars/commit/1b1d17ed4803817ceda625ad3e85e34f619e71c4)), closes [#70](https://github.com/mesalva/mars/issues/70) [#68](https://github.com/mesalva/mars/issues/68) [#69](https://github.com/mesalva/mars/issues/69)
+
 ## [1.0.0-alpha.11](https://github.com/mesalva/mars/compare/v1.0.0-alpha.10...v1.0.0-alpha.11) (2021-12-22)
 
 

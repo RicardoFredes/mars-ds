@@ -1,0 +1,22 @@
+.skeleton {
+  &--is-active {
+    background-color: $color-neutral-300;
+    border-radius: $border-radius-sm;
+    .skeleton-container {
+      visibility: hidden;
+    }
+    animation: animation-skeleton 1.5s linear infinite;
+  }
+}
+
+@keyframes animation-skeleton {
+  0% {
+    opacity: 0.4;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}

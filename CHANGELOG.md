@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.15](https://github.com/mesalva/mars/compare/v1.0.0-alpha.14...v1.0.0-alpha.15) (2021-12-31)
+
+
+### Bug Fixes
+
+* text-field autofill and styles ([#82](https://github.com/mesalva/mars/issues/82)) ([30e8d0e](https://github.com/mesalva/mars/commit/30e8d0ebc9a16de1c781dc83210c9fc418c4d22c))
+
+## [1.0.0-alpha.14](https://github.com/mesalva/mars/compare/v1.0.0-alpha.13...v1.0.0-alpha.14) (2021-12-31)
+
+
+### Features
+
+* accordion-status ([#73](https://github.com/mesalva/mars/issues/73)) ([c5a3302](https://github.com/mesalva/mars/commit/c5a3302a3afa017733b856a4d8f20c15ae353667))
+* add components Loader, Skeleton, SubmitButton and FormWithSubmitButton ([#75](https://github.com/mesalva/mars/issues/75)) ([287cf83](https://github.com/mesalva/mars/commit/287cf83c86e3710007493a5e838009df7e7cb598))
+
 ## [1.0.0-alpha.13](https://github.com/mesalva/mars/compare/v1.0.0-alpha.12...v1.0.0-alpha.13) (2021-12-28)
 
 

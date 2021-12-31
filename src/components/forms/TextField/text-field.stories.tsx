@@ -25,7 +25,7 @@ const Template: ComponentStory<typeof TextField> = (args) => {
 };
 
 const DefaultArgs = {
-  name: "title",
+  name: "name",
   type: "text",
   label: "Nome",
   disabled: false,

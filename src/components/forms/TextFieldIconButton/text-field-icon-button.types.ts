@@ -1,3 +1,5 @@
 import { IconProps } from "@/components/basics/Icon";
 
-export type TextFieldIconButtonProps = IconProps;
+export interface TextFieldIconButtonProps extends IconProps {
+  hasAction?: boolean;
+}

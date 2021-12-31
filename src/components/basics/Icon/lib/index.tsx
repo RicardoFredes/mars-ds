@@ -50,6 +50,7 @@ import video from "./video";
 import visa from "./visa";
 import chevronDown from "./chevron-down";
 import checkmark from "./checkmark";
+import trash from "./trash";
 
 const icons: {
   [key: string]: (props: IconLibProps) => JSX.Element;
@@ -104,6 +105,7 @@ const icons: {
   tri,
   video,
   visa,
+  trash,
 };
 
 export default icons;

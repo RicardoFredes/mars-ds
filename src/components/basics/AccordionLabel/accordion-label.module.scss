@@ -1,0 +1,19 @@
+.accordion-label {
+  padding:0;
+
+  .accordion__header {
+    padding: $spacing-xl;
+  }
+  &.accordion--is-open {
+    background: $color-neutral-ghost;
+  }
+
+  &__title {
+    flex: 1;
+  }
+
+  &__subtitle {
+    margin-left: $spacing-lg;
+    padding-left: $spacing-lg;
+  }
+}

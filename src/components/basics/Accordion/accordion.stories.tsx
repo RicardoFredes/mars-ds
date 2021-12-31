@@ -26,3 +26,9 @@ const DefaultArgs = {
 
 export const Default = Template.bind({});
 Default.args = DefaultArgs;
+
+export const DefaultOpen = Template.bind({});
+DefaultOpen.args = {
+  ...DefaultArgs,
+  defaultOpen: true,
+};

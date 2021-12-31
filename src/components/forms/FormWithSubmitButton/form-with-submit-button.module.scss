@@ -1,0 +1,10 @@
+.form-with-submit-button {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-lg-1;
+  }
+  &__submit-button {
+    margin-top: $spacing-xl;
+  }
+}

@@ -10,5 +10,21 @@
       padding: $spacing-xl;
       padding-top: 0;
     }
+
+    &-footer {
+      margin: calc($spacing-xl * -1);
+      margin-top: 0;
+      text-align: right;
+      height: 62px;
+      flex: 1;
+      .btn {
+        justify-content: flex-start;
+        height: 62px;
+        width: 100%;
+        border-radius: $border-radius-lg;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+    }
   }
 }

@@ -17,12 +17,11 @@
   line-height: 1.6em;
   align-items: center;
   justify-content: center;
-  padding: 11px 22px;
+  padding: 0 22px;
+  min-height: 48px;
   transition: background-color ease 0.2s;
 
-  &__icon {
-    margin-right: 8px;
-  }
+  gap: $spacing-sm;
 
   &--is-disabled,
   &:disabled {
@@ -73,7 +72,7 @@
 
   &--size-sm {
     font-size: $font-size-xxs;
-    padding: 5px 16px;
+    padding: 0 $spacing-lg;
     min-height: 36px;
   }
 

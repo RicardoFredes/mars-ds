@@ -35,7 +35,6 @@
   @each $name, $size in $sizes {
     .gap-#{$name} {
       gap: $size;
-      margin-right: $size;
     }
   }
 }

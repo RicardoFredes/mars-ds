@@ -1,5 +1,5 @@
 .credit-card {
-  width: 280px;
+  width: 100%;
   height: 160px;
   border-radius: $border-radius-sm;
   color: $color-white;
@@ -9,7 +9,6 @@
   align-items: center;
   justify-content: space-between;
   padding: $spacing-lg;
-  border: 1px solid $color-white;
 
   &--primary {
     background-color: $color-primary-700;
@@ -27,9 +26,24 @@
     justify-content: space-between;
     align-items: center;
   }
+  &__footer {
+    opacity: 0.8;
+  }
 
   &__name {
     margin-top: $spacing-sm;
     text-transform: uppercase;
+    min-height: 1.5em;
+  }
+}
+
+.theme-dark {
+  .credit-card {
+    &--primary {
+      background-color: $color-primary-300;
+    }
+    &--secondary {
+      background-color: $color-error-100;
+    }
   }
 }

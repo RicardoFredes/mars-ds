@@ -18,6 +18,8 @@ const Icon = ({ name, size = IconSizes.Medium, className, ...props }: IconProps)
 
 const getSize = (size: string) => {
   switch (size) {
+    case IconSizes.XLarge:
+      return 40;
     case IconSizes.Large:
       return 32;
     case IconSizes.Small:

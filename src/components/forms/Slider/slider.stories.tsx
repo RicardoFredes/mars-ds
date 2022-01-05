@@ -31,10 +31,7 @@ const DefaultArgs = {
   min: 9,
   step: 0.05,
   formatter: (value: number) => currencyFormatter("R$", value),
-  onSelect: (value: number) => {
-    console.log(value);
-    return value;
-  },
+  onSelect: console.log,
 };
 
 export const Default = Template.bind({});

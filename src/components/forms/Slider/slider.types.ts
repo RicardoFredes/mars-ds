@@ -6,5 +6,5 @@ export interface SliderProps extends Pick<HTMLProps<HTMLDivElement>, "className"
   formatter?: (value: number) => string;
   defaultValue?: number;
   step?: number;
-  onSelect: (value: number) => number;
+  onSelect?: (value: number) => void;
 }

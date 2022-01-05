@@ -1,31 +1,31 @@
-/* eslint-disable no-useless-escape */
-import { CreditCardProps } from "./credit-card.types";
+import { CreditCardProps, CreditCardVariants } from "./credit-card.types";
 import classNames from "classnames";
-import Icon from "@/components/basics/Icon";
+import Icon, { IconSizes } from "@/components/basics/Icon";
 import Text from "@/components/typographics/Text";
 import ItemText from "@/components/typographics/ItemText";
 
 const CreditCard = ({
   className,
-  cardName,
-  cardNumbers,
-  variant = "primary",
-  iconName = "mastercard",
+  cardHolder,
+  cardNumber,
+  variant = CreditCardVariants.Primary,
+  iconName,
   ...props
 }: CreditCardProps) => {
   const cn = classNames("credit-card", className, `credit-card--${variant}`);
-
-  const parsedNumbers = cardNumbers.trim().replace(/(\d{4} )/g, "•••• ");
+  const parsedNumbers = cardNumber?.trim().replace(/(\d{4} )/g, "•••• &nbsp;");
   return (
     <div className={cn} {...props}>
       <div className="credit-card__header">
-        <Icon name="me-salva-mini" size="lg" />
-
-        {iconName && <Icon name={iconName} size="lg" />}
+        <Icon name="me-salva-mini" size={IconSizes.Medium} />
+        {iconName && <Icon name={iconName} size={IconSizes.XLarge} />}
       </div>
       <div className="credit-card__footer">
-        <ItemText className="credit-card__numbers">{parsedNumbers}</ItemText>
-        <Text className="credit-card__name">{cardName}</Text>
+        <ItemText
+          className="credit-card__numbers"
+          dangerouslySetInnerHTML={{ __html: parsedNumbers || "" }}
+        />
+        <Text className="credit-card__name">{cardHolder}</Text>
       </div>
     </div>
   );

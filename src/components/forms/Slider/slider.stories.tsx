@@ -13,6 +13,12 @@ export default {
     defaultValue: numberControl,
     step: numberControl,
     formatter: {},
+    onSelect: { onClick: { action: "clicked" } },
+  },
+  parameters: {
+    actions: {
+      handles: ["click"],
+    },
   },
 } as ComponentMeta<typeof Slider>;
 
@@ -25,6 +31,7 @@ const DefaultArgs = {
   min: 9,
   step: 0.05,
   formatter: (value: number) => currencyFormatter("R$", value),
+  onSelect: console.log,
 };
 
 export const Default = Template.bind({});

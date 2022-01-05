@@ -6,12 +6,13 @@ export interface IconLibProps {
   width?: string | number;
 }
 
-const { Small, Medium, Large } = Sizes;
+const { Small, Medium, Large, XLarge } = Sizes;
 
 export const IconSizes = {
   Small,
   Medium,
   Large,
+  XLarge,
 } as const;
 
 export interface IconProps extends Omit<HTMLProps<HTMLSpanElement>, "size"> {

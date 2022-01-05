@@ -2,7 +2,7 @@ import { AccordionCardElevations, AccordionCardProps } from "./";
 import classNames from "classnames";
 import Accordion from "@/components/basics/Accordion";
 import Card from "@/components/basics/Card";
-import Button from "../Button";
+import Button, { ButtonProps, ButtonVariants } from "@/components/basics/Button";
 
 const AccordionCard = ({
   className,
@@ -29,16 +29,16 @@ const AccordionCard = ({
   );
 };
 
-type AccordionFooterProps = Omit<
-  React.HTMLProps<HTMLButtonElement | HTMLLinkElement>,
-  "as" | "size"
->;
-
-const AccordionFooterDefault = ({ children, className, ...props }: AccordionFooterProps) => {
+const AccordionFooterDefault = ({ children, className, ...props }: ButtonProps) => {
   const cn = classNames("accordion-footer", className);
   return (
     <footer className={cn}>
-      <Button variant="text" {...props} className="flex-row-reverse" iconName="chevron-right">
+      <Button
+        variant={ButtonVariants.Text}
+        {...props}
+        className="flex-row-reverse"
+        iconName="chevron-right"
+      >
         {children}
       </Button>
     </footer>

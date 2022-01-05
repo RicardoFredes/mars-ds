@@ -35,12 +35,14 @@ main();
 function saveScss(css, scss, tokenName, isBase = false) {
   if (isBase) {
     const VARIABLES = "variables";
+    const ELEVATIONS = "elevations"
     const BREAKPOINTS = "breakpoints";
-    const allImports = Object.values(TOKENS).concat(VARIABLES, BREAKPOINTS);
+    const allImports = Object.values(TOKENS).concat(VARIABLES, BREAKPOINTS, ELEVATIONS);
     const themeImports = allImports.map((name) => `@import "./${name}.scss";`).join("\n");
 
     saveFile(BASE_PATH, `scss/${VARIABLES}.scss`, scss.join("\n"));
     saveFile(BASE_PATH, `scss/index.scss`, `${themeImports}\n`);
+
   }
   saveFile(BASE_PATH, `scss/${tokenName}.scss`, css);
 }

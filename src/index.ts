@@ -58,6 +58,9 @@ export * from "./components/basics/Loader/loader.types";
 export { default as Logo } from "./components/basics/Logo/logo.component";
 export * from "./components/basics/Logo/logo.types";
 
+export { default as Notification } from "./components/basics/Notification/Notification.component";
+export * from "./components/basics/Notification/Notification.types";
+
 export { default as Skeleton } from "./components/basics/Skeleton/skeleton.component";
 export * from "./components/basics/Skeleton/skeleton.types";
 

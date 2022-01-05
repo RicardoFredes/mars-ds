@@ -1,0 +1,72 @@
+.notification {
+  display: flex;
+  align-items: flex-start;
+  position: fixed;
+  z-index: $elevation-notification;
+  padding: $spacing-md;
+  border-radius: $border-radius-sm;
+  width: 300px;
+  animation: animation-open 0.3s ease-out forwards;
+  animation-delay: 0.3s;
+
+  &__icon {
+    margin-right: $spacing-lg;
+  }
+
+  &__title {
+    text-overflow: ellipsis;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin-right: $spacing-lg;
+  }
+
+  &__close-icon {
+    position: relative;
+    margin-left: auto;
+    cursor: pointer;
+
+    &:before {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      left: -8px;
+      top: -8px;
+      background-color: $color-neutral-ghost;
+      border-radius: 50%;
+      transition: transform ease 0.2s;
+      transform: scale(0);
+    }
+
+    &:hover {
+      &::before {
+        transform: scale(1);
+      }
+    }
+  }
+
+  &-is--closing {
+    animation: animation-closing 0.3s ease-out forwards;
+  }
+
+  @keyframes animation-closing {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+      transform: translateX(120%);
+    }
+  }
+  @keyframes animation-open {
+    from {
+      opacity: 0;
+      transform: translateX(120%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+}

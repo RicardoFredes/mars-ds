@@ -1,14 +1,14 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import CreditCard from "./";
+import CreditCard, { CreditCardVariants } from "./";
 
 export default {
   title: "Components/CreditCard",
   component: CreditCard,
   argTypes: {
-    cardName: {
+    cardHolder: {
       control: { type: "text" },
     },
-    cardNumbers: {
+    cardNumber: {
       control: { type: "text" },
     },
     variant: {
@@ -23,10 +23,11 @@ export default {
 const Template: ComponentStory<typeof CreditCard> = (args) => <CreditCard {...args} />;
 
 const DefaultArgs = {
-  cardName: "Marllon Pereira",
-  cardNumbers: "1234 1324 3214 4321",
-  variant: "primary",
+  cardHolder: "Marllon Pereira",
+  cardNumber: "1234 1324 3214 4321",
+  variant: CreditCardVariants.Primary,
   iconName: "mastercard",
+  style: { maxWidth: 280 },
 };
 
 export const Default = Template.bind({});
@@ -35,5 +36,6 @@ Default.args = DefaultArgs;
 export const Secondary = Template.bind({});
 Secondary.args = {
   ...DefaultArgs,
-  variant: "secondary",
+  iconName: "visa",
+  variant: CreditCardVariants.Secondary,
 };

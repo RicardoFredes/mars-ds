@@ -1,8 +1,10 @@
 .accordion-label {
-  padding:0;
-
+  padding: 0;
   .accordion__header {
-    padding: $spacing-xl;
+    padding: $spacing-lg;
+    &-container {
+      gap: $spacing-sm;
+    }
   }
   &.accordion--is-open {
     background: $color-neutral-ghost;
@@ -10,10 +12,11 @@
 
   &__title {
     flex: 1;
+    width: 100%;
   }
 
   &__subtitle {
-    margin-left: $spacing-lg;
-    padding-left: $spacing-lg;
+    min-width: 56px;
+    text-align: right;
   }
 }

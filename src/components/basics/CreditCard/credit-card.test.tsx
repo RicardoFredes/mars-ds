@@ -3,7 +3,7 @@ import CreditCard from ".";
 import { CreditCardProps } from "./credit-card.types";
 
 const makeSut = (props?: CreditCardProps) =>
-  render(<CreditCard cardName="Marllon Pereira" cardNumbers="1234 3214 2134 4321" {...props} />);
+  render(<CreditCard cardHolder="Marllon Pereira" cardNumber="1234 3214 2134 4321" {...props} />);
 
 describe("<CreditCard>", () => {
   it("should render component", () => {

@@ -1,6 +1,6 @@
 import Tokens from "@/tokens";
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import DropdownMenuItem from "@/components/basics/DropdownMenu/dropdown-menu-item.component";
+import DropdownMenuItem from "@/components/basics/DropdownMenuItem";
 import AccordionLabel from "./";
 
 export default {
@@ -26,7 +26,7 @@ const DefaultArgs = {
   label: "+ 29,90",
   colorLabel: Tokens.ColorTextPrimary,
   children: (
-    <div className="py-md">
+    <div>
       <DropdownMenuItem leftIconName="trash">Remover Item</DropdownMenuItem>
     </div>
   ),

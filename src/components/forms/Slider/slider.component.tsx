@@ -10,6 +10,7 @@ const Slider = ({
   formatter = (value) => String(value),
   step = 0.05,
   style,
+  onSelect = (value: number) => value,
 }: SliderProps) => {
   const cn = classNames("slider", className);
   const [value, setValue] = useState(defaultValue || max / 2);
@@ -22,28 +23,30 @@ const Slider = ({
     handleGetPercentage(defaultValue || max / 2)
   );
 
-  const handleSetValue = (value: string | number) => {
-    const numberValue = Number(value);
+  const handleSetValue = (numberValue: number) => {
     setGradientPercentage(handleGetPercentage(numberValue));
     setValue(numberValue);
   };
 
   const onRangeChange = (event: ChangeEvent<HTMLInputElement>) => {
     const inputValue = event.target.value;
-    handleSetValue(inputValue);
+    const numberValue = Number(inputValue);
+    handleSetValue(numberValue);
   };
 
   const onRangeClick = (event: React.MouseEvent<HTMLInputElement>) => {
     const target = event.target as HTMLInputElement;
     const inputValue = target.value;
-    handleSetValue(inputValue);
+    const numberValue = Number(inputValue);
+    onSelect(numberValue);
+    handleSetValue(numberValue);
   };
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const computedStyle: any = { "--progress-percentage": `${gradientPercentage}%` };
 
   return (
-    <div className={cn} style={style}>
+    <label className={cn} style={style}>
       <input
         type="range"
         className="slider__input"
@@ -56,7 +59,7 @@ const Slider = ({
         style={computedStyle}
       />
       <span className="slider__value">{formatter(value)}</span>
-    </div>
+    </label>
   );
 };
 

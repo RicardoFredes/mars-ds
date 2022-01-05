@@ -1,6 +1,10 @@
 import { CardProps } from "@/components/basics/Card";
-import type { DropdownMenuItemProps } from "./dropdown-menu-item.types";
+import {
+  DropdownMenuItemKeySizes,
+  DropdownMenuItemProps,
+} from "@/components/basics/DropdownMenuItem";
 
-export interface DropdownMenuProps extends Omit<CardProps, "list"> {
+export interface DropdownMenuProps extends Omit<CardProps, "list" | "size"> {
   list: DropdownMenuItemProps[];
+  size?: DropdownMenuItemKeySizes;
 }

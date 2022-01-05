@@ -3,24 +3,22 @@ import { ButtonProps, ButtonSizes, ButtonVariants } from "./";
 
 import classNames from "classnames";
 import Icon from "@/components/basics/Icon";
-import Link from "@/components/basics/Link/link.component";
+import { ButtonTypes } from "./button.types";
 
 const Button = ({
-  as,
   children,
   className,
   iconName,
   label,
   onClick,
-  type = "button",
+  type = ButtonTypes.Button,
   variant = ButtonVariants.Primary,
   size = ButtonSizes.Medium,
   ...props
 }: ButtonProps) => {
   const [isPressed, setIsPressed] = useState(false);
 
-  const Component: React.ElementType | string = as || props.href ? Link : "button";
-  const handleClick = (event: MouseEvent<HTMLButtonElement | HTMLLinkElement>) => {
+  const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
     if (props.disabled) return;
     setIsPressed(true);
     setTimeout(() => setIsPressed(false), 250);
@@ -38,10 +36,10 @@ const Button = ({
   const text = label || children;
 
   return (
-    <Component className={cn} onClick={handleClick} type={type} {...props}>
+    <button className={cn} onClick={handleClick} type={type} {...props}>
       {iconName && <Icon className="btn__icon" name={iconName} size={size} />}
       {text && <span className="btn__content">{text}</span>}
-    </Component>
+    </button>
   );
 };
 

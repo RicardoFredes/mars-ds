@@ -1,0 +1,32 @@
+.dropdown-menu-item {
+  appearance: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  background-color: transparent;
+  text-align: left;
+
+  display: flex;
+  align-items: center;
+  color: $color-text-primary;
+  padding: $spacing-lg;
+  min-height: calc($spacing-lg * 2);
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    background-color: $color-neutral-ghost;
+  }
+
+  &__text {
+    flex-grow: 1;
+  }
+  &__icon {
+    &-right {
+      margin-left: $spacing-lg;
+    }
+    &-left {
+      margin-right: $spacing-lg;
+    }
+  }
+}

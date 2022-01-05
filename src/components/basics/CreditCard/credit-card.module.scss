@@ -1,8 +1,13 @@
 .credit-card {
   width: 100%;
-  height: 160px;
+  min-height: 160px;
+  -webkit-aspect-ratio: 1.75;
+  aspect-ratio: 1.75;
   border-radius: $border-radius-sm;
   color: $color-white;
+  @media (min-width: $breakpoint-sm) {
+    min-width: 280px;
+  }
 
   display: flex;
   flex-direction: column;
@@ -10,9 +15,7 @@
   justify-content: space-between;
   padding: $spacing-lg;
 
-  &--primary {
-    background-color: $color-primary-700;
-  }
+  background-color: $color-primary-700;
   &--secondary {
     background-color: $color-error-900;
   }
@@ -25,6 +28,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    min-height: 40px;
   }
   &__footer {
     opacity: 0.8;
@@ -39,9 +43,7 @@
 
 .theme-dark {
   .credit-card {
-    &--primary {
-      background-color: $color-primary-300;
-    }
+    background-color: $color-primary-300;
     &--secondary {
       background-color: $color-error-100;
     }

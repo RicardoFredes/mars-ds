@@ -12,34 +12,4 @@
       list-style: none;
     }
   }
-  &__item {
-    appearance: none;
-    border: none;
-    outline: none;
-    width: 100%;
-    background-color: transparent;
-    text-align: left;
-
-    display: flex;
-    align-items: center;
-    color: $color-text-primary;
-    padding: 16px;
-    min-height: 48px;
-    cursor: pointer;
-    &:focus,
-    &:hover {
-      background-color: $color-neutral-ghost;
-    }
-  }
-  &__text {
-    flex-grow: 1;
-  }
-  &__icon {
-    &-right {
-      margin-left: 16px;
-    }
-    &-left {
-      margin-right: 16px;
-    }
-  }
 }

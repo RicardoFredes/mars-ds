@@ -65,14 +65,7 @@ describe("<Button>", () => {
     setTimeout(() => expect(button.className).not.toBe(className), 251);
   });
 
-  it('should render component as "a" if component has href', () => {
-    const href = "any_href_value";
-    const button = makeSut({ href }).getByTestId(buttonDataTestId);
-    expect(button.getAttribute("href")).toBe(href);
-    expect(button.tagName).toBe("A");
-  });
-
-  it('should render component as "button" if component NOT has href', () => {
+  it('should render component as "button"', () => {
     const button = makeSut().getByTestId(buttonDataTestId);
     expect(button.tagName).toBe("BUTTON");
   });

@@ -5,10 +5,15 @@
     align-items: center;
     user-select: none;
     height: 40px;
-    cursor: pointer;
   }
   &__input {
-    display: none;
+    position: absolute;
+    left: calc($spacing-lg / 2 * -1);
+    width: calc(100% + $spacing-lg);
+    display: flex;
+    height: 100%;
+    cursor: pointer;
+    appearance: none;
   }
   &__label {
     display: inline-block;

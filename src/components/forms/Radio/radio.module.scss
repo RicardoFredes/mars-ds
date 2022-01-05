@@ -59,7 +59,13 @@
   }
 
   &__input {
-    display: none;
+    position: absolute;
+    left: calc($spacing-lg / 2 * -1);
+    width: calc(100% + $spacing-lg);
+    display: flex;
+    height: 100%;
+    cursor: pointer;
+    appearance: none;
   }
 
   &--is-disabled {

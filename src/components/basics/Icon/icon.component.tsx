@@ -23,7 +23,7 @@ const getSize = (size: string) => {
     case IconSizes.Large:
       return 32;
     case IconSizes.Small:
-      return 16;
+      return 18;
     case IconSizes.Medium:
     default:
       return 24;

@@ -3,7 +3,7 @@ import type { ComponentMeta, ComponentStory } from "@storybook/react";
 import Radio from "./";
 
 export default {
-  title: "Forms/RadioList/RadioItem",
+  title: "Forms/Radio",
   component: Radio,
   argTypes: {
     label: {

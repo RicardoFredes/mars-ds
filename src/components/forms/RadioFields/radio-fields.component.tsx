@@ -1,19 +1,21 @@
 import { useState } from "react";
 import classNames from "classnames";
-import Radio, { RadioListProps, RadioOption } from "./";
+import Radio, { RadioOption } from "@/components/forms/Radio";
+import { RadioFieldsProps } from "./";
 
 const emptyOption: RadioOption = { value: undefined, label: undefined };
 
-const RadioList = ({
+const RadioFields = ({
   name,
   options = [],
   defaultOption = emptyOption,
   className,
   onSelect,
+  disabled,
   ...props
-}: RadioListProps) => {
+}: RadioFieldsProps) => {
   const [checkedOption, setCheckedOption] = useState(defaultOption);
-  const cn = classNames("radioList", className);
+  const cn = classNames("radio-fields", className);
   const handleSelectOption = (option: RadioOption) => {
     setCheckedOption(option);
     onSelect?.(option);
@@ -28,9 +30,10 @@ const RadioList = ({
             {...option}
             key={key}
             name={name}
-            checked={isChecked}
+            defaultChecked={isChecked}
             className={classNames({ "radio--is-checked": isChecked })}
             onClick={() => handleSelectOption(option)}
+            disabled={disabled}
           />
         );
       })}
@@ -38,4 +41,4 @@ const RadioList = ({
   );
 };
 
-export default RadioList;
+export default RadioFields;

@@ -82,10 +82,11 @@ export * from "./components/forms/FormWithSubmitButton/form-with-submit-button.t
 export { default as PasswordField } from "./components/forms/PasswordField/password-field.component";
 export * from "./components/forms/PasswordField/password-field.types";
 
-export { default as RadioList } from "./components/forms/Radio/radio-list.component";
-
 export { default as Radio } from "./components/forms/Radio/radio.component";
 export * from "./components/forms/Radio/radio.types";
+
+export { default as RadioFields } from "./components/forms/RadioFields/radio-fields.component";
+export * from "./components/forms/RadioFields/radio-fields.types";
 
 export { default as SelectField } from "./components/forms/SelectField/select-field.component";
 export * from "./components/forms/SelectField/select-field.types";

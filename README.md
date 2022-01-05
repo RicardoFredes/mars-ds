@@ -202,10 +202,11 @@ $ yarn storybook
 Em outro terminal rode os testes ou, em caso de alteração visual em algum componente, faça a atualização das imagens de referência.
 
 ```bash
-# Rodando os testes
+# Roda os testes localmente e atualiza as imagens que mudaram
 $ yarn test:visual
 
-# Atualizando as imagens de referência
+# ATENÇÃO: Evite usar esse comando
+# Atualizando todas imagens de referência
 $ yarn test:visual:update
 ```
 

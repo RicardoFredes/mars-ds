@@ -1,14 +1,16 @@
 .checkbox {
+  $size: 40px;
+  padding-left: $spacing-sm;
   &__container {
     display: inline-flex;
     position: relative;
     align-items: center;
     user-select: none;
-    height: 40px;
+    height: $size;
   }
   &__input {
     position: absolute;
-    left: calc($spacing-lg / 2 * -1);
+    left: calc($spacing-sm * -1);
     width: calc(100% + $spacing-lg);
     display: flex;
     height: 100%;
@@ -17,17 +19,17 @@
   }
   &__label {
     display: inline-block;
-    margin: 0 0 0 8px;
+    margin: 0 0 0 $spacing-sm;
   }
   &__icon {
     color: $color-text-primary;
     &:before {
       content: "";
       display: block;
-      width: 40px;
-      height: 40px;
+      width: $size;
+      height: $size;
       position: absolute;
-      left: -8px;
+      left: calc($spacing-sm * -1);
       top: 0;
       background-color: $color-neutral-ghost;
       border-radius: 50%;

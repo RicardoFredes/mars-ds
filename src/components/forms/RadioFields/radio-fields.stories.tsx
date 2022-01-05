@@ -1,6 +1,6 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import RadioList from "./radio-list.component";
+import RadioFields from "./radio-fields.component";
 
 const OPTIONS = [
   { label: "1x sem Juros", value: 1 },
@@ -11,8 +11,8 @@ const OPTIONS = [
 ];
 
 export default {
-  title: "Forms/RadioList",
-  component: RadioList,
+  title: "Forms/RadioFields",
+  component: RadioFields,
   argTypes: {
     name: {
       control: { type: "text" },
@@ -21,17 +21,26 @@ export default {
       control: {},
     },
   },
-} as ComponentMeta<typeof RadioList>;
+} as ComponentMeta<typeof RadioFields>;
 
-const Template: ComponentStory<typeof RadioList> = (args) => <RadioList {...args} />;
+const Template: ComponentStory<typeof RadioFields> = (args) => <RadioFields {...args} />;
 
 const DefaultArgs = {
-  name: "radios",
+  name: "radio-fields",
   options: OPTIONS,
+  disabled: false,
 };
 
 export const Default = Template.bind({});
 Default.args = DefaultArgs;
 
 export const Checked = Template.bind({});
-Checked.args = { ...DefaultArgs, name: "radios-checked", defaultOption: OPTIONS[1] };
+Checked.args = { ...DefaultArgs, name: "radio-fields-checked", defaultOption: OPTIONS[1] };
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  ...DefaultArgs,
+  name: "radio-fields-disabled",
+  defaultOption: OPTIONS[1],
+  disabled: true,
+};

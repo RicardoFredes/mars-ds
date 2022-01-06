@@ -6,7 +6,8 @@ import Icon from "@/components/basics/Icon";
 import Tokens from "@/tokens";
 import { NotificationVariants } from ".";
 import Subtitle from "@/components/typographics/Subtitle";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import rcPortal from "rc-portal";
 
 const icons: Record<
   typeof NotificationVariants[keyof typeof NotificationVariants],
@@ -34,7 +35,8 @@ const Notification = ({
   className,
   children,
   variant = NotificationVariants.Default,
-  onClose,
+  durationInMs = 5000,
+  close,
   ...props
 }: NotificationProps) => {
   const [closing, setClosing] = useState(false);
@@ -44,19 +46,44 @@ const Notification = ({
 
   const handleClose = () => {
     setClosing(true);
-    onClose?.();
+    if (close) setTimeout(close, 300);
   };
+
+  useEffect(() => {
+    if (durationInMs > 0) {
+      setTimeout(handleClose, durationInMs);
+    }
+  }, []);
 
   return (
     <Card className={cn} {...props} elevation={CardElevations.XXHigh}>
       {icon && (
-        <Icon name={icon.name} className="notification__icon" style={{ color: icon.color }} />
+        <Icon
+          name={icon.name}
+          className="notification__icon"
+          style={{ color: icon.color, padding: Tokens.SpacingSm }}
+        />
       )}
       <Subtitle className="notification__title">{children}</Subtitle>
 
       <Icon onClick={handleClose} name="close" className="notification__close-icon" />
     </Card>
   );
+};
+
+let notificationParent: HTMLElement;
+const PARENT_NAME = "notification-list";
+
+const initializeNotification = () => {
+  notificationParent = document.createElement("div");
+  notificationParent.classList.add(PARENT_NAME);
+  notificationParent.id = PARENT_NAME;
+  document.body.append(notificationParent);
+};
+
+Notification.open = (props: NotificationProps) => {
+  if (!notificationParent) initializeNotification();
+  return rcPortal(Notification, props, notificationParent);
 };
 
 export default Notification;

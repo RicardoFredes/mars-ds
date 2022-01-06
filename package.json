@@ -119,5 +119,8 @@
     "classnames": "^2.3",
     "react": "^17.0",
     "react-dom": "^17.0"
+  },
+  "dependencies": {
+    "rc-portal": "^2.3.1"
   }
 }

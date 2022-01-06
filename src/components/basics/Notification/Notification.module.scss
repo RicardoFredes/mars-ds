@@ -1,13 +1,10 @@
 .notification {
   display: flex;
-  align-items: flex-start;
-  position: fixed;
-  z-index: $elevation-notification;
+  align-items: center;
   padding: $spacing-md;
   border-radius: $border-radius-sm;
-  width: 300px;
+  width: fit-content;
   animation: animation-open 0.3s ease-out forwards;
-  animation-delay: 0.3s;
 
   &__icon {
     margin-right: $spacing-lg;
@@ -69,4 +66,15 @@
       transform: translateX(0%);
     }
   }
+}
+
+.notification-list {
+  position: fixed;
+  padding: $spacing-lg;
+  top: 0;
+  right: 0;
+  z-index: $elevation-notification;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: $spacing-lg;
 }

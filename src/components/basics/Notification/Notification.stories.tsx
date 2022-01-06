@@ -1,5 +1,5 @@
+import Button from "@/components/basics/Button";
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import { CardElevations } from "@/components/basics/Card/card.types";
 import Notification from "./";
 import { NotificationVariants } from "./Notification.types";
 
@@ -44,4 +44,14 @@ export const Info = Template.bind({});
 Info.args = {
   ...DefaultArgs,
   variant: NotificationVariants.Info,
+};
+
+const ButtonTemplate: ComponentStory<typeof Notification> = (args) => (
+  <Button onClick={() => Notification.open(args)} label="Abrir Notificação" />
+);
+
+export const OpenNotification = ButtonTemplate.bind({});
+OpenNotification.args = {
+  ...DefaultArgs,
+  durationInMs: 5000,
 };

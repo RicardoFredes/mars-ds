@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.22](https://github.com/mesalva/mars/compare/v1.0.0-alpha.21...v1.0.0-alpha.22) (2022-01-06)
+
+
+### Features
+
+* credit-card ([#76](https://github.com/mesalva/mars/issues/76)) ([28dcee3](https://github.com/mesalva/mars/commit/28dcee300cf75703d82f795ca9788d2e6c796998))
+
 ## [1.0.0-alpha.21](https://github.com/mesalva/mars/compare/v1.0.0-alpha.20...v1.0.0-alpha.21) (2022-01-06)
 
 

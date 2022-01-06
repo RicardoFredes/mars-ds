@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import { SelectFieldOption, SelectFieldProps } from ".";
 import classNames from "classnames";
-import { ChangeEvent, MouseEvent, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import TextField from "@/components/forms/TextField";
 import DropdownMenu from "@/components/basics/DropdownMenu";
@@ -160,14 +160,19 @@ const SelectField = ({
     actions[event.key]?.();
   };
 
-  const handleClick = (event: MouseEvent<HTMLInputElement>) => {
+  const handleClick = (event: React.MouseEvent<HTMLInputElement>) => {
     open();
     onClick?.(event);
   };
 
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target;
     setQuery(value);
+  };
+
+  const handleInputKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (isOpen) return;
+    if (/ArrowDown|ArrowUp/.test(event.key)) open();
   };
 
   const handleSetOption = (option: SelectFieldOption) => {
@@ -207,7 +212,7 @@ const SelectField = ({
     { "select-field--has-filter": enableFilter },
   ]);
 
-  const handleClickToProtectArea = (event: MouseEvent<HTMLDivElement>) => {
+  const handleClickToProtectArea = (event: React.MouseEvent<HTMLDivElement>) => {
     event.stopPropagation();
     if (inputDisabled) open();
   };
@@ -220,6 +225,7 @@ const SelectField = ({
           className={classNames({ "field--is-focused": isOpen })}
           inputDisabled={inputDisabled}
           dataKey={key}
+          onKeyDown={handleInputKeyDown}
           onClick={handleClick}
           onChange={handleChange}
           rightIconButton={rightIconButton}

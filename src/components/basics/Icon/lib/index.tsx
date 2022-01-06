@@ -33,6 +33,7 @@ import minusSquare from "./minus-square";
 import mesalvaMini from "./me-salva-mini";
 import moreHorizontal from "./more-horizontal";
 import pix from "./pix";
+import plus from "./plus";
 import ppl from "./ppl";
 import print from "./print";
 import radioButtonOff from "./radio-button-off";
@@ -93,6 +94,7 @@ const icons: {
   "me-salva-mini": mesalvaMini,
   "more-horizontal": moreHorizontal,
   pix,
+  plus,
   ppl,
   print,
   "radio-button-off": radioButtonOff,

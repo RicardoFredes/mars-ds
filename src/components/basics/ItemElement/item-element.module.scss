@@ -1,0 +1,11 @@
+.item-element {
+  border: 1px solid $color-divider;
+  border-radius: $border-radius-sm;
+  padding: $spacing-xl;
+  &--variant {
+    &-inline {
+      word-break: break-all;
+      text-align: left;
+    }
+  }
+}

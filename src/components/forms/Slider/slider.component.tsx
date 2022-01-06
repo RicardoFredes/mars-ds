@@ -31,6 +31,7 @@ const Slider = ({
   const onRangeChange = (event: ChangeEvent<HTMLInputElement>) => {
     const inputValue = event.target.value;
     const numberValue = Number(inputValue);
+    onSelect(numberValue);
     handleSetValue(numberValue);
   };
 
@@ -38,7 +39,6 @@ const Slider = ({
     const target = event.target as HTMLInputElement;
     const inputValue = target.value;
     const numberValue = Number(inputValue);
-    onSelect(numberValue);
     handleSetValue(numberValue);
   };
 

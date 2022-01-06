@@ -46,6 +46,9 @@ export * from "./components/basics/Icon/icon.types";
 export { default as ItemButton } from "./components/basics/ItemButton/ItemButton.component";
 export * from "./components/basics/ItemButton/ItemButton.types";
 
+export { default as ItemElement } from "./components/basics/ItemElement/item-element.component";
+export * from "./components/basics/ItemElement/item-element.types";
+
 export { default as Label } from "./components/basics/Label/label.component";
 export * from "./components/basics/Label/label.types";
 

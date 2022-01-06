@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.21](https://github.com/mesalva/mars/compare/v1.0.0-alpha.20...v1.0.0-alpha.21) (2022-01-06)
+
+
+### Features
+
+* notifications-fix-rc-portal ([#96](https://github.com/mesalva/mars/issues/96)) ([97c2e25](https://github.com/mesalva/mars/commit/97c2e258726c2e792085336488ae38c92f0f410b))
+
 ## [1.0.0-alpha.20](https://github.com/mesalva/mars/compare/v1.0.0-alpha.19...v1.0.0-alpha.20) (2022-01-05)
 
 

@@ -12546,6 +12546,11 @@ raw-loader@^4.0.2:
     loader-utils "^2.0.0"
     schema-utils "^3.0.0"
 
+rc-portal@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/rc-portal/-/rc-portal-2.3.1.tgz#b40f78271f358ce0862c8017ffe7ee75bc72259e"
+  integrity sha512-tYvHZSOTUGb0f9qOkl3w52YxrdTgg86nvGFnejG7D7eKKURislsaH6LzkrVd29SqWCZjoN6oMqJ5peQ6ta7LWg==
+
 rc@^1.2.8:
   version "1.2.8"
   resolved "https://registry.yarnpkg.com/rc/-/rc-1.2.8.tgz#cd924bf5200a075b83c188cd6b9e211b7fc0d3ed"

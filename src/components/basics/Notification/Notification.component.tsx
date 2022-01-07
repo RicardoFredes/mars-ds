@@ -5,9 +5,10 @@ import { CardElevations } from "@/components/basics/Card/card.types";
 import Icon from "@/components/basics/Icon";
 import Tokens from "@/tokens";
 import { NotificationVariants } from ".";
-import Subtitle from "@/components/typographics/Subtitle";
+import Subtitle, { SubtitleSizes } from "@/components/typographics/Subtitle";
 import { useEffect, useState } from "react";
 import rcPortal from "rc-portal";
+import ToggleButton, { ToggleButtonVariants } from "../ToggleButton";
 
 const icons: Record<
   typeof NotificationVariants[keyof typeof NotificationVariants],
@@ -33,6 +34,7 @@ const icons: Record<
 
 const Notification = ({
   className,
+  content,
   children,
   variant = NotificationVariants.Default,
   durationInMs = 5000,
@@ -58,15 +60,17 @@ const Notification = ({
   return (
     <Card className={cn} {...props} elevation={CardElevations.XXHigh}>
       {icon && (
-        <Icon
-          name={icon.name}
-          className="notification__icon"
-          style={{ color: icon.color, padding: Tokens.SpacingSm }}
-        />
+        <Icon name={icon.name} style={{ color: icon.color }} className="notification__icon" />
       )}
-      <Subtitle className="notification__title">{children}</Subtitle>
-
-      <Icon onClick={handleClose} name="close" className="notification__close-icon" />
+      <Subtitle className="notification__content" size={SubtitleSizes.Small}>
+        {content || children}
+      </Subtitle>
+      <ToggleButton
+        iconName="close"
+        className="notification__close-button"
+        onClick={handleClose}
+        variant={ToggleButtonVariants.Text}
+      />
     </Card>
   );
 };

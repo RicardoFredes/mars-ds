@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import Icon from "@/components/basics/Icon";
-import Subtitle, { SubtitlesSizes } from "@/components/typographics/Subtitle";
+import Subtitle, { SubtitleSizes } from "@/components/typographics/Subtitle";
 import { StepperProps } from ".";
 
 const Stepper = ({ steps, position = 0, className, ...props }: StepperProps) => {
@@ -13,7 +13,7 @@ const Stepper = ({ steps, position = 0, className, ...props }: StepperProps) => 
         const isDone = stepPosition < position;
         return (
           <Subtitle
-            size={SubtitlesSizes.Small}
+            size={SubtitleSizes.Small}
             as="div"
             key={stepPosition}
             className={classNames("stepper__item", {

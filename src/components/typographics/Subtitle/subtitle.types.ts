@@ -3,11 +3,11 @@ import { Sizes } from "@/types";
 
 const { Small, Medium } = Sizes;
 
-export const SubtitlesSizes = {
+export const SubtitleSizes = {
   Medium,
   Small,
 } as const;
 
 export interface SubtitleProps extends Omit<HeadingProps, "size"> {
-  size?: typeof SubtitlesSizes[keyof typeof SubtitlesSizes];
+  size?: typeof SubtitleSizes[keyof typeof SubtitleSizes];
 }

@@ -1,5 +1,5 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import Subtitle, { SubtitlesSizes } from ".";
+import Subtitle, { SubtitleSizes } from ".";
 
 export default {
   title: "Typographics/Subtitle",
@@ -12,7 +12,7 @@ export default {
       },
     },
     size: {
-      options: SubtitlesSizes,
+      options: SubtitleSizes,
       control: {
         type: "select",
       },
@@ -25,7 +25,7 @@ const Template: ComponentStory<typeof Subtitle> = (args) => <Subtitle {...args} 
 const DefaultArgs = {
   level: 1,
   children: "Subtitle",
-  size: SubtitlesSizes.Medium,
+  size: SubtitleSizes.Medium,
 };
 
 export const Default = Template.bind({});
@@ -34,5 +34,5 @@ Default.args = DefaultArgs;
 export const Small = Template.bind({});
 Small.args = {
   ...DefaultArgs,
-  size: SubtitlesSizes.Small,
+  size: SubtitleSizes.Small,
 };

@@ -61,6 +61,9 @@ export * from "./components/basics/Loader/loader.types";
 export { default as Logo } from "./components/basics/Logo/logo.component";
 export * from "./components/basics/Logo/logo.types";
 
+export { default as Modal } from "./components/basics/Modal/modal.component";
+export * from "./components/basics/Modal/modal.types";
+
 export { default as Notification } from "./components/basics/Notification/Notification.component";
 export * from "./components/basics/Notification/Notification.types";
 

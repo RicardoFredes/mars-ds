@@ -1,0 +1,102 @@
+$animation-default-configuration: 0.3s ease-out forwards;
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $color-background-overlay;
+  width: 100vw;
+  height: 100vh;
+  z-index: $elevation-modal;
+  animation: animation-fade-in $animation-default-configuration;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  &--is-closing {
+    animation: animation-fade-out $animation-default-configuration;
+  }
+
+  @media (min-width: $breakpoint-sm) {
+    align-items: center;
+  }
+}
+
+.modal {
+  position: relative;
+
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  animation: animation-modal-open-mobile $animation-default-configuration;
+
+  &--is-closing {
+    animation: animation-modal-closing-mobile $animation-default-configuration;
+  }
+
+  &__close-icon {
+    position: absolute;
+    top: $spacing-lg;
+    right: $spacing-lg;
+    border: none;
+  }
+
+  @media (min-width: $breakpoint-sm) {
+    animation: animation-modal-open $animation-default-configuration;
+    border-radius: $border-radius-lg;
+    &--is-closing {
+      animation: animation-modal-closing $animation-default-configuration;
+    }
+    &--size {
+      &-lg {
+        max-width: 720px;
+      }
+
+      &-md {
+        max-width: 580px;
+      }
+
+      &-sm {
+        max-width: 420px;
+      }
+    }
+  }
+}
+
+@keyframes animation-modal-open-mobile {
+  from {
+    opacity: 0.5;
+    transform: translateY(120%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes animation-modal-closing-mobile {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.5;
+    transform: translateY(120%);
+  }
+}
+@keyframes animation-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animation-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

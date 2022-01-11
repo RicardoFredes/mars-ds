@@ -1,12 +1,8 @@
-import { IconProps } from "@/components/basics/Icon";
 import React from "react";
+import { ListItemProps } from "@/components/typographics/ListItem";
 
 export interface ListProps extends Omit<React.HTMLProps<HTMLUListElement>, "list"> {
   list?: ListItemProps[];
-  defaultBullet?: Partial<IconProps>;
-}
-
-export interface ListItemProps extends React.HTMLProps<HTMLLIElement> {
-  bullet?: Partial<IconProps>;
-  text?: string;
+  defaultBulletIconName?: string;
+  defaultBulletColor?: string;
 }

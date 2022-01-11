@@ -2,13 +2,13 @@ import classNames from "classnames";
 import { CaptionProps } from ".";
 
 const Caption = ({ as, children, className, ...props }: CaptionProps) => {
-  const SubtitleTag: React.ElementType | string = as || "caption";
+  const CaptionTag: React.ElementType | string = as || "span";
   const cn = classNames("caption", className);
 
   return (
-    <SubtitleTag className={cn} {...props}>
+    <CaptionTag className={cn} {...props}>
       {children}
-    </SubtitleTag>
+    </CaptionTag>
   );
 };
 

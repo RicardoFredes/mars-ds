@@ -18,4 +18,5 @@ export const IconSizes = {
 export interface IconProps extends Omit<HTMLProps<HTMLSpanElement>, "size"> {
   size?: typeof IconSizes[keyof typeof IconSizes];
   name: string;
+  color?: string;
 }

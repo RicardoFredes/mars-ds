@@ -1,5 +1,8 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import List, { ListItemProps } from ".";
+import { ListItemProps } from "@/components/typographics/ListItem";
+import List from ".";
+import Tokens from "@/tokens";
+import icons from "@/components/basics/Icon/lib";
 
 const mockedData = [
   ["4 correções de redação padrão ao mês", true],
@@ -16,14 +19,22 @@ const mockedData = [
 export default {
   title: "Typographics/List",
   component: List,
-  argTypes: {},
+  argTypes: {
+    defaultBulletIconName: {
+      options: Object.keys(icons),
+      control: { type: "select" },
+    },
+    defaultBulletColor: {
+      control: { type: "color" },
+    },
+  },
 } as ComponentMeta<typeof List>;
 
 const Template: ComponentStory<typeof List> = (args) => <List {...args} />;
 
 const DefaultArgs = {
   list: mockedData.map(([text]) => ({ text })) as ListItemProps[],
-  defaultBullet: { name: "checkmark" },
+  defaultBulletIconName: "checkmark",
 };
 
 export const Default = Template.bind({});
@@ -37,17 +48,10 @@ Naked.args = {
 export const CustomBullets = Template.bind({});
 CustomBullets.args = {
   ...DefaultArgs,
-  defaultBullet: {
-    name: "checkmark",
-    style: { color: "#229A16" },
-  },
+  defaultBulletColor: Tokens.ColorSuccess500,
   list: mockedData.map(([text, isIncluded]) => ({
     text,
-    bullet: isIncluded
-      ? null
-      : {
-          name: "close",
-          style: { color: "#F94062" },
-        },
+    bulletIconName: isIncluded ? undefined : "close",
+    bulletColor: isIncluded ? undefined : Tokens.ColorError500,
   })) as ListItemProps[],
 };

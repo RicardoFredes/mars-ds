@@ -2,7 +2,7 @@ import classNames from "classnames";
 import { IconProps, IconSizes } from "./";
 import icons from "./lib";
 
-const Icon = ({ name, size = IconSizes.Medium, className, ...props }: IconProps) => {
+const Icon = ({ name, size = IconSizes.Medium, className, color, style, ...props }: IconProps) => {
   const Component = icons[name];
   if (!Component) return null;
 
@@ -10,7 +10,7 @@ const Icon = ({ name, size = IconSizes.Medium, className, ...props }: IconProps)
   const cn = classNames("icon", className);
 
   return (
-    <span {...props} className={cn}>
+    <span {...props} className={cn} style={{ color, ...style }}>
       <Component height={sizeValue} width={sizeValue} />
     </span>
   );

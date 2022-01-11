@@ -132,6 +132,9 @@ export { default as ListItem } from "./components/typographics/List/list-item.co
 export { default as List } from "./components/typographics/List/list.component";
 export * from "./components/typographics/List/list.types";
 
+export { default as ListItem } from "./components/typographics/ListItem/list-item.component";
+export * from "./components/typographics/ListItem/list-item.types";
+
 export { default as Subtitle } from "./components/typographics/Subtitle/subtitle.component";
 export * from "./components/typographics/Subtitle/subtitle.types";
 

@@ -3,7 +3,7 @@ import classNames from "classnames";
 import Accordion from "@/components/basics/Accordion";
 import Text, { TextSizes } from "@/components/typographics/Text";
 import Icon from "@/components/basics/Icon";
-import Subtitle, { SubtitlesSizes } from "@/components/typographics/Subtitle";
+import Subtitle, { SubtitleSizes } from "@/components/typographics/Subtitle";
 
 const AccordionLabel = ({
   className,
@@ -31,7 +31,7 @@ const HeaderLabel = ({ title, label, colorLabel }: AccordionLabelHeaderProps) =>
     )}
     <Icon className="accordion__header-container__icon-toggle" name="chevron-down" />
     <Subtitle
-      size={SubtitlesSizes.Small}
+      size={SubtitleSizes.Small}
       style={{ color: colorLabel }}
       className="accordion-label__subtitle"
     >

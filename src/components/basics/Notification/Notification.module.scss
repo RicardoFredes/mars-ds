@@ -1,46 +1,26 @@
 .notification {
   display: flex;
   align-items: center;
-  padding: $spacing-md;
+  padding: $spacing-lg;
+  padding-right: 64px;
   border-radius: $border-radius-sm;
   width: fit-content;
   animation: animation-open 0.3s ease-out forwards;
 
   &__icon {
-    margin-right: $spacing-lg;
+    margin-right: $spacing-md;
   }
 
-  &__title {
+  &__content {
     text-overflow: ellipsis;
-    flex-wrap: wrap;
     overflow: hidden;
-    margin-right: $spacing-lg;
   }
 
-  &__close-icon {
-    position: relative;
-    margin-left: auto;
-    cursor: pointer;
-
-    &:before {
-      content: "";
-      display: block;
-      width: 40px;
-      height: 40px;
-      position: absolute;
-      left: -8px;
-      top: -8px;
-      background-color: $color-neutral-ghost;
-      border-radius: 50%;
-      transition: transform ease 0.2s;
-      transform: scale(0);
-    }
-
-    &:hover {
-      &::before {
-        transform: scale(1);
-      }
-    }
+  &__close-button {
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   &-is--closing {

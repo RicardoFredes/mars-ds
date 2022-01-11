@@ -88,6 +88,9 @@ export * from "./components/forms/FormWithSubmitButton/form-with-submit-button.t
 export { default as PasswordField } from "./components/forms/PasswordField/password-field.component";
 export * from "./components/forms/PasswordField/password-field.types";
 
+export { default as PasswordStrongField } from "./components/forms/PasswordStrongField/password-strong-field.component";
+export * from "./components/forms/PasswordStrongField/password-strong-field.types";
+
 export { default as Radio } from "./components/forms/Radio/radio.component";
 export * from "./components/forms/Radio/radio.types";
 

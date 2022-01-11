@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.26](https://github.com/mesalva/mars/compare/v1.0.0-alpha.25...v1.0.0-alpha.26) (2022-01-11)
+
+
+### Features
+
+* password-strong ([#103](https://github.com/mesalva/mars/issues/103)) ([5da2c79](https://github.com/mesalva/mars/commit/5da2c798b10a5ac787eb8c6a0ea97c5406505d6d))
+
+## [1.0.0-alpha.25](https://github.com/mesalva/mars/compare/v1.0.0-alpha.24...v1.0.0-alpha.25) (2022-01-07)
+
+
+### Bug Fixes
+
+* notifications ([#101](https://github.com/mesalva/mars/issues/101)) ([111c63f](https://github.com/mesalva/mars/commit/111c63fc76611b8bc6580281aa1049807c77f2aa))
+
 ## [1.0.0-alpha.24](https://github.com/mesalva/mars/compare/v1.0.0-alpha.23...v1.0.0-alpha.24) (2022-01-07)
 
 

@@ -1,12 +1,12 @@
 import classNames from "classnames";
-import { SubtitlesSizes, SubtitleProps } from ".";
+import { SubtitleSizes, SubtitleProps } from ".";
 
 const Subtitle = ({
   as,
   children,
   className,
   level = 3,
-  size = SubtitlesSizes.Medium,
+  size = SubtitleSizes.Medium,
   ...props
 }: SubtitleProps) => {
   const SubtitleTag = as || `h${level}`;

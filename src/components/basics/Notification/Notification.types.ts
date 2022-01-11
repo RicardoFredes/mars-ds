@@ -1,8 +1,11 @@
 import { CardProps } from "@/components/basics/Card/card.types";
-export interface NotificationProps extends CardProps {
-  variant: typeof NotificationVariants[keyof typeof NotificationVariants];
+import { ReactNode } from "react";
+
+export interface NotificationProps extends Omit<CardProps, "variant" | "content"> {
+  variant?: typeof NotificationVariants[keyof typeof NotificationVariants];
   close?: () => boolean;
   durationInMs?: number;
+  content?: string | ReactNode;
 }
 
 export const NotificationVariants = {

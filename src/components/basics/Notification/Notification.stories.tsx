@@ -18,7 +18,8 @@ const Template: ComponentStory<typeof Notification> = (args) => <Notification {.
 
 const DefaultArgs = {
   variant: NotificationVariants.Default,
-  children: "Mensagem de aviso.",
+  content: "Mensagem de aviso.",
+  durationInMs: 0,
 };
 
 export const Default = Template.bind({});

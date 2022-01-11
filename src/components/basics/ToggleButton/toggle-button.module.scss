@@ -3,4 +3,9 @@
   .btn__icon {
     margin-right: 0;
   }
+  &--variant {
+    &-text {
+      border: none;
+    }
+  }
 }

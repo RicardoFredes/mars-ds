@@ -127,8 +127,6 @@ export * from "./components/typographics/Heading/heading.types";
 export { default as ItemText } from "./components/typographics/ItemText/ItemText.component";
 export * from "./components/typographics/ItemText/ItemText.types";
 
-export { default as ListItem } from "./components/typographics/List/list-item.component";
-
 export { default as List } from "./components/typographics/List/list.component";
 export * from "./components/typographics/List/list.types";
 

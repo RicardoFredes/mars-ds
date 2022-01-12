@@ -1,13 +1,14 @@
 .select-field {
-  $mobile: 959px;
-  $above-mobile: 960px;
+  $below: calc($breakpoint-sm - 1px);
+  $above: $breakpoint-sm;
+  $filter-height: 72px;
 
   position: relative;
   &__options {
     display: none;
     &-fallback {
       text-align: center;
-      padding: 16px;
+      padding: $spacing-lg;
     }
     &-item {
       &--is-selected {
@@ -17,28 +18,31 @@
         }
       }
     }
-    @media (max-width: $mobile) {
+    @media (max-width: $below) {
       position: fixed;
-      padding: 8px;
+      padding: $spacing-sm;
       z-index: 101;
-      top: 8px;
-      left: 8px;
+      top: $spacing-sm;
+      left: $spacing-sm;
       &.dropdown-menu.card {
-        width: calc(100vw - 16px);
-        height: calc(100vh - 16px);
+        width: calc(100vw - $spacing-lg);
+        height: calc(100vh - $spacing-lg);
         max-height: 100vh;
       }
     }
-    @media (min-width: $above-mobile) {
+    @media (min-width: $above) {
       position: absolute;
       width: 100%;
       top: 64px;
+      &.dropdown-menu.card {
+        max-height: 150px;
+      }
     }
   }
   &--is-dropdown-above {
     .select-field__options {
-      @media (min-width: $above-mobile) {
-        top: inherit;
+      @media (min-width: $above) {
+        top: unset;
         bottom: 64px;
       }
     }
@@ -52,7 +56,7 @@
         transform: scale(-1);
       }
     }
-    @media (max-width: $mobile) {
+    @media (max-width: $below) {
       &:before {
         content: "";
         display: block;
@@ -66,18 +70,16 @@
       }
     }
     &.select-field--has-filter {
-      @media (max-width: $mobile) {
+      @media (max-width: $below) {
         .select-field__options {
-          top: calc(72px + 8px);
-          .dropdown-menu.card {
-            height: calc(100vh - 16px - 72px);
-          }
+          top: calc($filter-height + $spacing-sm);
+          height: calc(100vh - $spacing-lg - $filter-height);
         }
         .field__content {
           position: fixed;
-          height: 72px;
+          height: $filter-height;
           width: 100vw;
-          padding: 0 16px;
+          padding: 0 $spacing-lg;
           z-index: 102;
           top: 0;
           left: 0;

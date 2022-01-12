@@ -1,4 +1,4 @@
-import { FocusEvent, FormEvent, MouseEvent, useRef } from "react";
+import { ChangeEvent, FocusEvent, MouseEvent, useRef } from "react";
 import { IconProps } from "@/components/basics/Icon";
 import { IconPosition, TextFieldProps } from "./";
 
@@ -39,10 +39,13 @@ const TextField = ({
 
   const setValue = useCallback(
     (newValue) => {
-      const str = String(newValue);
-      if (!mask) return setComputedValue(str);
-      const maskedValue = masker(str, mask);
-      setComputedValue(maskedValue);
+      return new Promise((resolve) => {
+        const str = String(newValue);
+        if (!mask) return setComputedValue(str);
+        const maskedValue = masker(str, mask);
+        setComputedValue(maskedValue);
+        resolve(maskedValue);
+      });
     },
     [mask]
   );
@@ -74,9 +77,9 @@ const TextField = ({
     onBlur?.(event);
   };
 
-  const handleChange = (event: FormEvent<HTMLInputElement>) => {
+  const handleChange = async (event: ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target as HTMLInputElement;
-    setValue(value);
+    await setValue(value);
     onChange?.(event);
   };
 

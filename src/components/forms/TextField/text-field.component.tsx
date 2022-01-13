@@ -38,13 +38,12 @@ const TextField = ({
   const inputRef = useRef<HTMLInputElement>(null);
 
   const setValue = useCallback(
-    (newValue) => {
+    (value) => {
       return new Promise((resolve) => {
-        const str = String(newValue);
-        if (!mask) return setComputedValue(str);
-        const maskedValue = masker(str, mask);
-        setComputedValue(maskedValue);
-        resolve(maskedValue);
+        const str = String(value);
+        const newValue = !mask ? str : masker(str, mask);
+        setComputedValue(newValue);
+        resolve(newValue);
       });
     },
     [mask]

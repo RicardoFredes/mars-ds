@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.31](https://github.com/mesalva/mars/compare/v1.0.0-alpha.30...v1.0.0-alpha.31) (2022-01-13)
+
+
+### Features
+
+* fix memory leak warn ([bf8f984](https://github.com/mesalva/mars/commit/bf8f9845923de4a71c643a6b9951ab0e95a18081))
+* fix memory leak warn ([76aafc4](https://github.com/mesalva/mars/commit/76aafc44b1156429e303a9b8c87acc1732423085))
+
 ## [1.0.0-alpha.30](https://github.com/mesalva/mars/compare/v1.0.0-alpha.29...v1.0.0-alpha.30) (2022-01-13)
 
 

@@ -56,7 +56,6 @@ const DefaultArgs = {
       </Text>
     </>
   ),
-  size: ModalSizes.Medium,
 };
 
 export const Default = Template.bind({});

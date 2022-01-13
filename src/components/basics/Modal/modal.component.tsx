@@ -41,7 +41,7 @@ const Modal = ({ className, close, children, size = ModalSizes.Medium, ...props 
 
 export default Modal;
 
-Modal.open = (ChildComponent: any, childComponentProps?: any) => {
+Modal.open = (ChildComponent: any, childComponentProps: any = {}) => {
   const Component = ({ close }: any) => (
     <Modal close={close} size={childComponentProps.size}>
       <ChildComponent close={close} {...childComponentProps} />

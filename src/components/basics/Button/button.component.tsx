@@ -21,8 +21,10 @@ const Button = ({
   const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
     if (props.disabled) return;
     setIsPressed(true);
-    setTimeout(() => setIsPressed(false), 250);
-    onClick?.(event);
+    setTimeout(() => {
+      setIsPressed(false);
+      onClick?.(event);
+    }, 250);
   };
 
   const cn = classNames(

@@ -21,10 +21,7 @@ const Button = ({
   const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
     if (props.disabled) return;
     setIsPressed(true);
-    setTimeout(() => {
-      setIsPressed(false);
-      onClick?.(event);
-    }, 250);
+    onClick?.(event);
   };
 
   const cn = classNames(
@@ -38,7 +35,13 @@ const Button = ({
   const text = label || children;
 
   return (
-    <button className={cn} onClick={handleClick} type={type} {...props}>
+    <button
+      className={cn}
+      onClick={handleClick}
+      type={type}
+      onAnimationEnd={() => setIsPressed(false)}
+      {...props}
+    >
       {iconName && <Icon className="btn__icon" name={iconName} size={size} />}
       {text && <span className="btn__content">{text}</span>}
     </button>

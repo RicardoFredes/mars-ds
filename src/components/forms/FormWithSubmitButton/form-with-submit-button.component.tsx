@@ -9,6 +9,7 @@ const FormWithSubmitButton = ({
   onSubmit,
   disabled,
   submitButtonLabel,
+  submitButtonId,
   submitting,
   ...props
 }: FormWithSubmitButtonProps) => {
@@ -21,6 +22,7 @@ const FormWithSubmitButton = ({
     <form className={cn} onSubmit={handleSubmit} {...props}>
       <div className="form-with-submit-button__container">{children}</div>
       <SubmitButton
+        id={submitButtonId}
         className="form-with-submit-button__submit-button"
         disabled={disabled}
         submitting={submitting}

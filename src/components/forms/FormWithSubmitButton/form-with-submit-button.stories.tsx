@@ -15,6 +15,7 @@ const Template: ComponentStory<typeof FormWithSubmitButton> = (args) => (
 const DefaultArgs = {
   disabled: false,
   submitButtonLabel: "Enviar",
+  submitButtonId: "botao-de-enviar",
   submitting: false,
   onSubmit: () => {
     alert("Dados enviados! ...Mentira");

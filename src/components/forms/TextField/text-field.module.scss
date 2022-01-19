@@ -29,15 +29,15 @@
   &__icon {
     padding: $spacing-xs;
     &--has-action {
-      cursor: pointer;
       position: relative;
+      cursor: pointer;
       &:before {
         content: "";
+        position: absolute;
         display: block;
         height: 32px;
         width: 32px;
         border-radius: 50%;
-        position: absolute;
         background-color: $color-neutral-ghost;
         left: 0;
         transform: scale(0);

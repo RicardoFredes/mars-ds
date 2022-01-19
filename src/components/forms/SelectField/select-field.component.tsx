@@ -1,6 +1,6 @@
 import { SelectFieldOption, SelectFieldProps } from ".";
 import classNames from "classnames";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 
 import TextField from "@/components/forms/TextField";
 import DropdownMenu from "@/components/basics/DropdownMenu";
@@ -194,14 +194,25 @@ const SelectField = ({
     })
     .filter(({ label }) => label && mathQuery(query, label));
 
+  const handleRightButtonClick = () => {
+    if (isOpen) return close();
+    getInputElement()?.focus();
+    open();
+  };
+
+  const rightIconButtonProps = useMemo(() => {
+    if (enableFilter) return undefined;
+    return {
+      tabIndex: 0,
+      onKeyDown: handleRightButtonClick,
+    };
+  }, [enableFilter]);
+
   const rightIconButton = {
     name: "chevron-down",
     className: "select-field__toggle-icon",
-    onClick: () => {
-      if (isOpen) return close();
-      getInputElement()?.focus();
-      open();
-    },
+    onClick: handleRightButtonClick,
+    ...rightIconButtonProps,
   };
 
   const cn = classNames("select-field", className, [

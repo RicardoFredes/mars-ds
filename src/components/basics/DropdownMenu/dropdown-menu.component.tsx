@@ -7,9 +7,9 @@ const DropdownMenu = ({ className, list = [], children, size, ...props }: Dropdo
   const cn = classNames("dropdown-menu", className);
   return (
     <Card className={cn} elevation={CardElevations.Medium} {...props}>
-      <ul>
+      <ul className="dropdown-menu__list">
         {list.map(({ label, children, ...itemProps }, key) => (
-          <li key={key}>
+          <li key={key} className="dropdown-menu__list-item">
             <DropdownMenuItem size={size} {...itemProps} tabIndex={0}>
               {label || children}
             </DropdownMenuItem>

@@ -1,10 +1,11 @@
 import { IconProps } from "@/components/basics/Icon";
+import { ReactNode } from "react";
 
 export interface TextFieldProps extends React.HTMLProps<HTMLInputElement> {
   label: string;
   error?: string | boolean;
   success?: boolean;
-  info?: string;
+  info?: string | ReactNode;
   mask?: string | string[];
   rightIconButton?: IconProps;
   leftIconButton?: IconProps;

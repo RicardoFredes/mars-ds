@@ -10,3 +10,13 @@ export interface ModalProps extends Omit<CardProps, "size"> {
   close?: Close;
   size?: typeof ModalSizes[keyof typeof ModalSizes];
 }
+
+export interface ModalChildProps {
+  close?: Close;
+}
+
+export interface ModalOpenProps {
+  size?: typeof ModalSizes[keyof typeof ModalSizes];
+  closeDelay?: number;
+  duration?: number;
+}

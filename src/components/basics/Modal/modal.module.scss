@@ -10,9 +10,6 @@ $animation-default-configuration: 0.3s ease-out forwards;
   z-index: $elevation-modal;
   animation: animation-fade-in $animation-default-configuration;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
 
   &--is-closing {
     animation: animation-fade-out $animation-default-configuration;
@@ -24,10 +21,12 @@ $animation-default-configuration: 0.3s ease-out forwards;
 }
 
 .modal {
-  position: relative;
-
+  position: fixed;
+  bottom: 0;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
+  width: 100%;
+
   animation: animation-modal-open-mobile $animation-default-configuration;
 
   &--is-closing {
@@ -44,6 +43,11 @@ $animation-default-configuration: 0.3s ease-out forwards;
   @media (min-width: $breakpoint-sm) {
     animation: animation-modal-open $animation-default-configuration;
     border-radius: $border-radius-lg;
+    bottom: unset;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
     &--is-closing {
       animation: animation-modal-closing $animation-default-configuration;
     }
@@ -83,6 +87,7 @@ $animation-default-configuration: 0.3s ease-out forwards;
     transform: translateY(120%);
   }
 }
+
 @keyframes animation-fade-in {
   from {
     opacity: 0;
@@ -98,5 +103,27 @@ $animation-default-configuration: 0.3s ease-out forwards;
   }
   to {
     opacity: 0;
+  }
+}
+
+@keyframes animation-modal-open {
+  from {
+    opacity: 0.5;
+    transform: translate(-50%, -30%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes animation-modal-closing {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  to {
+    opacity: 0.5;
+    transform: translate(-50%, -30%);
   }
 }

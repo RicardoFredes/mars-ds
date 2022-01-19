@@ -1,28 +1,17 @@
 .notification {
   display: flex;
   align-items: center;
-  padding: $spacing-lg;
-  padding-right: 64px;
+  padding: 0 0 0 $spacing-lg;
   border-radius: $border-radius-sm;
   width: fit-content;
+  max-width: 320px;
   animation: animation-open 0.3s ease-out forwards;
-
-  &__icon {
-    margin-right: $spacing-md;
-  }
-
-  &__content {
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-
   &__close-button {
-    position: absolute;
-    right: 4px;
-    top: 50%;
-    transform: translateY(-50%);
+    margin: $spacing-xs;
   }
-
+  &__content {
+    padding: $spacing-md 0 $spacing-md $spacing-md;
+  }
   &-is--closing {
     animation: animation-closing 0.3s ease-out forwards;
   }
@@ -56,5 +45,6 @@
   z-index: $elevation-notification;
   display: flex;
   flex-direction: column-reverse;
+  align-items: flex-end;
   gap: $spacing-lg;
 }

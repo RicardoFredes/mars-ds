@@ -1,17 +1,17 @@
 import {
   isStrongPassword,
   validateCapitalLetters,
-  validateMin10Length,
+  validateMinCharacteres,
   validateSpecialCharacters,
 } from "./validate";
 
 describe("validate", () => {
-  describe("validateMin10Length", () => {
-    it("should return true for more than 9 characters passed", () => {
-      expect(validateMin10Length("1234567890")).toBe(true);
-      expect(validateMin10Length("MarllonDomingos")).toBe(true);
-      expect(validateMin10Length("Marllon")).toBe(false);
-      expect(validateMin10Length("asdf")).toBe(false);
+  describe("validateMinCharacteres", () => {
+    it("should return true for more than 8 characters passed", () => {
+      expect(validateMinCharacteres("1234567890")).toBe(true);
+      expect(validateMinCharacteres("MarllonDomingos")).toBe(true);
+      expect(validateMinCharacteres("Marllon")).toBe(false);
+      expect(validateMinCharacteres("asdf")).toBe(false);
     });
   });
 
@@ -38,7 +38,7 @@ describe("validate", () => {
     });
   });
 
-  describe("pass validadeCapitalLetters & validadeSpecialCharacters & validateMin10Length", () => {
+  describe("pass validadeCapitalLetters & validadeSpecialCharacters & validateMinCharacteres", () => {
     it("should return true if pass on all validate tests", () => {
       expect(isStrongPassword("Marllon.Campos1")).toBe(false);
       expect(isStrongPassword("M@rllon.Campos1")).toBe(true);

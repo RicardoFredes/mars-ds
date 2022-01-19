@@ -24,18 +24,18 @@
       z-index: 101;
       top: $spacing-sm;
       left: $spacing-sm;
-      &.dropdown-menu.card {
-        width: calc(100vw - $spacing-lg);
-        height: calc(100vh - $spacing-lg);
-        max-height: 100vh;
+      right: $spacing-sm;
+      bottom: $spacing-sm;
+      .dropdown-menu__list {
+        max-height: 100%;
       }
     }
     @media (min-width: $above) {
       position: absolute;
       width: 100%;
       top: 64px;
-      &.dropdown-menu.card {
-        max-height: 150px;
+      .dropdown-menu__list {
+        max-height: 220px;
       }
     }
   }
@@ -73,7 +73,6 @@
       @media (max-width: $below) {
         .select-field__options {
           top: calc($filter-height + $spacing-sm);
-          height: calc(100vh - $spacing-lg - $filter-height);
         }
         .field__content {
           position: fixed;
@@ -87,6 +86,12 @@
           box-shadow: $shadow-elevation-500;
         }
       }
+    }
+  }
+
+  .select-field__toggle-icon {
+    &:before {
+      left: -4px;
     }
   }
 }

@@ -1,4 +1,5 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
+import { action } from "@storybook/addon-actions";
 import PasswordStrongField from ".";
 
 export default {
@@ -11,8 +12,13 @@ export default {
   },
 } as ComponentMeta<typeof PasswordStrongField>;
 
+const onValidAction = (isValid: boolean) => {
+  const handle = action("onValid", { clearOnStoryChange: true });
+  return handle({ isValid });
+};
+
 const Template: ComponentStory<typeof PasswordStrongField> = (args) => (
-  <PasswordStrongField {...args} style={{ maxWidth: 320, margin: "0 auto" }} />
+  <PasswordStrongField {...args} onValid={onValidAction} />
 );
 
 const DefaultArgs = {
@@ -25,23 +31,23 @@ Default.args = DefaultArgs;
 export const MinCaracterPassed = Template.bind({});
 MinCaracterPassed.args = {
   ...DefaultArgs,
-  value: "12345678901",
+  defaultValue: "12345678901",
 };
 
 export const CapitalLettersPassed = Template.bind({});
 CapitalLettersPassed.args = {
   ...DefaultArgs,
-  value: "Maíusculas",
+  defaultValue: "Maíusculas",
 };
 
 export const SpecialCaracterPassed = Template.bind({});
 SpecialCaracterPassed.args = {
   ...DefaultArgs,
-  value: "c@r@cter",
+  defaultValue: "c@r@cter",
 };
 
 export const AllPassed = Template.bind({});
 AllPassed.args = {
   ...DefaultArgs,
-  value: "TodosPassar@m",
+  defaultValue: "TodosPassar@m",
 };

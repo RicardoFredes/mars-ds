@@ -13,6 +13,7 @@ const PasswordStrongField = ({
   defaultValue,
   style,
   onValid,
+  onChange,
   ...props
 }: PasswordStrongFieldProps) => {
   const cn = classNames("password-strong-field", className);
@@ -21,6 +22,7 @@ const PasswordStrongField = ({
   const handleTextInput = (event: ChangeEvent<HTMLInputElement>) => {
     const newValue = event.target.value.trim();
     setValue(newValue);
+    onChange?.(event);
     onValid?.(isValid(newValue));
   };
 

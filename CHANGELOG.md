@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.37](https://github.com/mesalva/mars/compare/v1.0.0-alpha.36...v1.0.0-alpha.37) (2022-01-24)
+
+
+### Features
+
+* add "two-credit-cards" icon ([#111](https://github.com/mesalva/mars/issues/111)) ([311926b](https://github.com/mesalva/mars/commit/311926be4b7feaee7898909e2a3e0de15bae9027))
+
 ## [1.0.0-alpha.36](https://github.com/mesalva/mars/compare/v1.0.0-alpha.35...v1.0.0-alpha.36) (2022-01-24)
 
 

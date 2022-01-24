@@ -52,6 +52,7 @@ import visa from "./visa";
 import chevronDown from "./chevron-down";
 import checkmark from "./checkmark";
 import trash from "./trash";
+import twoCreditCards from "./two-credit-cards";
 
 const icons: {
   [key: string]: (props: IconLibProps) => JSX.Element;
@@ -108,6 +109,7 @@ const icons: {
   video,
   visa,
   trash,
+  "two-credit-cards": twoCreditCards,
 };
 
 export default icons;

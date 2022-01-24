@@ -5,7 +5,7 @@ import Caption from "@/components/typographics/Caption";
 import Heading, { HeadingSizes } from "@/components/typographics/Heading";
 import Text from "@/components/typographics/Text";
 import Modal from "./";
-import { ModalSizes } from "./modal.types";
+import { ModalChildProps, ModalSizes } from "./modal.types";
 
 export default {
   title: "Components/Modal",
@@ -20,7 +20,7 @@ export default {
 
 const Template: ComponentStory<typeof Modal> = (args) => <Modal {...args} />;
 
-const ExampleModalContent = ({ close }: { close: React.MouseEventHandler<HTMLButtonElement> }) => (
+const ExampleModalContent = ({ close }: ModalChildProps) => (
   <p className="flex-column gap-lg">
     <div className="mb-lg">
       <Heading size={HeadingSizes.Small}>4 correções de redação básicas extras</Heading>

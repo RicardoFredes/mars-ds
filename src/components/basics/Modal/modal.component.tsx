@@ -2,7 +2,7 @@ import { useState } from "react";
 import classNames from "classnames";
 import rcPortal from "rc-portal";
 
-import { ModalChildProps, ModalOpenProps, ModalProps, ModalSizes } from ".";
+import { ModalChildComponent, ModalChildProps, ModalOpenProps, ModalProps, ModalSizes } from ".";
 
 import Card, { CardElevations } from "@/components/basics/Card";
 import ToggleButton from "@/components/basics/ToggleButton";
@@ -41,12 +41,12 @@ const Modal = ({ className, close, children, size = ModalSizes.Medium, ...props 
 
 export default Modal;
 
-Modal.open = (ChildComponent: React.FC<ModalChildProps>, modalProps: ModalOpenProps) => {
-  const { size, ...props } = modalProps;
-  const Component = ({ close }: { close(): boolean }) => (
-    <Modal close={close} size={size}>
+Modal.open = (ChildComponent: ModalChildComponent, modalProps: ModalOpenProps) => {
+  const { closeDelay, duration, ...props } = modalProps;
+  const Component = ({ close }: ModalChildProps) => (
+    <Modal close={close} {...props}>
       <ChildComponent close={close} />
     </Modal>
   );
-  return rcPortal(Component, props);
+  return rcPortal(Component, { closeDelay, duration });
 };

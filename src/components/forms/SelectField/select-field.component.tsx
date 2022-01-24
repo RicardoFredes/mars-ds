@@ -57,7 +57,6 @@ const SelectField = ({
   };
 
   const close = () => {
-    if (isOpen) history.back();
     removeEventListener();
     setIsOpen(false);
     setQuery("");
@@ -67,7 +66,6 @@ const SelectField = ({
 
   const open = () => {
     if (isOpen) return;
-    window.history.pushState("select__field--is-openned", "select");
     addEventListener();
     setIsOpen(true);
     handleSetIsAbove();

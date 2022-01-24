@@ -7,16 +7,17 @@ const { Large, Medium, Small } = Sizes;
 export const ModalSizes = { Large, Medium, Small };
 
 export interface ModalProps extends Omit<CardProps, "size"> {
-  close?: Close;
+  close: Close;
   size?: typeof ModalSizes[keyof typeof ModalSizes];
 }
+
+export type ModalChildComponent = (props: ModalChildProps) => JSX.Element;
 
 export interface ModalChildProps {
-  close?: Close;
+  close: Close;
 }
 
-export interface ModalOpenProps {
-  size?: typeof ModalSizes[keyof typeof ModalSizes];
+export interface ModalOpenProps extends Omit<ModalProps, "close"> {
   closeDelay?: number;
   duration?: number;
 }

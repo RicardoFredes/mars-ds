@@ -1,0 +1,48 @@
+.progress-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: $color-primary-500;
+  opacity: 0;
+  transform-origin: left center;
+
+  &--is-fetching {
+    opacity: 1;
+    animation: animation-start-fetching cubic-bezier(0, 0, 0.2, 1) 15s forwards;
+  }
+
+  &--is-fetched {
+    opacity: 1;
+    animation: animation-start-fetched cubic-bezier(0.4, 0, 1, 1) 250ms forwards;
+  }
+}
+
+@keyframes animation-start-fetching {
+  from {
+    opacity: 1;
+    transform: scaleX(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: scaleX(0.85);
+  }
+}
+
+@keyframes animation-start-fetched {
+  0% {
+    opacity: 1;
+    transform: scaleX(0.5);
+  }
+
+  99% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

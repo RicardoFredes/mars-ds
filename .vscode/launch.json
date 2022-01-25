@@ -6,17 +6,38 @@
   "configurations": [
     {
       "type": "node-terminal",
-      "name": "JavaScript Debug Terminal (Rollup - Watch)",
+      "name": "JavaScript Debug Terminal (Storybook)",
       "request": "launch",
       "cwd": "${workspaceFolder}",
       "command": "yarn storybook"
     },
     {
       "type": "node-terminal",
-      "name": "JavaScript Debug Terminal (Storybook)",
+      "name": "JavaScript Debug Terminal (Rollup - Watch)",
       "request": "launch",
       "cwd": "${workspaceFolder}",
-      "command": "yarn storybook"
+      "command": "yarn build -w"
+    },
+    {
+      "type": "node",
+      "name": "vscode-jest-tests.v2",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/.bin/jest",
+      "args": [
+        "--runInBand",
+        "--watchAll=false",
+        "--testNamePattern",
+        "${jest.testNamePattern}",
+        "--runTestsByPath",
+        "${jest.testFile}"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "disableOptimisticBPs": true,
+      "windows": {
+        "program": "${workspaceFolder}/node_modules/jest/bin/jest"
+      }
     }
   ]
 }

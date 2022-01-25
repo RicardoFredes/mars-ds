@@ -70,6 +70,9 @@ export * from "./components/basics/Modal/modal.types";
 export { default as Notification } from "./components/basics/Notification/Notification.component";
 export * from "./components/basics/Notification/Notification.types";
 
+export { default as ProgressIndicator } from "./components/basics/ProgressIndicator/progress-indicator.component";
+export * from "./components/basics/ProgressIndicator/progress-indicator.types";
+
 export { default as Skeleton } from "./components/basics/Skeleton/skeleton.component";
 export * from "./components/basics/Skeleton/skeleton.types";
 

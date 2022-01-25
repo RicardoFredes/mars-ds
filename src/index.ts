@@ -34,6 +34,9 @@ export * from "./components/basics/CircleStepper/circle-stepper.types";
 export { default as CreditCard } from "./components/basics/CreditCard/credit-card.component";
 export * from "./components/basics/CreditCard/credit-card.types";
 
+export { default as Divider } from "./components/basics/Divider/divider.component";
+export * from "./components/basics/Divider/divider.types";
+
 export { default as DropdownMenu } from "./components/basics/DropdownMenu/dropdown-menu.component";
 export * from "./components/basics/DropdownMenu/dropdown-menu.types";
 

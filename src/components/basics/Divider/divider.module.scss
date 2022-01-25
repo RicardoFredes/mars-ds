@@ -1,0 +1,11 @@
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: $color-divider;
+  border: none;
+
+  &--vertical {
+    width: 1px;
+    height: 100%;
+  }
+}

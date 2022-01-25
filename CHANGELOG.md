@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.38](https://github.com/mesalva/mars/compare/v1.0.0-alpha.37...v1.0.0-alpha.38) (2022-01-25)
+
+
+### Features
+
+* add Divider component ([#110](https://github.com/mesalva/mars/issues/110)) ([851203b](https://github.com/mesalva/mars/commit/851203bb58d00ac0918a8f3623bf160fbf7a3c80))
+* add ProgressIndicator component ([#112](https://github.com/mesalva/mars/issues/112)) ([7deaa5f](https://github.com/mesalva/mars/commit/7deaa5f152b283069e81df45d2774b0267d15517))
+
 ## [1.0.0-alpha.37](https://github.com/mesalva/mars/compare/v1.0.0-alpha.36...v1.0.0-alpha.37) (2022-01-24)
 
 

@@ -1,0 +1,37 @@
+.rating-star {
+  $size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  &:hover {
+    .rating-star__label {
+      color: $color-warning-500;
+    }
+  }
+  &__label {
+    cursor: pointer;
+    position: relative;
+    color: $color-text-disabled;
+    transition: all ease 0.2s;
+
+    &--is-active {
+      color: $color-warning-500;
+    }
+
+    &:hover {
+      & ~ .rating-star__label {
+        color: $color-text-disabled;
+      }
+    }
+  }
+  &__radio {
+    position: absolute;
+    top: -1px;
+    left: -3px;
+    width: 28px;
+    height: 28px;
+    appearance: none;
+    pointer-events: none;
+  }
+}

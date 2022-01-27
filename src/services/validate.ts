@@ -10,9 +10,15 @@ export const validateSpecialCharacters = (value: string) => {
   return /(?=.*[@$!%*?#&_-])/.test(value);
 };
 
+export const validateNumbers = (value: string) => {
+  if (!value || value == "") return false;
+  return /(?=.*\d)/.test(value);
+};
+
 export const isStrongPassword = (value: string) => {
   if (!validateCapitalLetters(value)) return false;
   if (!validateMinCharacteres(value)) return false;
   if (!validateSpecialCharacters(value)) return false;
+  if (!validateNumbers(value)) return false;
   return true;
 };

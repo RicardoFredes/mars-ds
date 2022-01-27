@@ -2,6 +2,7 @@ import {
   isStrongPassword,
   validateCapitalLetters,
   validateMinCharacteres,
+  validateNumbers,
   validateSpecialCharacters,
 } from "./validate";
 
@@ -35,6 +36,13 @@ describe("validate", () => {
       expect(validateCapitalLetters("mArllon campos ")).toBe(true);
       expect(validateCapitalLetters("marllon Campos ")).toBe(true);
       expect(validateCapitalLetters("marllon CampOs ")).toBe(true);
+    });
+  });
+
+  describe("validateNumber", () => {
+    it("should return true if the string has at least one number", () => {
+      expect(validateNumbers("marllon campos")).toBe(false);
+      expect(validateNumbers("marllon 1")).toBe(true);
     });
   });
 

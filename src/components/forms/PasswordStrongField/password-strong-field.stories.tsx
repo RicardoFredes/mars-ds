@@ -49,5 +49,5 @@ SpecialCaracterPassed.args = {
 export const AllPassed = Template.bind({});
 AllPassed.args = {
   ...DefaultArgs,
-  defaultValue: "TodosPassar@m",
+  defaultValue: "Tod0sPassar@m",
 };

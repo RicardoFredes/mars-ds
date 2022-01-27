@@ -2,6 +2,7 @@ import Tokens from "@/tokens";
 import {
   validateCapitalLetters,
   validateMinCharacteres,
+  validateNumbers,
   validateSpecialCharacters,
 } from "@/services/validate";
 
@@ -28,6 +29,10 @@ const validations = [
   {
     text: "Um caracter especial (@ ! # $ % _ *)",
     validator: validateSpecialCharacters,
+  },
+  {
+    text: "Um número",
+    validator: validateNumbers,
   },
 ];
 

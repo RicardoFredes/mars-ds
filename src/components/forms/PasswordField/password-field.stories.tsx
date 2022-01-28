@@ -22,3 +22,8 @@ Filled.args = {
   ...DefaultArgs,
   value: "senha-super-secreta",
 };
+export const WithError = Template.bind({});
+WithError.args = {
+  ...DefaultArgs,
+  error: true,
+};

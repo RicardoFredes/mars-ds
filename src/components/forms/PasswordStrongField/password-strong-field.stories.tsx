@@ -51,3 +51,9 @@ AllPassed.args = {
   ...DefaultArgs,
   defaultValue: "Tod0sPassar@m",
 };
+
+export const ErrorState = Template.bind({});
+ErrorState.args = {
+  ...DefaultArgs,
+  error: true,
+};

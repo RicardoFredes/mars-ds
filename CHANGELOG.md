@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.41](https://github.com/mesalva/mars/compare/v1.0.0-alpha.40...v1.0.0-alpha.41) (2022-01-28)
+
+
+### Features
+
+* create a intern error handling ([#116](https://github.com/mesalva/mars/issues/116)) ([5e8afeb](https://github.com/mesalva/mars/commit/5e8afebc47c68a5ba5b561ff3e1d0c6f56d808ad))
+
 ## [1.0.0-alpha.40](https://github.com/mesalva/mars/compare/v1.0.0-alpha.39...v1.0.0-alpha.40) (2022-01-27)
 
 

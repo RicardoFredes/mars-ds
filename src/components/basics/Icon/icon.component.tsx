@@ -1,5 +1,6 @@
 import classNames from "classnames";
-import { IconProps, IconSizes } from "./";
+
+import { IconProps, IconSizes } from ".";
 import icons from "./lib";
 
 const Icon = ({ name, size = IconSizes.Medium, className, color, style, ...props }: IconProps) => {
@@ -10,7 +11,7 @@ const Icon = ({ name, size = IconSizes.Medium, className, color, style, ...props
   const cn = classNames("icon", className);
 
   return (
-    <span {...props} className={cn} style={{ color, ...style }}>
+    <span data-testid={name} {...props} className={cn} style={{ color, ...style }}>
       <Component height={sizeValue} width={sizeValue} />
     </span>
   );

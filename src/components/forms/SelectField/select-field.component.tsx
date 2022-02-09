@@ -1,6 +1,6 @@
 import { SelectFieldOption, SelectFieldProps } from ".";
 import classNames from "classnames";
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import TextField from "@/components/forms/TextField";
 import DropdownMenu from "@/components/basics/DropdownMenu";
@@ -198,13 +198,10 @@ const SelectField = ({
     open();
   };
 
-  const rightIconButtonProps = useMemo(() => {
-    if (enableFilter) return undefined;
-    return {
-      tabIndex: 0,
-      onKeyDown: handleRightButtonClick,
-    };
-  }, [enableFilter]);
+  const rightIconButtonProps = enableFilter && {
+    tabIndex: 0,
+    onKeyDown: handleRightButtonClick,
+  };
 
   const rightIconButton = {
     name: "chevron-down",

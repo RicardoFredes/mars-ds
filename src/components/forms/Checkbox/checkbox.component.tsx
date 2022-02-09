@@ -1,8 +1,9 @@
 import { useState } from "react";
 import classNames from "classnames";
-import Text, { TextSizes } from "@/components/typographics/Text";
+
 import { CheckboxProps } from ".";
 import Icon from "@/components/basics/Icon";
+import Text, { TextSizes } from "@/components/typographics/Text";
 
 const Checkbox = ({
   className,
@@ -27,14 +28,15 @@ const Checkbox = ({
   const iconName = checked ? "checkmark-square" : "square";
 
   return (
-    <div className={cn} {...props}>
-      <label className="checkbox__container">
+    <div data-testid="checkbox" className={cn} {...props}>
+      <label data-testid="checkbox-label" className="checkbox__container">
         <div className="checkbox__icon">
           <Icon name={iconName} />
         </div>
         <input
           id={id || name}
           disabled={disabled}
+          data-testid="checkbox-input"
           type="checkbox"
           className="checkbox__input"
           name={name}

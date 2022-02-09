@@ -1,18 +1,29 @@
+import { MouseEvent } from "react";
+import classNames from "classnames";
+
+import { RadioProps } from ".";
 import Icon from "@/components/basics/Icon";
 import Text, { TextSizes } from "@/components/typographics/Text";
-import classNames from "classnames";
-import { RadioProps } from "./";
 
-const Radio = ({ name, label, id, className, ...props }: RadioProps) => {
-  const cn = classNames("radio", className, { "radio--is-disabled": props.disabled });
+const Radio = ({ label, className, disabled, ...props }: RadioProps) => {
+  const cn = classNames("radio", className, { "radio--is-disabled": disabled });
+
+  const handleClick = (event: MouseEvent<HTMLElement>) => {
+    if (disabled) event.preventDefault();
+  };
 
   return (
-    <div className={cn}>
-      <label htmlFor={id} className="radio__container">
-        <input className="radio__input" type="radio" name={name} id={id} {...props} />
+    <div data-testid="radio" className={cn}>
+      <label htmlFor={props.id} className="radio__container" onClick={handleClick}>
+        <input
+          {...props}
+          data-testid="radio-input"
+          className="radio__input"
+          type="radio"
+          disabled={disabled}
+        />
         <Icon name="radio-button-on" className="radio__icon radio__icon--on" />
         <Icon name="radio-button-off" className="radio__icon radio__icon--off" />
-
         {label && (
           <Text className="radio__label" as="span" size={TextSizes.Small}>
             {label}

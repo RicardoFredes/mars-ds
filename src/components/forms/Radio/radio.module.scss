@@ -71,6 +71,8 @@
   }
 
   &--is-disabled {
+    pointer-events: none;
+    cursor: inherit;
     .radio__icon {
       &--off,
       &--on {

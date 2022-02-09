@@ -2,6 +2,7 @@
   &--is-active {
     background-color: $color-neutral-300;
     border-radius: $border-radius-sm;
+    min-height: $border-radius-lg;
     .skeleton-container {
       visibility: hidden;
     }

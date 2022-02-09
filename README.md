@@ -205,6 +205,9 @@ Em outro terminal rode os testes ou, em caso de alteração visual em algum comp
 # Roda os testes localmente e atualiza as imagens que mudaram
 $ yarn test:visual
 
+# Aprova as mudanças nas imagens/componentes e atualiza as referências
+$ yarn test:visual:approve
+
 # ATENÇÃO: Evite usar esse comando
 # Atualizando todas imagens de referência
 $ yarn test:visual:update
@@ -216,10 +219,6 @@ $ yarn test:visual:update
  ┣ 📂difference # imagens geradas para os testes que falharam
  ┗ 📂reference # imagens de referência
 ```
-
-Esses testes são demorados e a seguinte mensagem de erro pode aparecer, mas isso não quer dizer que o teste não está rodando, apenas espere o processo ser concluído:
-
-![image](https://user-images.githubusercontent.com/29892001/147114242-60cbe3a4-9249-4cc5-89d7-453d4a5a0428.png)
 
 ### Exemplo de teste visual com falha
 

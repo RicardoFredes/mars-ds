@@ -22,7 +22,7 @@
     "reindex": "node bin/reindex",
     "new-component": "node bin/new-component",
     "tokens-generator": "node bin/tokens-generator",
-    "start": "yarn storybook",
+    "start": "yarn storybook --no-open",
     "dev": "yarn storybook",
     "build": "rollup -c",
     "test": "jest",
@@ -30,6 +30,7 @@
     "test:coverage": "yarn test --coverage",
     "test:visual": "yarn loki test",
     "test:visual:update": "yarn loki update",
+    "test:visual:approve": "yarn loki approve",
     "test:visual:ci": "build-storybook && loki --requireReference --reactUri file:./storybook-static",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
@@ -41,6 +42,7 @@
     "semantic-release": "semantic-release"
   },
   "resolutions": {
+    "react": "^17.0.2",
     "webpack": "^5"
   },
   "devDependencies": {

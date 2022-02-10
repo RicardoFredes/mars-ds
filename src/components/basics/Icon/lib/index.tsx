@@ -53,6 +53,21 @@ import chevronDown from "./chevron-down";
 import checkmark from "./checkmark";
 import trash from "./trash";
 import twoCreditCards from "./two-credit-cards";
+import apostila from "./apostila";
+import aulaAoVivo from "./aula-ao-vivo";
+import bancoDeProva from "./banco-de-prova";
+import correcao from "./correcao";
+import exercicio from "./exercicio";
+import forum from "./forum";
+import AcademiaDoHabito from "./academia-do-habito";
+import lojaLivros from "./loja-livros";
+import materias from "./materias";
+import painel from "./painel";
+import planoDeEstudos from "./plano-de-estudos";
+import planos from "./planos";
+import simulado from "./simulado";
+import turma from "./turma";
+import mentoria from "./mentoria";
 
 const icons: {
   [key: string]: (props: IconLibProps) => JSX.Element;
@@ -110,6 +125,21 @@ const icons: {
   visa,
   trash,
   "two-credit-cards": twoCreditCards,
+  apostila,
+  "aula-ao-vivo": aulaAoVivo,
+  "banco-de-prova": bancoDeProva,
+  correcao,
+  exercicio,
+  forum,
+  "academia-do-habito": AcademiaDoHabito,
+  "loja-de-livros": lojaLivros,
+  materias,
+  painel,
+  "plano-de-estudos": planoDeEstudos,
+  planos,
+  simulado,
+  turma,
+  mentoria,
 };
 
 export default icons;

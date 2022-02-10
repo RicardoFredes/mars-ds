@@ -72,12 +72,14 @@ export * from "./components/basics/Notification/Notification.types";
 
 export { default as Pagination } from "./components/basics/Pagination/pagination.component";
 export * from "./components/basics/Pagination/pagination.types";
+export { default as ProgressIndicator } from "./components/basics/ProgressIndicator/progress-indicator.component";
+export * from "./components/basics/ProgressIndicator/progress-indicator.types";
 
 export { default as RatingStar } from "./components/basics/RatingStar/rating-star.component";
 export * from "./components/basics/RatingStar/rating-star.types";
 
-export { default as ProgressIndicator } from "./components/basics/ProgressIndicator/progress-indicator.component";
-export * from "./components/basics/ProgressIndicator/progress-indicator.types";
+export { default as Sidebar } from "./components/basics/Sidebar/sidebar.component";
+export * from "./components/basics/Sidebar/sidebar.types";
 
 export { default as Skeleton } from "./components/basics/Skeleton/skeleton.component";
 export * from "./components/basics/Skeleton/skeleton.types";

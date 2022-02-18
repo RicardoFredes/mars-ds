@@ -3,13 +3,12 @@ import type { IconProps } from "@/components/basics/Icon";
 
 export interface SidebarProps extends React.HTMLProps<HTMLDivElement> {
   sidebarList: SidebarList;
-  user: {
-    name: string;
-    href: string;
-    thumbnail: string;
+  user?: {
+    name?: string;
+    image?: string;
   };
   onLogoClick?: () => void;
-  onSearchClick?: () => void;
+  onCloseClick?: () => void;
   onProfileClick?: () => void;
 }
 

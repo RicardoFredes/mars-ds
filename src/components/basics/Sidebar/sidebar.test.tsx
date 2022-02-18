@@ -21,8 +21,7 @@ const makeSut = (props?: SidebarProps) =>
       sidebarList={defaultSidebarList}
       user={{
         name: "Artur Monteiro",
-        thumbnail: "https://via.placeholder/40",
-        href: "https://google.com",
+        image: "https://via.placeholder/40",
       }}
       {...props}
     />
@@ -66,16 +65,15 @@ describe("<Sidebar>", () => {
   });
 
   it("should render an image on avatar icon", () => {
-    const thumbnail = "https://via.placeholder/120";
+    const image = "https://via.placeholder/120";
     const wrapper = makeSut({
       user: {
         name: "Artur Monteiro",
-        thumbnail,
-        href: "https://google.com",
+        image,
       },
       sidebarList: defaultSidebarList,
     });
     const sidebarUserAvatar = wrapper.getByTestId(DATA_IDS.avatar);
-    expect(sidebarUserAvatar.style.backgroundImage).toContain(thumbnail);
+    expect(sidebarUserAvatar.style.backgroundImage).toContain(image);
   });
 });

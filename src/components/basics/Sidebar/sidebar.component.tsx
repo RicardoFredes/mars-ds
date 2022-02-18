@@ -13,12 +13,11 @@ const Sidebar = ({
   user,
   sidebarList,
   onLogoClick,
-  onSearchClick,
+  onCloseClick,
   onProfileClick,
   ...props
 }: SidebarProps) => {
   const cn = classNames("sidebar", className);
-  const { name, thumbnail } = user;
 
   return (
     <aside className={cn} {...props}>
@@ -26,10 +25,10 @@ const Sidebar = ({
         <Logo height={32} className="sidebar__logo" onClick={onLogoClick} />
         <ToggleButton
           variant="text"
-          iconName="search"
-          className="sidebar__search"
-          id="search-button"
-          onClick={onSearchClick}
+          iconName="close"
+          className="sidebar__close"
+          id="close-button"
+          onClick={onCloseClick}
         />
       </header>
 
@@ -37,11 +36,11 @@ const Sidebar = ({
         <Avatar
           data-testid="sidebar__user-avatar"
           className="sidebar__profile-container__avatar"
-          thumbnail={thumbnail}
-          name={name}
+          thumbnail={user?.image}
+          name={user?.name}
         />
         <div className="flex-column align-items-start">
-          <Subtitle data-testid="sidebar__user-name">{name}</Subtitle>
+          <Subtitle data-testid="sidebar__user-name">{user?.name}</Subtitle>
           <button onClick={onProfileClick} className="sidebar__profile-container__profile-link">
             Ver perfil
           </button>

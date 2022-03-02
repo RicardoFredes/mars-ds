@@ -14,7 +14,6 @@ const TextField = ({
   className,
   info,
   type,
-  name,
   label,
   id,
   mask,
@@ -31,7 +30,7 @@ const TextField = ({
   inputDisabled,
   ...props
 }: TextFieldProps) => {
-  const [computedId] = useState(id || name || generateHash("field"));
+  const [computedId] = useState(id || props.name || generateHash("field"));
   const [isFocused, setIsFocused] = useState(false);
   const [computedValue, setComputedValue] = useState("");
 

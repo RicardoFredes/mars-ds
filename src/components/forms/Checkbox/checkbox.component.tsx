@@ -11,7 +11,6 @@ const Checkbox = ({
   disabled,
   id,
   label,
-  name,
   ...props
 }: CheckboxProps) => {
   const [checked, setChecked] = useState(defaultChecked);
@@ -34,12 +33,11 @@ const Checkbox = ({
           <Icon name={iconName} />
         </div>
         <input
-          id={id || name}
+          id={id || props.name}
           disabled={disabled}
           data-testid="checkbox-input"
           type="checkbox"
           className="checkbox__input"
-          name={name}
           onChange={handleChange}
           defaultChecked={defaultChecked}
         />

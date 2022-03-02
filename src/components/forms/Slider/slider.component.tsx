@@ -11,6 +11,7 @@ const Slider = ({
   step = 0.05,
   style,
   onSelect = (value: number) => value,
+  name,
 }: SliderProps) => {
   const cn = classNames("slider", className);
   const [value, setValue] = useState(defaultValue || max / 2);
@@ -57,6 +58,7 @@ const Slider = ({
         value={value}
         step={step}
         style={computedStyle}
+        name={name}
       />
       <span className="slider__value">{formatter(value)}</span>
     </label>

@@ -6,6 +6,7 @@
   position: relative;
   &__options {
     display: none;
+    z-index: 2;
     &-fallback {
       text-align: center;
       padding: $spacing-lg;

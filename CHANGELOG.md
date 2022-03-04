@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.47](https://github.com/mesalva/mars/compare/v1.0.0-alpha.46...v1.0.0-alpha.47) (2022-03-04)
+
+
+### Bug Fixes
+
+* select field z-index ([#126](https://github.com/mesalva/mars/issues/126)) ([b87bb8c](https://github.com/mesalva/mars/commit/b87bb8c393d64b63cbd1b638f645152764d7ee48))
+
 ## [1.0.0-alpha.46](https://github.com/mesalva/mars/compare/v1.0.0-alpha.45...v1.0.0-alpha.46) (2022-03-03)
 
 

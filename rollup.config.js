@@ -25,11 +25,6 @@ const options = {
       format: "cjs",
       sourcemap: true,
     },
-    {
-      file: packageJson.module,
-      format: "esm",
-      sourcemap: true,
-    },
   ],
   strictDeprecations: true,
   plugins: [

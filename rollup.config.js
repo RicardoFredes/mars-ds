@@ -6,7 +6,6 @@ import url from "@rollup/plugin-url";
 import postcssPresetEnv from "postcss-preset-env";
 import copy from "rollup-plugin-copy";
 import clean from "rollup-plugin-delete";
-import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import postcss from "rollup-plugin-postcss";
 import progress from "rollup-plugin-progress";
 import typescript from "rollup-plugin-typescript2";
@@ -27,12 +26,14 @@ const options = {
     },
   ],
   strictDeprecations: true,
+  external: [
+    ...Object.keys(packageJson.peerDependencies || {}),
+    ...Object.keys(packageJson.dependencies || {}),
+  ],
   plugins: [
     clean({ targets: `${destDir}/*` }),
     // @ts-expect-error `rollup-plugin-progress` doesn't include type definitions.
     progress(),
-    // @ts-expect-error `rollup-plugin-peer-deps-external` doesn't include type definitions.
-    peerDepsExternal(),
     resolve({
       rootDir: "./src",
     }),
@@ -48,7 +49,6 @@ const options = {
     }),
     postcss({
       extract: true,
-      autoModules: true,
       minimize: true,
       sourceMap: true,
       plugins: [postcssPresetEnv()],

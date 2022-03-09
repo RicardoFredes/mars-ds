@@ -1,5 +1,8 @@
-import { HeadingProps, HeadingSizes } from ".";
+import type { HeadingProps } from "./heading.types";
+
 import classNames from "classnames";
+
+import { HeadingSizes } from "./heading.types";
 
 const Heading = ({
   as,

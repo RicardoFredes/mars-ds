@@ -1,4 +1,5 @@
 import type { HTMLProps } from "react";
+
 import { Variants } from "@/types";
 
 export const LogoVariants = {

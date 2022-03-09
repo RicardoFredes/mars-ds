@@ -1,5 +1,6 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import Skeleton from "./";
+
+import Skeleton from "./skeleton.component";
 
 export default {
   title: "Components/Skeleton",

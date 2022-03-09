@@ -1,7 +1,9 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
+
 import icons from "@/components/basics/Icon/lib";
 import { LabelThemes, LabelVariants } from "@/components/basics/Label";
-import ItemButton from "./";
+
+import ItemButton from "./item-button.component";
 
 export default {
   title: "Components/ItemButton",

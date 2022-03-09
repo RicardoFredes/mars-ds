@@ -1,7 +1,10 @@
-import { ButtonSizes, ButtonVariants } from "@/components/basics/Button";
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
+
 import { useEffect, useState } from "react";
-import SubmitButton from "./";
+
+import { ButtonSizes, ButtonVariants } from "@/components/basics/Button";
+
+import SubmitButton from "./submit-button.component";
 
 export default {
   title: "Forms/SubmitButton",

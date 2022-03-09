@@ -1,4 +1,4 @@
-import { HTMLProps } from "react";
+import type { HTMLProps } from "react";
 
 export interface SliderProps extends Pick<HTMLProps<HTMLDivElement>, "className" | "style"> {
   max?: number;

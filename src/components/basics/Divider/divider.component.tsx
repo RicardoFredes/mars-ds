@@ -1,6 +1,6 @@
-import classNames from "classnames";
+import type { DividerProps } from "./divider.types";
 
-import { DividerProps } from "./divider.types";
+import classNames from "classnames";
 
 const Divider = ({ vertical, className, ...props }: DividerProps) => {
   const cn = classNames("divider", { "divider--vertical": vertical }, className);

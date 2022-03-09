@@ -1,7 +1,9 @@
-import Button from "@/components/basics/Button";
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import Notification from "./";
-import { NotificationVariants } from "./Notification.types";
+
+import Button from "@/components/basics/Button";
+
+import Notification from "./notification.component";
+import { NotificationVariants } from "./notification.types";
 
 export default {
   title: "Components/Notification",

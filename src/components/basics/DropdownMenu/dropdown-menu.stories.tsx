@@ -1,6 +1,6 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import DropdownMenu from "./";
+import DropdownMenu from "./dropdown-menu.component";
 
 export default {
   title: "Components/DropdownMenu",

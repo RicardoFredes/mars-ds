@@ -1,6 +1,8 @@
+import type { ListProps } from "./list.types";
+
 import classNames from "classnames";
+
 import ListItem from "@/components/typographics/ListItem";
-import { ListProps } from "./";
 
 const List = ({
   className,

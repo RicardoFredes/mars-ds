@@ -1,6 +1,7 @@
-import Tokens from ".";
 import Caption from "@/components/typographics/Caption";
 import Subtitle from "@/components/typographics/Subtitle";
+
+import Tokens from ".";
 
 type TokenKeys = keyof typeof Tokens;
 

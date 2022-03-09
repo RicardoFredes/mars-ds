@@ -1,8 +1,11 @@
-import { useState, useMemo } from "react";
+import type { PaginationProps, PaginationItemProps } from "./pagination.types";
+
 import classNames from "classnames";
-import { PaginationProps, PaginationItemProps } from "./pagination.types";
-import { getPaginationRange } from "./pagination.helpers";
+import { useState, useMemo } from "react";
+
 import Icon from "@/components/basics/Icon";
+
+import { getPaginationRange } from "./pagination.helpers";
 
 const Pagination = ({
   className,

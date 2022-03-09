@@ -1,7 +1,9 @@
+import type { SidebarProps } from "./sidebar.types";
+
 import { render } from "@testing-library/react";
-import Sidebar from ".";
+
+import Sidebar from "./sidebar.component";
 import { defaultSidebarList } from "./sidebar.fixtures";
-import { SidebarProps } from "./sidebar.types";
 
 const DATA_IDS = {
   name: "sidebar__user-name",

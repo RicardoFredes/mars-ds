@@ -1,8 +1,12 @@
-import { CreditCardProps, CreditCardVariants } from "./credit-card.types";
+import type { CreditCardProps } from "./credit-card.types";
+
 import classNames from "classnames";
+
 import Icon, { IconSizes } from "@/components/basics/Icon";
-import Text from "@/components/typographics/Text";
 import ItemText from "@/components/typographics/ItemText";
+import Text from "@/components/typographics/Text";
+
+import { CreditCardVariants } from "./credit-card.types";
 
 const CreditCard = ({
   className,

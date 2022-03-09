@@ -1,4 +1,4 @@
-import { CardProps } from "@/components/basics/Card/card.types";
+import type { CardProps } from "@/components/basics/Card/card.types";
 import { Sizes } from "@/types";
 
 export type Close = () => boolean;

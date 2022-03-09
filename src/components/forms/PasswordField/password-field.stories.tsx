@@ -1,5 +1,6 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import PasswordField from "./";
+
+import PasswordField from "./password-field.component";
 
 export default {
   title: "Forms/PasswordField",

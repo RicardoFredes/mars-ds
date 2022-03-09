@@ -1,4 +1,5 @@
 import type { HTMLProps } from "react";
+
 import { Sizes } from "@/types";
 
 export interface IconLibProps {

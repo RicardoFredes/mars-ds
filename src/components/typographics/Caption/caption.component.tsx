@@ -1,5 +1,6 @@
+import type { CaptionProps } from "./caption.types";
+
 import classNames from "classnames";
-import { CaptionProps } from ".";
 
 const Caption = ({ as, children, className, ...props }: CaptionProps) => {
   const CaptionTag: React.ElementType | string = as || "span";

@@ -1,5 +1,8 @@
+import type { LogoProps } from "./";
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import Logo, { LogoNames, LogoProps, LogoVariants } from "./";
+
+import Logo from "./logo.component";
+import { LogoNames, LogoVariants } from "./logo.types";
 
 export default {
   title: "Components/Logo",

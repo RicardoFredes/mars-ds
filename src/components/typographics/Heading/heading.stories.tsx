@@ -1,5 +1,7 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import Heading, { HeadingSizes } from ".";
+
+import Heading from "./heading.component";
+import { HeadingSizes } from "./heading.types";
 
 export default {
   title: "Typographics/Heading",

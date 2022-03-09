@@ -1,10 +1,12 @@
-import { ChangeEvent, useEffect, useState } from "react";
+import type { PasswordStrongFieldProps } from "./password-strong-field.types";
+import type { ChangeEvent } from "react";
+
 import classNames from "classnames";
+import { useEffect, useState } from "react";
 
 import PasswordField from "@/components/forms/PasswordField";
 import List from "@/components/typographics/List";
 
-import { PasswordStrongFieldProps } from "./password-strong-field.types";
 import { getValidations, isValid } from "./password-strong-field.helper";
 
 const PasswordStrongField = ({

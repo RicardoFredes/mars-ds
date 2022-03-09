@@ -1,5 +1,5 @@
+import type { HeadingLevels, HeadingProps } from "@/components/typographics/Heading";
 import { Sizes } from "@/types";
-import { HeadingLevels, HeadingProps } from "@/components/typographics/Heading";
 
 const { Medium, Large } = Sizes;
 export const DisplaySizes = {

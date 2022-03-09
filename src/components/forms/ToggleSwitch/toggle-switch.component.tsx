@@ -1,7 +1,7 @@
-import { ToggleSwitchProps } from ".";
+import type { ToggleSwitchProps } from "./toggle-switch.types";
 
-import { useState } from "react";
 import classNames from "classnames";
+import { useState } from "react";
 
 import Text, { TextSizes } from "@/components/typographics/Text";
 

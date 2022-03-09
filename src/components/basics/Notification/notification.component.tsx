@@ -1,14 +1,16 @@
-import { NotificationProps } from "./Notification.types";
+import type { NotificationProps } from "./notification.types";
+
 import classNames from "classnames";
-import Card from "@/components/basics/Card";
-import { CardElevations } from "@/components/basics/Card/card.types";
-import Icon from "@/components/basics/Icon";
-import Tokens from "@/tokens";
-import { NotificationVariants } from ".";
-import Subtitle, { SubtitleSizes } from "@/components/typographics/Subtitle";
-import { useEffect, useState } from "react";
 import rcPortal from "rc-portal";
-import ToggleButton, { ToggleButtonVariants } from "../ToggleButton";
+import { useEffect, useState } from "react";
+
+import Card, { CardElevations } from "@/components/basics/Card";
+import Icon from "@/components/basics/Icon";
+import ToggleButton, { ToggleButtonVariants } from "@/components/basics/ToggleButton";
+import Subtitle, { SubtitleSizes } from "@/components/typographics/Subtitle";
+import Tokens from "@/tokens";
+
+import { NotificationVariants } from "./notification.types";
 
 const icons: Record<
   typeof NotificationVariants[keyof typeof NotificationVariants],

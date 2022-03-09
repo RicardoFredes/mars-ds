@@ -1,7 +1,9 @@
+import type { ComponentMeta, ComponentStory } from "@storybook/react";
+
 import icons from "@/components/basics/Icon/lib";
 import Tokens from "@/tokens";
-import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import ListItem from "./";
+
+import ListItem from "./list-item.component";
 
 export default {
   title: "Typographics/ListItem",

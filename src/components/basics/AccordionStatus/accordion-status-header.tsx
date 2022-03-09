@@ -1,13 +1,10 @@
-import Tokens from "@/tokens";
-import classNames from "classnames";
-import AccordionHeaderDefault from "../Accordion/accordion-header-default";
-import Icon from "../Icon";
-import { IconVariants } from "./accordion-status.types";
+import type { AccordionStatusHeaderProps } from "./accordion-status.types";
 
-interface AccordionStatusHeaderProps extends React.HTMLProps<HTMLDivElement> {
-  icon: typeof IconVariants[keyof typeof IconVariants];
-  title: string;
-}
+import classNames from "classnames";
+
+import AccordionHeaderDefault from "@/components/basics/Accordion";
+import Icon from "@/components/basics/Icon";
+import Tokens from "@/tokens";
 
 export const iconVariant = {
   complete: {
@@ -35,8 +32,9 @@ export const iconVariant = {
     color: Tokens.ColorPrimary500,
   },
 };
+
 const AccordionStatusHeader = ({
-  icon = IconVariants.complete,
+  icon = iconVariant.complete,
   className,
   title,
   ...props

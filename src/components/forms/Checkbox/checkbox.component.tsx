@@ -1,7 +1,8 @@
-import { useState } from "react";
-import classNames from "classnames";
+import type { CheckboxProps } from "./checkbox.types";
 
-import { CheckboxProps } from ".";
+import classNames from "classnames";
+import { useState } from "react";
+
 import Icon from "@/components/basics/Icon";
 import Text, { TextSizes } from "@/components/typographics/Text";
 

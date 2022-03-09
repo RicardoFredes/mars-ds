@@ -1,7 +1,9 @@
+import type { SubmitButtonProps } from "./submit-button.types";
+
+import classNames from "classnames";
+
 import Button from "@/components/basics/Button";
 import Loader from "@/components/basics/Loader";
-import classNames from "classnames";
-import { SubmitButtonProps } from "./submit-button.types";
 
 const SubmitButton = ({ className, children, submitting, label, ...props }: SubmitButtonProps) => {
   const cn = classNames("submit-button", className);

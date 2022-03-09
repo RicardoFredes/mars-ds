@@ -1,8 +1,12 @@
-import { useMemo } from "react";
+import type { AvatarProps } from "./avatar.types";
+
 import classNames from "classnames";
-import { AvatarProps, AvatarSizes } from "./";
+import { useMemo } from "react";
+
 import ItemText from "@/components/typographics/ItemText";
 import { getInitialsByFullName } from "@/services/names-parser";
+
+import { AvatarSizes } from "./avatar.types";
 
 const Avatar = ({
   className,

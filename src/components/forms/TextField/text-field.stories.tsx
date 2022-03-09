@@ -3,7 +3,7 @@ import type { FocusEvent } from "react";
 
 import { useState } from "react";
 
-import TextField from "./";
+import TextField from "./text-field.component";
 
 export default {
   title: "Forms/TextField",

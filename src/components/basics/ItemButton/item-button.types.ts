@@ -1,4 +1,4 @@
-import { LabelThemes, LabelVariants } from "@/components/basics/Label";
+import type { LabelThemes, LabelVariants } from "@/components/basics/Label";
 
 export interface ItemButtonProps
   extends Omit<React.HTMLProps<HTMLButtonElement | HTMLLinkElement>, "as"> {

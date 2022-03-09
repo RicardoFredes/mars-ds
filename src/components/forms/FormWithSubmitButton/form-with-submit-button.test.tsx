@@ -1,6 +1,8 @@
+import type { FormWithSubmitButtonProps } from "./form-with-submit-button.types";
+
 import { render } from "@testing-library/react";
-import FormWithSubmitButton from ".";
-import { FormWithSubmitButtonProps } from "./form-with-submit-button.types";
+
+import FormWithSubmitButton from "./form-with-submit-button.component";
 
 const makeSut = (props?: FormWithSubmitButtonProps) =>
   render(<FormWithSubmitButton submitButtonLabel="Enviar" {...props} />);

@@ -1,6 +1,10 @@
-import Text, { TextSizes } from "@/components/typographics/Text";
+import type { ItemElementProps } from ".";
+
 import classNames from "classnames";
-import { ItemElementProps, ItemElementVariants } from ".";
+
+import Text, { TextSizes } from "@/components/typographics/Text";
+
+import { ItemElementVariants } from "./item-element.types";
 
 const ItemElement = ({
   children,

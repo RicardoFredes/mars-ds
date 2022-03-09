@@ -1,5 +1,6 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import ToggleSwitch from "./";
+
+import ToggleSwitch from "./toggle-switch.component";
 
 export default {
   title: "Forms/ToggleSwitch",

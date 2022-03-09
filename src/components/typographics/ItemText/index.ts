@@ -4,6 +4,6 @@
  * because it is automatically generated
  */
 
-import ItemText from "./ItemText.component";
+import ItemText from "./item-text.component";
 export default ItemText;
-export * from "./ItemText.types";
+export * from "./item-text.types";

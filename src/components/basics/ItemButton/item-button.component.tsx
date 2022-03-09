@@ -1,11 +1,13 @@
-import type { ItemButtonProps } from "./";
+import type { ItemButtonProps } from "./item-button.types";
+
 import classNames from "classnames";
-import Tokens from "@/tokens";
-import Caption from "@/components/typographics/Caption";
+
 import Icon from "@/components/basics/Icon";
-import Subtitle from "@/components/typographics/Subtitle";
 import Label from "@/components/basics/Label";
 import Link from "@/components/basics/Link";
+import Caption from "@/components/typographics/Caption";
+import Subtitle from "@/components/typographics/Subtitle";
+import Tokens from "@/tokens";
 
 const ItemButton = ({
   title,

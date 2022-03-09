@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react";
+import type { RatingStarProps, StarProps } from "./rating-star.types";
+
 import classNames from "classnames";
+import { useEffect, useState } from "react";
 
 import Icon, { IconSizes } from "@/components/basics/Icon";
-import { RatingStarProps } from "./rating-star.types";
-
-import { StarProps } from ".";
 
 const getDefaultValue = (defaultValue: number, maxValue: number): number => {
   if (defaultValue <= 0) return 0;

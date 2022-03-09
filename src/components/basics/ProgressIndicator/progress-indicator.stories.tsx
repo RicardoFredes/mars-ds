@@ -1,6 +1,6 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import ProgressIndicator from ".";
+import ProgressIndicator from "./progress-indicator.component";
 
 export default {
   title: "Components/ProgressIndicator",

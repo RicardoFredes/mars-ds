@@ -1,4 +1,4 @@
-import { HTMLProps } from "react";
+import type { HTMLProps } from "react";
 
 export interface FormWithSubmitButtonProps extends HTMLProps<HTMLFormElement> {
   submitButtonLabel: string;

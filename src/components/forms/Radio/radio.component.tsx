@@ -1,7 +1,8 @@
-import { MouseEvent } from "react";
+import type { RadioProps } from "./radio.types";
+import type { MouseEvent } from "react";
+
 import classNames from "classnames";
 
-import { RadioProps } from ".";
 import Icon from "@/components/basics/Icon";
 import Text, { TextSizes } from "@/components/typographics/Text";
 

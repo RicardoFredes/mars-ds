@@ -1,5 +1,6 @@
-import { RadioOption, RadioOptions } from "@/components/forms/Radio";
-import { HTMLProps } from "react";
+import type { HTMLProps } from "react";
+
+import type { RadioOption, RadioOptions } from "@/components/forms/Radio";
 
 export interface RadioFieldsProps extends Omit<HTMLProps<HTMLDivElement>, "children" | "onSelect"> {
   options?: RadioOptions;

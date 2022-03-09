@@ -1,8 +1,13 @@
-import { AccordionCardElevations, AccordionCardProps } from "./";
+import type { AccordionCardProps } from "./accordion-card.types";
+
 import classNames from "classnames";
+
 import Accordion from "@/components/basics/Accordion";
+import type { ButtonProps } from "@/components/basics/Button";
+import Button, { ButtonVariants } from "@/components/basics/Button";
 import Card from "@/components/basics/Card";
-import Button, { ButtonProps, ButtonVariants } from "@/components/basics/Button";
+
+import { AccordionCardElevations } from "./accordion-card.types";
 
 const AccordionCard = ({
   className,

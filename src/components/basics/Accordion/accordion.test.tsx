@@ -1,10 +1,13 @@
+import type { AccordionProps } from "./accordion.types";
+
+import { fireEvent, render } from "@testing-library/react";
+
+import Accordion from "./accordion.component";
+
 jest.mock("@/components/basics/Icon", () => {
   const IconMock = ({ name }: { name: string }) => <>{name}</>;
   return IconMock;
 });
-
-import { fireEvent, render } from "@testing-library/react";
-import Accordion, { AccordionProps } from "./";
 
 const PROPS = {
   TITLE: "any_title",

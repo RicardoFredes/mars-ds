@@ -1,7 +1,9 @@
-import Tokens from "@/tokens";
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
+
 import DropdownMenuItem from "@/components/basics/DropdownMenuItem";
-import AccordionLabel from "./";
+import Tokens from "@/tokens";
+
+import AccordionLabel from "./accordion-label.component";
 
 export default {
   title: "Components/Accordion/AccordionLabel",

@@ -1,11 +1,13 @@
-import { useState } from "react";
+import type { ModalChildComponent, ModalChildProps, ModalOpenProps, ModalProps } from ".";
+
 import classNames from "classnames";
 import rcPortal from "rc-portal";
-
-import { ModalChildComponent, ModalChildProps, ModalOpenProps, ModalProps, ModalSizes } from ".";
+import { useState } from "react";
 
 import Card, { CardElevations } from "@/components/basics/Card";
 import ToggleButton from "@/components/basics/ToggleButton";
+
+import { ModalSizes } from "./modal.types";
 
 const Modal = ({ className, close, children, size = ModalSizes.Medium, ...props }: ModalProps) => {
   const [closing, setClosing] = useState(false);

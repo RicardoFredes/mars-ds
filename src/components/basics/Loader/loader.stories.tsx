@@ -1,6 +1,9 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import Loader, { LoaderSizes } from "./";
+
 import Text, { TextSizes } from "@/components/typographics/Text";
+
+import Loader from "./loader.component";
+import { LoaderSizes } from "./loader.types";
 
 export default {
   title: "Components/Loader",

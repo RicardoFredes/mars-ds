@@ -1,4 +1,4 @@
-import { TextFieldProps } from "@/components/forms/TextField";
+import type { TextFieldProps } from "@/components/forms/TextField";
 
 export enum PasswordFieldType {
   Hidden = "password",

@@ -1,5 +1,6 @@
+import type { SkeletonProps } from "./skeleton.types";
+
 import classNames from "classnames";
-import { SkeletonProps } from "./skeleton.types";
 
 const Skeleton = ({ children, className, active }: SkeletonProps) => {
   if (!active) return <div className={className}>{children}</div>;

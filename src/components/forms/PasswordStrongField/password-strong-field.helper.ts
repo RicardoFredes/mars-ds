@@ -1,10 +1,10 @@
-import Tokens from "@/tokens";
 import {
   validateCapitalLetters,
   validateMinCharacteres,
   validateNumbers,
   validateSpecialCharacters,
 } from "@/services/validate";
+import Tokens from "@/tokens";
 
 const ICON = {
   INVALID: {

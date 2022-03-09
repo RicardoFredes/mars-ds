@@ -1,4 +1,5 @@
 import type React from "react";
+
 import { Sizes } from "@/types";
 
 const { Small, Medium } = Sizes;

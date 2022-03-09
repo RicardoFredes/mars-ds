@@ -1,6 +1,6 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import Slider from "./";
+import Slider from "./slider.component";
 
 const numberControl = { control: { type: "number" } };
 

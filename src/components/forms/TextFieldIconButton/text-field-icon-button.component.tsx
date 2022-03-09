@@ -1,6 +1,8 @@
+import type { TextFieldIconButtonProps } from "./text-field-icon-button.types";
+
 import classNames from "classnames";
+
 import Icon from "@/components/basics/Icon";
-import { TextFieldIconButtonProps } from ".";
 
 const TextFieldIconButton = ({
   className,

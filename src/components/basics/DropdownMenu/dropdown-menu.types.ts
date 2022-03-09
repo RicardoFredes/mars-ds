@@ -1,5 +1,5 @@
-import { CardProps } from "@/components/basics/Card";
-import {
+import type { CardProps } from "@/components/basics/Card";
+import type {
   DropdownMenuItemKeySizes,
   DropdownMenuItemProps,
 } from "@/components/basics/DropdownMenuItem";

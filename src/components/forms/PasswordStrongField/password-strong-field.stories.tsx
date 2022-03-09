@@ -1,6 +1,8 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
+
 import { action } from "@storybook/addon-actions";
-import PasswordStrongField from ".";
+
+import PasswordStrongField from "./password-strong-field.component";
 
 export default {
   title: "Forms/PasswordStrongField",

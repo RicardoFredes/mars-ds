@@ -1,6 +1,8 @@
+import type { ItemElementProps } from "./item-element.types";
+
 import { render } from "@testing-library/react";
-import ItemElement from ".";
-import { ItemElementProps } from "./item-element.types";
+
+import ItemElement from "./item-element.component";
 
 const makeSut = (props?: ItemElementProps) => render(<ItemElement {...props} />);
 

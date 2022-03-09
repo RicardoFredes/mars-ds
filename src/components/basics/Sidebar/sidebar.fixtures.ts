@@ -1,4 +1,4 @@
-import { SidebarList } from "./sidebar.types";
+import type { SidebarList } from "./sidebar.types";
 
 export const defaultSidebarList: SidebarList = [
   {

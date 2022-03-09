@@ -1,5 +1,6 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import Stepper from "./";
+
+import Stepper from "./stepper.component";
 
 export default {
   title: "Components/Stepper",

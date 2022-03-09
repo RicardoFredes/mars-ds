@@ -1,5 +1,7 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import CreditCard, { CreditCardVariants } from "./";
+
+import CreditCard from "./credit-card.component";
+import { CreditCardVariants } from "./credit-card.types";
 
 export default {
   title: "Components/CreditCard",

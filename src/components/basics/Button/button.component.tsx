@@ -1,9 +1,12 @@
-import { useState, MouseEvent } from "react";
-import { ButtonProps, ButtonSizes, ButtonVariants } from "./";
+import type { ButtonProps } from "./button.types";
+import type { MouseEvent } from "react";
 
 import classNames from "classnames";
+import { useState } from "react";
+
 import Icon from "@/components/basics/Icon";
-import { ButtonTypes } from "./button.types";
+
+import { ButtonSizes, ButtonTypes, ButtonVariants } from "./button.types";
 
 const Button = ({
   children,

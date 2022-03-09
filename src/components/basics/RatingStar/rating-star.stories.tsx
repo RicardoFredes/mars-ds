@@ -1,9 +1,12 @@
+import type { RatingStarProps } from "./rating-star.types";
+import type { ComponentMeta, ComponentStory } from "@storybook/react";
+
+import { useState } from "react";
+
 import Heading from "@/components/typographics/Heading";
 import Subtitle from "@/components/typographics/Subtitle";
-import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import { useState } from "react";
-import RatingStar from "./";
-import { RatingStarProps } from "./rating-star.types";
+
+import RatingStar from "./rating-star.component";
 
 export default {
   title: "Components/RatingStar",

@@ -1,6 +1,6 @@
+import type { HTMLProps, AriaAttributes } from "react";
+
 import { Sizes } from "@/types";
-import { HTMLProps } from "react";
-import { AriaAttributes } from "react";
 
 const { Medium, Small } = Sizes;
 export const DropdownMenuItemSizes = { Medium, Small };

@@ -1,4 +1,12 @@
-import { IconProps } from "@/components/basics/Icon";
+import type { ButtonProps } from "./button.types";
+
+import { fireEvent, render } from "@testing-library/react";
+
+import type { IconProps } from "@/components/basics/Icon";
+
+import Button from "./button.component";
+import { ButtonSizes, ButtonVariants } from "./button.types";
+
 jest.mock("@/components/basics/Icon", () => {
   const MockIcon = ({ className, name, size }: IconProps) => (
     <i data-testid="icon" className={className} data-size={size}>
@@ -7,9 +15,6 @@ jest.mock("@/components/basics/Icon", () => {
   );
   return MockIcon;
 });
-
-import { render, fireEvent } from "@testing-library/react";
-import Button, { ButtonProps, ButtonSizes, ButtonVariants } from "./";
 
 const buttonText = "My Button";
 const buttonDataTestId = "button-testid";

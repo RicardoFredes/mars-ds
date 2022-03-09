@@ -1,4 +1,4 @@
-import { ButtonProps } from "@/components/basics/Button";
+import type { ButtonProps } from "@/components/basics/Button";
 import { Variants } from "@/types";
 
 const { Neutral, Text } = Variants;

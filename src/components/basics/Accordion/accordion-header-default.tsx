@@ -1,5 +1,5 @@
-import Heading, { HeadingSizes } from "@/components/typographics/Heading";
 import Icon from "@/components/basics/Icon";
+import Heading, { HeadingSizes } from "@/components/typographics/Heading";
 
 const AccordionHeaderDefault = ({ title }: { title?: string }) => {
   return (

@@ -1,5 +1,6 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import ItemElement from "./";
+
+import ItemElement from "./item-element.component";
 import { ItemElementVariants } from "./item-element.types";
 
 export default {

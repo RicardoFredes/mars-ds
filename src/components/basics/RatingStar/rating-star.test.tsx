@@ -1,6 +1,8 @@
+import type { RatingStarProps } from "./rating-star.types";
+
 import { fireEvent, render } from "@testing-library/react";
-import RatingStar from ".";
-import { RatingStarProps } from "./rating-star.types";
+
+import RatingStar from "./rating-star.component";
 
 const dataTestId = { radioStar: "radio-star", labelStar: "label-star" };
 const classNameLabel = {

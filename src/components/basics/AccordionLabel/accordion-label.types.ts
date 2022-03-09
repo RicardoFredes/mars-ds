@@ -1,4 +1,4 @@
-import { AccordionProps } from "@/components/basics/Accordion";
+import type { AccordionProps } from "@/components/basics/Accordion";
 
 export interface AccordionLabelProps extends AccordionProps {
   label: string;

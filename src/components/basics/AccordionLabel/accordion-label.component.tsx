@@ -1,9 +1,11 @@
-import { AccordionLabelHeaderProps, AccordionLabelProps } from "./accordion-label.types";
+import type { AccordionLabelHeaderProps, AccordionLabelProps } from "./accordion-label.types";
+
 import classNames from "classnames";
+
 import Accordion from "@/components/basics/Accordion";
-import Text, { TextSizes } from "@/components/typographics/Text";
 import Icon from "@/components/basics/Icon";
 import Subtitle, { SubtitleSizes } from "@/components/typographics/Subtitle";
+import Text, { TextSizes } from "@/components/typographics/Text";
 
 const AccordionLabel = ({
   className,

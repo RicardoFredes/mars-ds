@@ -1,6 +1,8 @@
+import type { SkeletonProps } from "./skeleton.types";
+
 import { render } from "@testing-library/react";
-import Skeleton from ".";
-import { SkeletonProps } from "./skeleton.types";
+
+import Skeleton from "./skeleton.component";
 
 const makeSut = (props?: SkeletonProps) => render(<Skeleton {...props} />);
 

@@ -1,5 +1,8 @@
+import type { SubtitleProps } from "./subtitle.types";
+
 import classNames from "classnames";
-import { SubtitleSizes, SubtitleProps } from ".";
+
+import { SubtitleSizes } from "./subtitle.types";
 
 const Subtitle = ({
   as,

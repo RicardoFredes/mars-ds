@@ -1,5 +1,7 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import Display, { DisplaySizes } from ".";
+
+import Display from "./display.component";
+import { DisplaySizes } from "./display.types";
 
 export default {
   title: "Typographics/Display",

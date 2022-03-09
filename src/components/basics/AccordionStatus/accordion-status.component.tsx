@@ -1,7 +1,11 @@
-import { AccordionStatusProps, IconVariants } from "./accordion-status.types";
+import type { AccordionStatusProps } from "./accordion-status.types";
+
 import classNames from "classnames";
+
+import AccordionCard from "@/components/basics/AccordionCard";
+
 import AccordionStatusHeader from "./accordion-status-header";
-import AccordionCard from "../AccordionCard";
+import { IconVariants } from "./accordion-status.types";
 
 const AccordionStatus = ({
   className,

@@ -1,6 +1,8 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import TextField from "../TextField";
-import FormWithSubmitButton from "./";
+
+import TextField from "@/components/forms/TextField";
+
+import FormWithSubmitButton from "./form-with-submit-button.component";
 
 export default {
   title: "Forms/FormWithSubmitButton",

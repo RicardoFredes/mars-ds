@@ -1,5 +1,7 @@
-import { DropdownMenuProps } from "./";
+import type { DropdownMenuProps } from "./dropdown-menu.types";
+
 import classNames from "classnames";
+
 import Card, { CardElevations } from "@/components/basics/Card";
 import DropdownMenuItem from "@/components/basics/DropdownMenuItem";
 

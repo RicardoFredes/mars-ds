@@ -1,6 +1,8 @@
+import type { SliderProps } from "./slider.types";
+import type { ChangeEvent } from "react";
+
 import classNames from "classnames";
-import { ChangeEvent, useState } from "react";
-import { SliderProps } from ".";
+import { useState } from "react";
 
 const Slider = ({
   min = 0,

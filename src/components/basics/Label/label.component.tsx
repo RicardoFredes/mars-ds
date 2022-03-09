@@ -1,5 +1,8 @@
+import type { LabelProps } from "./label.types";
+
 import classNames from "classnames";
-import { LabelProps, LabelThemes, LabelVariants } from ".";
+
+import { LabelThemes, LabelVariants } from "./label.types";
 
 const Label = ({
   className,

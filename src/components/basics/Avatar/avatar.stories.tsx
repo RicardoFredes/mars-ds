@@ -1,5 +1,6 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import Avatar, { AvatarSizes } from "./";
+
+import Avatar, { AvatarSizes } from "./avatar.component";
 
 export default {
   title: "Components/Avatar",

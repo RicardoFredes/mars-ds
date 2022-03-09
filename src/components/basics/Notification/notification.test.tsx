@@ -1,6 +1,8 @@
+import type { NotificationProps } from "./notification.types";
+
 import { render } from "@testing-library/react";
+
 import Notification, { NotificationVariants } from ".";
-import { NotificationProps } from "./Notification.types";
 
 const makeSut = (props?: NotificationProps) =>
   render(<Notification variant={NotificationVariants.Default} {...props} />);

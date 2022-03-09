@@ -1,14 +1,15 @@
-import { ChangeEvent, FocusEvent, MouseEvent, useRef } from "react";
-import { IconProps } from "@/components/basics/Icon";
-import { IconPosition, TextFieldProps } from "./";
+import type { TextFieldProps } from "./text-field.types";
+import type { ChangeEvent, FocusEvent, MouseEvent } from "react";
 
-import { useCallback, useEffect, useState } from "react";
 import classNames from "classnames";
+import { useRef, useCallback, useEffect, useState } from "react";
 
+import type { IconProps } from "@/components/basics/Icon";
+import TextFieldIconButton from "@/components/forms/TextFieldIconButton";
 import { generateHash } from "@/services/hash";
 import { masker } from "@/services/masker";
 
-import TextFieldIconButton from "@/components/forms/TextFieldIconButton";
+import { IconPosition } from "./text-field.types";
 
 const TextField = ({
   className,

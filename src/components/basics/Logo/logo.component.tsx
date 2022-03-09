@@ -1,7 +1,9 @@
+import type { LogoProps } from "./logo.types";
+
 import classNames from "classnames";
 
-import { LogoNames, LogoVariants, LogoProps } from ".";
 import variants from "./icons";
+import { LogoNames, LogoVariants } from "./logo.types";
 
 const Logo = ({
   name = LogoNames.Full,

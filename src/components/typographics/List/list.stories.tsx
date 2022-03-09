@@ -1,8 +1,10 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import { ListItemProps } from "@/components/typographics/ListItem";
-import List from ".";
-import Tokens from "@/tokens";
+
 import icons from "@/components/basics/Icon/lib";
+import type { ListItemProps } from "@/components/typographics/ListItem";
+import Tokens from "@/tokens";
+
+import List from "./list.component";
 
 const mockedData = [
   ["4 correções de redação padrão ao mês", true],

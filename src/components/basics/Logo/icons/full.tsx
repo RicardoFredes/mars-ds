@@ -1,4 +1,4 @@
-import { LogoIconProps } from "..";
+import type { LogoIconProps } from "..";
 
 const LogoFull = ({ height = 128 }: LogoIconProps) => {
   return (

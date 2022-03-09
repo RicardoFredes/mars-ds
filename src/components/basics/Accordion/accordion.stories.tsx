@@ -1,6 +1,8 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
+
 import Text from "@/components/typographics/Text";
-import Accordion from "./";
+
+import Accordion from "./accordion.component";
 
 export default {
   title: "Components/Accordion",

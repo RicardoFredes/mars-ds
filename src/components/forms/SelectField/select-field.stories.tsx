@@ -1,5 +1,7 @@
+import type { SelectFieldOption } from "./select-field.types";
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import SelectField, { SelectFieldOption } from ".";
+
+import SelectField from ".";
 
 export default {
   title: "Forms/SelectField",

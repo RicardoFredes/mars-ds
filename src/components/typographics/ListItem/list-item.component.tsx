@@ -1,5 +1,7 @@
-import { ListItemProps } from ".";
+import type { ListItemProps } from "./list-item.types";
+
 import classNames from "classnames";
+
 import Icon, { IconSizes } from "@/components/basics/Icon";
 import Text, { TextSizes } from "@/components/typographics/Text";
 

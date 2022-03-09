@@ -1,7 +1,8 @@
+import type { RadioFieldsProps } from "./radio-fields.types";
+
 import { fireEvent, render } from "@testing-library/react";
 
-import RadioFields from ".";
-import { RadioFieldsProps } from "./radio-fields.types";
+import RadioFields from "./radio-fields.component";
 
 const options = [
   { label: "Option 1", value: 1 },

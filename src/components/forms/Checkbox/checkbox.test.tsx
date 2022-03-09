@@ -1,7 +1,8 @@
+import type { CheckboxProps } from "./checkbox.types";
+
 import { fireEvent, render } from "@testing-library/react";
 
-import Checkbox from ".";
-import { CheckboxProps } from "./checkbox.types";
+import Checkbox from "./checkbox.component";
 
 const DATA_IDS = {
   label: "checkbox-label",

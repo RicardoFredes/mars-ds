@@ -1,13 +1,14 @@
-import { SelectFieldOption, SelectFieldProps } from ".";
+import type { SelectFieldOption, SelectFieldProps } from "./select-field.types";
+import type React from "react";
+
 import classNames from "classnames";
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-import TextField from "@/components/forms/TextField";
 import DropdownMenu from "@/components/basics/DropdownMenu";
+import TextField from "@/components/forms/TextField";
 import Text from "@/components/typographics/Text";
-
-import { generateHash } from "@/services/hash";
 import { mathQuery } from "@/services/compare";
+import { generateHash } from "@/services/hash";
 
 const emptyOption: SelectFieldOption = { label: "", value: undefined };
 const ITEM_CLASS_NAME = "select-field__options-item";

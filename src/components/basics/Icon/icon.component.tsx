@@ -1,6 +1,8 @@
+import type { IconProps } from ".";
+
 import classNames from "classnames";
 
-import { IconProps, IconSizes } from ".";
+import { IconSizes } from "./icon.types";
 import icons from "./lib";
 
 const Icon = ({ name, size = IconSizes.Medium, className, color, style, ...props }: IconProps) => {

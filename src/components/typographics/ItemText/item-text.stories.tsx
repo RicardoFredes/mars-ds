@@ -1,5 +1,6 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import ItemText from ".";
+
+import ItemText from "./item-text.component";
 
 export default {
   title: "Typographics/ItemText",

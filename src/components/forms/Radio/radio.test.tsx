@@ -1,5 +1,7 @@
+import type { RadioProps } from "./radio.types";
+
 import { render, fireEvent } from "@testing-library/react";
-import { RadioProps } from ".";
+
 import Radio from "./radio.component";
 
 const defaultProps = {

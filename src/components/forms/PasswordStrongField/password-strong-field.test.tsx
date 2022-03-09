@@ -1,6 +1,8 @@
+import type { PasswordStrongFieldProps } from "./password-strong-field.types";
+
 import { render } from "@testing-library/react";
-import PasswordStrongField from ".";
-import { PasswordStrongFieldProps } from "./password-strong-field.types";
+
+import PasswordStrongField from "./password-strong-field.component";
 
 const makeSut = (props?: PasswordStrongFieldProps) =>
   render(<PasswordStrongField label="Senha" {...props} />);

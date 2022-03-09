@@ -1,7 +1,9 @@
-import { FormWithSubmitButtonProps } from "./form-with-submit-button.types";
+import type { FormWithSubmitButtonProps } from "./form-with-submit-button.types";
+import type { FormEvent } from "react";
+
 import classNames from "classnames";
-import SubmitButton from "@/components/forms/SubmitButton/submit-button.component";
-import { FormEvent } from "react";
+
+import SubmitButton from "@/components/forms/SubmitButton";
 
 const FormWithSubmitButton = ({
   children,

@@ -1,7 +1,7 @@
-import { AccordionProps } from "./";
+import type { AccordionProps } from "./accordion.types";
 
-import { useEffect, useRef, useState } from "react";
 import classNames from "classnames";
+import { useEffect, useRef, useState } from "react";
 
 import AccordionHeaderDefault from "./accordion-header-default";
 

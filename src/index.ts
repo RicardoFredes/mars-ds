@@ -46,8 +46,8 @@ export * from "./components/basics/DropdownMenuItem/dropdown-menu-item.types";
 export { default as Icon } from "./components/basics/Icon/icon.component";
 export * from "./components/basics/Icon/icon.types";
 
-export { default as ItemButton } from "./components/basics/ItemButton/ItemButton.component";
-export * from "./components/basics/ItemButton/ItemButton.types";
+export { default as ItemButton } from "./components/basics/ItemButton/item-button.component";
+export * from "./components/basics/ItemButton/item-button.types";
 
 export { default as ItemElement } from "./components/basics/ItemElement/item-element.component";
 export * from "./components/basics/ItemElement/item-element.types";
@@ -67,11 +67,12 @@ export * from "./components/basics/Logo/logo.types";
 export { default as Modal } from "./components/basics/Modal/modal.component";
 export * from "./components/basics/Modal/modal.types";
 
-export { default as Notification } from "./components/basics/Notification/Notification.component";
-export * from "./components/basics/Notification/Notification.types";
+export { default as Notification } from "./components/basics/Notification/notification.component";
+export * from "./components/basics/Notification/notification.types";
 
 export { default as Pagination } from "./components/basics/Pagination/pagination.component";
 export * from "./components/basics/Pagination/pagination.types";
+
 export { default as ProgressIndicator } from "./components/basics/ProgressIndicator/progress-indicator.component";
 export * from "./components/basics/ProgressIndicator/progress-indicator.types";
 
@@ -138,8 +139,8 @@ export * from "./components/typographics/Display/display.types";
 export { default as Heading } from "./components/typographics/Heading/heading.component";
 export * from "./components/typographics/Heading/heading.types";
 
-export { default as ItemText } from "./components/typographics/ItemText/ItemText.component";
-export * from "./components/typographics/ItemText/ItemText.types";
+export { default as ItemText } from "./components/typographics/ItemText/item-text.component";
+export * from "./components/typographics/ItemText/item-text.types";
 
 export { default as List } from "./components/typographics/List/list.component";
 export * from "./components/typographics/List/list.types";

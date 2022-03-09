@@ -1,5 +1,8 @@
+import type { LoaderProps } from "./loader.types";
+
 import classNames from "classnames";
-import { LoaderProps, LoaderSizes } from "./loader.types";
+
+import { LoaderSizes } from "./loader.types";
 
 const Loader = ({ className, size = LoaderSizes.Small, color }: LoaderProps) => {
   const cn = classNames("loader", className, { [`loader--${size}`]: size });

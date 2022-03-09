@@ -1,11 +1,13 @@
+import type { ModalChildProps } from "./modal.types";
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import Button, { ButtonVariants } from "@/components/basics/Button";
 
+import Button, { ButtonVariants } from "@/components/basics/Button";
 import Caption from "@/components/typographics/Caption";
 import Heading, { HeadingSizes } from "@/components/typographics/Heading";
 import Text from "@/components/typographics/Text";
-import Modal from "./";
-import { ModalChildProps, ModalSizes } from "./modal.types";
+
+import Modal from "./modal.component";
+import { ModalSizes } from "./modal.types";
 
 export default {
   title: "Components/Modal",

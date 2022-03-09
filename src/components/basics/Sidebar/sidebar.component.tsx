@@ -1,6 +1,7 @@
+import type { SidebarItemProps, SidebarProps } from "./sidebar.types";
+
 import classNames from "classnames";
 
-import { SidebarItemProps, SidebarProps } from "./sidebar.types";
 import Avatar from "@/components/basics/Avatar";
 import Button, { ButtonSizes, ButtonVariants } from "@/components/basics/Button";
 import Card from "@/components/basics/Card";

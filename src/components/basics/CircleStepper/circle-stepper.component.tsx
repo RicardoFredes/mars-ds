@@ -1,7 +1,8 @@
 import classNames from "classnames";
-import { StepperProps } from "@/components/basics/Stepper";
-import Heading, { HeadingSizes } from "@/components/typographics/Heading";
+
+import type { StepperProps } from "@/components/basics/Stepper";
 import Caption from "@/components/typographics/Caption";
+import Heading, { HeadingSizes } from "@/components/typographics/Heading";
 import Text from "@/components/typographics/Text";
 
 const CircleStepper = ({ position, steps, className, ...props }: StepperProps) => {

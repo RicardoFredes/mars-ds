@@ -4,6 +4,6 @@
  * because it is automatically generated
  */
 
-import ItemButton from "./ItemButton.component";
+import ItemButton from "./item-button.component";
 export default ItemButton;
-export * from "./ItemButton.types";
+export * from "./item-button.types";

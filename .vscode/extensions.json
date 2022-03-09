@@ -4,7 +4,6 @@
     "orta.vscode-jest",
     "editorconfig.editorconfig",
     "esbenp.prettier-vscode",
-    "christian-kohler.path-intellisense",
     "mrmlnc.vscode-scss"
   ]
 }

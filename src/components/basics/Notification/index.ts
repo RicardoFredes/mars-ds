@@ -4,6 +4,6 @@
  * because it is automatically generated
  */
 
-import Notification from "./Notification.component";
+import Notification from "./notification.component";
 export default Notification;
-export * from "./Notification.types";
+export * from "./notification.types";

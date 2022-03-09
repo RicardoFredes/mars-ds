@@ -1,7 +1,10 @@
-import { useState } from "react";
+import type { RadioFieldsProps } from "./radio-fields.types";
+
 import classNames from "classnames";
-import Radio, { RadioOption } from "@/components/forms/Radio";
-import { RadioFieldsProps } from "./";
+import { useState } from "react";
+
+import type { RadioOption } from "@/components/forms/Radio";
+import Radio from "@/components/forms/Radio";
 
 const emptyOption: RadioOption = { value: undefined, label: undefined };
 

@@ -1,4 +1,4 @@
-import { IconLibProps } from "..";
+import type { IconLibProps } from "..";
 
 const Apostila = ({ height = 24, width = 24 }: IconLibProps) => {
   return (

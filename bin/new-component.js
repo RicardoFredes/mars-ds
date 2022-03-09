@@ -107,7 +107,7 @@ function typesTemplate(name, pathName) {
 function testTemplate(name, pathName) {
   const typeName = `${name}Props`;
   return `import { render } from "@testing-library/react";
-import ${name} from ".";
+import ${name} from "./${pathName}.component";
 import { ${typeName} } from "./${pathName}.types";
 
 const makeSut = (props?: ${typeName}) => render(<${name} {...props} />);

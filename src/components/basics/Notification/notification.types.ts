@@ -1,5 +1,6 @@
-import { CardProps } from "@/components/basics/Card/card.types";
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
+
+import type { CardProps } from "@/components/basics/Card/card.types";
 
 export interface NotificationProps extends Omit<CardProps, "variant" | "content"> {
   variant?: typeof NotificationVariants[keyof typeof NotificationVariants];

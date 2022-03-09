@@ -1,4 +1,4 @@
-import { PasswordFieldProps } from "@/components/forms/PasswordField";
+import type { PasswordFieldProps } from "@/components/forms/PasswordField";
 
 export interface PasswordStrongFieldProps extends Omit<PasswordFieldProps, "info" | "label"> {
   defaultValue?: string;

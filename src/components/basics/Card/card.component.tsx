@@ -1,4 +1,4 @@
-import { CardProps } from "./";
+import type { CardProps } from "./card.types";
 
 import classNames from "classnames";
 

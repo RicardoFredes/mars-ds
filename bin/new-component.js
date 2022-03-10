@@ -73,11 +73,13 @@ function createNewComponent(pathName) {
 
 function componentTemplate(name, pathName) {
   const typeName = `${name}Props`;
-  return `import { ${typeName} } from "./${pathName}.types";
+  return `import type { ${typeName} } from "./${pathName}.types";
+
 import classNames from "classnames";
 
 const ${name} = ({ className, children, ...props }: ${typeName}) => {
   const cn = classNames("${pathName}", className);
+
   return (
     <div className={cn} {...props}>
       {children}
@@ -106,9 +108,11 @@ function typesTemplate(name, pathName) {
 
 function testTemplate(name, pathName) {
   const typeName = `${name}Props`;
-  return `import { render } from "@testing-library/react";
+  return `import type { ${typeName} } from "./${pathName}.types";
+
+import { render } from "@testing-library/react";
+
 import ${name} from "./${pathName}.component";
-import { ${typeName} } from "./${pathName}.types";
 
 const makeSut = (props?: ${typeName}) => render(<${name} {...props} />);
 
@@ -118,12 +122,13 @@ describe("<${name}>", () => {
     expect(wrapper).toBeTruthy();
   });
 });
-`
+`;
 }
 
 function storiesTemplate(name, pathName) {
   return `import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import ${name} from "./";
+
+import ${name} from "./${pathName}.component";
 
 export default {
   title: "Components/${name}",

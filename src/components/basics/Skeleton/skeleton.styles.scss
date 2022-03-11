@@ -1,12 +1,29 @@
 .skeleton {
-  &--is-active {
-    background-color: $color-neutral-300;
-    border-radius: $border-radius-sm;
-    min-height: $border-radius-lg;
-    .skeleton-container {
-      visibility: hidden;
+  display: block;
+  min-height: 16px;
+  min-width: 16px;
+  background-color: $color-neutral-300;
+  border-radius: $border-radius-sm;
+  min-height: $border-radius-lg;
+  animation: animation-skeleton 1.5s linear infinite;
+
+  &-container {
+    visibility: hidden;
+  }
+
+  &--is-circle {
+    min-height: 64px;
+    min-width: 64px;
+    border-radius: 50%;
+  }
+
+  &--is-paragraph {
+    border-radius: $border-radius-xs;
+    min-height: 6px;
+
+    + .skeleton--is-paragraph {
+      margin-top: $spacing-sm;
     }
-    animation: animation-skeleton 1.5s linear infinite;
   }
 }
 

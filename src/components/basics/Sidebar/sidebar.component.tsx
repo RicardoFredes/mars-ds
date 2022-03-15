@@ -3,27 +3,30 @@ import type { SidebarItemProps, SidebarProps } from "./sidebar.types";
 import classNames from "classnames";
 
 import Avatar from "@/components/basics/Avatar";
-import Button, { ButtonSizes, ButtonVariants } from "@/components/basics/Button";
 import Card from "@/components/basics/Card";
+import Link from "@/components/basics/Link";
 import Logo from "@/components/basics/Logo";
 import ToggleButton from "@/components/basics/ToggleButton";
 import Subtitle from "@/components/typographics/Subtitle";
+import Icon from "../Icon";
 
 const Sidebar = ({
   className,
-  user,
+  currentPathname,
+  user = {},
   sidebarList,
-  onLogoClick,
   onCloseClick,
-  onProfileClick,
+  links = {},
+  LinkComponent,
   ...props
 }: SidebarProps) => {
   const cn = classNames("sidebar", className);
-
   return (
     <aside className={cn} {...props}>
       <header className="sidebar__header">
-        <Logo height={32} className="sidebar__logo" onClick={onLogoClick} />
+        <Link as={LinkComponent} className="sidebar__logo" href={links.brand}>
+          <Logo height={32} />
+        </Link>
         <ToggleButton
           variant="text"
           iconName="close"
@@ -37,14 +40,18 @@ const Sidebar = ({
         <Avatar
           data-testid="sidebar__user-avatar"
           className="sidebar__profile-container__avatar"
-          thumbnail={user?.image}
-          name={user?.name}
+          thumbnail={user.image}
+          name={user.name}
         />
         <div className="flex-column align-items-start">
-          <Subtitle data-testid="sidebar__user-name">{user?.name}</Subtitle>
-          <button onClick={onProfileClick} className="sidebar__profile-container__profile-link">
+          <Subtitle data-testid="sidebar__user-name">{user.name}</Subtitle>
+          <Link
+            as={LinkComponent}
+            href={links.profile}
+            className="sidebar__profile-container__profile-link"
+          >
             Ver perfil
-          </button>
+          </Link>
         </div>
       </Card>
 
@@ -53,11 +60,13 @@ const Sidebar = ({
           <p className="sidebar__list-title" data-testid="sidebar__title">
             {label}
           </p>
-          {items.map((sidebarItem, index) => (
+          {items.map((item, index) => (
             <SidebarItem
-              key={`sidebar-item-${index}`}
-              {...sidebarItem}
+              as={LinkComponent}
               data-testid="sidebar__item"
+              key={`sidebar-item-${index}`}
+              isActive={isItemActive(item.href, currentPathname)}
+              {...item}
             />
           ))}
         </div>
@@ -66,27 +75,32 @@ const Sidebar = ({
   );
 };
 
-export default Sidebar;
+const isItemActive = (pathname = "", reference = "") => {
+  if (/^https?/.test(pathname)) return false;
+  const [p1, p2] = removeFirstSlash(pathname).split("/");
+  const [r1, r2] = removeFirstSlash(reference).split("/");
+  const active1 = p1 === r1;
+  if (!p2) return active1;
+  const active2 = p2 === r2;
+  return active1 && active2;
+};
+
+const removeFirstSlash = (pathname: string) => (pathname[0] === "/" ? pathname.slice(1) : pathname);
 
 const SidebarItem = ({
   label,
-  icon,
+  iconName = "square",
   className,
   isActive = false,
-  onClick,
   ...props
 }: SidebarItemProps) => {
   const cn = classNames("sidebar-item", { "sidebar-item--is-active": isActive }, className);
-
   return (
-    <Button
-      variant={ButtonVariants.Text}
-      className={cn}
-      iconName={icon.name}
-      size={ButtonSizes.Medium}
-      label={label}
-      onClick={onClick}
-      {...props}
-    />
+    <Link className={cn} {...props}>
+      <Icon name={iconName} />
+      {label}
+    </Link>
   );
 };
+
+export default Sidebar;

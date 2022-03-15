@@ -29,15 +29,8 @@
       flex-direction: column;
     }
 
-    &__profile-link {
+    &__profile-link.link {
       color: $color-neutral-900;
-      border: 0;
-      background: none;
-      padding: 0;
-      cursor: pointer;
-      &:hover {
-        text-decoration: underline;
-      }
     }
   }
 
@@ -56,15 +49,15 @@
 
 .sidebar-item {
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   height: 52px;
   cursor: pointer;
 
   padding: 14px 0;
   padding-left: $spacing-lg;
 
-  border-radius: 0;
-
-  justify-content: flex-start;
   gap: $spacing-lg;
 
   color: $color-neutral-900;
@@ -72,17 +65,12 @@
   font-size: 1em;
   font-weight: 400;
 
-  &:hover {
-    text-decoration: underline;
-  }
-
-  &__label,
   .icon {
     pointer-events: none;
-  }
-
-  .icon {
     color: $color-neutral-700;
+  }
+  &:not(.sidebar-item--is-active):hover {
+    background-color: $color-neutral-ghost;
   }
 
   &--is-active {
@@ -102,9 +90,6 @@
       background-color: $color-primary-500;
       border-top-left-radius: $border-radius-xs;
       border-bottom-left-radius: $border-radius-xs;
-    }
-    &:hover {
-      background-color: $color-primary-ghost;
     }
 
     .icon {

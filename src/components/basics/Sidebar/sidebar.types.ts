@@ -1,25 +1,35 @@
-import type { ButtonProps } from "@/components/basics/Button";
-import type { IconProps } from "@/components/basics/Icon";
+import type { LinkProps } from "@/components/basics/Link";
 
 export interface SidebarProps extends React.HTMLProps<HTMLDivElement> {
   sidebarList: SidebarList;
+  LinkComponent?: React.ElementType | string;
+  currentPathname?: string;
   user?: {
     name?: string;
     image?: string;
   };
-  onLogoClick?: () => void;
-  onCloseClick?: () => void;
-  onProfileClick?: () => void;
+  links?: {
+    profile?: string;
+    brand?: string;
+  };
+  onCloseClick?: VoidFunction;
 }
 
 export type SidebarList = SidebarListItem[];
 
 export interface SidebarListItem {
   label: string;
-  items: SidebarItemProps[];
+  items: SidebarItem[];
 }
 
-export interface SidebarItemProps extends ButtonProps {
-  icon: IconProps;
+export interface SidebarItem {
+  iconName?: string;
+  label?: string;
+  href?: string;
+  target?: string;
+  [props: string]: any;
+}
+
+export interface SidebarItemProps extends LinkProps, SidebarItem {
   isActive?: boolean;
 }

@@ -12,12 +12,7 @@ const DATA_IDS = {
   avatar: "sidebar__user-avatar",
 };
 
-const sidebarItemClasses = {
-  default: "btn btn--text btn--size-md sidebar-item",
-  active: "btn btn--text btn--size-md sidebar-item--is-active",
-};
-
-const makeSut = (props?: SidebarProps) =>
+const makeSut = (props?: Partial<SidebarProps>) =>
   render(
     <Sidebar
       sidebarList={defaultSidebarList}
@@ -41,16 +36,10 @@ describe("<Sidebar>", () => {
     expect(userName.textContent).toBe("Artur Monteiro");
   });
 
-  it("should render the sidebar component with the third sidebar item active", () => {
-    const wrapper = makeSut();
-    const sidebarItems = wrapper.getAllByTestId(DATA_IDS.item);
-    for (let i = 0; i < sidebarItems.length; i++) {
-      if (i !== 2) {
-        expect(sidebarItems[i]?.className).toBe(sidebarItemClasses.default);
-      } else {
-        expect(sidebarItems[i]?.className).toContain("--is-active");
-      }
-    }
+  it("should mark item as active if its href matches with currentPathname", () => {
+    const { getByText } = makeSut({ currentPathname: "/mentorias" });
+    const item = getByText("Mentorias");
+    expect(item.className).toContain("--is-active");
   });
 
   it("should have at least 1 title", () => {

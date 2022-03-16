@@ -34,7 +34,12 @@ const Modal = ({ className, close, children, size = ModalSizes.Medium, ...props 
         elevation={CardElevations.XXHigh}
         {...props}
       >
-        <ToggleButton iconName="close" onClick={handleClose} className="modal__close-icon" />
+        <ToggleButton
+          autoFocus
+          iconName="close"
+          onClick={handleClose}
+          className="modal__close-icon"
+        />
         <div className="modal__content">{children}</div>
       </Card>
     </div>

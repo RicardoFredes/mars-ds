@@ -1,7 +1,7 @@
 import type { CheckboxProps } from "./checkbox.types";
 
 import classNames from "classnames";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Icon from "@/components/basics/Icon";
 import Text, { TextSizes } from "@/components/typographics/Text";
@@ -20,6 +20,10 @@ const Checkbox = ({
     { "checkbox--is-checked": checked },
     { "checkbox--is-disabled": disabled },
   ]);
+
+  useEffect(() => {
+    setChecked(defaultChecked);
+  }, [defaultChecked]);
 
   const handleChange = () => {
     if (!disabled) setChecked(!checked);

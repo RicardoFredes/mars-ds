@@ -1,11 +1,13 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import Skeleton from "./skeleton.component";
-import { SkeletonVariants } from "./skeleton.types";
-import Card from "../Card";
-import Button from "../Button";
-import Avatar from "../Avatar";
+
 import Subtitle from "@/components/typographics/Subtitle";
 import Text from "@/components/typographics/Text";
+
+import Avatar from "../Avatar";
+import Button from "../Button";
+import Card from "../Card";
+import Skeleton from "./skeleton.component";
+import { SkeletonVariants } from "./skeleton.types";
 
 export default {
   title: "Components/Skeleton",

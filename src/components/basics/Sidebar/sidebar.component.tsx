@@ -8,6 +8,8 @@ import Link from "@/components/basics/Link";
 import Logo from "@/components/basics/Logo";
 import ToggleButton from "@/components/basics/ToggleButton";
 import Subtitle from "@/components/typographics/Subtitle";
+
+import Button, { ButtonVariants } from "../Button";
 import Icon from "../Icon";
 
 const Sidebar = ({
@@ -21,10 +23,13 @@ const Sidebar = ({
   ...props
 }: SidebarProps) => {
   const cn = classNames("sidebar", className);
+  const defaultLoginLink = "https://mesalva.com/entrar";
+  const defaultSignUpLink = "https://mesalva.com/cadastro";
+
   return (
     <aside className={cn} {...props}>
       <header className="sidebar__header">
-        <Link as={LinkComponent} className="sidebar__logo" href={links.brand}>
+        <Link as={LinkComponent} className="sidebar__logo" {...links.brand}>
           <Logo height={32} />
         </Link>
         <ToggleButton
@@ -36,24 +41,47 @@ const Sidebar = ({
         />
       </header>
 
-      <Card className="sidebar__profile-container">
-        <Avatar
-          data-testid="sidebar__user-avatar"
-          className="sidebar__profile-container__avatar"
-          thumbnail={user.image}
-          name={user.name}
-        />
-        <div className="flex-column align-items-start">
-          <Subtitle data-testid="sidebar__user-name">{user.name}</Subtitle>
-          <Link
+      {!user.guest ? (
+        <Card className="sidebar__profile-container">
+          <Avatar
+            data-testid="sidebar__user-avatar"
+            className="sidebar__profile-container__avatar"
+            thumbnail={user.image}
+            name={user.name}
+          />
+          <div className="flex-column align-items-start">
+            <Subtitle data-testid="sidebar__user-name">{user.name}</Subtitle>
+            <Link
+              as={LinkComponent}
+              className="sidebar__profile-container__profile-link"
+              {...links.profile}
+            >
+              Ver perfil
+            </Link>
+          </div>
+        </Card>
+      ) : (
+        <div className="sidebar__guest">
+          <Button
             as={LinkComponent}
-            href={links.profile}
-            className="sidebar__profile-container__profile-link"
-          >
-            Ver perfil
-          </Link>
+            label="Cadastrar"
+            className="sidebar__guest__button"
+            href={defaultSignUpLink}
+            id="sidebar-signup-button"
+            {...links.signup}
+          />
+
+          <Button
+            as={LinkComponent}
+            label="Entrar"
+            className="sidebar__guest__button"
+            variant={ButtonVariants.Secondary}
+            href={defaultLoginLink}
+            id="sidebar-login-button"
+            {...links.login}
+          />
         </div>
-      </Card>
+      )}
 
       {sidebarList.map(({ label, items }) => (
         <div key={label}>

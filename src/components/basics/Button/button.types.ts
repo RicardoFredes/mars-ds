@@ -1,3 +1,5 @@
+import type { LinkProps } from "./../Link/link.types";
+
 import { Sizes, Variants } from "@/types";
 
 const { Small, Medium } = Sizes;
@@ -12,10 +14,12 @@ export enum ButtonTypes {
 
 export type ButtonKeyTypes = "button" | "submit" | "reset";
 
-export interface ButtonProps extends Omit<React.HTMLProps<HTMLButtonElement>, "as" | "size"> {
+export interface ButtonProps
+  extends Omit<React.HTMLProps<HTMLButtonElement & LinkProps>, "as" | "size"> {
   variant?: typeof ButtonVariants[keyof typeof ButtonVariants];
   label?: string;
   size?: typeof ButtonSizes[keyof typeof ButtonSizes];
   iconName?: string;
   type?: ButtonKeyTypes;
+  as?: React.ElementType | string;
 }

@@ -91,4 +91,11 @@ describe("<Button>", () => {
     expect(icon.textContent).toBe(iconName);
     expect(icon.getAttribute("data-size")).toBe(size);
   });
+
+  it("should render link component when href is on props", () => {
+    const { getByTestId } = makeSut({ href: "https://mesalva.com" });
+    const { tagName } = getByTestId(buttonDataTestId);
+    const tag = tagName.toLowerCase();
+    expect(tag).toEqual("a");
+  });
 });

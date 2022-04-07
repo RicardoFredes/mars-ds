@@ -1,3 +1,4 @@
+import type { LinkProps } from "../Link";
 import type { ButtonProps } from "./button.types";
 import type { MouseEvent } from "react";
 
@@ -6,6 +7,7 @@ import { useState } from "react";
 
 import Icon from "@/components/basics/Icon";
 
+import Link from "../Link";
 import { ButtonSizes, ButtonTypes, ButtonVariants } from "./button.types";
 
 const Button = ({
@@ -17,11 +19,13 @@ const Button = ({
   type = ButtonTypes.Button,
   variant = ButtonVariants.Primary,
   size = ButtonSizes.Medium,
+  as,
   ...props
 }: ButtonProps) => {
   const [isPressed, setIsPressed] = useState(false);
+  const Component = as || props.href ? Link : "button";
 
-  const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
+  const handleClick = (event: MouseEvent<HTMLButtonElement & LinkProps>) => {
     if (props.disabled) return;
     setIsPressed(true);
     onClick?.(event);
@@ -38,7 +42,7 @@ const Button = ({
   const text = label || children;
 
   return (
-    <button
+    <Component
       className={cn}
       onClick={handleClick}
       type={type}
@@ -47,7 +51,7 @@ const Button = ({
     >
       {iconName && <Icon className="btn__icon" name={iconName} size={size} />}
       {text && <span className="btn__content">{text}</span>}
-    </button>
+    </Component>
   );
 };
 

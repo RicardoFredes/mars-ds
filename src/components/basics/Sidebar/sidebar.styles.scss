@@ -34,6 +34,16 @@
     }
   }
 
+  &__guest {
+    display: flex;
+    padding: $spacing-md $spacing-lg;
+    gap: $spacing-sm;
+
+    &__button {
+      flex: 1;
+    }
+  }
+
   &__list-title {
     text-transform: uppercase;
     margin-top: $spacing-xl;

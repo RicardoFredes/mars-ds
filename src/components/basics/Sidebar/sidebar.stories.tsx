@@ -22,10 +22,19 @@ const DefaultArgs = {
   },
   currentPathname: "simulados",
   links: {
-    profile: "#profile",
-    brand: "#brand",
+    profile: { href: "#profile" },
+    brand: { href: "#brand" },
   },
 };
 
 export const Default = Template.bind({});
 Default.args = DefaultArgs;
+
+export const Guest = Template.bind({});
+Guest.args = {
+  ...DefaultArgs,
+  user: {
+    ...DefaultArgs.user,
+    guest: true,
+  },
+};

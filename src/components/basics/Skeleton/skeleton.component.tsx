@@ -1,6 +1,7 @@
 import type { SkeletonProps } from "./skeleton.types";
 
 import classNames from "classnames";
+
 import { SkeletonVariants } from "./skeleton.types";
 
 const Skeleton = ({

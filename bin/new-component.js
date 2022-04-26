@@ -6,7 +6,7 @@ const PATH_COMPONENT = "./src/components";
 
 const TEMPLATE_MAPPER = [
   [".component.tsx", componentTemplate],
-  [".module.scss", styleTemplate],
+  [".styles.scss", styleTemplate],
   [".stories.tsx", storiesTemplate],
   [".types.ts", typesTemplate],
   [".test.tsx", testTemplate],

@@ -18,6 +18,7 @@ export interface SidebarProps extends React.HTMLProps<HTMLDivElement> {
     signup?: ButtonProps;
   };
   onCloseClick?: VoidFunction;
+  fetching: boolean;
 }
 
 export type SidebarList = SidebarListItem[];

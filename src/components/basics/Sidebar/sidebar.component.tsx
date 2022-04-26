@@ -9,8 +9,9 @@ import Logo from "@/components/basics/Logo";
 import ToggleButton from "@/components/basics/ToggleButton";
 import Subtitle from "@/components/typographics/Subtitle";
 
-import Button, { ButtonVariants } from "../Button";
+import GuestButtons from "../GuestButtons";
 import Icon from "../Icon";
+import SidebarSkeleton from "./sidebar-skeleton.component";
 
 const Sidebar = ({
   className,
@@ -20,11 +21,10 @@ const Sidebar = ({
   onCloseClick,
   links = {},
   LinkComponent,
+  fetching,
   ...props
 }: SidebarProps) => {
-  const cn = classNames("sidebar", className);
-  const defaultLoginLink = "https://mesalva.com/entrar";
-  const defaultSignUpLink = "https://mesalva.com/cadastro";
+  const cn = classNames("sidebar", { "pb-xl": fetching }, className);
 
   return (
     <aside className={cn} {...props}>
@@ -40,65 +40,56 @@ const Sidebar = ({
           onClick={onCloseClick}
         />
       </header>
-
-      {!user.guest ? (
-        <Card className="sidebar__profile-container">
-          <Avatar
-            data-testid="sidebar__user-avatar"
-            className="sidebar__profile-container__avatar"
-            thumbnail={user.image}
-            name={user.name}
-          />
-          <div className="flex-column align-items-start">
-            <Subtitle data-testid="sidebar__user-name">{user.name}</Subtitle>
-            <Link
-              as={LinkComponent}
-              className="sidebar__profile-container__profile-link"
-              {...links.profile}
-            >
-              Ver perfil
-            </Link>
-          </div>
-        </Card>
+      {fetching ? (
+        <SidebarSkeleton user={user} links={links} LinkComponent={LinkComponent} />
       ) : (
-        <div className="sidebar__guest">
-          <Button
-            as={LinkComponent}
-            label="Cadastrar"
-            className="sidebar__guest__button"
-            href={defaultSignUpLink}
-            id="sidebar-signup-button"
-            {...links.signup}
-          />
-
-          <Button
-            as={LinkComponent}
-            label="Entrar"
-            className="sidebar__guest__button"
-            variant={ButtonVariants.Secondary}
-            href={defaultLoginLink}
-            id="sidebar-login-button"
-            {...links.login}
-          />
-        </div>
-      )}
-
-      {sidebarList.map(({ label, items }) => (
-        <div key={label}>
-          <p className="sidebar__list-title" data-testid="sidebar__title">
-            {label}
-          </p>
-          {items.map((item, index) => (
-            <SidebarItem
-              as={LinkComponent}
-              data-testid="sidebar__item"
-              key={`sidebar-item-${index}`}
-              isActive={isItemActive(item.href, currentPathname)}
-              {...item}
+        <>
+          {!user.guest ? (
+            <Card className="sidebar__profile-container">
+              <Avatar
+                data-testid="sidebar__user-avatar"
+                className="sidebar__profile-container__avatar"
+                thumbnail={user.image}
+                name={user.name}
+              />
+              <div className="flex-column align-items-start">
+                <Subtitle data-testid="sidebar__user-name">{user.name}</Subtitle>
+                <Link
+                  as={LinkComponent}
+                  className="sidebar__profile-container__profile-link"
+                  {...links.profile}
+                >
+                  Ver perfil
+                </Link>
+              </div>
+            </Card>
+          ) : (
+            <GuestButtons
+              LinkComponent={LinkComponent}
+              links={links}
+              className="sidebar__guest"
+              data-testid="sidebar__guest"
             />
+          )}
+
+          {sidebarList.map(({ label, items }) => (
+            <div key={label}>
+              <p className="sidebar__list-title" data-testid="sidebar__title">
+                {label}
+              </p>
+              {items.map((item, index) => (
+                <SidebarItem
+                  as={LinkComponent}
+                  data-testid="sidebar__item"
+                  key={`sidebar-item-${index}`}
+                  isActive={isItemActive(item.href, currentPathname)}
+                  {...item}
+                />
+              ))}
+            </div>
           ))}
-        </div>
-      ))}
+        </>
+      )}
     </aside>
   );
 };

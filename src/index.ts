@@ -43,6 +43,9 @@ export * from "./components/basics/DropdownMenu/dropdown-menu.types";
 export { default as DropdownMenuItem } from "./components/basics/DropdownMenuItem/dropdown-menu-item.component";
 export * from "./components/basics/DropdownMenuItem/dropdown-menu-item.types";
 
+export { default as GuestButtons } from "./components/basics/GuestButtons/guest-buttons.component";
+export * from "./components/basics/GuestButtons/guest-buttons.types";
+
 export { default as Icon } from "./components/basics/Icon/icon.component";
 export * from "./components/basics/Icon/icon.types";
 
@@ -78,6 +81,8 @@ export * from "./components/basics/ProgressIndicator/progress-indicator.types";
 
 export { default as RatingStar } from "./components/basics/RatingStar/rating-star.component";
 export * from "./components/basics/RatingStar/rating-star.types";
+
+export { default as SidebarSkeleton } from "./components/basics/Sidebar/sidebar-skeleton.component";
 
 export { default as Sidebar } from "./components/basics/Sidebar/sidebar.component";
 export * from "./components/basics/Sidebar/sidebar.types";

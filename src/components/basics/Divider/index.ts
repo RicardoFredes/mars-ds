@@ -5,6 +5,5 @@
  */
 
 import Divider from "./divider.component";
-
 export default Divider;
 export * from "./divider.types";

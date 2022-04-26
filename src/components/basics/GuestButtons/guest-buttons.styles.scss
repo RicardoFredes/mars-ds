@@ -1,0 +1,9 @@
+.guest-buttons {
+  display: flex;
+  padding: $spacing-md $spacing-lg;
+  gap: $spacing-sm;
+
+  &__button {
+    flex: 1;
+  }
+}

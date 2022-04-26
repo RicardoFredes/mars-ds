@@ -8,6 +8,7 @@ export default {
   component: Sidebar,
   argTypes: {
     user: { control: { type: "string" } },
+    fetching: { control: { type: "boolean" } },
   },
 } as ComponentMeta<typeof Sidebar>;
 
@@ -37,4 +38,20 @@ Guest.args = {
     ...DefaultArgs.user,
     guest: true,
   },
+};
+
+export const Skeleton = Template.bind({});
+Skeleton.args = {
+  ...DefaultArgs,
+
+  fetching: true,
+};
+export const SkeletonGuest = Template.bind({});
+SkeletonGuest.args = {
+  ...DefaultArgs,
+  user: {
+    ...DefaultArgs.user,
+    guest: true,
+  },
+  fetching: true,
 };

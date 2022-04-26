@@ -102,7 +102,7 @@ function getComponentsAndTypes(list = []) {
 
 function getStylesFiles(list = []) {
   return list.reduce((acc, path) => {
-    if (/module.scss/.test(path)) {
+    if (/styles.scss/.test(path)) {
       acc.push(`@import ".${path}";`);
     }
     return acc;

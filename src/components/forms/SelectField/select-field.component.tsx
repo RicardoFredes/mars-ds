@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 
 import DropdownMenu from "@/components/basics/DropdownMenu";
 import TextField from "@/components/forms/TextField";
-import Text from "@/components/typographics/Text";
+import Text from "@/components/typographies/Text";
 import { mathQuery } from "@/services/compare";
 import { generateHash } from "@/services/hash";
 

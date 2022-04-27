@@ -4,7 +4,7 @@ import classNames from "classnames";
 import { useEffect, useState } from "react";
 
 import Icon from "@/components/basics/Icon";
-import Text, { TextSizes } from "@/components/typographics/Text";
+import Text, { TextSizes } from "@/components/typographies/Text";
 
 const Checkbox = ({
   className,

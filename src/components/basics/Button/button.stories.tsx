@@ -1,6 +1,6 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import icons from "@/components/basics/Icon";
+import icons from "@/components/basics/Icon/lib";
 
 import Button from "./button.component";
 import { ButtonSizes, ButtonVariants } from "./button.types";
@@ -17,9 +17,12 @@ export default {
       options: ButtonSizes,
       control: { type: "select" },
     },
-    name: {
+    iconName: {
       options: Object.keys(icons),
       control: { type: "select" },
+    },
+    href: {
+      control: { type: "text" },
     },
   },
 } as ComponentMeta<typeof Button>;
@@ -77,4 +80,11 @@ IconSmallSize.args = {
   ...DefaultArgs,
   iconName: "me-salva-mini",
   size: ButtonSizes.Small,
+};
+
+export const Anchor = TemplateList.bind({});
+Anchor.args = {
+  ...DefaultArgs,
+  onClick: (e) => e.preventDefault(),
+  href: "https://www.mesalva.com",
 };

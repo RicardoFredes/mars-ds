@@ -1,4 +1,4 @@
-import type { TextProps } from "@/components/typographics/Text";
+import type { TextProps } from "@/components/typographies/Text";
 
 export const ItemElementVariants = {
   Default: "default",

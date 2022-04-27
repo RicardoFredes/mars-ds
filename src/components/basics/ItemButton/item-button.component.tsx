@@ -5,8 +5,8 @@ import classNames from "classnames";
 import Icon from "@/components/basics/Icon";
 import Label from "@/components/basics/Label";
 import Link from "@/components/basics/Link";
-import Caption from "@/components/typographics/Caption";
-import Subtitle from "@/components/typographics/Subtitle";
+import Caption from "@/components/typographies/Caption";
+import Subtitle from "@/components/typographies/Subtitle";
 import Tokens from "@/tokens";
 
 const ItemButton = ({

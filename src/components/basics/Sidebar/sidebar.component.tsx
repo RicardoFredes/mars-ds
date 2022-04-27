@@ -4,13 +4,13 @@ import classNames from "classnames";
 
 import Avatar from "@/components/basics/Avatar";
 import Card from "@/components/basics/Card";
+import GuestButtons from "@/components/basics/GuestButtons";
+import Icon from "@/components/basics/Icon";
 import Link from "@/components/basics/Link";
 import Logo from "@/components/basics/Logo";
 import ToggleButton from "@/components/basics/ToggleButton";
-import Subtitle from "@/components/typographics/Subtitle";
+import Subtitle from "@/components/typographies/Subtitle";
 
-import GuestButtons from "../GuestButtons";
-import Icon from "../Icon";
 import SidebarSkeleton from "./sidebar-skeleton.component";
 
 const Sidebar = ({

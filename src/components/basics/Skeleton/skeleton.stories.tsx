@@ -1,7 +1,7 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import Subtitle from "@/components/typographics/Subtitle";
-import Text from "@/components/typographics/Text";
+import Subtitle from "@/components/typographies/Subtitle";
+import Text from "@/components/typographies/Text";
 
 import Avatar from "../Avatar";
 import Button from "../Button";

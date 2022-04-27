@@ -1,5 +1,5 @@
-import Caption from "@/components/typographics/Caption";
-import Subtitle from "@/components/typographics/Subtitle";
+import Caption from "@/components/typographies/Caption";
+import Subtitle from "@/components/typographies/Subtitle";
 
 import Tokens from ".";
 

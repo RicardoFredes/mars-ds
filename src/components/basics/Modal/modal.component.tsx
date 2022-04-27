@@ -2,7 +2,7 @@ import type { ModalChildComponent, ModalChildProps, ModalOpenProps, ModalProps }
 
 import classNames from "classnames";
 import rcPortal from "rc-portal";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Card, { CardElevations } from "@/components/basics/Card";
 import ToggleButton from "@/components/basics/ToggleButton";
@@ -22,6 +22,15 @@ const Modal = ({ className, close, children, size = ModalSizes.Medium, ...props 
     setClosing(true);
     if (close) setTimeout(close, 300);
   };
+
+  const handleKeyDown = (event: KeyboardEvent) => {
+    if (event.key === "Escape") handleClose();
+  };
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown, { once: true });
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, []);
 
   return (
     <div

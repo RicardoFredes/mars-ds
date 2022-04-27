@@ -1,6 +1,6 @@
-import Caption from "@/components/typographics/Caption";
-import Subtitle from "@/components/typographics/Subtitle";
-import Text, { TextSizes } from "@/components/typographics/Text";
+import Caption from "@/components/typographies/Caption";
+import Subtitle from "@/components/typographies/Subtitle";
+import Text, { TextSizes } from "@/components/typographies/Text";
 import Tokens from "@/tokens";
 
 export default {

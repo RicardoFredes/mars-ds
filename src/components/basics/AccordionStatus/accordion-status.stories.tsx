@@ -1,7 +1,7 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import { CardElevations } from "@/components/basics/Card";
-import Text from "@/components/typographics/Text";
+import Text from "@/components/typographies/Text";
 
 import AccordionStatus from "./accordion-status.component";
 import { IconVariants } from "./accordion-status.types";

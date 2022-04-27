@@ -1,6 +1,6 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import Text from "@/components/typographics/Text";
+import Text from "@/components/typographies/Text";
 
 import AccordionCard from "./accordion-card.component";
 import { AccordionCardElevations } from "./accordion-card.types";

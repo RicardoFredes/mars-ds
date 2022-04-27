@@ -5,7 +5,7 @@ import classNames from "classnames";
 import { useEffect, useState } from "react";
 
 import PasswordField from "@/components/forms/PasswordField";
-import List from "@/components/typographics/List";
+import List from "@/components/typographies/List";
 
 import { getValidations, isValid } from "./password-strong-field.helper";
 

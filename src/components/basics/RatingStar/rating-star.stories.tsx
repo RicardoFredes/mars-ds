@@ -3,8 +3,8 @@ import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import { useState } from "react";
 
-import Heading from "@/components/typographics/Heading";
-import Subtitle from "@/components/typographics/Subtitle";
+import Heading from "@/components/typographies/Heading";
+import Subtitle from "@/components/typographies/Subtitle";
 
 import RatingStar from "./rating-star.component";
 

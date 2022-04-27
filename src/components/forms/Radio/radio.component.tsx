@@ -4,7 +4,7 @@ import type { MouseEvent } from "react";
 import classNames from "classnames";
 
 import Icon from "@/components/basics/Icon";
-import Text, { TextSizes } from "@/components/typographics/Text";
+import Text, { TextSizes } from "@/components/typographies/Text";
 
 const Radio = ({ label, className, disabled, ...props }: RadioProps) => {
   const cn = classNames("radio", className, { "radio--is-disabled": disabled });

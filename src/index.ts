@@ -138,26 +138,26 @@ export * from "./components/forms/TextFieldIconButton/text-field-icon-button.typ
 export { default as ToggleSwitch } from "./components/forms/ToggleSwitch/toggle-switch.component";
 export * from "./components/forms/ToggleSwitch/toggle-switch.types";
 
-export { default as Caption } from "./components/typographics/Caption/caption.component";
-export * from "./components/typographics/Caption/caption.types";
+export { default as Caption } from "./components/typographies/Caption/caption.component";
+export * from "./components/typographies/Caption/caption.types";
 
-export { default as Display } from "./components/typographics/Display/display.component";
-export * from "./components/typographics/Display/display.types";
+export { default as Display } from "./components/typographies/Display/display.component";
+export * from "./components/typographies/Display/display.types";
 
-export { default as Heading } from "./components/typographics/Heading/heading.component";
-export * from "./components/typographics/Heading/heading.types";
+export { default as Heading } from "./components/typographies/Heading/heading.component";
+export * from "./components/typographies/Heading/heading.types";
 
-export { default as ItemText } from "./components/typographics/ItemText/item-text.component";
-export * from "./components/typographics/ItemText/item-text.types";
+export { default as ItemText } from "./components/typographies/ItemText/item-text.component";
+export * from "./components/typographies/ItemText/item-text.types";
 
-export { default as List } from "./components/typographics/List/list.component";
-export * from "./components/typographics/List/list.types";
+export { default as List } from "./components/typographies/List/list.component";
+export * from "./components/typographies/List/list.types";
 
-export { default as ListItem } from "./components/typographics/ListItem/list-item.component";
-export * from "./components/typographics/ListItem/list-item.types";
+export { default as ListItem } from "./components/typographies/ListItem/list-item.component";
+export * from "./components/typographies/ListItem/list-item.types";
 
-export { default as Subtitle } from "./components/typographics/Subtitle/subtitle.component";
-export * from "./components/typographics/Subtitle/subtitle.types";
+export { default as Subtitle } from "./components/typographies/Subtitle/subtitle.component";
+export * from "./components/typographies/Subtitle/subtitle.types";
 
-export { default as Text } from "./components/typographics/Text/text.component";
-export * from "./components/typographics/Text/text.types";
+export { default as Text } from "./components/typographies/Text/text.component";
+export * from "./components/typographies/Text/text.types";

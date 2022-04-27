@@ -3,7 +3,7 @@ import type { StepperProps } from "./stepper.types";
 import classNames from "classnames";
 
 import Icon from "@/components/basics/Icon";
-import Subtitle, { SubtitleSizes } from "@/components/typographics/Subtitle";
+import Subtitle, { SubtitleSizes } from "@/components/typographies/Subtitle";
 
 const Stepper = ({ steps, position = 0, className, ...props }: StepperProps) => {
   const cn = classNames("stepper", className);

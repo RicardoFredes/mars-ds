@@ -2,10 +2,10 @@ import type { CardProps } from "./card-types";
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import Button from "@/components/basics/Button";
-import Caption from "@/components/typographics/Caption/";
-import Heading, { HeadingSizes } from "@/components/typographics/Heading";
-import Subtitle from "@/components/typographics/Subtitle/";
-import Text, { TextSizes } from "@/components/typographics/Text/";
+import Caption from "@/components/typographies/Caption";
+import Heading, { HeadingSizes } from "@/components/typographies/Heading";
+import Subtitle from "@/components/typographies/Subtitle";
+import Text, { TextSizes } from "@/components/typographies/Text";
 import Tokens from "@/tokens";
 
 import Card from "./card.component";

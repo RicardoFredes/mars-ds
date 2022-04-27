@@ -3,8 +3,8 @@ import type { CreditCardProps } from "./credit-card.types";
 import classNames from "classnames";
 
 import Icon, { IconSizes } from "@/components/basics/Icon";
-import ItemText from "@/components/typographics/ItemText";
-import Text from "@/components/typographics/Text";
+import ItemText from "@/components/typographies/ItemText";
+import Text from "@/components/typographies/Text";
 
 import { CreditCardVariants } from "./credit-card.types";
 

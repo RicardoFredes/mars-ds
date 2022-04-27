@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 import Loader from "@/components/basics/Loader";
 import Logo, { LogoNames } from "@/components/basics/Logo";
-import Text from "@/components/typographics/Text";
+import Text from "@/components/typographies/Text";
 
 import { defaultPhrases } from "./global-loading.helpers";
 

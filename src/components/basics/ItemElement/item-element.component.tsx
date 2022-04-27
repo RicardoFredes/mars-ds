@@ -2,7 +2,7 @@ import type { ItemElementProps } from ".";
 
 import classNames from "classnames";
 
-import Text, { TextSizes } from "@/components/typographics/Text";
+import Text, { TextSizes } from "@/components/typographies/Text";
 
 import { ItemElementVariants } from "./item-element.types";
 

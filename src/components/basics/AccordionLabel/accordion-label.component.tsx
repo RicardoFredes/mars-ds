@@ -4,8 +4,8 @@ import classNames from "classnames";
 
 import Accordion from "@/components/basics/Accordion";
 import Icon from "@/components/basics/Icon";
-import Subtitle, { SubtitleSizes } from "@/components/typographics/Subtitle";
-import Text, { TextSizes } from "@/components/typographics/Text";
+import Subtitle, { SubtitleSizes } from "@/components/typographies/Subtitle";
+import Text, { TextSizes } from "@/components/typographies/Text";
 
 const AccordionLabel = ({
   className,

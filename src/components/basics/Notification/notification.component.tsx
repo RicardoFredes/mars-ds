@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import Card, { CardElevations } from "@/components/basics/Card";
 import Icon from "@/components/basics/Icon";
 import ToggleButton, { ToggleButtonVariants } from "@/components/basics/ToggleButton";
-import Subtitle, { SubtitleSizes } from "@/components/typographics/Subtitle";
+import Subtitle, { SubtitleSizes } from "@/components/typographies/Subtitle";
 import Tokens from "@/tokens";
 
 import { NotificationVariants } from "./notification.types";

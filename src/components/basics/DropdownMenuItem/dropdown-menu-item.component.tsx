@@ -3,7 +3,7 @@ import type { DropdownMenuItemProps } from "./dropdown-menu-item.types";
 import classNames from "classnames";
 
 import Icon from "@/components/basics/Icon/icon.component";
-import Text from "@/components/typographics/Text/text.component";
+import Text from "@/components/typographies/Text/text.component";
 
 import { ButtonTypes } from "../Button";
 import { DropdownMenuItemSizes } from "./dropdown-menu-item.types";

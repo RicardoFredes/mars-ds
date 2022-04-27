@@ -1,3 +1,4 @@
+a.item-button,
 .item-button {
   padding: $spacing-lg;
   border: 1px solid $color-divider;
@@ -12,6 +13,7 @@
   color: $color-text-primary;
   &:hover {
     background-color: $color-neutral-ghost;
+    text-decoration: none;
   }
   &__icon {
     margin-right: 18px;

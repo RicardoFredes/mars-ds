@@ -10,6 +10,7 @@ import Subtitle from "@/components/typographies/Subtitle";
 import Tokens from "@/tokens";
 
 const ItemButton = ({
+  caption,
   title,
   subtitle,
   label,
@@ -30,6 +31,7 @@ const ItemButton = ({
     <Component className={cn} {...props} type={type}>
       <Icon name={iconName} className="item-button__icon" style={{ color: iconColor }} />
       <div className="item-button__texts">
+        {caption && <Caption className="item-button__texts-caption">{caption}</Caption>}
         <Subtitle className="item-button__texts-title">{title}</Subtitle>
         {subtitle && <Caption className="item-button__texts-caption">{subtitle}</Caption>}
       </div>

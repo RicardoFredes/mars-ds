@@ -9,6 +9,7 @@ export default {
   title: "Components/ItemButton",
   component: ItemButton,
   argTypes: {
+    caption: { control: { type: "text" } },
     title: { control: { type: "text" } },
     subtitle: { control: { type: "text" } },
     iconName: { options: Object.keys(icons), control: { type: "select" } },
@@ -43,4 +44,13 @@ NoLabel.args = {
 export const NoIcon = Template.bind({});
 NoIcon.args = {
   title: "Biologia",
+};
+
+export const WithLink = Template.bind({});
+WithLink.args = {
+  caption: "Jornada #1",
+  title: "Academia do Hábito",
+  iconName: "academia-do-habito",
+  href: "#",
+  onClick: (event) => event.preventDefault(),
 };

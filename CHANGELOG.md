@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.57](https://github.com/mesalva/mars/compare/v1.0.0-alpha.56...v1.0.0-alpha.57) (2022-04-27)
+
+
+### Bug Fixes
+
+* improve style for item button and :focus-visible ([24ba338](https://github.com/mesalva/mars/commit/24ba338be7406cdb23ec72794c68cf77b4f65695))
+
 ## [1.0.0-alpha.56](https://github.com/mesalva/mars/compare/v1.0.0-alpha.55...v1.0.0-alpha.56) (2022-04-27)
 
 

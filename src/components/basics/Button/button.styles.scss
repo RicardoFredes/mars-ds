@@ -69,10 +69,9 @@ a.btn,
     }
   }
 
-  &--neutral,
-  &--text {
+  &--neutral {
     color: $color-text-primary;
-
+    border-color: $color-neutral-500;
     &:visited {
       background-color: $color-neutral-ghost;
       color: $color-text-primary;
@@ -82,12 +81,22 @@ a.btn,
     }
     &:disabled {
       color: $color-action-disabled;
+      border-color: $color-action-disabled-background;
     }
   }
-  &--neutral {
-    border-color: $color-neutral-500;
+
+  &--text {
+    color: $color-black;
+    background-color: $color-white;
+    &:visited {
+      color: $color-black;
+    }
+    &:hover {
+      background-color: $color-neutral-ghost;
+    }
     &:disabled {
-      border-color: $color-action-disabled-background;
+      background-color: $color-neutral-ghost;
+      color: $color-action-disabled;
     }
   }
 
@@ -110,6 +119,18 @@ a.btn,
     &.btn {
       &--is-pressed {
         background-image: $ripple25;
+      }
+    }
+  }
+}
+
+.theme-dark {
+  a.btn,
+  .link.btn,
+  .btn {
+    &--text {
+      &:hover {
+        background-color: $color-neutral-100;
       }
     }
   }

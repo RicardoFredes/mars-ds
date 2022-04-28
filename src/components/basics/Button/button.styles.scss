@@ -91,10 +91,10 @@ a.btn,
       color: $color-black;
     }
     &:hover {
-      background-color: $color-neutral-ghost;
+      background-color: #fff9;
     }
     &:disabled {
-      background-color: $color-neutral-ghost;
+      background-color: #fff9;
       color: $color-action-disabled;
     }
   }
@@ -118,18 +118,6 @@ a.btn,
     &.btn {
       &--is-pressed {
         background-image: $ripple25;
-      }
-    }
-  }
-}
-
-.theme-dark {
-  a.btn,
-  .link.btn,
-  .btn {
-    &--text {
-      &:hover {
-        background-color: $color-neutral-100;
       }
     }
   }

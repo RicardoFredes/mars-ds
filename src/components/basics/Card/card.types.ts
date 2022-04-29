@@ -7,6 +7,6 @@ export const CardElevations = {
   ...Elevations,
 };
 
-export interface CardProps extends HTMLProps<HTMLDivElement> {
+export interface CardProps extends HTMLProps<HTMLElement> {
   elevation?: typeof CardElevations[keyof typeof CardElevations];
 }

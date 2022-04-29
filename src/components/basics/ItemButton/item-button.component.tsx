@@ -19,6 +19,7 @@ const ItemButton = ({
   iconName,
   iconColor = Tokens.ColorTextPrimary,
   className,
+  image,
   as,
   type = "button",
   ...props
@@ -30,6 +31,7 @@ const ItemButton = ({
   return (
     <Component className={cn} {...props} type={type}>
       <Icon name={iconName} className="item-button__icon" style={{ color: iconColor }} />
+      {image && <img className="item-button__image" src={image} alt={title} />}
       <div className="item-button__texts">
         {caption && <Caption className="item-button__texts-caption">{caption}</Caption>}
         <Subtitle className="item-button__texts-title">{title}</Subtitle>

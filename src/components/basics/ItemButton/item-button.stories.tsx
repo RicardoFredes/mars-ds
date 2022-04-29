@@ -54,3 +54,12 @@ WithLink.args = {
   href: "#",
   onClick: (event) => event.preventDefault(),
 };
+
+export const WithImage = Template.bind({});
+WithImage.args = {
+  title: "ENEM",
+  image:
+    "https://cdn.mesalva.com/uploads/image/MjAyMi0wNC0yOSAxNzoyMTo0NSArMDAwMDIyNDMyOQ%3D%3D%0A.svg",
+  href: "#",
+  onClick: (event) => event.preventDefault(),
+};

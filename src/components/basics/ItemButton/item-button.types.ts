@@ -11,4 +11,5 @@ export interface ItemButtonProps
   iconName: string;
   iconColor?: string;
   as?: React.ElementType | string;
+  image?: string;
 }

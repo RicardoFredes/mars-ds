@@ -9,21 +9,39 @@ import visa from "./checkout/visa";
 import AcademiaDoHabito from "./customs/academia-do-habito";
 import ajuda from "./customs/ajuda";
 import apostila from "./customs/apostila";
+import artes from "./customs/artes";
 import aulaAoVivo from "./customs/aula-ao-vivo";
 import bancoDeProva from "./customs/banco-de-prova";
+import biologia from "./customs/biologia";
 import correcao from "./customs/correcao";
+import educacaoFisica from "./customs/educacao-fisica";
+import espanhol from "./customs/espanhol";
 import exercicio from "./customs/exercicio";
+import filosofia from "./customs/filosofia";
+import fisica from "./customs/fisica";
 import forum from "./customs/forum";
+import geografia from "./customs/geografia";
+import historia from "./customs/historia";
+import humanas from "./customs/humanas";
+import ingles from "./customs/ingles";
+import linguaPortuguesa from "./customs/lingua-portuguesa";
+import linguagens from "./customs/linguagens";
+import literatura from "./customs/literatura";
 import lojaLivros from "./customs/loja-livros";
+import matematica from "./customs/matematica";
 import materias from "./customs/materias";
 import mesalvaMini from "./customs/me-salva-mini";
 import mentoria from "./customs/mentoria";
+import natureza from "./customs/natureza";
 import painel from "./customs/painel";
 import planoDeEstudos from "./customs/plano-de-estudos";
 import planos from "./customs/planos";
 import ppl from "./customs/ppl";
+import quimica from "./customs/quimica";
+import redacao from "./customs/redacao";
 import sair from "./customs/sair";
 import simulado from "./customs/simulado";
+import sociologia from "./customs/sociologia";
 import tri from "./customs/tri";
 import turma from "./customs/turma";
 import alert from "./generics/alert";
@@ -146,6 +164,24 @@ const icons: {
   mentoria,
   ajuda,
   sair,
+  matematica,
+  natureza,
+  biologia,
+  fisica,
+  quimica,
+  humanas,
+  filosofia,
+  geografia,
+  historia,
+  sociologia,
+  linguagens,
+  artes,
+  "educacao-fisica": educacaoFisica,
+  espanhol,
+  ingles,
+  "lingua-portuguesa": linguaPortuguesa,
+  literatura,
+  redacao,
 };
 
 export default icons;

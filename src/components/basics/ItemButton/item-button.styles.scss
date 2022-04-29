@@ -16,7 +16,8 @@ a.item-button,
     background-color: $color-neutral-ghost;
     text-decoration: none;
   }
-  &__icon {
+  &__icon,
+  &__image {
     margin-right: 18px;
     max-width: 48px;
   }

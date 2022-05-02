@@ -31,6 +31,7 @@ import lojaLivros from "./customs/loja-livros";
 import matematica from "./customs/matematica";
 import materias from "./customs/materias";
 import mesalvaMini from "./customs/me-salva-mini";
+import medicina from "./customs/medicina";
 import mentoria from "./customs/mentoria";
 import natureza from "./customs/natureza";
 import painel from "./customs/painel";
@@ -71,10 +72,12 @@ import grid from "./generics/grid";
 import info from "./generics/info";
 import layers from "./generics/layers";
 import list from "./generics/list";
+import liveCircle from "./generics/live-circle";
 import menu from "./generics/menu";
 import minusSquare from "./generics/minus-square";
 import moreHorizontal from "./generics/more-horizontal";
 import moreVertical from "./generics/more-vertical";
+import play from "./generics/play";
 import plus from "./generics/plus";
 import print from "./generics/print";
 import radioButtonOff from "./generics/radio-button-off";
@@ -182,6 +185,9 @@ const icons: {
   "lingua-portuguesa": linguaPortuguesa,
   literatura,
   redacao,
+  medicina,
+  "live-circle": liveCircle,
+  play,
 };
 
 export default icons;

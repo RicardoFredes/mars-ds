@@ -57,11 +57,14 @@ function reindexRoot(filesList) {
 
   const tokensImport = `export { default as Tokens } from "./tokens";`;
 
+  const servicesImport = `\nexport * from "./services";`
+
   const content = []
     .concat(
       warningDontChangeFile,
       scssImport,
       tokensImport,
+      servicesImport,
       ...getComponentsAndTypes(filesList),
       ""
     )

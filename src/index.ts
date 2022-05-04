@@ -7,6 +7,8 @@
 import "./styles/index.scss";
 export { default as Tokens } from "./tokens";
 
+export * from "./services";
+
 export { default as Accordion } from "./components/basics/Accordion/accordion.component";
 export * from "./components/basics/Accordion/accordion.types";
 

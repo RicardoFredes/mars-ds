@@ -8,7 +8,6 @@
     background: transparent;
     cursor: pointer;
     width: 100%;
-    padding-bottom: $spacing-md;
     text-align: left;
     &-container {
       display: flex;
@@ -39,8 +38,8 @@
     }
   }
   &__content {
-    overflow: hidden;
     transition: height ease 0.2s;
+    overflow: hidden;
   }
 
   &--is-open {
@@ -50,6 +49,7 @@
           transform: rotate(180deg);
         }
       }
+      
     }
   }
 }

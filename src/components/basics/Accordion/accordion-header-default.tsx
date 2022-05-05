@@ -5,7 +5,7 @@ const AccordionHeaderDefault = ({ title }: { title?: string }) => {
   return (
     <div className="accordion__header-container">
       {title && (
-        <Heading size={HeadingSizes.XSmall} className="accordion-header__title">
+        <Heading level={3} size={HeadingSizes.XSmall} className="accordion-header__title">
           {title}
         </Heading>
       )}

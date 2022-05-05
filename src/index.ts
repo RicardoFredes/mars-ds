@@ -12,14 +12,8 @@ export * from "./services";
 export { default as Accordion } from "./components/basics/Accordion/accordion.component";
 export * from "./components/basics/Accordion/accordion.types";
 
-export { default as AccordionCard } from "./components/basics/AccordionCard/accordion-card.component";
-export * from "./components/basics/AccordionCard/accordion-card.types";
-
 export { default as AccordionLabel } from "./components/basics/AccordionLabel/accordion-label.component";
 export * from "./components/basics/AccordionLabel/accordion-label.types";
-
-export { default as AccordionStatus } from "./components/basics/AccordionStatus/accordion-status.component";
-export * from "./components/basics/AccordionStatus/accordion-status.types";
 
 export { default as Avatar } from "./components/basics/Avatar/avatar.component";
 export * from "./components/basics/Avatar/avatar.types";

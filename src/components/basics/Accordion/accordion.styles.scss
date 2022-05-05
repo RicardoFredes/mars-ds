@@ -16,6 +16,7 @@
       &__icon-toggle {
         position: relative;
         color: $color-text-primary;
+        transition: transform ease 0.2s;
         &:before {
           content: "";
           display: block;
@@ -42,6 +43,12 @@
     overflow: hidden;
   }
 
+  &:not(.accordion--is-open):not(.accordion--is-animation) {
+    .accordion__content {
+      display: none;
+    }
+  }
+
   &--is-open {
     .accordion {
       &__header-container {
@@ -49,7 +56,6 @@
           transform: rotate(180deg);
         }
       }
-      
     }
   }
 }

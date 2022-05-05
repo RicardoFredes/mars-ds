@@ -14,11 +14,18 @@ const Accordion = ({
   ...props
 }: AccordionProps) => {
   const [isOpen, setIsOpen] = useState(defaultOpen);
+  const [isAnimation, setIsAnimation] = useState(false);
   const [height, setHeight] = useState<number | string>("auto");
   const contentRef = useRef<HTMLDivElement | null>(null);
-  const cn = classNames("accordion", className, { "accordion--is-open": isOpen });
+  const cn = classNames("accordion", className, {
+    "accordion--is-open": isOpen,
+    "accordion--is-animation": isAnimation,
+  });
 
-  const toggleIsOpen = () => setIsOpen(!isOpen);
+  const toggleIsOpen = () => {
+    setIsAnimation(true);
+    setIsOpen(!isOpen);
+  };
 
   useEffect(() => {
     const maxHeight = contentRef.current?.scrollHeight || "auto";
@@ -34,6 +41,7 @@ const Accordion = ({
         <HeaderComponent title={title} />
       </button>
       <div
+        onTransitionEnd={() => setIsAnimation(false)}
         data-testid="accordion-content"
         className="accordion__content"
         ref={contentRef}

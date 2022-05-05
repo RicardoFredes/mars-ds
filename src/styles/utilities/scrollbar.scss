@@ -7,9 +7,10 @@
     width: $scrollbar-width;
   }
   
-  /* background of the scrollbar except button or resizer */
+  /* background of the scrollbar except button or resize */
   *::-webkit-scrollbar-track {
-    background-color: $color-background-scrollbar;
+    background-color: transparent;
+    margin: 10px 0;
   }
   
   /* scrollbar itself */

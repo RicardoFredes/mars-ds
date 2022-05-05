@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.66](https://github.com/mesalva/mars/compare/v1.0.0-alpha.65...v1.0.0-alpha.66) (2022-05-05)
+
+
+### Features
+
+* **carousel:** simplify component ([caaa5fa](https://github.com/mesalva/mars/commit/caaa5fa3fe0ce37f2f018ff83dddd2487ab3a7a7))
+
 ## [1.0.0-alpha.65](https://github.com/mesalva/mars/compare/v1.0.0-alpha.64...v1.0.0-alpha.65) (2022-05-05)
 
 

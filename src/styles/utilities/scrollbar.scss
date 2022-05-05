@@ -3,13 +3,12 @@
   $scrollbar-width: 16px;
   
   *::-webkit-scrollbar {
-    background-color: $color-background-scrollbar;
     width: $scrollbar-width;
+    background-color: transparent;
   }
   
   /* background of the scrollbar except button or resize */
   *::-webkit-scrollbar-track {
-    background-color: transparent;
     margin: 10px 0;
   }
   

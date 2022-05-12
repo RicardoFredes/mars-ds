@@ -8,10 +8,7 @@ import Skeleton, { SkeletonVariants } from "../Skeleton";
 
 type SidebarSkeletonProps = Pick<SidebarProps, "user" | "links" | "LinkComponent">;
 
-const sidebarSkeletonList = makeArray(3, {
-  label: null,
-  items: makeArray(2, null),
-});
+const sidebarSkeletonList = makeArray(3, { items: makeArray(2, null) });
 
 const SidebarSkeleton = ({ user = {}, links, LinkComponent }: SidebarSkeletonProps) => {
   return (
@@ -39,17 +36,11 @@ const SidebarSkeleton = ({ user = {}, links, LinkComponent }: SidebarSkeletonPro
         <GuestButtons LinkComponent={LinkComponent} links={links} data-testid="sidebar__guest" />
       )}
 
-      {sidebarSkeletonList.map(({ label, items }) => (
-        <div key={label} className="mt-xl">
+      {sidebarSkeletonList.map(({ items }, key) => (
+        <div key={key} className="mt-xl">
           <Skeleton active className="mx-lg mb-lg" width={80} height={20} />
-          {items.map(() => (
-            <Skeleton
-              key={Math.floor(Math.random() * 100)}
-              active
-              className="ml-lg mb-lg"
-              height={45}
-              width="80%"
-            />
+          {items.map((_: null, itemKey: number) => (
+            <Skeleton key={itemKey} active className="ml-lg mb-lg" height={45} width="80%" />
           ))}
         </div>
       ))}

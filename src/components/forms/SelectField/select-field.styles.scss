@@ -6,6 +6,7 @@
   position: relative;
   &__options {
     display: none;
+    position: fixed;
     z-index: 2;
     &-fallback {
       text-align: center;
@@ -20,7 +21,6 @@
       }
     }
     @media (max-width: $below) {
-      position: fixed;
       padding: $spacing-sm;
       z-index: 101;
       top: $spacing-sm;
@@ -32,9 +32,7 @@
       }
     }
     @media (min-width: $above) {
-      position: absolute;
-      width: 100%;
-      top: 64px;
+      transform: translateY(8px);
       .dropdown-menu__list {
         max-height: 220px;
       }

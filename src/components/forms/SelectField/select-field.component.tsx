@@ -37,7 +37,7 @@ const SelectField = ({
     }
   }, [defaultOption, options]);
 
-  const selectFieldRef = useRef(null);
+  const selectFieldRef = useRef<HTMLDivElement>(null);
   const inputDisabled = !enableFilter;
 
   const getInputElement = () => {
@@ -239,6 +239,7 @@ const SelectField = ({
       </div>
       {isOpen && (
         <DropdownMenu
+          style={{ width: selectFieldRef?.current?.offsetWidth }}
           list={dropdownMenuList}
           className="select-field__options"
           onClick={(event) => event.stopPropagation()}

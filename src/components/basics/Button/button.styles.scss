@@ -91,10 +91,10 @@ a.btn,
       color: $color-black;
     }
     &:hover {
-      background-color: #fff9;
+      background-color: $color-neutral-300;
     }
     &:disabled {
-      background-color: #fff9;
+      background-color: $color-action-disabled-background;
       color: $color-action-disabled;
     }
   }

@@ -83,6 +83,7 @@ import print from "./generics/print";
 import radioButtonOff from "./generics/radio-button-off";
 import radioButtonOn from "./generics/radio-button-on";
 import search from "./generics/search";
+import send from "./generics/send";
 import shield from "./generics/shield";
 import shoppingCart from "./generics/shopping-cart";
 import square from "./generics/square";
@@ -188,6 +189,7 @@ const icons: {
   medicina,
   "live-circle": liveCircle,
   play,
+  send,
 };
 
 export default icons;

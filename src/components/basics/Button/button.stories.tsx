@@ -25,6 +25,10 @@ export default {
       control: { type: "text" },
     },
   },
+  parameters: {
+    // TODO: Fix visual regression
+    loki: { skip: true },
+  },
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;

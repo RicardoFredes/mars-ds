@@ -1,4 +1,5 @@
 import type { NotificationProps } from "./notification.types";
+import type { ReactNode } from "react";
 
 import classNames from "classnames";
 import rcPortal from "rc-portal";
@@ -92,5 +93,17 @@ Notification.open = (props: NotificationProps) => {
   if (!notificationParent) initializeNotification();
   return rcPortal(Notification, props, notificationParent);
 };
+
+Notification.success = (children: ReactNode | string) =>
+  Notification.open({ children, variant: NotificationVariants.Success });
+
+Notification.error = (children: ReactNode | string) =>
+  Notification.open({ children, variant: NotificationVariants.Error });
+
+Notification.warning = (children: ReactNode | string) =>
+  Notification.open({ children, variant: NotificationVariants.Warning });
+
+Notification.info = (children: ReactNode | string) =>
+  Notification.open({ children, variant: NotificationVariants.Info });
 
 export default Notification;

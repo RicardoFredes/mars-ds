@@ -1,0 +1,69 @@
+.file-field {
+  $height: 250px;
+  border: 1px dashed #637381;
+  border-radius: $border-radius-sm;
+  position: relative;
+  display: flex;
+  height: $height;
+  flex-direction: column;
+  justify-content: center;
+  transition: background-color ease 200ms;
+  overflow: hidden;
+  &__content {
+
+    &__name {
+      position: absolute;
+      padding: calc($height / 2) $spacing-lg $spacing-lg;
+      background-image: linear-gradient(to bottom, transparent 25%, $color-background-primary);
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+    &__remove-button {
+      position: absolute;
+      top: $spacing-sm;
+      right: $spacing-sm;
+      z-index: 1;
+      padding: 0 $spacing-md;
+    }
+    &__image {
+      display: block;
+      margin: 0 auto;
+      &--is-file {
+        transition: opacity ease 200ms;
+        object-fit: cover;
+        object-position: top center;
+        width: 100%;
+        height: 250px;
+      }
+    }
+  }
+  &:not(.file-field--disabled):hover {
+    border-color: $color-text-primary;
+    background-color: $color-action-hover;
+    .file-field__content {
+      &__image {
+        &--is-file {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+  input {
+    cursor: move;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+  &--disabled {
+    border-color: $color-action-disabled;
+    .file-field {
+      &__content {
+        opacity: 0.5;
+      }
+    }
+  }
+}

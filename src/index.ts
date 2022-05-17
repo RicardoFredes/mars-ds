@@ -101,6 +101,9 @@ export * from "./components/basics/ToggleButton/toggle-button.types";
 export { default as Checkbox } from "./components/forms/Checkbox/checkbox.component";
 export * from "./components/forms/Checkbox/checkbox.types";
 
+export { default as FileField } from "./components/forms/FileField/file-field.component";
+export * from "./components/forms/FileField/file-field.types";
+
 export { default as FormWithSubmitButton } from "./components/forms/FormWithSubmitButton/form-with-submit-button.component";
 export * from "./components/forms/FormWithSubmitButton/form-with-submit-button.types";
 

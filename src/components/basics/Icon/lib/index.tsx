@@ -58,6 +58,7 @@ import chevronRight from "./generics/chevron-right";
 import chevronUp from "./generics/chevron-up";
 import clock from "./generics/clock";
 import close from "./generics/close";
+import closeCircle from "./generics/close-circle";
 import copy from "./generics/copy";
 import doneAll from "./generics/done-all";
 import download from "./generics/download";
@@ -108,6 +109,7 @@ const icons: {
   "checkmark-square": checkmarkSquare,
   copy,
   close,
+  "close-circle": closeCircle,
   "credit-card": creditCard,
   "chevron-down": chevronDown,
   "chevron-left": chevronLeft,

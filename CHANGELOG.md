@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.71](https://github.com/mesalva/mars/compare/v1.0.0-alpha.70...v1.0.0-alpha.71) (2022-05-18)
+
+
+### Features
+
+* add close circle icon ([#154](https://github.com/mesalva/mars/issues/154)) ([8eb85ac](https://github.com/mesalva/mars/commit/8eb85ace093dc0480c961e0df96455dff8946f2e))
+
 ## [1.0.0-alpha.70](https://github.com/mesalva/mars/compare/v1.0.0-alpha.69...v1.0.0-alpha.70) (2022-05-17)
 
 

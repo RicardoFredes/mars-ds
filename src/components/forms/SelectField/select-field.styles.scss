@@ -21,12 +21,11 @@
       }
     }
     @media (max-width: $below) {
-      padding: $spacing-sm;
-      z-index: 101;
       top: $spacing-sm;
       left: $spacing-sm;
       right: $spacing-sm;
       bottom: $spacing-sm;
+      z-index: 101;
       .dropdown-menu__list {
         max-height: 100%;
       }
@@ -60,17 +59,18 @@
         content: "";
         display: block;
         background-color: $color-background-overlay;
-        width: 100vw;
-        height: 100vh;
         position: fixed;
         top: 0;
         left: 0;
+        bottom: 0;
+        right: 0;
         z-index: 100;
       }
     }
     &.select-field--has-filter {
       @media (max-width: $below) {
         .select-field__options {
+          min-width: calc(100vw - ($spacing-sm * 2));
           top: calc($filter-height + $spacing-sm);
         }
         .field__content {

@@ -219,7 +219,7 @@ const SelectField = ({
 
   const handleClickToProtectArea = (event: React.MouseEvent<HTMLDivElement>) => {
     event.stopPropagation();
-    if (inputDisabled) open();
+    open();
   };
 
   return (

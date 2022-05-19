@@ -1,6 +1,14 @@
 .dropdown-menu {
   &.card {
-    padding: $spacing-md 0;
+    padding: 0;
+    > .dropdown-menu__list {
+      &:before,
+      &:after {
+        content: "";
+        display: block;
+        height: $spacing-md;
+      }
+    }
   }
   &__list {
     max-height: 65vh;

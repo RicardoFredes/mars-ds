@@ -8,7 +8,7 @@ const removeWordsSeparators = (str: string) => {
 
 const fuzzyMatch = (query?: string, referenceValue?: string) => {
   if (!query || !referenceValue) return true;
-  const pattern = ".*" + query.split("").join(".*") + ".*";
+  const pattern = query.split("").join(".?");
   const re = new RegExp(pattern, "i");
   return re.test(referenceValue);
 };

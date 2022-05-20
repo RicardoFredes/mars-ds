@@ -1,0 +1,232 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<VerticalStepper> should match the snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <ol
+        class="vertical-stepper"
+      >
+        <li
+          class="vertical-stepper__item"
+        >
+          <a
+            class="link"
+            href="https://mesalva.com"
+            target="_blank"
+          >
+            <div
+              class="vertical-stepper__container"
+            >
+              <div
+                class="vertical-stepper__circle"
+                data-testid="vertical-stepper__circle"
+              />
+              <div
+                class="vertical-stepper__content"
+              >
+                <p
+                  class="text text--size-md vertical-stepper__title"
+                  data-testid="vertical-stepper__title"
+                >
+                  A soma de forma intuitiva
+                </p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li
+          class="vertical-stepper__item vertical-stepper__item--has-icon"
+        >
+          <a
+            class="link"
+            href="https://mesalva.com"
+            target="_blank"
+          >
+            <div
+              class="vertical-stepper__container vertical-stepper__container--has-icon"
+            >
+              <div
+                class="vertical-stepper__circle vertical-stepper__circle--has-icon"
+                data-testid="vertical-stepper__circle"
+              >
+                <span
+                  class="icon vertical-stepper__icon"
+                  data-testid="vertical-stepper__icon"
+                >
+                  <svg
+                    fill="none"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 7.15C20.3789 6.87035 19.6509 6.98841 19.15 7.45L17 9.45V8C17 6.34315 15.6569 5 14 5H5C3.34315 5 2 6.34315 2 8V16C2 17.6569 3.34315 19 5 19H14C15.6569 19 17 17.6569 17 16V14.55L19.16 16.55C19.478 16.8378 19.8911 16.9981 20.32 17C20.558 16.9994 20.7932 16.9483 21.01 16.85C21.6133 16.606 22.0087 16.0208 22.01 15.37V8.63C22.007 7.97674 21.6072 7.39089 21 7.15Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div
+                class="vertical-stepper__content"
+              >
+                <p
+                  class="text text--size-md vertical-stepper__title"
+                  data-testid="vertical-stepper__title"
+                >
+                  Somando de tudo
+                </p>
+                <h3
+                  class="subtitle subtitle--size-md vertical-stepper__subtitle"
+                  data-testid="vertical-stepper__subtitle"
+                >
+                  10 minutos
+                </h3>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ol>
+    </div>
+  </body>,
+  "container": <div>
+    <ol
+      class="vertical-stepper"
+    >
+      <li
+        class="vertical-stepper__item"
+      >
+        <a
+          class="link"
+          href="https://mesalva.com"
+          target="_blank"
+        >
+          <div
+            class="vertical-stepper__container"
+          >
+            <div
+              class="vertical-stepper__circle"
+              data-testid="vertical-stepper__circle"
+            />
+            <div
+              class="vertical-stepper__content"
+            >
+              <p
+                class="text text--size-md vertical-stepper__title"
+                data-testid="vertical-stepper__title"
+              >
+                A soma de forma intuitiva
+              </p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li
+        class="vertical-stepper__item vertical-stepper__item--has-icon"
+      >
+        <a
+          class="link"
+          href="https://mesalva.com"
+          target="_blank"
+        >
+          <div
+            class="vertical-stepper__container vertical-stepper__container--has-icon"
+          >
+            <div
+              class="vertical-stepper__circle vertical-stepper__circle--has-icon"
+              data-testid="vertical-stepper__circle"
+            >
+              <span
+                class="icon vertical-stepper__icon"
+                data-testid="vertical-stepper__icon"
+              >
+                <svg
+                  fill="none"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21 7.15C20.3789 6.87035 19.6509 6.98841 19.15 7.45L17 9.45V8C17 6.34315 15.6569 5 14 5H5C3.34315 5 2 6.34315 2 8V16C2 17.6569 3.34315 19 5 19H14C15.6569 19 17 17.6569 17 16V14.55L19.16 16.55C19.478 16.8378 19.8911 16.9981 20.32 17C20.558 16.9994 20.7932 16.9483 21.01 16.85C21.6133 16.606 22.0087 16.0208 22.01 15.37V8.63C22.007 7.97674 21.6072 7.39089 21 7.15Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+            </div>
+            <div
+              class="vertical-stepper__content"
+            >
+              <p
+                class="text text--size-md vertical-stepper__title"
+                data-testid="vertical-stepper__title"
+              >
+                Somando de tudo
+              </p>
+              <h3
+                class="subtitle subtitle--size-md vertical-stepper__subtitle"
+                data-testid="vertical-stepper__subtitle"
+              >
+                10 minutos
+              </h3>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ol>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

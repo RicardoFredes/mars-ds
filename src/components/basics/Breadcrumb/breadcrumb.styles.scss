@@ -1,0 +1,50 @@
+.breadcrumb {
+  display: flex;
+  align-items: center;
+
+  &__popover-container {
+    position: relative;
+
+    &-list {
+      left: 0;
+      top: 36px;
+      min-width: 140px;
+      position: absolute;
+    }
+  }
+  &__item {
+    color: $color-primary-500;
+    margin-right: $spacing-lg;
+    display: flex;
+    gap: $spacing-lg;
+    align-items: center;
+    white-space: nowrap;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 4px;
+      height: 4px;
+      border-radius: 4px;
+      background-color: $color-text-disabled;
+    }
+
+    &--is-active {
+      color: $color-text-primary;
+      display: block;
+      text-overflow: ellipsis;
+      overflow: hidden;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &:not(&--is-active) {
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+}

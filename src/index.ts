@@ -18,6 +18,9 @@ export * from "./components/basics/AccordionLabel/accordion-label.types";
 export { default as Avatar } from "./components/basics/Avatar/avatar.component";
 export * from "./components/basics/Avatar/avatar.types";
 
+export { default as Breadcrumb } from "./components/basics/Breadcrumb/breadcrumb.component";
+export * from "./components/basics/Breadcrumb/breadcrumb.types";
+
 export { default as Button } from "./components/basics/Button/button.component";
 export * from "./components/basics/Button/button.types";
 

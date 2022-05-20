@@ -15,11 +15,13 @@ const DropdownMenuItem = ({
   rightIconName,
   size = DropdownMenuItemSizes.Medium,
   label,
+  componentLink = "a",
   ...props
 }: DropdownMenuItemProps) => {
   const cn = classNames("dropdown-menu-item", className);
+  const Component = props.href ? componentLink : "button";
   return (
-    <button type={ButtonTypes.Button} className={cn} {...props}>
+    <Component type={props.href ? undefined : ButtonTypes.Button} className={cn} {...props}>
       {leftIconName && (
         <Icon className="dropdown-menu-item__icon-left" name={leftIconName} size={size} />
       )}
@@ -29,7 +31,7 @@ const DropdownMenuItem = ({
       {rightIconName && (
         <Icon className="dropdown-menu-item__icon-right" name={rightIconName} size={size} />
       )}
-    </button>
+    </Component>
   );
 };
 

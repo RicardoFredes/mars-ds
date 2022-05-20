@@ -1,0 +1,305 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Breadcrumb> should match the snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="breadcrumb"
+      >
+        <a
+          class="heading heading--size-xs breadcrumb__item"
+          data-testid="breadcrumb-item"
+        >
+          Mentorias
+        </a>
+        <a
+          class="heading heading--size-xs breadcrumb__item"
+          data-testid="breadcrumb-item"
+        >
+          Meus Horários
+        </a>
+        <a
+          class="heading heading--size-xs breadcrumb__item breadcrumb__item--is-active"
+          data-testid="breadcrumb-item"
+        >
+          Mentoria
+        </a>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="breadcrumb"
+    >
+      <a
+        class="heading heading--size-xs breadcrumb__item"
+        data-testid="breadcrumb-item"
+      >
+        Mentorias
+      </a>
+      <a
+        class="heading heading--size-xs breadcrumb__item"
+        data-testid="breadcrumb-item"
+      >
+        Meus Horários
+      </a>
+      <a
+        class="heading heading--size-xs breadcrumb__item breadcrumb__item--is-active"
+        data-testid="breadcrumb-item"
+      >
+        Mentoria
+      </a>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`<Breadcrumb> with more than 3 items should match to snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="breadcrumb"
+      >
+        <a
+          class="heading heading--size-xs breadcrumb__item"
+          data-testid="breadcrumb-item"
+        >
+          First Item
+        </a>
+        <div
+          class="breadcrumb__popover-container"
+        >
+          <a
+            class="heading heading--size-xs breadcrumb__item"
+            data-testid="breadcrumb-popover-trigger"
+          >
+            ...
+          </a>
+          <div>
+            <div
+              class="card card--elevation-md dropdown-menu breadcrumb__popover-container-list"
+              data-testid="breadcrumb-popover"
+            >
+              <ul
+                class="dropdown-menu__list"
+              >
+                <li
+                  class="dropdown-menu__list-item"
+                >
+                  <button
+                    class="dropdown-menu-item"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="text text--size-md dropdown-menu-item__text"
+                    >
+                      Second Item
+                    </span>
+                  </button>
+                </li>
+                <li
+                  class="dropdown-menu__list-item"
+                >
+                  <button
+                    class="dropdown-menu-item"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="text text--size-md dropdown-menu-item__text"
+                    >
+                      Third Item
+                    </span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <a
+          class="heading heading--size-xs breadcrumb__item breadcrumb__item--is-active"
+          data-testid="breadcrumb-item"
+        >
+          Active Item
+        </a>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="breadcrumb"
+    >
+      <a
+        class="heading heading--size-xs breadcrumb__item"
+        data-testid="breadcrumb-item"
+      >
+        First Item
+      </a>
+      <div
+        class="breadcrumb__popover-container"
+      >
+        <a
+          class="heading heading--size-xs breadcrumb__item"
+          data-testid="breadcrumb-popover-trigger"
+        >
+          ...
+        </a>
+        <div>
+          <div
+            class="card card--elevation-md dropdown-menu breadcrumb__popover-container-list"
+            data-testid="breadcrumb-popover"
+          >
+            <ul
+              class="dropdown-menu__list"
+            >
+              <li
+                class="dropdown-menu__list-item"
+              >
+                <button
+                  class="dropdown-menu-item"
+                  tabindex="0"
+                  type="button"
+                >
+                  <span
+                    class="text text--size-md dropdown-menu-item__text"
+                  >
+                    Second Item
+                  </span>
+                </button>
+              </li>
+              <li
+                class="dropdown-menu__list-item"
+              >
+                <button
+                  class="dropdown-menu-item"
+                  tabindex="0"
+                  type="button"
+                >
+                  <span
+                    class="text text--size-md dropdown-menu-item__text"
+                  >
+                    Third Item
+                  </span>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <a
+        class="heading heading--size-xs breadcrumb__item breadcrumb__item--is-active"
+        data-testid="breadcrumb-item"
+      >
+        Active Item
+      </a>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

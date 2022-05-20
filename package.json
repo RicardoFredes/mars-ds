@@ -123,6 +123,7 @@
   },
   "dependencies": {
     "rc-portal": "^2.3.1",
+    "react-simple-clickout": "^1.1.0",
     "vanilla-masker": "^1.2.0"
   }
 }

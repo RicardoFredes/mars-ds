@@ -1,9 +1,9 @@
 .heading {
   $factor: 3.25vw;
   font-family: $font-family-acent;
-  font-size: 2rem;
   line-height: 1.5em;
   font-weight: 800;
+  font-size: 2rem; // 32px
   &--size {
     &-xs {
       font-size: 1.125rem;

@@ -9,22 +9,22 @@ Object {
         class="breadcrumb"
       >
         <a
-          class="heading heading--size-xs breadcrumb__item"
+          class="subtitle subtitle--size-md breadcrumb__item"
           data-testid="breadcrumb-item"
         >
-          Mentorias
+          ENEM
         </a>
         <a
-          class="heading heading--size-xs breadcrumb__item"
+          class="subtitle subtitle--size-md breadcrumb__item"
           data-testid="breadcrumb-item"
         >
-          Meus Horários
+          Matemática
         </a>
         <a
-          class="heading heading--size-xs breadcrumb__item breadcrumb__item--is-active"
+          class="subtitle subtitle--size-md breadcrumb__item breadcrumb__item--is-active"
           data-testid="breadcrumb-item"
         >
-          Mentoria
+          Números Primos e Decomposição
         </a>
       </div>
     </div>
@@ -34,22 +34,22 @@ Object {
       class="breadcrumb"
     >
       <a
-        class="heading heading--size-xs breadcrumb__item"
+        class="subtitle subtitle--size-md breadcrumb__item"
         data-testid="breadcrumb-item"
       >
-        Mentorias
+        ENEM
       </a>
       <a
-        class="heading heading--size-xs breadcrumb__item"
+        class="subtitle subtitle--size-md breadcrumb__item"
         data-testid="breadcrumb-item"
       >
-        Meus Horários
+        Matemática
       </a>
       <a
-        class="heading heading--size-xs breadcrumb__item breadcrumb__item--is-active"
+        class="subtitle subtitle--size-md breadcrumb__item breadcrumb__item--is-active"
         data-testid="breadcrumb-item"
       >
-        Mentoria
+        Números Primos e Decomposição
       </a>
     </div>
   </div>,
@@ -116,7 +116,7 @@ Object {
         class="breadcrumb"
       >
         <a
-          class="heading heading--size-xs breadcrumb__item"
+          class="subtitle subtitle--size-md breadcrumb__item"
           data-testid="breadcrumb-item"
         >
           First Item
@@ -125,7 +125,7 @@ Object {
           class="breadcrumb__popover-container"
         >
           <a
-            class="heading heading--size-xs breadcrumb__item"
+            class="subtitle subtitle--size-md breadcrumb__item"
             data-testid="breadcrumb-popover-trigger"
           >
             ...
@@ -173,7 +173,7 @@ Object {
           </div>
         </div>
         <a
-          class="heading heading--size-xs breadcrumb__item breadcrumb__item--is-active"
+          class="subtitle subtitle--size-md breadcrumb__item breadcrumb__item--is-active"
           data-testid="breadcrumb-item"
         >
           Active Item
@@ -186,7 +186,7 @@ Object {
       class="breadcrumb"
     >
       <a
-        class="heading heading--size-xs breadcrumb__item"
+        class="subtitle subtitle--size-md breadcrumb__item"
         data-testid="breadcrumb-item"
       >
         First Item
@@ -195,7 +195,7 @@ Object {
         class="breadcrumb__popover-container"
       >
         <a
-          class="heading heading--size-xs breadcrumb__item"
+          class="subtitle subtitle--size-md breadcrumb__item"
           data-testid="breadcrumb-popover-trigger"
         >
           ...
@@ -243,7 +243,7 @@ Object {
         </div>
       </div>
       <a
-        class="heading heading--size-xs breadcrumb__item breadcrumb__item--is-active"
+        class="subtitle subtitle--size-md breadcrumb__item breadcrumb__item--is-active"
         data-testid="breadcrumb-item"
       >
         Active Item

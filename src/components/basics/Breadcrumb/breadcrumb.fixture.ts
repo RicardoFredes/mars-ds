@@ -1,37 +1,37 @@
 export const mockDefaultBreadcrumblist = [
   {
-    label: "Mentorias",
-    onClick: () => console.log("Mentorias"),
+    label: "ENEM",
+    onClick: () => console.log("ENEM"),
   },
   {
-    label: "Meus Horários",
-    onClick: () => console.log("Meus Horários"),
+    label: "Matemática",
+    onClick: () => console.log("Matemática"),
   },
   {
-    label: "Mentoria",
-    onClick: () => console.log("Mentoria de estudos"),
+    label: "Números Primos e Decomposição",
+    onClick: () => console.log("Números Primos e Decomposição"),
   },
 ];
 
 export const mockBreadcrumbListExpand = [
   {
-    label: "Mentorias",
-    onClick: () => console.log("Mentorias"),
+    label: "ENEM",
+    onClick: () => console.log("ENEM"),
   },
   {
-    label: "Meus Horários",
-    onClick: () => console.log("Meus Horários"),
+    label: "Matérias",
+    onClick: () => console.log("Matérias"),
   },
   {
-    label: "Mentoria",
-    onClick: () => console.log("Mentoria de estudos"),
+    label: "Matemática",
+    onClick: () => console.log("Matemática"),
   },
   {
-    label: "Aulas ao vivo",
-    onClick: () => console.log("Aulas ao vivo"),
+    label: "Introdução à Matemática",
+    onClick: () => console.log("Introdução à Matemática"),
   },
   {
-    label: "Academia do hábito",
-    onClick: () => console.log("Academia do hábito"),
+    label: "Números Primos e Decomposição",
+    onClick: () => console.log("Números Primos e Decomposição"),
   },
 ];

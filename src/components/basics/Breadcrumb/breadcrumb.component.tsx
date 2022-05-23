@@ -4,8 +4,7 @@ import classNames from "classnames";
 import { useState } from "react";
 import ClickOut from "react-simple-clickout";
 
-import Heading, { HeadingSizes } from "@/components/typographies/Heading";
-
+import Subtitle from "../../typographies/Subtitle";
 import DropdownMenu from "../DropdownMenu";
 
 const Breadcrumb = ({ className, list, componentLink = "a", ...props }: BreadcrumbProps) => {
@@ -82,16 +81,15 @@ const BreadcrumbItem = ({
   };
 
   return (
-    <Heading
+    <Subtitle
       data-testid="breadcrumb-item"
       as={componentLink}
       className={cn}
-      size={HeadingSizes.XSmall}
       onClick={handleItemClick}
       {...props}
     >
       {label}
-    </Heading>
+    </Subtitle>
   );
 };
 

@@ -1,7 +1,8 @@
 export interface PaginationProps extends React.HTMLProps<HTMLUListElement> {
-  defaultCurrentPage?: number;
-  numPages?: number;
+  current?: number;
+  total?: number;
   siblingCount?: number;
+  onSelectPage?: (page: number) => void;
 }
 
 export interface PaginationItemProps {

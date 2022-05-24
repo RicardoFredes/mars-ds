@@ -1,6 +1,9 @@
 .pagination {
   display: flex;
   list-style-type: none;
+  padding: 0;
+  justify-content: center;
+  margin: 0;
 
   &__item {
     padding: 0 $spacing-md;

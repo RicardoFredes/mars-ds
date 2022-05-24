@@ -18,54 +18,54 @@ describe("range", () => {
 });
 
 describe("getPaginationRange", () => {
-  it("should return '...' only to right of center if currentPage is low", () => {
+  it("should return '...' only to right of center if current is low", () => {
     assertGetPaginationRangeTest({
-      numPages: 10,
-      currentPage: 1,
+      total: 10,
+      current: 1,
       siblingCount: 2,
       expected: [1, 2, 3, 4, 5, 6, 7, "...", 10],
     });
   });
 
-  it("should return '...' only to left if currentPage is right", () => {
+  it("should return '...' only to left if current is right", () => {
     assertGetPaginationRangeTest({
-      numPages: 10,
-      currentPage: 7,
+      total: 10,
+      current: 7,
       siblingCount: 2,
       expected: [1, "...", 4, 5, 6, 7, 8, 9, 10],
     });
   });
 
-  it("should return '...' on both sides if currentPage is centered", () => {
+  it("should return '...' on both sides if current is centered", () => {
     assertGetPaginationRangeTest({
-      numPages: 10,
-      currentPage: 5,
+      total: 10,
+      current: 5,
       siblingCount: 2,
       expected: [1, "...", 3, 4, 5, 6, 7, "...", 10],
     });
   });
 
-  it("should not return '...' if the numPages is low", () => {
+  it("should not return '...' if the total is low", () => {
     assertGetPaginationRangeTest({
-      numPages: 3,
-      currentPage: 2,
+      total: 3,
+      current: 2,
       siblingCount: 2,
       expected: [1, 2, 3],
     });
   });
 
   function assertGetPaginationRangeTest({
-    numPages,
-    currentPage,
+    total,
+    current,
     siblingCount,
     expected,
   }: {
-    numPages: number;
-    currentPage: number;
+    total: number;
+    current: number;
     siblingCount: number;
     expected: (number | string)[];
   }) {
-    const result = getPaginationRange(numPages, currentPage, siblingCount);
+    const result = getPaginationRange(total, current, siblingCount);
     expect(result).toEqual(expected);
   }
 });

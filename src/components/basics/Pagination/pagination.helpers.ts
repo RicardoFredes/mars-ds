@@ -7,27 +7,27 @@ export const range = (start: number, end: number): number[] => {
 };
 
 export const getPaginationRange = (
-  numPages: number,
-  currentPage: number,
+  total: number,
+  current: number,
   siblingCount: number
 ): Array<number | string> => {
   const totalPageNumbers = siblingCount + 5;
 
-  if (totalPageNumbers >= numPages) return range(1, numPages);
+  if (totalPageNumbers >= total) return range(1, total);
 
-  const leftSiblingIndex = Math.max(currentPage - siblingCount, 1);
-  const rightSiblingIndex = Math.min(currentPage + siblingCount, numPages);
+  const leftSiblingIndex = Math.max(current - siblingCount, 1);
+  const rightSiblingIndex = Math.min(current + siblingCount, total);
 
   const shouldShowLeftDots = leftSiblingIndex > 2;
-  const shouldShowRightDots = rightSiblingIndex < numPages - 2;
+  const shouldShowRightDots = rightSiblingIndex < total - 2;
 
   const sideItemCount = 3 + 2 * siblingCount;
 
-  if (!shouldShowLeftDots && shouldShowRightDots) return addRightDots(numPages, sideItemCount);
+  if (!shouldShowLeftDots && shouldShowRightDots) return addRightDots(total, sideItemCount);
 
-  if (shouldShowLeftDots && !shouldShowRightDots) return addLeftDots(numPages, sideItemCount);
+  if (shouldShowLeftDots && !shouldShowRightDots) return addLeftDots(total, sideItemCount);
 
-  return addBothSideDots(numPages, leftSiblingIndex, rightSiblingIndex);
+  return addBothSideDots(total, leftSiblingIndex, rightSiblingIndex);
 };
 
 function addRightDots(numPages: number, sideItemCount: number) {

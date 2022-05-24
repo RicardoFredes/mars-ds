@@ -1,7 +1,7 @@
 import type { PaginationProps, PaginationItemProps } from "./pagination.types";
 
 import classNames from "classnames";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 
 import Icon from "@/components/basics/Icon";
 
@@ -9,21 +9,34 @@ import { getPaginationRange } from "./pagination.helpers";
 
 const Pagination = ({
   className,
-  defaultCurrentPage = 1,
-  numPages = 5,
+  current = 1,
+  total = 5,
   siblingCount = 2,
+  onSelectPage,
   ...props
 }: PaginationProps) => {
-  const [currentPage, setCurrentPage] = useState(defaultCurrentPage);
-  const paginationRange = useMemo(() => {
-    return getPaginationRange(numPages, currentPage, siblingCount);
-  }, [currentPage, numPages, siblingCount]);
+  const [currentPage, setCurrentPage] = useState(current);
+
+  useEffect(() => {
+    if (currentPage !== current) setCurrentPage(current);
+  }, [current]);
+
+  const paginationRange = useMemo(
+    () => getPaginationRange(total, currentPage, siblingCount),
+    [currentPage, total, siblingCount]
+  );
 
   if (currentPage === 0 || paginationRange.length < 2) return null;
 
   const cn = classNames("pagination", className);
 
-  const onPageChange = (page: number) => setCurrentPage(page);
+  const handleSelectPage = (page: number) => {
+    if (currentPage === page) return;
+    setCurrentPage(page);
+    onSelectPage?.(page);
+  };
+
+  const onPageChange = (page: number) => handleSelectPage(page);
   const onNext = () => onPageChange(currentPage + 1);
   const onPrevious = () => onPageChange(currentPage - 1);
 

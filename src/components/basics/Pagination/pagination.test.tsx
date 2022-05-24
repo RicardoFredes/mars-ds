@@ -21,25 +21,25 @@ const makeSut = (props?: PaginationProps) => render(<Pagination {...props} />);
 describe("<Pagination>", () => {
   it("should render component", () => {
     const wrapper = makeSut();
-    expect(wrapper).toBeTruthy();
+    expect(wrapper).toMatchSnapshot();
   });
 
-  it("should render a default numbers of pages if not provided a numPages", () => {
+  it("should render a default numbers of pages if not provided a total", () => {
     const wrapper = makeSut();
     const pageNumbers = wrapper.getAllByTestId(dataTestId.paginationPageNumber);
     expect(pageNumbers).toHaveLength(5);
   });
 
-  it("should render the same amount of the numPages that are provided by numPages prop ", () => {
-    const numPages = 3;
-    const wrapper = makeSut({ numPages });
+  it("should render the same amount of the total that are provided by total prop ", () => {
+    const total = 3;
+    const wrapper = makeSut({ total });
     const pages = wrapper.getAllByTestId(dataTestId.paginationPageNumber);
-    expect(pages).toHaveLength(numPages);
+    expect(pages).toHaveLength(total);
   });
 
-  it("should current page is equal to defaultCurrentPage prop", () => {
-    const defaultCurrentPage = 5;
-    const wrapper = makeSut({ defaultCurrentPage });
+  it("should current page is equal to current prop", () => {
+    const current = 5;
+    const wrapper = makeSut({ current });
     const pages = wrapper.getAllByTestId(dataTestId.paginationPageNumber);
 
     expect(pages[0]?.className).toBe(classNameLabel.isEnabled);
@@ -56,13 +56,13 @@ describe("<Pagination>", () => {
   });
 
   it("should render a enabled previous button if the first element is not selected", () => {
-    const wrapper = makeSut({ defaultCurrentPage: 5 });
+    const wrapper = makeSut({ current: 5 });
     const pagePrevIcon = wrapper.getByTestId(dataTestId.paginationPrevButton);
     expect(pagePrevIcon.className).toBe(classNameLabel.isEnabled);
   });
 
   it("should render a disabled next button if the last element is selected", () => {
-    const wrapper = makeSut({ defaultCurrentPage: 5 });
+    const wrapper = makeSut({ current: 5 });
     const pageNextIcon = wrapper.getByTestId(dataTestId.paginationNextButton);
     expect(pageNextIcon.className).toBe(classNameLabel.isDisabled);
   });

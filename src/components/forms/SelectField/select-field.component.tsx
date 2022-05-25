@@ -227,12 +227,15 @@ const SelectField = ({
 
   useEffect(() => {
     const handleSetY = () => {
-      if (isOpen) return;
+      if (!isOpen) return;
       setY(document.body.clientTop - window.pageYOffset);
     };
-    window.addEventListener("scroll", handleSetY);
+
+    if (isOpen) window.addEventListener("scroll", handleSetY);
+    else window.removeEventListener("scroll", handleSetY);
+
     return () => window.removeEventListener("scroll", handleSetY);
-  }, []);
+  }, [isOpen]);
 
   return (
     <div className={cn} ref={selectFieldRef} style={style}>
@@ -252,7 +255,7 @@ const SelectField = ({
       </div>
       {isOpen && (
         <DropdownMenu
-          style={{ "width": selectFieldRef?.current?.offsetWidth, "--top": `${y}px` } as any}
+          style={{ "width": selectFieldRef?.current?.offsetWidth, "--y": `${y}px` } as any}
           list={dropdownMenuList}
           className="select-field__options"
           onClick={(event) => event.stopPropagation()}

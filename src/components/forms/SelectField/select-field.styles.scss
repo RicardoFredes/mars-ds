@@ -31,7 +31,7 @@
       }
     }
     @media (min-width: $above) {
-      transform: translateY(calc(var(--top, 0px) + 8px));
+      transform: translateY(calc(var(--y, 0px) + 8px));
       .dropdown-menu__list {
         max-height: 220px;
       }

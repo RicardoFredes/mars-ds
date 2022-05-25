@@ -101,6 +101,9 @@ export * from "./components/basics/SubjectLabel/subject-label.types";
 export { default as ToggleButton } from "./components/basics/ToggleButton/toggle-button.component";
 export * from "./components/basics/ToggleButton/toggle-button.types";
 
+export { default as ToggleDropdown } from "./components/basics/ToggleDropdown/toggle-dropdown.component";
+export * from "./components/basics/ToggleDropdown/toggle-dropdown.types";
+
 export { default as VerticalStepper } from "./components/basics/VerticalStepper/vertical-stepper.component";
 export * from "./components/basics/VerticalStepper/vertical-stepper.types";
 

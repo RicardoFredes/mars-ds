@@ -1,0 +1,31 @@
+.toggle-dropdown {
+  display: inline-block;
+  &__list {
+    z-index: 101;
+    min-width: 200px;
+    transform: translateY(calc(var(--y, 0px) + 8px)) translateX(var(--x, 0px));
+  }
+  &--is-ready {
+    .toggle-dropdown__list {
+      position: fixed;
+    }
+  }
+  &--is-right {
+    .toggle-dropdown__list {
+      right: 40px;
+    }
+  }
+  &:not(.toggle-dropdown--is-open) {
+    .toggle-dropdown {
+      &__list {
+        visibility: hidden;
+        pointer-events: none;
+      }
+      &--is-ready {
+        .toggle-dropdown__list {
+          display: none;
+        }
+      }
+    }
+  }
+}

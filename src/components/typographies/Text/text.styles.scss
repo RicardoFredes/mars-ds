@@ -10,10 +10,10 @@ p,
   }
   &--size {
     &-sm {
-      font-size: 0.875em; // 12px
+      font-size: 0.75em; // 12px
       font-size: clamp(0.75em, $factor, 0.875rem);
       @media (min-width: $breakpoint-lg) {
-        font-size: 0.75em; // 14px
+        font-size: 0.875em; // 14px
       }
     }
   }

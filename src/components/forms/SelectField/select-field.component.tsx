@@ -20,8 +20,11 @@ const SelectField = ({
   className,
   onSelect,
   enableFilter = true,
+  disabled,
+  style,
   ...props
 }: SelectFieldProps) => {
+  const [y, setY] = useState(0);
   const [isDropdownAbove, setIsDropdownAbove] = useState(false);
   const [option, setOption] = useState(emptyOption);
   const [key, setKey] = useState(generateHash("key"));
@@ -66,7 +69,7 @@ const SelectField = ({
   };
 
   const open = () => {
-    if (isOpen) return;
+    if (isOpen || disabled) return;
     addEventListener();
     setIsOpen(true);
     handleSetIsAbove();
@@ -222,11 +225,21 @@ const SelectField = ({
     open();
   };
 
+  useEffect(() => {
+    const handleSetY = () => {
+      if (isOpen) return;
+      setY(document.body.clientTop - window.pageYOffset);
+    };
+    window.addEventListener("scroll", handleSetY);
+    return () => window.removeEventListener("scroll", handleSetY);
+  }, []);
+
   return (
-    <div className={cn} ref={selectFieldRef}>
+    <div className={cn} ref={selectFieldRef} style={style}>
       <div onClick={handleClickToProtectArea}>
         <TextField
           {...props}
+          disabled={disabled}
           className={classNames({ "field--is-focused": isOpen })}
           inputDisabled={inputDisabled}
           dataKey={key}
@@ -239,7 +252,7 @@ const SelectField = ({
       </div>
       {isOpen && (
         <DropdownMenu
-          style={{ width: selectFieldRef?.current?.offsetWidth }}
+          style={{ "width": selectFieldRef?.current?.offsetWidth, "--top": `${y}px` } as any}
           list={dropdownMenuList}
           className="select-field__options"
           onClick={(event) => event.stopPropagation()}

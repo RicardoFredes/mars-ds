@@ -10,7 +10,6 @@
   transition: background-color ease 200ms;
   overflow: hidden;
   &__content {
-
     &__name {
       position: absolute;
       padding: calc($height / 2) $spacing-lg $spacing-lg;
@@ -38,13 +37,15 @@
       }
     }
   }
-  &:not(.file-field--disabled):hover {
-    border-color: $color-text-primary;
-    background-color: $color-action-hover;
-    .file-field__content {
-      &__image {
-        &--is-file {
-          opacity: 0.5;
+  @media (min-width: $breakpoint-md) {
+    &:not(.file-field--disabled):hover {
+      border-color: $color-text-primary;
+      background-color: $color-action-hover;
+      .file-field__content {
+        &__image {
+          &--is-file {
+            opacity: 0.5;
+          }
         }
       }
     }
@@ -64,6 +65,9 @@
       &__content {
         opacity: 0.5;
       }
+    }
+    input {
+      cursor: not-allowed;
     }
   }
 }

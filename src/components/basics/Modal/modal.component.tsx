@@ -58,10 +58,10 @@ const Modal = ({ className, close, children, size = ModalSizes.Medium, ...props 
 export default Modal;
 
 Modal.open = (ChildComponent: ModalChildComponent, modalProps: ModalOpenProps) => {
-  const { closeDelay, duration, ...props } = modalProps;
+  const { closeDelay, duration, childComponentProps, ...props } = modalProps;
   const Component = ({ close }: ModalChildProps) => (
     <Modal close={close} {...props}>
-      <ChildComponent close={close} />
+      <ChildComponent {...childComponentProps} close={close} />
     </Modal>
   );
   return rcPortal(Component, { closeDelay, duration });

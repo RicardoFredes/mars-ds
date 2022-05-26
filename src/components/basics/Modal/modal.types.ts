@@ -15,9 +15,11 @@ export type ModalChildComponent = (props: ModalChildProps) => JSX.Element;
 
 export interface ModalChildProps {
   close: Close;
+  [props: string]: any;
 }
 
 export interface ModalOpenProps extends Omit<ModalProps, "close"> {
   closeDelay?: number;
   duration?: number;
+  childComponentProps?: any;
 }

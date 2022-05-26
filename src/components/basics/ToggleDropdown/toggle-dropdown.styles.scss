@@ -13,6 +13,10 @@
     z-index: 101;
     min-width: 200px;
     transform: translate(var(--x), var(--y));
+    .link {
+      color: $color-text-primary;
+      text-decoration: none;
+    }
   }
   &:not(.toggle-dropdown--is-open) {
     .toggle-dropdown {

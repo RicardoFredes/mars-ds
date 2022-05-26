@@ -9,7 +9,8 @@ Object {
         class="toggle-dropdown"
       >
         <button
-          class="btn btn--neutral btn--size-sm toggle-btn toggle-btn--variant-text"
+          class="btn btn--neutral btn--size-sm btn--is-disabled toggle-btn toggle-btn--variant-text"
+          disabled=""
           title="Abrir mais opções para o item"
           type="button"
         >
@@ -56,7 +57,8 @@ Object {
       class="toggle-dropdown"
     >
       <button
-        class="btn btn--neutral btn--size-sm toggle-btn toggle-btn--variant-text"
+        class="btn btn--neutral btn--size-sm btn--is-disabled toggle-btn toggle-btn--variant-text"
+        disabled=""
         title="Abrir mais opções para o item"
         type="button"
       >

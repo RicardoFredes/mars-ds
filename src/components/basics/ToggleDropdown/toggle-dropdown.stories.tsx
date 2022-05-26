@@ -52,6 +52,16 @@ export default {
       control: { type: "object" },
       defaultValue: undefined,
     },
+    isRight: {
+      description: "The dropdown menu is positioned to the right",
+      control: { type: "boolean" },
+      defaultValue: false,
+    },
+    isAbove: {
+      description: "The dropdown menu is positioned above",
+      control: { type: "boolean" },
+      defaultValue: false,
+    },
   },
 } as ComponentMeta<typeof ToggleDropdown>;
 
@@ -75,8 +85,15 @@ export const Opened = Template.bind({});
 Opened.args = { ...DefaultArgs, defaultValue: true };
 
 export const Right: ComponentStory<typeof ToggleDropdown> = (args) => (
-  <div className="flex justify-content-end">
+  <div className="flex justify-content-center">
     <ToggleDropdown {...args} />
   </div>
 );
-Right.args = { ...DefaultArgs, defaultValue: true };
+Right.args = { ...DefaultArgs, defaultValue: true, isRight: true };
+
+export const Above: ComponentStory<typeof ToggleDropdown> = (args) => (
+  <div className="flex justify-content-center" style={{ paddingTop: 200 }}>
+    <ToggleDropdown {...args} />
+  </div>
+);
+Above.args = { ...DefaultArgs, defaultValue: true, isAbove: true };

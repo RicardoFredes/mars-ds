@@ -10,4 +10,6 @@ export interface ToggleDropdownProps
   disabled?: boolean;
   onToggle?: (isOpen: boolean) => void;
   defaultValue?: boolean;
+  isRight?: boolean;
+  isAbove?: boolean;
 }

@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.81](https://github.com/mesalva/mars/compare/v1.0.0-alpha.80...v1.0.0-alpha.81) (2022-05-26)
+
+
+### Features
+
+* **modal:** add childComponentProps ([0eb86b1](https://github.com/mesalva/mars/commit/0eb86b16891c28b2b00818dcc49b2a82b5f14a5d))
+
 ## [1.0.0-alpha.80](https://github.com/mesalva/mars/compare/v1.0.0-alpha.79...v1.0.0-alpha.80) (2022-05-26)
 
 

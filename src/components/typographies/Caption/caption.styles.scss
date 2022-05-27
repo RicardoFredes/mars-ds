@@ -2,4 +2,8 @@
   display: inline-block;
   font-size: 0.75rem;
   line-height: 1.5em;
+  font-size: clamp(0.75em, 3.25vw, 0.875rem);
+  @media (min-width: $breakpoint-lg) {
+    font-size: 0.875em; // 14px
+  }
 }

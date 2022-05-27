@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.82](https://github.com/mesalva/mars/compare/v1.0.0-alpha.81...v1.0.0-alpha.82) (2022-05-27)
+
+
+### Bug Fixes
+
+* **caption:** responsive font-size ([3447fa8](https://github.com/mesalva/mars/commit/3447fa855a06b9c9343bef9c10cd48b74dcb953d))
+
 ## [1.0.0-alpha.81](https://github.com/mesalva/mars/compare/v1.0.0-alpha.80...v1.0.0-alpha.81) (2022-05-26)
 
 

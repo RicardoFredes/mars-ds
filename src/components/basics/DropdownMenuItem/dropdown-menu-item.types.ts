@@ -8,7 +8,7 @@ export type DropdownMenuItemKeySizes =
   typeof DropdownMenuItemSizes[keyof typeof DropdownMenuItemSizes];
 
 export interface DropdownMenuItemProps
-  extends Omit<HTMLProps<HTMLButtonElement>, "size" | "type" | "as">,
+  extends Omit<HTMLProps<HTMLButtonElement | HTMLAnchorElement>, "size" | "type" | "as">,
     AriaAttributes {
   label?: string;
   rightIconName?: string;

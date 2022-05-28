@@ -1,49 +1,42 @@
 .breadcrumb {
-  display: flex;
-  align-items: center;
+  ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 
-  &__popover-container {
-    position: relative;
-
-    &-list {
-      left: 0;
-      top: 36px;
-      min-width: 140px;
-      position: absolute;
-    }
-  }
-  &__item {
-    color: $color-primary-500;
-    margin-right: $spacing-lg;
     display: flex;
-    gap: $spacing-lg;
     align-items: center;
+    min-height: 40px;
     white-space: nowrap;
 
-    &::after {
-      content: "";
-      display: block;
-      width: 4px;
-      height: 4px;
-      border-radius: 4px;
-      background-color: $color-text-disabled;
-    }
-
-    &--is-active {
-      color: $color-text-primary;
-      display: block;
-      text-overflow: ellipsis;
-      overflow: hidden;
-
-      &::after {
-        display: none;
+    > li {
+      display: flex;
+      align-items: center;
+      > a {
+        $color: $color-text-primary;
+        color: $color;
+        &:hover,
+        &:visited {
+          color: $color;
+        }
       }
-    }
 
-    &:not(&--is-active) {
-      &:hover {
-        cursor: pointer;
-        text-decoration: underline;
+      &:last-child {
+        display: inline-block;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      &:not(:last-child) {
+        &::after {
+          $circle-size: 4px;
+          content: "";
+          display: inline-block;
+          width: $circle-size;
+          height: $circle-size;
+          border-radius: 50%;
+          margin: $spacing-lg;
+          background-color: $color-text-disabled;
+        }
       }
     }
   }

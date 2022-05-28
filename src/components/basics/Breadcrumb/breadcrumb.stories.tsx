@@ -1,7 +1,7 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import Breadcrumb from "./";
-import { mockBreadcrumbListExpand, mockDefaultBreadcrumblist } from "./breadcrumb.fixture";
+import { mockBreadcrumbListExpand, mockDefaultBreadcrumbs } from "./breadcrumb.fixture";
 
 export default {
   title: "Components/Breadcrumb",
@@ -12,7 +12,7 @@ export default {
 const Template: ComponentStory<typeof Breadcrumb> = (args) => <Breadcrumb {...args} />;
 
 const DefaultArgs = {
-  list: mockDefaultBreadcrumblist,
+  list: mockDefaultBreadcrumbs,
 };
 
 export const Default = Template.bind({});

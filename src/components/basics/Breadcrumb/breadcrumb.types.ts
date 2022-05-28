@@ -1,18 +1,9 @@
+import type { DropdownMenuItemProps } from "../DropdownMenuItem";
 import type { HTMLProps } from "react";
 
+type ComponentLink = React.ElementType | string;
+
 export interface BreadcrumbProps extends Omit<HTMLProps<HTMLDivElement>, "list"> {
-  list: BreadCrumbItem[];
-  componentLink?: React.ElementType | string;
-}
-
-export interface BreadCrumbItem {
-  label?: string;
-  onClick?: () => void;
-}
-
-export interface BreadCrumbItemProps extends BreadCrumbItem {
-  active: boolean;
-  key?: string | number;
-  componentLink?: React.ElementType | string;
-  onExpand?: () => void;
+  list?: DropdownMenuItemProps[];
+  componentLink?: ComponentLink;
 }

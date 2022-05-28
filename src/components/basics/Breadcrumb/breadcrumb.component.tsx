@@ -1,95 +1,60 @@
-import type { BreadCrumbItemProps, BreadcrumbProps } from "./breadcrumb.types";
+import type { DropdownMenuItemProps } from "../DropdownMenuItem";
+import type { BreadcrumbProps } from "./breadcrumb.types";
 
 import classNames from "classnames";
-import { useState } from "react";
-import ClickOut from "react-simple-clickout";
 
 import Subtitle from "../../typographies/Subtitle";
-import DropdownMenu from "../DropdownMenu";
+import ToggleDropdown from "../ToggleDropdown";
 
-const Breadcrumb = ({ className, list, componentLink = "a", ...props }: BreadcrumbProps) => {
-  const [popoverOpen, setPopoverOpen] = useState(false);
-  const formattedList = [...list].splice(1, list.length - 2);
+const Breadcrumb = ({ className, list, componentLink, ...props }: BreadcrumbProps) => {
+  if (!Array.isArray(list)) return null;
+
   const cn = classNames("breadcrumb", className);
-  const firstBreadCrumbItem = list[0];
-  const lastBreadCrumbItem = list[list.length - 1];
+  const arialLabel = "breadcrumbs";
 
-  const togglePopover = () => {
-    setPopoverOpen(!popoverOpen);
-  };
+  if (list.length <= 3) {
+    return (
+      <nav className={cn} {...props} aria-label={arialLabel}>
+        <ol>
+          {list.map((item, index) => (
+            <BreadcrumbListItem key={index} componentLink={componentLink} {...item} />
+          ))}
+        </ol>
+      </nav>
+    );
+  }
+
+  const items = [...list];
+  const firstItem = items.shift();
+  const lastItem = items.pop();
+  const toggleButton = { iconName: "more-horizontal" };
 
   return (
-    <div className={cn} {...props}>
-      {list.length > 3 ? (
-        <>
-          <BreadcrumbItem componentLink={componentLink} active={false} {...firstBreadCrumbItem} />
-
-          <div className="breadcrumb__popover-container">
-            <BreadcrumbItem
-              componentLink={componentLink}
-              label={"..."}
-              active={false}
-              onClick={togglePopover}
-              data-testid="breadcrumb-popover-trigger"
-            />
-
-            {popoverOpen && (
-              <ClickOut onClickOut={togglePopover}>
-                <DropdownMenu
-                  componentLink={componentLink}
-                  list={formattedList}
-                  onClick={togglePopover}
-                  className="breadcrumb__popover-container-list"
-                  data-testid="breadcrumb-popover"
-                />
-              </ClickOut>
-            )}
-          </div>
-
-          <BreadcrumbItem componentLink={componentLink} active={true} {...lastBreadCrumbItem} />
-        </>
-      ) : (
-        <>
-          {list.map(({ label, onClick }, index) => {
-            const isActive = index === list.length - 1;
-            return (
-              <BreadcrumbItem
-                key={index}
-                componentLink={componentLink}
-                label={label}
-                active={isActive}
-                onClick={onClick}
-              />
-            );
-          })}
-        </>
-      )}
-    </div>
+    <nav className={cn} {...props} aria-label={arialLabel}>
+      <ol>
+        <BreadcrumbListItem componentLink={componentLink} {...firstItem} />
+        <li>
+          <ToggleDropdown componentLink={componentLink} list={items} toggleButton={toggleButton} />
+        </li>
+        <BreadcrumbListItem componentLink={componentLink} {...lastItem} />
+      </ol>
+    </nav>
   );
 };
 
-const BreadcrumbItem = ({
-  componentLink,
+const BreadcrumbListItem = ({
+  componentLink = "a",
   label,
-  active = false,
-  onClick,
+  className,
   ...props
-}: BreadCrumbItemProps) => {
-  const cn = classNames("breadcrumb__item", { "breadcrumb__item--is-active": active });
-  const handleItemClick = () => {
-    if (active === false) return onClick?.();
-  };
-
+}: DropdownMenuItemProps) => {
+  const cn = classNames("breadcrumb__item", className);
   return (
-    <Subtitle
-      data-testid="breadcrumb-item"
-      as={componentLink}
-      className={cn}
-      onClick={handleItemClick}
-      {...props}
-    >
-      {label}
-    </Subtitle>
+    <li data-testid="breadcrumb-item" className={cn}>
+      <Subtitle as={componentLink} {...props}>
+        {label}
+      </Subtitle>
+    </li>
   );
 };
 

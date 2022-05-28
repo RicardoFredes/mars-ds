@@ -43,6 +43,7 @@ const ToggleDropdown = ({
         size="sm"
         variant="text"
         {...toggleButton}
+        data-testid="toggle-dropdown-button"
         disabled={!hasList || disabled}
         onClick={toggleOpen}
       />

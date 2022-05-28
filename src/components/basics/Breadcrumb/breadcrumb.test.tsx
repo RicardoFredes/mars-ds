@@ -1,122 +1,83 @@
 import type { BreadcrumbProps } from "./breadcrumb.types";
 
-import { fireEvent, render } from "@testing-library/react";
+import { fireEvent, render, waitFor } from "@testing-library/react";
 
 import Breadcrumb from ".";
-import { mockDefaultBreadcrumblist } from "./breadcrumb.fixture";
+import { mountListMock } from "./breadcrumb.fixture";
 
-const makeSut = (props?: BreadcrumbProps) =>
-  render(<Breadcrumb list={mockDefaultBreadcrumblist} {...props} />);
+const makeSut = (props?: Partial<BreadcrumbProps>) => render(<Breadcrumb {...props} />);
 
 const PROPS = {
   ITEM_TEST_ID: "breadcrumb-item",
-  ITEM_CLASSNAME: "breadcrumb__item",
-  ITEM_POPOVER_TRIGGER: "breadcrumb-popover-trigger",
-  ITEM_POPOVER: "breadcrumb-popover",
-  ITEM_CLASSNAME_ACTIVE: "breadcrumb__item--is-active",
+  TOGGLE_TEST_ID: "toggle-dropdown-button",
 };
 
 describe("<Breadcrumb>", () => {
-  it("should match the snapshot", () => {
-    const wrapper = makeSut();
-    expect(wrapper).toMatchSnapshot();
-  });
+  describe("when has less than 4 items", () => {
+    const labels = ["Label 1", "Label 2", "Label 3"];
+    const list = mountListMock(labels);
 
-  it("should put active class on last item of breadcrumb", () => {
-    const wrapper = makeSut();
-    const breadCrumbItems = wrapper.getAllByTestId(PROPS.ITEM_TEST_ID);
-    const [firstElement, middleElement, lastElement] = breadCrumbItems;
-    expect(firstElement?.className).not.toContain(PROPS.ITEM_CLASSNAME_ACTIVE);
-    expect(middleElement?.className).not.toContain(PROPS.ITEM_CLASSNAME_ACTIVE);
-    expect(lastElement?.className).toContain(PROPS.ITEM_CLASSNAME_ACTIVE);
-  });
-
-  it("shoud call a function when click on non active items ", () => {
-    const onClickSpy = jest.fn();
-    const list = [
-      { label: "First Item", onClick: onClickSpy },
-      { label: "Second Item", onClick: onClickSpy },
-      { label: "Active Item", onClick: onClickSpy },
-    ];
-    const wrapper = makeSut({ list });
-    const breadCrumbItems = wrapper.getAllByTestId(PROPS.ITEM_TEST_ID);
-
-    const [firstElement, middleElement, lastElement] = breadCrumbItems;
-
-    fireEvent.click(firstElement as HTMLElement);
-    expect(onClickSpy).toHaveBeenCalled();
-    expect(onClickSpy).toBeCalledTimes(1);
-
-    onClickSpy.mockClear();
-    fireEvent.click(middleElement as HTMLElement);
-    expect(onClickSpy).toHaveBeenCalled();
-    expect(onClickSpy).toBeCalledTimes(1);
-
-    onClickSpy.mockClear();
-    fireEvent.click(lastElement as HTMLElement);
-    expect(onClickSpy).not.toHaveBeenCalled();
-    expect(onClickSpy).toBeCalledTimes(0);
-  });
-
-  describe("with more than 3 items", () => {
-    const onClickSpy = jest.fn();
-    const list = ["First Item", "Second Item", "Third Item", "Active Item"].map((label) => ({
-      label,
-      onClick: onClickSpy,
-    }));
-
-    it("should there are first and last items as Link and there is a middle element as dropdown menu", () => {
+    it("should match the snapshot", () => {
       const wrapper = makeSut({ list });
-
-      const breadcrumbItems = wrapper.getAllByTestId(PROPS.ITEM_TEST_ID);
-      expect(breadcrumbItems.length).toEqual(2);
-      wrapper.getByTestId(PROPS.ITEM_POPOVER_TRIGGER);
-      wrapper.getByText("...");
-    });
-
-    it("should open the popover after click on trigger", () => {
-      const wrapper = makeSut({ list });
-      const triggerBreadCrumb = wrapper.getByTestId(PROPS.ITEM_POPOVER_TRIGGER);
-      fireEvent.click(triggerBreadCrumb);
-
-      wrapper.getByTestId(PROPS.ITEM_POPOVER);
-
-      const secondItem = wrapper.getByText("Second Item");
-      wrapper.getByText("Third Item");
-
-      fireEvent.click(secondItem);
-      expect(onClickSpy).toBeCalledTimes(1);
-
-      const itemPopover = wrapper.queryAllByTestId(PROPS.ITEM_POPOVER);
-      expect(itemPopover).toHaveLength(0);
-
-      fireEvent.click(triggerBreadCrumb);
-      const thirdItem = wrapper.getByText("Third Item");
-      fireEvent.click(thirdItem);
-      expect(onClickSpy).toBeCalledTimes(2);
-    });
-
-    it("should render popover with more items", () => {
-      const LENGTH_LIST = Math.ceil(Math.random() * 100) + 3;
-
-      const LABEL_TEXT = "popover-item";
-      const list = new Array(LENGTH_LIST).fill(null).map(() => ({ label: LABEL_TEXT }));
-      list.push({ label: "Last item" });
-      list.unshift({ label: "First item" });
-
-      const wrapper = makeSut({ list });
-
-      const triggerBreadCrumb = wrapper.getByTestId(PROPS.ITEM_POPOVER_TRIGGER);
-      fireEvent.click(triggerBreadCrumb);
-
-      expect(wrapper.getAllByText(LABEL_TEXT)).toHaveLength(LENGTH_LIST);
-    });
-
-    it("should match to snapshot", () => {
-      const wrapper = makeSut({ list });
-      const triggerBreadCrumb = wrapper.getByTestId(PROPS.ITEM_POPOVER_TRIGGER);
-      fireEvent.click(triggerBreadCrumb);
       expect(wrapper).toMatchSnapshot();
+    });
+
+    it.each(labels)("should render a <BreadcrumbListItem> with label %s", (label) => {
+      const wrapper = makeSut({ list });
+      wrapper.getByText(label);
+    });
+  });
+
+  describe("when has more than 3 items", () => {
+    const labels = ["Label 1", "Label 2", "Label 3", "Label 4"];
+    const list = mountListMock(labels);
+
+    describe("When modal is closed", () => {
+      it("should match the snapshot", () => {
+        const wrapper = makeSut({ list });
+        expect(wrapper).toMatchSnapshot();
+      });
+
+      it("should render a first <BreadcrumbListItem> with label 1", () => {
+        const wrapper = makeSut({ list });
+        wrapper.getByText(labels[0] as string);
+      });
+
+      it("should render a last <BreadcrumbListItem> with label 4", () => {
+        const wrapper = makeSut({ list });
+        wrapper.getByText(labels[labels.length - 1] as string);
+      });
+
+      it("should render a <ToggleDropdown>", () => {
+        const wrapper = makeSut({ list });
+        wrapper.getByTestId(PROPS.TOGGLE_TEST_ID);
+      });
+
+      it("should only render the first and the last <BreadcrumbListItem>", async () => {
+        const wrapper = makeSut({ list });
+        expect(wrapper.getAllByTestId(PROPS.ITEM_TEST_ID)).toHaveLength(2);
+
+        await waitFor(() => {
+          expect(wrapper.queryByText(labels[0] as string)).toBeInTheDocument();
+          expect(wrapper.queryByText(labels[1] as string)).not.toBeInTheDocument();
+          expect(wrapper.queryByText(labels[2] as string)).not.toBeInTheDocument();
+          expect(wrapper.queryByText(labels[3] as string)).toBeInTheDocument();
+        });
+      });
+    });
+
+    describe("When modal is open", () => {
+      it("should match the snapshot", () => {
+        const wrapper = makeSut({ list });
+        fireEvent.click(wrapper.getByTestId(PROPS.TOGGLE_TEST_ID));
+        expect(wrapper).toMatchSnapshot();
+      });
+
+      it.each(labels)("should render a <BreadcrumbListItem> with label %s", (label) => {
+        const wrapper = makeSut({ list });
+        fireEvent.click(wrapper.getByTestId(PROPS.TOGGLE_TEST_ID));
+        wrapper.getByText(label);
+      });
     });
   });
 });

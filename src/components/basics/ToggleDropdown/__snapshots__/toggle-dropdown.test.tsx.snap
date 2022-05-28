@@ -10,6 +10,7 @@ Object {
       >
         <button
           class="btn btn--neutral btn--size-sm btn--is-disabled toggle-btn toggle-btn--variant-text"
+          data-testid="toggle-dropdown-button"
           disabled=""
           title="Abrir mais opções para o item"
           type="button"
@@ -58,6 +59,7 @@ Object {
     >
       <button
         class="btn btn--neutral btn--size-sm btn--is-disabled toggle-btn toggle-btn--variant-text"
+        data-testid="toggle-dropdown-button"
         disabled=""
         title="Abrir mais opções para o item"
         type="button"

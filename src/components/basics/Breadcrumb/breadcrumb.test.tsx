@@ -66,7 +66,7 @@ describe("<Breadcrumb>", () => {
       });
     });
 
-    describe("When modal is open", () => {
+    describe("when modal is open", () => {
       it("should match the snapshot", () => {
         const wrapper = makeSut({ list });
         fireEvent.click(wrapper.getByTestId(PROPS.TOGGLE_TEST_ID));
@@ -77,6 +77,44 @@ describe("<Breadcrumb>", () => {
         const wrapper = makeSut({ list });
         fireEvent.click(wrapper.getByTestId(PROPS.TOGGLE_TEST_ID));
         wrapper.getByText(label);
+      });
+    });
+  });
+
+  describe("when has custom <ComponentLink>", () => {
+    const list = mountListMock(["Label 1", "Label 2", "Label 3", "Label 4", "Label 5"]);
+    const dataTestId = "custom-link";
+    const componentLink = ({ children, href }: any) => (
+      <a data-testid={dataTestId} href={href}>
+        {children}
+      </a>
+    );
+
+    describe("when modal is closed", () => {
+      it("should match the snapshot", () => {
+        const wrapper = makeSut({ list, componentLink });
+        expect(wrapper).toMatchSnapshot();
+      });
+
+      it("should render a <BreadcrumbListItem> with custom link", () => {
+        const wrapper = makeSut({ list, componentLink });
+        const links = wrapper.getAllByTestId(dataTestId);
+        expect(links).toHaveLength(2);
+      });
+    });
+
+    describe("when modal is open", () => {
+      it("should match the snapshot", () => {
+        const wrapper = makeSut({ list, componentLink });
+        fireEvent.click(wrapper.getByTestId(PROPS.TOGGLE_TEST_ID));
+        expect(wrapper).toMatchSnapshot();
+      });
+
+      it("should render a <BreadcrumbListItem> with custom link", () => {
+        const wrapper = makeSut({ list, componentLink });
+        fireEvent.click(wrapper.getByTestId(PROPS.TOGGLE_TEST_ID));
+        const links = wrapper.getAllByTestId(dataTestId);
+        expect(links).toHaveLength(list.length);
       });
     });
   });

@@ -17,6 +17,9 @@ export interface SidebarProps extends React.HTMLProps<HTMLDivElement> {
     login?: ButtonProps;
     signup?: ButtonProps;
   };
+  brand?: {
+    image?: string | React.ReactElement;
+  };
   onCloseClick?: VoidFunction;
   fetching: boolean;
 }

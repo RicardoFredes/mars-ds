@@ -5,6 +5,7 @@ import classNames from "classnames";
 import Icon from "@/components/basics/Icon";
 import Label from "@/components/basics/Label";
 import Link from "@/components/basics/Link";
+import type { ComponentLink } from "@/components/experimental/Linker";
 import Caption from "@/components/typographies/Caption";
 import Subtitle from "@/components/typographies/Subtitle";
 import Tokens from "@/tokens";
@@ -26,7 +27,7 @@ const ItemButton = ({
 }: ItemButtonProps) => {
   const cn = classNames("item-button", className);
 
-  const Component: React.ElementType | string = as || props.href ? Link : "button";
+  const Component: ComponentLink = as || props.href ? Link : "button";
 
   return (
     <Component className={cn} {...props} type={type}>

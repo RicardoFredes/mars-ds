@@ -14,5 +14,4 @@ export interface DropdownMenuItemProps
   rightIconName?: string;
   leftIconName?: string;
   size?: DropdownMenuItemKeySizes;
-  componentLink?: React.ElementType | string;
 }

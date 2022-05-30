@@ -4,9 +4,10 @@ import type { BreadcrumbProps } from "./breadcrumb.types";
 import classNames from "classnames";
 
 import Subtitle from "../../typographies/Subtitle";
+import Link from "../Link";
 import ToggleDropdown from "../ToggleDropdown";
 
-const Breadcrumb = ({ className, list, componentLink, ...props }: BreadcrumbProps) => {
+const Breadcrumb = ({ className, list, ...props }: BreadcrumbProps) => {
   if (!Array.isArray(list)) return null;
 
   const cn = classNames("breadcrumb", className);
@@ -17,7 +18,7 @@ const Breadcrumb = ({ className, list, componentLink, ...props }: BreadcrumbProp
       <nav className={cn} {...props} aria-label={arialLabel}>
         <ol>
           {list.map((item, index) => (
-            <BreadcrumbListItem key={index} componentLink={componentLink} {...item} />
+            <BreadcrumbListItem key={index} {...item} />
           ))}
         </ol>
       </nav>
@@ -32,29 +33,23 @@ const Breadcrumb = ({ className, list, componentLink, ...props }: BreadcrumbProp
   return (
     <nav className={cn} {...props} aria-label={arialLabel}>
       <ol>
-        <BreadcrumbListItem componentLink={componentLink} {...firstItem} />
+        <BreadcrumbListItem {...firstItem} />
         <li>
-          <ToggleDropdown componentLink={componentLink} list={items} toggleButton={toggleButton} />
+          <ToggleDropdown list={items} toggleButton={toggleButton} />
         </li>
-        <BreadcrumbListItem componentLink={componentLink} {...lastItem} />
+        <BreadcrumbListItem {...lastItem} />
       </ol>
     </nav>
   );
 };
 
-const BreadcrumbListItem = ({
-  componentLink,
-  label,
-  className,
-  ...props
-}: DropdownMenuItemProps) => {
+const BreadcrumbListItem = ({ label, className, ...props }: DropdownMenuItemProps) => {
   const cn = classNames("breadcrumb__item", className);
-  const Component = componentLink || "a";
   return (
     <li data-testid="breadcrumb-item" className={cn}>
-      <Component {...props}>
-        <Subtitle as="span">{label}</Subtitle>
-      </Component>
+      <Subtitle as={Link} {...props}>
+        {label}
+      </Subtitle>
     </li>
   );
 };

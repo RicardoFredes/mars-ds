@@ -20,7 +20,6 @@ const Sidebar = ({
   sidebarList,
   onCloseClick,
   links = {},
-  LinkComponent,
   fetching,
   ...props
 }: SidebarProps) => {
@@ -29,7 +28,7 @@ const Sidebar = ({
   return (
     <aside className={cn} {...props}>
       <header className="sidebar__header">
-        <Link as={LinkComponent} className="sidebar__logo" {...links.brand}>
+        <Link className="sidebar__logo" {...links.brand}>
           <Logo height={32} />
         </Link>
         <ToggleButton
@@ -41,7 +40,7 @@ const Sidebar = ({
         />
       </header>
       {fetching ? (
-        <SidebarSkeleton user={user} links={links} LinkComponent={LinkComponent} />
+        <SidebarSkeleton user={user} links={links} />
       ) : (
         <>
           {!user.guest ? (
@@ -54,22 +53,13 @@ const Sidebar = ({
               />
               <div className="flex-column align-items-start">
                 <Subtitle data-testid="sidebar__user-name">{user.name}</Subtitle>
-                <Link
-                  as={LinkComponent}
-                  className="sidebar__profile-container__profile-link"
-                  {...links.profile}
-                >
+                <Link className="sidebar__profile-container__profile-link" {...links.profile}>
                   Ver perfil
                 </Link>
               </div>
             </Card>
           ) : (
-            <GuestButtons
-              LinkComponent={LinkComponent}
-              links={links}
-              className="sidebar__guest"
-              data-testid="sidebar__guest"
-            />
+            <GuestButtons links={links} className="sidebar__guest" data-testid="sidebar__guest" />
           )}
 
           {sidebarList.map(({ label, items }) => (
@@ -79,7 +69,6 @@ const Sidebar = ({
               </p>
               {items.map((item, index) => (
                 <SidebarItem
-                  as={LinkComponent}
                   data-testid="sidebar__item"
                   key={`sidebar-item-${index}`}
                   isActive={isItemActive(item.href, currentPathname)}

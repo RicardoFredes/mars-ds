@@ -4,7 +4,6 @@ import type { LinkProps } from "@/components/basics/Link";
 
 export interface SidebarProps extends React.HTMLProps<HTMLDivElement> {
   sidebarList: SidebarList;
-  LinkComponent?: React.ElementType | string;
   currentPathname?: string;
   user?: {
     name?: string;

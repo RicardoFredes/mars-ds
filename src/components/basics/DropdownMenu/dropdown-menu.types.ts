@@ -7,5 +7,4 @@ import type {
 export interface DropdownMenuProps extends Omit<CardProps, "list" | "size"> {
   list: DropdownMenuItemProps[];
   size?: DropdownMenuItemKeySizes;
-  componentLink?: React.ElementType | string;
 }

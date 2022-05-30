@@ -107,6 +107,9 @@ export * from "./components/basics/ToggleDropdown/toggle-dropdown.types";
 export { default as VerticalStepper } from "./components/basics/VerticalStepper/vertical-stepper.component";
 export * from "./components/basics/VerticalStepper/vertical-stepper.types";
 
+export { default as Linker } from "./components/experimental/Linker/linker.component";
+export * from "./components/experimental/Linker/linker.types";
+
 export { default as Checkbox } from "./components/forms/Checkbox/checkbox.component";
 export * from "./components/forms/Checkbox/checkbox.types";
 

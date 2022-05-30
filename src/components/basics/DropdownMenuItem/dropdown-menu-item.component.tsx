@@ -3,8 +3,6 @@ import type { DropdownMenuItemProps } from "./dropdown-menu-item.types";
 import classNames from "classnames";
 
 import Icon from "@/components/basics/Icon/icon.component";
-import Link from "@/components/basics/Link";
-import type { ComponentLink } from "@/components/experimental/Linker";
 import Text from "@/components/typographies/Text/text.component";
 
 import { ButtonTypes } from "../Button";
@@ -17,10 +15,11 @@ const DropdownMenuItem = ({
   rightIconName,
   size = DropdownMenuItemSizes.Medium,
   label,
+  componentLink = "a",
   ...props
 }: DropdownMenuItemProps) => {
   const cn = classNames("dropdown-menu-item", className);
-  const Component: ComponentLink = props.href ? Link : "button";
+  const Component = props.href ? componentLink : "button";
   return (
     <Component type={props.href ? undefined : ButtonTypes.Button} className={cn} {...props}>
       {leftIconName && (

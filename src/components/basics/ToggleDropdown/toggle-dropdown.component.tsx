@@ -10,6 +10,7 @@ import ToggleButton from "../ToggleButton";
 
 const ToggleDropdown = ({
   className,
+  componentLink,
   disabled,
   toggleButton,
   onToggle,
@@ -54,6 +55,7 @@ const ToggleDropdown = ({
             className="toggle-dropdown__list"
             data-testid="toggle-dropdown-list"
             size="sm"
+            componentLink={componentLink}
             list={list}
             onClick={toggleOpen}
           />

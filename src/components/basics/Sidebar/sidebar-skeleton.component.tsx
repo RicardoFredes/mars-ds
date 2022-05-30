@@ -6,11 +6,11 @@ import { makeArray } from "@/services/makeArray";
 import GuestButtons from "../GuestButtons";
 import Skeleton, { SkeletonVariants } from "../Skeleton";
 
-type SidebarSkeletonProps = Pick<SidebarProps, "user" | "links">;
+type SidebarSkeletonProps = Pick<SidebarProps, "user" | "links" | "LinkComponent">;
 
 const sidebarSkeletonList = makeArray(3, { items: makeArray(2, null) });
 
-const SidebarSkeleton = ({ user = {}, links }: SidebarSkeletonProps) => {
+const SidebarSkeleton = ({ user = {}, links, LinkComponent }: SidebarSkeletonProps) => {
   return (
     <div data-testid="sidebar__skeleton">
       {!user.guest ? (
@@ -33,7 +33,7 @@ const SidebarSkeleton = ({ user = {}, links }: SidebarSkeletonProps) => {
           </div>
         </Card>
       ) : (
-        <GuestButtons links={links} data-testid="sidebar__guest" />
+        <GuestButtons LinkComponent={LinkComponent} links={links} data-testid="sidebar__guest" />
       )}
 
       {sidebarSkeletonList.map(({ items }, key) => (

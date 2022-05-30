@@ -4,7 +4,7 @@ import classNames from "classnames";
 
 import Button, { ButtonVariants } from "../Button";
 
-const GuestButtons = ({ className, links = {}, ...props }: GuestButtonsProps) => {
+const GuestButtons = ({ className, links = {}, LinkComponent, ...props }: GuestButtonsProps) => {
   const cn = classNames("guest-buttons", className);
   const defaultLoginLink = "https://mesalva.com/entrar";
   const defaultSignUpLink = "https://mesalva.com/cadastro";
@@ -12,6 +12,7 @@ const GuestButtons = ({ className, links = {}, ...props }: GuestButtonsProps) =>
   return (
     <div className={cn} {...props}>
       <Button
+        as={LinkComponent}
         label="Cadastrar"
         className="guest-buttons__button"
         href={defaultSignUpLink}
@@ -20,6 +21,7 @@ const GuestButtons = ({ className, links = {}, ...props }: GuestButtonsProps) =>
       />
 
       <Button
+        as={LinkComponent}
         label="Entrar"
         className="guest-buttons__button"
         variant={ButtonVariants.Secondary}

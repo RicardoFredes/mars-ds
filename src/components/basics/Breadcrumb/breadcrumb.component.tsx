@@ -4,10 +4,9 @@ import type { BreadcrumbProps } from "./breadcrumb.types";
 import classNames from "classnames";
 
 import Subtitle from "../../typographies/Subtitle";
-import Link from "../Link";
 import ToggleDropdown from "../ToggleDropdown";
 
-const Breadcrumb = ({ className, list, ...props }: BreadcrumbProps) => {
+const Breadcrumb = ({ className, list, componentLink, ...props }: BreadcrumbProps) => {
   if (!Array.isArray(list)) return null;
 
   const cn = classNames("breadcrumb", className);
@@ -18,7 +17,7 @@ const Breadcrumb = ({ className, list, ...props }: BreadcrumbProps) => {
       <nav className={cn} {...props} aria-label={arialLabel}>
         <ol>
           {list.map((item, index) => (
-            <BreadcrumbListItem key={index} {...item} />
+            <BreadcrumbListItem key={index} componentLink={componentLink} {...item} />
           ))}
         </ol>
       </nav>
@@ -33,23 +32,29 @@ const Breadcrumb = ({ className, list, ...props }: BreadcrumbProps) => {
   return (
     <nav className={cn} {...props} aria-label={arialLabel}>
       <ol>
-        <BreadcrumbListItem {...firstItem} />
+        <BreadcrumbListItem componentLink={componentLink} {...firstItem} />
         <li>
-          <ToggleDropdown list={items} toggleButton={toggleButton} />
+          <ToggleDropdown componentLink={componentLink} list={items} toggleButton={toggleButton} />
         </li>
-        <BreadcrumbListItem {...lastItem} />
+        <BreadcrumbListItem componentLink={componentLink} {...lastItem} />
       </ol>
     </nav>
   );
 };
 
-const BreadcrumbListItem = ({ label, className, ...props }: DropdownMenuItemProps) => {
+const BreadcrumbListItem = ({
+  componentLink,
+  label,
+  className,
+  ...props
+}: DropdownMenuItemProps) => {
   const cn = classNames("breadcrumb__item", className);
+  const Component = componentLink || "a";
   return (
     <li data-testid="breadcrumb-item" className={cn}>
-      <Subtitle as={Link} {...props}>
-        {label}
-      </Subtitle>
+      <Component {...props}>
+        <Subtitle as="span">{label}</Subtitle>
+      </Component>
     </li>
   );
 };

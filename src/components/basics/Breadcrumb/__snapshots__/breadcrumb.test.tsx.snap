@@ -15,10 +15,13 @@ Object {
             data-testid="breadcrumb-item"
           >
             <a
-              class="link subtitle subtitle--size-md"
               href="#item-0"
             >
-              Label 1
+              <span
+                class="subtitle subtitle--size-md"
+              >
+                Label 1
+              </span>
             </a>
           </li>
           <li
@@ -26,10 +29,13 @@ Object {
             data-testid="breadcrumb-item"
           >
             <a
-              class="link subtitle subtitle--size-md"
               href="#item-1"
             >
-              Label 2
+              <span
+                class="subtitle subtitle--size-md"
+              >
+                Label 2
+              </span>
             </a>
           </li>
           <li
@@ -37,10 +43,13 @@ Object {
             data-testid="breadcrumb-item"
           >
             <a
-              class="link subtitle subtitle--size-md"
               href="#item-2"
             >
-              Label 3
+              <span
+                class="subtitle subtitle--size-md"
+              >
+                Label 3
+              </span>
             </a>
           </li>
         </ol>
@@ -58,10 +67,13 @@ Object {
           data-testid="breadcrumb-item"
         >
           <a
-            class="link subtitle subtitle--size-md"
             href="#item-0"
           >
-            Label 1
+            <span
+              class="subtitle subtitle--size-md"
+            >
+              Label 1
+            </span>
           </a>
         </li>
         <li
@@ -69,10 +81,13 @@ Object {
           data-testid="breadcrumb-item"
         >
           <a
-            class="link subtitle subtitle--size-md"
             href="#item-1"
           >
-            Label 2
+            <span
+              class="subtitle subtitle--size-md"
+            >
+              Label 2
+            </span>
           </a>
         </li>
         <li
@@ -80,10 +95,13 @@ Object {
           data-testid="breadcrumb-item"
         >
           <a
-            class="link subtitle subtitle--size-md"
             href="#item-2"
           >
-            Label 3
+            <span
+              class="subtitle subtitle--size-md"
+            >
+              Label 3
+            </span>
           </a>
         </li>
       </ol>
@@ -158,10 +176,13 @@ Object {
             data-testid="breadcrumb-item"
           >
             <a
-              class="link subtitle subtitle--size-md"
               href="#item-0"
             >
-              Label 1
+              <span
+                class="subtitle subtitle--size-md"
+              >
+                Label 1
+              </span>
             </a>
           </li>
           <li>
@@ -207,10 +228,13 @@ Object {
             data-testid="breadcrumb-item"
           >
             <a
-              class="link subtitle subtitle--size-md"
               href="#item-3"
             >
-              Label 4
+              <span
+                class="subtitle subtitle--size-md"
+              >
+                Label 4
+              </span>
             </a>
           </li>
         </ol>
@@ -228,10 +252,13 @@ Object {
           data-testid="breadcrumb-item"
         >
           <a
-            class="link subtitle subtitle--size-md"
             href="#item-0"
           >
-            Label 1
+            <span
+              class="subtitle subtitle--size-md"
+            >
+              Label 1
+            </span>
           </a>
         </li>
         <li>
@@ -277,10 +304,13 @@ Object {
           data-testid="breadcrumb-item"
         >
           <a
-            class="link subtitle subtitle--size-md"
             href="#item-3"
           >
-            Label 4
+            <span
+              class="subtitle subtitle--size-md"
+            >
+              Label 4
+            </span>
           </a>
         </li>
       </ol>
@@ -355,10 +385,13 @@ Object {
             data-testid="breadcrumb-item"
           >
             <a
-              class="link subtitle subtitle--size-md"
               href="#item-0"
             >
-              Label 1
+              <span
+                class="subtitle subtitle--size-md"
+              >
+                Label 1
+              </span>
             </a>
           </li>
           <li>
@@ -409,7 +442,7 @@ Object {
                       class="dropdown-menu__list-item"
                     >
                       <a
-                        class="link dropdown-menu-item"
+                        class="dropdown-menu-item"
                         href="#item-1"
                         tabindex="0"
                       >
@@ -424,7 +457,7 @@ Object {
                       class="dropdown-menu__list-item"
                     >
                       <a
-                        class="link dropdown-menu-item"
+                        class="dropdown-menu-item"
                         href="#item-2"
                         tabindex="0"
                       >
@@ -445,10 +478,13 @@ Object {
             data-testid="breadcrumb-item"
           >
             <a
-              class="link subtitle subtitle--size-md"
               href="#item-3"
             >
-              Label 4
+              <span
+                class="subtitle subtitle--size-md"
+              >
+                Label 4
+              </span>
             </a>
           </li>
         </ol>
@@ -466,10 +502,13 @@ Object {
           data-testid="breadcrumb-item"
         >
           <a
-            class="link subtitle subtitle--size-md"
             href="#item-0"
           >
-            Label 1
+            <span
+              class="subtitle subtitle--size-md"
+            >
+              Label 1
+            </span>
           </a>
         </li>
         <li>
@@ -520,7 +559,7 @@ Object {
                     class="dropdown-menu__list-item"
                   >
                     <a
-                      class="link dropdown-menu-item"
+                      class="dropdown-menu-item"
                       href="#item-1"
                       tabindex="0"
                     >
@@ -535,7 +574,7 @@ Object {
                     class="dropdown-menu__list-item"
                   >
                     <a
-                      class="link dropdown-menu-item"
+                      class="dropdown-menu-item"
                       href="#item-2"
                       tabindex="0"
                     >
@@ -556,10 +595,13 @@ Object {
           data-testid="breadcrumb-item"
         >
           <a
-            class="link subtitle subtitle--size-md"
             href="#item-3"
           >
-            Label 4
+            <span
+              class="subtitle subtitle--size-md"
+            >
+              Label 4
+            </span>
           </a>
         </li>
       </ol>

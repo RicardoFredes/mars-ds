@@ -43,17 +43,18 @@ const Breadcrumb = ({ className, list, componentLink, ...props }: BreadcrumbProp
 };
 
 const BreadcrumbListItem = ({
-  componentLink = "a",
+  componentLink,
   label,
   className,
   ...props
 }: DropdownMenuItemProps) => {
   const cn = classNames("breadcrumb__item", className);
+  const Component = componentLink || "a";
   return (
     <li data-testid="breadcrumb-item" className={cn}>
-      <Subtitle as={componentLink} {...props}>
-        {label}
-      </Subtitle>
+      <Component {...props}>
+        <Subtitle as="span">{label}</Subtitle>
+      </Component>
     </li>
   );
 };

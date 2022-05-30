@@ -31,7 +31,7 @@ const Sidebar = ({
     <aside className={cn} {...props}>
       <header className="sidebar__header">
         <Link as={LinkComponent} className="sidebar__logo" {...links.brand}>
-          {brand?.image || <Logo height={32} />}
+          {brand ? <img height={32} src={brand} /> : <Logo height={32} />}
         </Link>
         <ToggleButton
           variant="text"

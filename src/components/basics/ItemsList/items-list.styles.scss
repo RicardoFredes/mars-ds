@@ -1,14 +1,19 @@
-.vertical-stepper {
+.items-list {
   display: flex;
   flex-direction: column;
   width: 100%;
   padding: 0;
   list-style-type: none;
 
-  .link {
+  &__link, .link {
     width: 100%;
     color: $color-text-primary;
     text-decoration: none;
+    &:visited,
+    &:hover {
+      color: $color-text-primary;
+      text-decoration: none;
+    }
   }
 
   &__item {

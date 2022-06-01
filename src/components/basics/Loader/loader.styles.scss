@@ -12,6 +12,12 @@
     stroke-dashoffset: 0;
     animation: animation-loader-circle 1.4s ease-in-out infinite;
   }
+  &--xs {
+    .loader__container {
+      width: 16px;
+      height: 16px;
+    }
+  }
   &--sm {
     .loader__container {
       width: 24px;
@@ -22,6 +28,12 @@
     .loader__container {
       width: 32px;
       height: 32px;
+    }
+  }
+  &--xl {
+    .loader__container {
+      width: 48px;
+      height: 48px;
     }
   }
 }

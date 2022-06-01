@@ -18,23 +18,21 @@ export default {
       control: { type: "select" },
     },
     size: {
-      options: IconSizes,
-      control: { type: "radio" },
+      options: Object.values(IconSizes),
+      control: { type: "select" },
     },
   },
 } as ComponentMeta<typeof Icon>;
 
-const Template: ComponentStory<typeof Icon> = ({ color, ...args }: IconProps) => (
-  <Icon style={{ color }} {...args} />
-);
+const Template: ComponentStory<typeof Icon> = (args: IconProps) => <Icon {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
   name: "me-salva-mini",
-  size: IconSizes.Medium,
+  size: "md",
 };
 
-export const List: ComponentStory<typeof Icon> = ({ color, ...args }: Omit<IconProps, "name">) => {
+export const List: ComponentStory<typeof Icon> = (args: Omit<IconProps, "name">) => {
   const style = {
     display: "grid",
     gap: 24,
@@ -54,7 +52,7 @@ export const List: ComponentStory<typeof Icon> = ({ color, ...args }: Omit<IconP
           }}
           key={name}
         >
-          <Icon name={name} style={{ padding: 8, color }} {...args} />
+          <Icon name={name} style={{ padding: 8 }} {...args} />
           <Text size={TextSizes.Small}>{name}</Text>
         </div>
       ))}

@@ -18,7 +18,7 @@ export default {
       control: { type: "select" },
     },
     size: {
-      options: DropdownMenuItemSizes,
+      options: Object.values(DropdownMenuItemSizes),
       control: { type: "select" },
     },
   },

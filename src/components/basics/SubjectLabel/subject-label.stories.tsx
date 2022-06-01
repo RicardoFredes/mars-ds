@@ -9,7 +9,7 @@ export default {
   component: SubjectLabel,
   argTypes: {
     variant: {
-      options: LabelSubjectVariants,
+      options: Object.values(LabelSubjectVariants),
       control: { type: "select" },
     },
   },

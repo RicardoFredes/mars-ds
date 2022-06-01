@@ -14,7 +14,7 @@ export default {
       },
     },
     size: {
-      options: DisplaySizes,
+      options: Object.values(DisplaySizes),
       control: {
         type: "select",
       },

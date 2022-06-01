@@ -11,13 +11,13 @@ export default {
     name: {
       description: "The variant of our logo",
       control: { type: "radio" },
-      options: LogoNames,
+      options: Object.values(LogoNames),
       defaultValue: LogoNames.Full,
     },
     variant: {
       description: "The color used for the logo, following our brand guidelines",
       control: { type: "radio" },
-      options: LogoVariants,
+      options: Object.values(LogoVariants),
       defaultValue: LogoVariants.Primary,
     },
     height: {

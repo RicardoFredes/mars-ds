@@ -1,34 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<VerticalStepper> should match the snapshot 1`] = `
+exports[`<ItemsList> should match the snapshot 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <ol
-        class="vertical-stepper"
+        class="items-list"
       >
         <li
-          class="vertical-stepper__item"
+          class="items-list__item"
         >
           <a
-            class="link"
+            class="link items-list__link"
             href="https://mesalva.com"
             target="_blank"
           >
             <div
-              class="vertical-stepper__container"
+              class="items-list__container"
             >
               <div
-                class="vertical-stepper__circle"
-                data-testid="vertical-stepper__circle"
+                class="items-list__circle"
+                data-testid="items-list__circle"
               />
               <div
-                class="vertical-stepper__content"
+                class="items-list__content"
               >
                 <p
-                  class="text text--size-md vertical-stepper__title"
-                  data-testid="vertical-stepper__title"
+                  class="text text--size-md items-list__title"
+                  data-testid="items-list__title"
                 >
                   A soma de forma intuitiva
                 </p>
@@ -37,23 +37,23 @@ Object {
           </a>
         </li>
         <li
-          class="vertical-stepper__item vertical-stepper__item--has-icon"
+          class="items-list__item items-list__item--has-icon"
         >
           <a
-            class="link"
+            class="link items-list__link"
             href="https://mesalva.com"
             target="_blank"
           >
             <div
-              class="vertical-stepper__container vertical-stepper__container--has-icon"
+              class="items-list__container items-list__container--has-icon"
             >
               <div
-                class="vertical-stepper__circle vertical-stepper__circle--has-icon"
-                data-testid="vertical-stepper__circle"
+                class="items-list__circle items-list__circle--has-icon"
+                data-testid="items-list__circle"
               >
                 <span
-                  class="icon vertical-stepper__icon"
-                  data-testid="vertical-stepper__icon"
+                  class="icon items-list__icon"
+                  data-testid="items-list__icon"
                 >
                   <svg
                     fill="none"
@@ -70,17 +70,17 @@ Object {
                 </span>
               </div>
               <div
-                class="vertical-stepper__content"
+                class="items-list__content"
               >
                 <p
-                  class="text text--size-md vertical-stepper__title"
-                  data-testid="vertical-stepper__title"
+                  class="text text--size-md items-list__title"
+                  data-testid="items-list__title"
                 >
                   Somando de tudo
                 </p>
                 <h3
-                  class="subtitle subtitle--size-md vertical-stepper__subtitle"
-                  data-testid="vertical-stepper__subtitle"
+                  class="subtitle subtitle--size-md items-list__subtitle"
+                  data-testid="items-list__subtitle"
                 >
                   10 minutos
                 </h3>
@@ -93,29 +93,29 @@ Object {
   </body>,
   "container": <div>
     <ol
-      class="vertical-stepper"
+      class="items-list"
     >
       <li
-        class="vertical-stepper__item"
+        class="items-list__item"
       >
         <a
-          class="link"
+          class="link items-list__link"
           href="https://mesalva.com"
           target="_blank"
         >
           <div
-            class="vertical-stepper__container"
+            class="items-list__container"
           >
             <div
-              class="vertical-stepper__circle"
-              data-testid="vertical-stepper__circle"
+              class="items-list__circle"
+              data-testid="items-list__circle"
             />
             <div
-              class="vertical-stepper__content"
+              class="items-list__content"
             >
               <p
-                class="text text--size-md vertical-stepper__title"
-                data-testid="vertical-stepper__title"
+                class="text text--size-md items-list__title"
+                data-testid="items-list__title"
               >
                 A soma de forma intuitiva
               </p>
@@ -124,23 +124,23 @@ Object {
         </a>
       </li>
       <li
-        class="vertical-stepper__item vertical-stepper__item--has-icon"
+        class="items-list__item items-list__item--has-icon"
       >
         <a
-          class="link"
+          class="link items-list__link"
           href="https://mesalva.com"
           target="_blank"
         >
           <div
-            class="vertical-stepper__container vertical-stepper__container--has-icon"
+            class="items-list__container items-list__container--has-icon"
           >
             <div
-              class="vertical-stepper__circle vertical-stepper__circle--has-icon"
-              data-testid="vertical-stepper__circle"
+              class="items-list__circle items-list__circle--has-icon"
+              data-testid="items-list__circle"
             >
               <span
-                class="icon vertical-stepper__icon"
-                data-testid="vertical-stepper__icon"
+                class="icon items-list__icon"
+                data-testid="items-list__icon"
               >
                 <svg
                   fill="none"
@@ -157,17 +157,17 @@ Object {
               </span>
             </div>
             <div
-              class="vertical-stepper__content"
+              class="items-list__content"
             >
               <p
-                class="text text--size-md vertical-stepper__title"
-                data-testid="vertical-stepper__title"
+                class="text text--size-md items-list__title"
+                data-testid="items-list__title"
               >
                 Somando de tudo
               </p>
               <h3
-                class="subtitle subtitle--size-md vertical-stepper__subtitle"
-                data-testid="vertical-stepper__subtitle"
+                class="subtitle subtitle--size-md items-list__subtitle"
+                data-testid="items-list__subtitle"
               >
                 10 minutos
               </h3>

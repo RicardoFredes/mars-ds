@@ -10,11 +10,11 @@ export default {
   component: Button,
   argTypes: {
     variant: {
-      options: ButtonVariants,
+      options: Object.values(ButtonVariants),
       control: { type: "select" },
     },
     size: {
-      options: ButtonSizes,
+      options: Object.values(ButtonSizes),
       control: { type: "select" },
     },
     iconName: {

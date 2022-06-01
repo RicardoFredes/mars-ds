@@ -10,7 +10,7 @@ export default {
   component: ToggleButton,
   argTypes: {
     size: {
-      options: ButtonSizes,
+      options: Object.values(ButtonSizes),
       control: { type: "select" },
     },
     iconName: {

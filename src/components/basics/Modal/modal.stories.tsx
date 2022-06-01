@@ -14,7 +14,8 @@ export default {
   component: Modal,
   argTypes: {
     size: {
-      options: ModalSizes,
+      options: Object.values(ModalSizes),
+      defaultValue: ModalSizes.Medium,
       control: { type: "select" },
     },
   },

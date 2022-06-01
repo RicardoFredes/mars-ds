@@ -57,6 +57,9 @@ export * from "./components/basics/ItemButton/item-button.types";
 export { default as ItemElement } from "./components/basics/ItemElement/item-element.component";
 export * from "./components/basics/ItemElement/item-element.types";
 
+export { default as ItemsList } from "./components/basics/ItemsList/items-list.component";
+export * from "./components/basics/ItemsList/items-list.types";
+
 export { default as Label } from "./components/basics/Label/label.component";
 export * from "./components/basics/Label/label.types";
 
@@ -103,9 +106,6 @@ export * from "./components/basics/ToggleButton/toggle-button.types";
 
 export { default as ToggleDropdown } from "./components/basics/ToggleDropdown/toggle-dropdown.component";
 export * from "./components/basics/ToggleDropdown/toggle-dropdown.types";
-
-export { default as VerticalStepper } from "./components/basics/VerticalStepper/vertical-stepper.component";
-export * from "./components/basics/VerticalStepper/vertical-stepper.types";
 
 export { default as Checkbox } from "./components/forms/Checkbox/checkbox.component";
 export * from "./components/forms/Checkbox/checkbox.types";

@@ -8,7 +8,7 @@ export default {
   component: Avatar,
   argTypes: {
     size: {
-      options: AvatarSizes,
+      options: Object.values(AvatarSizes),
       control: { type: "select" },
     },
     thumbnail: {

@@ -8,7 +8,7 @@ export default {
   component: Text,
   argTypes: {
     size: {
-      options: TextSizes,
+      options: Object.values(TextSizes),
       control: {
         type: "select",
       },

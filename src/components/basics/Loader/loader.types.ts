@@ -1,8 +1,8 @@
 import { Sizes } from "@/types";
 
-const { Small, Medium, Large } = Sizes;
+const { XSmall, Small, Medium, Large, XLarge } = Sizes;
 
-export const LoaderSizes = { Small, Medium, Large };
+export const LoaderSizes = { XSmall, Small, Medium, Large, XLarge };
 
 export interface LoaderProps {
   className?: string;

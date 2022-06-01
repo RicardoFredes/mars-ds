@@ -1,17 +1,18 @@
+import type { ItemsListProps } from "./items-list.types";
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import VerticalStepper from "./vertical-stepper.component";
+import ItemsList from "./items-list.component";
 
 export default {
-  title: "Components/Stepper/VerticalStepper",
-  component: VerticalStepper,
+  title: "Components/ItemsList",
+  component: ItemsList,
   argTypes: {},
-} as ComponentMeta<typeof VerticalStepper>;
+} as ComponentMeta<typeof ItemsList>;
 
-const Template: ComponentStory<typeof VerticalStepper> = (args) => <VerticalStepper {...args} />;
+const Template: ComponentStory<typeof ItemsList> = (args) => <ItemsList {...args} />;
 
-const DefaultArgs = {
-  items: [
+const DefaultArgs: ItemsListProps = {
+  list: [
     {
       title: "A soma de forma intuitiva",
       subtitle: "8 minutos",
@@ -20,15 +21,15 @@ const DefaultArgs = {
         target: "_blank",
       },
       icon: "video",
-      iconColor: "var(--color-white)",
+      iconColor: "var(--color-background-primary)",
       circleColor: "var(--color-text-primary)",
     },
     {
       title: "Exercícios de compreensão sobre soma",
       subtitle: "3 exercícios",
       children: (
-        <VerticalStepper
-          items={[
+        <ItemsList
+          list={[
             {
               title: "Exercício 1",
               link: {
@@ -57,7 +58,7 @@ const DefaultArgs = {
         />
       ),
       icon: "edit",
-      iconColor: "var(--color-white)",
+      iconColor: "var(--color-background-primary)",
       circleColor: "var(--color-text-primary)",
     },
     {
@@ -68,7 +69,7 @@ const DefaultArgs = {
         target: "_blank",
       },
       icon: "video",
-      iconColor: "var(--color-white)",
+      iconColor: "var(--color-background-primary)",
       circleColor: "var(--color-text-primary)",
     },
     {
@@ -79,7 +80,7 @@ const DefaultArgs = {
         target: "_blank",
       },
       icon: "edit",
-      iconColor: "var(--color-white)",
+      iconColor: "var(--color-background-primary)",
       circleColor: "var(--color-text-primary)",
     },
     {
@@ -90,7 +91,7 @@ const DefaultArgs = {
         target: "_blank",
       },
       icon: "video",
-      iconColor: "var(--color-white)",
+      iconColor: "var(--color-background-primary)",
       circleColor: "var(--color-text-primary)",
     },
     {
@@ -101,7 +102,7 @@ const DefaultArgs = {
         target: "_blank",
       },
       icon: "edit",
-      iconColor: "var(--color-white)",
+      iconColor: "var(--color-background-primary)",
       circleColor: "var(--color-text-primary)",
     },
     {
@@ -112,11 +113,11 @@ const DefaultArgs = {
         target: "_blank",
       },
       icon: "edit",
-      iconColor: "var(--color-white)",
+      iconColor: "var(--color-background-primary)",
       circleColor: "var(--color-text-primary)",
     },
   ],
 };
 
 export const Default = Template.bind({});
-Default.args = DefaultArgs;
+Default.args = { ...DefaultArgs };

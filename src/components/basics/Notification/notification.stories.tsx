@@ -10,7 +10,8 @@ export default {
   component: Notification,
   argTypes: {
     variant: {
-      options: NotificationVariants,
+      options: Object.values(NotificationVariants),
+      defaultValue: NotificationVariants.Default,
       control: { type: "select" },
     },
   },
@@ -19,7 +20,6 @@ export default {
 const Template: ComponentStory<typeof Notification> = (args) => <Notification {...args} />;
 
 const DefaultArgs = {
-  variant: NotificationVariants.Default,
   content: "Mensagem de aviso.",
   durationInMs: 0,
 };

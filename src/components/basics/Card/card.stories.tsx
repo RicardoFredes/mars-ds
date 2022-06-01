@@ -16,7 +16,7 @@ export default {
   component: Card,
   argTypes: {
     elevation: {
-      options: CardElevations,
+      options: Object.values(CardElevations),
       control: { type: "select" },
     },
   },

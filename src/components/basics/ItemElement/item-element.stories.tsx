@@ -8,7 +8,7 @@ export default {
   component: ItemElement,
   argTypes: {
     variant: {
-      options: ItemElementVariants,
+      options: Object.values(ItemElementVariants),
       control: { type: "select" },
     },
   },

@@ -1,22 +1,22 @@
-import type { VerticalStepperProps, VerticalStepperItemProps } from "./vertical-stepper.types";
+import type { ItemsListProps, ItemsListElementProps } from "./items-list.types";
 
 import { render } from "@testing-library/react";
 
-import VerticalStepper from "./vertical-stepper.component";
+import ItemsList from "./items-list.component";
 
 const CLASSES = {
-  item: "vertical-stepper__item",
-  container: "vertical-stepper__container",
-  circle: "vertical-stepper__circle",
-  icon: "vertical-stepper__icon",
-  content: "vertical-stepper__content",
-  title: "vertical-stepper__title",
-  subtitle: "vertical-stepper__subtitle",
-  children: "vertical-stepper__children",
+  item: "items-list__item",
+  container: "items-list__container",
+  circle: "items-list__circle",
+  icon: "items-list__icon",
+  content: "items-list__content",
+  title: "items-list__title",
+  subtitle: "items-list__subtitle",
+  children: "items-list__children",
 };
 
-const defaultProps: VerticalStepperProps = {
-  items: [
+const defaultProps: ItemsListProps = {
+  list: [
     {
       title: "A soma de forma intuitiva",
       link: {
@@ -38,18 +38,15 @@ const defaultProps: VerticalStepperProps = {
   ],
 };
 
-const makeItemProps = (
-  overrides: Partial<VerticalStepperItemProps> = {}
-): VerticalStepperItemProps => ({
+const makeItemProps = (overrides: Partial<ItemsListElementProps> = {}): ItemsListElementProps => ({
   // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-  ...defaultProps.items[0]!,
+  ...defaultProps.list[0]!,
   ...overrides,
 });
 
-const makeSut = (props?: VerticalStepperProps) =>
-  render(<VerticalStepper {...defaultProps} {...props} />);
+const makeSut = (props?: ItemsListProps) => render(<ItemsList {...defaultProps} {...props} />);
 
-describe("<VerticalStepper>", () => {
+describe("<ItemsList>", () => {
   it("should match the snapshot", () => {
     const wrapper = makeSut();
     expect(wrapper).toMatchSnapshot();
@@ -59,17 +56,17 @@ describe("<VerticalStepper>", () => {
     const wrapper = makeSut();
     const links = wrapper.getAllByRole("link") as HTMLAnchorElement[];
 
-    expect(links).toHaveLength(defaultProps.items.length);
+    expect(links).toHaveLength(defaultProps.list.length);
     expect(
       links.forEach((link) => {
         expect(link).toHaveAttribute("href");
         expect(link.attributes.getNamedItem("href")?.value).toBe(
-          defaultProps.items?.[0]?.link.href
+          defaultProps.list?.[0]?.link?.href
         );
 
         expect(link).toHaveAttribute("target");
         expect(link.attributes.getNamedItem("target")?.value).toBe(
-          defaultProps.items?.[0]?.link.target
+          defaultProps.list?.[0]?.link?.target
         );
       })
     );
@@ -80,25 +77,25 @@ describe("<VerticalStepper>", () => {
       const wrapper = makeSut();
       const dots = wrapper.getAllByTestId(CLASSES.circle);
 
-      expect(dots.length).toBe(defaultProps.items.length);
+      expect(dots.length).toBe(defaultProps.list.length);
     });
 
     it("should change color based on the item's circleColor prop", () => {
-      const props: VerticalStepperProps = {
-        items: [makeItemProps({ circleColor: "var(--color-text-disabled)" })],
+      const props: ItemsListProps = {
+        list: [makeItemProps({ circleColor: "var(--color-text-disabled)" })],
       };
 
       const wrapper = makeSut(props);
       const dot = wrapper.getByTestId(CLASSES.circle);
 
-      expect(dot).toHaveStyle(`background-color: ${props.items?.[0]?.circleColor}`);
+      expect(dot).toHaveStyle(`background-color: ${props.list?.[0]?.circleColor}`);
     });
   });
 
   describe("when the icon prop is present", () => {
     it("should contain an icon", () => {
-      const props: VerticalStepperProps = {
-        items: [makeItemProps({ icon: "video" })],
+      const props: ItemsListProps = {
+        list: [makeItemProps({ icon: "video" })],
       };
       const wrapper = makeSut(props);
       const icons = wrapper.getAllByTestId(CLASSES.icon);
@@ -107,14 +104,14 @@ describe("<VerticalStepper>", () => {
     });
 
     it("should change color based on the item's iconColor prop", () => {
-      const props: VerticalStepperProps = {
-        items: [makeItemProps({ icon: "video", iconColor: "var(--color-text-disabled)" })],
+      const props: ItemsListProps = {
+        list: [makeItemProps({ icon: "video", iconColor: "var(--color-text-disabled)" })],
       };
 
       const wrapper = makeSut(props);
       const icon = wrapper.getByTestId(CLASSES.icon);
 
-      expect(icon).toHaveStyle(`background-color: ${props.items?.[0]?.circleColor}`);
+      expect(icon).toHaveStyle(`background-color: ${props.list?.[0]?.circleColor}`);
     });
   });
 
@@ -122,12 +119,12 @@ describe("<VerticalStepper>", () => {
     const wrapper = makeSut();
     const titles = wrapper.getAllByTestId(CLASSES.title);
 
-    expect(titles.length).toBe(defaultProps.items.length);
+    expect(titles.length).toBe(defaultProps.list.length);
   });
 
   it("should contain a subtitle", () => {
-    const props: VerticalStepperProps = {
-      items: [makeItemProps({ subtitle: "8 minutos" })],
+    const props: ItemsListProps = {
+      list: [makeItemProps({ subtitle: "8 minutos" })],
     };
     const wrapper = makeSut(props);
     const subtitles = wrapper.getAllByTestId(CLASSES.subtitle);
@@ -136,8 +133,8 @@ describe("<VerticalStepper>", () => {
   });
 
   it("should contain children", () => {
-    const props: VerticalStepperProps = {
-      items: [makeItemProps({ children: <p>children</p> })],
+    const props: ItemsListProps = {
+      list: [makeItemProps({ children: <p>children</p> })],
     };
     const wrapper = makeSut(props);
     const children = wrapper.getAllByTestId(CLASSES.children);

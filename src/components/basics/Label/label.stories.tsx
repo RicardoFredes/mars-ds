@@ -12,11 +12,11 @@ export default {
   component: Label,
   argTypes: {
     variant: {
-      options: LabelVariants,
+      options: Object.values(LabelVariants),
       control: { type: "select" },
     },
     theme: {
-      options: LocalLabelTheme,
+      options: Object.values(LocalLabelTheme),
       control: { type: "select" },
     },
   },

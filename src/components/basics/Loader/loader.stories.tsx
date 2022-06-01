@@ -10,7 +10,7 @@ export default {
   component: Loader,
   argTypes: {
     size: {
-      options: LoaderSizes,
+      options: Object.values(LoaderSizes),
       control: { type: "select" },
     },
     color: {
@@ -25,9 +25,8 @@ const SizesList: ComponentStory<typeof Loader> = (args) => {
     <div>
       {Object.entries(LoaderSizes).map(([key, size]) => (
         <div key={key} className="flex align-items-center gap-xl mb-xl">
-          <Text style={{ minWidth: 96 }} size={TextSizes.Small} className="text-right">
-            <strong>Size: </strong>
-            {key}
+          <Text style={{ minWidth: 48 }} size={TextSizes.Small} className="text-right">
+            {size}:
           </Text>
           <Loader key={size} {...args} size={size} />
         </div>

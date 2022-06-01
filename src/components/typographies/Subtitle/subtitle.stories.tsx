@@ -14,7 +14,7 @@ export default {
       },
     },
     size: {
-      options: SubtitleSizes,
+      options: Object.values(SubtitleSizes),
       control: {
         type: "select",
       },

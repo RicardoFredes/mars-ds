@@ -14,7 +14,7 @@ export default {
       },
     },
     size: {
-      options: HeadingSizes,
+      options: Object.values(HeadingSizes),
       control: {
         type: "select",
       },

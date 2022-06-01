@@ -20,7 +20,7 @@ export default {
       control: { type: "number" },
     },
     variant: {
-      control: { type: "select", options: SkeletonVariants },
+      control: { type: "select", options: Object.values(SkeletonVariants) },
       defaultValue: "line",
     },
   },

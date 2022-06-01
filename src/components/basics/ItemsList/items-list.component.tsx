@@ -1,4 +1,4 @@
-import type { VerticalStepperProps } from "./vertical-stepper.types";
+import type { ItemsListProps } from "./items-list.types";
 
 import classNames from "classnames";
 
@@ -7,12 +7,13 @@ import Link from "@/components/basics/Link";
 import Subtitle from "@/components/typographies/Subtitle";
 import Text from "@/components/typographies/Text";
 
-const VerticalStepper = ({ items, className, ...props }: VerticalStepperProps) => {
-  const cn = classNames("vertical-stepper", className);
+const ItemsList = ({ list, className, componentLink, ...props }: ItemsListProps) => {
+  const cn = classNames("items-list", className);
+  const ComponentLink = componentLink || Link;
 
   return (
     <ol className={cn} {...props}>
-      {items.map(
+      {list.map(
         (
           {
             title,
@@ -25,58 +26,52 @@ const VerticalStepper = ({ items, className, ...props }: VerticalStepperProps) =
           },
           index
         ) => {
-          const itemCn = classNames("vertical-stepper__item", {
-            "vertical-stepper__item--has-icon": icon,
+          const itemCn = classNames("items-list__item", {
+            "items-list__item--has-icon": icon,
           });
 
-          const containerCn = classNames("vertical-stepper__container", {
-            "vertical-stepper__container--has-icon": icon,
+          const containerCn = classNames("items-list__container", {
+            "items-list__container--has-icon": icon,
           });
 
-          const circleCn = classNames("vertical-stepper__circle", {
-            "vertical-stepper__circle--has-icon": icon,
+          const circleCn = classNames("items-list__circle", {
+            "items-list__circle--has-icon": icon,
           });
 
           return (
             <li className={itemCn} key={index}>
-              <Link {...link}>
+              <ComponentLink {...link} className="items-list__link">
                 <div className={containerCn}>
                   <div
                     className={circleCn}
-                    data-testid="vertical-stepper__circle"
+                    data-testid="items-list__circle"
                     style={{ backgroundColor: circleColor }}
                   >
                     {icon && (
                       <Icon
                         name={icon}
-                        className="vertical-stepper__icon"
-                        data-testid="vertical-stepper__icon"
+                        className="items-list__icon"
+                        data-testid="items-list__icon"
                         color={iconColor}
                       />
                     )}
                   </div>
 
-                  <div className="vertical-stepper__content">
-                    <Text className="vertical-stepper__title" data-testid="vertical-stepper__title">
+                  <div className="items-list__content">
+                    <Text className="items-list__title" data-testid="items-list__title">
                       {title}
                     </Text>
                     {subtitle && (
-                      <Subtitle
-                        className="vertical-stepper__subtitle"
-                        data-testid="vertical-stepper__subtitle"
-                      >
+                      <Subtitle className="items-list__subtitle" data-testid="items-list__subtitle">
                         {subtitle}
                       </Subtitle>
                     )}
                   </div>
                 </div>
-              </Link>
+              </ComponentLink>
 
               {children && (
-                <div
-                  className="vertical-stepper__children"
-                  data-testid="vertical-stepper__children"
-                >
+                <div className="items-list__children" data-testid="items-list__children">
                   {children}
                 </div>
               )}
@@ -88,4 +83,4 @@ const VerticalStepper = ({ items, className, ...props }: VerticalStepperProps) =
   );
 };
 
-export default VerticalStepper;
+export default ItemsList;

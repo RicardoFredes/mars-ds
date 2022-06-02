@@ -5,6 +5,7 @@ import classNames from "classnames";
 import Icon, { IconSizes } from "@/components/basics/Icon";
 import ItemText from "@/components/typographies/ItemText";
 import Text from "@/components/typographies/Text";
+import DOMPurify from "dompurify";
 
 import { CreditCardVariants } from "./credit-card.types";
 
@@ -27,7 +28,7 @@ const CreditCard = ({
       <div className="credit-card__footer">
         <ItemText
           className="credit-card__numbers"
-          dangerouslySetInnerHTML={{ __html: parsedNumbers || "" }}
+          dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(parsedNumbers || "") }}
         />
         <Text className="credit-card__name">{cardHolder}</Text>
       </div>

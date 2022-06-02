@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.90](https://github.com/mesalva/mars/compare/v1.0.0-alpha.89...v1.0.0-alpha.90) (2022-06-02)
+
+
+### Features
+
+* add dompurify package ([#165](https://github.com/mesalva/mars/issues/165)) ([6316b45](https://github.com/mesalva/mars/commit/6316b451eb76d0666074925aaa9ad7a250adb669))
+
 ## [1.0.0-alpha.89](https://github.com/mesalva/mars/compare/v1.0.0-alpha.88...v1.0.0-alpha.89) (2022-06-01)
 
 

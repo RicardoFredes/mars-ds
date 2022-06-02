@@ -68,6 +68,7 @@ a.btn,
     }
   }
 
+  &--naked,
   &--neutral {
     color: $color-text-primary;
     border-color: $color-neutral-500;
@@ -83,10 +84,14 @@ a.btn,
       border-color: $color-action-disabled-background;
     }
   }
+  &--naked {
+    border-color: transparent;
+  }
 
   &--text {
+    --button-text-color-background: var(--color-background-primary);
     color: $color-black;
-    background-color: $color-white;
+    background-color: var(--button-text-color-background);
     &:visited {
       color: $color-black;
     }
@@ -126,5 +131,13 @@ a.btn,
 @keyframes ripple {
   to {
     background-size: 130%;
+  }
+}
+
+.theme-dark {
+  .btn {
+    &--text {
+      --button-text-color-background: var(--color-neutral-700);
+    }
   }
 }

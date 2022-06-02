@@ -3,4 +3,5 @@ export const Variants = {
   Secondary: "secondary",
   Neutral: "neutral",
   Text: "text",
+  Naked: "naked",
 } as const;

@@ -66,6 +66,7 @@ const Tokens = {
   ColorTextSecondary: "var(--color-text-secondary)",
   ColorTextDisabled: "var(--color-text-disabled)",
   ColorBackgroundPrimary: "var(--color-background-primary)",
+  ColorBackgroundSecondary: "var(--color-background-secondary)",
   ColorBackgroundNeutral: "var(--color-background-neutral)",
   ColorBackgroundOverlay: "var(--color-background-overlay)",
   ColorActionActive: "var(--color-action-active)",

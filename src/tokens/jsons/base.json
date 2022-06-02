@@ -305,6 +305,10 @@
         "value": "#ffffff",
         "type": "color"
       },
+      "secondary": {
+        "value": "#ffffff",
+        "type": "color"
+      },
       "neutral": {
         "value": "#f4f6f8",
         "type": "color"

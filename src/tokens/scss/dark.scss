@@ -47,6 +47,12 @@
   --dark-color-redacao-700: #d29b00cc;
   --dark-color-medicina-300: #2e6b6b;
   --dark-color-medicina-700: #55a8a9cc;
+  --dark-shadow-elevation-100: 0px 1px 2px 0px rgba(0,0,0,0.5);
+  --dark-shadow-elevation-200: 0px 8px 16px 0px rgba(0,0,0,0.5);
+  --dark-shadow-elevation-300: 0px 0px 2px 0px rgba(0,0,0,0.5), 0px 12px 24px 0px rgba(0,0,0,0.24);
+  --dark-shadow-elevation-400: 0px 0px 2px 0px rgba(0,0,0,0.5), 0px 16px 32px -4px rgba(0,0,0,0.5);
+  --dark-shadow-elevation-500: 0px 0px 2px 0px rgba(0,0,0,0.5), 0px 20px 40px -4px rgba(0,0,0,0.24);
+  --dark-shadow-elevation-600: 0px 0px 4px 0px rgba(0,0,0,0.5), 0px 24px 48px 0px rgba(0,0,0,0.5);
 }
 
 .theme-dark {
@@ -98,4 +104,10 @@
   --color-redacao-700: var(--dark-color-redacao-700);
   --color-medicina-300: var(--dark-color-medicina-300);
   --color-medicina-700: var(--dark-color-medicina-700);
+  --shadow-elevation-100: var(--dark-shadow-elevation-100);
+  --shadow-elevation-200: var(--dark-shadow-elevation-200);
+  --shadow-elevation-300: var(--dark-shadow-elevation-300);
+  --shadow-elevation-400: var(--dark-shadow-elevation-400);
+  --shadow-elevation-500: var(--dark-shadow-elevation-500);
+  --shadow-elevation-600: var(--dark-shadow-elevation-600);
 }

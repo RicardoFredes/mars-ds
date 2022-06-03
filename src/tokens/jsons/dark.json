@@ -222,5 +222,115 @@
         "type": "color"
       }
     }
+  },
+  "shadow": {
+    "elevation": {
+      "100": {
+        "value": {
+          "x": "0",
+          "y": "1",
+          "blur": "2",
+          "spread": "0",
+          "color": "rgba(0,0,0,0.5)",
+          "type": "dropShadow"
+        },
+        "type": "boxShadow"
+      },
+      "200": {
+        "value": {
+          "x": "0",
+          "y": "8",
+          "blur": "16",
+          "spread": "0",
+          "color": "rgba(0,0,0,0.5)",
+          "type": "dropShadow"
+        },
+        "type": "boxShadow"
+      },
+      "300": {
+        "value": [
+          {
+            "x": "0",
+            "y": "0",
+            "blur": "2",
+            "spread": "0",
+            "color": "rgba(0,0,0,0.5)",
+            "type": "dropShadow"
+          },
+          {
+            "x": "0",
+            "y": "12",
+            "blur": "24",
+            "spread": "0",
+            "color": "rgba(0,0,0,0.24)",
+            "type": "dropShadow"
+          }
+        ],
+        "type": "boxShadow"
+      },
+      "400": {
+        "value": [
+          {
+            "x": "0",
+            "y": "0",
+            "blur": "2",
+            "spread": "0",
+            "color": "rgba(0,0,0,0.5)",
+            "type": "dropShadow"
+          },
+          {
+            "x": "0",
+            "y": "16",
+            "blur": "32",
+            "spread": "-4",
+            "color": "rgba(0,0,0,0.5)",
+            "type": "dropShadow"
+          }
+        ],
+        "type": "boxShadow"
+      },
+      "500": {
+        "value": [
+          {
+            "x": "0",
+            "y": "0",
+            "blur": "2",
+            "spread": "0",
+            "color": "rgba(0,0,0,0.5)",
+            "type": "dropShadow"
+          },
+          {
+            "x": "0",
+            "y": "20",
+            "blur": "40",
+            "spread": "-4",
+            "color": "rgba(0,0,0,0.24)",
+            "type": "dropShadow"
+          }
+        ],
+        "type": "boxShadow"
+      },
+      "600": {
+        "value": [
+          {
+            "x": "0",
+            "y": "0",
+            "blur": "4",
+            "spread": "0",
+            "color": "rgba(0,0,0,0.5)",
+            "type": "dropShadow"
+          },
+          {
+            "x": "0",
+            "y": "24",
+            "blur": "48",
+            "spread": "0",
+            "color": "rgba(0,0,0,0.5)",
+            "type": "dropShadow"
+          }
+        ],
+        "type": "boxShadow"
+      }
+    }
   }
 }

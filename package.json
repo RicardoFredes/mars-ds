@@ -19,6 +19,7 @@
   },
   "scripts": {
     "reindex": "node bin/reindex",
+    "reindex:icons": "node bin/reindex-icons",
     "new-component": "node bin/new-component",
     "tokens-generator": "node bin/tokens-generator",
     "start": "yarn storybook --no-open",

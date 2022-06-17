@@ -1,11 +1,13 @@
 const warningDontChangeFile = `/**
  * WARNING!
  * Do not change this file,
- * because it is automatically generated
+ * because it is automatically generated 
+ * run "yarn reindex" to update
  */\n`;
 
 const fs = require("fs-extra");
 const { kebabCaseToPascalCase } = require("./helpers/convert-names");
+const { getFiles } = require("./helpers/files");
 
 const COMPONENTS_FOLDER = "./src/components";
 const INDEX_FILE = "./src/index.ts";
@@ -72,20 +74,6 @@ function reindexRoot(filesList) {
 
   fs.writeFileSync(INDEX_FILE, content);
   console.log("Done: root reindex");
-}
-
-function getFiles(dir, $files) {
-  $files = $files || [];
-  const files = fs.readdirSync(dir);
-  for (const i in files) {
-    const name = dir + "/" + files[i];
-    if (fs.statSync(name).isDirectory()) {
-      getFiles(name, $files);
-    } else {
-      $files.push(name);
-    }
-  }
-  return $files;
 }
 
 function getComponentsAndTypes(list = []) {

@@ -25,7 +25,12 @@ function camelCaseToKebabCase(name) {
   return result;
 }
 
+function toCamelCase(str) {
+  return str.replace(/[-_](\w)/g, (m, c) => c.toUpperCase());
+}
+
 module.exports = {
   kebabCaseToPascalCase,
   camelCaseToKebabCase,
+  toCamelCase,
 };

@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.93](https://github.com/mesalva/mars/compare/v1.0.0-alpha.92...v1.0.0-alpha.93) (2022-06-17)
+
+
+### Features
+
+* **form-with-submit-button:** add icon name support ([70aa31f](https://github.com/mesalva/mars/commit/70aa31f4f461f65b89d555657e86199d9441f8e6))
+
 ## [1.0.0-alpha.92](https://github.com/mesalva/mars/compare/v1.0.0-alpha.91...v1.0.0-alpha.92) (2022-06-17)
 
 

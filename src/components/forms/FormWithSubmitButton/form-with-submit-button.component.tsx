@@ -12,6 +12,7 @@ const FormWithSubmitButton = ({
   disabled,
   submitButtonLabel,
   submitButtonId,
+  submitButtonIconName,
   submitting,
   ...props
 }: FormWithSubmitButtonProps) => {
@@ -25,6 +26,7 @@ const FormWithSubmitButton = ({
       <div className="form-with-submit-button__container">{children}</div>
       <SubmitButton
         id={submitButtonId}
+        iconName={submitButtonIconName}
         className="form-with-submit-button__submit-button"
         disabled={disabled}
         submitting={submitting}

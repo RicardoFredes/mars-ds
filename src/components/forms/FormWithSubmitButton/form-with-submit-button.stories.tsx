@@ -18,6 +18,7 @@ const DefaultArgs = {
   disabled: false,
   submitButtonLabel: "Enviar",
   submitButtonId: "botao-de-enviar",
+  submitButtonIconName: "",
   submitting: false,
   onSubmit: () => {
     alert("Dados enviados! ...Mentira");

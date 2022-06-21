@@ -1,0 +1,15 @@
+.range-completion {
+  display: flex;
+  align-items: center;
+  
+  &__label {
+    margin-right: $spacing-lg;
+  }
+  
+  &__item {
+    color: $color-neutral-ghost;
+    &--is-checked {
+      color: $color-primary-500;
+    }
+  }
+}

@@ -107,6 +107,9 @@ export * from "./components/basics/ToggleButton/toggle-button.types";
 export { default as ToggleDropdown } from "./components/basics/ToggleDropdown/toggle-dropdown.component";
 export * from "./components/basics/ToggleDropdown/toggle-dropdown.types";
 
+export { default as RangeCompletion } from "./components/basics/RangeCompletion/range-completion.component";
+export * from "./components/basics/RangeCompletion/range-completion.types";
+
 export { default as Checkbox } from "./components/forms/Checkbox/checkbox.component";
 export * from "./components/forms/Checkbox/checkbox.types";
 

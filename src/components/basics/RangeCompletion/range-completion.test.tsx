@@ -32,7 +32,7 @@ describe("<RangeCompletion>", () => {
     const wrapper = makeSut({ label });
     wrapper.getByText(label);
     await waitFor(() => {
-      const element = wrapper.queryByText("Dificuldade");
+      const element = wrapper.queryByText("Dificuldade:");
       expect(element).not.toBeInTheDocument();
     });
   });
@@ -40,6 +40,6 @@ describe("<RangeCompletion>", () => {
   it('should show "Dificuldade" if label is invalid or empty', () => {
     const label = "";
     const wrapper = makeSut({ label });
-    wrapper.getByText("Dificuldade");
+    wrapper.getByText("Dificuldade:");
   });
 });

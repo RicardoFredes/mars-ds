@@ -13,7 +13,7 @@ export default {
       control: {
         type: "text",
       },
-      defaultValue: "Dificuldade",
+      defaultValue: "Dificuldade:",
     },
     iconName: {
       options: Object.keys(icons),
@@ -48,7 +48,7 @@ Default.args = DefaultArgs;
 export const Icon = Template.bind({});
 Icon.args = {
   ...DefaultArgs,
-  label: "Avaliação",
+  label: "Avaliação:",
   iconName: "star",
 };
 

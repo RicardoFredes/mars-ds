@@ -19,11 +19,12 @@ const RangeCompletion = ({
   const items = makeArray(total);
   return (
     <div className={cn} {...props}>
-      <Caption className="range-completion__label">{label || "Dificuldade"}</Caption>
+      <Caption className="range-completion__label">{label || "Dificuldade:"}</Caption>
       {items.map((_, index) => (
         <Icon
           key={index}
           name={iconName}
+          size="sm"
           data-testid={index < value ? "is-completed" : "is-empty"}
           className={classNames("range-completion__item", {
             "range-completion__item--is-checked": index < value,

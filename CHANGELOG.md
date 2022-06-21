@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.94](https://github.com/mesalva/mars/compare/v1.0.0-alpha.93...v1.0.0-alpha.94) (2022-06-21)
+
+
+### Features
+
+* add component difficulty exercises ([#169](https://github.com/mesalva/mars/issues/169)) ([99de4d6](https://github.com/mesalva/mars/commit/99de4d6798b64f1943fdbc8fd70be09bfe9df2e4))
+
 ## [1.0.0-alpha.93](https://github.com/mesalva/mars/compare/v1.0.0-alpha.92...v1.0.0-alpha.93) (2022-06-17)
 
 

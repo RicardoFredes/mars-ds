@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.95](https://github.com/mesalva/mars/compare/v1.0.0-alpha.94...v1.0.0-alpha.95) (2022-06-22)
+
+
+### Features
+
+* change label and icon size logic to range-completion and rating-star ([07f1ce4](https://github.com/mesalva/mars/commit/07f1ce4bb7f8c2eeb2cb6bc735c480e63d49d42a))
+
+
+### Bug Fixes
+
+* **rating-star:** right spacing ([97584f2](https://github.com/mesalva/mars/commit/97584f29fb1fd0048d2b8670b855b1fdfb72a14e))
+
 ## [1.0.0-alpha.94](https://github.com/mesalva/mars/compare/v1.0.0-alpha.93...v1.0.0-alpha.94) (2022-06-21)
 
 

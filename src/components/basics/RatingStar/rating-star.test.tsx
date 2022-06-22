@@ -1,13 +1,13 @@
 import type { RatingStarProps } from "./rating-star.types";
 
-import { fireEvent, render } from "@testing-library/react";
+import { fireEvent, render, waitFor } from "@testing-library/react";
 
 import RatingStar from "./rating-star.component";
 
 const dataTestId = { radioStar: "radio-star", labelStar: "label-star" };
 const classNameLabel = {
-  isActive: "rating-star__label rating-star__label--is-active",
-  default: "rating-star__label",
+  isActive: "rating-star__icon rating-star__icon--is-active",
+  default: "rating-star__icon",
 };
 const makeSut = (props?: RatingStarProps) => render(<RatingStar {...props} />);
 describe("<RatingStar>", () => {
@@ -16,22 +16,22 @@ describe("<RatingStar>", () => {
     expect(wrapper).toBeTruthy();
   });
 
-  it("should render a default numbers of the stars if not provided a maxValue", () => {
+  it('should render a default numbers of the stars if not provided a "total"', () => {
     const wrapper = makeSut();
     const stars = wrapper.getAllByTestId(dataTestId.radioStar);
     expect(stars).toHaveLength(5);
   });
 
-  it("should render the same amount of the stars that are provided by maxValue prop ", () => {
-    const maxValue = 10;
-    const wrapper = makeSut({ maxValue });
+  it('should render the same amount of the stars that are provided by "total" prop', () => {
+    const total = 10;
+    const wrapper = makeSut({ total });
     const stars = wrapper.getAllByTestId(dataTestId.radioStar);
-    expect(stars).toHaveLength(maxValue);
+    expect(stars).toHaveLength(total);
   });
 
-  it("should checked star is equal to defaultValue prop", () => {
-    const defaultValue = 3;
-    const wrapper = makeSut({ defaultValue });
+  it('should checked star is equal to "value" prop', () => {
+    const value = 3;
+    const wrapper = makeSut({ value });
     const stars = wrapper.getAllByTestId(dataTestId.radioStar);
 
     expect(stars[0]).toHaveProperty("checked", false);
@@ -41,9 +41,9 @@ describe("<RatingStar>", () => {
     expect(stars[4]).toHaveProperty("checked", false);
   });
 
-  it("should stars has the correct value", () => {
-    const defaultValue = 3;
-    const wrapper = makeSut({ defaultValue });
+  it('should stars has the correct "value"', () => {
+    const value = 3;
+    const wrapper = makeSut({ value });
     const stars = wrapper.getAllByTestId(dataTestId.radioStar);
 
     expect(stars[0]).toHaveProperty("value", "1");
@@ -52,14 +52,14 @@ describe("<RatingStar>", () => {
     expect(stars[3]).toHaveProperty("value", "4");
     expect(stars[4]).toHaveProperty("value", "5");
   });
-  it("should render the same amount of the stars that are provided by maxValue prop ", () => {
-    const maxValue = 10;
-    const wrapper = makeSut({ maxValue });
+  it('should render the same amount of the stars that are provided by "total" prop ', () => {
+    const total = 10;
+    const wrapper = makeSut({ total });
     const stars = wrapper.getAllByTestId(dataTestId.radioStar);
-    expect(stars).toHaveLength(maxValue);
+    expect(stars).toHaveLength(total);
   });
 
-  it("should change the rating value after clicking on any star", () => {
+  it('should change the rating "value" after clicking on any star', () => {
     const wrapper = makeSut();
     const stars = wrapper.getAllByTestId(dataTestId.radioStar);
     const thirdStar = stars[2];
@@ -69,7 +69,7 @@ describe("<RatingStar>", () => {
     expect(thirdStar).toHaveProperty("checked");
   });
 
-  it("should call onSelect method on change value ", () => {
+  it('should call onSelect method on change "value"', () => {
     const onSelectSpy = jest.fn();
     const wrapper = makeSut({ onSelect: onSelectSpy });
     const stars = wrapper.getAllByTestId(dataTestId.radioStar);
@@ -81,9 +81,9 @@ describe("<RatingStar>", () => {
     expect(onSelectSpy).toHaveBeenCalledTimes(1);
   });
 
-  it("should change the class of stars if its given a defaultValue ", () => {
-    const defaultValue = 3;
-    const wrapper = makeSut({ defaultValue });
+  it('should change the class of stars if its given a "value"', () => {
+    const value = 3;
+    const wrapper = makeSut({ value });
     const stars = wrapper.getAllByTestId(dataTestId.labelStar);
     expect(stars[0]?.className).toBe(classNameLabel.isActive);
     expect(stars[1]?.className).toBe(classNameLabel.isActive);
@@ -93,8 +93,8 @@ describe("<RatingStar>", () => {
   });
 
   it("should change the class of stars when is clicked or active ", () => {
-    const defaultValue = 3;
-    const wrapper = makeSut({ defaultValue });
+    const value = 3;
+    const wrapper = makeSut({ value });
     const stars = wrapper.getAllByTestId(dataTestId.labelStar);
     expect(stars[0]?.className).toBe(classNameLabel.isActive);
     expect(stars[1]?.className).toBe(classNameLabel.isActive);
@@ -110,16 +110,16 @@ describe("<RatingStar>", () => {
     expect(stars[4]?.className).not.toBe(classNameLabel.isActive);
   });
 
-  it("should render five stars when maxValue <= 0", () => {
-    const wrapper = makeSut({ maxValue: -1 });
+  it('should render five stars when "total" <= 0', () => {
+    const wrapper = makeSut({ total: -1 });
     const stars = wrapper.getAllByTestId(dataTestId.radioStar);
     expect(stars.length).toBe(5);
   });
 
-  it("should check the highest rate star when defaultValue is greater than maxValue", () => {
-    const defaultValue = 15;
-    const maxValue = 5;
-    const wrapper = makeSut({ defaultValue, maxValue });
+  it('should check the highest rate star when "value" is greater than "total"', () => {
+    const value = 15;
+    const total = 5;
+    const wrapper = makeSut({ value, total });
     const stars = wrapper.getAllByTestId(dataTestId.radioStar);
     expect(stars[0]).toHaveProperty("checked", false);
     expect(stars[1]).toHaveProperty("checked", false);
@@ -128,7 +128,7 @@ describe("<RatingStar>", () => {
     expect(stars[4]).toHaveProperty("checked");
   });
 
-  it("shouldn't check any star if defaultValue is less than zero", () => {
+  it('shouldn\'t check any star if "value" is less than zero', () => {
     const defaultValue = -15;
     const wrapper = makeSut({ defaultValue });
     const stars = wrapper.getAllByTestId(dataTestId.radioStar);
@@ -137,5 +137,21 @@ describe("<RatingStar>", () => {
     expect(stars[2]).toHaveProperty("checked", false);
     expect(stars[3]).toHaveProperty("checked", false);
     expect(stars[4]).toHaveProperty("checked", false);
+  });
+
+  it('should show a "label" value', async () => {
+    const label = "any_label";
+    const wrapper = makeSut({ label });
+    wrapper.getByText(label);
+    await waitFor(() => {
+      const element = wrapper.queryByText("Avaliação:");
+      expect(element).not.toBeInTheDocument();
+    });
+  });
+
+  it('should show "Avaliação:" if label is invalid or empty', () => {
+    const label = "";
+    const wrapper = makeSut({ label });
+    wrapper.getByText("Avaliação:");
   });
 });

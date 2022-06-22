@@ -1,11 +1,19 @@
-export interface RatingStarProps
-  extends Omit<React.HTMLProps<HTMLDivElement>, "onSelect" | "defaultValue"> {
-  maxValue?: number;
-  defaultValue?: number;
+import type { IconSizes } from "../Icon";
+
+import type { ComponentItem } from "@/types";
+
+export interface RatingStarProps extends Omit<ComponentItem, "onSelect"> {
+  iconName?: string;
+  label?: string;
+  size?: typeof IconSizes[keyof typeof IconSizes];
+  total?: number;
+  value?: number;
   onSelect?: (value: number) => void;
 }
 
-export interface StarProps extends Omit<React.HTMLProps<HTMLDivElement>, "size"> {
-  position: number;
+export interface StarProps extends ComponentItem {
   value: number;
+  currentValue: number;
+  size: typeof IconSizes[keyof typeof IconSizes];
+  iconName: string;
 }

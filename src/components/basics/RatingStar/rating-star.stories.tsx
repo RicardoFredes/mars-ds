@@ -3,6 +3,8 @@ import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import { useState } from "react";
 
+import { IconSizes } from "@/components/basics/Icon";
+import icons from "@/components/basics/Icon/lib";
 import Heading from "@/components/typographies/Heading";
 import Subtitle from "@/components/typographies/Subtitle";
 
@@ -12,11 +14,36 @@ export default {
   title: "Components/RatingStar",
   component: RatingStar,
   argTypes: {
-    maxValue: {
-      control: { type: "number" },
+    iconName: {
+      options: Object.keys(icons),
+      control: {
+        type: "select",
+      },
+      description: "The same icon name used in Icon component",
+      defaultValue: "star",
     },
-    defaultValue: {
+    label: {
+      control: { type: "text" },
+      description: "Text to the left of the icons",
+      defaultValue: "Avaliação:",
+    },
+    total: {
       control: { type: "number" },
+      defaultValue: 5,
+      description: "The total amount of elements",
+    },
+    value: {
+      control: { type: "number" },
+      defaultValue: 0,
+      description: "The amount checked elements",
+    },
+    size: {
+      description: "The icon size",
+      options: Object.values(IconSizes),
+      defaultValue: IconSizes.Medium,
+      control: {
+        type: "select",
+      },
     },
   },
 } as ComponentMeta<typeof RatingStar>;
@@ -24,7 +51,9 @@ export default {
 const Template: ComponentStory<typeof RatingStar> = (args) => <RatingStar {...args} />;
 
 const DefaultArgs = {
-  maxValue: 5,
+  total: 5,
+  label: "Avaliação:",
+  size: IconSizes.Medium,
 };
 
 export const Default = Template.bind({});
@@ -33,7 +62,7 @@ Default.args = DefaultArgs;
 export const WithDefaultValue = Template.bind({});
 WithDefaultValue.args = {
   ...DefaultArgs,
-  defaultValue: 3,
+  value: 3,
 };
 
 const ExampleRating = (props: RatingStarProps) => {
@@ -41,9 +70,6 @@ const ExampleRating = (props: RatingStarProps) => {
 
   const handleSelect = (rate: number) => {
     setState(rate);
-    if (rate <= 1) {
-      alert("A votação foi baixa (1 estrela)");
-    }
   };
 
   return (

@@ -5,11 +5,14 @@
   justify-content: center;
   width: fit-content;
   &:hover {
-    .rating-star__label {
+    .rating-star__icon {
       color: $color-warning-500;
     }
   }
   &__label {
+    margin-right: $spacing-lg;
+  }
+  &__icon {
     cursor: pointer;
     position: relative;
     color: $color-text-disabled;
@@ -20,7 +23,7 @@
     }
 
     &:hover {
-      & ~ .rating-star__label {
+      & ~ .rating-star__icon {
         color: $color-text-disabled;
       }
     }

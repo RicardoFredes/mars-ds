@@ -1,7 +1,7 @@
 import type { SidebarProps } from "./sidebar.types";
 
 import Card from "@/components/basics/Card";
-import { makeArray } from "@/services/makeArray";
+import { makeArray } from "@/services/array";
 
 import GuestButtons from "../GuestButtons";
 import Skeleton, { SkeletonVariants } from "../Skeleton";

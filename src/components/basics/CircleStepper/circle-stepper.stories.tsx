@@ -12,6 +12,9 @@ export default {
     position: {
       control: { type: "number" },
     },
+    hideInfo: {
+      control: { type: "boolean" },
+    },
   },
 } as ComponentMeta<typeof CircleStepper>;
 
@@ -22,7 +25,11 @@ const Template: ComponentStory<typeof CircleStepper> = (args) => (
 const DefaultArgs = {
   steps: ["Identificação", "Adicionais", "Pagamento", "Endereço de Cobrança", "Resumo"],
   position: 1,
+  hideInfo: false,
 };
 
 export const Default = Template.bind({});
 Default.args = DefaultArgs;
+
+export const WithouthInfo = Template.bind({});
+WithouthInfo.args = { ...DefaultArgs, hideInfo: true };

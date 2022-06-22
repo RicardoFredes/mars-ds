@@ -4,7 +4,7 @@ import classNames from "classnames";
 
 import Icon, { IconSizes } from "@/components/basics/Icon";
 import Caption from "@/components/typographies/Caption";
-import { makeArray } from "@/services/makeArray";
+import { makeArray } from "@/services/array";
 
 const RangeCompletion = ({
   label,

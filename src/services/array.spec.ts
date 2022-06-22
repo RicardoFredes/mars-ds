@@ -1,4 +1,4 @@
-import { makeArray } from "./makeArray";
+import { isStringArray, makeArray } from "./array";
 
 describe("makeArray", () => {
   it("should return null array with the length provided", () => {
@@ -15,5 +15,15 @@ describe("makeArray", () => {
   it("should return an empty array if length equals 0", () => {
     const array = makeArray(0, null);
     expect(array).toEqual([]);
+  });
+});
+
+describe("isStringArray", () => {
+  it("should return true if the array is an array of strings", () => {
+    expect(isStringArray(["a", "b", "c"])).toBeTruthy();
+  });
+
+  it("should return false if the array is not an array of strings", () => {
+    expect(isStringArray(["a", "b", "c", 1, 2, 3])).toBeFalsy();
   });
 });

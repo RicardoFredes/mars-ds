@@ -1,11 +1,18 @@
+import type { CircleStepperProps } from "./circle-stepper.types";
+
 import classNames from "classnames";
 
-import type { StepperProps } from "@/components/basics/Stepper";
 import Caption from "@/components/typographies/Caption";
 import Heading, { HeadingSizes } from "@/components/typographies/Heading";
 import Text from "@/components/typographies/Text";
 
-const CircleStepper = ({ position, steps, className, ...props }: StepperProps) => {
+const CircleStepper = ({
+  position,
+  steps,
+  hideInfo = false,
+  className,
+  ...props
+}: CircleStepperProps) => {
   const cn = classNames("circle-stepper", className);
   const totalSteps = steps.length;
   const getCurrentPosition = () => {
@@ -17,19 +24,24 @@ const CircleStepper = ({ position, steps, className, ...props }: StepperProps) =
   const currentPosition = getCurrentPosition();
   return (
     <div className={cn} {...props}>
-      <div className="circle-stepper__info">
-        <Heading size={HeadingSizes.Small} className="circle-stepper__info-title">
-          {steps[position - 1]}
-        </Heading>
-        {position < steps.length && position > 0 && (
-          <Caption as="p" className="circle-stepper__info-caption">
-            Próximo:&nbsp;
-            <Text as="span" className="circle-stepper__info-caption__next-position">
-              {steps[position]}
-            </Text>
-          </Caption>
-        )}
-      </div>
+      {!hideInfo && (
+        <div className="circle-stepper__info">
+          <>
+            <Heading size={HeadingSizes.Small} className="circle-stepper__info-title">
+              {steps[position - 1]}
+            </Heading>
+
+            {position < steps.length && position > 0 && (
+              <Caption as="p" className="circle-stepper__info-caption">
+                Próximo:&nbsp;
+                <Text as="span" className="circle-stepper__info-caption__next-position">
+                  {steps[position]}
+                </Text>
+              </Caption>
+            )}
+          </>
+        </div>
+      )}
 
       <div className="circle-stepper__icon">
         <svg className="circle-stepper__icon__svg" viewBox="0 0 100 100" width="52" height="52">

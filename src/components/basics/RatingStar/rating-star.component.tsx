@@ -37,7 +37,7 @@ const RatingStar = ({
 
   return (
     <div className={cn} {...props}>
-      <Caption className="rating-star__label">{label || "Avaliação:"}</Caption>
+      <Caption className="rating-star__label">{label}</Caption>
       {[...Array(starsLength)].map((_star, index) => (
         <StarField
           currentValue={currentValue}

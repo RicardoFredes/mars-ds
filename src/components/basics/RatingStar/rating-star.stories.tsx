@@ -25,7 +25,6 @@ export default {
     label: {
       control: { type: "text" },
       description: "Text to the left of the icons",
-      defaultValue: "Avaliação:",
     },
     total: {
       control: { type: "number" },
@@ -37,7 +36,7 @@ export default {
       defaultValue: 0,
       description: "The amount checked elements",
     },
-    size: {
+    iconSize: {
       description: "The icon size",
       options: Object.values(IconSizes),
       defaultValue: IconSizes.Medium,
@@ -53,7 +52,7 @@ const Template: ComponentStory<typeof RatingStar> = (args) => <RatingStar {...ar
 const DefaultArgs = {
   total: 5,
   label: "Avaliação:",
-  size: IconSizes.Medium,
+  iconSize: IconSizes.Medium,
 };
 
 export const Default = Template.bind({});

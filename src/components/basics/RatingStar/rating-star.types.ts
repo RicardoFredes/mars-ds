@@ -1,11 +1,11 @@
-import type { IconSizes } from "../Icon";
+import type { IconProps } from "../Icon";
 
 import type { ComponentItem } from "@/types";
 
 export interface RatingStarProps extends Omit<ComponentItem, "onSelect"> {
   iconName?: string;
   label?: string;
-  size?: typeof IconSizes[keyof typeof IconSizes];
+  iconSize?: IconProps["size"];
   total?: number;
   value?: number;
   onSelect?: (value: number) => void;
@@ -14,6 +14,6 @@ export interface RatingStarProps extends Omit<ComponentItem, "onSelect"> {
 export interface StarProps extends ComponentItem {
   value: number;
   currentValue: number;
-  size: typeof IconSizes[keyof typeof IconSizes];
+  iconSize?: IconProps["size"];
   iconName: string;
 }

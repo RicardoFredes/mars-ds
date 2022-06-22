@@ -3,8 +3,9 @@ import type { RatingStarProps, StarProps } from "./rating-star.types";
 import classNames from "classnames";
 import { useEffect, useState } from "react";
 
-import Icon, { IconSizes } from "@/components/basics/Icon";
+import Icon from "@/components/basics/Icon";
 import Caption from "@/components/typographies/Caption";
+import { makeArray } from "@/services";
 
 const getDefaultValue = (value: number, total: number): number => {
   if (value <= 0) return 0;
@@ -14,10 +15,10 @@ const getDefaultValue = (value: number, total: number): number => {
 const RatingStar = ({
   className,
   iconName = "star",
-  label = "Avaliação:",
+  label,
   name = "rating",
   onSelect,
-  size = IconSizes.Medium,
+  iconSize,
   total = 5,
   value = 0,
   ...props
@@ -37,15 +38,15 @@ const RatingStar = ({
 
   return (
     <div className={cn} {...props}>
-      <Caption className="rating-star__label">{label}</Caption>
-      {[...Array(starsLength)].map((_star, index) => (
+      {label && <Caption className="rating-star__label">{label}</Caption>}
+      {makeArray(starsLength).map((_, index) => (
         <StarField
           currentValue={currentValue}
           name={name}
           onClick={() => handleSetValue(index + 1)}
           key={index}
           value={index + 1}
-          size={size}
+          iconSize={iconSize}
           iconName={iconName}
         />
       ))}
@@ -53,7 +54,7 @@ const RatingStar = ({
   );
 };
 
-const StarField = ({ value, onClick, currentValue, name, size, iconName }: StarProps) => {
+const StarField = ({ value, onClick, currentValue, name, iconSize, iconName }: StarProps) => {
   const isChecked = currentValue === value;
   const isActive = currentValue >= value;
   return (
@@ -72,7 +73,7 @@ const StarField = ({ value, onClick, currentValue, name, size, iconName }: StarP
         value={value}
         name={name}
       />
-      <Icon name={iconName} as="button" className="rating-star__star" size={size} />
+      <Icon name={iconName} as="button" className="rating-star__star" size={iconSize} />
     </label>
   );
 };

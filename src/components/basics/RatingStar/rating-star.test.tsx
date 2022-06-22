@@ -148,10 +148,4 @@ describe("<RatingStar>", () => {
       expect(element).not.toBeInTheDocument();
     });
   });
-
-  it('should show "Avaliação:" if label is invalid or empty', () => {
-    const label = "";
-    const wrapper = makeSut({ label });
-    wrapper.getByText("Avaliação:");
-  });
 });

@@ -36,10 +36,4 @@ describe("<RangeCompletion>", () => {
       expect(element).not.toBeInTheDocument();
     });
   });
-
-  it('should show "Dificuldade" if label is invalid or empty', () => {
-    const label = "";
-    const wrapper = makeSut({ label });
-    wrapper.getByText("Dificuldade:");
-  });
 });

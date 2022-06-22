@@ -2,6 +2,7 @@ import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import icons from "@/components/basics/Icon/lib";
 
+import { IconSizes } from "../Icon";
 import RangeCompletion from "./range-completion.component";
 
 export default {
@@ -13,7 +14,6 @@ export default {
       control: {
         type: "text",
       },
-      defaultValue: "Dificuldade:",
     },
     iconName: {
       options: Object.keys(icons),
@@ -22,6 +22,14 @@ export default {
       },
       description: "The same icon name used in Icon component",
       defaultValue: "circle",
+    },
+    iconSize: {
+      description: "The icon size",
+      options: Object.values(IconSizes),
+      defaultValue: IconSizes.Small,
+      control: {
+        type: "select",
+      },
     },
     total: {
       control: { type: "number" },

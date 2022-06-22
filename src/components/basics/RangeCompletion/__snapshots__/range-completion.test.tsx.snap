@@ -9,11 +9,6 @@ Object {
         class="range-completion"
       >
         <span
-          class="caption range-completion__label"
-        >
-          Dificuldade
-        </span>
-        <span
           class="icon range-completion__item"
           data-testid="is-empty"
         >
@@ -115,11 +110,6 @@ Object {
     <div
       class="range-completion"
     >
-      <span
-        class="caption range-completion__label"
-      >
-        Dificuldade
-      </span>
       <span
         class="icon range-completion__item"
         data-testid="is-empty"

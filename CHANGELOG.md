@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.96](https://github.com/mesalva/mars/compare/v1.0.0-alpha.95...v1.0.0-alpha.96) (2022-06-22)
+
+
+### Features
+
+* **CircleStepper:** add hideInfo toggle ([#170](https://github.com/mesalva/mars/issues/170)) ([c69b59b](https://github.com/mesalva/mars/commit/c69b59bba66e6573c95ef334dfbb64c6abc4f355))
+
 ## [1.0.0-alpha.95](https://github.com/mesalva/mars/compare/v1.0.0-alpha.94...v1.0.0-alpha.95) (2022-06-22)
 
 

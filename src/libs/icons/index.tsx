@@ -111,9 +111,11 @@ import video from "./generics/video";
 import apple from "./socials/apple";
 import facebook from "./socials/facebook";
 import google from "./socials/google";
+import bankSlipPix from "./checkout/bank-slip-pix";
 
 const icons: { [key: string]: (props: IconLibProps) => JSX.Element } = {
   "bank-slip": bankSlip,
+  "bank-slip-pix": bankSlipPix,
   "credit-card": creditCard,
   "mastercard": mastercard,
   "pix": pix,

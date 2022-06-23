@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.97](https://github.com/mesalva/mars/compare/v1.0.0-alpha.96...v1.0.0-alpha.97) (2022-06-23)
+
+
+### Features
+
+* create bank-slip-pix icon ([#173](https://github.com/mesalva/mars/issues/173)) ([6f2ee91](https://github.com/mesalva/mars/commit/6f2ee91974f7df3ccdff61f0d3e42056d09fb34e))
+
 ## [1.0.0-alpha.96](https://github.com/mesalva/mars/compare/v1.0.0-alpha.95...v1.0.0-alpha.96) (2022-06-22)
 
 

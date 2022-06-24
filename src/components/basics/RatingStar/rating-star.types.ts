@@ -9,6 +9,8 @@ export interface RatingStarProps extends Omit<ComponentItem, "onSelect"> {
   total?: number;
   value?: number;
   onSelect?: (value: number) => void;
+  disabled?: boolean;
+  isLoading?: boolean;
 }
 
 export interface StarProps extends ComponentItem {
@@ -16,4 +18,6 @@ export interface StarProps extends ComponentItem {
   currentValue: number;
   iconSize?: IconProps["size"];
   iconName: string;
+  isLoading?: boolean;
+  disabled?: boolean;
 }

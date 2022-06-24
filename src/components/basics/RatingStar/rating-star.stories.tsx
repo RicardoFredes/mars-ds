@@ -44,6 +44,16 @@ export default {
         type: "select",
       },
     },
+    disabled: {
+      description: "Disable rating star",
+      defaultValue: false,
+      control: { type: "boolean" },
+    },
+    isLoading: {
+      description: "The loading state",
+      defaultValue: false,
+      control: { type: "boolean" },
+    },
   },
 } as ComponentMeta<typeof RatingStar>;
 

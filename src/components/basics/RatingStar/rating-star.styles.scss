@@ -4,29 +4,37 @@
   align-items: center;
   justify-content: center;
   width: fit-content;
-  &:hover {
+
+  &--is-disabled {
+    opacity: 0.5;
+  }
+
+  &:not(.rating-star--is-disabled) {
+    &:hover {
+      .rating-star__icon {
+        color: $color-warning-500;
+      }
+    }
     .rating-star__icon {
-      color: $color-warning-500;
+      cursor: pointer;
+      &--is-active {
+        color: $color-warning-500;
+      }
+  
+      &:hover {
+        & ~ .rating-star__icon {
+          color: $color-text-disabled;
+        }
+      }
     }
   }
   &__label {
     margin-right: $spacing-sm;
   }
   &__icon {
-    cursor: pointer;
     position: relative;
     color: $color-text-disabled;
     transition: all ease 0.2s;
-
-    &--is-active {
-      color: $color-warning-500;
-    }
-
-    &:hover {
-      & ~ .rating-star__icon {
-        color: $color-text-disabled;
-      }
-    }
   }
   &__radio {
     position: absolute;

@@ -21,9 +21,13 @@ const RatingStar = ({
   iconSize,
   total = 5,
   value = 0,
+  disabled,
+  isLoading,
   ...props
 }: RatingStarProps) => {
-  const cn = classNames("rating-star", className);
+  const cn = classNames("rating-star", className, {
+    "rating-star--is-disabled": disabled || isLoading,
+  });
   const defaultValue = getDefaultValue(value, total);
   const [currentValue, setCurrentValue] = useState(defaultValue);
   const starsLength = total <= 0 ? 5 : total;
@@ -48,19 +52,32 @@ const RatingStar = ({
           value={index + 1}
           iconSize={iconSize}
           iconName={iconName}
+          disabled={disabled || isLoading}
+          isLoading={isLoading}
         />
       ))}
     </div>
   );
 };
 
-const StarField = ({ value, onClick, currentValue, name, iconSize, iconName }: StarProps) => {
+const StarField = ({
+  value,
+  onClick,
+  currentValue,
+  name,
+  iconSize,
+  iconName,
+  disabled,
+  isLoading,
+}: StarProps) => {
   const isChecked = currentValue === value;
   const isActive = currentValue >= value;
+  const cn = classNames("rating-star__star", { "skeleton-animation": isLoading });
   return (
     <label
       className={classNames("rating-star__icon", {
         "rating-star__icon--is-active": isActive,
+        "rating-star__icon--is-disabled": disabled,
       })}
       data-testid="label-star"
     >
@@ -72,8 +89,9 @@ const StarField = ({ value, onClick, currentValue, name, iconSize, iconName }: S
         type="radio"
         value={value}
         name={name}
+        disabled={disabled}
       />
-      <Icon name={iconName} as="button" className="rating-star__star" size={iconSize} />
+      <Icon className={cn} name={isLoading ? "circle" : iconName} as="button" size={iconSize} />
     </label>
   );
 };

@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.98](https://github.com/mesalva/mars/compare/v1.0.0-alpha.97...v1.0.0-alpha.98) (2022-06-24)
+
+
+### Features
+
+* **rating-star:** add states loading and disabled ([7b11105](https://github.com/mesalva/mars/commit/7b11105838bbdb092f0366d411ce7d943ff40d56))
+
 ## [1.0.0-alpha.97](https://github.com/mesalva/mars/compare/v1.0.0-alpha.96...v1.0.0-alpha.97) (2022-06-23)
 
 

@@ -1,13 +1,29 @@
 a,
-.link{
-  color: $color-primary-500;
+.link {
   cursor: pointer;
   text-decoration: none;
-  &:visited {
-    text-decoration: none;
-    color: $color-primary-500;
-  }
+
   &:hover {
     text-decoration: underline;
+  }
+
+  &:not(.link--secondary) {
+    color: $color-primary-500;
+    &:visited {
+      text-decoration: none;
+      color: $color-primary-500;
+    }
+  }
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  .icon {
+    margin-right: $spacing-sm;
+  }
+  &--secondary,
+  &--secondary:visited {
+    color: $color-text-secondary;
   }
 }

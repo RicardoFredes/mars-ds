@@ -71,7 +71,12 @@ const DefaultArgs = {
   list: [
     { label: "Item 1", onClick: action("Item 1 clicked") },
     { label: "Item 2", onClick: action("Item 2 clicked") },
-    { label: "Item 3", onClick: action("Item 3 clicked") },
+    {
+      label: "Item 3",
+      onClick: action("Item 3 clicked"),
+      href: "https://www.mesalva.com",
+      target: "_blank",
+    },
   ],
 };
 

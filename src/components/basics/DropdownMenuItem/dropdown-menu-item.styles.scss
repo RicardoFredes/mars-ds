@@ -1,3 +1,4 @@
+a.dropdown-menu-item,
 .dropdown-menu-item {
   appearance: none;
   border: none;
@@ -13,9 +14,15 @@
   min-height: calc($spacing-lg * 2);
   cursor: pointer;
 
+  color: $color-text-primary;
+  &:visited {
+    color: $color-text-primary;
+  }
+
   &:focus,
   &:hover {
     background-color: $color-neutral-ghost;
+    text-decoration: none;
   }
 
   &__text {

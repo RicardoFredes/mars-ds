@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.102](https://github.com/mesalva/mars/compare/v1.0.0-alpha.101...v1.0.0-alpha.102) (2022-06-28)
+
+
+### Bug Fixes
+
+* **link:** remove css rule to primary color ([9d59eb8](https://github.com/mesalva/mars/commit/9d59eb8e045ae06162b0dae545c7a78af9b7da47))
+
 ## [1.0.0-alpha.101](https://github.com/mesalva/mars/compare/v1.0.0-alpha.100...v1.0.0-alpha.101) (2022-06-28)
 
 

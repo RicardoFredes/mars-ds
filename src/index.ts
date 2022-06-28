@@ -2,6 +2,7 @@
  * WARNING!
  * Do not change this file,
  * because it is automatically generated
+ * run "yarn reindex" to update
  */
 
 import "./styles/index.scss";
@@ -51,6 +52,9 @@ export * from "./components/basics/GuestButtons/guest-buttons.types";
 export { default as Icon } from "./components/basics/Icon/icon.component";
 export * from "./components/basics/Icon/icon.types";
 
+export { default as Image } from "./components/basics/Image/image.component";
+export * from "./components/basics/Image/image.types";
+
 export { default as ItemButton } from "./components/basics/ItemButton/item-button.component";
 export * from "./components/basics/ItemButton/item-button.types";
 
@@ -84,6 +88,9 @@ export * from "./components/basics/Pagination/pagination.types";
 export { default as ProgressIndicator } from "./components/basics/ProgressIndicator/progress-indicator.component";
 export * from "./components/basics/ProgressIndicator/progress-indicator.types";
 
+export { default as RangeCompletion } from "./components/basics/RangeCompletion/range-completion.component";
+export * from "./components/basics/RangeCompletion/range-completion.types";
+
 export { default as RatingStar } from "./components/basics/RatingStar/rating-star.component";
 export * from "./components/basics/RatingStar/rating-star.types";
 
@@ -106,9 +113,6 @@ export * from "./components/basics/ToggleButton/toggle-button.types";
 
 export { default as ToggleDropdown } from "./components/basics/ToggleDropdown/toggle-dropdown.component";
 export * from "./components/basics/ToggleDropdown/toggle-dropdown.types";
-
-export { default as RangeCompletion } from "./components/basics/RangeCompletion/range-completion.component";
-export * from "./components/basics/RangeCompletion/range-completion.types";
 
 export { default as Checkbox } from "./components/forms/Checkbox/checkbox.component";
 export * from "./components/forms/Checkbox/checkbox.types";

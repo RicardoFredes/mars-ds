@@ -1,0 +1,11 @@
+.image {
+  display: block;
+}
+
+.theme-dark {
+  .image {
+    &--auto-invert-color {
+      filter: invert(1);
+    }
+  }
+}

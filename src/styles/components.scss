@@ -2,6 +2,7 @@
  * WARNING!
  * Do not change this file,
  * because it is automatically generated
+ * run "yarn reindex" to update
  */
 
 @import "../components/basics/Accordion/accordion.styles.scss";
@@ -18,6 +19,7 @@
 @import "../components/basics/GlobalLoading/global-loading.styles.scss";
 @import "../components/basics/GuestButtons/guest-buttons.styles.scss";
 @import "../components/basics/Icon/icon.styles.scss";
+@import "../components/basics/Image/image.styles.scss";
 @import "../components/basics/ItemButton/item-button.styles.scss";
 @import "../components/basics/ItemElement/item-element.styles.scss";
 @import "../components/basics/ItemsList/items-list.styles.scss";
@@ -29,13 +31,13 @@
 @import "../components/basics/Notification/notification.styles.scss";
 @import "../components/basics/Pagination/pagination.styles.scss";
 @import "../components/basics/ProgressIndicator/progress-indicator.styles.scss";
+@import "../components/basics/RangeCompletion/range-completion.styles.scss";
 @import "../components/basics/RatingStar/rating-star.styles.scss";
 @import "../components/basics/Sidebar/sidebar.styles.scss";
 @import "../components/basics/Skeleton/skeleton.styles.scss";
 @import "../components/basics/Stepper/stepper.styles.scss";
 @import "../components/basics/ToggleButton/toggle-button.styles.scss";
 @import "../components/basics/ToggleDropdown/toggle-dropdown.styles.scss";
-@import "../components/basics/RangeCompletion/range-completion.styles.scss";
 @import "../components/forms/Checkbox/checkbox.styles.scss";
 @import "../components/forms/FileField/file-field.styles.scss";
 @import "../components/forms/FormWithSubmitButton/form-with-submit-button.styles.scss";

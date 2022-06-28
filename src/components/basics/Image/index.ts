@@ -5,6 +5,6 @@
  * run "yarn reindex" to update
  */
 
-import Accordion from "./accordion.component";
-export default Accordion;
-export * from "./accordion.types";
+import Image from "./image.component";
+export default Image;
+export * from "./image.types";

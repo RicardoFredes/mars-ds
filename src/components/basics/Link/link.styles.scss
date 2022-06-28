@@ -7,12 +7,10 @@ a,
     text-decoration: underline;
   }
 
-  &:not(.link--secondary) {
+  color: $color-primary-500;
+  &:visited {
+    text-decoration: none;
     color: $color-primary-500;
-    &:visited {
-      text-decoration: none;
-      color: $color-primary-500;
-    }
   }
 }
 

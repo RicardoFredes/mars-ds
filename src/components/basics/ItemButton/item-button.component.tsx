@@ -3,6 +3,7 @@ import type { ItemButtonProps } from "./item-button.types";
 import classNames from "classnames";
 
 import Icon from "@/components/basics/Icon";
+import Image from "@/components/basics/Image";
 import Label from "@/components/basics/Label";
 import Link from "@/components/basics/Link";
 import Caption from "@/components/typographies/Caption";
@@ -31,7 +32,7 @@ const ItemButton = ({
   return (
     <Component className={cn} {...props} type={type}>
       <Icon name={iconName} className="item-button__icon" style={{ color: iconColor }} />
-      {image && <img className="item-button__image" src={image} alt={title} />}
+      <ItemButtonImage image={image} title={title} />
       <div className="item-button__texts">
         {caption && <Caption className="item-button__texts-caption">{caption}</Caption>}
         <Subtitle className="item-button__texts-title">{title}</Subtitle>
@@ -44,6 +45,16 @@ const ItemButton = ({
       )}
     </Component>
   );
+};
+
+const ItemButtonImage = ({ image, title }: Pick<ItemButtonProps, "image" | "title">) => {
+  if (!image) return null;
+
+  if (typeof image === "string") {
+    return <Image className="item-button__image" src={image} alt={title} />;
+  }
+
+  return <Image className="item-button__image" alt={title} {...image} />;
 };
 
 export default ItemButton;

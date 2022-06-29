@@ -18,7 +18,8 @@ interface ImageItemProps extends ImageItem {
   lg?: ImageItem;
 }
 
-interface ImageProps extends HTMLAttributes<HTMLImageElement>, ImageItemProps {
+interface ImageProps extends HTMLAttributes<HTMLPictureElement>, ImageItemProps {
+  alt?: string;
   autoDarkMode?: boolean;
   maxHeight?: string | number;
 }

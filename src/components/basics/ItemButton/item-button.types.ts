@@ -1,3 +1,4 @@
+import type { ImageProps } from "@/components/basics/Image/image.types";
 import type { LabelThemes, LabelVariants } from "@/components/basics/Label";
 
 export interface ItemButtonProps
@@ -11,5 +12,5 @@ export interface ItemButtonProps
   iconName: string;
   iconColor?: string;
   as?: React.ElementType | string;
-  image?: string;
+  image?: string | ImageProps;
 }

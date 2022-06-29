@@ -14,6 +14,7 @@ const Image = ({
   darkModeSrc,
   title,
   maxHeight,
+  alt,
   ...props
 }: ImageProps) => {
   const cn = classNames("image", className, { "image--auto-invert-color": autoDarkMode });
@@ -33,7 +34,7 @@ const Image = ({
       )}
       {md && <ImageSource mediaSize={640} darkModeSrc={darkModeSrc} {...md} />}
       {lg && <ImageSource mediaSize={960} darkModeSrc={darkModeSrc} {...lg} />}
-      <img src={defaultSrc} alt={title} {...commonProps} />
+      <img src={defaultSrc} alt={alt || title} {...commonProps} />
     </picture>
   );
 };

@@ -2,6 +2,7 @@ import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import icons from "@/components/basics/Icon/lib";
 import { LabelThemes, LabelVariants } from "@/components/basics/Label";
+import { commonStoreComponentProps } from "@/services/stories";
 
 import ItemButton from "./item-button.component";
 
@@ -17,6 +18,7 @@ export default {
     labelVariant: { options: LabelVariants, control: { type: "select" } },
     labelTheme: { options: LabelThemes, control: { type: "select" } },
     iconColor: { control: { type: "color" } },
+    ...commonStoreComponentProps,
   },
 } as ComponentMeta<typeof ItemButton>;
 
@@ -60,6 +62,18 @@ WithImage.args = {
   title: "ENEM",
   image:
     "https://cdn.mesalva.com/uploads/image/MjAyMi0wNC0yOSAxNzoyMTo0NSArMDAwMDIyNDMyOQ%3D%3D%0A.svg",
+  href: "#",
+  onClick: (event) => event.preventDefault(),
+};
+
+export const WithObjectImage = Template.bind({});
+WithObjectImage.args = {
+  title: "ENEM",
+  image: {
+    src: "https://cdn.mesalva.com/uploads/image/MjAyMi0wNi0yNCAxNTo1NDoxMSArMDAwMDUyNTcyMQ%3D%3D%0A.svg",
+    darkModeSrc:
+      "https://cdn.mesalva.com/uploads/image/MjAyMi0wNi0yNCAxNTo1NDo1MiArMDAwMDc0Njk2Mw%3D%3D%0A.svg",
+  },
   href: "#",
   onClick: (event) => event.preventDefault(),
 };

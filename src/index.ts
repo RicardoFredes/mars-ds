@@ -43,6 +43,9 @@ export * from "./components/basics/DropdownMenu/dropdown-menu.types";
 export { default as DropdownMenuItem } from "./components/basics/DropdownMenuItem/dropdown-menu-item.component";
 export * from "./components/basics/DropdownMenuItem/dropdown-menu-item.types";
 
+export { default as Embed } from "./components/basics/Embed/embed.component";
+export * from "./components/basics/Embed/embed.types";
+
 export { default as GlobalLoading } from "./components/basics/GlobalLoading/global-loading.component";
 export * from "./components/basics/GlobalLoading/global-loading.types";
 

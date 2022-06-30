@@ -1,0 +1,23 @@
+.embed {
+  width: 100%;
+  display: block;
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+
+  .text{
+    margin-bottom: 15px;
+  }
+
+  &--default {
+    height: 200px;
+  }
+
+  &--landscape {
+    aspect-ratio: 29.7/21;
+  }
+
+  &--portrait {
+    aspect-ratio: 21/29.7;
+  }
+}

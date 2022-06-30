@@ -8,6 +8,7 @@
 import type { IconLibProps } from "./icons.types";
 
 import bankSlip from "./checkout/bank-slip";
+import bankSlipPix from "./checkout/bank-slip-pix";
 import creditCard from "./checkout/credit-card";
 import mastercard from "./checkout/mastercard";
 import pix from "./checkout/pix";
@@ -111,7 +112,6 @@ import video from "./generics/video";
 import apple from "./socials/apple";
 import facebook from "./socials/facebook";
 import google from "./socials/google";
-import bankSlipPix from "./checkout/bank-slip-pix";
 
 const icons: { [key: string]: (props: IconLibProps) => JSX.Element } = {
   "bank-slip": bankSlip,

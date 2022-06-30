@@ -13388,10 +13388,10 @@ react-refresh@^0.11.0:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.11.0.tgz#77198b944733f0f1f1a90e791de4541f9f074046"
   integrity sha512-F27qZr8uUqwhWZboondsPx8tnC3Ct3SxZA3V5WyEvujRyyNv0VYPhoBg1gZ8/MV5tubQp76Trw8lTv9hzRBa+A==
 
-react-simple-clickout@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/react-simple-clickout/-/react-simple-clickout-1.1.0.tgz#9a9ae0c2687298e268662e90f72e8a6bb62fd0df"
-  integrity sha512-jirU8X7qJvnyAlR9KD3DMdnEesl2KHCVHBO3oWlguL4XIr+GEtvU3mrEt9GjNMWfmFQy95ThoHrxFzP9RnFJNQ==
+react-simple-clickout@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/react-simple-clickout/-/react-simple-clickout-1.1.1.tgz#0b076a6ac31ef57b603c63cbad797c960e2e512c"
+  integrity sha512-UxQh70pPBWmnsenUM8tvcc1Wztrx9+cDartwobKv7+8Z+OxPqkslSvBCwFmAXt9+Uy7G362vYOSb3zcO2mp6CA==
   dependencies:
     prettier "^2.6.2"
     typescript "^4.6.4"

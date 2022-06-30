@@ -54,11 +54,11 @@
   }
   &--is-disabled {
     .checkbox {
-      &__container {
+      &__input {
         cursor: inherit;
       }
       &__icon {
-        color: $color-neutral-500;
+        color: $color-text-disabled;
       }
       &__label {
         color: $color-text-disabled;

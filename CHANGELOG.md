@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.105](https://github.com/mesalva/mars/compare/v1.0.0-alpha.104...v1.0.0-alpha.105) (2022-07-02)
+
+
+### Features
+
+* new component youtube live chat ([#180](https://github.com/mesalva/mars/issues/180)) ([70d1869](https://github.com/mesalva/mars/commit/70d1869ea155531c08d8ac713fe07d9f558b5767))
+
 ## [1.0.0-alpha.104](https://github.com/mesalva/mars/compare/v1.0.0-alpha.103...v1.0.0-alpha.104) (2022-06-30)
 
 

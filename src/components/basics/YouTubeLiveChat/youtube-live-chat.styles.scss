@@ -1,0 +1,14 @@
+.youtube-live-chat {
+  iframe {
+    display: none;
+  }
+  @media (min-width: $breakpoint-sm) {
+    iframe {
+      display: block;
+      border: none;
+    }
+    > p {
+      display: none;
+    }
+  }
+}

@@ -117,6 +117,9 @@ export * from "./components/basics/ToggleButton/toggle-button.types";
 export { default as ToggleDropdown } from "./components/basics/ToggleDropdown/toggle-dropdown.component";
 export * from "./components/basics/ToggleDropdown/toggle-dropdown.types";
 
+export { default as YouTubeLiveChat } from "./components/basics/YouTubeLiveChat/youtube-live-chat.component";
+export * from "./components/basics/YouTubeLiveChat/youtube-live-chat.types";
+
 export { default as Checkbox } from "./components/forms/Checkbox/checkbox.component";
 export * from "./components/forms/Checkbox/checkbox.types";
 

@@ -1,0 +1,122 @@
+.console-list-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 72px;
+  color: var(--dark-color-text-primary) !important;
+  background-color: var(--dark-color-background-primary);
+  transition: background-color ease 0.2s;
+
+  a {
+    text-decoration: none;
+  }
+
+  &:not(&--is-disabled):hover {
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--dark-color-background-secondary);
+  }
+
+  &__icon-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    margin: 0 $spacing-lg;
+    background-color: $color-neutral-900;
+    border-radius: $border-radius-lg;
+    transition: all ease 0.2s;
+
+    &::before,
+    &::after {
+      position: absolute;
+      left: 50%;
+      width: 1px;
+      height: 12px;
+      margin-left: -1px;
+      content: "";
+      background-color: $color-divider;
+    }
+
+    &::before {
+      bottom: 100%;
+      margin-bottom: $spacing-sm;
+    }
+
+    &::after {
+      top: 100%;
+      margin-top: $spacing-sm;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  &__subtitle {
+    color: var(--dark-color-text-secondary);
+  }
+
+  &--is-active {
+    cursor: pointer;
+    background-color: var(--dark-color-background-secondary);
+
+    .console-list-item__icon-container {
+      outline: 2px solid var(--dark-color-text-primary);
+    }
+  }
+
+  &--is-disabled {
+    text-decoration: none !important;
+    cursor: default;
+    background-color: var(--dark-color-background-primary);
+
+    .console-list-item__icon-container {
+      outline: none;
+    }
+  }
+
+  &--is-connector-disabled {
+    cursor: default;
+
+    .console-list-item__icon-container {
+      outline: none;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &--is-answered {
+    cursor: default;
+    background-color: var(--dark-color-background-primary);
+
+    .console-list-item__icon-container {
+      color: $color-neutral-900;
+      background-color: $color-white;
+      outline: none;
+    }
+  }
+}
+
+.theme-dark {
+  .console-list-item {
+    &__icon-container {
+      background-color: $color-neutral-100;
+    }
+
+    &--is-answered {
+      .console-list-item__icon-container {
+        color: $color-neutral-100;
+        background-color: $color-white;
+        outline: none;
+      }
+    }
+  }
+}

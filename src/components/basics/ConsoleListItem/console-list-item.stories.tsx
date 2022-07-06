@@ -7,7 +7,7 @@ const myStoryFunctionDescription =
   "The ConsoleListItem component is meant to be used by the ConsoleList component, either alone or inside a ConsoleGroupProps component.";
 
 export default {
-  title: "Components/ConsoleListItem",
+  title: "Components/Console/ConsoleListItem",
   parameters: {
     docs: {
       storyDescription: myStoryFunctionDescription,
@@ -27,11 +27,6 @@ export default {
     isActive: {
       description:
         "Whether the item is active (has the same behavior of when the item is hovered) or not",
-      control: "boolean",
-      defaultValue: false,
-    },
-    isDisabled: {
-      description: "Whether the item is disabled or not, this causes it to be not clickable",
       control: "boolean",
       defaultValue: false,
     },
@@ -56,7 +51,7 @@ export default {
         options: ["", "_self", "_blank", "_parent", "_top"],
       },
     },
-    LinkComponent: {
+    as: {
       description: "Transforms the underlying component into a custom component",
     },
   },

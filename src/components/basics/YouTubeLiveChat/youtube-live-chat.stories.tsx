@@ -3,7 +3,7 @@ import type { ComponentMeta, ComponentStory } from "@storybook/react";
 import YouTubeLiveChat from "./youtube-live-chat.component";
 
 export default {
-  title: "Components/YoutubeLiveChat",
+  title: "Components/YouTubeLiveChat",
   component: YouTubeLiveChat,
   argTypes: {
     domain: {

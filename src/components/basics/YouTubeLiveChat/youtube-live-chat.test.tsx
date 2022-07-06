@@ -2,11 +2,11 @@ import type { YouTubeLiveChatProps } from "./youtube-live-chat.types";
 
 import { render } from "@testing-library/react";
 
-import YoutubeLiveChat from "./youtube-live-chat.component";
+import YouTubeLiveChat from "./youtube-live-chat.component";
 
-const makeSut = (props?: YouTubeLiveChatProps) => render(<YoutubeLiveChat {...props} />);
+const makeSut = (props?: YouTubeLiveChatProps) => render(<YouTubeLiveChat {...props} />);
 
-describe("<YoutubeLiveChat>", () => {
+describe("<YouTubeLiveChat>", () => {
   it("should render component", () => {
     const wrapper = makeSut();
     expect(wrapper).toBeTruthy();

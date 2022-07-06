@@ -1,0 +1,30 @@
+.console-list-group {
+  background-color: var(--dark-color-background-primary);
+
+  &__header {
+    padding: 0;
+    padding-right: 16px;
+    text-align: left;
+    border: none;
+    outline: none;
+    appearance: none;
+  }
+
+  &__body {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s cubic-bezier(0.05, 0.7, 0.1, 1);
+  }
+
+  &--is-expanded {
+    .console-list-group__body {
+      height: auto;
+    }
+  }
+}
+
+.theme-dark {
+  .console-list-group {
+    background-color: var(--dark-color-background-secondary);
+  }
+}

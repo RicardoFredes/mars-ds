@@ -66,7 +66,7 @@ describe("<ConsoleListItem>", () => {
       const LinkComponent = "button";
 
       const { getByTestId } = makeSut({
-        LinkComponent,
+        as: LinkComponent,
       });
 
       const component = getByTestId(testId);

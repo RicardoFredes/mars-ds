@@ -86,6 +86,7 @@ $sizes: (
   md: $spacing-md,
   lg: $spacing-lg,
   xl: $spacing-xl,
+  auto: auto,
 );
 
 @include spacingGenerator(padding, p, $sizes);

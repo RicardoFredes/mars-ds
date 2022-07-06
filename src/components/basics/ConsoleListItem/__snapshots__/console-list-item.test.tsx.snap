@@ -5,7 +5,7 @@ Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div
+      <a
         class="console-list-item"
         data-testid="console-list-item"
       >
@@ -46,11 +46,14 @@ Object {
             any_subtitle
           </span>
         </div>
-      </div>
+        <div
+          class="ml-auto"
+        />
+      </a>
     </div>
   </body>,
   "container": <div>
-    <div
+    <a
       class="console-list-item"
       data-testid="console-list-item"
     >
@@ -91,7 +94,10 @@ Object {
           any_subtitle
         </span>
       </div>
-    </div>
+      <div
+        class="ml-auto"
+      />
+    </a>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

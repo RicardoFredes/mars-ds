@@ -1,16 +1,22 @@
-import type { AnchorHTMLAttributes, ElementType } from "react";
+import type { HTMLProps, ElementType, ReactNode } from "react";
 
-interface ConsoleListItemProps
-  extends Pick<AnchorHTMLAttributes<HTMLAnchorElement>, "href" | "target"> {
-  title: string;
+interface ConsoleListItemPureProps {
+  title?: string;
   subtitle?: string;
-  iconName: string;
+  iconName?: string;
   isActive?: boolean;
   isDisabled?: boolean;
   isConnectorDisabled?: boolean;
   isAnswered?: boolean;
   className?: string;
+  children?: ReactNode;
+}
+
+type ConsoleListItemPropsExtend = HTMLProps<HTMLAnchorElement | HTMLButtonElement> &
+  ConsoleListItemPureProps;
+
+interface ConsoleListItemProps extends ConsoleListItemPropsExtend {
   LinkComponent?: ElementType | string;
 }
 
-export type { ConsoleListItemProps };
+export type { ConsoleListItemProps, ConsoleListItemPureProps };

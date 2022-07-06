@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<YoutubeLiveChat> should render component with "domain" and "videoId" props 1`] = `
+exports[`<YouTubeLiveChat> should render component with "domain" and "videoId" props 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -95,7 +95,7 @@ Object {
 }
 `;
 
-exports[`<YoutubeLiveChat> should render component with "src" props 1`] = `
+exports[`<YouTubeLiveChat> should render component with "src" props 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -190,7 +190,7 @@ Object {
 }
 `;
 
-exports[`<YoutubeLiveChat> should render component with advanced props 1`] = `
+exports[`<YouTubeLiveChat> should render component with advanced props 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>

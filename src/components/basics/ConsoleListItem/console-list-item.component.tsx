@@ -9,17 +9,19 @@ import Text from "@/components/typographies/Text";
 const ConsoleListItem = ({
   title,
   subtitle,
-  iconName: icon,
+  iconName,
   isActive,
   isDisabled,
   isConnectorDisabled,
   isAnswered,
   href,
-  LinkComponent,
+  as,
+  LinkComponent = "a",
   className,
+  children,
   ...props
 }: ConsoleListItemProps) => {
-  const Component = LinkComponent ? LinkComponent : href ? "a" : "div";
+  const Component = as || LinkComponent;
 
   const cn = classNames(
     "console-list-item",
@@ -35,13 +37,15 @@ const ConsoleListItem = ({
   return (
     <Component data-testid="console-list-item" className={cn} href={href} {...props}>
       <div className="console-list-item__icon-container">
-        <Icon name={icon} />
+        {iconName && <Icon name={iconName} />}
       </div>
 
       <div className="console-list-item__content">
         <Text as="h2">{title}</Text>
         {subtitle && <Caption className="console-list-item__subtitle">{subtitle}</Caption>}
       </div>
+
+      <div className="ml-auto">{children}</div>
     </Component>
   );
 };

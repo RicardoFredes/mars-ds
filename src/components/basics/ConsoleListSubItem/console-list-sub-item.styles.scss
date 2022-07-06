@@ -1,0 +1,115 @@
+.console-list-sub-item {
+  --dot-size: 16px;
+
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 72px;
+  color: var(--dark-color-text-primary);
+  cursor: pointer;
+  background-color: var(--dark-color-background-primary);
+  transition: background-color ease 200ms;
+
+  &:hover,
+  &:visited {
+    text-decoration: none;
+  }
+
+  &::before {
+    width: 34px;
+    height: 100%;
+    margin-right: 22px;
+    content: "";
+    border-right: 1px solid $color-divider;
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__dot {
+    position: relative;
+    min-width: var(--dot-size);
+    height: var(--dot-size);
+    margin: 0 $spacing-lg;
+    background-color: var(--dark-color-text-primary);
+    border: 2px solid transparent;
+    border-radius: 50%;
+
+    &::before,
+    &::after {
+      position: absolute;
+      left: 50%;
+      width: 1px;
+      height: 22px; // (height/2) + dot-border - dot-size = (72px/2) + 2px - 16px
+      margin-left: -1px;
+      content: "";
+      background-color: $color-divider;
+    }
+
+    &::before {
+      bottom: 100%;
+      margin-bottom: $spacing-sm;
+    }
+
+    &::after {
+      top: 100%;
+      margin-top: $spacing-sm;
+    }
+  }
+
+  &__answer-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    min-height: 32px;
+    margin: 0 $spacing-lg;
+    color: var(--dark-color-text-primary);
+    border-radius: $border-radius-lg;
+  }
+
+  &--is-unanswered {
+    .console-list-sub-item__answer-icon {
+      color: $color-error-500;
+      background-color: $color-error-ghost;
+    }
+  }
+
+  &--is-correct {
+    .console-list-sub-item__answer-icon {
+      background-color: $color-success-500;
+    }
+  }
+
+  &--is-wrong {
+    .console-list-sub-item__answer-icon {
+      background-color: $color-error-500;
+    }
+  }
+
+  &:hover,
+  &--is-active {
+    background-color: var(--dark-color-background-secondary);
+  }
+
+  &--is-active {
+    .console-list-sub-item {
+      &__dot {
+        background-color: var(--dark-color-text-secondary);
+        border-color: var(--dark-color-text-primary);
+      }
+    }
+  }
+}
+
+.theme-dark {
+  .console-list-sub-item {
+    background-color: var(--dark-color-background-secondary);
+
+    &:hover,
+    &--is-active {
+      background-color: var(--dark-color-background-primary);
+    }
+  }
+}

@@ -37,6 +37,7 @@ Object {
               >
                 <span
                   class="icon btn__icon"
+                  data-name="more-horizontal"
                   data-testid="more-horizontal"
                 >
                   <svg
@@ -115,6 +116,7 @@ Object {
             >
               <span
                 class="icon btn__icon"
+                data-name="more-horizontal"
                 data-testid="more-horizontal"
               >
                 <svg
@@ -250,6 +252,7 @@ Object {
               >
                 <span
                   class="icon btn__icon"
+                  data-name="more-horizontal"
                   data-testid="more-horizontal"
                 >
                   <svg
@@ -381,6 +384,7 @@ Object {
             >
               <span
                 class="icon btn__icon"
+                data-name="more-horizontal"
                 data-testid="more-horizontal"
               >
                 <svg
@@ -729,6 +733,7 @@ Object {
               >
                 <span
                   class="icon btn__icon"
+                  data-name="more-horizontal"
                   data-testid="more-horizontal"
                 >
                   <svg
@@ -805,6 +810,7 @@ Object {
             >
               <span
                 class="icon btn__icon"
+                data-name="more-horizontal"
                 data-testid="more-horizontal"
               >
                 <svg
@@ -938,6 +944,7 @@ Object {
               >
                 <span
                   class="icon btn__icon"
+                  data-name="more-horizontal"
                   data-testid="more-horizontal"
                 >
                   <svg
@@ -1055,6 +1062,7 @@ Object {
             >
               <span
                 class="icon btn__icon"
+                data-name="more-horizontal"
                 data-testid="more-horizontal"
               >
                 <svg

@@ -32,7 +32,7 @@ const ConsoleListSubItem = ({
   const Component = LinkComponent || "a";
 
   return (
-    <Component className={cn} data-testId="console-list-sub-item" {...props}>
+    <Component className={cn} data-testid="console-list-sub-item" {...props}>
       <span className="console-list-sub-item__dot" />
 
       <div className="console-list-sub-item__content">

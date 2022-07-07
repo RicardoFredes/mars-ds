@@ -5,6 +5,7 @@
   align-items: center;
   width: 100%;
   height: 72px;
+  overflow: hidden;
   color: var(--dark-color-text-primary);
   cursor: pointer;
   background-color: var(--dark-color-background-primary);
@@ -20,12 +21,20 @@
     width: 32px;
     height: 100%;
     margin-right: 22px;
+    overflow: hidden;
     content: "";
     border-right: 1px solid $color-divider;
   }
 
   &__content {
     flex: 1;
+    min-width: 0;
+
+    & > * {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
   }
 
   &__dot {

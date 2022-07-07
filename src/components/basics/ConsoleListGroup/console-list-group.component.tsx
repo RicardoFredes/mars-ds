@@ -31,7 +31,7 @@ const ConsoleListGroup = ({
   const toggleOpen = () => setIsExpanded(!isExpanded);
 
   return (
-    <div className={cn}>
+    <div className={cn} data-testid="console-list-group">
       <ConsoleListItem
         className="console-list-group__header"
         onClick={toggleOpen}

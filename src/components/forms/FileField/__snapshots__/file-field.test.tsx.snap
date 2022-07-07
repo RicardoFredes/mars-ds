@@ -23,6 +23,7 @@ exports[`<FileField> should accept files with extensions allowed 1`] = `
       >
         <span
           class="icon btn__icon"
+          data-name="close"
           data-testid="close"
         >
           <svg

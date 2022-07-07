@@ -22,6 +22,33 @@ describe("<ConsoleListItem>", () => {
     expect(wrapper).toBeTruthy();
   });
 
+  it("should render component with the correct title and subtitle", () => {
+    const { getByTestId } = makeSut(defaultProps);
+    const component = getByTestId(testId);
+    const content = component.getElementsByClassName("console-list-item__content");
+
+    expect(content.length).toBeGreaterThan(0);
+    expect(content[0]?.children.length).toBe(2);
+
+    expect(content[0]?.children[0]).toBeInstanceOf(HTMLHeadingElement);
+    expect(content[0]?.children[0]?.textContent).toBe(defaultProps.title);
+
+    expect(content[0]?.children[1]).toBeInstanceOf(HTMLSpanElement);
+    expect(content[0]?.children[1]?.textContent).toBe(defaultProps.subtitle);
+  });
+
+  it("should render component with the correct icon", () => {
+    const { getByTestId } = makeSut(defaultProps);
+    const component = getByTestId(testId);
+    const iconContainer = component.getElementsByClassName("console-list-item__icon-container");
+
+    expect(iconContainer.length).toBe(1);
+    expect(iconContainer[0]?.children.length).toBe(1);
+
+    expect(iconContainer[0]?.children[0]).toBeInstanceOf(HTMLSpanElement);
+    expect(iconContainer[0]?.children[0]?.getAttribute("data-name")).toBe(defaultProps.iconName);
+  });
+
   describe("when it has a modifier", () => {
     it("should render with the is-active modifier", () => {
       const { getByTestId } = makeSut({ isActive: true });
@@ -67,15 +94,12 @@ describe("<ConsoleListItem>", () => {
     });
 
     it("should render as a custom component", () => {
-      const LinkComponent = "button";
-
       const { getByTestId } = makeSut({
-        as: LinkComponent,
+        as: "button",
       });
 
       const component = getByTestId(testId);
-
-      expect(component.tagName).toBe("BUTTON");
+      expect(component).toBeInstanceOf(HTMLButtonElement);
     });
   });
 });

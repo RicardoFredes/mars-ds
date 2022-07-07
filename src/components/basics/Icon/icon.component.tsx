@@ -13,7 +13,7 @@ const Icon = ({ name, size = IconSizes.Medium, className, color, style, ...props
   const cn = classNames("icon", className);
 
   return (
-    <span data-testid={name} {...props} className={cn} style={{ color, ...style }}>
+    <span data-testid={name} data-name={name} {...props} className={cn} style={{ color, ...style }}>
       <Component height={sizeValue} width={sizeValue} />
     </span>
   );

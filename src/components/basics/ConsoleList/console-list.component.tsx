@@ -9,7 +9,7 @@ const ConsoleList = ({ list, className, LinkComponent, ...props }: ConsoleListPr
   const cn = classNames("console-list", className);
 
   return (
-    <div className={cn} {...props}>
+    <div className={cn} data-testid="console-list" {...props}>
       {Array.isArray(list) &&
         list.map(({ list: listItem, ...item }, index) => {
           if (Array.isArray(listItem)) {

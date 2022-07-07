@@ -55,6 +55,7 @@ Object {
               >
                 <span
                   class="icon items-list__icon"
+                  data-name="video"
                   data-testid="items-list__icon"
                 >
                   <svg
@@ -144,6 +145,7 @@ Object {
             >
               <span
                 class="icon items-list__icon"
+                data-name="video"
                 data-testid="items-list__icon"
               >
                 <svg

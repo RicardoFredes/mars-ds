@@ -17,6 +17,7 @@ Object {
         >
           <span
             class="icon btn__icon"
+            data-name="more-vertical"
             data-testid="more-vertical"
           >
             <svg
@@ -66,6 +67,7 @@ Object {
       >
         <span
           class="icon btn__icon"
+          data-name="more-vertical"
           data-testid="more-vertical"
         >
           <svg

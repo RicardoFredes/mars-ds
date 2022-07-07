@@ -21,16 +21,18 @@ const ConsoleListSubItem = ({
   const cn = classNames(
     className,
     "console-list-sub-item",
+    { "console-list-sub-item--is-answered": isAnswered && !isActive },
+    { "console-list-sub-item--is-answered-and-active": isAnswered && isActive },
     { "console-list-sub-item--is-unanswered": showAnswer && !isAnswered },
     { "console-list-sub-item--is-correct": isCorrectAnswer },
     { "console-list-sub-item--is-wrong": isWrongAnswer },
-    { "console-list-sub-item--is-active": isActive }
+    { "console-list-sub-item--is-active": !isAnswered && isActive }
   );
 
   const Component = LinkComponent || "a";
 
   return (
-    <Component className={cn} {...props}>
+    <Component className={cn} data-testId="console-list-sub-item" {...props}>
       <span className="console-list-sub-item__dot" />
 
       <div className="console-list-sub-item__content">

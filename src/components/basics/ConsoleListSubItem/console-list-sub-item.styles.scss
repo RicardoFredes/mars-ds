@@ -12,11 +12,12 @@
 
   &:hover,
   &:visited {
+    color: var(--dark-color-text-primary);
     text-decoration: none;
   }
 
   &::before {
-    width: 34px;
+    width: 32px;
     height: 100%;
     margin-right: 22px;
     content: "";
@@ -32,7 +33,7 @@
     min-width: var(--dot-size);
     height: var(--dot-size);
     margin: 0 $spacing-lg;
-    background-color: var(--dark-color-text-primary);
+    background-color: var(--dark-color-text-secondary);
     border: 2px solid transparent;
     border-radius: 50%;
 
@@ -66,7 +67,13 @@
     min-height: 32px;
     margin: 0 $spacing-lg;
     color: var(--dark-color-text-primary);
-    border-radius: $border-radius-lg;
+    border-radius: 50%;
+  }
+
+  &--is-answered {
+    .console-list-sub-item__dot {
+      background-color: var(--dark-color-text-primary);
+    }
   }
 
   &--is-unanswered {
@@ -89,7 +96,8 @@
   }
 
   &:hover,
-  &--is-active {
+  &--is-active,
+  &--is-answered-and-active {
     background-color: var(--dark-color-background-secondary);
   }
 
@@ -99,6 +107,13 @@
         background-color: var(--dark-color-text-secondary);
         border-color: var(--dark-color-text-primary);
       }
+    }
+  }
+
+  &--is-answered-and-active {
+    .console-list-sub-item__dot {
+      background-color: var(--dark-color-text-primary);
+      border-color: transparent;
     }
   }
 }

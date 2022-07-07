@@ -35,7 +35,7 @@ const ConsoleListItem = ({
   );
 
   return (
-    <Component data-testid="console-list-item" className={cn} href={href} {...props}>
+    <Component data-testId="console-list-item" className={cn} href={href} {...props}>
       <div className="console-list-item__icon-container">
         {iconName && <Icon name={iconName} />}
       </div>

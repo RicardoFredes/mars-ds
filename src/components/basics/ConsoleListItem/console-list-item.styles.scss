@@ -7,10 +7,6 @@
   background-color: var(--dark-color-background-primary);
   transition: background-color ease 0.2s;
 
-  a {
-    text-decoration: none;
-  }
-
   &:hover {
     text-decoration: none;
     cursor: pointer;
@@ -23,7 +19,9 @@
     align-items: center;
     justify-content: center;
     min-width: 16px;
+    max-width: 32px;
     min-height: 16px;
+    max-height: 32px;
     margin: 0 $spacing-lg;
     background-color: $color-neutral-900;
     border: 2px solid transparent;
@@ -35,7 +33,7 @@
       position: absolute;
       left: 50%;
       width: 1px;
-      height: 12px;
+      height: 14px;
       margin-left: -1px;
       content: "";
       background-color: $color-divider;
@@ -52,7 +50,7 @@
     }
 
     .icon {
-      margin: 4px;
+      margin: 4px !important;
 
       .console-list-item__icon-container::before,
       .console-list-item__icon-container::after {

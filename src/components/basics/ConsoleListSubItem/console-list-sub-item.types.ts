@@ -1,3 +1,5 @@
+import type { HTMLProps } from "react";
+
 import type { ComponentLink } from "@/types";
 
 interface ConsoleListSubItemPureProps {
@@ -9,7 +11,9 @@ interface ConsoleListSubItemPureProps {
   className?: string;
 }
 
-interface ConsoleListSubItemProps extends ConsoleListSubItemPureProps {
+type ConsoleListItemPropsExtend = HTMLProps<HTMLAnchorElement> & ConsoleListSubItemPureProps;
+
+interface ConsoleListSubItemProps extends ConsoleListItemPropsExtend {
   LinkComponent?: ComponentLink;
 }
 

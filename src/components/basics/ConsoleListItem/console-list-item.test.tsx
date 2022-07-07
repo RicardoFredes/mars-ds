@@ -19,34 +19,38 @@ describe("<ConsoleListItem>", () => {
   it("should render component", () => {
     const wrapper = makeSut();
 
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper).toBeTruthy();
   });
 
   describe("when it has a modifier", () => {
-    const baseClasses = "console-list-item console-list-item--";
-
     it("should render with the is-active modifier", () => {
       const { getByTestId } = makeSut({ isActive: true });
+      const component = getByTestId(testId);
 
-      expect(getByTestId(testId)).toHaveClass(`${baseClasses}is-active`);
+      expect(component.className).toBe(`console-list-item console-list-item--is-active`);
     });
 
     it("should render with the is-disabled modifier", () => {
       const { getByTestId } = makeSut({ isDisabled: true });
+      const component = getByTestId(testId);
 
-      expect(getByTestId(testId)).toHaveClass(`${baseClasses}is-disabled`);
+      expect(component.className).toBe(`console-list-item console-list-item--is-disabled`);
     });
 
     it("should render with the is-connector-disabled modifier", () => {
       const { getByTestId } = makeSut({ isConnectorDisabled: true });
+      const component = getByTestId(testId);
 
-      expect(getByTestId(testId)).toHaveClass(`${baseClasses}is-connector-disabled`);
+      expect(component.className).toBe(
+        `console-list-item console-list-item--is-connector-disabled`
+      );
     });
 
     it("should render with the is-answered modifier", () => {
       const { getByTestId } = makeSut({ isAnswered: true });
+      const component = getByTestId(testId);
 
-      expect(getByTestId(testId)).toHaveClass(`${baseClasses}is-answered`);
+      expect(component.className).toBe(`console-list-item console-list-item--is-answered`);
     });
   });
 

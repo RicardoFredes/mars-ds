@@ -1,5 +1,5 @@
 .console-list-group {
-  background-color: var(--dark-color-background-primary);
+  background-color: $color-background-primary;
 
   &__header {
     padding: 0;
@@ -20,11 +20,5 @@
     .console-list-group__body {
       height: auto;
     }
-  }
-}
-
-.theme-dark {
-  .console-list-group {
-    background-color: var(--dark-color-background-secondary);
   }
 }

@@ -6,14 +6,14 @@
   width: 100%;
   height: 72px;
   overflow: hidden;
-  color: var(--dark-color-text-primary);
+  color: $color-text-primary;
   cursor: pointer;
-  background-color: var(--dark-color-background-primary);
+  background-color: $color-background-primary;
   transition: background-color ease 200ms;
 
   &:hover,
   &:visited {
-    color: var(--dark-color-text-primary);
+    color: $color-text-primary;
     text-decoration: none;
   }
 
@@ -42,8 +42,7 @@
     min-width: var(--dot-size);
     height: var(--dot-size);
     margin: 0 $spacing-lg;
-    background-color: var(--dark-color-text-secondary);
-    border: 2px solid transparent;
+    border: 2px solid $color-neutral-900;
     border-radius: 50%;
 
     &::before,
@@ -68,6 +67,23 @@
     }
   }
 
+  &:active,
+  &--is-active,
+  &--is-answered-and-active {
+    .console-list-sub-item__content {
+      > * {
+        font-weight: 500;
+      }
+    }
+  }
+
+  &:hover,
+  &:active,
+  &--is-active,
+  &--is-answered-and-active {
+    background-color: $color-background-neutral;
+  }
+
   &__answer-icon {
     display: flex;
     align-items: center;
@@ -75,53 +91,53 @@
     min-width: 32px;
     min-height: 32px;
     margin: 0 $spacing-lg;
-    color: var(--dark-color-text-primary);
     border-radius: 50%;
   }
 
-  &--is-answered {
+  &--is-answered,
+  &--is-answered-and-active {
     .console-list-sub-item__dot {
-      background-color: var(--dark-color-text-primary);
+      background-color: $color-neutral-900;
     }
   }
 
   &--is-unanswered {
+    .console-list-sub-item__dot {
+      background-color: $color-error-500;
+    }
+
     .console-list-sub-item__answer-icon {
       color: $color-error-500;
       background-color: $color-error-ghost;
     }
   }
 
-  &--is-correct {
-    .console-list-sub-item__answer-icon {
-      background-color: $color-success-500;
-    }
-  }
-
   &--is-wrong {
+    .console-list-sub-item__dot {
+      background-color: $color-error-500;
+    }
+
     .console-list-sub-item__answer-icon {
+      color: $color-white;
       background-color: $color-error-500;
     }
   }
 
-  &:hover,
-  &--is-active,
-  &--is-answered-and-active {
-    background-color: var(--dark-color-background-secondary);
-  }
+  &--is-correct {
+    .console-list-sub-item__dot {
+      background-color: $color-success-500;
+    }
 
-  &--is-active {
-    .console-list-sub-item {
-      &__dot {
-        background-color: var(--dark-color-text-secondary);
-        border-color: var(--dark-color-text-primary);
-      }
+    .console-list-sub-item__answer-icon {
+      color: $color-white;
+      background-color: $color-success-500;
     }
   }
 
-  &--is-answered-and-active {
+  &--is-unanswered,
+  &--is-wrong,
+  &--is-correct {
     .console-list-sub-item__dot {
-      background-color: var(--dark-color-text-primary);
       border-color: transparent;
     }
   }
@@ -129,11 +145,64 @@
 
 .theme-dark {
   .console-list-sub-item {
-    background-color: var(--dark-color-background-secondary);
+    color: $color-text-primary;
+    background-color: $color-background-primary;
+
+    &__dot {
+      background-color: $color-neutral-100;
+      border-color: transparent;
+    }
 
     &:hover,
-    &--is-active {
-      background-color: var(--dark-color-background-primary);
+    &:active,
+    &--is-active,
+    &--is-answered-and-active {
+      background-color: $color-background-secondary;
+
+      .console-list-sub-item__dot {
+        border-color: $color-white;
+      }
+    }
+
+    &--is-answered,
+    &--is-answered-and-active {
+      .console-list-sub-item__dot {
+        background-color: $color-white;
+        border-color: transparent;
+      }
+    }
+
+    &--is-unanswered {
+      .console-list-sub-item__dot {
+        background-color: $color-error-500;
+      }
+
+      .console-list-sub-item__answer-icon {
+        color: $color-error-500;
+        background-color: $color-error-ghost;
+      }
+    }
+
+    &--is-wrong {
+      .console-list-sub-item__dot {
+        background-color: $color-error-500;
+      }
+
+      .console-list-sub-item__answer-icon {
+        color: $color-white;
+        background-color: $color-error-500;
+      }
+    }
+
+    &--is-correct {
+      .console-list-sub-item__dot {
+        background-color: $color-success-500;
+      }
+
+      .console-list-sub-item__answer-icon {
+        color: $color-white;
+        background-color: $color-success-500;
+      }
     }
   }
 }

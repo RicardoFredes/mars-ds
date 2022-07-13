@@ -26,10 +26,11 @@ const ConsoleListItem = ({
   const cn = classNames(
     "console-list-item",
     {
-      "console-list-item--is-active": isActive,
+      "console-list-item--is-answered": isAnswered && !isActive,
+      "console-list-item--is-active": !isAnswered && isActive,
+      "console-list-item--is-answered-and-active": isAnswered && isActive,
       "console-list-item--is-disabled": isDisabled,
       "console-list-item--is-connector-disabled": isConnectorDisabled,
-      "console-list-item--is-answered": isAnswered,
     },
     className
   );

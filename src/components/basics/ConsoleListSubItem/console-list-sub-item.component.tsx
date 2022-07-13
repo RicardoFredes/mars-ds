@@ -18,16 +18,14 @@ const ConsoleListSubItem = ({
   const isCorrectAnswer = isAnswered && isCorrect;
   const isWrongAnswer = isAnswered && !isCorrect;
 
-  const cn = classNames(
-    className,
-    "console-list-sub-item",
-    { "console-list-sub-item--is-answered": isAnswered && !isActive },
-    { "console-list-sub-item--is-answered-and-active": isAnswered && isActive },
-    { "console-list-sub-item--is-unanswered": showAnswer && !isAnswered },
-    { "console-list-sub-item--is-correct": isCorrectAnswer },
-    { "console-list-sub-item--is-wrong": isWrongAnswer },
-    { "console-list-sub-item--is-active": !isAnswered && isActive }
-  );
+  const cn = classNames(className, "console-list-sub-item", {
+    "console-list-sub-item--is-answered": isAnswered && !isActive,
+    "console-list-sub-item--is-active": !isAnswered && isActive,
+    "console-list-sub-item--is-answered-and-active": isAnswered && isActive,
+    "console-list-sub-item--is-unanswered": showAnswer && !isAnswered,
+    "console-list-sub-item--is-correct": showAnswer && isCorrectAnswer,
+    "console-list-sub-item--is-wrong": showAnswer && isWrongAnswer,
+  });
 
   const Component = LinkComponent || "a";
 

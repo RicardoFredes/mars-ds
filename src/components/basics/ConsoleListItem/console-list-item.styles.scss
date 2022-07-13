@@ -3,14 +3,30 @@
   align-items: center;
   width: 100%;
   min-height: 72px;
-  color: var(--dark-color-text-primary) !important;
-  background-color: var(--dark-color-background-primary);
+  color: $color-text-primary !important;
+  background-color: $color-background-primary;
   transition: background-color ease 0.2s;
 
   &:hover {
     text-decoration: none;
+  }
+
+  &:active,
+  &--is-active,
+  &--is-answered-and-active {
+    .console-list-item__content {
+      & :first-child {
+        font-weight: 500;
+      }
+    }
+  }
+
+  &:hover,
+  &:active,
+  &--is-active,
+  &--is-answered-and-active {
     cursor: pointer;
-    background-color: var(--dark-color-background-secondary);
+    background-color: $color-background-neutral;
   }
 
   &__icon-container {
@@ -24,8 +40,8 @@
     min-height: 16px;
     max-height: 32px;
     margin: 0 $spacing-lg;
-    background-color: $color-neutral-900;
-    border: 2px solid transparent;
+    color: $color-text-primary;
+    border: 2px solid $color-text-primary;
     border-radius: 50%;
     transition: all ease 0.2s;
 
@@ -74,21 +90,10 @@
   }
 
   &__subtitle {
-    color: var(--dark-color-text-secondary);
-  }
-
-  &--is-active {
-    cursor: pointer;
-    background-color: var(--dark-color-background-secondary);
-
-    .console-list-item__icon-container {
-      border-color: var(--dark-color-text-primary);
-    }
+    color: $color-neutral-700;
   }
 
   &--is-connector-disabled {
-    cursor: default;
-
     .console-list-item__icon-container {
       &::before,
       &::after {
@@ -97,35 +102,55 @@
     }
   }
 
+  &--is-connector-disabled,
   &--is-answered {
     cursor: default;
-    background-color: var(--dark-color-background-primary);
+  }
 
+  &--is-answered,
+  &--is-answered-and-active {
     .console-list-item__icon-container {
-      color: $color-neutral-900;
-      background-color: $color-white;
-      outline: none;
+      color: $color-white;
+      background-color: $color-text-primary;
+      border-color: transparent;
     }
   }
 }
 
 .theme-dark {
   .console-list-item {
-    background-color: var(--dark-color-background-secondary);
+    color: $color-text-primary !important;
+    background-color: $color-background-primary;
 
-    &:hover {
-      background-color: var(--dark-color-background-primary);
+    &:hover,
+    &:active,
+    &--is-active,
+    &--is-answered-and-active {
+      background-color: $color-background-secondary;
     }
 
     &__icon-container {
+      color: $color-white;
       background-color: $color-neutral-100;
+      border-color: transparent;
     }
 
-    &--is-answered {
+    &--is-active {
+      .console-list-item__icon-container {
+        border-color: $color-white;
+      }
+    }
+
+    &__subtitle {
+      color: $color-text-secondary;
+    }
+
+    &--is-answered,
+    &--is-answered-and-active {
       .console-list-item__icon-container {
         color: $color-neutral-100;
-        background-color: $color-white;
-        outline: none;
+        background-color: $color-text-primary;
+        border-color: transparent;
       }
     }
   }

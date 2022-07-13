@@ -50,11 +50,27 @@ describe("<ConsoleListItem>", () => {
   });
 
   describe("when it has a modifier", () => {
+    it("should render with the is-answered modifier", () => {
+      const { getByTestId } = makeSut({ isAnswered: true });
+      const component = getByTestId(testId);
+
+      expect(component.className).toBe(`console-list-item console-list-item--is-answered`);
+    });
+
     it("should render with the is-active modifier", () => {
       const { getByTestId } = makeSut({ isActive: true });
       const component = getByTestId(testId);
 
       expect(component.className).toBe(`console-list-item console-list-item--is-active`);
+    });
+
+    it("should render with the is-answered-and-active modifier", () => {
+      const { getByTestId } = makeSut({ isAnswered: true, isActive: true });
+      const component = getByTestId(testId);
+
+      expect(component.className).toBe(
+        `console-list-item console-list-item--is-answered-and-active`
+      );
     });
 
     it("should render with the is-disabled modifier", () => {
@@ -71,13 +87,6 @@ describe("<ConsoleListItem>", () => {
       expect(component.className).toBe(
         `console-list-item console-list-item--is-connector-disabled`
       );
-    });
-
-    it("should render with the is-answered modifier", () => {
-      const { getByTestId } = makeSut({ isAnswered: true });
-      const component = getByTestId(testId);
-
-      expect(component.className).toBe(`console-list-item console-list-item--is-answered`);
     });
   });
 

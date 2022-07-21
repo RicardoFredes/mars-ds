@@ -42,7 +42,8 @@
     min-width: var(--dot-size);
     height: var(--dot-size);
     margin: 0 $spacing-lg;
-    border: 2px solid $color-neutral-900;
+    background-color: $color-neutral-700;
+    border: 2px solid transparent;
     border-radius: 50%;
 
     &::before,
@@ -82,6 +83,13 @@
   &--is-active,
   &--is-answered-and-active {
     background-color: $color-background-neutral;
+  }
+
+  &:active,
+  &--is-active {
+    .console-list-sub-item__dot {
+      background-color: $color-neutral-900;
+    }
   }
 
   &__answer-icon {
@@ -146,7 +154,7 @@
 .theme-dark {
   .console-list-sub-item {
     color: $color-text-primary;
-    background-color: $color-background-primary;
+    background-color: $color-background-secondary;
 
     &__dot {
       background-color: $color-neutral-100;
@@ -157,8 +165,11 @@
     &:active,
     &--is-active,
     &--is-answered-and-active {
-      background-color: $color-background-secondary;
+      background-color: $color-background-primary;
+    }
 
+    &:active,
+    &--is-active {
       .console-list-sub-item__dot {
         border-color: $color-white;
       }
@@ -168,13 +179,13 @@
     &--is-answered-and-active {
       .console-list-sub-item__dot {
         background-color: $color-white;
-        border-color: transparent;
       }
     }
 
     &--is-unanswered {
       .console-list-sub-item__dot {
         background-color: $color-error-500;
+        border-color: transparent;
       }
 
       .console-list-sub-item__answer-icon {

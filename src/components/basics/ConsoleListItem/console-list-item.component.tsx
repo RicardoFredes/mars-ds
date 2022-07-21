@@ -14,14 +14,16 @@ const ConsoleListItem = ({
   isDisabled,
   isConnectorDisabled,
   isAnswered,
+  isFirstItem,
+  isLastItem,
   href,
   as,
-  LinkComponent = "a",
+  LinkComponent,
   className,
   children,
   ...props
 }: ConsoleListItemProps) => {
-  const Component = as || LinkComponent;
+  const Component = as || LinkComponent || "a";
 
   const cn = classNames(
     "console-list-item",
@@ -31,6 +33,8 @@ const ConsoleListItem = ({
       "console-list-item--is-answered-and-active": isAnswered && isActive,
       "console-list-item--is-disabled": isDisabled,
       "console-list-item--is-connector-disabled": isConnectorDisabled,
+      "console-list-item--is-first-item": isFirstItem,
+      "console-list-item--is-last-item": isLastItem,
     },
     className
   );
@@ -38,7 +42,15 @@ const ConsoleListItem = ({
   return (
     <Component data-testid="console-list-item" className={cn} href={href} {...props}>
       <div className="console-list-item__icon-container">
-        {iconName && <Icon name={iconName} />}
+        {iconName && (
+          <Icon
+            name={iconName}
+            style={{
+              width: "20px",
+              height: "20px",
+            }}
+          />
+        )}
       </div>
 
       <div className="console-list-item__content">

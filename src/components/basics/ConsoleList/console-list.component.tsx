@@ -12,18 +12,24 @@ const ConsoleList = ({ list, className, LinkComponent, ...props }: ConsoleListPr
     <div className={cn} data-testid="console-list" {...props}>
       {Array.isArray(list) &&
         list.map(({ list: listItem, ...item }, index) => {
+          const newItem = {
+            ...item,
+            isFirstItem: index === 0,
+            isLastItem: index === list.length - 1,
+          };
+
           if (Array.isArray(listItem)) {
             return (
               <ConsoleListGroup
                 key={index}
                 LinkComponent={LinkComponent}
                 list={listItem}
-                {...item}
+                {...newItem}
               />
             );
           }
 
-          return <ConsoleListItem key={index} LinkComponent={LinkComponent} {...item} />;
+          return <ConsoleListItem key={index} LinkComponent={LinkComponent} {...newItem} />;
         })}
     </div>
   );

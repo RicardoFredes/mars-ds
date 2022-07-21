@@ -8,7 +8,7 @@ export const light = create({
 
   // UI
   appBg: "rgba(244, 246, 248, 1)",
-  appContentBg: "#f4f6f8",
+  appContentBg: "#FFFFFF",
   appBorderColor: "rgba(145, 158, 171, 0.24)",
   appBorderRadius: 8,
 
@@ -36,7 +36,8 @@ export const light = create({
   // Branding
   brandTitle: "Mars | Me Salva! Design System",
   brandUrl: "https://github.com/mesalva/mars",
-  brandImage: "https://user-images.githubusercontent.com/29892001/147158290-0af5b26e-fa73-45a1-8e6f-44a1a56fad01.png",
+  brandImage:
+    "https://user-images.githubusercontent.com/29892001/147158290-0af5b26e-fa73-45a1-8e6f-44a1a56fad01.png",
 
   // Grid
   gridCellSize: 8,

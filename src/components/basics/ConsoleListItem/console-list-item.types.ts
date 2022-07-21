@@ -8,6 +8,8 @@ interface ConsoleListItemPureProps {
   isDisabled?: boolean;
   isConnectorDisabled?: boolean;
   isAnswered?: boolean;
+  isFirstItem?: boolean;
+  isLastItem?: boolean;
   className?: string;
   children?: ReactNode;
 }

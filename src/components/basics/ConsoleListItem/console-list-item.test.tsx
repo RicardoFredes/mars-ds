@@ -88,6 +88,20 @@ describe("<ConsoleListItem>", () => {
         `console-list-item console-list-item--is-connector-disabled`
       );
     });
+
+    it("should render with the is-first-item modifier", () => {
+      const { getByTestId } = makeSut({ isFirstItem: true });
+      const component = getByTestId(testId);
+
+      expect(component.className).toBe(`console-list-item console-list-item--is-first-item`);
+    });
+
+    it("should render with the is-first-last modifier", () => {
+      const { getByTestId } = makeSut({ isLastItem: true });
+      const component = getByTestId(testId);
+
+      expect(component.className).toBe(`console-list-item console-list-item--is-last-item`);
+    });
   });
 
   describe("when has a link or custom component", () => {

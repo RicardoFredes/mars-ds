@@ -42,6 +42,18 @@ export default {
       control: "boolean",
       defaultValue: false,
     },
+    isFirstItem: {
+      description:
+        "Whether or not to show the vertical line connecting the component to the component above",
+      control: "boolean",
+      defaultValue: false,
+    },
+    isLastItem: {
+      description:
+        "Whether or not to show the vertical line connecting the component to the component below",
+      control: "boolean",
+      defaultValue: false,
+    },
     href: {
       description:
         "Transforms the underlying component into an anchor tag, redirecting to the provided URL",

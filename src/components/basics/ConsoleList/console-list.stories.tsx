@@ -21,6 +21,7 @@ const DefaultArgs: Partial<ConsoleListProps> = {
       title: "Item 1",
       subtitle: "2 questões",
       iconName: "edit",
+      isAnswered: true,
       list: [
         { title: "Item de console" },
         { title: "Item de console", isActive: true },
@@ -33,6 +34,29 @@ const DefaultArgs: Partial<ConsoleListProps> = {
       title: "Item 2",
       subtitle: "20min",
       iconName: "video",
+    },
+    {
+      title: "Item 3",
+      subtitle: "20min",
+      iconName: "video",
+      isAnswered: true,
+    },
+    {
+      title: "Item 4",
+      subtitle: "20min",
+      iconName: "video",
+    },
+    {
+      title: "Item 5",
+      subtitle: "20min",
+      iconName: "video",
+      isAnswered: true,
+    },
+    {
+      title: "Item 6",
+      subtitle: "20min",
+      iconName: "video",
+      isActive: true,
     },
   ],
 };

@@ -5,6 +5,6 @@
  * run "yarn reindex" to update
  */
 
-import YouTubeLiveChat from "./youtube-live-chat.component";
-export default YouTubeLiveChat;
+import YoutubeLiveChat from "./youtube-live-chat.component";
+export default YoutubeLiveChat;
 export * from "./youtube-live-chat.types";

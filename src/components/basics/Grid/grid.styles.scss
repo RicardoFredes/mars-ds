@@ -1,0 +1,21 @@
+.grid {
+  &:not(.grid--growing) {
+    > * {
+      align-self: start;
+    }
+  }
+  
+  --columns-xs: 1;
+  display: grid;
+  grid-template-columns: var(--columns-xs);
+  gap: var(--gap, $spacing-lg);
+  @media (min-width: $breakpoint-sm) {
+    grid-template-columns: var(--columns-sm);
+  }
+  @media (min-width: $breakpoint-md) {
+    grid-template-columns: var(--columns-md);
+  }
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: var(--columns-lg);
+  }
+}

@@ -61,6 +61,9 @@ export * from "./components/basics/Embed/embed.types";
 export { default as GlobalLoading } from "./components/basics/GlobalLoading/global-loading.component";
 export * from "./components/basics/GlobalLoading/global-loading.types";
 
+export { default as Grid } from "./components/basics/Grid/grid.component";
+export * from "./components/basics/Grid/grid.types";
+
 export { default as GuestButtons } from "./components/basics/GuestButtons/guest-buttons.component";
 export * from "./components/basics/GuestButtons/guest-buttons.types";
 

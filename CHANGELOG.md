@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.114](https://github.com/mesalva/mars/compare/v1.0.0-alpha.113...v1.0.0-alpha.114) (2022-08-03)
+
+
+### Features
+
+* create AvatarField and commonization of file inputs ([#190](https://github.com/mesalva/mars/issues/190)) ([9baeea8](https://github.com/mesalva/mars/commit/9baeea8c820c6996295802d8ef46569855a7a6c8))
+
 ## [1.0.0-alpha.113](https://github.com/mesalva/mars/compare/v1.0.0-alpha.112...v1.0.0-alpha.113) (2022-08-02)
 
 

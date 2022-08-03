@@ -4,70 +4,31 @@ import classNames from "classnames";
 import { useState } from "react";
 
 import Loader from "@/components/basics/Loader";
-import Notification from "@/components/basics/Notification";
 import ToggleButton from "@/components/basics/ToggleButton";
+import FileInput from "@/components/primitives/FileInput";
 import Caption from "@/components/typographies/Caption";
 import Heading, { HeadingSizes } from "@/components/typographies/Heading";
+import { cutText } from "@/services/string";
 
-import { cutText, dictionary, FIVE_MB, isValidExtension } from "./file-field.helper";
+import { dictionary } from "./file-field.helper";
 
 const FileField = ({
   className,
   onSelectFile,
   onUploadFile,
-  extensions,
   placeholder = dictionary.placeholder,
   placeholderImage = dictionary.placeholderImage,
-  maxSize = FIVE_MB,
   disabled = false,
-  notifications,
   ...props
 }: FileFieldProps) => {
-  const cn = classNames("file-field", className, { "file-field--disabled": disabled });
   const [file, setFile] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
 
-  const errors = { ...dictionary.notifications, ...notifications };
+  const cn = classNames("file-field", className, { "file-field--disabled": disabled });
 
-  const handleSetFile = async (file: File) => {
-    setLoading(true);
-    setFile(file);
-    onSelectFile?.(file);
-    const updatedFile = await new Promise<string>((resolve, reject) => {
-      const reader = new FileReader();
-      reader.readAsDataURL(file);
-      reader.onload = () => {
-        const result = reader.result;
-        if (result) resolve(result.toString());
-        else reject();
-      };
-    });
-    onUploadFile?.(updatedFile);
-    setLoading(false);
-  };
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-
-    if (!file) {
-      Notification.error(errors.notFound);
-      return;
-    }
-
-    const extension = file.name.replace(/.*\./, "");
-    if (!isValidExtension(extension, extensions)) {
-      Notification.error(`${errors.notAllowed} ${extensions?.join(" ou ")}`);
-      return;
-    }
-
-    if (file.size > maxSize) {
-      const sizeInMB = Math.round(maxSize / 1024 / 1024);
-      Notification.error(`${errors.tooBig} ${sizeInMB}MB`);
-      return;
-    }
-
-    handleSetFile(file);
-  };
+  const handleSelectFile = (file: File | null) => setFile(file);
+  const handleSelectFileStart = () => setLoading(true);
+  const handleSelectFileEnd = () => setLoading(false);
 
   const removeFile = () => {
     setFile(null);
@@ -114,12 +75,13 @@ const FileField = ({
           </Heading>
         </div>
       )}
-      <input
-        {...props}
-        data-testid="file-field"
-        type="file"
+
+      <FileInput
         disabled={disabled}
-        onChange={handleChange}
+        onSelectFile={handleSelectFile}
+        onSelectFileStart={handleSelectFileStart}
+        onSelectFileEnd={handleSelectFileEnd}
+        {...props}
       />
     </div>
   );

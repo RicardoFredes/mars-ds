@@ -2,8 +2,9 @@ import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import { action } from "@storybook/addon-actions";
 
+import { dictionary, FIVE_MB } from "@/components/primitives/FileInput";
+
 import FileField from "./file-field.component";
-import { dictionary, FIVE_MB } from "./file-field.helper";
 
 export default {
   title: "Forms/FileField",

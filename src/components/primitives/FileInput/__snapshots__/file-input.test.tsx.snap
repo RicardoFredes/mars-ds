@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FileInput <FileInput> should accept files with extensions allowed 1`] = `
+<div>
+  <input
+    class="file-input"
+    data-testid="file-input"
+    type="file"
+  />
+</div>
+`;
+
+exports[`FileInput <FileInput> should not accept files with size greater than maxSize 1`] = `
+<div>
+  <input
+    class="file-input"
+    data-testid="file-input"
+    type="file"
+  />
+</div>
+`;

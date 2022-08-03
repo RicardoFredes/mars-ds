@@ -6,6 +6,7 @@ const warningDontChangeFile = `/**
  */\n`;
 
 const fs = require("fs-extra");
+const path = require("path");
 const { kebabCaseToPascalCase } = require("./helpers/convert-names");
 const { getFiles } = require("./helpers/files");
 
@@ -49,6 +50,11 @@ function reindexComponents(filesList) {
     const content = `${warningDontChangeFile}\nimport ${pascalName} from "./${kebabName}.component";\nexport default ${pascalName};\nexport * from "./${kebabName}.types";\n`;
     const pathDir = `${dir.replace("./components", COMPONENTS_FOLDER)}/index.ts`;
     fs.writeFileSync(pathDir, content);
+
+    const helperPath = path.resolve(`${__dirname}/../src/${dir}/${kebabName}.helper.ts`);
+    if (fs.existsSync(helperPath))
+      fs.appendFileSync(pathDir, `export * from "./${kebabName}.helper";\n`);
+
     console.log(`  > ${pascalName}`);
   }
   console.log("Done: components reindex");

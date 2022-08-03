@@ -132,6 +132,9 @@ export * from "./components/basics/ToggleDropdown/toggle-dropdown.types";
 export { default as YoutubeLiveChat } from "./components/basics/YoutubeLiveChat/youtube-live-chat.component";
 export * from "./components/basics/YoutubeLiveChat/youtube-live-chat.types";
 
+export { default as AvatarField } from "./components/forms/AvatarField/avatar-field.component";
+export * from "./components/forms/AvatarField/avatar-field.types";
+
 export { default as Checkbox } from "./components/forms/Checkbox/checkbox.component";
 export * from "./components/forms/Checkbox/checkbox.types";
 
@@ -170,6 +173,9 @@ export * from "./components/forms/TextFieldIconButton/text-field-icon-button.typ
 
 export { default as ToggleSwitch } from "./components/forms/ToggleSwitch/toggle-switch.component";
 export * from "./components/forms/ToggleSwitch/toggle-switch.types";
+
+export { default as FileInput } from "./components/primitives/FileInput/file-input.component";
+export * from "./components/primitives/FileInput/file-input.types";
 
 export { default as Caption } from "./components/typographies/Caption/caption.component";
 export * from "./components/typographies/Caption/caption.types";

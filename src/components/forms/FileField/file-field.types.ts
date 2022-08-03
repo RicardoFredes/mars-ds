@@ -1,14 +1,5 @@
-interface FileFieldProps extends React.HTMLProps<HTMLInputElement> {
-  onSelectFile?: (file: File | null) => void;
-  onUploadFile?: (file: string | null) => void;
-  extensions?: string[];
-  maxSize?: number;
-  placeholderImage?: string;
-  notifications?: {
-    notFound?: string;
-    notAllowed?: string;
-    tooBig?: string;
-  };
-}
+import type { FileInputProps as CommonFileFieldProps } from "@/components/primitives/FileInput";
+
+type FileFieldProps = CommonFileFieldProps;
 
 export type { FileFieldProps };

@@ -8,3 +8,4 @@
 import FileField from "./file-field.component";
 export default FileField;
 export * from "./file-field.types";
+export * from "./file-field.helper";

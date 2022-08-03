@@ -1,7 +1,12 @@
-import { cutText, isValidExtension } from "./file-field.helper";
+import { cutText } from "@/services/string";
 
-describe("file-field.helper", () => {
+describe("string", () => {
   describe("cutText", () => {
+    it("should return empty string if text is of invalid type", () => {
+      // @ts-expect-error - text is of invalid type
+      expect(cutText()).toBe("");
+    });
+
     it("should return the same text if it's shorter than maxLength", () => {
       expect(cutText("123456789", 10)).toBe("123456789");
     });
@@ -22,20 +27,6 @@ describe("file-field.helper", () => {
       const result = cutText("Sua redação corrigida no formato do ENEM.", maxLength, customEnd);
       expect(result).toBe(`Sua redação ${customEnd}`);
       expect(result).toHaveLength(maxLength + customEnd.length);
-    });
-  });
-
-  describe("isValidExtension", () => {
-    it("should return true if no extensions are defined", () => {
-      expect(isValidExtension("png")).toBe(true);
-    });
-
-    it("should return true if the extension is valid", () => {
-      expect(isValidExtension("png", ["png"])).toBe(true);
-    });
-
-    it("should return false if the extension is not valid", () => {
-      expect(isValidExtension("png", ["jpg"])).toBe(false);
     });
   });
 });

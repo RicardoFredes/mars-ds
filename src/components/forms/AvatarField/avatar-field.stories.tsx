@@ -1,9 +1,11 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import { dictionary } from "@/components/primitives/FileInput";
-import { commonStoreComponentProps } from "@/services/stories";
+import React from "react";
 
+import { commonStoreComponentProps } from "../../../services/stories";
+import { dictionary } from "../../primitives/FileInput";
 import AvatarField from "./avatar-field.component";
+
 export default {
   title: "Forms/AvatarField",
   component: AvatarField,

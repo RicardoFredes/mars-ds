@@ -10,7 +10,13 @@ import Text, { TextSizes } from "@/components/typographies/Text";
 
 import { dictionary } from "./avatar-field.helper";
 
-const AvatarField = ({ className, extensions, maxSize = FIVE_MB, ...props }: AvatarFieldProps) => {
+const AvatarField = ({
+  className,
+  extensions = ["jpg, jpeg, png"],
+  maxSize = FIVE_MB,
+  src,
+  ...props
+}: AvatarFieldProps) => {
   const [file, setFile] = useState<File | null>(null);
 
   const cn = classNames("avatar-field", className);
@@ -31,12 +37,13 @@ const AvatarField = ({ className, extensions, maxSize = FIVE_MB, ...props }: Ava
           accept={dictionary.acceptMimeTypes}
           className="avatar-field__input"
           onSelectFile={handleSelectFile}
+          maxSize={maxSize}
           {...props}
         />
 
-        {file && (
+        {(file || src) && (
           <img
-            src={URL.createObjectURL?.(file)}
+            src={file ? URL.createObjectURL?.(file) : src}
             alt={dictionary.alt}
             className="avatar-field__preview"
           />

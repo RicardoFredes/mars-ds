@@ -26,7 +26,16 @@ const FileField = ({
 
   const cn = classNames("file-field", className, { "file-field--disabled": disabled });
 
-  const handleSelectFile = (file: File | null) => setFile(file);
+  const handleSelectFile = (file: File | null) => {
+    setFile(file);
+    onSelectFile?.(file);
+  };
+
+  const handleUploadFile = (file: string | null) => {
+    if (!file) return;
+    onUploadFile?.(file);
+  };
+
   const handleSelectFileStart = () => setLoading(true);
   const handleSelectFileEnd = () => setLoading(false);
 
@@ -79,6 +88,7 @@ const FileField = ({
       <FileInput
         disabled={disabled}
         onSelectFile={handleSelectFile}
+        onUploadFile={handleUploadFile}
         onSelectFileStart={handleSelectFileStart}
         onSelectFileEnd={handleSelectFileEnd}
         {...props}

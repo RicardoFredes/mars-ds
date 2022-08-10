@@ -18,10 +18,10 @@ const AvatarField = ({
   ...props
 }: AvatarFieldProps) => {
   const [file, setFile] = useState<File | null>(null);
-
+  const hasFile = Boolean(file || src);
   const cn = classNames("avatar-field", className);
   const overlayCn = classNames("avatar-field__overlay", {
-    "avatar-field__overlay--has-image": file,
+    "avatar-field__overlay--has-image": hasFile,
   });
 
   const captionText = dictionary.caption(extensions, maxSize);
@@ -41,7 +41,7 @@ const AvatarField = ({
           {...props}
         />
 
-        {(file || src) && (
+        {hasFile && (
           <img
             src={file ? URL.createObjectURL?.(file) : src}
             alt={dictionary.alt}

@@ -1,5 +1,55 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<FileField> should accept files with extensions allowed 1`] = `
+<div>
+  <div
+    class="file-field"
+  >
+    <div
+      class="file-field__content"
+    >
+      <img
+        class="file-field__content__image file-field__content__image--is-file"
+      />
+      <span
+        class="caption file-field__content__name"
+      >
+        file.png
+      </span>
+      <button
+        class="btn btn--neutral btn--size-md toggle-btn file-field__content__remove-button toggle-btn--variant-text"
+        data-testid="remove-file-button"
+        type="button"
+      >
+        <span
+          class="icon btn__icon"
+          data-name="close"
+          data-testid="close"
+        >
+          <svg
+            fill="none"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13.41 12L17.71 7.71C18.1021 7.31788 18.1021 6.68212 17.71 6.29C17.3179 5.89788 16.6821 5.89788 16.29 6.29L12 10.59L7.71 6.29C7.31788 5.89788 6.68212 5.89788 6.29 6.29C5.89788 6.68212 5.89788 7.31788 6.29 7.71L10.59 12L6.29 16.29C6.10069 16.4778 5.9942 16.7334 5.9942 17C5.9942 17.2666 6.10069 17.5222 6.29 17.71C6.47777 17.8993 6.73336 18.0058 7 18.0058C7.26664 18.0058 7.52223 17.8993 7.71 17.71L12 13.41L16.29 17.71C16.4778 17.8993 16.7334 18.0058 17 18.0058C17.2666 18.0058 17.5222 17.8993 17.71 17.71C17.8993 17.5222 18.0058 17.2666 18.0058 17C18.0058 16.7334 17.8993 16.4778 17.71 16.29L13.41 12Z"
+              fill="currentColor"
+            />
+          </svg>
+        </span>
+      </button>
+    </div>
+    <input
+      class="file-input"
+      data-testid="file-input"
+      type="file"
+    />
+  </div>
+</div>
+`;
+
 exports[`<FileField> should render component with default props 1`] = `
 <div>
   <div

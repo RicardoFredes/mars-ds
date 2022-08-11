@@ -56,6 +56,7 @@ import simulado from "./customs/simulado";
 import sociologia from "./customs/sociologia";
 import tri from "./customs/tri";
 import turma from "./customs/turma";
+import vestibulares from "./customs/vestibulares";
 import alertCircle from "./generics/alert-circle";
 import alert from "./generics/alert";
 import arrowBack from "./generics/arrow-back";
@@ -168,6 +169,7 @@ const icons: { [key: string]: (props: IconLibProps) => JSX.Element } = {
   "sociologia": sociologia,
   "tri": tri,
   "turma": turma,
+  "vestibulares": vestibulares,
   "alert-circle": alertCircle,
   "alert": alert,
   "arrow-back": arrowBack,

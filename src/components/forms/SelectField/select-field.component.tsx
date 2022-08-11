@@ -230,7 +230,7 @@ const SelectField = ({
       if (!isOpen) return;
       setY(document.body.clientTop - window.pageYOffset);
     };
-
+    handleSetY();
     if (isOpen) window.addEventListener("scroll", handleSetY);
     else window.removeEventListener("scroll", handleSetY);
 

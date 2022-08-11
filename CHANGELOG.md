@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.118](https://github.com/mesalva/mars/compare/v1.0.0-alpha.117...v1.0.0-alpha.118) (2022-08-11)
+
+
+### Features
+
+* add vestibulares icon ([#194](https://github.com/mesalva/mars/issues/194)) ([771aa3b](https://github.com/mesalva/mars/commit/771aa3bf0e4eaafff8c484210a9bd8d0fe20c3f9))
+
 ## [1.0.0-alpha.117](https://github.com/mesalva/mars/compare/v1.0.0-alpha.116...v1.0.0-alpha.117) (2022-08-11)
 
 

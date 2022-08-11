@@ -7,8 +7,8 @@
 
 import type { IconLibProps } from "./icons.types";
 
-import bankSlip from "./checkout/bank-slip";
 import bankSlipPix from "./checkout/bank-slip-pix";
+import bankSlip from "./checkout/bank-slip";
 import creditCard from "./checkout/credit-card";
 import mastercard from "./checkout/mastercard";
 import pix from "./checkout/pix";
@@ -56,49 +56,54 @@ import simulado from "./customs/simulado";
 import sociologia from "./customs/sociologia";
 import tri from "./customs/tri";
 import turma from "./customs/turma";
-import alert from "./generics/alert";
 import alertCircle from "./generics/alert-circle";
+import alert from "./generics/alert";
 import arrowBack from "./generics/arrow-back";
 import attach from "./generics/attach";
 import camera from "./generics/camera";
-import checkmark from "./generics/checkmark";
 import checkmarkCircle from "./generics/checkmark-circle";
 import checkmarkSquare from "./generics/checkmark-square";
+import checkmark from "./generics/checkmark";
 import chevronDown from "./generics/chevron-down";
 import chevronLeft from "./generics/chevron-left";
 import chevronRight from "./generics/chevron-right";
 import chevronUp from "./generics/chevron-up";
 import clock from "./generics/clock";
-import close from "./generics/close";
 import closeCircle from "./generics/close-circle";
+import close from "./generics/close";
 import copy from "./generics/copy";
 import doneAll from "./generics/done-all";
 import download from "./generics/download";
 import edit from "./generics/edit";
 import expand from "./generics/expand";
 import externalLink from "./generics/external-link";
-import eye from "./generics/eye";
 import eyeOff from "./generics/eye-off";
-import file from "./generics/file";
+import eye from "./generics/eye";
 import fileText from "./generics/file-text";
+import file from "./generics/file";
 import grid from "./generics/grid";
 import hourglass from "./generics/hourglass";
 import info from "./generics/info";
+import key from "./generics/key";
 import layers from "./generics/layers";
 import list from "./generics/list";
 import liveCircle from "./generics/live-circle";
 import lock from "./generics/lock";
+import mail from "./generics/mail";
 import menu from "./generics/menu";
 import minusSquare from "./generics/minus-square";
 import moreHorizontal from "./generics/more-horizontal";
 import moreVertical from "./generics/more-vertical";
-import play from "./generics/play";
+import notifications from "./generics/notifications";
 import playCircle from "./generics/play-circle";
+import play from "./generics/play";
 import plus from "./generics/plus";
 import premium from "./generics/premium";
 import print from "./generics/print";
+import profile from "./generics/profile";
 import radioButtonOff from "./generics/radio-button-off";
 import radioButtonOn from "./generics/radio-button-on";
+import receipt from "./generics/receipt";
 import reply from "./generics/reply";
 import search from "./generics/search";
 import send from "./generics/send";
@@ -114,8 +119,8 @@ import facebook from "./socials/facebook";
 import google from "./socials/google";
 
 const icons: { [key: string]: (props: IconLibProps) => JSX.Element } = {
-  "bank-slip": bankSlip,
   "bank-slip-pix": bankSlipPix,
+  "bank-slip": bankSlip,
   "credit-card": creditCard,
   "mastercard": mastercard,
   "pix": pix,
@@ -191,21 +196,26 @@ const icons: { [key: string]: (props: IconLibProps) => JSX.Element } = {
   "grid": grid,
   "hourglass": hourglass,
   "info": info,
+  "key": key,
   "layers": layers,
   "list": list,
   "live-circle": liveCircle,
   "lock": lock,
+  "mail": mail,
   "menu": menu,
   "minus-square": minusSquare,
   "more-horizontal": moreHorizontal,
   "more-vertical": moreVertical,
+  "notifications": notifications,
   "play-circle": playCircle,
   "play": play,
   "plus": plus,
   "premium": premium,
   "print": print,
+  "profile": profile,
   "radio-button-off": radioButtonOff,
   "radio-button-on": radioButtonOn,
+  "receipt": receipt,
   "reply": reply,
   "search": search,
   "send": send,

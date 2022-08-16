@@ -22,19 +22,17 @@ const TextField = ({
   label,
   leftIconButton,
   mask,
-  name,
   onBlur,
   onChange,
-  onClick,
   onFocus,
-  onKeyDown,
   rightIconButton,
-  style,
   success,
-  type,
   value = "",
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  children,
+  ...props
 }: TextFieldProps) => {
-  const [computedId] = useState(id || name || generateHash("field"));
+  const [computedId] = useState(id || props.name || generateHash("field"));
   const [isFocused, setIsFocused] = useState(false);
   const [computedValue, setComputedValue] = useState("");
 
@@ -100,19 +98,15 @@ const TextField = ({
             <IconButtonPosition position={IconPosition.Left} {...leftIconButton} />
           )}
           <input
-            name={name}
             ref={inputRef}
             id={computedId}
             className="field__input"
-            type={type}
             onBlur={handleBlur}
             onFocus={handleFocus}
             onChange={handleChange}
-            onClick={onClick}
-            style={style}
-            onKeyDown={onKeyDown}
             disabled={inputDisabled || disabled}
             value={computedValue}
+            {...props}
           />
           {statusIconName && <IconButtonPosition name={statusIconName} />}
           {rightIconButton && <IconButtonPosition {...rightIconButton} />}

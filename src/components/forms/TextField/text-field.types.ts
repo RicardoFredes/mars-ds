@@ -1,23 +1,8 @@
 import type { ReactNode } from "react";
 
 import type { IconProps } from "@/components/basics/Icon";
-import type { ComponentCommon } from "@/types";
 
-type InputProps = Pick<
-  React.HTMLProps<HTMLInputElement>,
-  | "label"
-  | "name"
-  | "onClick"
-  | "onChange"
-  | "onFocus"
-  | "onKeyDown"
-  | "onBlur"
-  | "disabled"
-  | "type"
-  | "value"
->;
-
-export interface TextFieldProps extends InputProps, ComponentCommon {
+export interface TextFieldProps extends React.HTMLProps<HTMLInputElement> {
   error?: string | boolean;
   success?: boolean;
   info?: string | ReactNode;

@@ -13,25 +13,28 @@ import { IconPosition } from "./text-field.types";
 
 const TextField = ({
   className,
-  info,
-  type,
-  label,
-  id,
-  mask,
+  dataKey,
   disabled,
   error,
-  success,
-  onBlur,
-  onFocus,
-  onChange,
-  rightIconButton,
-  leftIconButton,
-  value = "",
-  dataKey,
+  id,
+  info,
   inputDisabled,
-  ...props
+  label,
+  leftIconButton,
+  mask,
+  name,
+  onBlur,
+  onChange,
+  onClick,
+  onFocus,
+  onKeyDown,
+  rightIconButton,
+  style,
+  success,
+  type,
+  value = "",
 }: TextFieldProps) => {
-  const [computedId] = useState(id || props.name || generateHash("field"));
+  const [computedId] = useState(id || name || generateHash("field"));
   const [isFocused, setIsFocused] = useState(false);
   const [computedValue, setComputedValue] = useState("");
 
@@ -97,7 +100,7 @@ const TextField = ({
             <IconButtonPosition position={IconPosition.Left} {...leftIconButton} />
           )}
           <input
-            {...props}
+            name={name}
             ref={inputRef}
             id={computedId}
             className="field__input"
@@ -105,6 +108,9 @@ const TextField = ({
             onBlur={handleBlur}
             onFocus={handleFocus}
             onChange={handleChange}
+            onClick={onClick}
+            style={style}
+            onKeyDown={onKeyDown}
             disabled={inputDisabled || disabled}
             value={computedValue}
           />

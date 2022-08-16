@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.121](https://github.com/mesalva/mars/compare/v1.0.0-alpha.120...v1.0.0-alpha.121) (2022-08-16)
+
+
+### Bug Fixes
+
+* pass text-field props ([809f56a](https://github.com/mesalva/mars/commit/809f56ab9332806b1d7692d23b117cc480f39dff))
+
 ## [1.0.0-alpha.120](https://github.com/mesalva/mars/compare/v1.0.0-alpha.119...v1.0.0-alpha.120) (2022-08-16)
 
 

@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.122](https://github.com/mesalva/mars/compare/v1.0.0-alpha.121...v1.0.0-alpha.122) (2022-08-19)
+
+
+### Features
+
+* add car icon ([#196](https://github.com/mesalva/mars/issues/196)) ([cd30225](https://github.com/mesalva/mars/commit/cd3022563dec982d307a05a5e8dd49cdcce40ce2))
+
 ## [1.0.0-alpha.121](https://github.com/mesalva/mars/compare/v1.0.0-alpha.120...v1.0.0-alpha.121) (2022-08-16)
 
 

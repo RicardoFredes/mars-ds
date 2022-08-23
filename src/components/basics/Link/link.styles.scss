@@ -17,9 +17,6 @@ a,
 .link {
   display: inline-flex;
   align-items: center;
-  .icon {
-    margin-right: $spacing-sm;
-  }
   &--secondary,
   &--secondary:visited {
     color: $color-text-secondary;

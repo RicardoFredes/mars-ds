@@ -1,0 +1,172 @@
+.area-field {
+  position: relative;
+  font-weight: 400;
+  font-size: 16px;
+  color: $color-text-secondary;
+  &__fieldset {
+    border: 1px solid #637381;
+    border-radius: $border-radius-sm;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    min-height: 56px;
+  }
+  &:hover {
+    .area-field__fieldset {
+      border-color: $color-text-primary;
+    }
+  }
+  &__content {
+    display: flex;
+    align-items: stretch;
+  }
+  &__info {
+    padding: $spacing-md $spacing-xs;
+    display: flex;
+    align-items: flex-end;
+    gap: $spacing-sm;
+    &__counter {
+      padding-bottom: $spacing-xs;
+      white-space: nowrap;
+      font-size: 0.75rem;
+      &--is-success {
+        color: $color-success-500;
+      }
+      &--is-error {
+        color: $color-error-500;
+      }
+    }
+  }
+  &__content {
+    width: 100%;
+    height: 100%;
+    margin-right: 2px;
+  }
+  &__legend {
+    visibility: hidden;
+    height: 0;
+    display: none;
+    font-size: 12px;
+    padding-right: $spacing-xs;
+  }
+  &__textarea {
+    flex-grow: 1;
+    padding: 12px $spacing-xs;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    color: $color-text-primary;
+    font-weight: 400;
+    overflow: hidden;
+    resize: none;
+    line-height: 1.5rem;
+    margin-top: 4px;
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: transparent;
+    }
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      -webkit-text-fill-color: $color-text-primary;
+      // remove background-color apperance for autocomplete
+      transition-delay: 9999s;
+    }
+    &:-webkit-autofill:disabled {
+      -webkit-text-fill-color: $color-text-disabled;
+    }
+  }
+  &__label {
+    transition: all ease 0.15s;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    transform-origin: left center;
+  }
+  &__help {
+    font-size: 12px;
+    padding: $spacing-xs $spacing-lg;
+    color: $color-text-primary;
+  }
+  &,
+  &:hover {
+    &.area-field {
+      &--is-filled,
+      &--is-focused {
+        .area-field {
+          &__legend {
+            display: inline-block;
+          }
+          &__label {
+            transform: translate(-1px, -170%) scale(0.75);
+          }
+        }
+      }
+      &--is-focused {
+        .area-field {
+          &__fieldset {
+            border-color: $color-info-500;
+            border-width: 2px;
+          }
+          &__content {
+            margin-left: -1px;
+            margin-right: 0;
+            margin-top: -1px;
+            margin-bottom: -1px;
+          }
+          &__label {
+            color: $color-info-500;
+          }
+        }
+      }
+      &--is-disabled {
+        .area-field {
+          &__icon,
+          &__textarea,
+          &__label {
+            color: $color-text-disabled;
+          }
+          &__fieldset {
+            border-color: $color-action-disabled;
+          }
+          &__icon {
+            &--has-action {
+              color: $color-text-disabled;
+              pointer-events: none;
+              cursor: inherit;
+            }
+          }
+        }
+      }
+      &--has-error,
+      &--is-focused.area-field--has-error {
+        .area-field {
+          &__info__icon,
+          &__help,
+          &__label {
+            color: $color-error-500;
+          }
+          &__fieldset {
+            border-color: $color-error-500;
+            border-width: 2px;
+          }
+          &__content {
+            margin-left: -2px;
+            margin-top: -1px;
+          }
+        }
+      }
+      &--has-success,
+      &--is-focused.area-field--has-success {
+        .area-field {
+          &__info__icon {
+            color: $color-success-500;
+          }
+        }
+      }
+    }
+  }
+}

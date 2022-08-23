@@ -1,7 +1,5 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import React from "react";
-
 import { commonStoreComponentProps } from "../../../services/stories";
 import { dictionary } from "../../primitives/FileInput";
 import AvatarField from "./avatar-field.component";

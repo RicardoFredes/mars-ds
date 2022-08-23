@@ -12,7 +12,7 @@ export const commonStoreComponentProps = {
     control: { type: "object" },
   },
   props: {
-    description: "All the props accept in AnchorHTML type",
+    description: "All the props accept in HTMLProps type",
     control: { type: "object" },
   },
 };

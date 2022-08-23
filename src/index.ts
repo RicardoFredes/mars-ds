@@ -132,6 +132,9 @@ export * from "./components/basics/ToggleDropdown/toggle-dropdown.types";
 export { default as YoutubeLiveChat } from "./components/basics/YoutubeLiveChat/youtube-live-chat.component";
 export * from "./components/basics/YoutubeLiveChat/youtube-live-chat.types";
 
+export { default as AreaField } from "./components/forms/AreaField/area-field.component";
+export * from "./components/forms/AreaField/area-field.types";
+
 export { default as AvatarField } from "./components/forms/AvatarField/avatar-field.component";
 export * from "./components/forms/AvatarField/avatar-field.types";
 

@@ -60,7 +60,7 @@ exports[`<AvatarField> should render component with custom extensions 1`] = `
       class="caption avatar-field__caption"
       data-testid="avatar-field-caption"
     >
-      Arquivos .jpg, .*jpeg
+      Arquivos *.jpg, *.jpeg
       <br />
       Tamanho máximo 1 MB
     </span>
@@ -128,7 +128,7 @@ exports[`<AvatarField> should render component with custom max file size 1`] = `
       class="caption avatar-field__caption"
       data-testid="avatar-field-caption"
     >
-      Arquivos .jpg, .*jpeg, .*png
+      Arquivos *.jpg, *.jpeg, *.png
       <br />
       Tamanho máximo 10 MB
     </span>
@@ -196,7 +196,7 @@ exports[`<AvatarField> should render component with default props 1`] = `
       class="caption avatar-field__caption"
       data-testid="avatar-field-caption"
     >
-      Arquivos .jpg, .*jpeg, .*png
+      Arquivos *.jpg, *.jpeg, *.png
       <br />
       Tamanho máximo 1 MB
     </span>

@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.124](https://github.com/mesalva/mars/compare/v1.0.0-alpha.123...v1.0.0-alpha.124) (2022-08-23)
+
+
+### Features
+
+* added new AreaField component ([#198](https://github.com/mesalva/mars/issues/198)) ([1c60dc9](https://github.com/mesalva/mars/commit/1c60dc98249d0454375557bb0b322606da52fece))
+
 ## [1.0.0-alpha.123](https://github.com/mesalva/mars/compare/v1.0.0-alpha.122...v1.0.0-alpha.123) (2022-08-23)
 
 

@@ -32,7 +32,9 @@ a.btn,
     cursor: inherit;
     pointer-events: none;
   }
-
+  &--is-rtl{
+    direction: rtl;
+  }
   &--primary {
     background-color: $color-primary-500;
     color: $color-white;

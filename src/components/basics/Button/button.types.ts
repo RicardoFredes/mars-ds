@@ -22,4 +22,5 @@ export interface ButtonProps
   iconName?: string;
   type?: ButtonKeyTypes;
   as?: React.ElementType | string;
+  isRtl?: boolean;
 }

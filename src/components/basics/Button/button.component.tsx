@@ -20,6 +20,7 @@ const Button = ({
   variant = ButtonVariants.Primary,
   size = ButtonSizes.Medium,
   as,
+  isRtl = false,
   ...props
 }: ButtonProps) => {
   const [isPressed, setIsPressed] = useState(false);
@@ -35,7 +36,7 @@ const Button = ({
     "btn",
     `btn--${variant}`,
     `btn--size-${size}`,
-    [{ "btn--is-disabled": props.disabled }, { "btn--is-pressed": isPressed }],
+    { "btn--is-disabled": props.disabled, "btn--is-pressed": isPressed, "btn--is-rtl": isRtl },
     className
   );
 

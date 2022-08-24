@@ -98,4 +98,15 @@ describe("<Button>", () => {
     const tag = tagName.toLowerCase();
     expect(tag).toEqual("a");
   });
+
+  it("snapshot right icon", () => {
+    const wrapper = makeSut({ isRtl: true });
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it("add is-rtl className in button", () => {
+    const className = "btn btn--primary btn--size-md btn--is-rtl";
+    const button = makeSut({ isRtl: true }).getByTestId(buttonDataTestId);
+    expect(button.className).toBe(className);
+  });
 });

@@ -16,13 +16,20 @@ export default {
     size: {
       options: Object.values(ButtonSizes),
       control: { type: "select" },
+      description: "Altera o tamanho do botão",
     },
     iconName: {
       options: Object.keys(icons),
       control: { type: "select" },
+      description: "Seleção de ícones para o botão",
     },
     href: {
       control: { type: "text" },
+      description: "Converte o componente renderizado para um link em vez de um botão",
+    },
+    isRtl: {
+      control: { type: "boolean" },
+      description: "Modifica o posicionamento do ícone para o lado direito.",
     },
   },
   parameters: {
@@ -91,4 +98,11 @@ Anchor.args = {
   ...DefaultArgs,
   onClick: (e) => e.preventDefault(),
   href: "https://www.mesalva.com",
+};
+
+export const IconRight = TemplateList.bind({});
+IconRight.args = {
+  ...DefaultArgs,
+  iconName: "me-salva-mini",
+  isRtl: true,
 };

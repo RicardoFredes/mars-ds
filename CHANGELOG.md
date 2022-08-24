@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.125](https://github.com/mesalva/mars/compare/v1.0.0-alpha.124...v1.0.0-alpha.125) (2022-08-24)
+
+
+### Features
+
+* icon button right ([#202](https://github.com/mesalva/mars/issues/202)) ([0d0b814](https://github.com/mesalva/mars/commit/0d0b81486d15d017ec987d2e620214068a1ed64c))
+
 ## [1.0.0-alpha.124](https://github.com/mesalva/mars/compare/v1.0.0-alpha.123...v1.0.0-alpha.124) (2022-08-23)
 
 

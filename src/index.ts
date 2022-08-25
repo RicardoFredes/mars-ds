@@ -31,6 +31,12 @@ export * from "./components/basics/Card/card.types";
 export { default as CircleStepper } from "./components/basics/CircleStepper/circle-stepper.component";
 export * from "./components/basics/CircleStepper/circle-stepper.types";
 
+export { default as CommentItem } from "./components/basics/CommentItem/comment-item.component";
+export * from "./components/basics/CommentItem/comment-item.types";
+
+export { default as CommentList } from "./components/basics/CommentList/comment-list.component";
+export * from "./components/basics/CommentList/comment-list.types";
+
 export { default as ConsoleList } from "./components/basics/ConsoleList/console-list.component";
 export * from "./components/basics/ConsoleList/console-list.types";
 

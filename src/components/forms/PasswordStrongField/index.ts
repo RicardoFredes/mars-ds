@@ -8,3 +8,4 @@
 import PasswordStrongField from "./password-strong-field.component";
 export default PasswordStrongField;
 export * from "./password-strong-field.types";
+export * from "./password-strong-field.helper";

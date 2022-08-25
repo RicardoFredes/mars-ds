@@ -1,0 +1,43 @@
+.comment-list {
+  width: 100%;
+  box-sizing: border-box;
+  &__button-add-commentary{
+    display: block;
+    width: calc(100% - $spacing-lg * 2);
+    margin: $spacing-lg;
+  }
+  &__box{
+    padding: $spacing-lg;
+    margin: $spacing-lg;
+    background-color: $color-action-selected;
+    border-radius: $border-radius-lg;
+    &__header{
+      display: flex;
+      align-items: center;
+      margin-bottom: $spacing-lg;
+      &__title{
+        flex-grow: 1;
+      }
+      &__close{
+        padding: $spacing-xs;
+        border-radius: 50%;
+        &:hover{
+          background-color: $color-action-selected;
+          cursor: pointer;
+        }
+      }
+    }
+    &__area-field{
+      padding: $spacing-xs;
+    }
+    &__button-comment-wrapper{
+      display: flex;
+      justify-content: flex-end;
+      margin-top: $spacing-sm;
+    }
+  }
+  &__empty-message {
+    text-align: center;
+    color: $color-text-secondary;
+  }
+}

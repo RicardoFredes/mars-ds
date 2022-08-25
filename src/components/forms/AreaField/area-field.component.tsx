@@ -109,7 +109,7 @@ const AreaField = ({
             {labelText}
           </label>
         </div>
-        <legend className="area-field__legend">{labelText}</legend>
+        {labelText && <legend className="area-field__legend">{labelText}</legend>}
       </fieldset>
       {helpText && <div className="area-field__help">{helpText}</div>}
     </div>

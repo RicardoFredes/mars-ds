@@ -116,3 +116,9 @@ WithCounter.args = {
   maxLength: 340,
   showCounter: true,
 };
+
+export const WithoutLabel = Template.bind({});
+WithoutLabel.args = {
+  ...DefaultArgs,
+  label: "",
+};

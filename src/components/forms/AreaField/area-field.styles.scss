@@ -82,8 +82,8 @@
   &__label {
     transition: all ease 0.15s;
     position: absolute;
-    top: $spacing-xl;
-    left: $spacing-xl;
+    top: 20px;
+    left: 20px;
     transform-origin: left center;
   }
   &__help {

@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.127](https://github.com/mesalva/mars/compare/v1.0.0-alpha.126...v1.0.0-alpha.127) (2022-08-30)
+
+
+### Bug Fixes
+
+* center label text in area field component ([#203](https://github.com/mesalva/mars/issues/203)) ([63e0213](https://github.com/mesalva/mars/commit/63e02137333fda40b91c0ba539ed2dc6a695d0f8))
+
 ## [1.0.0-alpha.126](https://github.com/mesalva/mars/compare/v1.0.0-alpha.125...v1.0.0-alpha.126) (2022-08-25)
 
 

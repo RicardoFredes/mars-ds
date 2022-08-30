@@ -5,7 +5,7 @@
 ![License](https://img.shields.io/static/v1?label=Licence&message=MIT&color=yellow)
 ![Coverage](https://img.shields.io/static/v1?label=Coverage&message=0%&color=red)
 ![Build](https://img.shields.io/static/v1?label=Build&message=Success&color=lemon)
-![Version](https://img.shields.io/static/v1?label=Version&message=1.0.0-alpha.126&color=orange)
+![Version](https://img.shields.io/static/v1?label=Version&message=1.0.0-alpha.127&color=orange)
 
 **Mars** é a nossa biblioteca de design system feita em React.js. Essa lib os principais componentes para os projetos do Me Salva!.
 

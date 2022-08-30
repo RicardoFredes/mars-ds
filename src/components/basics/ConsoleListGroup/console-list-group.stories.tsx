@@ -42,6 +42,8 @@ const DefaultArgs: ConsoleListGroupProps = {
   title: "Exercícios de compreensão sobre soma",
   subtitle: "9 exercícios",
   LinkComponent: "a",
+  href: "https://mesalva.com/",
+  target: "_blank",
   iconName: "edit",
   list: [
     { title: "Exercício 1" },

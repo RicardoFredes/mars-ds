@@ -24,7 +24,6 @@ Object {
           target="_blank"
           type="button"
         >
-           
           <span
             class="btn__content"
           >
@@ -54,7 +53,6 @@ Object {
         target="_blank"
         type="button"
       >
-         
         <span
           class="btn__content"
         >
@@ -141,7 +139,6 @@ Object {
           target="_blank"
           type="button"
         >
-           
           <span
             class="btn__content"
           >
@@ -171,7 +168,6 @@ Object {
         target="_blank"
         type="button"
       >
-         
         <span
           class="btn__content"
         >

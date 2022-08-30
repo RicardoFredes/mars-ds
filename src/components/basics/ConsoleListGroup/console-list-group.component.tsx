@@ -35,7 +35,7 @@ const ConsoleListGroup = ({
       <ConsoleListItem
         className="console-list-group__header"
         onClick={toggleOpen}
-        as="button"
+        LinkComponent={LinkComponent}
         {...headerProps}
       >
         <Icon name={isExpanded ? "chevron-up" : "chevron-down"} />

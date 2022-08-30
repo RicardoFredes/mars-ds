@@ -16,7 +16,8 @@ const Link = ({
   const cn = classNames("link", className, `link--${variant || "primary"}`);
   return (
     <Component className={cn} {...props}>
-      {iconName && <Icon name={iconName} size={iconSize} />} {children}
+      {iconName && <Icon className="mr-md" name={iconName} size={iconSize} />}
+      {children}
     </Component>
   );
 };

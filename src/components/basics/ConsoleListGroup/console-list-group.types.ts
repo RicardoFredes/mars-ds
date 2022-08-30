@@ -7,6 +7,8 @@ type ConsoleListGroup = ConsoleListItemPureProps;
 interface ConsoleListGroupPureProps extends ConsoleListGroup {
   list: ConsoleListSubItemPureProps[];
   isOpen?: boolean;
+  href?: string;
+  target?: string;
 }
 
 interface ConsoleListGroupProps extends ConsoleListGroupPureProps {

@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.129](https://github.com/mesalva/mars/compare/v1.0.0-alpha.128...v1.0.0-alpha.129) (2022-09-03)
+
+
+### Bug Fixes
+
+* comment item component show line breaks ([#206](https://github.com/mesalva/mars/issues/206)) ([31c14e5](https://github.com/mesalva/mars/commit/31c14e53436d762dd69088d41e9508ffc4ce00fe))
+* label aligment in AreaField and CommentList ([#205](https://github.com/mesalva/mars/issues/205)) ([268f389](https://github.com/mesalva/mars/commit/268f3894798a14ff7686d5ee4af2a8f0443bc450))
+
 ## [1.0.0-alpha.128](https://github.com/mesalva/mars/compare/v1.0.0-alpha.127...v1.0.0-alpha.128) (2022-08-30)
 
 

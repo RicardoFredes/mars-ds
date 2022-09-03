@@ -20,6 +20,8 @@
     }
     &__text{
       margin-top: $spacing-sm;
+      white-space: pre;
+      white-space: pre-line;
     }
     &__divider{
       margin-top: $spacing-xl;

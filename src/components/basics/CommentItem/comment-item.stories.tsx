@@ -62,5 +62,17 @@ const WithoutThumbnailArgs = {
     "Com a ajuda do Me Salva! consegui passar em 1º lugar em Psicologia na UFMT e nada melhor poderia ter acontecido!",
 };
 
+const WithLineBreaksArgs = {
+  name: "Ricardo Fredes",
+  date: "Hoje, 20:21",
+  comment: `Parabéns adorei
+ Abraços galera
+ Boa semana!`,
+  thumbnail: "https://mir-s3-cdn-cf.behance.net/user/276/6c0d6c17408183.5673f97381d95.jpg",
+};
+
+export const WithLineBreaks = Template.bind({});
+WithLineBreaks.args = WithLineBreaksArgs;
+
 export const WithoutThumbnail = Template.bind({});
 WithoutThumbnail.args = WithoutThumbnailArgs;

@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.130](https://github.com/mesalva/mars/compare/v1.0.0-alpha.129...v1.0.0-alpha.130) (2022-09-14)
+
+
+### Bug Fixes
+
+* **comment-item component:** prevent horizontal scroll for long strings ([#207](https://github.com/mesalva/mars/issues/207)) ([2738fb0](https://github.com/mesalva/mars/commit/2738fb054dc8bd2a9e7d94e50c9b9a7f7ed508c9))
+
 ## [1.0.0-alpha.129](https://github.com/mesalva/mars/compare/v1.0.0-alpha.128...v1.0.0-alpha.129) (2022-09-03)
 
 

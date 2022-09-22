@@ -1,5 +1,3 @@
-import type React from "react";
+import type { TextBaseProps } from "../TextBase";
 
-export interface ItemTextProps extends Omit<React.HTMLProps<HTMLDivElement>, "as"> {
-  as?: React.ElementType | string;
-}
+export type ItemTextProps = TextBaseProps;

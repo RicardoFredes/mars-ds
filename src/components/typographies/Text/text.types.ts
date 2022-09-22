@@ -1,4 +1,4 @@
-import type React from "react";
+import type { TextBaseProps } from "../TextBase";
 
 import { Sizes } from "@/types";
 
@@ -9,7 +9,4 @@ export const TextSizes = {
   Medium,
 } as const;
 
-export interface TextProps extends Omit<React.HTMLProps<HTMLElement>, "as" | "size"> {
-  as?: React.ElementType | string;
-  size?: typeof TextSizes[keyof typeof TextSizes];
-}
+export type TextProps = TextBaseProps;

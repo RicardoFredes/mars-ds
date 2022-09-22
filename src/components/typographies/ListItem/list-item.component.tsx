@@ -3,7 +3,9 @@ import type { ListItemProps } from "./list-item.types";
 import classNames from "classnames";
 
 import Icon, { IconSizes } from "@/components/basics/Icon";
-import Text, { TextSizes } from "@/components/typographies/Text";
+import { TextBaseSizes } from "@/components/typographies/TextBase";
+
+import TextBase from "../TextBase/text-base.component";
 
 const ListItem = ({
   text,
@@ -24,9 +26,9 @@ const ListItem = ({
           color={bulletColor}
         />
       )}
-      <Text as="span" size={TextSizes.Small} className="list-item__content">
+      <TextBase as="span" size={TextBaseSizes.Small} {...props}>
         {text || children}
-      </Text>
+      </TextBase>
     </li>
   );
 };

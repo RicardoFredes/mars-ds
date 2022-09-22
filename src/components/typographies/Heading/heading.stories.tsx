@@ -7,6 +7,11 @@ export default {
   title: "Typographics/Heading",
   component: Heading,
   argTypes: {
+    as: {
+      description: "A tag na qual o elemento vai se transformar",
+      control: { type: "text" },
+      defaultValue: "",
+    },
     level: {
       options: [1, 2, 3, 4, 5, 6],
       control: {
@@ -18,6 +23,11 @@ export default {
       control: {
         type: "select",
       },
+    },
+    html: {
+      description: "O conteúdo do elemento em HTML",
+      control: { type: "text" },
+      defaultValue: "",
     },
   },
 } as ComponentMeta<typeof Heading>;
@@ -48,3 +58,6 @@ const TemplateList: ComponentStory<typeof Heading> = (args) => {
 
 export const Sizes = TemplateList.bind({});
 Sizes.args = { level: 1 };
+
+export const WithHtml = Template.bind({});
+WithHtml.args = { html: "Partiu <i>estudar</i>!" };

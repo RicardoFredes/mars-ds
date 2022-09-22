@@ -10,11 +10,18 @@ export default {
   component: ListItem,
   argTypes: {
     bulletIconName: {
+      description: "O ícone do item da lista",
       options: Object.keys(icons),
       control: { type: "select" },
     },
     bulletColor: {
+      description: "a cor do ícone do item da lista",
       control: { type: "color" },
+    },
+    html: {
+      description: "O conteúdo do elemento em HTML",
+      control: { type: "text" },
+      defaultValue: "",
     },
   },
 } as ComponentMeta<typeof ListItem>;
@@ -30,3 +37,6 @@ Default.args = DefaultArgs;
 
 export const Bullet = Template.bind({});
 Bullet.args = { ...DefaultArgs, bulletIconName: "checkmark", bulletColor: Tokens.ColorSuccess500 };
+
+export const WithHtml = Template.bind({});
+WithHtml.args = { html: "A prova esta marcada para o dia <u>20/05/2022</u>" };

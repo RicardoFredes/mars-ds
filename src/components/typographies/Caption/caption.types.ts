@@ -1,5 +1,3 @@
-import type React from "react";
+import type { TextBaseProps } from "../TextBase";
 
-export interface CaptionProps extends Omit<React.HTMLProps<HTMLElement>, "as"> {
-  as?: React.ElementType | string;
-}
+export type CaptionProps = Omit<TextBaseProps, "size">;

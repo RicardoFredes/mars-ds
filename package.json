@@ -126,6 +126,8 @@
     "react-dom": ">= 17.0"
   },
   "dependencies": {
+    "@types/dompurify": "^2.3.4",
+    "dompurify": "^2.4.0",
     "rc-portal": "^2.3.2",
     "react-simple-clickout": "^1.1.1",
     "vanilla-masker": "^1.2.0"

@@ -8,16 +8,23 @@ export default {
   component: Subtitle,
   argTypes: {
     level: {
+      description: "O nível da tag de heading",
       options: [1, 2, 3, 4, 5, 6],
       control: {
         type: "select",
       },
     },
     size: {
+      description: "o tamanho do elemento",
       options: Object.values(SubtitleSizes),
       control: {
         type: "select",
       },
+    },
+    html: {
+      description: "O conteúdo do elemento em HTML",
+      control: { type: "text" },
+      defaultValue: "",
     },
   },
 } as ComponentMeta<typeof Subtitle>;
@@ -38,3 +45,6 @@ Small.args = {
   ...DefaultArgs,
   size: SubtitleSizes.Small,
 };
+
+export const WithHtml = Template.bind({});
+WithHtml.args = { html: "Partiu <i>estudar</i>!" };

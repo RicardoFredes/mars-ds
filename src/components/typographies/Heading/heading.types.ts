@@ -1,4 +1,4 @@
-import type React from "react";
+import type { TextBaseProps } from "../TextBase";
 
 import { Sizes } from "@/types";
 
@@ -12,8 +12,7 @@ export const HeadingSizes = {
 
 export type HeadingLevels = number | "1" | "2" | "3" | "4" | "5" | "6";
 
-export interface HeadingProps extends Omit<React.HTMLProps<HTMLElement>, "as" | "size"> {
-  as?: React.ElementType | string;
+export interface HeadingProps extends Omit<TextBaseProps, "size"> {
   level?: HeadingLevels;
   size?: typeof HeadingSizes[keyof typeof HeadingSizes];
 }

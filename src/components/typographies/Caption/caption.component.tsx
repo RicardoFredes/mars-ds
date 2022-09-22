@@ -2,14 +2,14 @@ import type { CaptionProps } from "./caption.types";
 
 import classNames from "classnames";
 
-const Caption = ({ as, children, className, ...props }: CaptionProps) => {
-  const CaptionTag: React.ElementType | string = as || "span";
-  const cn = classNames("caption", className);
+import TextBase from "../TextBase/text-base.component";
 
+const Caption = ({ as, children, className, ...props }: CaptionProps) => {
+  const cn = classNames("caption", className);
   return (
-    <CaptionTag className={cn} {...props}>
+    <TextBase as={as || "span"} className={cn} {...props}>
       {children}
-    </CaptionTag>
+    </TextBase>
   );
 };
 

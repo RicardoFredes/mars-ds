@@ -2,6 +2,7 @@ import type { SubtitleProps } from "./subtitle.types";
 
 import classNames from "classnames";
 
+import TextBase from "../TextBase/text-base.component";
 import { SubtitleSizes } from "./subtitle.types";
 
 const Subtitle = ({
@@ -12,12 +13,11 @@ const Subtitle = ({
   size = SubtitleSizes.Medium,
   ...props
 }: SubtitleProps) => {
-  const SubtitleTag = as || `h${level}`;
   const cn = classNames("subtitle", `subtitle--size-${size}`, className);
   return (
-    <SubtitleTag className={cn} {...props}>
+    <TextBase as={as || `h${level}`} className={cn} {...props}>
       {children}
-    </SubtitleTag>
+    </TextBase>
   );
 };
 

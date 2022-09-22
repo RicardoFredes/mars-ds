@@ -2,6 +2,7 @@ import type { DisplayProps } from "./display.types";
 
 import classNames from "classnames";
 
+import TextBase from "../TextBase/text-base.component";
 import { DisplaySizes } from "./display.types";
 
 const Display = ({
@@ -12,12 +13,11 @@ const Display = ({
   size = DisplaySizes.Medium,
   ...props
 }: DisplayProps) => {
-  const Component = as || `h${level}`;
   const cn = classNames("display", `display--size-${size}`, className);
   return (
-    <Component className={cn} {...props}>
+    <TextBase as={as || `h${level}`} className={cn} {...props}>
       {children}
-    </Component>
+    </TextBase>
   );
 };
 

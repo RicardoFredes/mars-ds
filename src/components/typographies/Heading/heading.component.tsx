@@ -2,6 +2,7 @@ import type { HeadingProps } from "./heading.types";
 
 import classNames from "classnames";
 
+import TextBase from "../TextBase/text-base.component";
 import { HeadingSizes } from "./heading.types";
 
 const Heading = ({
@@ -12,12 +13,11 @@ const Heading = ({
   size = HeadingSizes.Medium,
   ...props
 }: HeadingProps) => {
-  const HeadingTag = as || `h${level}`;
   const cn = classNames("heading", `heading--size-${size}`, className);
   return (
-    <HeadingTag className={cn} {...props}>
+    <TextBase className={cn} as={as || `h${level}`} {...props}>
       {children}
-    </HeadingTag>
+    </TextBase>
   );
 };
 

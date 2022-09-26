@@ -115,6 +115,8 @@ import shield from "./generics/shield";
 import shoppingCart from "./generics/shopping-cart";
 import square from "./generics/square";
 import star from "./generics/star";
+import thumbDown from "./generics/thumb-down";
+import thumbUp from "./generics/thumb-up";
 import trash from "./generics/trash";
 import video from "./generics/video";
 import apple from "./socials/apple";
@@ -230,6 +232,8 @@ const icons: { [key: string]: (props: IconLibProps) => JSX.Element } = {
   "shopping-cart": shoppingCart,
   "square": square,
   "star": star,
+  "thumb-down": thumbDown,
+  "thumb-up": thumbUp,
   "trash": trash,
   "video": video,
   "apple": apple,

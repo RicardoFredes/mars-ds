@@ -1,4 +1,4 @@
-import type { TextBaseProps } from "../TextBase";
+import type { TextBaseProps } from "../../primitives/TextBase";
 
 import { Sizes } from "@/types";
 

@@ -19,7 +19,7 @@ const mockedData = [
 ];
 
 export default {
-  title: "Typographics/List",
+  title: "Typographies/List",
   component: List,
   argTypes: {
     defaultBulletIconName: {

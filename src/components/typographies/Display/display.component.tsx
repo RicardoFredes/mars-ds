@@ -2,7 +2,7 @@ import type { DisplayProps } from "./display.types";
 
 import classNames from "classnames";
 
-import TextBase from "../TextBase/text-base.component";
+import TextBase from "../../primitives/TextBase/text-base.component";
 import { DisplaySizes } from "./display.types";
 
 const Display = ({

@@ -4,16 +4,20 @@ import Heading from "./heading.component";
 import { HeadingSizes } from "./heading.types";
 
 export default {
-  title: "Typographics/Heading",
+  title: "Typographies/Heading",
   component: Heading,
   argTypes: {
     as: {
-      description: "A tag na qual o elemento vai se transformar",
-      control: { type: "text" },
+      control: {
+        type: "text",
+      },
       defaultValue: "",
+      description: "Permite trocar a tag h1, por exemplo: `h3` ao invés de `h1`",
     },
     level: {
       options: [1, 2, 3, 4, 5, 6],
+      defaultValue: 1,
+      description: "Permite trocar a tag h1 por outros níveis: de 1 a 6",
       control: {
         type: "select",
       },
@@ -35,29 +39,26 @@ export default {
 const Template: ComponentStory<typeof Heading> = (args) => <Heading {...args} />;
 
 const DefaultArgs = {
-  level: 1,
+  level: undefined,
   children: "Heading",
-  size: HeadingSizes.Medium,
+  size: undefined,
+  html: undefined,
 };
 
 export const Default = Template.bind({});
 Default.args = DefaultArgs;
 
-const TemplateList: ComponentStory<typeof Heading> = (args) => {
-  const sizes = Object.values(HeadingSizes).reverse();
-  return (
-    <div>
-      {sizes.map((size, index) => (
-        <Template key={size} size={size} style={{ marginBottom: 24 }} {...args}>
-          h{index + 1} - Heading {size}
-        </Template>
-      ))}
-    </div>
-  );
-};
-
-export const Sizes = TemplateList.bind({});
-Sizes.args = { level: 1 };
-
 export const WithHtml = Template.bind({});
-WithHtml.args = { html: "Partiu <i>estudar</i>!" };
+WithHtml.args = { ...DefaultArgs, html: "<i>#PartiuEstudar</i>" };
+
+export const Size_XSmall = Template.bind({});
+Size_XSmall.args = { ...DefaultArgs, size: HeadingSizes.XSmall };
+
+export const Size_Small = Template.bind({});
+Size_Small.args = { ...DefaultArgs, size: HeadingSizes.Small };
+
+export const Size_Medium = Template.bind({});
+Size_Medium.args = { ...DefaultArgs, size: HeadingSizes.Medium };
+
+export const Size_Large = Template.bind({});
+Size_Large.args = { ...DefaultArgs, size: HeadingSizes.Large };

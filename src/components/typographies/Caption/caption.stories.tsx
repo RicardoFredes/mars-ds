@@ -3,13 +3,15 @@ import type { ComponentMeta, ComponentStory } from "@storybook/react";
 import Caption from "./caption.component";
 
 export default {
-  title: "Typographics/Caption",
+  title: "Typographies/Caption",
   component: Caption,
   argTypes: {
     as: {
-      description: "A tag na qual o elemento vai se transformar",
-      control: { type: "text" },
-      defaultValue: "",
+      control: {
+        type: "text",
+      },
+      defaultValue: "span",
+      description: "Permite trocar a tag p, por exemplo: `h1` ao invés de `span`",
     },
     children: {
       description: "O conteúdo do elemento em texto",
@@ -34,4 +36,4 @@ export const Default = Template.bind({});
 Default.args = DefaultArgs;
 
 export const WithHtml = Template.bind({});
-WithHtml.args = { html: "O aluno <b>João</b> foi aprovado!" };
+WithHtml.args = { ...DefaultArgs, children: "", html: "O aluno <b>João</b> foi aprovado!" };

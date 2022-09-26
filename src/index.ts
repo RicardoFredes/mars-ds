@@ -186,6 +186,9 @@ export * from "./components/forms/ToggleSwitch/toggle-switch.types";
 export { default as FileInput } from "./components/primitives/FileInput/file-input.component";
 export * from "./components/primitives/FileInput/file-input.types";
 
+export { default as TextBase } from "./components/primitives/TextBase/text-base.component";
+export * from "./components/primitives/TextBase/text-base.types";
+
 export { default as Caption } from "./components/typographies/Caption/caption.component";
 export * from "./components/typographies/Caption/caption.types";
 

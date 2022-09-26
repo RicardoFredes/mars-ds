@@ -2,7 +2,7 @@ import type { HeadingProps } from "./heading.types";
 
 import classNames from "classnames";
 
-import TextBase from "../TextBase/text-base.component";
+import TextBase from "../../primitives/TextBase/text-base.component";
 import { HeadingSizes } from "./heading.types";
 
 const Heading = ({

@@ -4,14 +4,26 @@ import Text from "./text.component";
 import { TextSizes } from "./text.types";
 
 export default {
-  title: "Typographics/Text",
+  title: "Typographies/Text",
   component: Text,
   argTypes: {
+    as: {
+      control: {
+        type: "text",
+      },
+      defaultValue: "p",
+      description: "Permite trocar a tag p, por exemplo: `h1` ao invés de `p`",
+    },
     size: {
       options: Object.values(TextSizes),
       control: {
         type: "select",
       },
+    },
+    children: {
+      description: "The content of the text",
+      control: { type: "text" },
+      defaultValue: "",
     },
     html: {
       description: "The HTML content of the text",
@@ -24,9 +36,9 @@ export default {
 const Template: ComponentStory<typeof Text> = (args) => <Text {...args} />;
 
 const DefaultArgs = {
-  children:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-  size: TextSizes.Medium,
+  children: "Text",
+  size: undefined,
+  html: "",
 };
 
 export const Default = Template.bind({});
@@ -38,11 +50,9 @@ Small.args = {
   size: TextSizes.Small,
 };
 
-export const Medium = Template.bind({});
-Medium.args = {
-  ...DefaultArgs,
-  size: TextSizes.Medium,
-};
-
 export const WithHtml = Template.bind({});
-WithHtml.args = { html: "Partiu <i>estudar</i>!" };
+WithHtml.args = {
+  ...DefaultArgs,
+  children: "",
+  html: "Quem estuda com o Me Salva! tem <b>muitos benefícios</b>",
+};

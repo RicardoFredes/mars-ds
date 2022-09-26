@@ -1,3 +1,3 @@
-import type { TextBaseProps } from "../TextBase";
+import type { TextBaseProps } from "../../primitives/TextBase";
 
-export type CaptionProps = Omit<TextBaseProps, "size">;
+export type CaptionProps = TextBaseProps;

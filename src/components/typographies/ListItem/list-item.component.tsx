@@ -3,9 +3,7 @@ import type { ListItemProps } from "./list-item.types";
 import classNames from "classnames";
 
 import Icon, { IconSizes } from "@/components/basics/Icon";
-import { TextBaseSizes } from "@/components/typographies/TextBase";
-
-import TextBase from "../TextBase/text-base.component";
+import Text, { TextSizes } from "@/components/typographies/Text";
 
 const ListItem = ({
   text,
@@ -26,9 +24,9 @@ const ListItem = ({
           color={bulletColor}
         />
       )}
-      <TextBase as="span" size={TextBaseSizes.Small} {...props}>
+      <Text as="span" size={TextSizes.Small} {...props}>
         {text || children}
-      </TextBase>
+      </Text>
     </li>
   );
 };

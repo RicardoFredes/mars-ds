@@ -4,16 +4,20 @@ import Display from "./display.component";
 import { DisplaySizes } from "./display.types";
 
 export default {
-  title: "Typographics/Display",
+  title: "Typographies/Display",
   component: Display,
   argTypes: {
     as: {
-      description: "A tag na qual o elemento vai se transformar",
-      control: { type: "text" },
-      defaultValue: "",
+      control: {
+        type: "text",
+      },
+      defaultValue: "h1",
+      description: "Permite trocar a tag h1, por exemplo: `h3` ao invés de `h1`",
     },
     level: {
       options: [1, 2, 3, 4, 5, 6],
+      defaultValue: 1,
+      description: "Permite trocar a tag h1 por outros níveis: de 1 a 6",
       control: {
         type: "select",
       },
@@ -37,27 +41,19 @@ const Template: ComponentStory<typeof Display> = (args) => <Display {...args} />
 const DefaultArgs = {
   level: 1,
   children: "Display",
-  size: DisplaySizes.Medium,
+  size: undefined,
+  html: undefined,
+  as: undefined,
 };
 
 export const Default = Template.bind({});
 Default.args = DefaultArgs;
 
-const TemplateList: ComponentStory<typeof Display> = (args) => {
-  const sizes = Object.values(DisplaySizes).reverse();
-  return (
-    <div>
-      {sizes.map((size, index) => (
-        <Template key={size} size={size} style={{ marginBottom: 24 }} {...args}>
-          h{index + 1} - Display {size}
-        </Template>
-      ))}
-    </div>
-  );
-};
-
-export const Sizes = TemplateList.bind({});
-Sizes.args = { level: 1 };
-
 export const WithHtml = Template.bind({});
-WithHtml.args = { html: "Partiu <u>estudar</u>!" };
+WithHtml.args = { ...DefaultArgs, html: "<i>#PartiuEstudar</i>" };
+
+export const Size_Medium = Template.bind({});
+Size_Medium.args = { ...DefaultArgs, size: DisplaySizes.Medium };
+
+export const Size_Large = Template.bind({});
+Size_Large.args = { ...DefaultArgs, size: DisplaySizes.Large };

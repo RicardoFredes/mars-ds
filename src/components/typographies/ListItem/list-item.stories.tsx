@@ -6,7 +6,7 @@ import Tokens from "@/tokens";
 import ListItem from "./list-item.component";
 
 export default {
-  title: "Typographics/ListItem",
+  title: "Typographies/ListItem",
   component: ListItem,
   argTypes: {
     bulletIconName: {
@@ -20,6 +20,11 @@ export default {
     },
     html: {
       description: "O conteúdo do elemento em HTML",
+      control: { type: "text" },
+      defaultValue: "",
+    },
+    text: {
+      description: "O conteúdo do elemento",
       control: { type: "text" },
       defaultValue: "",
     },
@@ -39,4 +44,4 @@ export const Bullet = Template.bind({});
 Bullet.args = { ...DefaultArgs, bulletIconName: "checkmark", bulletColor: Tokens.ColorSuccess500 };
 
 export const WithHtml = Template.bind({});
-WithHtml.args = { html: "A prova esta marcada para o dia <u>20/05/2022</u>" };
+WithHtml.args = { ...DefaultArgs, html: "A prova esta marcada para o dia <u>20/05/2022</u>" };

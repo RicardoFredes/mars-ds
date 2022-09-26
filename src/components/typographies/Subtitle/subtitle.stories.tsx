@@ -4,12 +4,20 @@ import Subtitle from "./subtitle.component";
 import { SubtitleSizes } from "./subtitle.types";
 
 export default {
-  title: "Typographics/Subtitle",
+  title: "Typographies/Subtitle",
   component: Subtitle,
   argTypes: {
+    as: {
+      control: {
+        type: "text",
+      },
+      defaultValue: "",
+      description: "Permite trocar a tag h1, por exemplo: `h3` ao invés de `h1`",
+    },
     level: {
-      description: "O nível da tag de heading",
       options: [1, 2, 3, 4, 5, 6],
+      defaultValue: 1,
+      description: "Permite trocar a tag h1 por outros níveis: de 1 a 6",
       control: {
         type: "select",
       },
@@ -32,19 +40,20 @@ export default {
 const Template: ComponentStory<typeof Subtitle> = (args) => <Subtitle {...args} />;
 
 const DefaultArgs = {
-  level: 1,
+  level: undefined,
   children: "Subtitle",
-  size: SubtitleSizes.Medium,
+  html: undefined,
+  size: undefined,
 };
 
 export const Default = Template.bind({});
 Default.args = DefaultArgs;
 
-export const Small = Template.bind({});
-Small.args = {
-  ...DefaultArgs,
-  size: SubtitleSizes.Small,
-};
-
 export const WithHtml = Template.bind({});
-WithHtml.args = { html: "Partiu <i>estudar</i>!" };
+WithHtml.args = { html: "<i>#PartiuEstudar</i>", children: undefined };
+
+export const Size_Small = Template.bind({});
+Size_Small.args = { ...DefaultArgs, size: SubtitleSizes.Small };
+
+export const Size_Medium = Template.bind({});
+Size_Medium.args = { ...DefaultArgs, size: SubtitleSizes.Medium };

@@ -2,7 +2,7 @@ import type { SubtitleProps } from "./subtitle.types";
 
 import classNames from "classnames";
 
-import TextBase from "../TextBase/text-base.component";
+import TextBase from "../../primitives/TextBase/text-base.component";
 import { SubtitleSizes } from "./subtitle.types";
 
 const Subtitle = ({

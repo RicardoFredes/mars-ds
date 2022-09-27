@@ -1,6 +1,5 @@
 .console-list-item {
   display: flex;
-  align-items: center;
   width: 100%;
   min-height: 72px;
   color: $color-text-primary !important;
@@ -19,7 +18,7 @@
       }
     }
   }
-  
+
   &:hover {
     background-color: $color-background-neutral;
   }
@@ -35,43 +34,19 @@
     }
   }
 
-  &__icon-container {
-    position: relative;
+  &__indicators{
     display: flex;
-    flex: none;
-    align-items: center;
-    justify-content: center;
-    min-width: 16px;
-    max-width: 32px;
-    min-height: 16px;
-    max-height: 32px;
+    flex-direction: column;
+  }
+
+  &__icon-container {
+    display: flex;
     margin: 0 $spacing-lg;
     color: $color-white;
     background-color: $color-neutral-700;
     border: 2px solid transparent;
     border-radius: 50%;
     transition: all ease 0.2s;
-
-    &::before,
-    &::after {
-      position: absolute;
-      left: 50%;
-      width: 1px;
-      height: 14px;
-      margin-left: -1px;
-      content: "";
-      background-color: $color-divider;
-    }
-
-    &::before {
-      bottom: 100%;
-      margin-bottom: $spacing-sm;
-    }
-
-    &::after {
-      top: 100%;
-      margin-top: $spacing-sm;
-    }
 
     .icon {
       margin: 4px !important;
@@ -86,13 +61,12 @@
   &__content {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    min-width: 0;
-
-    & > * {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+    justify-content: center;
+    flex-grow: 1;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    &__control{
+      display: flex;
     }
   }
 
@@ -176,5 +150,42 @@
         border-color: transparent;
       }
     }
+  }
+}
+
+.console-list-item-line{
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+
+  &--top{
+    margin-bottom: $spacing-sm;
+  }
+  &--bottom{
+    margin-top: $spacing-sm;
+  }
+
+  &__inner{
+    background-color: $color-divider;
+    min-height: 14px;
+    margin-right: 1px;
+    height: 100%;
+    width: 1px;
+  }
+
+  &--is-first-item &__inner{
+      &--top{
+        background-color: transparent;
+      }
+  }
+
+  &--is-last-item &__inner{
+      &--bottom{
+        background-color: transparent;
+      }
+  }
+
+  &--is-connector-disabled &__inner{
+    background-color: transparent;
   }
 }

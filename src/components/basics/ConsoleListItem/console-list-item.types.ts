@@ -21,4 +21,12 @@ interface ConsoleListItemProps extends ConsoleListItemPropsExtend {
   LinkComponent?: ElementType | string;
 }
 
-export type { ConsoleListItemProps, ConsoleListItemPureProps };
+type ConsoleListItemLineProps = Pick<
+  ConsoleListItemProps,
+  "isFirstItem" | "isLastItem" | "isConnectorDisabled"
+> & {
+  top?: boolean;
+  bottom?: boolean;
+};
+
+export type { ConsoleListItemProps, ConsoleListItemPureProps, ConsoleListItemLineProps };

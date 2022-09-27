@@ -1,4 +1,4 @@
-import type { ConsoleListItemProps } from "./console-list-item.types";
+import type { ConsoleListItemLineProps, ConsoleListItemProps } from "./console-list-item.types";
 
 import classNames from "classnames";
 
@@ -32,25 +32,36 @@ const ConsoleListItem = ({
       "console-list-item--is-active": !isAnswered && isActive,
       "console-list-item--is-answered-and-active": isAnswered && isActive,
       "console-list-item--is-disabled": isDisabled,
-      "console-list-item--is-connector-disabled": isConnectorDisabled,
-      "console-list-item--is-first-item": isFirstItem,
-      "console-list-item--is-last-item": isLastItem,
     },
     className
   );
 
   return (
     <Component data-testid="console-list-item" className={cn} href={href} {...props}>
-      <div className="console-list-item__icon-container">
-        {iconName && (
-          <Icon
-            name={iconName}
-            style={{
-              width: "20px",
-              height: "20px",
-            }}
-          />
-        )}
+      <div className="console-list-item__indicators">
+        <ConsoleListItemLine
+          top
+          isFirstItem={isFirstItem}
+          isLastItem={isLastItem}
+          isConnectorDisabled={isConnectorDisabled}
+        />
+        <div className="console-list-item__icon-container">
+          {iconName && (
+            <Icon
+              name={iconName}
+              style={{
+                width: "20px",
+                height: "20px",
+              }}
+            />
+          )}
+        </div>
+        <ConsoleListItemLine
+          bottom
+          isFirstItem={isFirstItem}
+          isLastItem={isLastItem}
+          isConnectorDisabled={isConnectorDisabled}
+        />
       </div>
 
       <div className="console-list-item__content">
@@ -58,8 +69,36 @@ const ConsoleListItem = ({
         {subtitle && <Caption className="console-list-item__subtitle">{subtitle}</Caption>}
       </div>
 
-      <div className="ml-auto">{children}</div>
+      <div className="console-list-item__content__control">{children}</div>
     </Component>
+  );
+};
+
+const ConsoleListItemLine = ({
+  isFirstItem,
+  isLastItem,
+  isConnectorDisabled,
+  top,
+  bottom,
+  ...props
+}: ConsoleListItemLineProps) => {
+  const cn = classNames("console-list-item-line", {
+    "console-list-item-line--is-connector-disabled": isConnectorDisabled,
+    "console-list-item-line--is-first-item": isFirstItem,
+    "console-list-item-line--is-last-item": isLastItem,
+    "console-list-item-line--top": top,
+    "console-list-item-line--bottom": bottom,
+  });
+
+  const cnInner = classNames("console-list-item-line__inner", {
+    "console-list-item-line__inner--top": top,
+    "console-list-item-line__inner--bottom": bottom,
+  });
+
+  return (
+    <div data-testid="console-list-item-line" className={cn} {...props}>
+      <div className={cnInner} />
+    </div>
   );
 };
 

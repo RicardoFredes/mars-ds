@@ -136,3 +136,17 @@ WithLink.parameters = {
     },
   },
 };
+
+export const WithLongTitle = Template.bind({});
+WithLongTitle.args = {
+  ...DefaultArgs,
+  title:
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi assumenda accusamus dolorem, non voluptate velit ea voluptatum animi magnam aspernatur alias mollitia cumque illum unde vel. Sapiente error at animi vitae dolorem tempore ullam ad, qui quisquam, possimus nesciunt rerum eaque? Sapiente, fuga quibusdam. Nemo in sed alias quisquam illo vitae cupiditate error sunt ducimus rem natus, vero voluptatem optio quaerat doloribus officia quasi maiores recusandae molestiae consectetur culpa ratione, vel tempora. Possimus explicabo quam labore cupiditate ab suscipit repellendus reprehenderit harum. Cum totam corrupti repellat eveniet eligendi accusantium expedita sit amet ipsa optio omnis quo officiis eius nihil, iusto inventore quaerat sapiente dicta nostrum nesciunt repudiandae atque cumque ex. Error quasi expedita dicta veritatis totam dolorem praesentium illo nesciunt magni tempore facere quod, modi repellat soluta neque aperiam! Quos, et eius, a sit ipsam dolorum sed asperiores sapiente praesentium magnam quas unde optio fugit est accusamus obcaecati minima libero ipsum incidunt sunt. Fugiat quo tempora perferendis laboriosam. Dolore tempora quod iusto, ullam natus nemo expedita veniam minima! Magnam incidunt soluta officia rem cumque delectus. Excepturi voluptates quidem provident, quae dicta eius quod sint in rem recusandae debitis commodi molestias blanditiis repellendus cupiditate, accusamus sapiente suscipit nam mollitia officia sed.",
+};
+WithLongTitle.parameters = {
+  docs: {
+    description: {
+      story: "Componente pode crescer corretamente caso o título seja longo",
+    },
+  },
+};

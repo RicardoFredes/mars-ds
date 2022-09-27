@@ -5,6 +5,7 @@ import { render } from "@testing-library/react";
 import ConsoleListItem from "./console-list-item.component";
 
 const testId = "console-list-item";
+const testIdLine = "console-list-item-line";
 
 const defaultProps: ConsoleListItemProps = {
   title: "any_title",
@@ -79,29 +80,6 @@ describe("<ConsoleListItem>", () => {
 
       expect(component.className).toBe(`console-list-item console-list-item--is-disabled`);
     });
-
-    it("should render with the is-connector-disabled modifier", () => {
-      const { getByTestId } = makeSut({ isConnectorDisabled: true });
-      const component = getByTestId(testId);
-
-      expect(component.className).toBe(
-        `console-list-item console-list-item--is-connector-disabled`
-      );
-    });
-
-    it("should render with the is-first-item modifier", () => {
-      const { getByTestId } = makeSut({ isFirstItem: true });
-      const component = getByTestId(testId);
-
-      expect(component.className).toBe(`console-list-item console-list-item--is-first-item`);
-    });
-
-    it("should render with the is-first-last modifier", () => {
-      const { getByTestId } = makeSut({ isLastItem: true });
-      const component = getByTestId(testId);
-
-      expect(component.className).toBe(`console-list-item console-list-item--is-last-item`);
-    });
   });
 
   describe("when has a link or custom component", () => {
@@ -123,6 +101,47 @@ describe("<ConsoleListItem>", () => {
 
       const component = getByTestId(testId);
       expect(component).toBeInstanceOf(HTMLButtonElement);
+    });
+  });
+
+  describe("<ConsoleListItemLine>", () => {
+    it("should render with the is-connector-disabled modifier", () => {
+      const { getAllByTestId } = makeSut({ isConnectorDisabled: true });
+      const component = getAllByTestId(testIdLine);
+
+      expect(component[0]?.className).toBe(
+        `console-list-item-line console-list-item-line--is-connector-disabled console-list-item-line--top`
+      );
+
+      expect(component[1]?.className).toBe(
+        `console-list-item-line console-list-item-line--is-connector-disabled console-list-item-line--bottom`
+      );
+    });
+
+    it("should render with the is-first-item modifier", () => {
+      const { getAllByTestId } = makeSut({ isFirstItem: true });
+      const component = getAllByTestId(testIdLine);
+
+      expect(component[0]?.className).toBe(
+        `console-list-item-line console-list-item-line--is-first-item console-list-item-line--top`
+      );
+
+      expect(component[1]?.className).toBe(
+        `console-list-item-line console-list-item-line--is-first-item console-list-item-line--bottom`
+      );
+    });
+
+    it("should render with the is-first-last modifier", () => {
+      const { getAllByTestId } = makeSut({ isLastItem: true });
+      const component = getAllByTestId(testIdLine);
+
+      expect(component[0]?.className).toBe(
+        `console-list-item-line console-list-item-line--is-last-item console-list-item-line--top`
+      );
+
+      expect(component[1]?.className).toBe(
+        `console-list-item-line console-list-item-line--is-last-item console-list-item-line--bottom`
+      );
     });
   });
 });

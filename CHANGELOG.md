@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.135](https://github.com/mesalva/mars/compare/v1.0.0-alpha.134...v1.0.0-alpha.135) (2022-09-27)
+
+
+### Bug Fixes
+
+* console list item title text not breaking lines ([#210](https://github.com/mesalva/mars/issues/210)) ([0a96d06](https://github.com/mesalva/mars/commit/0a96d062894cf70c3ac11e88363ef73c72822b6d))
+
 ## [1.0.0-alpha.134](https://github.com/mesalva/mars/compare/v1.0.0-alpha.133...v1.0.0-alpha.134) (2022-09-26)
 
 

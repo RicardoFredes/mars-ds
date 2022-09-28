@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 
 import Card, { CardElevations } from "@/components/basics/Card";
 import ToggleButton from "@/components/basics/ToggleButton";
+import { hideIntercom } from "@/services/intercom";
 
 import { ModalSizes } from "./modal.types";
 
@@ -23,6 +24,7 @@ const Modal = ({ className, close, children, size = ModalSizes.Medium, ...props 
 
   const handleClose = () => {
     setClosing(true);
+    hideIntercom(false);
     document.removeEventListener("keydown", handleKeyDown);
     if (close) setTimeout(close, 300);
   };
@@ -32,6 +34,7 @@ const Modal = ({ className, close, children, size = ModalSizes.Medium, ...props 
   };
 
   useEffect(() => {
+    hideIntercom(true);
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, []);

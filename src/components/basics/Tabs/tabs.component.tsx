@@ -32,7 +32,7 @@ const Tabs = ({
           <Button
             {...tab}
             data-testid="tab-item"
-            as={tab.href ? LinkComponent : undefined}
+            as={tab.href ? LinkComponent : "button"}
             size="sm"
             variant="naked"
             onClick={() => setCurrentIndex(index)}

@@ -24,7 +24,7 @@ const Button = ({
   ...props
 }: ButtonProps) => {
   const [isPressed, setIsPressed] = useState(false);
-  const Component = as || props.href ? Link : "button";
+  const Component = as ? as : props.href ? Link : "button";
 
   const handleClick = (event: MouseEvent<HTMLButtonElement & LinkProps>) => {
     if (props.disabled) return;

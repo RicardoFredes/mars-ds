@@ -129,6 +129,9 @@ export * from "./components/basics/Stepper/stepper.types";
 export { default as SubjectLabel } from "./components/basics/SubjectLabel/subject-label.component";
 export * from "./components/basics/SubjectLabel/subject-label.types";
 
+export { default as Tabs } from "./components/basics/Tabs/tabs.component";
+export * from "./components/basics/Tabs/tabs.types";
+
 export { default as ToggleButton } from "./components/basics/ToggleButton/toggle-button.component";
 export * from "./components/basics/ToggleButton/toggle-button.types";
 

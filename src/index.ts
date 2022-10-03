@@ -49,6 +49,9 @@ export * from "./components/basics/ConsoleListItem/console-list-item.types";
 export { default as ConsoleListSubItem } from "./components/basics/ConsoleListSubItem/console-list-sub-item.component";
 export * from "./components/basics/ConsoleListSubItem/console-list-sub-item.types";
 
+export { default as Countdown } from "./components/basics/Countdown/countdown.component";
+export * from "./components/basics/Countdown/countdown.types";
+
 export { default as CreditCard } from "./components/basics/CreditCard/credit-card.component";
 export * from "./components/basics/CreditCard/credit-card.types";
 

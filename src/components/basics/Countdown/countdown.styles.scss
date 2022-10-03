@@ -1,0 +1,82 @@
+.countdown {
+  display: inline-flex;
+  justify-content: space-between;
+  &__place{
+    background-color: $color-text-primary;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 70px;
+    height: 60px;
+    &__value{
+      font-family: 'Montserrat', sans-serif;
+      line-height: 120%;
+      font-size: 1.5em;
+      font-weight: 800;
+    }
+    &__measure{
+      font-family: 'Roboto', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.75em;
+      font-weight: 400;
+    }
+  }
+  &__separator{
+    width: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    &--disabled{
+      width: 16px;
+    }
+    &--disabled &__separator__inner{
+      display: none;
+    }
+  }
+
+  &--size-md &__place{
+    @media(min-width: $breakpoint-sm){
+      width: 80px;
+      height: 70px;
+    }
+    &__value{
+      @media(min-width: $breakpoint-sm){
+        font-size: 2em;
+        font-weight: 800;
+      }
+    }
+    &__measure{
+      @media(min-width: $breakpoint-sm){
+        font-size: 0.875em;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &--size-lg &__place{
+    @media(min-width: $breakpoint-sm){
+      width: 100px;
+      height: 90px;
+    }
+    &__value{
+      @media(min-width: $breakpoint-sm){
+        font-size: 3em;
+        font-weight: 600;
+      }
+    }
+    &__measure{
+        @media(min-width: $breakpoint-sm){
+          font-size: 0.875em;
+          font-weight: 500;
+        }
+    }
+  }
+
+}

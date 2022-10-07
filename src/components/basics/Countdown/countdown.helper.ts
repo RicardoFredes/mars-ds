@@ -23,10 +23,10 @@ export const secondsToPlaces = (seconds: number): TimeObj => {
 
 export const getCountdownTexts = (countdown: TimeObj) => {
   const texts: TimeObjTexts = {
-    days: "dia",
-    hours: "hora",
-    minutes: "minuto",
-    seconds: "segundo",
+    days: "Dia",
+    hours: "Hora",
+    minutes: "Minuto",
+    seconds: "Segundo",
   };
   Object.keys(countdown).forEach((key) => {
     texts[key as keyof typeof countdown] +=

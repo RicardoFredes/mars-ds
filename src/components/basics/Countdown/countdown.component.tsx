@@ -28,7 +28,12 @@ const Countdown = ({
 }: CountdownProps) => {
   const cn = classNames("countdown", `countdown--size-${size}`, className);
   const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-  const [texts, setTexts] = useState({ days: "", hours: "", minutes: "", seconds: "" });
+  const [texts, setTexts] = useState({
+    days: "Dias",
+    hours: "Horas",
+    minutes: "Minutos",
+    seconds: "Segundos",
+  });
   const endDateAsDate = new Date(endDate + ":00");
 
   useEffect(() => {

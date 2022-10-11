@@ -52,8 +52,11 @@ Default.args = DefaultArgs;
 export const WithHtml = Template.bind({});
 WithHtml.args = { ...DefaultArgs, html: "<i>#PartiuEstudar</i>" };
 
-export const Size_Medium = Template.bind({});
-Size_Medium.args = { ...DefaultArgs, size: DisplaySizes.Medium };
+export const SizeSmall = Template.bind({});
+SizeSmall.args = { ...DefaultArgs, size: DisplaySizes.Small };
 
-export const Size_Large = Template.bind({});
-Size_Large.args = { ...DefaultArgs, size: DisplaySizes.Large };
+export const SizeMedium = Template.bind({});
+SizeMedium.args = { ...DefaultArgs, size: DisplaySizes.Medium };
+
+export const SizeLarge = Template.bind({});
+SizeLarge.args = { ...DefaultArgs, size: DisplaySizes.Large };

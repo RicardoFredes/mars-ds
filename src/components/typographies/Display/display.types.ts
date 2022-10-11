@@ -1,8 +1,9 @@
 import type { HeadingLevels, HeadingProps } from "@/components/typographies/Heading";
 import { Sizes } from "@/types";
 
-const { Medium, Large } = Sizes;
+const { Small, Medium, Large } = Sizes;
 export const DisplaySizes = {
+  Small,
   Medium,
   Large,
 } as const;

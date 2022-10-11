@@ -3,7 +3,6 @@
 ![Me Salva! Mars](https://user-images.githubusercontent.com/29892001/147158290-0af5b26e-fa73-45a1-8e6f-44a1a56fad01.png)
 
 ![License](https://img.shields.io/static/v1?label=Licence&message=MIT&color=yellow)
-![Coverage](https://img.shields.io/static/v1?label=Coverage&message=0%&color=red)
 ![Build](https://img.shields.io/static/v1?label=Build&message=Success&color=lemon)
 ![Version](https://img.shields.io/static/v1?label=Version&message=1.0.0-alpha.140&color=orange)
 

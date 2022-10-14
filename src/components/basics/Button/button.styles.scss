@@ -21,7 +21,7 @@ a.btn,
   justify-content: center;
   padding: 0 22px;
   min-height: 48px;
-  transition: background-color ease 0.2s;
+  transition: background-color, border-color ease 0.2s;
   gap: $spacing-sm;
 
   &:hover {
@@ -126,6 +126,21 @@ a.btn,
       &--is-pressed {
         background-image: $ripple25;
       }
+    }
+  }
+
+  &--custom {
+    color: var(--button-color);
+    background-color: var(--button-background);
+    border: var(--button-border-width) solid var(--button-border-color);
+    &:hover{
+      color: var(--button-hover-color);
+      background-color: var(--button-hover-background);
+      border: var(--button-border-width) solid var(--button-hover-border-color);
+    }
+    &:disabled {
+      background-color: $color-action-disabled-background;
+      color: $color-action-disabled;
     }
   }
 }

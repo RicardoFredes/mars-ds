@@ -21,6 +21,14 @@ const Button = ({
   size = ButtonSizes.Medium,
   as,
   isRtl = false,
+  color,
+  hoverColor = color,
+  backgroundColor,
+  hoverBackgroundColor = backgroundColor,
+  borderColor = "none",
+  hoverBorderColor = borderColor,
+  borderWidth = "none",
+  style,
   ...props
 }: ButtonProps) => {
   const [isPressed, setIsPressed] = useState(false);
@@ -42,12 +50,28 @@ const Button = ({
 
   const text = label || children;
 
+  let styles = {};
+
+  if (variant === "custom") {
+    styles = {
+      ...style,
+      "--button-color": color,
+      "--button-hover-color": hoverColor,
+      "--button-background": backgroundColor,
+      "--button-hover-background": hoverBackgroundColor,
+      "--button-border-color": borderColor,
+      "--button-hover-border-color": hoverBorderColor,
+      "--button-border-width": borderWidth,
+    };
+  }
+
   return (
     <Component
       className={cn}
       onClick={handleClick}
       type={type}
       onAnimationEnd={() => setIsPressed(false)}
+      style={styles}
       {...props}
     >
       {iconName && <Icon className="btn__icon" name={iconName} size={size} />}

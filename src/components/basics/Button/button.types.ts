@@ -23,4 +23,11 @@ export interface ButtonProps
   type?: ButtonKeyTypes;
   as?: React.ElementType | string;
   isRtl?: boolean;
+  color?: string;
+  hoverColor?: string;
+  backgroundColor?: string;
+  hoverBackgroundColor?: string;
+  borderColor?: string;
+  hoverBorderColor?: string;
+  borderWidth?: string;
 }

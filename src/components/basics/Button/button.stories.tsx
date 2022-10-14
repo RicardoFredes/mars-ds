@@ -31,6 +31,42 @@ export default {
       control: { type: "boolean" },
       description: "Modifica o posicionamento do ícone para o lado direito.",
     },
+    color: {
+      control: { type: "text" },
+      description: "Define a cor do texto do botão. Ex.: var(--color-text-primary)",
+      defaultValue: "var(--color-text-primary)",
+    },
+    hoverColor: {
+      control: { type: "text" },
+      description:
+        "Define a cor do texto ao passar o mouse sob o botão. Ex.: var(--color-text-primary)",
+      defaultValue: undefined,
+    },
+    backgroundColor: {
+      control: { type: "text" },
+      description: "Define a cor de fundo do botão. Ex.: #F19E59",
+      defaultValue: "#F19E59",
+    },
+    hoverBackgroundColor: {
+      control: { type: "text" },
+      description: "Define a cor de fundo ao passar o mouse sob o botão. Ex.: #F2B876",
+      defaultValue: "#F2B876",
+    },
+    borderColor: {
+      control: { type: "text" },
+      description: "Define a cor da borda do botão. Ex.: #FF00FF",
+      defaultValue: undefined,
+    },
+    hoverBorderColor: {
+      control: { type: "text" },
+      description: "Define a cor da borda ao passar o mouse sob o botão. Ex.: #FF00FF",
+      defaultValue: undefined,
+    },
+    borderWidth: {
+      control: { type: "text" },
+      description: "Define a espessura da borda do botão",
+      defaultValue: undefined,
+    },
   },
   parameters: {
     // TODO: Fix visual regression

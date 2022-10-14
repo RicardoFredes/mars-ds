@@ -122,6 +122,7 @@ import video from "./generics/video";
 import apple from "./socials/apple";
 import facebook from "./socials/facebook";
 import google from "./socials/google";
+import whatsapp from "./socials/whatsapp";
 
 const icons: { [key: string]: (props: IconLibProps) => JSX.Element } = {
   "bank-slip-pix": bankSlipPix,
@@ -239,6 +240,7 @@ const icons: { [key: string]: (props: IconLibProps) => JSX.Element } = {
   "apple": apple,
   "facebook": facebook,
   "google": google,
+  "whatsapp": whatsapp,
 };
 
 export default icons;

@@ -3,7 +3,7 @@ import type { ButtonProps } from "./button.types";
 import type { MouseEvent } from "react";
 
 import classNames from "classnames";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 
 import Icon from "@/components/basics/Icon";
 
@@ -50,10 +50,9 @@ const Button = ({
 
   const text = label || children;
 
-  let styles = {};
-
-  if (variant === "custom") {
-    styles = {
+  const styles = useMemo(() => {
+    if (variant !== "custom") return style;
+    return {
       ...style,
       "--button-color": color,
       "--button-hover-color": hoverColor,
@@ -63,7 +62,17 @@ const Button = ({
       "--button-hover-border-color": hoverBorderColor,
       "--button-border-width": borderWidth,
     };
-  }
+  }, [
+    backgroundColor,
+    borderColor,
+    borderWidth,
+    color,
+    hoverBackgroundColor,
+    hoverBorderColor,
+    hoverColor,
+    style,
+    variant,
+  ]);
 
   return (
     <Component

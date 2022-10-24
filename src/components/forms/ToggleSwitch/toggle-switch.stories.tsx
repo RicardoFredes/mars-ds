@@ -5,7 +5,14 @@ import ToggleSwitch from "./toggle-switch.component";
 export default {
   title: "Forms/ToggleSwitch",
   component: ToggleSwitch,
-  argTypes: {},
+  argTypes: {
+    onChange: {
+      description: "This function return this internal checked status",
+      control: { type: "function" },
+      defaultValue: undefined,
+      action: "onChange",
+    },
+  },
 } as ComponentMeta<typeof ToggleSwitch>;
 
 const Template: ComponentStory<typeof ToggleSwitch> = (args) => <ToggleSwitch {...args} />;

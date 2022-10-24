@@ -1,7 +1,7 @@
 import type { ToggleSwitchProps } from "./toggle-switch.types";
 
 import classNames from "classnames";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Text, { TextSizes } from "@/components/typographies/Text";
 
@@ -11,10 +11,12 @@ const ToggleSwitch = ({
   disabled,
   id,
   label,
+  onChange,
+  checked: externalChecked,
   name,
   ...props
 }: ToggleSwitchProps) => {
-  const [checked, setChecked] = useState(defaultChecked);
+  const [checked, setChecked] = useState(externalChecked || defaultChecked);
 
   const cn = classNames("toggle-switch", className, [
     { "toggle-switch--is-checked": checked },
@@ -22,8 +24,14 @@ const ToggleSwitch = ({
   ]);
 
   const handleChange = () => {
-    if (!disabled) setChecked(!checked);
+    if (disabled) return;
+    setChecked(!checked);
+    onChange?.(!checked);
   };
+
+  useEffect(() => {
+    if (externalChecked !== checked) setChecked(defaultChecked);
+  }, [externalChecked]);
 
   return (
     <div className={cn} {...props}>

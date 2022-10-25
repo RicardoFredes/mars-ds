@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.145](https://github.com/mesalva/mars/compare/v1.0.0-alpha.144...v1.0.0-alpha.145) (2022-10-25)
+
+
+### Bug Fixes
+
+* **toggle-switch:** ise external checked ([aa56fbd](https://github.com/mesalva/mars/commit/aa56fbd437b8ca96bb4f06c8f6ec94803e6ad910))
+
 ## [1.0.0-alpha.144](https://github.com/mesalva/mars/compare/v1.0.0-alpha.143...v1.0.0-alpha.144) (2022-10-24)
 
 

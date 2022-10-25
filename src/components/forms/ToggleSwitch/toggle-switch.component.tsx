@@ -30,7 +30,9 @@ const ToggleSwitch = ({
   };
 
   useEffect(() => {
-    if (externalChecked !== checked) setChecked(defaultChecked);
+    if (typeof externalChecked === "boolean" && externalChecked !== checked) {
+      setChecked(externalChecked);
+    }
   }, [externalChecked]);
 
   return (

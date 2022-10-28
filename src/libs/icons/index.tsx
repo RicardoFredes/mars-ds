@@ -108,6 +108,7 @@ import radioButtonOff from "./generics/radio-button-off";
 import radioButtonOn from "./generics/radio-button-on";
 import receipt from "./generics/receipt";
 import reply from "./generics/reply";
+import rotateRight from "./generics/rotate-right";
 import search from "./generics/search";
 import send from "./generics/send";
 import share from "./generics/share";
@@ -226,6 +227,7 @@ const icons: { [key: string]: (props: IconLibProps) => JSX.Element } = {
   "radio-button-on": radioButtonOn,
   "receipt": receipt,
   "reply": reply,
+  "rotate-right": rotateRight,
   "search": search,
   "send": send,
   "share": share,

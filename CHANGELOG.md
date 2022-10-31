@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.147](https://github.com/mesalva/mars/compare/v1.0.0-alpha.146...v1.0.0-alpha.147) (2022-10-31)
+
+
+### Features
+
+* add bullets colors ([#222](https://github.com/mesalva/mars/issues/222)) ([83cd1f0](https://github.com/mesalva/mars/commit/83cd1f0d5336adfd1f46d0be13d984571a9017aa))
+
 ## [1.0.0-alpha.146](https://github.com/mesalva/mars/compare/v1.0.0-alpha.145...v1.0.0-alpha.146) (2022-10-28)
 
 

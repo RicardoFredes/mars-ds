@@ -343,6 +343,68 @@
         "value": "#919eab3d",
         "type": "color"
       }
+    },
+    "bullet": {
+      "pontuacao": {
+        "500":{
+          "value": "#39589F",
+          "type": "color"
+        },
+        "ghost": {
+          "value": "rgba(57, 88, 159, 0.64)",
+          "type": "color"
+        }
+      },
+      "semantica": {
+        "500":{
+          "value": "#36BE36",
+          "type": "color"
+        },
+        "ghost": {
+          "value": "rgba(54, 190, 54, 0.64)",
+          "type": "color"
+        }
+      },
+      "ortografia": {
+        "500":{
+          "value": "#ED9043",
+          "type": "color"
+        },
+        "ghost": {
+          "value": "rgba(237, 144, 67, 0.64)",
+          "type": "color"
+        }
+      },
+      "concordancia": {
+        "500":{
+          "value": "#543BA3",
+          "type": "color"
+        },
+        "ghost": {
+          "value": "rgba(84, 59, 163, 0.64)",
+          "type": "color"
+        }
+      },
+      "regencia": {
+        "500":{
+          "value": "#EDD043",
+          "type": "color"
+        },
+        "ghost": {
+          "value": "rgba(237, 208, 67, 0.64)",
+          "type": "color"
+        }
+      },
+      "diverso": {
+        "500":{
+          "value": "#ED4343",
+          "type": "color"
+        },
+        "ghost": {
+          "value": "rgba(237, 67, 67, 0.64)",
+          "type": "color"
+        }
+      }
     }
   },
   "text": {

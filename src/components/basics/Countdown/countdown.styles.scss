@@ -9,8 +9,12 @@
     align-items: center;
     justify-content: center;
     color: white;
-    width: 70px;
-    height: 60px;
+    font-size: 0.8em;
+    line-height: 90%;
+    width: clamp(50px, 15vw, 70px);
+    height: clamp(50px, 15vw, 70px);
+    font-size: clamp(0.8em, 4vw, 1rem);
+
     &__value{
       font-family: 'Montserrat', sans-serif;
       line-height: 120%;

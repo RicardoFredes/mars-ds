@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.149](https://github.com/mesalva/mars/compare/v1.0.0-alpha.148...v1.0.0-alpha.149) (2022-11-03)
+
+
+### Features
+
+* **modal:** add onClose callback ([#224](https://github.com/mesalva/mars/issues/224)) ([126a5b6](https://github.com/mesalva/mars/commit/126a5b6d86da4a0334afe48be12401d6db78685c))
+
+
+### Bug Fixes
+
+* **modal:** types ([67aed27](https://github.com/mesalva/mars/commit/67aed278fbe5d2b20a17132e8ef30ac2506f5258))
+
 ## [1.0.0-alpha.148](https://github.com/mesalva/mars/compare/v1.0.0-alpha.147...v1.0.0-alpha.148) (2022-11-01)
 
 

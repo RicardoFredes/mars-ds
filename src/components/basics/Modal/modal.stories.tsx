@@ -13,6 +13,12 @@ export default {
   title: "Components/Modal",
   component: Modal,
   argTypes: {
+    onClose: {
+      description: "The function to be called when the modal is closed",
+      control: { type: "function" },
+      defaultValue: undefined,
+      action: "onClose",
+    },
     size: {
       options: Object.values(ModalSizes),
       defaultValue: ModalSizes.Medium,

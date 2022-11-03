@@ -10,7 +10,14 @@ import { hideIntercom } from "@/services/intercom";
 
 import { ModalSizes } from "./modal.types";
 
-const Modal = ({ className, close, children, size = ModalSizes.Medium, ...props }: ModalProps) => {
+const Modal = ({
+  className,
+  close,
+  onClose,
+  children,
+  size = ModalSizes.Medium,
+  ...props
+}: ModalProps) => {
   const [closing, setClosing] = useState(false);
 
   const modalRef = useRef<HTMLDivElement>(null);
@@ -26,7 +33,12 @@ const Modal = ({ className, close, children, size = ModalSizes.Medium, ...props 
     setClosing(true);
     hideIntercom(false);
     document.removeEventListener("keydown", handleKeyDown);
-    if (close) setTimeout(close, 300);
+    if (typeof close === "function") {
+      setTimeout(() => {
+        close();
+        onClose?.();
+      }, 300);
+    }
   };
 
   const handleKeyDown = (event: KeyboardEvent) => {

@@ -1,0 +1,16 @@
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+:target {
+  scroll-margin-top: 1rem;
+}
+
+body {
+  font-family: $font-family-main;
+  font-size: 16px;
+  line-height: 1rem;
+  color: $color-text-primary;
+}

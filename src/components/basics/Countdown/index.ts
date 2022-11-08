@@ -8,3 +8,4 @@
 import Countdown from "./countdown.component";
 export default Countdown;
 export * from "./countdown.types";
+export * from "./countdown.helper";

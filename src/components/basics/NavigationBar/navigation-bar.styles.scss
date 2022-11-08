@@ -1,0 +1,25 @@
+.navigation-bar {
+  @media(min-width: $breakpoint-sm){
+      display: none;
+  }
+  background-color: $color-background-neutral;
+  padding: $spacing-xs;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  &__item{
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    text-align: center;
+    flex: 1;
+
+    &__icon{
+      padding: $spacing-xs;
+    }
+  }
+}

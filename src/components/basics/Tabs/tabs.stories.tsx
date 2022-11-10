@@ -13,6 +13,11 @@ export default {
       defaultValue: false,
       description: "Faz com que as tabs ocupem toda a largura",
     },
+    defaultTabIndex: {
+      control: { type: "number" },
+      defaultValue: 0,
+      description: "A tab que virá aberta. O padrão é 0 que representa a primeira",
+    },
     tabs: {
       description: "Lista de valores que contém a tab e o children",
     },
@@ -24,6 +29,7 @@ const Template: ComponentStory<typeof Tabs> = (args) => <Tabs {...args} />;
 
 const DefaultArgs = {
   full: false,
+  defaultTabIndex: 0,
   tabs: [
     {
       label: "Perfil",
@@ -54,3 +60,6 @@ Default.args = DefaultArgs;
 
 export const Full = Template.bind({});
 Full.args = { ...DefaultArgs, full: true };
+
+export const ThirdTabOpen = Template.bind({});
+ThirdTabOpen.args = { ...DefaultArgs, defaultTabIndex: 2 };

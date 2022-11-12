@@ -18,6 +18,7 @@ const ToggleDropdown = ({
   defaultValue = false,
   isRight = false,
   isAbove = false,
+  children,
   ...props
 }: ToggleDropdownProps) => {
   const [isOpen, setIsOpen] = useState(defaultValue);
@@ -46,8 +47,9 @@ const ToggleDropdown = ({
         data-testid="toggle-dropdown-button"
         disabled={!hasList || disabled}
         onClick={toggleOpen}
-      />
-
+      >
+        {children}
+      </ToggleButton>
       {isOpen && !disabled && (
         <ClickOut onClickOut={toggleOpen}>
           <DropdownMenu

@@ -1,7 +1,14 @@
 .navigation-bar {
-  @media(min-width: $breakpoint-sm){
-      display: none;
+  &--show{
+    transform: translateY(100%);
+    animation: show-up-navbar-animation 250ms 250ms ease-in-out 1 forwards;
   }
+
+  &:not(&--show){
+    transform: translateY(100%);
+    animation: show-down-navbar-animation 250ms 250ms ease-in-out 1 backwards;
+  }
+
   background-color: $color-background-neutral;
   padding: $spacing-xs;
   display: flex;
@@ -10,16 +17,22 @@
   position: fixed;
   bottom: 0;
   width: 100%;
+}
 
-  &__item{
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    text-align: center;
-    flex: 1;
+@keyframes show-up-navbar-animation {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 
-    &__icon{
-      padding: $spacing-xs;
-    }
+@keyframes show-down-navbar-animation {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
   }
 }

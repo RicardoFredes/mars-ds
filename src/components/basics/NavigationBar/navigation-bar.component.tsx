@@ -1,32 +1,39 @@
 import type { NavigationBarProps } from "./navigation-bar.types";
 
 import classNames from "classnames";
+import { useEffect, useState } from "react";
 
-import Text from "@/components/typographies/Text";
+import { debounce } from "@/services/debounce";
 
-import Button from "../Button";
-import Icon from "../Icon";
+const NavigationBar = ({ showText = true, className, children, ...props }: NavigationBarProps) => {
+  const [scrollY, setScrollY] = useState(0);
+  const [show, setShow] = useState(true);
 
-const NavigationBar = ({ items, showText = true, className, ...props }: NavigationBarProps) => {
-  const cn = classNames("navigation-bar", className);
+  const cn = classNames("navigation-bar", className, { "navigation-bar--show": show });
+
+  const handleScroll = () => {
+    const { scrollY: currentScrollY } = window;
+    if (scrollY > currentScrollY) {
+      setShow(true);
+    } else {
+      setShow(false);
+    }
+    setScrollY(currentScrollY);
+  };
+
+  const debouncedHandleScroll = debounce(handleScroll, 250);
+
+  useEffect(() => {
+    window.addEventListener("scroll", debouncedHandleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", debouncedHandleScroll);
+    };
+  });
 
   return (
     <div className={cn} {...props}>
-      {items.map(({ iconName, text, ...props }, index) => (
-        <Button
-          key={`navigation-bar-item-${index}`}
-          variant="custom"
-          className="navigation-bar__item"
-          {...props}
-        >
-          <Icon className="navigation-bar__item__icon" name={iconName} />
-          {text && showText && (
-            <Text className="navigation-bar__item__icon" size="sm">
-              {text}
-            </Text>
-          )}
-        </Button>
-      ))}
+      {children}
     </div>
   );
 };

@@ -9,10 +9,15 @@ import { ToggleButtonVariants } from "./toggle-button.types";
 const ToggleButton = ({
   className,
   variant = ToggleButtonVariants.Neutral,
+  children,
   ...props
 }: ToggleButtonProps) => {
   const cn = classNames("toggle-btn", className, `toggle-btn--variant-${variant}`);
-  return <Button variant={ButtonVariants.Neutral} className={cn} {...props} />;
+  return (
+    <Button variant={ButtonVariants.Neutral} className={cn} {...props}>
+      {children}
+    </Button>
+  );
 };
 
 export default ToggleButton;

@@ -106,6 +106,9 @@ export * from "./components/basics/Modal/modal.types";
 export { default as NavigationBar } from "./components/basics/NavigationBar/navigation-bar.component";
 export * from "./components/basics/NavigationBar/navigation-bar.types";
 
+export { default as NavigationBarItem } from "./components/basics/NavigationBarItem/navigation-bar-item.component";
+export * from "./components/basics/NavigationBarItem/navigation-bar-item.types";
+
 export { default as Notification } from "./components/basics/Notification/notification.component";
 export * from "./components/basics/Notification/notification.types";
 

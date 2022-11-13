@@ -4,14 +4,32 @@
       align-self: start;
     }
   }
-  
+
   --columns-xs: 1;
   display: grid;
   grid-template-columns: var(--columns-xs);
   gap: var(--gap, $spacing-lg);
+
+  @media (max-width: $breakpoint-sm) {
+    &--xs-reversed-last-element {
+      > *:last-child {
+        grid-row: 1;
+      }
+    }
+  }
+
   @media (min-width: $breakpoint-sm) {
     grid-template-columns: var(--columns-sm);
   }
+
+  @media (max-width: $breakpoint-md) {
+    &--sm-reversed-last-element {
+      > *:last-child {
+        grid-row: 1;
+      }
+    }
+  }
+
   @media (min-width: $breakpoint-md) {
     grid-template-columns: var(--columns-md);
   }

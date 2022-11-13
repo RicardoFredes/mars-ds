@@ -1,4 +1,5 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
+import Card, { CardElevations } from "../Card";
 
 import Grid from "./grid.component";
 import { getGridStory } from "./grid.helpers";
@@ -15,9 +16,12 @@ export default {
       source: {
         code: `{
   "component": "Grid",
-  "columns": [2, 4, "200px"], 
+  "columns": {
+    "md": 2
+  }, 
   "gap": 10, 
   "growing": true, 
+  "reserverdLastElement": "xs", 
   "children": [
     {
       "component": "Card",
@@ -28,56 +32,6 @@ export default {
       "component": "Card",
       "elevation": "lw",
       "children": "Column 2"
-    },
-    {
-      "component": "Card",
-      "elevation": "lw",
-      "children": "Column 3"
-    },
-    {
-      "component": "Card",
-      "elevation": "lw",
-      "children": "Column 4"
-    },
-    {
-      "component": "Card",
-      "elevation": "lw",
-      "children": "Column 5"
-    },
-    {
-      "component": "Card",
-      "elevation": "lw",
-      "children": "Column 6"
-    },
-    {
-      "component": "Card",
-      "elevation": "lw",
-      "children": "Column 7"
-    },
-    {
-      "component": "Card",
-      "elevation": "lw",
-      "children": "Column 8"
-    },
-    {
-      "component": "Card",
-      "elevation": "lw",
-      "children": "Column 9"
-    },
-    {
-      "component": "Card",
-      "elevation": "lw",
-      "children": "Column 10"
-    },
-    {
-      "component": "Card",
-      "elevation": "lw",
-      "children": "Column 11"
-    },
-    {
-      "component": "Card",
-      "elevation": "lw",
-      "children": "Column 12"
     }
   ]
 }`,
@@ -98,7 +52,7 @@ export default {
       control: {
         type: "array",
       },
-      defaultValue: [2, 4, "200px"],
+      defaultValue: { md: 2 },
       description: "Número de colunas que distribui o conteúdo na página em ordem",
     },
     gap: {
@@ -117,22 +71,26 @@ export default {
     },
     reversedLastElement: {
       options: ["xs", "sm"],
+      defaultValue: "xs",
       control: { type: "select" },
       description: "Opção que reverte o posicionamento do último elemento em mobile.",
     },
   },
 } as ComponentMeta<typeof Grid>;
 
-const Template: ComponentStory<typeof Grid> = (args) => {
-  return getGridStory(args);
-};
+const Template: ComponentStory<typeof Grid> = (args) => (
+  <Grid {...args}>
+    <Card elevation={CardElevations.Low}>Column 1</Card>
+    <Card elevation={CardElevations.Low}>Column 2</Card>
+  </Grid>
+);
 
 const DefaultArgs = {
   as: "div",
-  columns: [2, 4, "200px"],
+  columns: { md: 2 },
   gap: 10,
   growing: true,
 };
 
-export const ArrayColumns = Template.bind({});
-ArrayColumns.args = DefaultArgs;
+export const ReversedColumns = Template.bind({});
+ReversedColumns.args = DefaultArgs;

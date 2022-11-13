@@ -16,6 +16,7 @@ interface GridProps extends Omit<ComponentItem, "as"> {
   gap?: number | string;
   as?: string | React.ElementType;
   growing?: boolean;
+  reversedLastElement?: "xs" | "sm";
 }
 
 export type { GridProps, ColumnsProps, Column };

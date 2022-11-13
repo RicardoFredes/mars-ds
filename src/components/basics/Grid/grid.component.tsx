@@ -10,9 +10,13 @@ const Grid = ({
   gap,
   as = "div",
   growing = true,
+  reversedLastElement,
   ...props
 }: GridProps) => {
-  const cn = classNames(className, "grid", { "grid--growing": growing });
+  const cn = classNames(className, "grid", {
+    "grid--growing": growing,
+    [`grid--${reversedLastElement}-reversed-last-element`]: reversedLastElement,
+  });
   const computedStyle = {
     "--gap": typeof gap === "number" ? `${gap}px` : gap,
     ...getCssColumnsVars(columns),

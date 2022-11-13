@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.152](https://github.com/mesalva/mars/compare/v1.0.0-alpha.151...v1.0.0-alpha.152) (2022-11-13)
+
+
+### Features
+
+* add revert element grid ([#228](https://github.com/mesalva/mars/issues/228)) ([9e63f85](https://github.com/mesalva/mars/commit/9e63f85cde6b3b6036d58dfed2368484378ffff3))
+
 ## [1.0.0-alpha.151](https://github.com/mesalva/mars/compare/v1.0.0-alpha.150...v1.0.0-alpha.151) (2022-11-12)
 
 

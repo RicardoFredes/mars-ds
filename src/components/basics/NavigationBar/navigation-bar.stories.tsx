@@ -19,6 +19,8 @@ const Template: ComponentStory<typeof NavigationBar> = (args) => (
         iconName="more-horizontal"
         text="Mais"
         type="dropdown"
+        isAbove={true}
+        isRight={true}
         list={[
           {
             label: "Download PDF 1",

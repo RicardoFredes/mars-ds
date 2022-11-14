@@ -15,36 +15,39 @@ const NavigationBarItem = ({
   list = [],
   text,
   size = ButtonSizes.Small,
+  componentLink = "a",
   ...props
 }: NavigationBarItemProps) => {
   const cn = classNames("navigation-bar-item", className);
   const isButton = type === "button";
   const isDropdown = type === "dropdown";
+  const Component = props.href ? componentLink : Button;
 
   return (
     <>
       {isButton && (
-        <Button variant="custom" className={cn} size={size} {...props}>
+        <Component variant="custom" className={cn} size={size} {...props}>
           <Icon className="navigation-bar-item__icon" name={iconName} />
           {text && (
             <Text className="navigation-bar-item__icon" size="sm">
               {text}
             </Text>
           )}
-        </Button>
+        </Component>
       )}
 
       {isDropdown && (
         <div className={cn}>
           <ToggleDropdown
-            isAbove={true}
             list={list}
+            componentLink={componentLink}
             toggleButton={{
               iconName: iconName,
               size: "sm",
               title: "Abrir mais opções para o item",
               variant: "text",
             }}
+            {...props}
           >
             {text}
           </ToggleDropdown>

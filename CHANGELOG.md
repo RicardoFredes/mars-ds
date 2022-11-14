@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.153](https://github.com/mesalva/mars/compare/v1.0.0-alpha.152...v1.0.0-alpha.153) (2022-11-14)
+
+
+### Bug Fixes
+
+* allow navigation bar item specify is above is right ([#229](https://github.com/mesalva/mars/issues/229)) ([91225c5](https://github.com/mesalva/mars/commit/91225c50ce28f03d1e6e535922758b3122e25b57))
+
 ## [1.0.0-alpha.152](https://github.com/mesalva/mars/compare/v1.0.0-alpha.151...v1.0.0-alpha.152) (2022-11-13)
 
 

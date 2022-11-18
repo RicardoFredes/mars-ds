@@ -1,0 +1,13 @@
+.increment-field {
+  display: flex;
+  justify-content: space-between;
+  &__increment-button, &__decrement-button{
+    padding: 0 2px;
+    min-height: unset;
+    border-radius: $spacing-xs;
+    background-color: $color-info-500;
+    &:hover{
+      background-color: $color-info-700;
+    }
+  }
+}

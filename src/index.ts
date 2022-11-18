@@ -165,6 +165,9 @@ export * from "./components/forms/FileField/file-field.types";
 export { default as FormWithSubmitButton } from "./components/forms/FormWithSubmitButton/form-with-submit-button.component";
 export * from "./components/forms/FormWithSubmitButton/form-with-submit-button.types";
 
+export { default as IncrementField } from "./components/forms/IncrementField/increment-field.component";
+export * from "./components/forms/IncrementField/increment-field.types";
+
 export { default as PasswordField } from "./components/forms/PasswordField/password-field.component";
 export * from "./components/forms/PasswordField/password-field.types";
 

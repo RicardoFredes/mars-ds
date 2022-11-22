@@ -96,6 +96,7 @@ import lock from "./generics/lock";
 import mail from "./generics/mail";
 import menu from "./generics/menu";
 import minusSquare from "./generics/minus-square";
+import minus from "./generics/minus";
 import moreHorizontal from "./generics/more-horizontal";
 import moreVertical from "./generics/more-vertical";
 import notifications from "./generics/notifications";
@@ -217,6 +218,7 @@ const icons: { [key: string]: (props: IconLibProps) => JSX.Element } = {
   "mail": mail,
   "menu": menu,
   "minus-square": minusSquare,
+  "minus": minus,
   "more-horizontal": moreHorizontal,
   "more-vertical": moreVertical,
   "notifications": notifications,

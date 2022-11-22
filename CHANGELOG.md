@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.155](https://github.com/mesalva/mars/compare/v1.0.0-alpha.154...v1.0.0-alpha.155) (2022-11-22)
+
+
+### Features
+
+* new icon slide-library ([#232](https://github.com/mesalva/mars/issues/232)) ([34ee7f9](https://github.com/mesalva/mars/commit/34ee7f9b5a1ce0e74d68b5881213ca4e10bbac9f))
+
 ## [1.0.0-alpha.154](https://github.com/mesalva/mars/compare/v1.0.0-alpha.153...v1.0.0-alpha.154) (2022-11-18)
 
 

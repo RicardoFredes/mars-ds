@@ -168,6 +168,9 @@ export * from "./components/forms/FormWithSubmitButton/form-with-submit-button.t
 export { default as IncrementField } from "./components/forms/IncrementField/increment-field.component";
 export * from "./components/forms/IncrementField/increment-field.types";
 
+export { default as ItemCheckbox } from "./components/forms/ItemCheckbox/item-checkbox.component";
+export * from "./components/forms/ItemCheckbox/item-checkbox.types";
+
 export { default as PasswordField } from "./components/forms/PasswordField/password-field.component";
 export * from "./components/forms/PasswordField/password-field.types";
 

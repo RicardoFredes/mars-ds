@@ -8,3 +8,4 @@
 import IncrementField from "./increment-field.component";
 export default IncrementField;
 export * from "./increment-field.types";
+export * from "./increment-field.helper";

@@ -7,8 +7,8 @@
 
 import type { IconLibProps } from "./icons.types";
 
-import bankSlip from "./checkout/bank-slip";
 import bankSlipPix from "./checkout/bank-slip-pix";
+import bankSlip from "./checkout/bank-slip";
 import creditCard from "./checkout/credit-card";
 import mastercard from "./checkout/mastercard";
 import pix from "./checkout/pix";
@@ -57,23 +57,23 @@ import sociologia from "./customs/sociologia";
 import tri from "./customs/tri";
 import turma from "./customs/turma";
 import vestibulares from "./customs/vestibulares";
-import alert from "./generics/alert";
 import alertCircle from "./generics/alert-circle";
+import alert from "./generics/alert";
 import arrowBack from "./generics/arrow-back";
 import arrowForward from "./generics/arrow-forward";
 import attach from "./generics/attach";
 import camera from "./generics/camera";
 import car from "./generics/car";
-import checkmark from "./generics/checkmark";
 import checkmarkCircle from "./generics/checkmark-circle";
 import checkmarkSquare from "./generics/checkmark-square";
+import checkmark from "./generics/checkmark";
 import chevronDown from "./generics/chevron-down";
 import chevronLeft from "./generics/chevron-left";
 import chevronRight from "./generics/chevron-right";
 import chevronUp from "./generics/chevron-up";
 import clock from "./generics/clock";
-import close from "./generics/close";
 import closeCircle from "./generics/close-circle";
+import close from "./generics/close";
 import copy from "./generics/copy";
 import doneAll from "./generics/done-all";
 import download from "./generics/download";
@@ -81,10 +81,10 @@ import edit from "./generics/edit";
 import estatisticas from "./generics/estatisticas";
 import expand from "./generics/expand";
 import externalLink from "./generics/external-link";
-import eye from "./generics/eye";
 import eyeOff from "./generics/eye-off";
-import file from "./generics/file";
+import eye from "./generics/eye";
 import fileText from "./generics/file-text";
+import file from "./generics/file";
 import grid from "./generics/grid";
 import hourglass from "./generics/hourglass";
 import info from "./generics/info";
@@ -99,8 +99,8 @@ import minusSquare from "./generics/minus-square";
 import moreHorizontal from "./generics/more-horizontal";
 import moreVertical from "./generics/more-vertical";
 import notifications from "./generics/notifications";
-import play from "./generics/play";
 import playCircle from "./generics/play-circle";
+import play from "./generics/play";
 import plus from "./generics/plus";
 import premium from "./generics/premium";
 import print from "./generics/print";
@@ -115,6 +115,7 @@ import send from "./generics/send";
 import share from "./generics/share";
 import shield from "./generics/shield";
 import shoppingCart from "./generics/shopping-cart";
+import slideLibrary from "./generics/slide-library";
 import square from "./generics/square";
 import star from "./generics/star";
 import thumbDown from "./generics/thumb-down";
@@ -235,6 +236,7 @@ const icons: { [key: string]: (props: IconLibProps) => JSX.Element } = {
   "share": share,
   "shield": shield,
   "shopping-cart": shoppingCart,
+  "slide-library": slideLibrary,
   "square": square,
   "star": star,
   "thumb-down": thumbDown,

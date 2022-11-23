@@ -5,20 +5,20 @@ import { useEffect, useState } from "react";
 
 import { debounce } from "@/services/debounce";
 
-const NavigationBar = ({ showText = true, className, children, ...props }: NavigationBarProps) => {
-  const [scrollY, setScrollY] = useState(0);
+const NavigationBar = ({ className, children, ...props }: NavigationBarProps) => {
+  const [lastY, setLastY] = useState(0);
   const [show, setShow] = useState(true);
 
   const cn = classNames("navigation-bar", className, { "navigation-bar--show": show });
 
   const handleScroll = () => {
-    const { scrollY: currentScrollY } = window;
-    if (scrollY > currentScrollY) {
-      setShow(true);
-    } else {
-      setShow(false);
-    }
-    setScrollY(currentScrollY);
+    const limitY = document.body.scrollHeight - innerHeight;
+
+    const isBottomReached = scrollY >= limitY;
+    const isScrollUp = lastY > scrollY;
+
+    setShow(isBottomReached || isScrollUp);
+    setLastY(scrollY);
   };
 
   const debouncedHandleScroll = debounce(handleScroll, 250);

@@ -14,6 +14,7 @@ const NavigationBarItem = ({
   type = "button",
   list = [],
   text,
+  showText = true,
   size = ButtonSizes.Small,
   componentLink = "a",
   ...props
@@ -21,6 +22,7 @@ const NavigationBarItem = ({
   const cn = classNames("navigation-bar-item", className);
   const isButton = type === "button";
   const isDropdown = type === "dropdown";
+  const shouldShowText = showText && text;
   const Component = props.href ? componentLink : Button;
 
   return (
@@ -28,7 +30,7 @@ const NavigationBarItem = ({
       {isButton && (
         <Component variant="custom" className={cn} size={size} {...props}>
           <Icon className="navigation-bar-item__icon" name={iconName} />
-          {text && (
+          {shouldShowText && (
             <Text className="navigation-bar-item__icon" size="sm">
               {text}
             </Text>

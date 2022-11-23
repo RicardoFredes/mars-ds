@@ -10,6 +10,7 @@ export interface NavigationBarItemProps
   iconName: string;
   text?: string;
   type?: string;
+  showText?: boolean;
   size?: typeof ButtonSizes[keyof typeof ButtonSizes];
   list?: DropdownMenuItemProps[];
   componentLink?: React.ElementType | string;

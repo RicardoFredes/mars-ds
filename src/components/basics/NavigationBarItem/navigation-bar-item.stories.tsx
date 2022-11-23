@@ -16,6 +16,7 @@ const DefaultArgs = {
   iconName: "comment",
   type: "button",
   text: "Comentar",
+  showText: true,
 };
 
 export const Default = Template.bind({});

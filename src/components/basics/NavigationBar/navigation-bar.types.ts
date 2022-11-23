@@ -1,3 +1,1 @@
-export interface NavigationBarProps extends React.HTMLProps<HTMLDivElement> {
-  showText?: boolean;
-}
+export type NavigationBarProps = React.HTMLProps<HTMLDivElement>;

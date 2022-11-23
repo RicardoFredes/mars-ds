@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.158](https://github.com/mesalva/mars/compare/v1.0.0-alpha.157...v1.0.0-alpha.158) (2022-11-23)
+
+
+### Features
+
+* navigation bar show when reach bottom ([#231](https://github.com/mesalva/mars/issues/231)) ([edd503e](https://github.com/mesalva/mars/commit/edd503edeea9405e7e8e8dd74f9fc1a5d112c201))
+* new component item-checkbox-group ([#235](https://github.com/mesalva/mars/issues/235)) ([5e94eb8](https://github.com/mesalva/mars/commit/5e94eb89a82fd916b3d340844ea5aad3e259e205))
+
 ## [1.0.0-alpha.157](https://github.com/mesalva/mars/compare/v1.0.0-alpha.156...v1.0.0-alpha.157) (2022-11-22)
 
 

@@ -171,6 +171,9 @@ export * from "./components/forms/IncrementField/increment-field.types";
 export { default as ItemCheckbox } from "./components/forms/ItemCheckbox/item-checkbox.component";
 export * from "./components/forms/ItemCheckbox/item-checkbox.types";
 
+export { default as ItemCheckboxGroup } from "./components/forms/ItemCheckboxGroup/item-checkbox-group.component";
+export * from "./components/forms/ItemCheckboxGroup/item-checkbox-group.types";
+
 export { default as PasswordField } from "./components/forms/PasswordField/password-field.component";
 export * from "./components/forms/PasswordField/password-field.types";
 

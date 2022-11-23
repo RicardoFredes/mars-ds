@@ -3,7 +3,7 @@ export interface ItemCheckboxProps extends Omit<React.HTMLProps<HTMLLabelElement
   html?: string;
   checkRight?: boolean;
   full?: boolean;
-  defaultChecked?: boolean;
+  checked?: boolean;
   iconLeft?: string;
   iconLeftColor?: string;
   iconRight?: string;

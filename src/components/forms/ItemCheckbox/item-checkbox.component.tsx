@@ -11,7 +11,6 @@ const ItemCheckbox = ({
   html,
   checkRight = false,
   full = true,
-  defaultChecked = false,
   iconLeft,
   iconLeftColor,
   iconRight,
@@ -20,8 +19,7 @@ const ItemCheckbox = ({
   onChange,
   ...props
 }: ItemCheckboxProps) => {
-  const [checked, setChecked] = useState(defaultChecked);
-
+  const [checked, setChecked] = useState(props?.checked ?? false);
   const cn = classNames("item-checkbox", className, [
     { "item-checkbox--is-checked": checked },
     { "item-checkbox--is-disabled": props.disabled },
@@ -29,8 +27,8 @@ const ItemCheckbox = ({
   ]);
 
   useEffect(() => {
-    setChecked(defaultChecked);
-  }, [defaultChecked]);
+    setChecked(props?.checked ?? false);
+  }, [props.checked]);
 
   const handleChange = () => {
     if (!props.disabled) setChecked(!checked);
@@ -46,8 +44,8 @@ const ItemCheckbox = ({
         type="checkbox"
         tabIndex={0}
         disabled={props.disabled}
-        defaultChecked={defaultChecked}
         onChange={handleChange}
+        checked={checked}
         id={props.id}
         name={props.name}
         data-testid="item-checkbox-input"

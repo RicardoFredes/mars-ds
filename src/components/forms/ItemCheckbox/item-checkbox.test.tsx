@@ -27,7 +27,7 @@ describe("<ItemCheckbox>", () => {
   });
 
   it("should uncheck on click when checked", () => {
-    const { getByTestId } = makeSut({ defaultChecked: true });
+    const { getByTestId } = makeSut({ checked: true });
     fireEvent.click(getByTestId("item-checkbox"));
     const inputCheckbox = getByTestId("item-checkbox-input") as HTMLInputElement;
     expect(inputCheckbox.checked).toBe(false);

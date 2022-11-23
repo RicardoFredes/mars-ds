@@ -46,8 +46,8 @@ export default {
         "Quando false o controle ocupa apenas o tamanho do seu conteúdo. Quando true ocupa todo o espaço disponível e gera uma quebra de linha",
       control: { type: "boolean" },
     },
-    defaultChecked: {
-      description: "Quando true a caixa vem marcada por padrão",
+    checked: {
+      description: "Quando true a caixa é marcada",
       defaultValue: false,
       control: { type: "boolean" },
     },
@@ -148,7 +148,7 @@ SideBySide.args = SideBySideArgs;
 
 const DefaultCheckedArgs = {
   ...DefaultArgs,
-  defaultChecked: true,
+  checked: true,
 };
 
 export const DefaultChecked = Template.bind({});

@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.159](https://github.com/mesalva/mars/compare/v1.0.0-alpha.158...v1.0.0-alpha.159) (2022-11-24)
+
+
+### Features
+
+* **sidebar:** set brand as ImageProps type ([#236](https://github.com/mesalva/mars/issues/236)) ([dd70e78](https://github.com/mesalva/mars/commit/dd70e78baf5fdf5f35d4420e149549e23b6616d2))
+
 ## [1.0.0-alpha.158](https://github.com/mesalva/mars/compare/v1.0.0-alpha.157...v1.0.0-alpha.158) (2022-11-23)
 
 

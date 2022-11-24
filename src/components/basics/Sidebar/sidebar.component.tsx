@@ -6,6 +6,7 @@ import Avatar from "@/components/basics/Avatar";
 import Card from "@/components/basics/Card";
 import GuestButtons from "@/components/basics/GuestButtons";
 import Icon from "@/components/basics/Icon";
+import Image from "@/components/basics/Image";
 import Link from "@/components/basics/Link";
 import Logo from "@/components/basics/Logo";
 import ToggleButton from "@/components/basics/ToggleButton";
@@ -31,7 +32,7 @@ const Sidebar = ({
     <aside className={cn} {...props}>
       <header className="sidebar__header">
         <Link as={LinkComponent} className="sidebar__logo" {...links.brand}>
-          {brand ? <img height={32} src={brand} /> : <Logo height={32} />}
+          {brand ? <Image height={32} {...brand} /> : <Logo height={32} />}
         </Link>
         <ToggleButton
           variant="text"

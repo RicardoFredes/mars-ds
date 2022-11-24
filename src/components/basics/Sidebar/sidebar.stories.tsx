@@ -43,8 +43,9 @@ Guest.args = {
 export const Brand = Template.bind({});
 Brand.args = {
   ...DefaultArgs,
-  brand:
-    "https://cdn.mesalva.com/uploads/image/MjAyMi0wNS0zMCAyMToyOTowMSArMDAwMDE5NjMzNQ%3D%3D%0A.svg",
+  brand: {
+    src: "https://cdn.mesalva.com/uploads/image/MjAyMi0wNS0zMCAyMToyOTowMSArMDAwMDE5NjMzNQ%3D%3D%0A.svg",
+  },
 };
 
 export const Skeleton = Template.bind({});

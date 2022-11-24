@@ -1,5 +1,6 @@
 import type { ButtonProps } from "../Button";
 
+import type { ImageProps } from "@/components/basics/Image";
 import type { LinkProps } from "@/components/basics/Link";
 
 export interface SidebarProps extends React.HTMLProps<HTMLDivElement> {
@@ -17,7 +18,7 @@ export interface SidebarProps extends React.HTMLProps<HTMLDivElement> {
     login?: ButtonProps;
     signup?: ButtonProps;
   };
-  brand?: string;
+  brand?: ImageProps;
   onCloseClick?: VoidFunction;
   fetching: boolean;
 }

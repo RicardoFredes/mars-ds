@@ -47,12 +47,7 @@ const Template: ComponentStory<typeof NavigationBar> = (args) => (
   </div>
 );
 
-const DefaultArgs = {
-  showText: false,
-};
+const DefaultArgs = {};
 
 export const Default = Template.bind({});
 Default.args = DefaultArgs;
-
-export const Hiding_Text = Template.bind({});
-Hiding_Text.args = { ...DefaultArgs, showText: false };

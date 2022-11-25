@@ -22,6 +22,9 @@ const DefaultArgs = {
 export const Default = Template.bind({});
 Default.args = DefaultArgs;
 
+export const WithoutText = Template.bind({});
+WithoutText.args = { ...DefaultArgs, showText: false };
+
 export const Dropdown: ComponentStory<typeof NavigationBarItem> = (args) => (
   <div className="flex justify-content-center" style={{ paddingTop: 200 }}>
     <NavigationBarItem {...args} />

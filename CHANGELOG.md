@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.160](https://github.com/mesalva/mars/compare/v1.0.0-alpha.159...v1.0.0-alpha.160) (2022-11-25)
+
+
+### Bug Fixes
+
+* console navigation bar issue in dark mode transparent ([#237](https://github.com/mesalva/mars/issues/237)) ([e289403](https://github.com/mesalva/mars/commit/e289403ba590452111fc2b261a03775fd5415a32))
+
 ## [1.0.0-alpha.159](https://github.com/mesalva/mars/compare/v1.0.0-alpha.158...v1.0.0-alpha.159) (2022-11-24)
 
 

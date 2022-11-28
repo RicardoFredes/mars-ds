@@ -13,6 +13,27 @@ export default {
       defaultValue: false,
       description: "Faz com que as tabs ocupem toda a largura",
     },
+    align: {
+      control: { type: "text" },
+      defaultValue: "left",
+      description: "Modifica o posicionamento das tabs",
+    },
+    textColorActive: {
+      control: {
+        type: "text",
+      },
+      description:
+        'Altera a cor de texto da tab ativa (Preferencialmente utilizar as cores tokens do Design System encontrada <a href="?path=/story/tokens-colors--default" target="_blank">aqui</a>',
+      defaultValue: "var(--color-text-primary)",
+    },
+    backgroundColorActive: {
+      control: {
+        type: "text",
+      },
+      description:
+        'Altera a cor de background da tab ativa (Preferencialmente utilizar as cores tokens do Design System encontrada <a href="?path=/story/tokens-colors--default" target="_blank">aqui</a>',
+      defaultValue: "var(--color-primary-500)",
+    },
     defaultTabIndex: {
       control: { type: "number" },
       defaultValue: 0,
@@ -30,6 +51,9 @@ const Template: ComponentStory<typeof Tabs> = (args) => <Tabs {...args} />;
 const DefaultArgs = {
   full: false,
   defaultTabIndex: 0,
+  align: "left",
+  textColorActive: "var(--color-text-primary)",
+  backgroundColorActive: "var(--color-primary-500)",
   tabs: [
     {
       label: "Perfil",

@@ -77,4 +77,10 @@ describe("<Tabs>", () => {
     const headerElement = wrapper.getByTestId("tabs-header");
     expect(headerElement).toHaveAttribute("class", "tabs__header tabs__header--is-full");
   });
+
+  it("pass align props to className", () => {
+    const wrapper = makeSut({ tabs, align: "center" });
+    const headerElement = wrapper.getByTestId("tabs-header");
+    expect(headerElement).toHaveAttribute("class", "tabs__header tabs__header--is-center");
+  });
 });

@@ -8,6 +8,9 @@ interface TabsProps extends ComponentItem {
   tabs?: TabProps[];
   full?: boolean;
   LinkComponent?: ComponentLink;
+  align?: string;
+  textColorActive?: string;
+  backgroundColorActive?: string;
 }
 
 export type { TabsProps };

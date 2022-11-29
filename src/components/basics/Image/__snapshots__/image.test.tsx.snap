@@ -11,6 +11,7 @@ Object {
       >
         <img
           alt="any_title"
+          data-testid="img"
           height="150"
           src="default.png"
           width="300"
@@ -25,6 +26,7 @@ Object {
     >
       <img
         alt="any_title"
+        data-testid="img"
         height="150"
         src="default.png"
         width="300"
@@ -85,7 +87,7 @@ Object {
 }
 `;
 
-exports[`<Image> when has screen sizes props should render component with advanced props 1`] = `
+exports[`<Image> when prefers colors schema is undefined and has more sizes should render component with advanced props 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -95,21 +97,16 @@ Object {
         data-testid="image"
       >
         <source
-          height="150"
           media="(prefers-color-scheme: dark)"
           srcset="darkmode.png"
-          width="300"
         />
         <source
           media="(min-width: 640px)"
           srcset="md.png"
         />
-        <source
-          media="(min-width: 640px) and (prefers-color-scheme: dark)"
-          srcset="darkmode.png"
-        />
         <img
           alt="any_title"
+          data-testid="img"
           height="150"
           src="default.png"
           width="300"
@@ -123,21 +120,16 @@ Object {
       data-testid="image"
     >
       <source
-        height="150"
         media="(prefers-color-scheme: dark)"
         srcset="darkmode.png"
-        width="300"
       />
       <source
         media="(min-width: 640px)"
         srcset="md.png"
       />
-      <source
-        media="(min-width: 640px) and (prefers-color-scheme: dark)"
-        srcset="darkmode.png"
-      />
       <img
         alt="any_title"
+        data-testid="img"
         height="150"
         src="default.png"
         width="300"

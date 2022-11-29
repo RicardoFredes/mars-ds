@@ -89,8 +89,7 @@ const DefaultArgs = {
   width: 438.7,
   height: 400,
   src: "https://cdn.mesalva.com/uploads/image/MjAyMi0wNS0yNyAxNzo1NTozMiArMDAwMDYzODU5Mw%3D%3D%0A.png",
-  darkModeSrc:
-    "https://cdn.mesalva.com/uploads/image/MjAyMi0wNS0yNyAxNzo1NTozMiArMDAwMDYzODU5Mw%3D%3D%0A.png",
+  darkModeSrc: "https://cdn.pixabay.com/photo/2022/11/19/15/50/holly-7602422_960_720.jpg",
 };
 
 export const Default = Template.bind({});

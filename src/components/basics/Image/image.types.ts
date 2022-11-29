@@ -10,6 +10,7 @@ interface ImageItem {
   darkModeSrc?: string;
   height?: string | number;
   width?: string | number;
+  disableDarkMode?: boolean;
 }
 
 interface ImageItemProps extends ImageItem {
@@ -24,4 +25,4 @@ interface ImageProps extends HTMLAttributes<HTMLPictureElement>, ImageItemProps 
   maxHeight?: string | number;
 }
 
-export type { ImageProps, ImageSourceProps };
+export type { ImageProps, ImageSourceProps, ImageItem };

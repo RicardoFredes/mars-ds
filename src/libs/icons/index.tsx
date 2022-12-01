@@ -49,6 +49,7 @@ import painel from "./customs/painel";
 import planoDeEstudos from "./customs/plano-de-estudos";
 import planos from "./customs/planos";
 import ppl from "./customs/ppl";
+import preference from "./customs/preference";
 import quimica from "./customs/quimica";
 import redacao from "./customs/redacao";
 import sair from "./customs/sair";
@@ -171,6 +172,7 @@ const icons: { [key: string]: (props: IconLibProps) => JSX.Element } = {
   "plano-de-estudos": planoDeEstudos,
   "planos": planos,
   "ppl": ppl,
+  "preference": preference,
   "quimica": quimica,
   "redacao": redacao,
   "sair": sair,

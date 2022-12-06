@@ -28,6 +28,9 @@ export * from "./components/basics/Button/button.types";
 export { default as Card } from "./components/basics/Card/card.component";
 export * from "./components/basics/Card/card.types";
 
+export { default as CircleProgress } from "./components/basics/CircleProgress/circle-progress.component";
+export * from "./components/basics/CircleProgress/circle-progress.types";
+
 export { default as CircleStepper } from "./components/basics/CircleStepper/circle-stepper.component";
 export * from "./components/basics/CircleStepper/circle-stepper.types";
 

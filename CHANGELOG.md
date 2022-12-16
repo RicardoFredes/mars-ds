@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.166](https://github.com/mesalva/mars/compare/v1.0.0-alpha.165...v1.0.0-alpha.166) (2022-12-16)
+
+
+### Bug Fixes
+
+* console chevron opened but with height zero ([#244](https://github.com/mesalva/mars/issues/244)) ([ea322ec](https://github.com/mesalva/mars/commit/ea322ec009e46a29973c855119c084ff7b07e0a2))
+
 ## [1.0.0-alpha.165](https://github.com/mesalva/mars/compare/v1.0.0-alpha.164...v1.0.0-alpha.165) (2022-12-06)
 
 

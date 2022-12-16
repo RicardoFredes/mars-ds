@@ -1,7 +1,7 @@
 import type { ConsoleListGroupProps } from "./console-list-group.types";
 
 import classNames from "classnames";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import ConsoleListItem from "@/components/basics/ConsoleListItem";
 import ConsoleListSubItem from "@/components/basics/ConsoleListSubItem";
@@ -18,6 +18,7 @@ const ConsoleListGroup = ({
 }: ConsoleListGroupProps) => {
   const [isExpanded, setIsExpanded] = useState(isOpen);
   const bodyRef = useRef<HTMLDivElement | null>(null);
+  const [height, setHeight] = useState(0);
 
   const headerProps = {
     isActive: isActive || (Array.isArray(list) && list.some(({ isActive }) => isActive)),
@@ -29,6 +30,10 @@ const ConsoleListGroup = ({
   });
 
   const toggleOpen = () => setIsExpanded(!isExpanded);
+
+  useEffect(() => {
+    if (bodyRef.current?.scrollHeight) setHeight(bodyRef.current?.scrollHeight);
+  }, [bodyRef?.current?.scrollHeight]);
 
   return (
     <div className={cn} data-testid="console-list-group">
@@ -44,7 +49,7 @@ const ConsoleListGroup = ({
       <div
         className="console-list-group__body"
         ref={bodyRef}
-        style={isExpanded ? { height: bodyRef.current?.scrollHeight } : { height: "0" }}
+        style={isExpanded ? { height } : { height: "0" }}
       >
         {list.map((item, index) => (
           <ConsoleListSubItem

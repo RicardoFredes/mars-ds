@@ -5,6 +5,33 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.168](https://github.com/mesalva/mars/compare/v1.0.0-alpha.167...v1.0.0-alpha.168) (2022-12-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* circle-progress component changed interface
+
+* fix: version 2
+
+* fix: version 2
+
+* fix: version 3
+* changed circle-progress props
+
+* fix: version 3
+
+* fix: test
+
+### Features
+
+* allow item-checkbox accept img src ([#246](https://github.com/mesalva/mars/issues/246)) ([38014ef](https://github.com/mesalva/mars/commit/38014efe846a4e6075ce7c38eb04b624e6b26d80))
+
+
+### Bug Fixes
+
+* refactor circle progress allow receive percentage directly and r… ([#247](https://github.com/mesalva/mars/issues/247)) ([93f1bdd](https://github.com/mesalva/mars/commit/93f1bdd2fe8a2a7e78f6d339c0410d0ab3d8e33f))
+
 ## [1.0.0-alpha.167](https://github.com/mesalva/mars/compare/v1.0.0-alpha.166...v1.0.0-alpha.167) (2022-12-27)
 
 

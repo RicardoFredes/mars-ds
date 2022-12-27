@@ -35,23 +35,29 @@
 
   &__check-left {
     margin-right: $spacing-md;
-    &:before{
+    &:before {
       left: calc($spacing-sm * -1);
     }
   }
 
   &__check-right {
     margin-left: $spacing-md;
-    &:before{
+    &:before {
       right: calc($spacing-sm * -1);
     }
   }
 
-  &__icon-left {
+  &__icon-left,
+  &__img-left {
+    user-select: none;
+    -webkit-user-drag: none;
     margin-right: $spacing-md;
   }
 
-  &__icon-right {
+  &__icon-right,
+  &__img-right {
+    user-select: none;
+    -webkit-user-drag: none;
     margin-left: $spacing-md;
   }
 
@@ -75,7 +81,6 @@
 
   &--is-checked {
     .item-checkbox {
-
       &__check-left,
       &__check-right {
         color: $color-info-500;
@@ -88,7 +93,6 @@
   }
 
   &:not(.item-checkbox--is-disabled):hover {
-
     .item-checkbox__check-left:before,
     .item-checkbox__check-right:before {
       transform: scale(1);

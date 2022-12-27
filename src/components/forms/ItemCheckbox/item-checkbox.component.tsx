@@ -15,6 +15,12 @@ const ItemCheckbox = ({
   iconLeftColor,
   iconRight,
   iconRightColor,
+  imgLeft,
+  imgRight,
+  imgLeftAlt = "",
+  imgRightAlt = "",
+  imgWidth = "24px",
+  imgHeight = "24px",
   className,
   onChange,
   ...props
@@ -58,11 +64,29 @@ const ItemCheckbox = ({
       {iconLeft && (
         <Icon name={iconLeft} color={iconLeftColor} className="item-checkbox__icon-left" />
       )}
+      {imgLeft && (
+        <img
+          alt={imgLeftAlt}
+          src={imgLeft}
+          className="item-checkbox__img-left"
+          data-testid="item-checkbox-img-left"
+          style={{ width: imgWidth, height: imgHeight }}
+        />
+      )}
       <Text html={html} className="item-checkbox__label">
         {label}
       </Text>
       {iconRight && (
         <Icon name={iconRight} color={iconRightColor} className="item-checkbox__icon-right" />
+      )}
+      {imgRight && (
+        <img
+          alt={imgRightAlt}
+          src={imgRight}
+          className="item-checkbox__img-right"
+          data-testid="item-checkbox-img-right"
+          style={{ width: imgWidth, height: imgHeight }}
+        />
       )}
       {checkRight && (
         <div className="item-checkbox__check-right">

@@ -65,6 +65,24 @@ export default {
       description: "O nome do ícone que será posicionado à direita. Quando vazio não adiciona nada",
       control: { type: "text" },
     },
+    imgLeft: {
+      description:
+        "O link da imagem que será posicionada à esquerda. Quando vazio não adiciona nada. Ex.: https://cdn.mesalva.com/uploads/image/MjAyMi0xMi0yMyAyMTo0MDo0MCArMDAwMDMyNzU2NA%3D%3D%0A.png",
+      control: { type: "text" },
+    },
+    imgRight: {
+      description:
+        "O link da imagem que será posicionada à direita. Quando vazio não adiciona nada. Ex.: https://cdn.mesalva.com/uploads/image/MjAyMi0xMi0yMyAyMTo0MDo0MCArMDAwMDMyNzU2NA%3D%3D%0A.png",
+      control: { type: "text" },
+    },
+    imgWidth: {
+      description: 'A largura da imagem, o padrão é 24px. Ex.: "32px", "128px", "4rem".',
+      control: { type: "text" },
+    },
+    imgHeight: {
+      description: 'A altura da imagem, o padrão é 24px. Ex.: "32px", "128px", "4rem".',
+      control: { type: "text" },
+    },
     iconLeftColor: {
       description:
         "A cor do ícone posicionado à esquerda. Ex.: #FAF ou var(--color-matematica-500)",
@@ -171,6 +189,30 @@ const WithIconRightArgs = {
 
 export const WithIconRight = Template.bind({});
 WithIconRight.args = WithIconRightArgs;
+
+const WithImageLeftArgs = {
+  ...DefaultArgs,
+  imgLeft:
+    "https://cdn.mesalva.com/uploads/image/MjAyMi0wNS0wMyAyMjowMjozNiArMDAwMDgxNDQzNQ%3D%3D%0A.svg",
+  imgWidth: "4rem",
+  imgHeight: "4rem",
+};
+
+export const WithImageLeft = Template.bind({});
+WithImageLeft.args = WithImageLeftArgs;
+
+const WithImageRightArgs = {
+  ...DefaultArgs,
+  label: "Plano ENEM",
+  full: false,
+  imgRight:
+    "https://cdn.mesalva.com/uploads/image/MjAyMi0xMC0zMSAxNzozMDowNiArMDAwMDYyNDA1OQ%3D%3D%0A.png",
+  imgWidth: "8rem",
+  imgHeight: "8rem",
+};
+
+export const WithImageRight = Template.bind({});
+WithImageRight.args = WithImageRightArgs;
 
 const LongTextArgs = {
   ...DefaultArgs,

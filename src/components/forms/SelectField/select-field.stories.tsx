@@ -46,6 +46,12 @@ export default {
       control: { type: "array" },
       defaultValue: undefined,
     },
+    theme: {
+      control: { type: "text" },
+    },
+    variant: {
+      control: { type: "text" },
+    },
   },
 } as ComponentMeta<typeof SelectField>;
 

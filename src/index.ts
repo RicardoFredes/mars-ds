@@ -204,6 +204,9 @@ export * from "./components/forms/TextField/text-field.types";
 export { default as TextFieldIconButton } from "./components/forms/TextFieldIconButton/text-field-icon-button.component";
 export * from "./components/forms/TextFieldIconButton/text-field-icon-button.types";
 
+export { default as TextFieldLabel } from "./components/forms/TextFieldLabel/text-field-label.component";
+export * from "./components/forms/TextFieldLabel/text-field-label.types";
+
 export { default as ToggleSwitch } from "./components/forms/ToggleSwitch/toggle-switch.component";
 export * from "./components/forms/ToggleSwitch/toggle-switch.types";
 

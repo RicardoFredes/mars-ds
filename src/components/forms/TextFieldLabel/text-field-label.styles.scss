@@ -1,0 +1,279 @@
+.field-label {
+  padding: 1px $spacing-sm;
+  border-radius: $border-radius-xs;
+  font-size: 0.75rem;
+  line-height: 1.7em;
+  font-weight: 700;
+  display: inline-block;
+
+  &__input:not(button) {
+    color: inherit;
+  }
+
+  &--ghost {
+    &-default {
+      background: $color-neutral-ghost;
+      color: $color-text-secondary;
+    }
+
+    &-primary {
+      background: $color-primary-ghost;
+      color: $color-primary-700;
+    }
+
+    &-info {
+      background: $color-info-ghost;
+      color: $color-info-700;
+    }
+
+    &-success {
+      background: $color-success-ghost;
+      color: $color-success-700;
+    }
+
+    &-warning {
+      background: $color-warning-ghost;
+      color: $color-warning-700;
+    }
+
+    &-error {
+      background: $color-error-ghost;
+      color: $color-error-700;
+    }
+  }
+
+  &--solid {
+    &-default {
+      background: $color-neutral-300;
+      color: $color-text-primary;
+    }
+
+    &-primary {
+      background: $color-primary-500;
+      color: $color-white;
+    }
+
+    &-info {
+      background: $color-info-500;
+      color: $color-white;
+    }
+
+    &-success {
+      background: $color-success-500;
+      color: $color-text-primary;
+    }
+
+    &-warning {
+      background: $color-warning-500;
+      color: $color-text-primary;
+    }
+
+    &-error {
+      background: $color-error-500;
+      color: $color-white;
+    }
+  }
+
+  &--subject {
+    &-redacao {
+      background: $color-redacao-ghost;
+      color: $color-redacao-700;
+    }
+
+    &-medicina {
+      background: $color-medicina-ghost;
+      color: $color-medicina-700;
+    }
+
+    &-linguagens {
+      background: $color-linguagens-ghost;
+      color: $color-linguagens-700;
+    }
+
+    &-humanas {
+      background: $color-humanas-ghost;
+      color: $color-humanas-700;
+    }
+
+    &-natureza {
+      background: $color-natureza-ghost;
+      color: $color-natureza-700;
+    }
+
+    &-matematica {
+      background: $color-matematica-ghost;
+      color: $color-matematica-700;
+    }
+  }
+
+  &__fieldset {
+    border: none;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    height: 56px;
+  }
+  &:hover {
+    .field-label__fieldset {
+      border-color: $color-text-primary;
+    }
+  }
+  &__icon,
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+  &__content {
+    width: 100%;
+    height: 100%;
+    margin-right: 2px;
+  }
+  &__icon {
+    padding: $spacing-xs;
+    &--has-action {
+      position: relative;
+      cursor: pointer;
+      &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+        background-color: $color-neutral-ghost;
+        left: 0;
+        transform: scale(0);
+        transition: transform ease 0.2s;
+      }
+      &:hover:before {
+        transform: scale(1.2);
+      }
+    }
+  }
+  &__legend {
+    visibility: hidden;
+    height: 0;
+    display: none;
+    font-size: 12px;
+    padding-right: $spacing-xs;
+  }
+  &__input {
+    padding: 0 $spacing-xs;
+    width: 100%;
+    height: 50%;
+    border: none;
+    background-color: transparent;
+    color: $color-text-primary;
+    font-weight: 400;
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: transparent;
+    }
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      -webkit-text-fill-color: $color-text-primary;
+      transition-delay: 9999s;
+    }
+    &:-webkit-autofill:disabled {
+      -webkit-text-fill-color: $color-text-disabled;
+    }
+  }
+  &__label {
+    transition: all ease 0.15s;
+    position: absolute;
+    left: 20;
+    transform-origin: left center;
+  }
+  &__help {
+    font-size: 12px;
+    padding: $spacing-xs $spacing-lg;
+    color: $color-text-primary;
+  }
+  &--has-left-icon {
+    .field-label__icon-left {
+      margin-right: $spacing-xs;
+    }
+    .field-label__label {
+      transform: translateX(32px);
+    }
+  }
+  &,
+  &:hover {
+    &.field-label {
+      &--is-filled,
+      &--is-focused {
+        .field-label {
+          &__legend {
+            display: inline-block;
+          }
+          &__label {
+            transform: translate(-1px, -170%) scale(0.75);
+          }
+        }
+      }
+      &--is-focused {
+        .field-label {
+          &__fieldset {
+            border-color: $color-info-500;
+            border-width: 2px;
+          }
+          &__content {
+            margin-left: -1px;
+            margin-right: 0;
+          }
+          &__label {
+            color: $color-info-500;
+          }
+        }
+      }
+      &--is-disabled {
+        .field-label {
+          &__icon,
+          &__input,
+          &__label {
+            color: $color-text-disabled;
+          }
+          &__fieldset {
+            border-color: $color-action-disabled;
+          }
+          &__icon {
+            &--has-action {
+              color: $color-text-disabled;
+              pointer-events: none;
+              cursor: inherit;
+            }
+          }
+        }
+      }
+      &--has-error,
+      &--is-focused.field--has-error {
+        .field-label {
+          &__icon-right,
+          &__help,
+          &__label {
+            color: $color-white;
+          }
+          &__fieldset {
+            border-color: $color-white;
+            border-width: 2px;
+          }
+          &__content {
+            margin-left: -2px;
+          }
+        }
+      }
+      &--has-success,
+      &--is-focused.field--has-success {
+        .field-label {
+          &__icon-right {
+            color: $color-success-500;
+          }
+        }
+      }
+    }
+  }
+}

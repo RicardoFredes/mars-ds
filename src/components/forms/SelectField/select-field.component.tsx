@@ -10,6 +10,8 @@ import Text from "@/components/typographies/Text";
 import { mathQuery } from "@/services/compare";
 import { generateHash } from "@/services/hash";
 
+import TextFieldLabel from "../TextFieldLabel";
+
 const emptyOption: SelectFieldOption = { label: "", value: undefined };
 const ITEM_CLASS_NAME = "select-field__options-item";
 
@@ -22,6 +24,8 @@ const SelectField = ({
   enableFilter = true,
   disabled,
   style,
+  theme,
+  variant,
   ...props
 }: SelectFieldProps) => {
   const [y, setY] = useState(0);
@@ -240,18 +244,35 @@ const SelectField = ({
   return (
     <div className={cn} ref={selectFieldRef} style={style}>
       <div onClick={handleClickToProtectArea}>
-        <TextField
-          {...props}
-          disabled={disabled}
-          className={classNames({ "field--is-focused": isOpen })}
-          inputDisabled={inputDisabled}
-          dataKey={key}
-          onKeyDown={handleInputKeyDown}
-          onClick={handleClick}
-          onChange={handleChange}
-          rightIconButton={rightIconButton}
-          value={option.label}
-        />
+        {theme && variant ? (
+          <TextFieldLabel
+            {...props}
+            disabled={disabled}
+            className={classNames({ "field-label--is-focused": isOpen })}
+            inputDisabled={inputDisabled}
+            dataKey={key}
+            onKeyDown={handleInputKeyDown}
+            onClick={handleClick}
+            onChange={handleChange}
+            rightIconButton={rightIconButton}
+            value={option.label}
+            variant={variant}
+            theme={theme}
+          />
+        ) : (
+          <TextField
+            {...props}
+            disabled={disabled}
+            className={classNames({ "field--is-focused": isOpen })}
+            inputDisabled={inputDisabled}
+            dataKey={key}
+            onKeyDown={handleInputKeyDown}
+            onClick={handleClick}
+            onChange={handleChange}
+            rightIconButton={rightIconButton}
+            value={option.label}
+          />
+        )}
       </div>
       {isOpen && (
         <DropdownMenu

@@ -10,10 +10,8 @@ export default {
       source: {
         code: `{
           "component": "CircleProgress",
-          "position": "4",
-          "steps": ["Identificação", "Adicionais", "Pagamento", "Endereço de Cobrança", "Resumo"],
-          "color": "var(--color-medicina-500)",
-          "showInfo": false
+          "percent": 40,
+          "color": "var(--color-medicina-500)"
         }`,
         language: "json",
         type: "code",
@@ -21,19 +19,9 @@ export default {
     },
   },
   argTypes: {
-    position: {
+    percent: {
       control: { type: "number" },
-      description:
-        'O número indicando a posição do passo. Ex.: Se colocar 2 e a array "steps" tiver 3 elementos "67%" será exibido',
-    },
-    steps: {
-      control: { type: "array" },
-      description:
-        'Uma array onde cada elemento é o texto que será exibido.: Ex.: ["Identificação", "Adicionais", "Pagamento", "Endereço de Cobrança", "Resumo"]',
-    },
-    showInfo: {
-      control: { type: "boolean" },
-      description: "Se deve mostrar o texto do passo atual e próximo. O padrão é true",
+      description: "O valor da porcentagem. Ex.: 33",
     },
     color: {
       control: { type: "text" },
@@ -48,9 +36,7 @@ const Template: ComponentStory<typeof CircleProgress> = (args) => (
 );
 
 const DefaultArgs = {
-  position: 4,
-  steps: ["Identificação", "Adicionais", "Pagamento", "Endereço de Cobrança", "Resumo"],
-  showInfo: true,
+  percent: 33.3333333333,
   color: "var(--color-success-700)",
 };
 
@@ -64,11 +50,3 @@ const CustomColorArgs = {
 
 export const CustomColor = Template.bind({});
 CustomColor.args = CustomColorArgs;
-
-const HidingInfoArgs = {
-  ...DefaultArgs,
-  showInfo: false,
-};
-
-export const HidingInfo = Template.bind({});
-HidingInfo.args = HidingInfoArgs;

@@ -1,24 +1,8 @@
 .circle-progress {
   $size: 52px;
-  display: flex;
-  width: 100%;
+  display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-
-  &__info {
-    &-title {
-      color: $color-text-primary;
-    }
-    &-caption {
-      display: inline-flex;
-      color: $color-text-disabled;
-
-      &__next-position {
-        color: $color-text-secondary;
-        font-weight: bold;
-      }
-    }
-  }
+  justify-content: center;
 
   &__icon {
     position: relative;
@@ -57,8 +41,6 @@
     &-number {
       font-family: $font-family-acent;
       font-weight: 700;
-      font-size: 1rem;
-      line-height: 1.5em;
     }
   }
 }

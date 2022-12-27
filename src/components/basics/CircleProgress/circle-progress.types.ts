@@ -1,6 +1,5 @@
 export interface CircleProgressProps extends React.HTMLProps<HTMLDivElement> {
-  steps: string[];
-  position: number;
-  showInfo?: boolean;
+  percent: number;
   color?: string;
+  className?: string;
 }

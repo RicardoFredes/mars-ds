@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.169](https://github.com/mesalva/mars/compare/v1.0.0-alpha.168...v1.0.0-alpha.169) (2022-12-28)
+
+
+### Bug Fixes
+
+* circle progress when percent is undefined ([#248](https://github.com/mesalva/mars/issues/248)) ([cfdddeb](https://github.com/mesalva/mars/commit/cfdddeb96a22eccc32aa4d2899298eee1c88ffd7))
+
 ## [1.0.0-alpha.168](https://github.com/mesalva/mars/compare/v1.0.0-alpha.167...v1.0.0-alpha.168) (2022-12-27)
 
 

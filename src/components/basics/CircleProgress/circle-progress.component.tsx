@@ -5,7 +5,7 @@ import classNames from "classnames";
 import Text from "@/components/typographies/Text";
 
 const CircleProgress = ({
-  percent,
+  percent = 0,
   color = "var(--color-success-700)",
   className,
   ...props

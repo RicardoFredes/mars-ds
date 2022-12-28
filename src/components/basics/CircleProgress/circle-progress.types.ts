@@ -1,5 +1,5 @@
 export interface CircleProgressProps extends React.HTMLProps<HTMLDivElement> {
-  percent: number;
+  percent?: number;
   color?: string;
   className?: string;
 }

@@ -66,22 +66,12 @@ export default {
       control: { type: "text" },
     },
     imgLeft: {
-      description:
-        "O link da imagem que será posicionada à esquerda. Quando vazio não adiciona nada. Ex.: https://cdn.mesalva.com/uploads/image/MjAyMi0xMi0yMyAyMTo0MDo0MCArMDAwMDMyNzU2NA%3D%3D%0A.png",
-      control: { type: "text" },
+      description: "Um objeto que contenha os mesmos parâmetros do componente Image",
+      control: { type: "object" },
     },
     imgRight: {
-      description:
-        "O link da imagem que será posicionada à direita. Quando vazio não adiciona nada. Ex.: https://cdn.mesalva.com/uploads/image/MjAyMi0xMi0yMyAyMTo0MDo0MCArMDAwMDMyNzU2NA%3D%3D%0A.png",
-      control: { type: "text" },
-    },
-    imgWidth: {
-      description: 'A largura da imagem, o padrão é 24px. Ex.: "32px", "128px", "4rem".',
-      control: { type: "text" },
-    },
-    imgHeight: {
-      description: 'A altura da imagem, o padrão é 24px. Ex.: "32px", "128px", "4rem".',
-      control: { type: "text" },
+      description: "Um objeto que contenha os mesmos parâmetros do componente Image",
+      control: { type: "object" },
     },
     iconLeftColor: {
       description:
@@ -192,10 +182,12 @@ WithIconRight.args = WithIconRightArgs;
 
 const WithImageLeftArgs = {
   ...DefaultArgs,
-  imgLeft:
-    "https://cdn.mesalva.com/uploads/image/MjAyMi0wNS0wMyAyMjowMjozNiArMDAwMDgxNDQzNQ%3D%3D%0A.svg",
-  imgWidth: "4rem",
-  imgHeight: "4rem",
+  imgLeft: {
+    src: "https://cdn.mesalva.com/uploads/image/MjAyMi0xMC0zMSAxNzozMDowNiArMDAwMDYyNDA1OQ%3D%3D%0A.png",
+    darkModeSrc: "https://cdn.pixabay.com/photo/2022/11/19/15/50/holly-7602422_960_720.jpg",
+    width: 50,
+    height: 50,
+  },
 };
 
 export const WithImageLeft = Template.bind({});
@@ -205,10 +197,12 @@ const WithImageRightArgs = {
   ...DefaultArgs,
   label: "Plano ENEM",
   full: false,
-  imgRight:
-    "https://cdn.mesalva.com/uploads/image/MjAyMi0xMC0zMSAxNzozMDowNiArMDAwMDYyNDA1OQ%3D%3D%0A.png",
-  imgWidth: "8rem",
-  imgHeight: "8rem",
+  imgRight: {
+    src: "https://cdn.mesalva.com/uploads/image/MjAyMi0xMC0zMSAxNzozMDowNiArMDAwMDYyNDA1OQ%3D%3D%0A.png",
+    darkModeSrc: "https://cdn.pixabay.com/photo/2022/11/19/15/50/holly-7602422_960_720.jpg",
+    width: 128,
+    height: 128,
+  },
 };
 
 export const WithImageRight = Template.bind({});

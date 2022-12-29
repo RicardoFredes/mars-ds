@@ -47,17 +47,19 @@
     }
   }
 
-  &__icon-left,
-  &__img-left {
+  &__img-left img,
+  &__img-right img {
     user-select: none;
     -webkit-user-drag: none;
+  }
+
+  &__icon-left,
+  &__img-left {
     margin-right: $spacing-md;
   }
 
   &__icon-right,
   &__img-right {
-    user-select: none;
-    -webkit-user-drag: none;
     margin-left: $spacing-md;
   }
 

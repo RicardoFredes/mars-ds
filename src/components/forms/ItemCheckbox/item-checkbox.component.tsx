@@ -4,6 +4,7 @@ import classNames from "classnames";
 import { useEffect, useState } from "react";
 
 import Icon from "@/components/basics/Icon";
+import Image from "@/components/basics/Image";
 import Text from "@/components/typographies/Text";
 
 const ItemCheckbox = ({
@@ -17,10 +18,6 @@ const ItemCheckbox = ({
   iconRightColor,
   imgLeft,
   imgRight,
-  imgLeftAlt = "",
-  imgRightAlt = "",
-  imgWidth = "24px",
-  imgHeight = "24px",
   className,
   onChange,
   ...props
@@ -64,13 +61,20 @@ const ItemCheckbox = ({
       {iconLeft && (
         <Icon name={iconLeft} color={iconLeftColor} className="item-checkbox__icon-left" />
       )}
-      {imgLeft && (
-        <img
-          alt={imgLeftAlt}
-          src={imgLeft}
+      {(imgLeft?.src || imgLeft?.darkModeSrc) && (
+        <Image
+          title={imgLeft?.title}
+          width={imgLeft?.width}
+          height={imgLeft?.height}
+          src={imgLeft?.src}
+          darkModeSrc={imgLeft?.darkModeSrc}
+          autoDarkMode={imgLeft?.autoDarkMode}
+          maxHeight={imgLeft?.maxHeight}
+          sm={imgLeft?.sm}
+          md={imgLeft?.md}
+          lg={imgLeft?.lg}
           className="item-checkbox__img-left"
           data-testid="item-checkbox-img-left"
-          style={{ width: imgWidth, height: imgHeight }}
         />
       )}
       <Text html={html} className="item-checkbox__label">
@@ -79,13 +83,20 @@ const ItemCheckbox = ({
       {iconRight && (
         <Icon name={iconRight} color={iconRightColor} className="item-checkbox__icon-right" />
       )}
-      {imgRight && (
-        <img
-          alt={imgRightAlt}
-          src={imgRight}
+      {(imgRight?.src || imgRight?.darkModeSrc) && (
+        <Image
+          title={imgRight?.title}
+          width={imgRight?.width}
+          height={imgRight?.height}
+          src={imgRight?.src}
+          darkModeSrc={imgRight?.darkModeSrc}
+          autoDarkMode={imgRight?.autoDarkMode}
+          maxHeight={imgRight?.maxHeight}
+          sm={imgRight?.sm}
+          md={imgRight?.md}
+          lg={imgRight?.lg}
           className="item-checkbox__img-right"
           data-testid="item-checkbox-img-right"
-          style={{ width: imgWidth, height: imgHeight }}
         />
       )}
       {checkRight && (

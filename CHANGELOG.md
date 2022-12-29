@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.170](https://github.com/mesalva/mars/compare/v1.0.0-alpha.169...v1.0.0-alpha.170) (2022-12-29)
+
+
+### Features
+
+* add image component in item-checkbox component ([#249](https://github.com/mesalva/mars/issues/249)) ([b8de4b5](https://github.com/mesalva/mars/commit/b8de4b5f4724dccccb55c1e0b436ffc9fbf42112))
+
 ## [1.0.0-alpha.169](https://github.com/mesalva/mars/compare/v1.0.0-alpha.168...v1.0.0-alpha.169) (2022-12-28)
 
 

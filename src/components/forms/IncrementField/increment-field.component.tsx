@@ -39,7 +39,6 @@ const IncrementField = ({
   return (
     <div className={cn} {...props}>
       <Button
-        size="sm"
         iconName="minus"
         className="increment-field__decrement-button"
         onClick={handleDecrement}
@@ -47,7 +46,6 @@ const IncrementField = ({
       />
       <Subtitle data-testid="display-value">{displayValue}</Subtitle>
       <Button
-        size="sm"
         iconName="plus"
         className="increment-field__increment-button"
         onClick={handleIncrement}

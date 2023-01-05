@@ -1,12 +1,28 @@
 .increment-field {
   display: flex;
   justify-content: space-between;
-  &__increment-button, &__decrement-button{
+  align-items: center;
+  &__increment-button,
+  &__decrement-button {
+    width: 42px;
+    height: 42px;
     padding: 0 2px;
     min-height: unset;
-    border-radius: $spacing-xs;
-    background-color: $color-info-500;
-    &:hover{
+    background-color: transparent;
+    &:hover {
+      background-color: transparent;
+    }
+    & span {
+      width: 14px;
+      height: 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $color-white;
+      border-radius: 2px;
+      background-color: $color-info-500;
+    }
+    &:hover span {
       background-color: $color-info-700;
     }
   }

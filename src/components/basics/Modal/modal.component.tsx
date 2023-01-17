@@ -16,9 +16,11 @@ const Modal = ({
   onClose,
   children,
   size = ModalSizes.Medium,
+  closable = true,
   ...props
 }: ModalProps) => {
   const [closing, setClosing] = useState(false);
+  const [open, setOpen] = useState(true);
 
   const modalRef = useRef<HTMLDivElement>(null);
 
@@ -30,15 +32,15 @@ const Modal = ({
   );
 
   const handleClose = () => {
+    if (!closable) return;
     setClosing(true);
     hideIntercom(false);
     document.removeEventListener("keydown", handleKeyDown);
-    if (typeof close === "function") {
-      setTimeout(() => {
-        close();
-        onClose?.();
-      }, 300);
-    }
+    setTimeout(() => {
+      close?.();
+      onClose?.();
+      setOpen(false);
+    }, 300);
   };
 
   const handleKeyDown = (event: KeyboardEvent) => {
@@ -52,26 +54,32 @@ const Modal = ({
   }, []);
 
   useEffect(() => {
-    if (modalRef.current) modalRef.current.focus();
+    if (modalRef.current) modalRef?.current?.focus();
   }, [modalRef]);
 
   return (
-    <div
-      tabIndex={0}
-      ref={modalRef}
-      className={classNames("modal-overlay", { "modal-overlay--is-closing": closing })}
-      onClick={handleClose}
-    >
-      <Card
-        className={cn}
-        onClick={(event) => event.stopPropagation()}
-        elevation={CardElevations.XXHigh}
-        {...props}
-      >
-        <ToggleButton iconName="close" onClick={handleClose} className="modal__close-icon" />
-        <div className="modal__content">{children}</div>
-      </Card>
-    </div>
+    <>
+      {open && (
+        <div
+          tabIndex={0}
+          ref={modalRef}
+          className={classNames("modal-overlay", { "modal-overlay--is-closing": closing })}
+          onClick={handleClose}
+        >
+          <Card
+            className={cn}
+            onClick={(event) => event.stopPropagation()}
+            elevation={CardElevations.XXHigh}
+            {...props}
+          >
+            {closable && (
+              <ToggleButton iconName="close" onClick={handleClose} className="modal__close-icon" />
+            )}
+            <div className="modal__content">{children}</div>
+          </Card>
+        </div>
+      )}
+    </>
   );
 };
 

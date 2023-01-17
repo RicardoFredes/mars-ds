@@ -14,7 +14,7 @@ export default {
   component: Modal,
   argTypes: {
     onClose: {
-      description: "The function to be called when the modal is closed",
+      description: "A função que sera chamada quando o modal for fechado",
       control: { type: "function" },
       defaultValue: undefined,
       action: "onClose",
@@ -24,13 +24,19 @@ export default {
       defaultValue: ModalSizes.Medium,
       control: { type: "select" },
     },
+    closable: {
+      control: { type: "boolean" },
+      description:
+        "Caso true a modal pode ser fechado pelo botão x e clicando no overlay, caso contrário não é possível",
+      defaultValue: true,
+    },
   },
 } as ComponentMeta<typeof Modal>;
 
 const Template: ComponentStory<typeof Modal> = (args) => <Modal {...args} />;
 
 const ExampleModalContent = ({ close }: ModalChildProps) => (
-  <p className="flex-column gap-lg">
+  <div className="flex-column gap-lg">
     <div className="mb-lg">
       <Heading size={HeadingSizes.Small}>4 correções de redação básicas extras</Heading>
       <Caption>+ R$ 29,90</Caption>
@@ -44,7 +50,7 @@ const ExampleModalContent = ({ close }: ModalChildProps) => (
     <Button onClick={close} variant={ButtonVariants.Secondary}>
       Fechar modal
     </Button>
-  </p>
+  </div>
 );
 
 const DefaultArgs = {
@@ -76,3 +82,6 @@ const ButtonTemplate: ComponentStory<typeof Modal> = (args) => (
 
 export const ShowModal = ButtonTemplate.bind({});
 ShowModal.args = DefaultArgs;
+
+export const NotClosable = Template.bind({});
+NotClosable.args = { ...DefaultArgs, closable: false };

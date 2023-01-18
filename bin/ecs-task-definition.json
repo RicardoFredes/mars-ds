@@ -1,0 +1,63 @@
+{
+  "containerDefinitions": [
+    {
+      "name": "mars",
+      "image": "501056667400.dkr.ecr.us-east-1.amazonaws.com/mars:latest",
+      "cpu": 0,
+      "portMappings": [
+        {
+          "containerPort": 6006,
+          "hostPort": 6006,
+          "protocol": "tcp",
+          "name": "mars-6006-tcp",
+          "appProtocol": "http"
+        }
+      ],
+      "essential": true,
+      "entryPoint": [],
+      "command": [],
+      "linuxParameters": {
+           "initProcessEnabled": true
+      },
+      "environment": [
+        {
+          "name": "VARIAVEL_EXPOSTA",
+          "value": "DESSE MODO, NAO RESOLVE O SSM"
+        }
+      ],
+      "secrets": [
+        {
+          "name": "ENEM_DATE",
+          "valueFrom": "arn:aws:ssm:us-east-2:501056667400:parameter/ENEM_DATE"
+        }
+      ],      
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-create-group": "true",
+          "awslogs-group": "/ecs/MS-ECS-TSK",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        },
+        "secretOptions": []
+      },
+      "systemControls": []
+    }
+  ],
+  "family": "MS-ECS-TSK",
+  "taskRoleArn": "arn:aws:iam::501056667400:role/ecsTaskExecutionRole",
+  "executionRoleArn": "arn:aws:iam::501056667400:role/ecsTaskExecutionRole",
+  "networkMode": "awsvpc",
+  "volumes": [
+
+  ],
+  "runtimePlatform": {
+    "cpuArchitecture": "ARM64",
+    "operatingSystemFamily": "LINUX"
+  },
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "cpu": "256",
+  "memory": "2048"
+}

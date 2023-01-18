@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.173](https://github.com/mesalva/mars/compare/v1.0.0-alpha.172...v1.0.0-alpha.173) (2023-01-18)
+
+
+### Features
+
+* add dockerfile and deploy to ecs in fargate ([#253](https://github.com/mesalva/mars/issues/253)) ([5537d8f](https://github.com/mesalva/mars/commit/5537d8f6d31d1e81f2b7734078d39d5be565d767))
+
 ## [1.0.0-alpha.172](https://github.com/mesalva/mars/compare/v1.0.0-alpha.171...v1.0.0-alpha.172) (2023-01-17)
 
 

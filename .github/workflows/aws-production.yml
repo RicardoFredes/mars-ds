@@ -3,7 +3,7 @@ name: Deploy ECS • Production
 on:
   workflow_dispatch: {}
   push:
-    branches: [alpha-]
+    branches: [alpha]
 
 env:
   ENVIRONMENT: production
@@ -70,8 +70,7 @@ jobs:
         run: |
           docker push $ECR_REGISTRY:latest
           docker push $ECR_REGISTRY:$IMAGE_TAG
-          echo "image=$ECR_REGISTRY:$IMAGE_TAG" >> $GITHUB_OUTPUT
-          
+          echo "image=$ECR_REGISTRY:$IMAGE_TAG" >> $GITHUB_OUTPUT        
 
       - name: Fill in the new image ID in the Amazon ECS task definition
         id: ecs-task-def

@@ -19,18 +19,8 @@
       "linuxParameters": {
            "initProcessEnabled": true
       },
-      "environment": [
-        {
-          "name": "VARIAVEL_EXPOSTA",
-          "value": "DESSE MODO, NAO RESOLVE O SSM"
-        }
-      ],
-      "secrets": [
-        {
-          "name": "ENEM_DATE",
-          "valueFrom": "arn:aws:ssm:us-east-2:501056667400:parameter/ENEM_DATE"
-        }
-      ],      
+      "environment": [],
+      "secrets": [],      
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {

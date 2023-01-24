@@ -3,7 +3,7 @@ name: Deploy ECS • Production
 on:
   workflow_dispatch: {}
   push:
-    branches: [alpha]
+    branches: [alpha-]
 
 env:
   ENVIRONMENT: production
@@ -53,10 +53,6 @@ jobs:
           IMAGE_TAG: ${{ steps.localvars.outputs.IMAGE_TAG }}
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}/${{ steps.app.outputs.NAME }}
         run: |
-          cat ${{ steps.inject-secret-web-container.outputs.task-definition }}
-          sleep 5
-          cat ${{ env.AWS_TASKDEF_ECS }}
-          sleep 5          
           docker build -t $ECR_REGISTRY:$IMAGE_TAG -t $ECR_REGISTRY:latest .
           docker push $ECR_REGISTRY:latest
           docker push $ECR_REGISTRY:$IMAGE_TAG

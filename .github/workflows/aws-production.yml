@@ -3,7 +3,7 @@ name: Deploy ECS • Production
 on:
   workflow_dispatch: {}
   push:
-    branches: [main]
+    branches: [alpha]
 
 env:
   ENVIRONMENT: production
@@ -44,15 +44,6 @@ jobs:
       - name: Login to Amazon ECR
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
-        
-#      - name: Inject Secrets Amazon ECS task definition
-#        id: inject-secret-web-container
-#        uses: vebr/inject-aws-ssm-to-task-definition@v1
-#        with:
-#          task-definition: ${{ env.AWS_TASKDEF_ECS }}
-#          container-name: ${{ steps.app.outputs.NAME }}
-#          secretsWildcard: ${{ env.AWS_TASKDEF_ECS_ENV }}
-#          aws_region: ${{ env.AWS_REGION }}          
 
       - name: Build, tag, and push docker image to Amazon ECR
         id: build-image

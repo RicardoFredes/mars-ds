@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-alpha.174](https://github.com/mesalva/mars/compare/v1.0.0-alpha.173...v1.0.0-alpha.174) (2023-01-27)
+
+
+### Features
+
+* calendar component ([#251](https://github.com/mesalva/mars/issues/251)) ([4a5d2c0](https://github.com/mesalva/mars/commit/4a5d2c08eafa44d723c7c6ad88dceb15319c3288)), closes [#252](https://github.com/mesalva/mars/issues/252) [#252](https://github.com/mesalva/mars/issues/252)
+
 ## [1.0.0-alpha.173](https://github.com/mesalva/mars/compare/v1.0.0-alpha.172...v1.0.0-alpha.173) (2023-01-18)
 
 

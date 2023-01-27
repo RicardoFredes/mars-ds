@@ -1,7 +1,6 @@
 name: Deploy ECS • Production
 
 on:
-  workflow_dispatch: {}
   push:
     branches: [alpha]
 
@@ -12,7 +11,7 @@ env:
   AWS_CLUSTER_ECS:       "MS-ECS-FAR"
   AWS_SERVICE_ECS:       "MS-ECS-SER-mars"
   AWS_TASKDEF_ECS:       "./bin/ecs-task-definition.json"
-  AWS_TASKDEF_ECS_ENV:   "/bin/.env.deploy"
+#  AWS_TASKDEF_ECS_ENV:   "/bin/.env.deploy"
   AWS_REGION:            "us-east-1"
   
 jobs:

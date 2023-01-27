@@ -25,6 +25,9 @@ export * from "./components/basics/Breadcrumb/breadcrumb.types";
 export { default as Button } from "./components/basics/Button/button.component";
 export * from "./components/basics/Button/button.types";
 
+export { default as Calendar } from "./components/basics/Calendar/calendar.component";
+export * from "./components/basics/Calendar/calendar.types";
+
 export { default as Card } from "./components/basics/Card/card.component";
 export * from "./components/basics/Card/card.types";
 

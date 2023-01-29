@@ -69,36 +69,4 @@
       color: $color-white;
     }
   }
-
-  &--subject {
-    &-redacao {
-      background: $color-redacao-ghost;
-      color: $color-redacao-700;
-    }
-
-    &-medicina {
-      background: $color-medicina-ghost;
-      color: $color-medicina-700;
-    }
-
-    &-linguagens {
-      background: $color-linguagens-ghost;
-      color: $color-linguagens-700;
-    }
-
-    &-humanas {
-      background: $color-humanas-ghost;
-      color: $color-humanas-700;
-    }
-
-    &-natureza {
-      background: $color-natureza-ghost;
-      color: $color-natureza-700;
-    }
-
-    &-matematica {
-      background: $color-matematica-ghost;
-      color: $color-matematica-700;
-    }
-  }
 }

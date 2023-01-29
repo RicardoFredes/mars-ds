@@ -6,6 +6,7 @@ import Accordion from "@/components/basics/Accordion";
 import Icon from "@/components/basics/Icon";
 import Subtitle, { SubtitleSizes } from "@/components/typographies/Subtitle";
 import Text, { TextSizes } from "@/components/typographies/Text";
+import { ICONS } from "@/configs/icons.config";
 
 const AccordionLabel = ({
   className,
@@ -31,7 +32,7 @@ const HeaderLabel = ({ title, label, colorLabel }: AccordionLabelHeaderProps) =>
         {title}
       </Text>
     )}
-    <Icon className="accordion__header-container__icon-toggle" name="chevron-down" />
+    <Icon className="accordion__header-container__icon-toggle" name={ICONS.ACTIONS.EXPAND} />
     <Subtitle
       size={SubtitleSizes.Small}
       style={{ color: colorLabel }}

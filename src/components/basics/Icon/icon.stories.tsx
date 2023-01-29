@@ -4,6 +4,7 @@ import type { IconProps } from "@/components/basics/Icon";
 import Icon, { IconSizes } from "@/components/basics/Icon";
 import Text, { TextSizes } from "@/components/typographies/Text";
 
+import { ICONS } from "@/configs/icons.config";
 import icons from "./lib";
 
 export default {
@@ -26,9 +27,11 @@ export default {
 
 const Template: ComponentStory<typeof Icon> = (args: IconProps) => <Icon {...args} />;
 
+const ICON_NAME = ICONS.STORIES.DEFAULT;
+
 export const Default = Template.bind({});
 Default.args = {
-  name: "me-salva-mini",
+  name: ICON_NAME,
   size: "md",
 };
 

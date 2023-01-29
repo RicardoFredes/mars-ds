@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 import Icon from "@/components/basics/Icon";
 import Text, { TextSizes } from "@/components/typographies/Text";
+import { ICONS } from "@/configs/icons.config";
 
 const Checkbox = ({
   className,
@@ -29,7 +30,7 @@ const Checkbox = ({
     if (!disabled) setChecked(!checked);
   };
 
-  const iconName = checked ? "checkmark-square" : "square";
+  const iconName = checked ? ICONS.FORMS.CHECKBOX_CHECKED : ICONS.FORMS.CHECKBOX_UNCHECKED;
 
   return (
     <div data-testid="checkbox" className={cn} {...props}>

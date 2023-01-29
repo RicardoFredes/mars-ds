@@ -1,5 +1,5 @@
-import type { NotificationProps } from "./notification.types";
 import type { ReactNode } from "react";
+import type { NotificationProps } from "./notification.types";
 
 import classNames from "classnames";
 import rcPortal from "rc-portal";
@@ -11,6 +11,7 @@ import ToggleButton, { ToggleButtonVariants } from "@/components/basics/ToggleBu
 import Subtitle, { SubtitleSizes } from "@/components/typographies/Subtitle";
 import Tokens from "@/tokens";
 
+import { ICONS } from "@/configs/icons.config";
 import { NotificationVariants } from "./notification.types";
 
 const icons: Record<
@@ -18,19 +19,19 @@ const icons: Record<
   { name: string; color: string }
 > = {
   warning: {
-    name: "alert",
+    name: ICONS.NOTIFICATIONS.WARNING,
     color: Tokens.ColorWarning500,
   },
   success: {
-    name: "checkmark-circle",
+    name: ICONS.NOTIFICATIONS.SUCCESS,
     color: Tokens.ColorSuccess500,
   },
   error: {
-    name: "info",
+    name: ICONS.NOTIFICATIONS.ERROR,
     color: Tokens.ColorError500,
   },
   info: {
-    name: "info",
+    name: ICONS.NOTIFICATIONS.INFO,
     color: Tokens.ColorInfo500,
   },
 };
@@ -70,7 +71,7 @@ const Notification = ({
         {content || children}
       </Subtitle>
       <ToggleButton
-        iconName="close"
+        iconName={ICONS.ACTIONS.CLOSE}
         className="notification__close-button"
         onClick={handleClose}
         variant={ToggleButtonVariants.Text}

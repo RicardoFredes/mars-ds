@@ -1,3 +1,4 @@
+import { ICONS } from "@/configs/icons.config";
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 import type { FocusEvent } from "react";
 
@@ -10,6 +11,8 @@ export default {
   component: TextField,
   argTypes: {},
 } as ComponentMeta<typeof TextField>;
+
+const ICON_NAME = ICONS.STORIES.DEFAULT;
 
 const Template: ComponentStory<typeof TextField> = (args) => {
   const [error, setError] = useState(args.error || false);
@@ -40,7 +43,7 @@ export const LeftIcon = Template.bind({});
 LeftIcon.args = {
   ...DefaultArgs,
   leftIconButton: {
-    name: "me-salva-mini",
+    name: ICON_NAME,
   },
 };
 
@@ -48,7 +51,7 @@ export const RightIcon = Template.bind({});
 RightIcon.args = {
   ...DefaultArgs,
   rightIconButton: {
-    name: "me-salva-mini",
+    name: ICON_NAME,
   },
 };
 

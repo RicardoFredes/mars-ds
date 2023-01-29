@@ -1,3 +1,4 @@
+import { ICONS } from "@/configs/icons.config";
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import DropdownMenu from "./dropdown-menu.component";
@@ -10,6 +11,8 @@ export default {
 
 const Template: ComponentStory<typeof DropdownMenu> = (args) => <DropdownMenu {...args} />;
 
+const ICON_NAME = ICONS.STORIES.DEFAULT;
+
 export const Default = Template.bind({});
 Default.args = {
   list: Array(4).fill({ label: "Item de Menu" }),
@@ -17,7 +20,7 @@ Default.args = {
 
 export const LeftIcon = Template.bind({});
 LeftIcon.args = {
-  list: Array(4).fill({ label: "Item de Menu", leftIconName: "me-salva-mini" }),
+  list: Array(4).fill({ label: "Item de Menu", leftIconName: ICON_NAME }),
 };
 
 export const Scroller = Template.bind({});

@@ -57,17 +57,17 @@ const DefaultArgs = {
   tabs: [
     {
       label: "Perfil",
-      iconName: "profile",
+      iconName: "user",
       children: "(1) Conteúdo do perfil",
     },
     {
       label: "Pagamentos",
-      iconName: "receipt",
+      iconName: "dollar-sign",
       children: "(2) Conteúdo dos pagamentos",
     },
     {
       label: "Notificações",
-      iconName: "notifications",
+      iconName: "bell",
       children: "(3) Conteúdo das notificações",
     },
     {

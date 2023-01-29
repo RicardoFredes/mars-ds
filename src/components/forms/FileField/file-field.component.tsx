@@ -10,6 +10,7 @@ import Caption from "@/components/typographies/Caption";
 import Heading, { HeadingSizes } from "@/components/typographies/Heading";
 import { cutText } from "@/services/string";
 
+import { ICONS } from "@/configs/icons.config";
 import { dictionary } from "./file-field.helper";
 
 const FileField = ({
@@ -67,7 +68,7 @@ const FileField = ({
           <ToggleButton
             data-testid="remove-file-button"
             className="file-field__content__remove-button"
-            iconName="close"
+            iconName={ICONS.ACTIONS.REMOVE}
             variant="text"
             onClick={removeFile}
           />

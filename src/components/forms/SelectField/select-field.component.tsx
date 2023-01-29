@@ -1,5 +1,5 @@
-import type { SelectFieldOption, SelectFieldProps } from "./select-field.types";
 import type React from "react";
+import type { SelectFieldOption, SelectFieldProps } from "./select-field.types";
 
 import classNames from "classnames";
 import { useEffect, useRef, useState } from "react";
@@ -10,6 +10,7 @@ import Text from "@/components/typographies/Text";
 import { mathQuery } from "@/services/compare";
 import { generateHash } from "@/services/hash";
 
+import { ICONS } from "@/configs/icons.config";
 import TextFieldLabel from "../TextFieldLabel";
 
 const emptyOption: SelectFieldOption = { label: "", value: undefined };
@@ -212,7 +213,7 @@ const SelectField = ({
   };
 
   const rightIconButton = {
-    name: "chevron-down",
+    name: ICONS.ACTIONS.EXPAND,
     className: "select-field__toggle-icon",
     onClick: handleRightButtonClick,
     ...rightIconButtonProps,

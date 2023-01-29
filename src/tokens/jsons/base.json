@@ -753,11 +753,11 @@
   },
   "font-family": {
     "main": {
-      "value": "Roboto",
+      "value": "'Baloo 2', sans-serif",
       "type": "fontFamilies"
     },
     "acent": {
-      "value": "Montserrat",
+      "value": "Comfortaa, sans-serif",
       "type": "fontFamilies"
     }
   },

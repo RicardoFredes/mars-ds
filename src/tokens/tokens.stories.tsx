@@ -26,7 +26,7 @@ export const Default = ({ showCSS }: { showCSS: boolean }) => (
     <br />
     {colors.map((name) => {
       const tokenValue = getTokenValue(name as TokenKeys);
-      const tokenCss = name.replace(/var\((.*)\).*/, "$1");
+      const tokenCss = tokenValue.replace(/var\((.*)\).*/, "$1");
       return (
         <div key={name} className="flex align-items-center" style={{ marginBottom: 24 }}>
           <div
@@ -41,7 +41,15 @@ export const Default = ({ showCSS }: { showCSS: boolean }) => (
           />
           <div>
             <Subtitle size="sm">{name}</Subtitle>
-            {showCSS && <Caption style={{ color: Tokens.ColorTextSecondary }}>{tokenCss}</Caption>}
+            {showCSS && (
+              <>
+                <Caption style={{ color: Tokens.ColorTextSecondary }}>{tokenCss}</Caption>
+                <br />
+                <Caption style={{ color: Tokens.ColorTextSecondary }}>
+                  {getComputedStyle(document.documentElement).getPropertyValue(tokenCss)}
+                </Caption>
+              </>
+            )}
           </div>
         </div>
       );

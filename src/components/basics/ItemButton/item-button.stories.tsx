@@ -4,6 +4,7 @@ import icons from "@/components/basics/Icon/lib";
 import { LabelThemes, LabelVariants } from "@/components/basics/Label";
 import { commonStoreComponentProps } from "@/services/stories";
 
+import { ICONS } from "@/configs/icons.config";
 import ItemButton from "./item-button.component";
 
 export default {
@@ -22,6 +23,8 @@ export default {
   },
 } as ComponentMeta<typeof ItemButton>;
 
+const ICON_NAME = ICONS.STORIES.DEFAULT;
+
 const Template: ComponentStory<typeof ItemButton> = (args) => (
   <ItemButton style={{ maxWidth: 320 }} {...args} />
 );
@@ -31,14 +34,14 @@ Default.args = {
   title: "Pix",
   subtitle: "R$ 297,90",
   label: "-15%",
-  iconName: "pix",
+  iconName: ICON_NAME,
   labelTheme: LabelThemes.Ghost,
   labelVariant: LabelVariants.Success,
 };
 
 export const NoLabel = Template.bind({});
 NoLabel.args = {
-  iconName: "google",
+  iconName: ICON_NAME,
   title: "Google Pay",
   subtitle: "Até 12x de R$ 28,23",
 };
@@ -52,7 +55,7 @@ export const WithLink = Template.bind({});
 WithLink.args = {
   caption: "Jornada #1",
   title: "Academia do Hábito",
-  iconName: "academia-do-habito",
+  iconName: ICON_NAME,
   href: "#",
   onClick: (event) => event.preventDefault(),
 };

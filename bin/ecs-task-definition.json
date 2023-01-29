@@ -17,7 +17,7 @@
       "entryPoint": [],
       "command": [],
       "linuxParameters": {
-           "initProcessEnabled": true
+        "initProcessEnabled": true
       },
       "environment": [],
       "secrets": [],      

@@ -8,6 +8,7 @@ import Card, { CardElevations } from "@/components/basics/Card";
 import ToggleButton from "@/components/basics/ToggleButton";
 import { hideIntercom } from "@/services/intercom";
 
+import { ICONS } from "@/configs/icons.config";
 import { ModalSizes } from "./modal.types";
 
 const Modal = ({
@@ -73,7 +74,7 @@ const Modal = ({
             {...props}
           >
             {closable && (
-              <ToggleButton iconName="close" onClick={handleClose} className="modal__close-icon" />
+              <ToggleButton iconName={ICONS.ACTIONS.CLOSE} onClick={handleClose} className="modal__close-icon" />
             )}
             <div className="modal__content">{children}</div>
           </Card>

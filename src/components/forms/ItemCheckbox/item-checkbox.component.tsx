@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import Icon from "@/components/basics/Icon";
 import Image from "@/components/basics/Image";
 import Text from "@/components/typographies/Text";
+import { ICONS } from "@/configs/icons.config";
 
 const ItemCheckbox = ({
   label,
@@ -38,7 +39,7 @@ const ItemCheckbox = ({
     onChange?.(!checked);
   };
 
-  const checkIcon = checked ? "checkmark-square" : "square";
+  const checkIcon = checked ? ICONS.FORMS.CHECKBOX_CHECKED : ICONS.FORMS.CHECKBOX_UNCHECKED;
 
   return (
     <label data-testid="item-checkbox" className={cn} {...props}>

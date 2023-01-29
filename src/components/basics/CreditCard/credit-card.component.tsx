@@ -21,7 +21,7 @@ const CreditCard = ({
   return (
     <div className={cn} {...props}>
       <div className="credit-card__header">
-        <Icon name="me-salva-mini" size={IconSizes.Medium} />
+        <Icon name="feather" size={IconSizes.Medium} />
         {iconName && <Icon name={iconName} size={IconSizes.XLarge} />}
       </div>
       <div className="credit-card__footer">

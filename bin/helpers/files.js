@@ -6,6 +6,10 @@ function saveFile(dir, fileName, content) {
   fs.writeFileSync(dest, content);
 }
 
+function readFile(path) {
+  return fs.readFileSync(path, "utf8");
+}
+
 function getFiles(dir, $files) {
   $files = $files || [];
   const files = fs.readdirSync(dir);
@@ -22,5 +26,6 @@ function getFiles(dir, $files) {
 
 module.exports = {
   getFiles,
+  readFile,
   saveFile,
 };

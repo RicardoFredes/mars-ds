@@ -1,10 +1,11 @@
-import type { AreaFieldProps } from "./area-field.types";
 import type { ChangeEvent, FocusEvent } from "react";
+import type { AreaFieldProps } from "./area-field.types";
 
 import classNames from "classnames";
-import { useRef, useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import Icon from "@/components/basics/Icon";
+import { ICONS } from "@/configs/icons.config";
 import { generateHash } from "@/services/hash";
 
 const AreaField = ({
@@ -80,7 +81,7 @@ const AreaField = ({
 
   const labelText = error ? `${label}*` : label;
   const helpText = error || info;
-  const statusIconName = error ? "alert-circle" : isSuccess ? "checkmark-circle" : undefined;
+  const statusIconName = error ? ICONS.STATUS.ERROR : isSuccess ? ICONS.STATUS.SUCCESS : undefined;
   return (
     <div className={cn}>
       <fieldset className="area-field__fieldset" onClick={handleClick}>

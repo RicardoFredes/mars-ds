@@ -2,6 +2,7 @@ import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import icons from "@/components/basics/Icon/lib";
 
+import { ICONS } from "@/configs/icons.config";
 import Button from "./button.component";
 import { ButtonSizes, ButtonVariants } from "./button.types";
 
@@ -78,6 +79,8 @@ export default {
   },
 } as ComponentMeta<typeof Button>;
 
+const ICON_NAME = ICONS.STORIES.DEFAULT;
+
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 const TemplateList: ComponentStory<typeof Button> = (args) => {
@@ -123,13 +126,13 @@ Disabled.args = {
 export const Icon = TemplateList.bind({});
 Icon.args = {
   ...DefaultArgs,
-  iconName: "me-salva-mini",
+  iconName: ICON_NAME,
 };
 
 export const IconSmallSize = TemplateList.bind({});
 IconSmallSize.args = {
   ...DefaultArgs,
-  iconName: "me-salva-mini",
+  iconName: ICON_NAME,
   size: ButtonSizes.Small,
 };
 
@@ -137,13 +140,13 @@ export const Anchor = TemplateList.bind({});
 Anchor.args = {
   ...DefaultArgs,
   onClick: (e) => e.preventDefault(),
-  href: "https://www.mesalva.com",
+  href: "https://www.google.com",
 };
 
 export const IconRight = TemplateList.bind({});
 IconRight.args = {
   ...DefaultArgs,
-  iconName: "me-salva-mini",
+  iconName: ICON_NAME,
   isRtl: true,
 };
 

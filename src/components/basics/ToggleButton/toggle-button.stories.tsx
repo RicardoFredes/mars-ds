@@ -3,6 +3,7 @@ import type { ComponentMeta, ComponentStory } from "@storybook/react";
 import { ButtonSizes } from "@/components/basics/Button";
 import icons from "@/components/basics/Icon/lib";
 
+import { ICONS } from "@/configs/icons.config";
 import ToggleButton from "./toggle-button.component";
 
 export default {
@@ -20,10 +21,11 @@ export default {
   },
 } as ComponentMeta<typeof ToggleButton>;
 
+const ICON_NAME = ICONS.STORIES.DEFAULT;
 const Template: ComponentStory<typeof ToggleButton> = (args) => <ToggleButton {...args} />;
 
 const DefaultArgs = {
-  iconName: "me-salva-mini",
+  iconName: ICON_NAME,
   size: ButtonSizes.Medium,
 };
 

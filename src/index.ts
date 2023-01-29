@@ -141,9 +141,6 @@ export * from "./components/basics/Skeleton/skeleton.types";
 export { default as Stepper } from "./components/basics/Stepper/stepper.component";
 export * from "./components/basics/Stepper/stepper.types";
 
-export { default as SubjectLabel } from "./components/basics/SubjectLabel/subject-label.component";
-export * from "./components/basics/SubjectLabel/subject-label.types";
-
 export { default as Tabs } from "./components/basics/Tabs/tabs.component";
 export * from "./components/basics/Tabs/tabs.types";
 

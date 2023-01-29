@@ -1,15 +1,15 @@
 a,
 .link {
   cursor: pointer;
-  text-decoration: none;
+  text-decoration: underline;
 
   &:hover {
-    text-decoration: underline;
+    text-decoration: none;
   }
 
   color: $color-primary-500;
   &:visited {
-    text-decoration: none;
+    text-decoration: underline;
     color: $color-primary-500;
   }
 }

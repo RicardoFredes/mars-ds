@@ -1,3 +1,4 @@
+import { ICONS } from "@/configs/icons.config";
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import ItemCheckbox from "./item-checkbox.component";
@@ -95,6 +96,8 @@ export default {
   },
 } as ComponentMeta<typeof ItemCheckbox>;
 
+const ICON_NAME = ICONS.STORIES.DEFAULT;
+
 const Template: ComponentStory<typeof ItemCheckbox> = (args) => <ItemCheckbox {...args} />;
 const TemplateMultiple: ComponentStory<typeof ItemCheckbox> = (args) => (
   <>
@@ -173,7 +176,7 @@ WithIconLeft.args = WithIconLeftArgs;
 
 const WithIconRightArgs = {
   ...DefaultArgs,
-  iconRight: "humanas",
+  iconRight: ICON_NAME,
   iconRightColor: "var(--color-humanas-500)",
 };
 

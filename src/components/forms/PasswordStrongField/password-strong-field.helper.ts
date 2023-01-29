@@ -1,19 +1,20 @@
+import { ICONS } from "@/configs/icons.config";
 import {
   validateCapitalLetters,
   validateMinCharacteres,
   validateNumbers,
-  validateSpecialCharacters,
+  validateSpecialCharacters
 } from "@/services/validate";
 import Tokens from "@/tokens";
 
 const ICON = {
   INVALID: {
     bulletColor: Tokens.ColorError500,
-    bulletIconName: "close",
+    bulletIconName: ICONS.STATUS.ERROR,
   },
   VALID: {
     bulletColor: Tokens.ColorSuccess500,
-    bulletIconName: "checkmark",
+    bulletIconName: ICONS.STATUS.SUCCESS,
   },
 };
 

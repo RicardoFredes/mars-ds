@@ -12,6 +12,7 @@ import Logo from "@/components/basics/Logo";
 import ToggleButton from "@/components/basics/ToggleButton";
 import Subtitle from "@/components/typographies/Subtitle";
 
+import { ICONS } from "@/configs/icons.config";
 import SidebarSkeleton from "./sidebar-skeleton.component";
 
 const Sidebar = ({
@@ -36,7 +37,7 @@ const Sidebar = ({
         </Link>
         <ToggleButton
           variant="text"
-          iconName="close"
+          iconName={ICONS.ACTIONS.CLOSE}
           className="sidebar__close"
           id="close-button"
           onClick={onCloseClick}

@@ -4,6 +4,7 @@ import classNames from "classnames";
 import { useState } from "react";
 import ClickOut from "react-simple-clickout";
 
+import { ICONS } from "@/configs/icons.config";
 import { CardElevations } from "../Card";
 import DropdownMenu from "../DropdownMenu";
 import ToggleButton from "../ToggleButton";
@@ -40,7 +41,7 @@ const ToggleDropdown = ({
     <div className={cn} {...props} onKeyDown={(e) => (e.key === "Escape" ? toggleOpen() : null)}>
       <ToggleButton
         title="Abrir mais opções para o item"
-        iconName="more-vertical"
+        iconName={ICONS.ACTIONS.MORE}
         size="sm"
         variant="text"
         {...toggleButton}

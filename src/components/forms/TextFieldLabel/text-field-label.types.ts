@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 
 import type { IconProps } from "@/components/basics/Icon";
-import type { LabelSubjectVariants, LabelVariants, LabelThemes } from "@/components/basics/Label";
+import type { LabelThemes, LabelVariants } from "@/components/basics/Label";
 
 export interface TextFieldLabelProps extends React.HTMLProps<HTMLInputElement> {
   error?: string | boolean;
@@ -13,5 +13,5 @@ export interface TextFieldLabelProps extends React.HTMLProps<HTMLInputElement> {
   dataKey?: string;
   inputDisabled?: boolean;
   theme?: LabelThemes;
-  variant?: LabelVariants | LabelSubjectVariants;
+  variant?: LabelVariants;
 }

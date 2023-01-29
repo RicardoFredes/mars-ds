@@ -224,6 +224,10 @@ export * from "./components/layouts/SectionBase/section-base.types";
 
 export { default as FileInput } from "./components/primitives/FileInput/file-input.component";
 export * from "./components/primitives/FileInput/file-input.types";
+
+export { default as LinkBase } from "./components/primitives/LinkBase/link-base.component";
+export * from "./components/primitives/LinkBase/link-base.context";
+export * from "./components/primitives/LinkBase/link-base.hooks";
 export * from "./components/primitives/LinkBase/link-base.types";
 
 export { default as TextBase } from "./components/primitives/TextBase/text-base.component";

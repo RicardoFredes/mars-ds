@@ -1,4 +1,10 @@
-export { default } from "./link-base.component";
-export * from "./link-base.context";
-export * from "./link-base.hooks";
-export type { LinkBaseComponent, LinkBaseProps } from "./link-base.types";
+/**
+ * WARNING!
+ * Do not change this file,
+ * because it is automatically generated
+ * run "yarn reindex" to update
+ */
+
+import LinkBase from "./link-base.component";
+export default LinkBase;
+export * from "./link-base.types";

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
-import { LinkBaseComponent, LinkContext } from "@/components/primitives/LinkBase";
+import { LinkBaseComponent } from "@/components/primitives/LinkBase";
+import { LinkContext } from "@/components/primitives/LinkBase/link-base.context";
 
 interface State {
   link: LinkBaseComponent | undefined;
@@ -13,7 +14,7 @@ export interface AppProviderProps {
   children?: React.ReactNode;
 }
 
-export class AppProvider extends Component<AppProviderProps, State> {
+class AppProvider extends Component<AppProviderProps, State> {
   constructor(props: AppProviderProps) {
     super(props);
     const { linkComponent } = this.props;
@@ -49,3 +50,5 @@ export class AppProvider extends Component<AppProviderProps, State> {
     return <LinkContext.Provider value={link}>{children}</LinkContext.Provider>;
   }
 }
+
+export default AppProvider;

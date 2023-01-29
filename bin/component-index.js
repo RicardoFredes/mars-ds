@@ -89,8 +89,8 @@ function getComponentsAndTypes(list = []) {
     if (/component\.tsx/.test(path)) {
       acc.push("");
       acc.push(`export { default as ${componentName} } from "${path.replace(".tsx", "")}";`);
-    } else if (/types\.ts/.test(path)) {
-      acc.push(`export * from "${path.replace(".ts", "")}";`);
+    } else if (/types|context|hooks\.tsx?/.test(path)) {
+      acc.push(`export * from "${path.replace(/\.tsx?/, "")}";`);
     }
 
     return acc;

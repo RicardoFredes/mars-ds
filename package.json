@@ -1,20 +1,20 @@
 {
-  "name": "@mesalva/mars",
-  "version": "1.0.0-alpha.174",
-  "description": "Mars is the Me Salva! uikit inspired on Material Design",
-  "repository": "github:mesalva/mars",
-  "author": "Me Salva! Devs <devs@mesalva.com>",
+  "name": "mars-ds",
+  "version": "1.0.0",
+  "description": "Mars is a React Design System",
+  "repository": "github:RicardoFredes/mars-ds",
   "license": "UNLICENSED",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
   "publishConfig": {
     "access": "restricted"
   },
+  "private": true,
   "files": [
     "dist"
   ],
   "engines": {
-    "node": ">= 14 <= 16",
+    "node": ">= 14",
     "yarn": ">= 1.22 < 2"
   },
   "scripts": {

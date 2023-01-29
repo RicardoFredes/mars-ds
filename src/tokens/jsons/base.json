@@ -22,27 +22,27 @@
     },
     "primary": {
       "100": {
-        "value": "#fee6d8",
+        "value": "hsl(176, 90%, 85%)",
         "type": "color"
       },
       "300": {
-        "value": "#f9a08e",
+        "value": "hsl(176, 90%, 65%)",
         "type": "color"
       },
       "500": {
-        "value": "#ed4343",
+        "value": "hsl(176, 90%, 38%)",
         "type": "color"
       },
       "700": {
-        "value": "#ab213a",
+        "value": "hsl(176, 90%, 20%)",
         "type": "color"
       },
       "900": {
-        "value": "#700c2e",
+        "value": "hsl(176, 90%, 5%)",
         "type": "color"
       },
       "ghost": {
-        "value": "#ed434329",
+        "value": "hsla(176, 90%, 38%, 20%)",
         "type": "color"
       }
     },
@@ -173,116 +173,6 @@
       },
       "ghost": {
         "value": "#919eab29",
-        "type": "color"
-      }
-    },
-    "matematica": {
-      "300": {
-        "value": "#da7005cc",
-        "type": "color"
-      },
-      "500": {
-        "value": "#da7005",
-        "type": "color"
-      },
-      "700": {
-        "value": "#bb5603",
-        "type": "color"
-      },
-      "ghost": {
-        "value": "#da700529",
-        "type": "color"
-      }
-    },
-    "natureza": {
-      "300": {
-        "value": "#7c9a2dcc",
-        "type": "color"
-      },
-      "500": {
-        "value": "#7c9a2d",
-        "type": "color"
-      },
-      "700": {
-        "value": "#4c7425",
-        "type": "color"
-      },
-      "ghost": {
-        "value": "#7c9a2d29",
-        "type": "color"
-      }
-    },
-    "humanas": {
-      "300": {
-        "value": "#50a0d2cc",
-        "type": "color"
-      },
-      "500": {
-        "value": "#50a0d2",
-        "type": "color"
-      },
-      "700": {
-        "value": "#1485a3",
-        "type": "color"
-      },
-      "ghost": {
-        "value": "#50a0d229",
-        "type": "color",
-        "description": "FEAC25"
-      }
-    },
-    "linguagens": {
-      "300": {
-        "value": "#825a96cc",
-        "type": "color"
-      },
-      "500": {
-        "value": "#825a96",
-        "type": "color"
-      },
-      "700": {
-        "value": "#703c87",
-        "type": "color"
-      },
-      "ghost": {
-        "value": "#825a9629",
-        "type": "color",
-        "description": "25C2FB"
-      }
-    },
-    "redacao": {
-      "300": {
-        "value": "#d29b00cc",
-        "type": "color"
-      },
-      "500": {
-        "value": "#d29b00",
-        "type": "color"
-      },
-      "700": {
-        "value": "#ca8b0f",
-        "type": "color"
-      },
-      "ghost": {
-        "value": "#d29b0029",
-        "type": "color"
-      }
-    },
-    "medicina": {
-      "300": {
-        "value": "#55a8a9cc",
-        "type": "color"
-      },
-      "500": {
-        "value": "#55a8a9",
-        "type": "color"
-      },
-      "700": {
-        "value": "#2e6b6b",
-        "type": "color"
-      },
-      "ghost": {
-        "value": "#55a8a929",
         "type": "color"
       }
     },

@@ -54,24 +54,6 @@
         "type": "color"
       }
     },
-    "primary": {
-      "100": {
-        "value": "#700c2e",
-        "type": "color"
-      },
-      "300": {
-        "value": "#ab213a",
-        "type": "color"
-      },
-      "700": {
-        "value": "#f9a08e",
-        "type": "color"
-      },
-      "900": {
-        "value": "#fee6d8",
-        "type": "color"
-      }
-    },
     "info": {
       "100": {
         "value": "#04297a",
@@ -159,66 +141,6 @@
       },
       "900": {
         "value": "#f4f6f8",
-        "type": "color"
-      }
-    },
-    "matematica": {
-      "300": {
-        "value": "#bb5603",
-        "type": "color"
-      },
-      "700": {
-        "value": "#da7005cc",
-        "type": "color"
-      }
-    },
-    "natureza": {
-      "300": {
-        "value": "#4c7425",
-        "type": "color"
-      },
-      "700": {
-        "value": "#7c9a2dcc",
-        "type": "color"
-      }
-    },
-    "humanas": {
-      "300": {
-        "value": "#1485a3",
-        "type": "color"
-      },
-      "700": {
-        "value": "#50a0d2cc",
-        "type": "color"
-      }
-    },
-    "linguagens": {
-      "300": {
-        "value": "#703c87",
-        "type": "color"
-      },
-      "700": {
-        "value": "#825a96cc",
-        "type": "color"
-      }
-    },
-    "redacao": {
-      "300": {
-        "value": "#ca8b0f",
-        "type": "color"
-      },
-      "700": {
-        "value": "#d29b00cc",
-        "type": "color"
-      }
-    },
-    "medicina": {
-      "300": {
-        "value": "#2e6b6b",
-        "type": "color"
-      },
-      "700": {
-        "value": "#55a8a9cc",
         "type": "color"
       }
     }

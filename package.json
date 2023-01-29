@@ -14,12 +14,12 @@
     "yarn": ">= 1.22 < 2"
   },
   "scripts": {
-    "component:new": "node bin/component-new",
-    "component:index": "node bin/component-index",
+    "component:new": "node scripts/component-new",
+    "component:index": "node scripts/component-index",
     "icons:build": "yarn icons:gen && yarn icons:index",
-    "icons:gen": "node bin/icons-generator",
-    "icons:index": "node bin/icons-index",
-    "tokens:build": "node bin/tokens-build",
+    "icons:gen": "node scripts/icons-generator",
+    "icons:index": "node scripts/icons-index",
+    "tokens:build": "node scripts/tokens-build",
     "start": "yarn storybook --no-open",
     "dev": "yarn storybook",
     "build": "rollup -c",
@@ -37,7 +37,8 @@
     "prepare": "",
     "prepublishOnly": "yarn build",
     "heroku-postbuild": "echo Skip build on Heroku",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "deploy:storybook": "sh scripts/deploy-storybook"
   },
   "resolutions": {
     "react": "^17.0.2",

@@ -2,13 +2,14 @@ import type { CheckboxProps } from "./checkbox.types";
 
 import { fireEvent, render } from "@testing-library/react";
 
+import { ICONS } from "@/configs/icons.config";
 import Checkbox from "./checkbox.component";
 
 const DATA_IDS = {
   label: "checkbox-label",
   input: "checkbox-input",
-  checkedIcon: "checkmark-square",
-  uncheckedIcon: "square",
+  checkedIcon: ICONS.FORMS.CHECKBOX_CHECKED,
+  uncheckedIcon: ICONS.FORMS.CHECKBOX_UNCHECKED,
   checkbox: "checkbox",
 };
 

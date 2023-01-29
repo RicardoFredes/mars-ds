@@ -2,6 +2,7 @@ import type { ConsoleListSubItemProps } from "./console-list-sub-item.types";
 
 import { render } from "@testing-library/react";
 
+import { ICONS } from "@/configs/icons.config";
 import ConsoleListSubItem from "./console-list-sub-item.component";
 
 const testId = "console-list-sub-item";
@@ -10,8 +11,8 @@ const defaultProps: ConsoleListSubItemProps = {
   title: "any_title",
 };
 
-const wrongIcon = "close";
-const correctIcon = "checkmark";
+const wrongIcon = ICONS.STATUS.INCORRECT;
+const correctIcon = ICONS.STATUS.CORRECT;
 
 const makeSut = (props?: ConsoleListSubItemProps) =>
   render(<ConsoleListSubItem {...defaultProps} {...props} />);

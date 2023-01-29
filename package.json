@@ -35,7 +35,7 @@
     "test:visual:approve": "yarn loki approve",
     "test:visual:ci": "build-storybook && loki --requireReference --reactUri file:./storybook-static",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "storybook:build": "build-storybook",
     "lint": "eslint --cache .",
     "lint:fix": "yarn lint --fix",
     "prepare": "",

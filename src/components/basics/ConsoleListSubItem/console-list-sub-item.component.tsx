@@ -4,6 +4,7 @@ import classNames from "classnames";
 
 import Icon from "@/components/basics/Icon";
 import Text from "@/components/typographies/Text";
+import { ICONS } from "@/configs/icons.config";
 
 const ConsoleListSubItem = ({
   title,
@@ -40,7 +41,7 @@ const ConsoleListSubItem = ({
       {showAnswer && (
         <Icon
           className="console-list-sub-item__answer-icon"
-          name={isCorrectAnswer ? "checkmark" : "close"}
+          name={isCorrectAnswer ? ICONS.STATUS.CORRECT : ICONS.STATUS.INCORRECT}
         />
       )}
     </Component>

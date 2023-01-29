@@ -1,15 +1,11 @@
 {
   "name": "mars-ds",
-  "version": "1.0.0.alpha.1",
+  "version": "1.0.0-alpha.1",
   "description": "Mars is a React Design System",
   "repository": "github:RicardoFredes/mars-ds",
   "license": "UNLICENSED",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
-  "publishConfig": {
-    "access": "restricted"
-  },
-  "private": true,
   "files": [
     "dist"
   ],

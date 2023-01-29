@@ -31,6 +31,10 @@ export default {
       control: { type: "boolean" },
       description: "Modifica o posicionamento do ícone para o lado direito.",
     },
+    isRounded: {
+      control: { type: "boolean" },
+      description: "Modifica o arredondamento do botão.",
+    },
     color: {
       control: { type: "text" },
       description: "Define a cor do texto do botão. Ex.: var(--color-text-primary)",
@@ -141,4 +145,10 @@ IconRight.args = {
   ...DefaultArgs,
   iconName: "me-salva-mini",
   isRtl: true,
+};
+
+export const Rounded = TemplateList.bind({});
+Rounded.args = {
+  ...DefaultArgs,
+  isRounded: true,
 };

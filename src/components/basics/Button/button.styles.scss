@@ -35,6 +35,9 @@ a.btn,
   &--is-rtl {
     direction: rtl;
   }
+  &--is-rounded {
+    border-radius: 999px;
+  }
   &--primary {
     background-color: $color-primary-500;
     color: $color-white;

@@ -30,4 +30,5 @@ export interface ButtonProps
   borderColor?: string;
   hoverBorderColor?: string;
   borderWidth?: string;
+  isRounded?: boolean;
 }

@@ -1,6 +1,6 @@
+import type { MouseEvent } from "react";
 import type { LinkProps } from "../Link";
 import type { ButtonProps } from "./button.types";
-import type { MouseEvent } from "react";
 
 import classNames from "classnames";
 import { useMemo, useState } from "react";
@@ -29,6 +29,7 @@ const Button = ({
   hoverBorderColor = borderColor,
   borderWidth = "none",
   style,
+  isRounded = false,
   ...props
 }: ButtonProps) => {
   const [isPressed, setIsPressed] = useState(false);
@@ -44,7 +45,12 @@ const Button = ({
     "btn",
     `btn--${variant}`,
     `btn--size-${size}`,
-    { "btn--is-disabled": props.disabled, "btn--is-pressed": isPressed, "btn--is-rtl": isRtl },
+    {
+      "btn--is-disabled": props.disabled,
+      "btn--is-pressed": isPressed,
+      "btn--is-rtl": isRtl,
+      "btn--is-rounded": isRounded,
+    },
     className
   );
 

@@ -1,0 +1,27 @@
+.auto-scroll {
+  overflow-x: auto;
+  margin-left: calc($spacing-xl * -1);
+  margin-right: calc($spacing-xl * -1);
+  text-align: center;
+  padding-left: $spacing-lg;
+  padding-right: $spacing-lg;
+  &__container {
+    text-align: initial;
+    display: inline-flex;
+    margin: 0 auto;
+  }
+  @media (min-width: $breakpoint-sm) {
+    margin-left: calc($spacing-lg * -1);
+    margin-right: calc($spacing-lg * -1);
+  }
+  @media (min-width: $breakpoint-lg) {
+    overflow-x: hidden;
+    &--draggable {
+      cursor: pointer;
+      user-select: none;
+    }
+    &--is-active {
+      cursor: grabbing;
+    }
+  }
+}

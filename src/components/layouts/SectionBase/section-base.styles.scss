@@ -1,0 +1,21 @@
+.section-base {
+  padding: $spacing-xl;
+  background-image: var(--background-image-left-sm), var(--background-image-right-sm), var(--background-image-center-sm);
+  background-position: left center, right center, center;
+  background-size: auto, auto, cover;
+  background-repeat: no-repeat;
+
+  @media (min-width: $breakpoint-sm) {
+    padding: calc($spacing-lg * 2) $spacing-lg;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    background-image: var(--background-image-left-md), var(--background-image-right-md), var(--background-image-center-md);
+    padding: calc($spacing-lg * 3) $spacing-lg;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    background-image: var(--background-image-left-lg), var(--background-image-right-lg), var(--background-image-center-lg);
+    padding: calc($spacing-lg * 4) $spacing-lg;
+  }
+}

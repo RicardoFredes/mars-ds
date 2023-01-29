@@ -1,12 +1,10 @@
-# Me Salva! MARS | Design System
-
-![Me Salva! Mars](https://user-images.githubusercontent.com/29892001/147158290-0af5b26e-fa73-45a1-8e6f-44a1a56fad01.png)
+# MARS Design System
 
 ![License](https://img.shields.io/static/v1?label=Licence&message=MIT&color=yellow)
 ![Build](https://img.shields.io/static/v1?label=Build&message=Success&color=lemon)
 ![Version](https://img.shields.io/static/v1?label=Version&message=1.0.0-alpha.174&color=orange)
 
-**Mars** é a nossa biblioteca de design system feita em React.js. Essa lib os principais componentes para os projetos do Me Salva!.
+**Mars** é a nossa biblioteca de design system feita em React.js.
 
 - [Documentação do MARS - Storybook](https://mars.mesalva.com)
 - [Projeto visual - Figma](https://www.figma.com/file/W48LS2jmdbpQ8l9h7FRgit/Me-Salva!-Design-System?node-id=822%3A22408)
@@ -30,13 +28,13 @@
 Para adicionar o Mars aos projetos, rode o seguinte comando:
 
 ```bash
-$ yarn add @mesalva/mars
+$ yarn add mars-ds
 ```
 
 Importando um componente e usando um Tokens:
 
 ```tsx
-import { Button, ButtonSizesEnum, Tokens } from "@mesalva/mars";
+import { Button, ButtonSizesEnum, Tokens } from "mars-ds";
 
 const MyExample = () => (
   <div style={{ backgroundColor: Tokens.ColorBackgroundNeutral }}>
@@ -53,7 +51,7 @@ Para rodar o projeto você precisa clonar a aplicação em usa máquina:
 
 ```bash
 # Clone este repositório
-$ git clone git@github.com:mesalva/mars.git
+$ git clone https://github.com/RicardoFredes/mars-ds.git
 
 # Acesse a pasta do projeto no terminal/cmd
 $ cd mars

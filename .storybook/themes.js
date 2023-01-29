@@ -34,10 +34,10 @@ export const light = create({
   inputBorderRadius: 8,
 
   // Branding
-  brandTitle: "Mars | Me Salva! Design System",
-  brandUrl: "https://github.com/mesalva/mars",
+  brandTitle: "Mars Design System",
+  brandUrl: "https://github.com/ricardofredes/mars-ds",
   brandImage:
-    "https://user-images.githubusercontent.com/29892001/147158290-0af5b26e-fa73-45a1-8e6f-44a1a56fad01.png",
+    "",
 
   // Grid
   gridCellSize: 8,

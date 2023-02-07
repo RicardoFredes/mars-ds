@@ -15,8 +15,8 @@ const IconCoffee = ({ height = 24, width = 24 }: IconLibProps) => (
   xmlns="http://www.w3.org/2000/svg"
   fill="none"
   stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
+  strokeWidth="2"
+  strokeLinecap="round"
   stroke-linejoin="round"
 >
   <path d="M18 8h1a4 4 0 0 1 0 8h-1" />

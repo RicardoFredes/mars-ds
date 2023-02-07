@@ -15,8 +15,8 @@ const IconMusic = ({ height = 24, width = 24 }: IconLibProps) => (
   xmlns="http://www.w3.org/2000/svg"
   fill="none"
   stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
+  strokeWidth="2"
+  strokeLinecap="round"
   stroke-linejoin="round"
 >
   <path d="M9 18V5l12-2v13" />

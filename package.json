@@ -1,6 +1,6 @@
 {
   "name": "mars-ds",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "description": "Mars is a React Design System",
   "repository": "github:RicardoFredes/mars-ds",
   "license": "UNLICENSED",
@@ -38,7 +38,7 @@
     "prepublishOnly": "yarn build",
     "heroku-postbuild": "echo Skip build on Heroku",
     "semantic-release": "semantic-release",
-    "deploy:storybook": "sh scripts/deploy-storybook"
+    "deploy:storybook": "sh scripts/deploy-storybook.sh"
   },
   "resolutions": {
     "react": "^17.0.2",

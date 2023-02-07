@@ -15,8 +15,8 @@ const IconPenTool = ({ height = 24, width = 24 }: IconLibProps) => (
   viewBox="0 0 24 24"
   fill="none"
   stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
+  strokeWidth="2"
+  strokeLinecap="round"
   stroke-linejoin="round"
 >
   <path d="M12 19l7-7 3 3-7 7-3-3z" />

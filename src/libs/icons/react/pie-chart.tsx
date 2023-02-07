@@ -15,8 +15,8 @@ const IconPieChart = ({ height = 24, width = 24 }: IconLibProps) => (
   viewBox="0 0 24 24"
   fill="none"
   stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
+  strokeWidth="2"
+  strokeLinecap="round"
   stroke-linejoin="round"
 >
   <path d="M21.21 15.89A10 10 0 1 1 8 2.83" />

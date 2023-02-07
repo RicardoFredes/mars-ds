@@ -15,8 +15,8 @@ const IconSlack = ({ height = 24, width = 24 }: IconLibProps) => (
   viewBox="0 0 24 24"
   fill="none"
   stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
+  strokeWidth="2"
+  strokeLinecap="round"
   stroke-linejoin="round"
 >
   <path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z" />

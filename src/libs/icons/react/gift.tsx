@@ -15,8 +15,8 @@ const IconGift = ({ height = 24, width = 24 }: IconLibProps) => (
   viewBox="0 0 24 24"
   fill="none"
   stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
+  strokeWidth="2"
+  strokeLinecap="round"
   stroke-linejoin="round"
 >
   <polyline points="20 12 20 22 4 22 4 12" />

@@ -31,7 +31,9 @@ function svgToReact(svgPath = "") {
 
   const svg = readFile(svgPath)
     .replace(/width=".*"/, "width={width}")
-    .replace(/height=".*"/, "height={height}");
+    .replace(/height=".*"/, "height={height}")
+    .replace("stroke-width", "strokeWidth")
+    .replace("-linecap", "Linecap");
   const reactComponent = `${WARNING}
   
 import type { IconLibProps } from "@/libs/icons/icons.types";

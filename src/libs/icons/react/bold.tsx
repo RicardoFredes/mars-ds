@@ -15,8 +15,8 @@ const IconBold = ({ height = 24, width = 24 }: IconLibProps) => (
   viewBox="0 0 24 24"
   fill="none"
   stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
+  strokeWidth="2"
+  strokeLinecap="round"
   stroke-linejoin="round"
 >
   <path d="M6 4h8a4 4 0 0 1 4 4 4 4 0 0 1-4 4H6z" />

@@ -15,8 +15,8 @@ const IconFigma = ({ height = 24, width = 24 }: IconLibProps) => (
   xmlns="http://www.w3.org/2000/svg"
   fill="none"
   stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
+  strokeWidth="2"
+  strokeLinecap="round"
   stroke-linejoin="round"
 >
   <path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z" />

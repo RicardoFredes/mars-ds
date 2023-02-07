@@ -17,7 +17,7 @@ const IconDownloadCloud = ({ height = 24, width = 24 }: IconLibProps) => (
   stroke="currentColor"
   strokeWidth="2"
   strokeLinecap="round"
-  stroke-linejoin="round"
+  strokeLinejoin="round"
 >
   <polyline points="8 17 12 21 16 17" />
   <line x1="12" y1="12" x2="12" y2="21" />

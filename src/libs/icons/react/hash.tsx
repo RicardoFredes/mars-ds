@@ -17,7 +17,7 @@ const IconHash = ({ height = 24, width = 24 }: IconLibProps) => (
   stroke="currentColor"
   strokeWidth="2"
   strokeLinecap="round"
-  stroke-linejoin="round"
+  strokeLinejoin="round"
 >
   <line x1="4" y1="9" x2="20" y2="9" />
   <line x1="4" y1="15" x2="20" y2="15" />

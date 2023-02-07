@@ -17,7 +17,7 @@ const IconLogIn = ({ height = 24, width = 24 }: IconLibProps) => (
   stroke="currentColor"
   strokeWidth="2"
   strokeLinecap="round"
-  stroke-linejoin="round"
+  strokeLinejoin="round"
 >
   <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
   <polyline points="10 17 15 12 10 7" />

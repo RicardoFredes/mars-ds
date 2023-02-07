@@ -17,7 +17,7 @@ const IconTv = ({ height = 24, width = 24 }: IconLibProps) => (
   stroke="currentColor"
   strokeWidth="2"
   strokeLinecap="round"
-  stroke-linejoin="round"
+  strokeLinejoin="round"
 >
   <rect x="2" y="7" width="20" height="15" rx="2" ry="2" />
   <polyline points="17 2 12 7 7 2" />

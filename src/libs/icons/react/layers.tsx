@@ -17,7 +17,7 @@ const IconLayers = ({ height = 24, width = 24 }: IconLibProps) => (
   stroke="currentColor"
   strokeWidth="2"
   strokeLinecap="round"
-  stroke-linejoin="round"
+  strokeLinejoin="round"
 >
   <polygon points="12 2 2 7 12 12 22 7 12 2" />
   <polyline points="2 17 12 22 22 17" />

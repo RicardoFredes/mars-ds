@@ -17,7 +17,7 @@ const IconGitBranch = ({ height = 24, width = 24 }: IconLibProps) => (
   stroke="currentColor"
   strokeWidth="2"
   strokeLinecap="round"
-  stroke-linejoin="round"
+  strokeLinejoin="round"
 >
   <line x1="6" y1="3" x2="6" y2="15" />
   <circle cx="18" cy="6" r="3" />

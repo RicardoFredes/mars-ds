@@ -17,7 +17,7 @@ const IconNavigation = ({ height = 24, width = 24 }: IconLibProps) => (
   stroke="currentColor"
   strokeWidth="2"
   strokeLinecap="round"
-  stroke-linejoin="round"
+  strokeLinejoin="round"
 >
   <polygon points="3 11 22 2 13 21 11 13 3 11" />
 </svg>

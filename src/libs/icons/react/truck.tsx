@@ -17,7 +17,7 @@ const IconTruck = ({ height = 24, width = 24 }: IconLibProps) => (
   stroke="currentColor"
   strokeWidth="2"
   strokeLinecap="round"
-  stroke-linejoin="round"
+  strokeLinejoin="round"
 >
   <rect x="1" y="3" width="15" height="13" />
   <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />

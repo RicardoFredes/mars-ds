@@ -17,7 +17,7 @@ const IconBellOff = ({ height = 24, width = 24 }: IconLibProps) => (
   stroke="currentColor"
   strokeWidth="2"
   strokeLinecap="round"
-  stroke-linejoin="round"
+  strokeLinejoin="round"
 >
   <path d="M13.73 21a2 2 0 0 1-3.46 0" />
   <path d="M18.63 13A17.89 17.89 0 0 1 18 8" />

@@ -17,7 +17,7 @@ const IconGitPullRequest = ({ height = 24, width = 24 }: IconLibProps) => (
   stroke="currentColor"
   strokeWidth="2"
   strokeLinecap="round"
-  stroke-linejoin="round"
+  strokeLinejoin="round"
 >
   <circle cx="18" cy="18" r="3" />
   <circle cx="6" cy="6" r="3" />

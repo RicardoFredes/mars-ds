@@ -17,7 +17,7 @@ const IconCpu = ({ height = 24, width = 24 }: IconLibProps) => (
   stroke="currentColor"
   strokeWidth="2"
   strokeLinecap="round"
-  stroke-linejoin="round"
+  strokeLinejoin="round"
 >
   <rect x="4" y="4" width="16" height="16" rx="2" ry="2" />
   <rect x="9" y="9" width="6" height="6" />

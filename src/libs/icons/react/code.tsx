@@ -17,7 +17,7 @@ const IconCode = ({ height = 24, width = 24 }: IconLibProps) => (
   stroke="currentColor"
   strokeWidth="2"
   strokeLinecap="round"
-  stroke-linejoin="round"
+  strokeLinejoin="round"
 >
   <polyline points="16 18 22 12 16 6" />
   <polyline points="8 6 2 12 8 18" />

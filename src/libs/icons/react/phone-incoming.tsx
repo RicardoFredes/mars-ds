@@ -17,7 +17,7 @@ const IconPhoneIncoming = ({ height = 24, width = 24 }: IconLibProps) => (
   stroke="currentColor"
   strokeWidth="2"
   strokeLinecap="round"
-  stroke-linejoin="round"
+  strokeLinejoin="round"
 >
   <polyline points="16 2 16 8 22 8" />
   <line x1="23" y1="1" x2="16" y2="8" />

@@ -17,7 +17,7 @@ const IconMusic = ({ height = 24, width = 24 }: IconLibProps) => (
   stroke="currentColor"
   strokeWidth="2"
   strokeLinecap="round"
-  stroke-linejoin="round"
+  strokeLinejoin="round"
 >
   <path d="M9 18V5l12-2v13" />
   <circle cx="6" cy="18" r="3" />

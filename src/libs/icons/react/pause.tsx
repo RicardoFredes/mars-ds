@@ -17,7 +17,7 @@ const IconPause = ({ height = 24, width = 24 }: IconLibProps) => (
   stroke="currentColor"
   strokeWidth="2"
   strokeLinecap="round"
-  stroke-linejoin="round"
+  strokeLinejoin="round"
 >
   <rect x="6" y="4" width="4" height="16" />
   <rect x="14" y="4" width="4" height="16" />

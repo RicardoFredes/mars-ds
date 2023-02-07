@@ -17,7 +17,7 @@ const IconAlignRight = ({ height = 24, width = 24 }: IconLibProps) => (
   stroke="currentColor"
   strokeWidth="2"
   strokeLinecap="round"
-  stroke-linejoin="round"
+  strokeLinejoin="round"
 >
   <line x1="21" y1="10" x2="7" y2="10" />
   <line x1="21" y1="6" x2="3" y2="6" />

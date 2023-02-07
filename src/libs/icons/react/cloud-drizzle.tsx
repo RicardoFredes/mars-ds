@@ -17,7 +17,7 @@ const IconCloudDrizzle = ({ height = 24, width = 24 }: IconLibProps) => (
   stroke="currentColor"
   strokeWidth="2"
   strokeLinecap="round"
-  stroke-linejoin="round"
+  strokeLinejoin="round"
 >
   <line x1="8" y1="19" x2="8" y2="21" />
   <line x1="8" y1="13" x2="8" y2="15" />

@@ -17,7 +17,7 @@ const IconSpeaker = ({ height = 24, width = 24 }: IconLibProps) => (
   stroke="currentColor"
   strokeWidth="2"
   strokeLinecap="round"
-  stroke-linejoin="round"
+  strokeLinejoin="round"
 >
   <rect x="4" y="2" width="16" height="20" rx="2" ry="2" />
   <circle cx="12" cy="14" r="4" />

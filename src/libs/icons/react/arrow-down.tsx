@@ -17,7 +17,7 @@ const IconArrowDown = ({ height = 24, width = 24 }: IconLibProps) => (
   stroke="currentColor"
   strokeWidth="2"
   strokeLinecap="round"
-  stroke-linejoin="round"
+  strokeLinejoin="round"
 >
   <line x1="12" y1="5" x2="12" y2="19" />
   <polyline points="19 12 12 19 5 12" />

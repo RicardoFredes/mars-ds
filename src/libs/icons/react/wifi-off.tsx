@@ -17,7 +17,7 @@ const IconWifiOff = ({ height = 24, width = 24 }: IconLibProps) => (
   stroke="currentColor"
   strokeWidth="2"
   strokeLinecap="round"
-  stroke-linejoin="round"
+  strokeLinejoin="round"
 >
   <line x1="1" y1="1" x2="23" y2="23" />
   <path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55" />

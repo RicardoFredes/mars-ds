@@ -17,7 +17,7 @@ const IconUploadCloud = ({ height = 24, width = 24 }: IconLibProps) => (
   stroke="currentColor"
   strokeWidth="2"
   strokeLinecap="round"
-  stroke-linejoin="round"
+  strokeLinejoin="round"
 >
   <polyline points="16 16 12 12 8 16" />
   <line x1="12" y1="12" x2="12" y2="21" />

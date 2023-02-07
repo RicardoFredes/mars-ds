@@ -17,7 +17,7 @@ const IconCornerUpLeft = ({ height = 24, width = 24 }: IconLibProps) => (
   stroke="currentColor"
   strokeWidth="2"
   strokeLinecap="round"
-  stroke-linejoin="round"
+  strokeLinejoin="round"
 >
   <polyline points="9 14 4 9 9 4" />
   <path d="M20 20v-7a4 4 0 0 0-4-4H4" />

@@ -17,7 +17,7 @@ const IconRefreshCcw = ({ height = 24, width = 24 }: IconLibProps) => (
   stroke="currentColor"
   strokeWidth="2"
   strokeLinecap="round"
-  stroke-linejoin="round"
+  strokeLinejoin="round"
 >
   <polyline points="1 4 1 10 7 10" />
   <polyline points="23 20 23 14 17 14" />

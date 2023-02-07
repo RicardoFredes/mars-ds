@@ -17,7 +17,7 @@ const IconAnchor = ({ height = 24, width = 24 }: IconLibProps) => (
   stroke="currentColor"
   strokeWidth="2"
   strokeLinecap="round"
-  stroke-linejoin="round"
+  strokeLinejoin="round"
 >
   <circle cx="12" cy="5" r="3" />
   <line x1="12" y1="22" x2="12" y2="8" />

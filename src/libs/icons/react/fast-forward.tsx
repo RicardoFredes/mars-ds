@@ -17,7 +17,7 @@ const IconFastForward = ({ height = 24, width = 24 }: IconLibProps) => (
   stroke="currentColor"
   strokeWidth="2"
   strokeLinecap="round"
-  stroke-linejoin="round"
+  strokeLinejoin="round"
 >
   <polygon points="13 19 22 12 13 5 13 19" />
   <polygon points="2 19 11 12 2 5 2 19" />

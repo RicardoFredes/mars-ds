@@ -17,7 +17,7 @@ const IconSliders = ({ height = 24, width = 24 }: IconLibProps) => (
   stroke="currentColor"
   strokeWidth="2"
   strokeLinecap="round"
-  stroke-linejoin="round"
+  strokeLinejoin="round"
 >
   <line x1="4" y1="21" x2="4" y2="14" />
   <line x1="4" y1="10" x2="4" y2="3" />

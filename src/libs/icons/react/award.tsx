@@ -17,7 +17,7 @@ const IconAward = ({ height = 24, width = 24 }: IconLibProps) => (
   stroke="currentColor"
   strokeWidth="2"
   strokeLinecap="round"
-  stroke-linejoin="round"
+  strokeLinejoin="round"
 >
   <circle cx="12" cy="8" r="7" />
   <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />

@@ -17,7 +17,7 @@ const IconWatch = ({ height = 24, width = 24 }: IconLibProps) => (
   stroke="currentColor"
   strokeWidth="2"
   strokeLinecap="round"
-  stroke-linejoin="round"
+  strokeLinejoin="round"
 >
   <circle cx="12" cy="12" r="7" />
   <polyline points="12 9 12 12 13.5 13.5" />

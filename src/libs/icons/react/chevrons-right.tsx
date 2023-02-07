@@ -17,7 +17,7 @@ const IconChevronsRight = ({ height = 24, width = 24 }: IconLibProps) => (
   stroke="currentColor"
   strokeWidth="2"
   strokeLinecap="round"
-  stroke-linejoin="round"
+  strokeLinejoin="round"
 >
   <polyline points="13 17 18 12 13 7" />
   <polyline points="6 17 11 12 6 7" />

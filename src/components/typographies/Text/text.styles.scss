@@ -2,7 +2,7 @@ p,
 .text {
   $factor: 3.25vw;
   line-height: 1.5em;
-  font-weight: 400;
+  font-weight: $font-weights-main-regular;
   font-size: 0.875em; // 14px
   font-size: clamp(0.875em, $factor, 1rem);
   @media (min-width: $breakpoint-lg) {
@@ -14,6 +14,13 @@ p,
       font-size: clamp(0.75em, $factor, 0.875rem);
       @media (min-width: $breakpoint-lg) {
         font-size: 0.875em; // 14px
+      }
+    }
+    &-lg {
+      font-size: 1em; // 16px
+      font-size: clamp(1em, $factor, 1.25rem);
+      @media (min-width: $breakpoint-lg) {
+        font-size: 1.25em; // 18px
       }
     }
   }

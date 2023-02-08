@@ -1,10 +1,10 @@
 .display {
   $factor: 3vw;
-  font-family: $font-family-acent;
+  font-family: $font-family-accent;
   font-size: 1.5rem;
   font-size: clamp(1.5rem, $factor, 2rem);
   line-height: 1.3em;
-  font-weight: 600;
+  font-weight: $font-weights-accent-medium;
   &--size {
     &-md {
       font-size: 1.8rem;

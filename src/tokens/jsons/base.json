@@ -22,15 +22,15 @@
     },
     "primary": {
       "100": {
-        "value": "hsl(176, 90%, 85%)",
+        "value": "hsl(176, 90%, 75%)",
         "type": "color"
       },
       "300": {
-        "value": "hsl(176, 90%, 65%)",
+        "value": "hsl(176, 90%, 60%)",
         "type": "color"
       },
       "500": {
-        "value": "hsl(176, 90%, 38%)",
+        "value": "hsl(176, 90%, 35%)",
         "type": "color"
       },
       "700": {
@@ -38,11 +38,37 @@
         "type": "color"
       },
       "900": {
-        "value": "hsl(176, 90%, 5%)",
+        "value": "hsl(176, 90%, 10%)",
         "type": "color"
       },
       "ghost": {
         "value": "hsla(176, 90%, 38%, 20%)",
+        "type": "color"
+      }
+    },
+    "secondary": {
+      "100": {
+        "value": "hsl(215, 55%, 75%)",
+        "type": "color"
+      },
+      "300": {
+        "value": "hsl(215, 55%, 60%)",
+        "type": "color"
+      },
+      "500": {
+        "value": "hsl(215, 55%, 25%)",
+        "type": "color"
+      },
+      "700": {
+        "value": "hsl(215, 55%, 20%)",
+        "type": "color"
+      },
+      "900": {
+        "value": "hsl(215, 55%, 10%)",
+        "type": "color"
+      },
+      "ghost": {
+        "value": "hsla(215, 55%, 38%, 20%)",
         "type": "color"
       }
     },
@@ -233,68 +259,6 @@
         "value": "#919eab3d",
         "type": "color"
       }
-    },
-    "bullet": {
-      "pontuacao": {
-        "500":{
-          "value": "#39589F",
-          "type": "color"
-        },
-        "ghost": {
-          "value": "rgba(57, 88, 159, 0.64)",
-          "type": "color"
-        }
-      },
-      "semantica": {
-        "500":{
-          "value": "#36BE36",
-          "type": "color"
-        },
-        "ghost": {
-          "value": "rgba(54, 190, 54, 0.64)",
-          "type": "color"
-        }
-      },
-      "ortografia": {
-        "500":{
-          "value": "#ED9043",
-          "type": "color"
-        },
-        "ghost": {
-          "value": "rgba(237, 144, 67, 0.64)",
-          "type": "color"
-        }
-      },
-      "concordancia": {
-        "500":{
-          "value": "#543BA3",
-          "type": "color"
-        },
-        "ghost": {
-          "value": "rgba(84, 59, 163, 0.64)",
-          "type": "color"
-        }
-      },
-      "regencia": {
-        "500":{
-          "value": "#EDD043",
-          "type": "color"
-        },
-        "ghost": {
-          "value": "rgba(237, 208, 67, 0.64)",
-          "type": "color"
-        }
-      },
-      "diverso": {
-        "500":{
-          "value": "#ED4343",
-          "type": "color"
-        },
-        "ghost": {
-          "value": "rgba(237, 67, 67, 0.64)",
-          "type": "color"
-        }
-      }
     }
   },
   "text": {
@@ -352,10 +316,10 @@
     },
     "list": {
       "fontFamily": {
-        "value": "{font-family.acent}"
+        "value": "{font-family.accent}"
       },
       "fontWeight": {
-        "value": "{font-weights.acent.bold}"
+        "value": "{font-weights.accent.bold}"
       },
       "lineHeight": {
         "value": "$lineHeights.md"
@@ -365,32 +329,6 @@
       },
       "letterSpacing": {
         "value": "$letterSpacing.1"
-      },
-      "paragraphSpacing": {
-        "value": "$paragraphSpacing.0"
-      },
-      "textCase": {
-        "value": "$textCase.none"
-      },
-      "textDecoration": {
-        "value": "$textDecoration.none"
-      }
-    },
-    "test": {
-      "fontFamily": {
-        "value": "{font-family.main}"
-      },
-      "fontWeight": {
-        "value": "{font-weights.main.regular}"
-      },
-      "lineHeight": {
-        "value": "$lineHeights.lg"
-      },
-      "fontSize": {
-        "value": "{fontSize.main}"
-      },
-      "letterSpacing": {
-        "value": "$letterSpacing.2"
       },
       "paragraphSpacing": {
         "value": "$paragraphSpacing.0"
@@ -431,10 +369,10 @@
     "display": {
       "lg": {
         "fontFamily": {
-          "value": "{font-family.acent}"
+          "value": "{font-family.accent}"
         },
         "fontWeight": {
-          "value": "{font-weights.acent.semibold}"
+          "value": "{font-weights.accent.semibold}"
         },
         "lineHeight": {
           "value": "$lineHeights.xs"
@@ -457,10 +395,10 @@
       },
       "md": {
         "fontFamily": {
-          "value": "{font-family.acent}"
+          "value": "{font-family.accent}"
         },
         "fontWeight": {
-          "value": "{font-weights.acent.semibold}"
+          "value": "{font-weights.accent.semibold}"
         },
         "lineHeight": {
           "value": "$lineHeights.sm"
@@ -485,10 +423,10 @@
     "heading": {
       "lg": {
         "fontFamily": {
-          "value": "{font-family.acent}"
+          "value": "{font-family.accent}"
         },
         "fontWeight": {
-          "value": "{font-weights.acent.extrabold}"
+          "value": "{font-weights.accent.extrabold}"
         },
         "lineHeight": {
           "value": "$lineHeights.md"
@@ -511,10 +449,10 @@
       },
       "md": {
         "fontFamily": {
-          "value": "{font-family.acent}"
+          "value": "{font-family.accent}"
         },
         "fontWeight": {
-          "value": "{font-weights.acent.extrabold}"
+          "value": "{font-weights.accent.extrabold}"
         },
         "lineHeight": {
           "value": "$lineHeights.md"
@@ -537,10 +475,10 @@
       },
       "sm": {
         "fontFamily": {
-          "value": "{font-family.acent}"
+          "value": "{font-family.accent}"
         },
         "fontWeight": {
-          "value": "{font-weights.acent.extrabold}"
+          "value": "{font-weights.accent.extrabold}"
         },
         "lineHeight": {
           "value": "$lineHeights.md"
@@ -563,10 +501,10 @@
       },
       "xs": {
         "fontFamily": {
-          "value": "{font-family.acent}"
+          "value": "{font-family.accent}"
         },
         "fontWeight": {
-          "value": "{font-weights.acent.extrabold}"
+          "value": "{font-weights.accent.extrabold}"
         },
         "lineHeight": {
           "value": "$lineHeights.md"
@@ -702,7 +640,7 @@
           "value": "{font-family.main}"
         },
         "fontWeight": {
-          "value": "{font-weights.main.bold}"
+          "value": "{font-weights.main.regular}"
         },
         "lineHeight": {
           "value": "$lineHeights.cta"
@@ -756,7 +694,7 @@
       "value": "'Baloo 2', sans-serif",
       "type": "fontFamilies"
     },
-    "acent": {
+    "accent": {
       "value": "Comfortaa, sans-serif",
       "type": "fontFamilies"
     }
@@ -764,29 +702,29 @@
   "font-weights": {
     "main": {
       "bold": {
-        "value": "700",
+        "value": "600",
+        "type": "fontWeights"
+      },
+      "medium": {
+        "value": "400",
         "type": "fontWeights"
       },
       "regular": {
-        "value": "400",
+        "value": "300",
+        "type": "fontWeights"
+      }
+    },
+    "accent": {
+      "bold": {
+        "value": "700",
         "type": "fontWeights"
       },
       "medium": {
         "value": "500",
         "type": "fontWeights"
-      }
-    },
-    "acent": {
-      "bold": {
-        "value": "700",
-        "type": "fontWeights"
       },
-      "semibold": {
-        "value": "600",
-        "type": "fontWeights"
-      },
-      "extrabold": {
-        "value": "800",
+      "regular": {
+        "value": "400",
         "type": "fontWeights"
       }
     }

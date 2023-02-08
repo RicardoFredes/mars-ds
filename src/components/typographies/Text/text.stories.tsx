@@ -50,6 +50,12 @@ Small.args = {
   size: TextSizes.Small,
 };
 
+export const Large = Template.bind({});
+Large.args = {
+  ...DefaultArgs,
+  size: TextSizes.Large,
+};
+
 export const WithHtml = Template.bind({});
 WithHtml.args = {
   ...DefaultArgs,

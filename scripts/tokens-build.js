@@ -17,6 +17,7 @@ const TOKEN_TYPES = {
   SHADOW: "boxShadow",
   FONT_FAMILY: "fontFamilies",
   FONT_SIZE: "fontSizes",
+  FONT_WEIGHT: "fontWeights",
   RADIUS: "borderRadius",
   SPACING: "spacing",
 };
@@ -123,6 +124,7 @@ function valueExtractor(name, { value, type }) {
   if (type === TOKEN_TYPES.SHADOW) return { name, value: getShadowValue(value) };
   if (type === TOKEN_TYPES.FONT_FAMILY) return { name, value };
   if (type === TOKEN_TYPES.FONT_SIZE) return { name, value: getValueUnit(value) };
+  if (type === TOKEN_TYPES.FONT_WEIGHT) return { name, value };
   if (type === TOKEN_TYPES.RADIUS) return { name, value: getValueUnit(value, true) };
   if (type === TOKEN_TYPES.SPACING) return { name, value: getValueUnit(value, true) };
   return { name, value: "" };

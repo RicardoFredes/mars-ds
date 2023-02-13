@@ -6,7 +6,7 @@
 
 **Mars** é a nossa biblioteca de design system feita em React.js.
 
-- [Documentação do MARS - Storybook](https://mars.mesalva.com)
+- [Documentação do DS MARS - Storybook]([https://mars.mesalva.com](https://ricardofredes.github.io/mars-ds))
 - [Projeto visual - Figma](https://www.figma.com/file/W48LS2jmdbpQ8l9h7FRgit/Me-Salva!-Design-System?node-id=822%3A22408)
 
 # Tabela de Conteúdo

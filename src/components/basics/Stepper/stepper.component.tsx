@@ -3,7 +3,7 @@ import type { StepperProps } from "./stepper.types";
 import classNames from "classnames";
 
 import Icon from "@/components/basics/Icon";
-import Subtitle, { SubtitleSizes } from "@/components/typographies/Subtitle";
+import Heading, { HeadingSizes } from "@/components/typographies/Heading";
 
 const Stepper = ({ steps, position = 0, className, ...props }: StepperProps) => {
   const cn = classNames("stepper", className);
@@ -14,8 +14,8 @@ const Stepper = ({ steps, position = 0, className, ...props }: StepperProps) => 
         const isActive = stepPosition === position;
         const isDone = stepPosition < position;
         return (
-          <Subtitle
-            size={SubtitleSizes.Small}
+          <Heading
+            size={HeadingSizes.Small}
             as="div"
             key={stepPosition}
             className={classNames("stepper__item", {
@@ -31,7 +31,7 @@ const Stepper = ({ steps, position = 0, className, ...props }: StepperProps) => 
               )}
             </div>
             <div className="stepper__label">{label}</div>
-          </Subtitle>
+          </Heading>
         );
       })}
     </div>

@@ -8,7 +8,7 @@ const AccordionHeaderDefault = ({ title }: { title?: string | HeadingProps }) =>
     <div className="accordion__header-container">
       {title &&
         (typeof title === "string" ? (
-          <Heading level={3} size={HeadingSizes.XSmall} className="accordion-header__title">
+          <Heading level={3} size={HeadingSizes.Small} className="accordion-header__title">
             {title}
           </Heading>
         ) : (

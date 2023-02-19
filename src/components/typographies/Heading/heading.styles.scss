@@ -1,33 +1,54 @@
 .heading {
   $factor: 3.25vw;
   font-family: $font-family-accent;
-  line-height: 1.5em;
+  line-height: 1.2em;
   font-weight: $font-weights-accent-regular;
-  font-size: 2rem; // 32px
   &--size {
+    &-xxs {
+      font-size: 1rem;
+      @media (min-width: $breakpoint-lg) {
+        font-size: 1.125rem;
+      }
+    }
     &-xs {
       font-size: 1.125rem;
       @media (min-width: $breakpoint-lg) {
-        font-size: 1.2rem;
+        font-size: 1.25rem;
       }
     }
     &-sm {
       font-size: 1.25rem;
+      font-size: clamp(1.25rem, $factor, 1.5rem);
       @media (min-width: $breakpoint-lg) {
-        font-size: 1.35rem;
+        font-size: 1.5rem;
       }
     }
     &-md {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
+      font-size: clamp(1.4rem, $factor, 1.75rem);
       @media (min-width: $breakpoint-lg) {
-        font-size: 1.6rem;
+        font-size: 1.75rem;
       }
     }
     &-lg {
-      font-size: 1.6rem;
-      font-size: clamp(1.6rem, $factor, 2rem);
+      font-size: 1.375rem;
+      font-size: clamp(1.375rem, $factor, 2rem);
       @media (min-width: $breakpoint-lg) {
         font-size: 2rem;
+      }
+    }
+    &-xl {
+      font-size: 1.5rem;
+      font-size: clamp(1.5rem, $factor, 2.5rem);
+      @media (min-width: $breakpoint-lg) {
+        font-size: 2.5rem;
+      }
+    }
+    &-xxl {
+      font-size: 1.75rem;
+      font-size: clamp(1.75rem, $factor, 3rem);
+      @media (min-width: $breakpoint-lg) {
+        font-size: 3rem;
       }
     }
   }

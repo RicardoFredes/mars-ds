@@ -2,12 +2,8 @@ import type { TextBaseProps } from "../../primitives/TextBase";
 
 import { Sizes } from "@/types";
 
-const { Small, Medium, Large } = Sizes;
+const { XSmall, Small, Medium, Large, XLarge, XXLarge } = Sizes;
 
-export const TextSizes = {
-  Small,
-  Medium,
-  Large,
-};
+export const TextSizes = { XSmall, Small, Medium, Large, XLarge, XXLarge };
 
 export type TextProps = TextBaseProps & { size?: typeof TextSizes[keyof typeof TextSizes] };

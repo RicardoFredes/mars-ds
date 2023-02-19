@@ -7,7 +7,7 @@ import Image from "@/components/basics/Image";
 import Label from "@/components/basics/Label";
 import Link from "@/components/basics/Link";
 import Caption from "@/components/typographies/Caption";
-import Subtitle from "@/components/typographies/Subtitle";
+import Heading from "@/components/typographies/Heading";
 import Tokens from "@/tokens";
 
 const ItemButton = ({
@@ -35,7 +35,9 @@ const ItemButton = ({
       <ItemButtonImage image={image} title={title} />
       <div className="item-button__texts">
         {caption && <Caption className="item-button__texts-caption">{caption}</Caption>}
-        <Subtitle className="item-button__texts-title">{title}</Subtitle>
+        <Heading size="sm" className="item-button__texts-title">
+          {title}
+        </Heading>
         {subtitle && <Caption className="item-button__texts-caption">{subtitle}</Caption>}
       </div>
       {label && (

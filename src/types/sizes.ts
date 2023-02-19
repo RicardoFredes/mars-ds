@@ -1,5 +1,5 @@
 export const Sizes = {
-  XXSmalll: "xxs",
+  XXSmall: "xxs",
   XSmall: "xs",
   Small: "sm",
   Medium: "md",

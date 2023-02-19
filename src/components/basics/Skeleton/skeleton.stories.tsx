@@ -1,6 +1,6 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import Subtitle from "@/components/typographies/Subtitle";
+import Heading from "@/components/typographies/Heading";
 import Text from "@/components/typographies/Text";
 
 import Avatar from "../Avatar";
@@ -70,7 +70,7 @@ export const ExampleOfUsage: ComponentStory<typeof Skeleton> = (args) => (
       />
     </Skeleton>
     <Skeleton className="mb-lg" {...DefaultArgs} height={24} active={args.active}>
-      <Subtitle>Atualize o seu perfil</Subtitle>
+      <Heading size="sm">Atualize o seu perfil</Heading>
     </Skeleton>
     <Skeleton className="mb-lg" {...Paragraph.args} active={args.active}>
       <Text size="sm">

@@ -1,5 +1,5 @@
 import Caption from "@/components/typographies/Caption";
-import Subtitle from "@/components/typographies/Subtitle";
+import Heading from "@/components/typographies/Heading";
 
 import Tokens from ".";
 
@@ -22,7 +22,7 @@ const getTokenValue = (name: TokenKeys) => {
 
 export const Default = ({ showCSS }: { showCSS: boolean }) => (
   <div>
-    <Subtitle>Tokens das cores</Subtitle>
+    <Heading>Tokens das cores</Heading>
     <br />
     {colors.map((name) => {
       const tokenValue = getTokenValue(name as TokenKeys);
@@ -40,7 +40,7 @@ export const Default = ({ showCSS }: { showCSS: boolean }) => (
             }}
           />
           <div>
-            <Subtitle size="sm">{name}</Subtitle>
+            <Heading size="sm">{name}</Heading>
             {showCSS && (
               <>
                 <Caption style={{ color: Tokens.ColorTextSecondary }}>{tokenCss}</Caption>

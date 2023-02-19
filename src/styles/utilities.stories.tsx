@@ -1,5 +1,5 @@
 import Caption from "@/components/typographies/Caption";
-import Subtitle from "@/components/typographies/Subtitle";
+import Heading from "@/components/typographies/Heading";
 import Text, { TextSizes } from "@/components/typographies/Text";
 import Tokens from "@/tokens";
 
@@ -84,7 +84,9 @@ const getVariations = (prefix: string, sizes: string[] = xSizes, list: string[] 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const ClassList = ({ list = [] }: { list: any[] }) => (
   <div>
-    <Subtitle className="mb-sm">Classes:</Subtitle>
+    <Heading size="sm" className="mb-sm">
+      Classes:
+    </Heading>
     {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
     {list.map((group: any[], key) => (
       <Text key={key} size={TextSizes.Small}>
@@ -109,7 +111,7 @@ const List = ({
   sizes?: string[];
 }) => (
   <>
-    <Subtitle className="mb-sm">{title}</Subtitle>
+    <Heading className="mb-sm">{title}</Heading>
     <div className="mb-xl">
       {sizes.map((size) => (
         <Spacing key={size} size={size} />

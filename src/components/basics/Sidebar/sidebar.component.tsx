@@ -10,9 +10,9 @@ import Image from "@/components/basics/Image";
 import Link from "@/components/basics/Link";
 import Logo from "@/components/basics/Logo";
 import ToggleButton from "@/components/basics/ToggleButton";
-import Subtitle from "@/components/typographies/Subtitle";
-
+import Heading from "@/components/typographies/Heading";
 import { ICONS } from "@/configs/icons.config";
+
 import SidebarSkeleton from "./sidebar-skeleton.component";
 
 const Sidebar = ({
@@ -56,7 +56,9 @@ const Sidebar = ({
                 name={user.name}
               />
               <div className="flex-column align-items-start">
-                <Subtitle data-testid="sidebar__user-name">{user.name}</Subtitle>
+                <Heading data-testid="sidebar__user-name" size="sm">
+                  {user.name}
+                </Heading>
                 <Link
                   as={LinkComponent}
                   className="sidebar__profile-container__profile-link"

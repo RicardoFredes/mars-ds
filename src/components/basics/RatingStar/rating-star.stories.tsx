@@ -1,12 +1,11 @@
-import type { RatingStarProps } from "./rating-star.types";
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
+import type { RatingStarProps } from "./rating-star.types";
 
 import { useState } from "react";
 
 import { IconSizes } from "@/components/basics/Icon";
 import icons from "@/components/basics/Icon/lib";
 import Heading from "@/components/typographies/Heading";
-import Subtitle from "@/components/typographies/Subtitle";
 
 import RatingStar from "./rating-star.component";
 
@@ -85,7 +84,7 @@ const ExampleRating = (props: RatingStarProps) => {
     <>
       <Heading>Dê uma nota para o MeSalva!</Heading>
       <RatingStar {...props} onSelect={handleSelect} />
-      <Subtitle>O valor de nota foi: {state}</Subtitle>
+      <Heading size="sm">O valor de nota foi: {state}</Heading>
     </>
   );
 };

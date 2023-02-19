@@ -8,10 +8,10 @@ import { useEffect, useState } from "react";
 import Card, { CardElevations } from "@/components/basics/Card";
 import Icon from "@/components/basics/Icon";
 import ToggleButton, { ToggleButtonVariants } from "@/components/basics/ToggleButton";
-import Subtitle, { SubtitleSizes } from "@/components/typographies/Subtitle";
+import Heading, { HeadingSizes } from "@/components/typographies/Heading";
+import { ICONS } from "@/configs/icons.config";
 import Tokens from "@/tokens";
 
-import { ICONS } from "@/configs/icons.config";
 import { NotificationVariants } from "./notification.types";
 
 const icons: Record<
@@ -67,9 +67,9 @@ const Notification = ({
       {icon && (
         <Icon name={icon.name} style={{ color: icon.color }} className="notification__icon" />
       )}
-      <Subtitle className="notification__content" size={SubtitleSizes.Small}>
+      <Heading className="notification__content" size={HeadingSizes.Small}>
         {content || children}
-      </Subtitle>
+      </Heading>
       <ToggleButton
         iconName={ICONS.ACTIONS.CLOSE}
         className="notification__close-button"

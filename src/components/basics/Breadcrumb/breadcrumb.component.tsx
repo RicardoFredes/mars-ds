@@ -3,7 +3,7 @@ import type { BreadcrumbProps } from "./breadcrumb.types";
 
 import classNames from "classnames";
 
-import Subtitle from "../../typographies/Subtitle";
+import Text from "../../typographies/Text";
 import ToggleDropdown from "../ToggleDropdown";
 
 const Breadcrumb = ({ className, list, componentLink, ...props }: BreadcrumbProps) => {
@@ -53,7 +53,7 @@ const BreadcrumbListItem = ({
   return (
     <li data-testid="breadcrumb-item" className={cn}>
       <Component {...props}>
-        <Subtitle as="span">{label}</Subtitle>
+        <Text as="span">{label}</Text>
       </Component>
     </li>
   );

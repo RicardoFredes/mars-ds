@@ -236,9 +236,6 @@ export * from "./components/primitives/TextBase/text-base.types";
 export { default as Caption } from "./components/typographies/Caption/caption.component";
 export * from "./components/typographies/Caption/caption.types";
 
-export { default as Display } from "./components/typographies/Display/display.component";
-export * from "./components/typographies/Display/display.types";
-
 export { default as Heading } from "./components/typographies/Heading/heading.component";
 export * from "./components/typographies/Heading/heading.types";
 
@@ -250,9 +247,6 @@ export * from "./components/typographies/List/list.types";
 
 export { default as ListItem } from "./components/typographies/ListItem/list-item.component";
 export * from "./components/typographies/ListItem/list-item.types";
-
-export { default as Subtitle } from "./components/typographies/Subtitle/subtitle.component";
-export * from "./components/typographies/Subtitle/subtitle.types";
 
 export { default as Text } from "./components/typographies/Text/text.component";
 export * from "./components/typographies/Text/text.types";

@@ -1,10 +1,9 @@
-import type { CardProps } from "./card-types";
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
+import type { CardProps } from "./card.types";
 
 import Button from "@/components/basics/Button";
 import Caption from "@/components/typographies/Caption";
 import Heading, { HeadingSizes } from "@/components/typographies/Heading";
-import Subtitle from "@/components/typographies/Subtitle";
 import Text, { TextSizes } from "@/components/typographies/Text";
 import Tokens from "@/tokens";
 
@@ -75,9 +74,9 @@ const TemplateList: ComponentStory<typeof Card> = (args: CardProps) => {
         <div key={key} style={{ marginBottom: 24, maxWidth: 400 }}>
           <Card {...args} elevation={elevation}>
             <Caption>Card elevation</Caption>
-            <Subtitle>
+            <Text>
               {name}: {elevation}
-            </Subtitle>
+            </Text>
           </Card>
         </div>
       ))}

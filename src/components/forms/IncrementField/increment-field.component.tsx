@@ -4,7 +4,7 @@ import classNames from "classnames";
 import { useState } from "react";
 
 import Button from "@/components/basics/Button";
-import Subtitle from "@/components/typographies/Subtitle";
+import Heading from "@/components/typographies/Heading";
 
 const IncrementField = ({
   defaultValue = 0,
@@ -44,7 +44,9 @@ const IncrementField = ({
         onClick={handleDecrement}
         data-testid="decrement-button"
       />
-      <Subtitle data-testid="display-value">{displayValue}</Subtitle>
+      <Heading size="sm" data-testid="display-value">
+        {displayValue}
+      </Heading>
       <Button
         iconName="plus"
         className="increment-field__increment-button"

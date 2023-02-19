@@ -7,7 +7,7 @@ import Button from "@/components/basics/Button";
 import CommentItem from "@/components/basics/CommentItem";
 import Icon from "@/components/basics/Icon";
 import AreaField from "@/components/forms/AreaField";
-import Subtitle from "@/components/typographies/Subtitle";
+import Heading from "@/components/typographies/Heading";
 import Text from "@/components/typographies/Text";
 
 const CommentList = ({
@@ -56,7 +56,9 @@ const CommentList = ({
       ) : (
         <div className="comment-list__box" data-testid="comment-box">
           <div className="comment-list__box__header">
-            <Subtitle className="comment-list__box__header__title">Adicionar comentário</Subtitle>
+            <Heading size="sm" className="comment-list__box__header__title">
+              Adicionar comentário
+            </Heading>
             <Icon name="close" className="comment-list__box__header__close" onClick={toggleShow} />
           </div>
           <AreaField

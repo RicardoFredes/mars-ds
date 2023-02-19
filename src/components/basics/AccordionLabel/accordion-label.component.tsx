@@ -4,7 +4,7 @@ import classNames from "classnames";
 
 import Accordion from "@/components/basics/Accordion";
 import Icon from "@/components/basics/Icon";
-import Subtitle, { SubtitleSizes } from "@/components/typographies/Subtitle";
+import Heading, { HeadingSizes } from "@/components/typographies/Heading";
 import Text, { TextSizes } from "@/components/typographies/Text";
 import { ICONS } from "@/configs/icons.config";
 
@@ -28,18 +28,18 @@ const AccordionLabel = ({
 const HeaderLabel = ({ title, label, colorLabel }: AccordionLabelHeaderProps) => (
   <div className="accordion__header-container">
     {title && (
-      <Text size={TextSizes.Small} className="accordion-label__title">
+      <Heading size={HeadingSizes.XSmall} className="accordion-label__title">
         {title}
-      </Text>
+      </Heading>
     )}
     <Icon className="accordion__header-container__icon-toggle" name={ICONS.ACTIONS.EXPAND} />
-    <Subtitle
-      size={SubtitleSizes.Small}
+    <Text
+      size={TextSizes.Small}
       style={{ color: colorLabel }}
       className="accordion-label__subtitle"
     >
       {label}
-    </Subtitle>
+    </Text>
   </div>
 );
 export default AccordionLabel;

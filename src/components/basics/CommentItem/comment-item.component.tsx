@@ -5,7 +5,7 @@ import classNames from "classnames";
 import Avatar from "@/components/basics/Avatar";
 import Divider from "@/components/basics/Divider";
 import Caption from "@/components/typographies/Caption";
-import Subtitle from "@/components/typographies/Subtitle";
+import Heading from "@/components/typographies/Heading";
 import Text from "@/components/typographies/Text";
 
 const CommentItem = ({ className, thumbnail, name, date, comment, ...props }: CommentItemProps) => {
@@ -17,7 +17,7 @@ const CommentItem = ({ className, thumbnail, name, date, comment, ...props }: Co
       <div className="comment-item__content">
         <div className="comment-item__content__header-wrapper">
           <div className="comment-item__content__header-wrapper__header">
-            <Subtitle size="md">{name}</Subtitle>
+            <Heading size="sm">{name}</Heading>
             <Caption className="comment-item__content__header-wrapper__header__date">
               {date}
             </Caption>

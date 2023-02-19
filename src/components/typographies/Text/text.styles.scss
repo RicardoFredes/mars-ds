@@ -1,26 +1,48 @@
 p,
 .text {
   $factor: 3.25vw;
-  line-height: 1.5em;
+  line-height: 1.4em;
   font-weight: $font-weights-main-regular;
-  font-size: 0.875em; // 14px
-  font-size: clamp(0.875em, $factor, 1rem);
-  @media (min-width: $breakpoint-lg) {
-    font-size: 1rem; // 16px
-  }
   &--size {
+    &-xs {
+      font-size: 0.7em;
+      @media (min-width: $breakpoint-lg) {
+        font-size: 0.8em;
+      }
+    }
     &-sm {
-      font-size: 0.75em; // 12px
-      font-size: clamp(0.75em, $factor, 0.875rem);
+      font-size: 0.8em; // 13px
+      font-size: clamp(0.8em, $factor, 0.875rem);
       @media (min-width: $breakpoint-lg) {
         font-size: 0.875em; // 14px
       }
     }
+    &-md {
+      font-size: 0.875em; // 14px
+      font-size: clamp(0.875em, $factor, 1rem);
+      @media (min-width: $breakpoint-lg) {
+        font-size: 1em; // 16px
+      }
+    }
     &-lg {
       font-size: 1em; // 16px
-      font-size: clamp(1em, $factor, 1.25rem);
+      font-size: clamp(1em, $factor, 1.125rem);
       @media (min-width: $breakpoint-lg) {
-        font-size: 1.25em; // 18px
+        font-size: 1.125em; // 18px
+      }
+    }
+    &-xl {
+      font-size: 1.125em; // 18px
+      font-size: clamp(1.125em, $factor, 1.25rem);
+      @media (min-width: $breakpoint-lg) {
+        font-size: 1.25em; // 20px
+      }
+    }
+    &-xxl {
+      font-size: 1.125em; // 20px
+      font-size: clamp(1.125em, $factor, 1.5rem);
+      @media (min-width: $breakpoint-lg) {
+        font-size: 1.5em; // 24px
       }
     }
   }
@@ -29,3 +51,11 @@ p,
     margin-top: 1em;
   }
 }
+
+/*
+xs: 13 - 14
+sm: 14 - 16
+md: 16 - 18
+lg: 18 - 20
+xl: 20 - 24
+*/

@@ -40,14 +40,15 @@ a.btn,
   }
   &--primary {
     background-color: $color-primary-500;
-    color: $color-white;
+    color: $color-secondary-900;
 
     &:visited {
       background-color: $color-primary-500;
-      color: $color-white;
+      color: $color-secondary-900;
     }
     &:hover {
-      background-color: $color-primary-700;
+      background-color: $color-secondary-700;
+      color: $color-white;
     }
     &:disabled {
       background-color: $color-action-disabled-background;
@@ -56,16 +57,18 @@ a.btn,
   }
 
   &--secondary {
-    color: $color-primary-500;
-    border-color: $color-primary-500;
+    color: $color-primary-700;
+    border-color: $color-primary-700;
 
     &:visited {
       background-color: $color-primary-ghost;
-      color: $color-primary-500;
+      color: $color-primary-700;
     }
 
     &:hover {
       background-color: $color-primary-ghost;
+      color: $color-primary-900;
+      border-color: $color-primary-900;
     }
     &:disabled {
       color: $color-action-disabled;

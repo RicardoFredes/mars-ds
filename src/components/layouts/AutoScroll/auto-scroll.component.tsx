@@ -5,9 +5,9 @@ import { useRef, useState } from "react";
 
 const AutoScroll = ({ children, className, draggable, ...props }: AutoScrollProps) => {
   const [isDown, setIsDown] = useState(false);
-  const cn = classNames("auto-slider", className, {
-    "auto-slider--is-active": isDown,
-    "auto-slider--draggable": draggable,
+  const cn = classNames("auto-scroll", className, {
+    "auto-scroll--is-active": isDown,
+    "auto-scroll--draggable": draggable,
   });
 
   const sliderRef = useRef<HTMLDivElement>(null);
@@ -49,7 +49,7 @@ const AutoScroll = ({ children, className, draggable, ...props }: AutoScrollProp
 
   return (
     <div ref={sliderRef} className={cn} {...props} {...events}>
-      <div className="auto-slider__container">{children}</div>
+      <div className="auto-scroll__container">{children}</div>
     </div>
   );
 };
